@@ -11,6 +11,15 @@ import java.util.List;
 import de.dennisguse.opentracks.data.models.HeartRate;
 
 public class BluetoothDriverLifecycleTest {
+    @Test public void alreadyGrantedPermissionRunsSuccessWithoutLaunchingAnotherRequest() {
+        int[] successes = {0};
+        // No permissions are missing; a null launcher deliberately fails if registration is attempted.
+        new de.dennisguse.opentracks.util.PermissionRequester(List.of()).requestPermissionsIfNeeded(
+                ApplicationProvider.getApplicationContext(), null, () -> successes[0]++,
+                denied -> fail("Already granted permissions must not be rejected"));
+        assertEquals(1, successes[0]);
+    }
+
     @Test public void notificationAndIndicationSubscriptionsPreserveOtherSensorSupport() {
         assertArrayEquals(new byte[]{1,0},BluetoothDriver.subscriptionValue(android.bluetooth.BluetoothGattCharacteristic.PROPERTY_NOTIFY));
         assertArrayEquals(new byte[]{2,0},BluetoothDriver.subscriptionValue(android.bluetooth.BluetoothGattCharacteristic.PROPERTY_INDICATE));

@@ -33,6 +33,8 @@ public class PermissionRequester {
     public void requestPermissionsIfNeeded(Context context, ActivityResultCaller caller, @Nullable Runnable onGranted, @Nullable RejectedCallback onRejected) {
         if (!hasPermission(context)) {
             requestPermission(caller, onGranted, onRejected);
+        } else if (onGranted != null) {
+            onGranted.run();
         }
     }
 
