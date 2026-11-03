@@ -120,7 +120,7 @@ public class HeartRateUiScreenshotTest {
             },"current recording data",WAIT);
             Activity ready=ActivityTestUtils.waitForResumedActivity(TrackRecordingActivity.class,WAIT);
             waitForResumedViewCondition(withId(R.id.heart_rate_panel),view -> ready.hasWindowFocus(),"focused recording window",WAIT);
-            InstrumentationRegistry.getInstrumentation().getUiAutomation().syncInputTransactions();
+            InstrumentationRegistry.getInstrumentation().waitForIdleSync();
             android.os.SystemClock.sleep(500);
             InstrumentationRegistry.getInstrumentation().runOnMainSync(service::stopUpdateRecordingData);
             InstrumentationRegistry.getInstrumentation().waitForIdleSync();
@@ -205,7 +205,7 @@ public class HeartRateUiScreenshotTest {
                 : name.contains("-recording-") ? TrackRecordingActivity.class
                 : name.contains("-settings") || name.contains("-scan") ? SettingsActivity.class : TrackRecordedActivity.class;
         Activity activity=ActivityTestUtils.waitForResumedActivity(expected,WAIT);
-        InstrumentationRegistry.getInstrumentation().getUiAutomation().syncInputTransactions();
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         java.util.concurrent.CountDownLatch frames = new java.util.concurrent.CountDownLatch(1);
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
             View decor=activity.getWindow().getDecorView();decor.invalidate();
