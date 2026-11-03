@@ -62,6 +62,9 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     }
 
     private TrackDataHub trackDataHub;
+    private final HeartRateChartHistory heartRateHistory = new HeartRateChartHistory();
+    private HeartRateChartHistory.Result heartRateResult;
+    private Track.Id selectedTrack;
 
     // Stats gathered from the received data
     private final List<ChartPoint> pendingPoints = new ArrayList<>();
@@ -145,6 +148,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewBinding = ChartBinding.inflate(inflater, container, false);
         viewBinding.chartView.setChartByDistance(chartByDistance);
+        viewBinding.heartRateChartHint.setText(chartByDistance ? R.string.hr_chart_distance_hint : R.string.hr_chart_hint);
         return viewBinding.getRoot();
     }
 
@@ -180,6 +184,8 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
                 return;
             }
 
+            selectedTrack = track.id();
+            loadHeartRateHistory(track.id());
             activityTypeLocalized = track.activityTypeLocalized();
             boolean reportSpeed = PreferencesUtils.isReportSpeed(activityTypeLocalized);
             if (reportSpeed != viewBinding.chartView.getReportSpeed()) {
@@ -215,8 +221,37 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
             //Avoid ConcurrentModificationException exception
             viewBinding.chartView.addChartPoints(Collections.unmodifiableList(pendingPoints));
             pendingPoints.clear();
+            applyHeartRateHistory();
             runOnUiThread(updateChart);
         }
+    }
+
+    @Override
+    public void onHeartRateSamplesChanged(Track.Id track) {
+        if (isResumed() && track.equals(selectedTrack)) loadHeartRateHistory(track);
+    }
+
+    private void loadHeartRateHistory(Track.Id track) {
+        android.content.Context context = getContext();
+        if (context == null || !isResumed()) return;
+        heartRateResult = heartRateHistory.load(context,track);
+        applyHeartRateHistory();
+    }
+
+    private void applyHeartRateHistory() {
+        HeartRateChartHistory.Result result = heartRateResult;
+        if (result == null) return;
+        Track.Id expectedTrack = selectedTrack;
+        runOnUiThread(() -> {
+            if (!isResumed() || viewBinding == null || !java.util.Objects.equals(expectedTrack,selectedTrack)) return;
+            if (result.count() > 0) {
+                viewBinding.heartRateSummary.setText(getString(R.string.hr_summary,result.min(),result.average(),result.max()));
+                if (!chartByDistance) viewBinding.chartView.setRawHeartRatePoints(result.points());
+            } else {
+                viewBinding.heartRateSummary.setText(R.string.hr_chart_legacy);
+            }
+            viewBinding.chartView.invalidate();
+        });
     }
 
     /**

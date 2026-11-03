@@ -150,7 +150,7 @@ public class TrackRecordingManager implements SharedPreferences.OnSharedPreferen
         TrackBuilder trackBuilder = new TrackBuilder(track);
         trackBuilder.setStatistics(tmpTrackStatisticsUpdater.getTrackStatistics());
 
-        return new RecordingData(trackBuilder.getTrack(), TrackPointWithEGM2008, current.second, tmpTrackStatisticsUpdater.getCurrentSegment());
+        return new RecordingData(trackBuilder.getTrack(), TrackPointWithEGM2008, current.second, tmpTrackStatisticsUpdater.getCurrentSegment(), trackPointCreator.getSensorManager().getHeartRateStatus());
     }
 
     @VisibleForTesting(otherwise = VisibleForTesting.PACKAGE_PRIVATE)

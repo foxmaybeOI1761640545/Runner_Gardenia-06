@@ -263,6 +263,10 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
         return wakeLock != null;
     }
 
+    public HeartRateStatus getHeartRateStatus() {
+        return heartRateHandler != null ? heartRateHandler.getStatus(getNow()) : HeartRateStatus.disconnected();
+    }
+
     @VisibleForTesting
     public void setAggregator(AggregatorHeartRate data) {
         heartRateHandler.setAggregator(data);

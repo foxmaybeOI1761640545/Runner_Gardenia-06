@@ -2,4 +2,26 @@
     <string name="sensor_scan_again">Scan again</string>
     <string name="sensor_scan_rssi">%1$d dBm</string>
     <string name="sensor_scan_connected">Bluetooth connected</string>
+    <string name="hr_title">Heart rate</string>
+    <string name="hr_empty_value">— bpm</string>
+    <string name="hr_value">%1$.0f bpm</string>
+    <string name="hr_none">No strap connected</string>
+    <string name="hr_connecting">Connecting…</string>
+    <string name="hr_subscribing">Enabling heart-rate notifications…</string>
+    <string name="hr_connected">Connected</string>
+    <string name="hr_retry">Connection lost · reconnecting…</string>
+    <string name="hr_bluetooth_off">Bluetooth is off</string>
+    <string name="hr_permission">Bluetooth permission required</string>
+    <string name="hr_unavailable">Selected device unavailable</string>
+    <string name="hr_contact_lost">Check strap contact</string>
+    <string name="hr_stale">Waiting for a fresh heart-rate signal</string>
+    <string name="hr_never">No measurement received yet</string>
+    <string name="hr_age">Updated %1$d s ago</string>
+    <string name="hr_device_state">%1$s · %2$s</string>
+    <string name="hr_settings">Sensor settings</string>
+    <string name="hr_summary">Min %1$.0f · Avg %2$.0f · Max %3$.0f bpm</string>
+    <string name="hr_chart_empty">Heart rate · connect a strap to record samples</string>
+    <string name="hr_chart_hint">Time chart: full heart-rate samples. Pinch to zoom; swipe to browse.</string>
+    <string name="hr_chart_distance_hint">Distance chart uses track snapshots. Open Time for all heart-rate samples.</string>
+    <string name="hr_chart_legacy">Heart rate · recorded track samples</string>
 </resources>

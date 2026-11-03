@@ -274,9 +274,8 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                 scanSession.begin(true, false);
                 Log.w(TAG, "Bluetooth adapter is absent or not enabled. Skipping BLE scan.");
                 Toast.makeText(getContext(), R.string.bluetooth_disabled, Toast.LENGTH_SHORT).show();
-                if (!includeInternalSensor) {
-                    dismiss();
-                }
+                if (bluetoothIcon != null) bluetoothIcon.stop();
+                listAdapter.notifyDataSetChanged();
                 return;
             }
 

@@ -74,13 +74,6 @@ public class SensorsSettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onDisplayPreferenceDialog(@NonNull Preference preference) {
         if (preference instanceof BluetoothLeSensorPreference) {
-            if(!PermissionRequester.BLUETOOTH.hasPermission(preference.getContext())) {
-                // TODO: maybe use requestPermissionsIfNeeded here or disable preferences at all
-                FragmentActivity activity = getActivity();
-                Toast.makeText(activity, getString(R.string.permission_bluetooth_failed), Toast.LENGTH_LONG).show();
-                return;
-            }
-
             DialogFragment dialogFragment = ((BluetoothLeSensorPreference) preference).createInstance();
 
             // Deprecation not fixed upstream: https://issuetracker.google.com/issues/181793702

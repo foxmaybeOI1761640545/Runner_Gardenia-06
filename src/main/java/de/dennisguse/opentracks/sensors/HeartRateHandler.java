@@ -14,6 +14,14 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     private String selectedAddress;
     private String selectedName;
     private String connectionId;
+    private de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State connectionState = de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State.DISCONNECTED;
+    private java.time.Instant lastReceived;
+    private boolean contactLost;
+
+    @Override public void onConnectionStateChanged(de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State state) { connectionState = state; }
+    public HeartRateStatus getStatus(java.time.Instant now) {
+        return new HeartRateStatus(connectionState,lastReceived,now,selectedName != null ? selectedName : selectedAddress,contactLost);
+    }
 
     protected HeartRateHandler(SensorManager sensorManager) {
         super(sensorManager);
@@ -45,6 +53,9 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
 
     @Override
     public void onDataReceived(HeartRate value) {
+        contactLost = value.sample() != null && Boolean.FALSE.equals(value.sample().contactDetected());
+        if (value.isValid()) lastReceived = sensorManager.getNow();
+        else connectionId = java.util.UUID.randomUUID().toString(); // break continuity after contact loss
         if (value.sample() != null) {
             value = new HeartRate(value.value(), value.sample().captured(sensorManager.getNow(), selectedAddress, selectedName, connectionId));
         }

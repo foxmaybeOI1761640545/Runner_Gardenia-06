@@ -118,6 +118,8 @@ abstract class ChartValueSeries {
     /**
      * Updates the series with a new {@link ChartPoint}.
      */
+    void resetData() { extremityMonitor.reset(); path.rewind(); }
+
     void update(ChartPoint chartPoint) {
         if (isChartPointValid(chartPoint)) {
             extremityMonitor.update(extractDataFromChartPoint(chartPoint));

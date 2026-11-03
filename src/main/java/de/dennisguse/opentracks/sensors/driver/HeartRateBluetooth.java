@@ -55,8 +55,7 @@ public class HeartRateBluetooth implements BluetoothDriver.BluetoothParser<Heart
                                   BluetoothGattCharacteristic characteristic, byte[] bytes) {
         HeartRateMeasurement decoded = HeartRateMeasurement.parse(bytes);
         if (decoded == null) return null;
-        if (!decoded.hasUsableHeartRate()) return HeartRate.INVALID;
-        return new HeartRate(decoded.bpm(), new HeartRateSample(null, null, name,
+        return new HeartRate(decoded.hasUsableHeartRate() ? decoded.bpm() : 0, new HeartRateSample(null, null, name,
                 decoded.contactDetected(), decoded.energyExpended(), decoded.rrIntervals1024()));
     }
 

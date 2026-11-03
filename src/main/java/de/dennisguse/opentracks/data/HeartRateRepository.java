@@ -45,6 +45,15 @@ public final class HeartRateRepository {
         return result;
     }
 
+    public void forEachAfter(Track.Id track, long afterId, java.util.function.BiConsumer<Long,HeartRate> consumer) {
+        try (Cursor c = resolver.query(CustomContentProvider.UrlType.HEART_RATE_SAMPLES.getUri(),
+                new String[]{"_id","bpm","metadata"},"trackid=? AND _id>?",
+                new String[]{Long.toString(track.id()),Long.toString(afterId)},"_id")) {
+            if (c == null) throw new IllegalStateException("Missing heart-rate cursor");
+            while (c.moveToNext()) consumer.accept(c.getLong(0),new HeartRate(c.getFloat(1),decode(c.getString(2))));
+        }
+    }
+
     private static String encode(HeartRateSample sample) {
         try {
             JSONObject json = new JSONObject().put("schema", 1).put("source", sample.source())
