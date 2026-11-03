@@ -21,14 +21,12 @@ allprojects {
 def releaseVersion = new Properties()
 file('version.properties').withInputStream { releaseVersion.load(it) }
 def gitDescription = { ->
-    def output = new ByteArrayOutputStream()
-    def result = providers.exec {
+    def description = providers.exec {
         commandLine 'git', 'describe', '--tags', '--always'
-        standardOutput = output
-        errorOutput = new ByteArrayOutputStream()
         ignoreExitValue = true
-    }.result.get()
-    return result.exitValue == 0 ? output.toString('UTF-8').trim() : releaseVersion.VERSION_NAME
+    }.standardOutput.asText.get().trim()
+
+    return description ?: releaseVersion.VERSION_NAME
 }
 // Environment variables are used by Actions. Preserve legacy local -D options.
 def signingValue = { String environmentName, String systemName ->
