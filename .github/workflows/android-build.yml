@@ -94,6 +94,9 @@ jobs:
         run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest
       - name: Existing Android instrumentation tests (API 35)
         run: ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore
+      - name: Require actual heart-rate UI screenshots
+        if: always()
+        run: python3 .github/scripts/collect_heart_rate_ui.py
       - name: Require complete instrumentation XML and timezone evidence
         if: always()
         run: python3 .github/scripts/check_test_results.py

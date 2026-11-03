@@ -134,6 +134,8 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
 
         private int selectedEntryIndex;
         private final BluetoothLeAdapter listAdapter = new BluetoothLeAdapter();
+        @androidx.annotation.VisibleForTesting
+        public BluetoothLeAdapter getDeviceAdapter() { return listAdapter; }
 
         private BluetoothLeScanner scanner = null;
         private final BleScanSession scanSession = new BleScanSession();

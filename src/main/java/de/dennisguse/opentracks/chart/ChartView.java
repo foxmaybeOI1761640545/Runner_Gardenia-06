@@ -430,6 +430,9 @@ public class ChartView extends View {
         }
     }
 
+    @androidx.annotation.VisibleForTesting
+    Path heartRatePath() { synchronized (chartPoints) { return new Path(heartRateSeries.getPath()); } }
+
     public void setRawHeartRatePoints(List<HeartRatePlot.Point> values) {
         synchronized (chartPoints) {
             rawHeartRatePoints = new ArrayList<>();
