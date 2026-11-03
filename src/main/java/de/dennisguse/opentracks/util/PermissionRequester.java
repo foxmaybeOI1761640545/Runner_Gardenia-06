@@ -71,11 +71,7 @@ public class PermissionRequester {
     private static final List<String> BLUETOOTH_PERMISSIONS;
 
     static {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            BLUETOOTH_PERMISSIONS = List.of(Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.BLUETOOTH_CONNECT);
-        } else {
-            BLUETOOTH_PERMISSIONS = Collections.emptyList();
-        }
+        BLUETOOTH_PERMISSIONS = de.dennisguse.opentracks.sensors.driver.BluetoothPermissionPolicy.forApi(Build.VERSION.SDK_INT);
     }
 
     private static final List<String> NOTIFICATION_PERMISSIONS;

@@ -122,6 +122,7 @@ jobs:
           name: check-reports-${{ github.run_id }}
           path: |
             build/reports/
+            build/test-results/
             build/outputs/androidTest-results/
           overwrite: true
           retention-days: 30

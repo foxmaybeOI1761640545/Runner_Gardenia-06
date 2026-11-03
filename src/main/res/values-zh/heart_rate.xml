@@ -1,0 +1,5 @@
+<resources>
+    <string name="sensor_scan_again">重新扫描</string>
+    <string name="sensor_scan_rssi">%1$d dBm</string>
+    <string name="sensor_scan_connected">蓝牙已连接</string>
+</resources>

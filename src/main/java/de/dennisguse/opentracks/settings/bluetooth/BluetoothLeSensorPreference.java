@@ -3,6 +3,8 @@ package de.dennisguse.opentracks.settings.bluetooth;
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothManager;
+import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanFilter;
@@ -10,8 +12,11 @@ import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.ParcelUuid;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -32,6 +37,8 @@ import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.sensors.BluetoothUtils;
 import de.dennisguse.opentracks.sensors.ServiceMeasurementUUID;
 import de.dennisguse.opentracks.sensors.driver.SensorType;
+import de.dennisguse.opentracks.sensors.driver.BluetoothDriver;
+import de.dennisguse.opentracks.sensors.driver.BleScanSession;
 import de.dennisguse.opentracks.settings.PreferencesUtils;
 import de.dennisguse.opentracks.util.PermissionRequester;
 
@@ -108,9 +115,13 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
             return value;
         }
 
-        BluetoothDevice device = bluetoothAdapter.getRemoteDevice(value);
-        if (device != null && device.getName() != null) {
-            return getContext().getString(R.string.bluetooth_sensor_summary, device.getAddress(), device.getName());
+        try {
+            BluetoothDevice device = bluetoothAdapter.getRemoteDevice(value);
+            if (device != null && device.getName() != null) {
+                return getContext().getString(R.string.bluetooth_sensor_summary, device.getAddress(), device.getName());
+            }
+        } catch (SecurityException | IllegalArgumentException unavailable) {
+            // Reading a remembered sensor must remain safe after permission revocation.
         }
         return value;
     }
@@ -125,26 +136,61 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
         private final BluetoothLeAdapter listAdapter = new BluetoothLeAdapter();
 
         private BluetoothLeScanner scanner = null;
-        private final ScanCallback scanCallback = new ScanCallback() {
+        private final BleScanSession scanSession = new BleScanSession();
+        private final Handler scanHandler = new Handler(Looper.getMainLooper());
+        private Runnable scanTimeout;
+        private ScanCallback scanCallback;
+
+        private void stopBluetoothScan() {
+            scanSession.cancel();
+            stopScanTransport();
+        }
+
+        private void stopScanTransport() {
+            if (scanTimeout != null) scanHandler.removeCallbacks(scanTimeout);
+            scanTimeout = null;
+            if (scanner != null && scanCallback != null) {
+                try { scanner.stopScan(scanCallback); }
+                catch (SecurityException | IllegalStateException unavailable) { Log.i(TAG, "Scan stopped after Bluetooth/permission change"); }
+            }
+            scanner = null;
+            scanCallback = null;
+            if (bluetoothIcon != null) bluetoothIcon.stop();
+        }
+        private ScanCallback createScanCallback(int token) { return new ScanCallback() {
             @Override
             public void onScanResult(int callbackType, ScanResult result) {
-                Log.d(TAG, "Found device " + result.getDevice().getName() + " " + result);
                 onBatchScanResults(List.of(result));
             }
 
             @Override
             public void onBatchScanResults(List<ScanResult> results) {
-                listAdapter.addAll(results.stream().map(ScanResult::getDevice).toList());
+                if (!scanSession.accepts(token) || getContext() == null) return;
+                try {
+                    BluetoothManager manager = getContext().getSystemService(BluetoothManager.class);
+                    for (ScanResult result : results) {
+                        boolean connected = manager != null && manager.getConnectionState(result.getDevice(), BluetoothProfile.GATT) == BluetoothProfile.STATE_CONNECTED;
+                        listAdapter.add(result.getDevice().getAddress(), result.getDevice().getName(), result.getRssi(), connected);
+                    }
+                    listAdapter.notifyDataSetChanged();
+                } catch (SecurityException denied) {
+                    stopScanTransport();
+                    scanSession.begin(false, true);
+                    Toast.makeText(getContext(), R.string.permission_bluetooth_failed, Toast.LENGTH_SHORT).show();
+                }
+
             }
 
             @Override
             public void onScanFailed(int errorCode) {
+                if (!scanSession.accepts(token) || getContext() == null) return;
+                scanSession.fail(token);
+                stopScanTransport();
                 super.onScanFailed(errorCode);
                 Log.e(TAG, "Bluetooth scan failed with errorCode " + errorCode);
                 Toast.makeText(getContext(), R.string.sensor_could_not_scan, Toast.LENGTH_LONG).show();
-                dismiss();
             }
-        };
+        }; }
 
         public static BluetoothLeSensorPreferenceDialog newInstance(String preferenceKey, List<ServiceMeasurementUUID> sensorUUIDs) {
             return newInstance(preferenceKey, sensorUUIDs, false);
@@ -184,10 +230,25 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                         dismiss();
                     });
 
-            startBluetoothScan();
         }
 
         private void startBluetoothScan() {
+            if (!isAdded() || getContext() == null) return;
+            stopBluetoothScan();
+            try {
+                scanWithPermission();
+            } catch (SecurityException denied) {
+                stopScanTransport();
+                scanSession.begin(false, true);
+                Toast.makeText(getContext(), R.string.permission_bluetooth_failed, Toast.LENGTH_SHORT).show();
+            } catch (IllegalStateException poweredOff) {
+                stopScanTransport();
+                scanSession.begin(true, false);
+                Toast.makeText(getContext(), R.string.bluetooth_disabled, Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        private void scanWithPermission() {
             List<ParcelUuid> serviceUUIDs = getArguments().getParcelableArrayList(ARG_BLE_SERVICE_UUIDS);
             boolean includeInternalSensor = getArguments().getBoolean(ARG_INCLUDE_INTERNAL);
 
@@ -210,7 +271,8 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
 
             BluetoothAdapter bluetoothAdapter = BluetoothUtils.getAdapter(getContext());
             if (bluetoothAdapter == null || !bluetoothAdapter.isEnabled()) {
-                Log.w(TAG, "Bluetooth adapter is present or not enabled. Skipping BLE scan.");
+                scanSession.begin(true, false);
+                Log.w(TAG, "Bluetooth adapter is absent or not enabled. Skipping BLE scan.");
                 Toast.makeText(getContext(), R.string.bluetooth_disabled, Toast.LENGTH_SHORT).show();
                 if (!includeInternalSensor) {
                     dismiss();
@@ -247,7 +309,13 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
             ScanSettings.Builder scanSettingsBuilder = new ScanSettings.Builder();
             scanSettingsBuilder.setScanMode(ScanSettings.SCAN_MODE_LOW_LATENCY);
 
+            int token = scanSession.begin(true, true);
+            scanCallback = createScanCallback(token);
+            if (bluetoothIcon != null) bluetoothIcon.start();
             scanner.startScan(scanFilter, scanSettingsBuilder.build(), scanCallback);
+            scanTimeout = () -> { if (scanSession.complete(token)) stopScanTransport(); };
+            scanHandler.postDelayed(scanTimeout, 15000);
+            listAdapter.notifyDataSetChanged();
         }
 
         //Behave like ListPreferenceDialogFragmentCompat, but uses a custom listAdapter.
@@ -266,28 +334,46 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
             builder.setIcon(bluetoothIcon);
 
             builder.setPositiveButton(null, null);
+            builder.setNeutralButton(R.string.sensor_scan_again, null);
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            if (getDialog() instanceof AlertDialog dialog) {
+                dialog.getButton(DialogInterface.BUTTON_NEUTRAL).setOnClickListener(unused -> startBluetoothScan());
+            }
+        }
+
+        @Override
+        public void onStop() {
+            stopBluetoothScan();
+            super.onStop();
         }
 
         @Override
         public void onDialogClosed(boolean positiveResult) {
-            if (scanner != null) {
-                scanner.stopScan(scanCallback);
-            }
+            stopBluetoothScan();
 
             if (positiveResult && selectedEntryIndex >= 0) {
                 String value = listAdapter.get(selectedEntryIndex).getAddress();
                 BluetoothLeSensorPreference preference = (BluetoothLeSensorPreference) getPreference();
                 if (preference.callChangeListener(value)) {
+                    boolean reconnect = value.equals(preference.value) && SensorType.REMOTE.equals(PreferencesUtils.getSensorType(value));
                     preference.setValue(value);
+                    if (reconnect && getContext() != null) {
+                        getContext().sendBroadcast(new Intent(getContext().getPackageName() + BluetoothDriver.RECONNECT_SUFFIX)
+                                .setPackage(getContext().getPackageName()).putExtra("address", value));
+                    }
                 }
             }
         }
 
         @Override
         public void onDestroy() {
-            super.onDestroy();
+            stopBluetoothScan();
             bluetoothIcon = null;
-            scanner = null;
+            super.onDestroy();
         }
     }
 }

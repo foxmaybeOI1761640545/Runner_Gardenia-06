@@ -10,10 +10,10 @@ public class AggregatorHeartRate extends Aggregator<HeartRate, HeartRate> {
         super(name, address);
     }
 
+    public void invalidate() { output = null; previous = null; }
+
     @Override
     protected void computeValue(@NonNull Raw<HeartRate> current) {
-        if (current.value().isValid()) {
-            this.output = current.value();
-        }
+        this.output = current.value().isValid() ? current.value() : null;
     }
 }

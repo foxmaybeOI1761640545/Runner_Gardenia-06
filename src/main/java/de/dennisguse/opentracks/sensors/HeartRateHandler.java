@@ -32,6 +32,12 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     }
 
     @Override
+    public void onConnectionLost() {
+        super.onConnectionLost();
+        if (aggregator instanceof AggregatorHeartRate heartRate) heartRate.invalidate();
+    }
+
+    @Override
     protected int getSensorPreferenceKey() {
         return R.string.settings_sensor_bluetooth_heart_rate_key;
     }

@@ -2,6 +2,8 @@ package de.dennisguse.opentracks.sensors.driver;
 
 
 public interface DriverObserver<T> {
+    default void onConnectionStateChanged(BleConnectionSession.State state) {}
+
     /**
      * The Driver could connect to the sensor.
      */

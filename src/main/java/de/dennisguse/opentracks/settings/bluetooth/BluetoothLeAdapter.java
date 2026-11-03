@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
+import de.dennisguse.opentracks.R;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +51,11 @@ public class BluetoothLeAdapter extends BaseAdapter {
 
         Device device = devices.get(position);
         TextView textView = currentView.findViewById(android.R.id.text1);
-        textView.setText(device.getNameOrAddress());
+        String detail = device.rssi != null ? parent.getContext().getString(R.string.sensor_scan_rssi, device.rssi) : "";
+        if (device.connected) detail += (detail.isEmpty() ? "" : " · ") + parent.getContext().getString(R.string.sensor_scan_connected);
+        textView.setSingleLine(false);
+        textView.setMaxLines(3);
+        textView.setText(device.getNameOrAddress() + (detail.isEmpty() ? "" : "\n" + detail));
 
         return currentView;
     }
@@ -57,27 +63,28 @@ public class BluetoothLeAdapter extends BaseAdapter {
     /**
      * @return Data changed?
      */
-    public boolean add(String address, String name) {
-        Device device = new Device(address, name);
-        if (!devices.contains(device)) {
-            devices.add(device);
-            return true;
-        } else {
-            for (Device currentDevice : devices) {
-                if (currentDevice.address.equals(address)) {
-                    currentDevice.name = name;
-                    return true;
-                }
+    public boolean add(String address, String name) { return add(address, name, null, false); }
+
+    public boolean add(String address, String name, Integer rssi, boolean connected) {
+        for (Device current : devices) {
+            if (current.address.equals(address)) {
+                if (name != null && !name.isBlank()) current.name = name;
+                if (rssi != null) current.rssi = rssi;
+                current.connected = connected;
+                return true;
             }
         }
-        return false;
+        Device device = new Device(address, name);
+        device.rssi = rssi;
+        device.connected = connected;
+        devices.add(device);
+        return true;
     }
 
     public void addAll(List<BluetoothDevice> bluetoothDevices) {
-        boolean dataSetChanged = bluetoothDevices.stream()
-                .anyMatch(bluetoothDevice -> add(bluetoothDevice.getAddress(), bluetoothDevice.getName()));
-
-        if (dataSetChanged) notifyDataSetChanged();
+        // Do not use anyMatch: its short circuit drops all remaining scan results.
+        for (BluetoothDevice device : bluetoothDevices) add(device.getAddress(), device.getName());
+        if (!bluetoothDevices.isEmpty()) notifyDataSetChanged();
     }
 
     public Device get(int index) {
@@ -89,6 +96,8 @@ public class BluetoothLeAdapter extends BaseAdapter {
         @NonNull
         private final String address;
         private String name;
+        private Integer rssi;
+        private boolean connected;
 
         Device(@NonNull String address, String name) {
             Objects.requireNonNull(address);
@@ -102,8 +111,11 @@ public class BluetoothLeAdapter extends BaseAdapter {
         }
 
         public String getNameOrAddress() {
-            return name != null ? name : address;
+            return name != null && !name.isBlank() ? name : address;
         }
+
+        public Integer getRssi() { return rssi; }
+        public boolean isConnected() { return connected; }
 
         @Override
         public boolean equals(Object o) {

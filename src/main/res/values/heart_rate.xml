@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="sensor_scan_again">Scan again</string>
+    <string name="sensor_scan_rssi">%1$d dBm</string>
+    <string name="sensor_scan_connected">Bluetooth connected</string>
+</resources>
