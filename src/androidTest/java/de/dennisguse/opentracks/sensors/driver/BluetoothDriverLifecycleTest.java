@@ -20,6 +20,19 @@ public class BluetoothDriverLifecycleTest {
         assertEquals(1, successes[0]);
     }
 
+    @Test public void runtimeParserRetainsOptionalFieldsAndNotificationIdentity() {
+        HeartRateBluetooth parser = new HeartRateBluetooth();
+        android.bluetooth.BluetoothGattCharacteristic characteristic = new android.bluetooth.BluetoothGattCharacteristic(
+                HeartRateBluetooth.HEARTRATE.measurementUUID(), 0, 0);
+        HeartRate value = parser.parsePayload(HeartRateBluetooth.HEARTRATE, "strap", characteristic,
+                new byte[]{0x1e, 72, 12, 0, 0, 4, (byte)0xe8, 3});
+        assertEquals(72, value.getBPM(), 0); assertTrue(value.sample().contactDetected());
+        assertEquals(Integer.valueOf(12), value.sample().energyExpended());
+        assertEquals(List.of(1024,1000), value.sample().rrIntervals1024()); assertNull(value.sample().capturedAt());
+        var stamped = value.sample().captured(java.time.Instant.EPOCH, "test-address", "strap", "connection-1");
+        assertEquals(value.sample().sampleId(), stamped.sampleId()); assertEquals("connection-1", stamped.connectionId());
+    }
+
     @Test public void notificationAndIndicationSubscriptionsPreserveOtherSensorSupport() {
         assertArrayEquals(new byte[]{1,0},BluetoothDriver.subscriptionValue(android.bluetooth.BluetoothGattCharacteristic.PROPERTY_NOTIFY));
         assertArrayEquals(new byte[]{2,0},BluetoothDriver.subscriptionValue(android.bluetooth.BluetoothGattCharacteristic.PROPERTY_INDICATE));

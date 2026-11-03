@@ -2,7 +2,8 @@ package de.dennisguse.opentracks.data.models;
 
 import androidx.annotation.Nullable;
 
-public record HeartRate(float value) {
+public record HeartRate(float value, @Nullable HeartRateSample sample) {
+    public HeartRate(float value) { this(value, null); }
     public static HeartRate INVALID = HeartRate.of(0.0f);
 
     public static HeartRate of(float value) {
@@ -20,6 +21,6 @@ public record HeartRate(float value) {
     }
 
     public boolean isValid() {
-        return !this.equals(INVALID);
+        return Float.isFinite(value) && value > 0 && value <= 65535;
     }
 }

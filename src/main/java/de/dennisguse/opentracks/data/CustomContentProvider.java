@@ -38,6 +38,7 @@ import java.util.Arrays;
 import de.dennisguse.opentracks.BuildConfig;
 import de.dennisguse.opentracks.data.models.TrackPoint;
 import de.dennisguse.opentracks.data.tables.MarkerColumns;
+import de.dennisguse.opentracks.data.tables.HeartRateSamplesColumns;
 import de.dennisguse.opentracks.data.tables.TrackPointsColumns;
 import de.dennisguse.opentracks.data.tables.TracksColumns;
 import de.dennisguse.opentracks.publicapi.DataProvider;
@@ -222,6 +223,10 @@ public class CustomContentProvider extends ContentProvider {
         //TODO queryBuilder.setStrict(true);
         //TODO queryBuilder.appendWhere() should use selectionArgs?
         switch (getUrlType(url)) {
+            case HEART_RATE_SAMPLES -> {
+                queryBuilder.setTables(HeartRateSamplesColumns.TABLE_NAME);
+                sortOrder = sort != null ? sort : "time, _id";
+            }
             case TRACKPOINTS -> {
                 queryBuilder.setTables(TrackPointsColumns.TABLE_NAME);
                 sortOrder = sort != null ? sort : BaseColumns._ID;
@@ -373,6 +378,10 @@ public class CustomContentProvider extends ContentProvider {
      */
     private Uri insertContentValues(Uri url, UrlType urlType, ContentValues contentValues) {
         return switch (urlType) {
+            case HEART_RATE_SAMPLES -> {
+                long id = db.insertWithOnConflict(HeartRateSamplesColumns.TABLE_NAME, null, contentValues, SQLiteDatabase.CONFLICT_IGNORE);
+                yield id >= 0 ? ContentUris.withAppendedId(url, id) : url;
+            }
             case TRACKPOINTS -> insertTrackPoint(url, contentValues);
             case TRACKS -> insertTrack(url, contentValues);
             case MARKERS -> insertMarker(url, contentValues);
@@ -409,6 +418,7 @@ public class CustomContentProvider extends ContentProvider {
     }
 
     public enum UrlType {
+        HEART_RATE_SAMPLES("/heart_rate_samples", "", "vnd.android.cursor.dir/vnd.com.fox.runner.heartrate"),
         TRACKPOINTS("/trackpoints", "", "vnd.android.cursor.dir/vnd.de.dennisguse.trackpoint"),
         TRACKPOINTS_BY_ID("/trackpoints", "#", "vnd.android.cursor.dir/vnd.de.dennisguse.trackpoint"),
         //TODO Check if still used

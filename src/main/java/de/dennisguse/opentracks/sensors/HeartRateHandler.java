@@ -11,6 +11,10 @@ import de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRate;
 
 public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
 
+    private String selectedAddress;
+    private String selectedName;
+    private String connectionId;
+
     protected HeartRateHandler(SensorManager sensorManager) {
         super(sensorManager);
     }
@@ -29,6 +33,22 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     @Override
     protected AggregatorHeartRate createAggregator(String sensorAddress, String sensorName) {
         return new AggregatorHeartRate(sensorAddress, sensorName);
+    }
+
+    @Override
+    public void onConnected(String address, String name) {
+        connectionId = java.util.UUID.randomUUID().toString();
+        selectedAddress = address;
+        selectedName = name;
+        super.onConnected(address, name);
+    }
+
+    @Override
+    public void onDataReceived(HeartRate value) {
+        if (value.sample() != null) {
+            value = new HeartRate(value.value(), value.sample().captured(sensorManager.getNow(), selectedAddress, selectedName, connectionId));
+        }
+        super.onDataReceived(value);
     }
 
     @Override

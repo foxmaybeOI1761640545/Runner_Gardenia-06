@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 import de.dennisguse.opentracks.data.models.HeartRate;
+import de.dennisguse.opentracks.data.models.HeartRateSample;
 import de.dennisguse.opentracks.sensors.ServiceMeasurementUUID;
 
 public class HeartRateBluetooth implements BluetoothDriver.BluetoothParser<HeartRate> {
@@ -52,7 +53,11 @@ public class HeartRateBluetooth implements BluetoothDriver.BluetoothParser<Heart
     @Override
     public HeartRate parsePayload(ServiceMeasurementUUID service, String name,
                                   BluetoothGattCharacteristic characteristic, byte[] bytes) {
-        return parseHeartRate(bytes);
+        HeartRateMeasurement decoded = HeartRateMeasurement.parse(bytes);
+        if (decoded == null) return null;
+        if (!decoded.hasUsableHeartRate()) return HeartRate.INVALID;
+        return new HeartRate(decoded.bpm(), new HeartRateSample(null, null, name,
+                decoded.contactDetected(), decoded.energyExpended(), decoded.rrIntervals1024()));
     }
 
     public static final ServiceMeasurementUUID BODY_LOCATION = new ServiceMeasurementUUID(

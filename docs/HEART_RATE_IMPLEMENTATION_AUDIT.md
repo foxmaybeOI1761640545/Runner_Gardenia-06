@@ -73,3 +73,7 @@ Each stage has a commit and PR CI run. No later-stage implementation begins befo
 ## Stage 0 acceptance
 
 The baseline and reference commit were identified, the requested existing paths were traced, reused components and concrete gaps were recorded, privacy/release boundaries were defined, and per-stage files/checks were listed. Documentation/static review is complete; PR CI evidence is recorded in HEART_RATE_STAGE_ACCEPTANCE.md before stage 1 starts.
+
+## Stage 2 finding — raw notifications versus TrackPoint snapshots
+
+The recording audit was refined by following TrackRecordingManager.onNewTrackPoint: distance-free samples are intentionally filtered at a >10-second interval; GPS points use distance thresholds. Adding metadata only to those snapshots cannot meet raw sample retention. Stage 2 therefore adds a normalized heart_rate_samples table **inside the same database**, keyed by the existing track FK, instead of another database/service or changing GPS selection. TrackPoint BPM remains unchanged for compatibility; raw samples carry optional metadata and an independent notification/connection identity. Schema 43 creates the table/index additively; migration tests preserve v42 tracks/BPM and the existing v23 upgrade chain. Historical curves can use complete raw notifications while older tracks fall back to existing BPM points. No raw metadata is added to public GPX/KML exports.

@@ -16,6 +16,7 @@ import java.util.UUID;
 
 import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.data.ContentProviderUtils;
+import de.dennisguse.opentracks.data.HeartRateRepository;
 import de.dennisguse.opentracks.data.models.ActivityType;
 import de.dennisguse.opentracks.data.models.Distance;
 import de.dennisguse.opentracks.data.models.Statistics;
@@ -164,6 +165,9 @@ public class TrackRecordingManager implements SharedPreferences.OnSharedPreferen
      * @return TrackPoint was stored?
      */
     synchronized boolean onNewTrackPoint(@NonNull TrackPoint trackPoint) {
+        // Raw heart-rate notifications must survive the existing GPS/distance/10-second filters.
+        // This shares the track's SQLite database but does not change GPS point selection or reset sensor distance.
+        new HeartRateRepository(context).insert(trackId, trackPoint.heartRate());
         if (trackPoint.position().hasSpeed()) {
             lastTrackPointUIWithSpeed = trackPoint;
         }

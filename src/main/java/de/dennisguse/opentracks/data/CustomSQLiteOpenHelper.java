@@ -19,6 +19,7 @@ import de.dennisguse.opentracks.Startup;
 import de.dennisguse.opentracks.data.models.ActivityType;
 import de.dennisguse.opentracks.data.models.Track;
 import de.dennisguse.opentracks.data.tables.MarkerColumns;
+import de.dennisguse.opentracks.data.tables.HeartRateSamplesColumns;
 import de.dennisguse.opentracks.data.tables.TrackPointsColumns;
 import de.dennisguse.opentracks.data.tables.TracksColumns;
 
@@ -29,7 +30,7 @@ class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
 
     private static final String TAG = CustomSQLiteOpenHelper.class.getSimpleName();
 
-    private static final int DATABASE_VERSION = 42;
+    private static final int DATABASE_VERSION = 43;
 
     private final Context context;
 
@@ -59,6 +60,7 @@ class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
 
         db.execSQL(MarkerColumns.CREATE_TABLE);
         db.execSQL(MarkerColumns.CREATE_TABLE_INDEX);
+        createHeartRateSamples(db);
     }
 
     @Override
@@ -86,6 +88,7 @@ class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
                 case 40 -> upgradeFrom39to40(db);
                 case 41 -> upgradeFrom40to41(db);
                 case 42 -> upgradeFrom41to42(db);
+                case 43 -> createHeartRateSamples(db);
                 default -> throw new RuntimeException("Not implemented: upgrade to " + toVersion);
             }
         }
@@ -115,6 +118,7 @@ class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
                 case 39 -> downgradeFrom40to39(db);
                 case 40 -> downgradeFrom41to40(db);
                 case 41 -> downgradeFrom42to41(db);
+                case 42 -> db.execSQL("DROP TABLE " + HeartRateSamplesColumns.TABLE_NAME);
                 default -> throw new RuntimeException("Not implemented: downgrade to " + toVersion);
             }
         }
@@ -794,4 +798,9 @@ class CustomSQLiteOpenHelper extends SQLiteOpenHelper {
         db.setTransactionSuccessful();
         db.endTransaction();
     }
+    private void createHeartRateSamples(SQLiteDatabase db) {
+        db.execSQL(HeartRateSamplesColumns.CREATE_TABLE);
+        db.execSQL(HeartRateSamplesColumns.CREATE_INDEX);
+    }
+
 }
