@@ -8,7 +8,7 @@ import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 
-from apk_resources import read_packaged_xml
+from apk_resources import verify_shortcut_binding
 
 
 def run(*args):
@@ -62,18 +62,9 @@ for item in manifest.iter():
     if item.tag == 'action':
         require(not item.get(android + 'name', '').startswith('de.dennisguse.opentracks.'),
                 'An upstream application action remains in the manifest.')
-# Class names and Java namespace intentionally remain upstream-compatible.
-# Decode the packaged shortcut XML too: checking only source XML misses flavor overrides.
-shortcut_xml = read_packaged_xml(analyzer, apk, 'shortcuts')
-require('de.dennisguse.opentracks.playstore' not in shortcut_xml, 'Upstream shortcut package remains.')
-require(not re.search(r'targetPackage[^\n]*de\.dennisguse\.opentracks', shortcut_xml),
-        'Upstream shortcut package remains.')
-require('com.fox.runner' in shortcut_xml or '@string/applicationId' in shortcut_xml
-        or re.search(r'targetPackage[^\n]*@(?:0x)?[0-9a-fA-F]+', shortcut_xml),
-        'Cannot establish shortcut package binding.')
-resolved_package = run(analyzer, 'resources', 'value', '--config', 'default',
-                       '--name', 'applicationId', '--type', 'string', apk).strip('"')
-require(resolved_package == 'com.fox.runner', 'Incorrect resolved shortcut application ID resource.')
+# Resource paths can be shortened and XML decoders render references differently.
+# Compare the typed targetPackage resource ID with the actual string resource.
+verify_shortcut_binding(analyzer, sdk / 'build-tools/36.0.0/aapt2', apk, 'com.fox.runner')
 out = Path('dist')
 require(not out.exists(), 'Output directory must be fresh.')
 out.mkdir()

@@ -104,21 +104,20 @@ class ReportTests(unittest.TestCase):
 
 
 class ApkResourceTests(unittest.TestCase):
-    def test_optimized_resource_path_is_resolved_and_checked(self):
+    def test_optimized_resource_path_and_typed_binding(self):
         with tempfile.TemporaryDirectory() as tmp:
             apk = Path(tmp) / 'fixture.apk'
             with zipfile.ZipFile(apk, 'w') as archive:
                 archive.writestr('res/a1.xml', b'fixture binary XML')
-            calls = []
-            def analyzer(args, text):
-                calls.append(args)
-                if args[2] == 'value': return '"res/a1.xml"\n'
-                return '<shortcuts/>'
-            with patch.object(apk_resources.subprocess, 'check_output', side_effect=analyzer):
-                self.assertEqual('<shortcuts/>', apk_resources.read_packaged_xml('apkanalyzer', apk, 'shortcuts'))
-                self.assertIn('res/a1.xml', calls[-1])
+            with patch.object(apk_resources.subprocess, 'check_output', return_value='"res/a1.xml"\n'):
+                self.assertEqual('res/a1.xml', apk_resources.resolve_packaged_xml('apkanalyzer', apk, 'shortcuts'))
             with patch.object(apk_resources.subprocess, 'check_output', return_value='res/missing.xml'):
-                with self.assertRaises(RuntimeError): apk_resources.read_packaged_xml('apkanalyzer', apk, 'shortcuts')
+                with self.assertRaises(RuntimeError): apk_resources.resolve_packaged_xml('apkanalyzer', apk, 'shortcuts')
+        resources = 'resource 0x7f110073 string/applicationId\n  () "com.fox.runner"\nresource 0x7f110074 string/other\n () "different"'
+        tree = ' A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=@0x7f110073'
+        self.assertEqual(0x7f110073, apk_resources.check_binding_dumps(resources, tree, 'com.fox.runner'))
+        with self.assertRaises(RuntimeError): apk_resources.check_binding_dumps(resources, tree.replace('7f110073','7f110074'), 'com.fox.runner')
+        with self.assertRaises(RuntimeError): apk_resources.check_binding_dumps(resources, tree, 'com.upstream.app')
 
 
 class FakeGitHub:
