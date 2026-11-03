@@ -305,6 +305,15 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         gpsStatusObservable.postValue(gpsStatusValue);
     }
 
+    public synchronized boolean areSensorsStarted() {
+        return trackPointCreator != null && trackPointCreator.isStarted();
+    }
+
+    public synchronized de.dennisguse.opentracks.sensors.HeartRatePreview getHeartRatePreview() {
+        return areSensorsStarted() ? trackPointCreator.getHeartRatePreview()
+                : new de.dennisguse.opentracks.sensors.HeartRatePreview(null,de.dennisguse.opentracks.sensors.HeartRateStatus.disconnected());
+    }
+
     @Deprecated
     @VisibleForTesting
     public TrackPointCreator getTrackPointCreator() {

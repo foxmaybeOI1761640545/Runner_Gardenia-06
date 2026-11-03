@@ -24,4 +24,12 @@
     <string name="hr_chart_hint">Time chart: full heart-rate samples. Pinch to zoom; swipe to browse.</string>
     <string name="hr_chart_distance_hint">Distance chart uses track snapshots. Open Time for all heart-rate samples.</string>
     <string name="hr_chart_legacy">Heart rate · recorded track samples</string>
+    <string name="hr_connect_selected">Connect / reconnect selected strap</string>
+    <string name="hr_disconnect_selected">Disconnect strap</string>
+    <string name="hr_choose_first">Select a heart-rate strap first</string>
+    <string name="hr_preview_title">Heart rate · %1$s</string>
+    <string name="hr_preview_detail">%1$s\n%2$s</string>
+    <string name="hr_connect_summary">Preview live heart rate before recording. Samples are saved only during a recording.</string>
+    <string name="hr_disconnect_summary">Keep the selected strap for the next connection.</string>
+    <string name="hr_select_device">Selected strap</string>
 </resources>

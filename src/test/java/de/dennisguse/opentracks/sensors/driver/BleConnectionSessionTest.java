@@ -54,5 +54,9 @@ public class BleConnectionSessionTest {
     @Test public void permissionDeniedDoesNotSpin() { establish();session.permissionDenied();assertEquals(BleConnectionSession.State.PERMISSION_DENIED,session.state());assertTrue(tasks.isEmpty()); }
     @Test public void invalidDeviceDoesNotSpin() { session.start();session.unavailable();assertEquals(BleConnectionSession.State.UNAVAILABLE,session.state());assertTrue(tasks.isEmpty()); }
     @Test public void disconnectDoesNotStopDesiredSession() { establish();session.disconnected(session.generation());assertEquals(BleConnectionSession.State.RECONNECT_WAIT,session.state());assertEquals(1,ready);assertEquals(1,lost);assertFalse(tasks.isEmpty()); }
+    @Test public void onlyExplicitReconnectRestartsAfterManualDisconnect() {
+        establish();session.stop();session.bluetoothOn();assertEquals(1,opens);assertTrue(tasks.isEmpty());
+        session.reconnect();assertEquals(2,opens);assertEquals(BleConnectionSession.State.CONNECTING,session.state());
+    }
     @Test public void rejectedSubscriptionRetries() { canSubscribe=false;session.start();int t=session.generation();session.connected(t,true);session.servicesDiscovered(t,true);assertEquals(BleConnectionSession.State.RECONNECT_WAIT,session.state()); }
 }

@@ -60,10 +60,20 @@ public class HeartRateUiScreenshotTest {
     @Test public void realPagesInLightDarkAndTwoWindowSizes() throws Exception {
         String originalTheme = PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));
         String overrideSize = shell("wm size");String overrideDensity = shell("wm density");
+        String headsUp = shell("settings get global heads_up_notifications_enabled").trim();
+        android.bluetooth.BluetoothAdapter radio = context.getSystemService(android.bluetooth.BluetoothManager.class).getAdapter();
+        boolean radioWasEnabled = radio != null && radio.isEnabled();
         String configured = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
         output = new File(configured != null ? new File(configured) : new File(context.getExternalMediaDirs()[0],"additional_test_output"),"heart-rate-ui");
         assertTrue(output.isDirectory() || output.mkdirs());
         try {
+            // UI screenshots exercise the real offline dialog. This emulator has no physical HR radio;
+            // its virtual Bluetooth stack aborts on real scan requests. Transport behavior is tested with fakes.
+            shell("settings put global heads_up_notifications_enabled 0");
+            if (radioWasEnabled) shell("svc bluetooth disable");
+            long deadline = android.os.SystemClock.uptimeMillis()+5000;
+            while (radio != null && radio.isEnabled() && android.os.SystemClock.uptimeMillis()<deadline) android.os.SystemClock.sleep(50);
+            assertTrue("UI radio must be explicitly offline",radio == null || !radio.isEnabled());
             for (boolean narrow : new boolean[]{false,true}) for (boolean dark : new boolean[]{false,true}) {
                 shell(narrow ? "wm size 720x1280" : "wm size reset");
                 shell(narrow ? "wm density 320" : "wm density reset");
@@ -77,7 +87,7 @@ public class HeartRateUiScreenshotTest {
             }
             JSONObject manifest = new JSONObject().put("physicalBleTested",false)
                     .put("fixtures","Synthetic heart-rate notifications and device rows in test code only")
-                    .put("timezone",java.util.TimeZone.getDefault().getID()).put("screenshots",captures);
+                    .put("timezone",java.util.TimeZone.getDefault().getID()).put("radioScenario","Offline emulator; scan device rows are test fixtures").put("screenshots",captures);
             try (FileOutputStream stream = new FileOutputStream(new File(output,"manifest.json"))) {
                 stream.write(manifest.toString(2).getBytes(StandardCharsets.UTF_8));
             }
@@ -87,6 +97,8 @@ public class HeartRateUiScreenshotTest {
             PreferencesUtils.setString(R.string.theme_key,originalTheme);
             InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);
             restoreOverride("size",overrideSize);restoreOverride("density",overrideDensity);
+            if (radioWasEnabled) shell("svc bluetooth enable");
+            shell(headsUp.equals("null") ? "settings delete global heads_up_notifications_enabled" : "settings put global heads_up_notifications_enabled "+headsUp);
         }
     }
 
@@ -162,7 +174,8 @@ public class HeartRateUiScreenshotTest {
                 SensorsSettingsFragment fragment=(SensorsSettingsFragment)activity.getSupportFragmentManager().findFragmentById(R.id.settings_fragment);
                 fragment.onDisplayPreferenceDialog(fragment.findPreference(context.getString(R.string.settings_sensor_bluetooth_heart_rate_key)));
             });
-            waitUntilDisplayed(withText(R.string.sensor_scan_again),WAIT);capture(profile+"-scan",false);
+            onView(withText(R.string.sensor_scan_again)).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));
+            capture(profile+"-scan",false);
             scenario.onActivity(activity -> {
                 BluetoothLeSensorPreference.BluetoothLeSensorPreferenceDialog dialog=(BluetoothLeSensorPreference.BluetoothLeSensorPreferenceDialog)activity.getSupportFragmentManager().findFragmentByTag(SensorsSettingsFragment.class.getSimpleName());
                 var adapter=dialog.getDeviceAdapter();adapter.add("test-1","Synthetic chest strap",-49,true);adapter.add("test-2","Synthetic optical sensor",-68,false);adapter.notifyDataSetChanged();
@@ -177,16 +190,38 @@ public class HeartRateUiScreenshotTest {
     }
 
     private void capture(String name,boolean synthetic) throws Exception {
-        InstrumentationRegistry.getInstrumentation().waitForIdleSync();android.os.SystemClock.sleep(150);
-        Bitmap image=InstrumentationRegistry.getInstrumentation().getUiAutomation().takeScreenshot();assertNotNull(image);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        Activity activity=ActivityTestUtils.waitForResumedActivity(Activity.class,WAIT);
+        java.util.concurrent.CountDownLatch frames = new java.util.concurrent.CountDownLatch(1);
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            View decor=activity.getWindow().getDecorView();decor.invalidate();
+            decor.postOnAnimation(() -> decor.postOnAnimation(frames::countDown));
+        });
+        assertTrue("UI did not render two frames",frames.await(5,java.util.concurrent.TimeUnit.SECONDS));
+        Bitmap image=null;long deadline=android.os.SystemClock.uptimeMillis()+5000;
+        do {
+            if(image!=null) image.recycle();
+            image=InstrumentationRegistry.getInstrumentation().getUiAutomation().takeScreenshot();assertNotNull(image);
+            if(!name.contains("-recording-") || recordingTextIsPainted(activity,image)) break;
+            android.os.SystemClock.sleep(100);
+        } while(android.os.SystemClock.uptimeMillis()<deadline);
+        if(name.contains("-recording-")) assertTrue("Screenshot captured an unpainted recording page",recordingTextIsPainted(activity,image));
         assertTrue(image.getWidth()>=600);assertTrue(image.getHeight()>=1000);
         try(FileOutputStream file=new FileOutputStream(new File(output,name+".png"))) {assertTrue(image.compress(Bitmap.CompressFormat.PNG,100,file));}
-        Activity activity=ActivityTestUtils.waitForResumedActivity(Activity.class,WAIT);
         int night=activity.getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK;
         int widthDp=activity.getResources().getConfiguration().screenWidthDp;
         assertEquals(name.contains("-dark-") ? android.content.res.Configuration.UI_MODE_NIGHT_YES : android.content.res.Configuration.UI_MODE_NIGHT_NO,night);
         captures.put(new JSONObject().put("nightMode",night).put("widthDp",widthDp).put("file",name+".png").put("width",image.getWidth()).put("height",image.getHeight()).put("syntheticHeartRateOrDevices",synthetic));image.recycle();
     }
+    private boolean recordingTextIsPainted(Activity activity,Bitmap image) {
+        Rect bounds=new Rect();
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> activity.findViewById(R.id.heart_rate_current).getGlobalVisibleRect(bounds));
+        java.util.Set<Integer> colors=new java.util.HashSet<>();
+        for(int y=Math.max(0,bounds.top);y<Math.min(image.getHeight(),bounds.bottom);y+=3)
+            for(int x=Math.max(0,bounds.left);x<Math.min(image.getWidth(),bounds.right);x+=3) colors.add(image.getPixel(x,y));
+        return colors.size()>=6;
+    }
+
     private void assertVisibleText(View view) {
         assertNotNull(view);Rect bounds=new Rect();assertTrue(view.getGlobalVisibleRect(bounds));assertTrue(bounds.width()>0);assertTrue(bounds.height()>0);
         if(view instanceof TextView text && text.getLayout()!=null) for(int line=0;line<text.getLineCount();line++) assertEquals("Truncated text",0,text.getLayout().getEllipsisCount(line));

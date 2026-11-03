@@ -150,6 +150,15 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         return Instant.now(clock);
     }
 
+    public de.dennisguse.opentracks.sensors.HeartRateStatus getHeartRateStatus() {
+        return sensorManager.getHeartRateStatus();
+    }
+
+    public de.dennisguse.opentracks.sensors.HeartRatePreview getHeartRatePreview() {
+        var heartRate = sensorManager.getSensorDataSet(getNow()).heartRate();
+        return new de.dennisguse.opentracks.sensors.HeartRatePreview(heartRate != null ? heartRate.data() : null,getHeartRateStatus());
+    }
+
     @VisibleForTesting
     public SensorManager getSensorManager() {
         return sensorManager;

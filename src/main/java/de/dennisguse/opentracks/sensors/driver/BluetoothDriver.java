@@ -48,6 +48,7 @@ import de.dennisguse.opentracks.sensors.ServiceMeasurementUUID;
 public class BluetoothDriver<T> implements Driver {
     private static final String TAG = BluetoothDriver.class.getSimpleName();
     public static final String RECONNECT_SUFFIX = ".RECONNECT_BLE_SENSOR";
+    public static final String DISCONNECT_SUFFIX = ".DISCONNECT_BLE_SENSOR";
     private final DriverObserver<T> observer;
     private final BluetoothParser<T> parser;
     private final BluetoothAdapter adapter;
@@ -85,7 +86,14 @@ public class BluetoothDriver<T> implements Driver {
     private final BroadcastReceiver reconnectReceiver = new BroadcastReceiver() {
         @Override public void onReceive(Context unused, Intent intent) {
             BleConnectionSession current = session;
-            if (current != null && address != null && address.equals(intent.getStringExtra("address"))) current.reconnect();
+            List<String> measurements = intent.getStringArrayListExtra("measurements");
+            if (measurements != null && parser.getServices().stream().noneMatch(s -> measurements.contains(s.measurementUUID().toString()))) return;
+            String measurement = intent.getStringExtra("measurement");
+            if (measurement != null && parser.getServices().stream().noneMatch(s -> s.measurementUUID().toString().equals(measurement))) return;
+            if (current != null && address != null && address.equals(intent.getStringExtra("address"))) {
+                if ((unused.getPackageName()+DISCONNECT_SUFFIX).equals(intent.getAction())) current.stop();
+                else current.reconnect();
+            }
         }
     };
 
@@ -145,7 +153,9 @@ public class BluetoothDriver<T> implements Driver {
             @Override public void stopped() { observer.onDisconnected(); }
         });
         ContextCompat.registerReceiver(context, powerReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED), ContextCompat.RECEIVER_EXPORTED);
-        ContextCompat.registerReceiver(context, reconnectReceiver, new IntentFilter(context.getPackageName() + RECONNECT_SUFFIX), ContextCompat.RECEIVER_NOT_EXPORTED);
+        IntentFilter commands = new IntentFilter(context.getPackageName() + RECONNECT_SUFFIX);
+        commands.addAction(context.getPackageName() + DISCONNECT_SUFFIX);
+        ContextCompat.registerReceiver(context, reconnectReceiver, commands, ContextCompat.RECEIVER_NOT_EXPORTED);
         receiversRegistered = true;
         session.start();
     }

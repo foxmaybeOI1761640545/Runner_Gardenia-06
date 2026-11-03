@@ -137,7 +137,7 @@ public final class BleConnectionSession {
     }
 
     public synchronized void reconnect() {
-        if (!desired) return;
+        if (!desired) { start(); return; }
         cancelTasks();
         transport.close();
         listener.lost();

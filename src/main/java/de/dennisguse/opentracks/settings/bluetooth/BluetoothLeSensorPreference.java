@@ -52,6 +52,7 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
     private static final String TAG = BluetoothLeSensorPreference.class.getSimpleName();
 
     private static final String ARG_BLE_SERVICE_UUIDS = "bluetoothUUID";
+    private static final String ARG_BLE_MEASUREMENTS = "bluetoothMeasurements";
     private static final String ARG_INCLUDE_INTERNAL = "supportsInternal";
 
     private static final int DEVICE_NONE_RESOURCEID = R.string.value_none;
@@ -206,6 +207,7 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                     .map(ServiceMeasurementUUID::serviceUUID)
                     .map(ParcelUuid::new)
                     .toList()));
+            b.putStringArrayList(ARG_BLE_MEASUREMENTS,new ArrayList<>(sensorUUIDs.stream().map(it -> it.measurementUUID().toString()).distinct().toList()));
             b.putBoolean(ARG_INCLUDE_INTERNAL, includeInternalSensor);
 
             fragment.setArguments(b);
@@ -364,7 +366,8 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                     preference.setValue(value);
                     if (reconnect && getContext() != null) {
                         getContext().sendBroadcast(new Intent(getContext().getPackageName() + BluetoothDriver.RECONNECT_SUFFIX)
-                                .setPackage(getContext().getPackageName()).putExtra("address", value));
+                                .setPackage(getContext().getPackageName()).putExtra("address", value)
+                                .putStringArrayListExtra("measurements",getArguments().getStringArrayList(ARG_BLE_MEASUREMENTS)));
                     }
                 }
             }

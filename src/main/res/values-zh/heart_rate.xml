@@ -24,4 +24,12 @@
     <string name="hr_chart_hint">时间图显示完整心率样本。双指缩放，滑动浏览。</string>
     <string name="hr_chart_distance_hint">距离图使用轨迹采样点；完整心率样本请查看时间图。</string>
     <string name="hr_chart_legacy">心率 · 历史轨迹采样点</string>
+    <string name="hr_connect_selected">连接／重新连接所选心率带</string>
+    <string name="hr_disconnect_selected">断开心率带</string>
+    <string name="hr_choose_first">请先选择心率带</string>
+    <string name="hr_preview_title">心率 · %1$s</string>
+    <string name="hr_preview_detail">%1$s\n%2$s</string>
+    <string name="hr_connect_summary">开始运动记录前可预览实时心率；仅在运动记录期间保存样本。</string>
+    <string name="hr_disconnect_summary">保留所选心率带，以便下次重新连接。</string>
+    <string name="hr_select_device">所选心率带</string>
 </resources>
