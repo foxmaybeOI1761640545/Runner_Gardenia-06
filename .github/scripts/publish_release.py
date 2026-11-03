@@ -11,6 +11,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from release_policy import verify_tag_digest
+
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
@@ -116,6 +118,7 @@ def publish(api, folder):
     actual_tag = subprocess.check_output(['git', 'rev-parse', expected['versionName'] + '^{commit}'], text=True).strip()
     if actual_tag != expected['commit']:
         raise RuntimeError('Remote checkout tag differs from the tested source.')
+    verify_tag_digest(expected['versionName'], expected['apkSha256'])
     filename = f"runner-gardenia-{expected['versionName']}-{expected['versionCode']}.apk"
     if [p.name for p in folder.glob('*.apk')] != [filename]:
         raise RuntimeError('Exactly the expected signed APK is required.')
@@ -147,6 +150,8 @@ def publish(api, folder):
         canonical_bytes = api.request(assets['build-info.json']['url'], binary=True)
         canonical = json.loads(canonical_bytes)
         verify_identity(canonical, expected)
+        if canonical['apkSha256'] != expected['apkSha256']:
+            raise RuntimeError('Existing release APK differs from immutable tag digest.')
     elif assets:
         raise RuntimeError('Existing assets have no trusted source manifest; refusing overwrite.')
     if filename in assets:

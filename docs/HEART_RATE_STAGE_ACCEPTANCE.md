@@ -59,3 +59,14 @@ Hardware access: unavailable. Emulator/fake transport evidence and real radio ev
 - Local validation: 51 actual JUnit cases PASS (not NO-SOURCE), 14 Python helper cases PASS, actionlint and edited XML/Python/diff checks PASS.
 - Hardware checklist: docs/HEART_RATE_BLE_TEST_CHECKLIST.md, including pre-recording preview, recording/pause/reconnect/manual stop, history/restart/upgrade, optional RR and battery, privacy and long-duration checks. Every physical result remains explicitly unverified.
 - Result: pending full stage 4 PR CI and actual reports; stage 5 must wait.
+
+- Stage 4 final acceptance: PASS — https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41733224958 at d34c68481427b0bf0e5ceafc2fe2d8b561c3cb06. Downloaded XML: 328 instrumentation / 327 executed / 0 failures / 0 errors / 1 original Ignore; 52 JVM tests / 0 failures/errors/skips, including the actual Gradle test-worker Singapore identity/offset test. All 40 UI captures passed; both revised distance-chart sizes were visually checked. Debug/Lint/identity passed; downloaded APK SHA-256 2be8a3b8fd6b647fc37859c6522c603c4ad9928e3ff65e9413d5f7283c8ffeb2 matched the report. Fourteen Python helper regressions passed. Physical strap/upgrade/endurance checks remain unverified. Stage 5 authorized.
+
+## Stage 5 — verify signed APK before assigning a tag
+
+- Reordered dependencies to prepare → checks → signed (including APK verification/upload) → create-tag → publish. PR/manual runs remain unsigned checks only.
+- The tag job now requires both the passed exact-plan CI gate and the same-run signed bundle with matching identity, signature verification, unique APK and SHA256SUMS. The immutable annotation binds the APK SHA-256 in addition to the source/version/run plan.
+- A signing retry restores this run's original signed artifact and independently re-verifies the Environment certificate, APK identity and tag digest. Missing/expired originals for an already-tagged version fail closed; existing signed artifacts are never overwritten. Draft publication resumes missing assets; different APK bytes cannot replace an existing release.
+- VERSION_NAME_FULL is rendered from planned version plus exact source SHA, so creating the tag afterwards cannot change this build field on retry. Local builds retain git-describe fallback.
+- Added negative tests: passed tests without signed bundle, failed signature, corrupted transferred APK, foreign plan, missing/expired tagged artifacts and certificate mismatch cannot proceed. Existing interrupted-upload/rerun publication tests remain.
+- Local validation: 17 Python tests PASS, actionlint/Python syntax/diff checks PASS. Gradle 9.8.2 help also passed locally without installing SDK. Actual stage 5 PR CI pending; stage 6 is not authorized yet. The signed main path is intentionally not exercised from an untrusted PR; final main validation must verify it before publication is claimed.

@@ -1,5 +1,6 @@
 """Local regression tests for version allocation, strict report gates and safe publication."""
 import json
+import hashlib
 import os
 from pathlib import Path
 import subprocess
@@ -45,6 +46,26 @@ class VersionTests(unittest.TestCase):
                     with self.assertRaises(SystemExit): policy.create_tag('plan.json', 'gate.json')
                     self.assertNotIn(plan['versionName'], git('tag', '--list'))
                     Path('gate.json').write_text(json.dumps({'plan': plan, 'passed': True}))
+                    # Passing tests alone cannot create a tag before signing.
+                    with self.assertRaises(FileNotFoundError): policy.create_tag('plan.json', 'gate.json')
+                    self.assertNotIn(plan['versionName'], git('tag', '--list'))
+                    folder = Path('dist');folder.mkdir()
+                    filename = f"runner-gardenia-{plan['versionName']}-{plan['versionCode']}.apk"
+                    payload = b'unit fixture, not an Android APK'
+                    checksum = hashlib.sha256(payload).hexdigest()
+                    info = {**plan, 'plan':plan, 'applicationId':'com.fox.runner',
+                            'variant':'reproducibleRelease', 'debuggable':False,
+                            'signatureVerified':True, 'certificateSha256':'B'*64,'apkSha256':checksum}
+                    (folder/filename).write_bytes(payload)
+                    (folder/'SHA256SUMS').write_text(checksum+'  '+filename+'\n')
+                    (folder/'build-info.json').write_text(json.dumps({**info,'signatureVerified':False}))
+                    with self.assertRaises(SystemExit):policy.create_tag('plan.json','gate.json')
+                    self.assertNotIn(plan['versionName'], git('tag','--list'))
+                    (folder/'build-info.json').write_text(json.dumps(info))
+                    (folder/filename).write_bytes(b'changed during artifact transfer')
+                    with self.assertRaises(SystemExit):policy.create_tag('plan.json','gate.json')
+                    self.assertNotIn(plan['versionName'],git('tag','--list'))
+                    (folder/filename).write_bytes(payload)
                     policy.create_tag('plan.json', 'gate.json')
                     tag_object = git('rev-parse', plan['versionName'])
                     self.assertEqual(plan['commit'], git('rev-parse', plan['versionName'] + '^{commit}'))
@@ -53,6 +74,10 @@ class VersionTests(unittest.TestCase):
                     policy.apply('plan.json');policy.verify_tag('plan.json')
                     policy.create_tag('plan.json', 'gate.json')
                     self.assertEqual(tag_object, git('rev-parse', plan['versionName']))
+                    self.assertEqual(plan['versionName']+'-'+plan['commit'][:12],
+                                     policy.properties(Path('version.properties').read_text())['VERSION_NAME_FULL'])
+                    policy.verify_tag_digest(plan['versionName'],checksum)
+                    with self.assertRaises(SystemExit):policy.verify_tag_digest(plan['versionName'],'0'*64)
                     bad = {**plan, 'runId': 'other'}
                     Path('bad.json').write_text(json.dumps(bad))
                     Path('bad-gate.json').write_text(json.dumps({'plan': bad, 'passed': True}))
@@ -155,7 +180,7 @@ class PublicationTests(unittest.TestCase):
             api=FakeGitHub();api.fail_upload=True
             def verify(data,expected):
                 if publication.digest(data)!=expected['apkSha256']:raise RuntimeError('checksum mismatch')
-            with patch.object(publication.subprocess,'check_output',return_value='a'*40),patch.object(publication,'verify_apk',side_effect=verify),patch.dict(os.environ,{'GITHUB_STEP_SUMMARY':''}):
+            with patch.object(publication.subprocess,'check_output',return_value='a'*40),patch.object(publication,'verify_apk',side_effect=verify),patch.object(publication,'verify_tag_digest'),patch.dict(os.environ,{'GITHUB_STEP_SUMMARY':''}):
                 with self.assertRaises(RuntimeError):publication.publish(api,folder)
                 self.assertTrue(api.record['draft']);self.assertEqual({'build-info.json'},set(api.data))
                 api.fail_upload=False;publication.publish(api,folder)

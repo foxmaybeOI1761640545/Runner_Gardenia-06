@@ -21,6 +21,7 @@ allprojects {
 def releaseVersion = new Properties()
 file('version.properties').withInputStream { releaseVersion.load(it) }
 def gitDescription = { ->
+    if (releaseVersion.VERSION_NAME_FULL) return releaseVersion.VERSION_NAME_FULL
     def description = providers.exec {
         commandLine 'git', 'describe', '--tags', '--always'
         ignoreExitValue = true

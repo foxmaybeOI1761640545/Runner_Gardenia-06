@@ -1,7 +1,7 @@
 {
   "physicalBleTested": false,
   "fixtures": "Synthetic heart-rate notifications and device rows in test code only",
-  "timezone": "Asia\/Singapore",
+  "timezone": "Asia/Singapore",
   "radioScenario": "Offline emulator; scan device rows are test fixtures",
   "screenshots": [
     {
@@ -324,5 +324,7 @@
       "height": 1280,
       "syntheticHeartRateOrDevices": true
     }
-  ]
+  ],
+  "sourceRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41733224958",
+  "featureCommit": "d34c68481427b0bf0e5ceafc2fe2d8b561c3cb06"
 }

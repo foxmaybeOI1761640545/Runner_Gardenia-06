@@ -1,6 +1,6 @@
 # Heart-rate UI acceptance
 
-Actual API 35 managed-device run: [41730815364](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41730815364), feature commit db08d13b920e4b668b556983efe5db205c10d000.
+Actual API 35 managed-device run: [41733224958](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41733224958), feature commit d34c68481427b0bf0e5ceafc2fe2d8b561c3cb06.
 
 40 full-screen PNGs were produced by UiAutomation, with actual light/dark resource configuration and 411dp (1080×2400) / 360dp (720×1280) windows. The complete set is in the run's check-reports Artifact. Twelve unedited key captures are retained here; SHA256SUMS identifies their original bytes, and capture-manifest.json describes the complete 40-image source set.
 
@@ -12,7 +12,7 @@ The recording, stale, chart, settings/scan, original home and historical-record 
 | Stale measurement, normal dark | [PNG](screenshots/heart-rate/phone-dark-recording-stale.png) |
 | Live recording, narrow light/dark | [Light](screenshots/heart-rate/narrow-light-recording-connected.png), [dark](screenshots/heart-rate/narrow-dark-recording-connected.png) |
 | Time chart and extrema | [Normal light](screenshots/heart-rate/phone-light-time-chart.png), [narrow dark](screenshots/heart-rate/narrow-dark-time-chart.png) |
-| Existing distance chart | [PNG](screenshots/heart-rate/phone-dark-distance-chart.png) |
+| Distance chart with preserved sample gaps | [PNG](screenshots/heart-rate/phone-dark-distance-chart.png) |
 | Sensor settings/preview/controls | [Normal dark](screenshots/heart-rate/phone-dark-settings.png), [narrow dark](screenshots/heart-rate/narrow-dark-settings.png) |
 | Device list/RSSI | [Narrow light](screenshots/heart-rate/narrow-light-scan-fixture.png) |
 | Original home/history | [Home](screenshots/heart-rate/narrow-dark-home.png), [history](screenshots/heart-rate/narrow-light-history.png) |
