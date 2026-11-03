@@ -17,12 +17,22 @@ allprojects {
     }
 }
 
-def getVersionName = { ->
-    return 'git describe --tags'.execute(null, project.rootDir).text.trim()
+// Explicit release versions are independent of Git history and shallow clones.
+def releaseVersion = new Properties()
+file('version.properties').withInputStream { releaseVersion.load(it) }
+def gitDescription = { ->
+    def output = new ByteArrayOutputStream()
+    def result = providers.exec {
+        commandLine 'git', 'describe', '--tags', '--always'
+        standardOutput = output
+        errorOutput = new ByteArrayOutputStream()
+        ignoreExitValue = true
+    }.result.get()
+    return result.exitValue == 0 ? output.toString('UTF-8').trim() : releaseVersion.VERSION_NAME
 }
-
-def getVersionCodeNightly = { ->
-    return Integer.valueOf('git rev-list HEAD --count'.execute(null, project.rootDir).text.trim())
+// Environment variables are used by Actions. Preserve legacy local -D options.
+def signingValue = { String environmentName, String systemName ->
+    System.getenv(environmentName) ?: System.getProperty(systemName)
 }
 
 android {
@@ -46,11 +56,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'de.dennisguse.opentracks'
-        versionCode 6766
-        versionName "v4.29.0"
+        applicationId 'com.fox.runner'
+        versionCode releaseVersion.VERSION_CODE.toInteger()
+        versionName releaseVersion.VERSION_NAME
 
-        buildConfigField "String", "VERSION_NAME_FULL", "\"${getVersionName()}\""
+        buildConfigField "String", "VERSION_NAME_FULL", "\"${gitDescription()}\""
 
         minSdk = 26
         targetSdk = 37
@@ -79,11 +89,12 @@ android {
             }
         }
         release {
-            if (System.getProperty("release_store_file") != null) {
-                storeFile file(System.getProperty("release_store_file"))
-                storePassword System.getProperty("release_store_password")
-                keyAlias System.getProperty("release_key_alias")
-                keyPassword System.getProperty("release_key_password")
+            def releaseStore = signingValue('ANDROID_KEYSTORE_FILE', 'release_store_file')
+            if (releaseStore != null) {
+                storeFile file(releaseStore)
+                storePassword signingValue('ANDROID_KEYSTORE_PASSWORD', 'release_store_password')
+                keyAlias signingValue('ANDROID_KEY_ALIAS', 'release_key_alias')
+                keyPassword signingValue('ANDROID_KEY_PASSWORD', 'release_key_password')
             }
         }
     }
@@ -106,28 +117,22 @@ android {
     productFlavors {
         nightly {
             dimension 'version'
-            applicationId 'de.dennisguse.opentracks.nightly'
+            applicationId 'com.fox.runner.nightly'
 
-            versionCode getVersionCodeNightly()
-            versionName getVersionName()
-            base.archivesName = "de.dennisguse.opentracks.nightly_${getVersionCodeNightly()}"
+            base.archivesName = "runner-gardenia-nightly_${releaseVersion.VERSION_NAME}_${releaseVersion.VERSION_CODE}"
 
             signingConfig = signingConfigs.nightly
         }
         irreproducible {
-            // Non-reproducible: https://f-droid.org/de/packages/de.dennisguse.opentracks/
             dimension 'version'
-            applicationId 'de.dennisguse.opentracks'
+            applicationId 'com.fox.runner'
             versionNameSuffix 'irreproducible'
         }
         reproducible {
-            // Developer Binaries: https://codeberg.org/OpenTracksApp/OSMDashboard/releases/download/v%v/de.dennisguse.opentracks.playstore_%v.apk
-            // FDroid: https://f-droid.org/de/packages/de.dennisguse.opentracks.playstore
-            // PlayStore: https://play.google.com/store/apps/details?id=de.dennisguse.opentracks.playstore
             dimension 'version'
-            applicationId 'de.dennisguse.opentracks.playstore'
+            applicationId 'com.fox.runner'
 
-            base.archivesName = "de.dennisguse.opentracks.playstore_${getVersionName()}_${android.defaultConfig.versionCode}"
+            base.archivesName = "runner-gardenia_${releaseVersion.VERSION_NAME}_${releaseVersion.VERSION_CODE}"
 
             signingConfig = signingConfigs.release
         }

@@ -82,3 +82,12 @@ captures/
 Appfile
 releasePlayStore/*
 Gemfile.lock
+
+# Signing material must never enter the repository
+*.keystore
+*.p12
+*.pfx
+*.jks.base64
+*.keystore.base64
+/signing/
+/dist/
