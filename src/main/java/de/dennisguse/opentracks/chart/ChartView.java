@@ -244,8 +244,8 @@ public class ChartView extends View {
                 // will range from ~70 - ~180 (around 4.5 intervals).
                 // For Zone 1 cardio, the 15 value should result in nice visuals, as the values
                 // will range from ~70 - ~120 (around 3.5 intervals)
-                // The fallback of 50 should give appropriate visuals for values outside this range.
-                new int[]{15, 25, 50},
+                // Wider intervals keep the entire valid UINT16 protocol range visible without a personal HR limit.
+                new int[]{15, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 20000},
                 R.string.description_sensor_heart_rate,
                 R.string.description_sensor_heart_rate,
                 R.string.description_sensor_heart_rate,
@@ -429,6 +429,9 @@ public class ChartView extends View {
             updateSeries();
         }
     }
+
+    @androidx.annotation.VisibleForTesting
+    int heartRateAxisMax() { return heartRateSeries.getMaxMarkerValue(); }
 
     @androidx.annotation.VisibleForTesting
     Path heartRatePath() { synchronized (chartPoints) { return new Path(heartRateSeries.getPath()); } }

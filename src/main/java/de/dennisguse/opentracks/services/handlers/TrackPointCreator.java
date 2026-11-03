@@ -166,7 +166,7 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
 
     @VisibleForTesting
     public void setClock(@NonNull String time) {
-        this.clock = Clock.fixed(Instant.parse(time), ZoneId.of("CET"));
+        this.clock = Clock.fixed(Instant.parse(time), ZoneId.systemDefault());
     }
 
     @Deprecated //TODO This should be refactored. Can we use a SensorDataSet for this?

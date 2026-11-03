@@ -33,4 +33,24 @@ public class HeartRatePlotTest {
         assertTrue(result.size()<=800);assertTrue(result.stream().anyMatch(p->p.bpm()==230 && p.breakBefore()));
     }
     @Test(expected=IllegalArgumentException.class) public void invalidBudgetFailsExplicitly() { HeartRatePlot.reduce(data(10),0); }
+    @Test public void distanceProjectionInterpolatesButPreservesReconnectBoundaries() {
+        var result=HeartRatePlot.byDistance(List.of(new HeartRatePlot.Point(1000,70,false),new HeartRatePlot.Point(2000,75,true)),
+                List.of(new HeartRatePlot.DistanceAnchor(0,0),new HeartRatePlot.DistanceAnchor(4000,0.4)));
+        assertEquals(0.1,result.get(0).x(),0.00001);assertEquals(0.2,result.get(1).x(),0.00001);
+        assertTrue(result.get(1).breakBefore());assertEquals(75,result.get(1).bpm(),0);
+    }
+    @Test public void distanceProjectionClampsUnlocatedSamplesWithoutInventingTravel() {
+        var result=HeartRatePlot.byDistance(List.of(new HeartRatePlot.Point(-100,70,true),new HeartRatePlot.Point(9000,75,false)),
+                List.of(new HeartRatePlot.DistanceAnchor(0,0),new HeartRatePlot.DistanceAnchor(4000,0.4)));
+        assertEquals(0,result.get(0).x(),0);assertEquals(0.4,result.get(1).x(),0);
+    }
+    @Test public void stationaryAndDuplicateTimeAnchorsDoNotDivideByZero() {
+        var result=HeartRatePlot.byDistance(List.of(new HeartRatePlot.Point(0,70,true),new HeartRatePlot.Point(1000,75,true)),
+                List.of(new HeartRatePlot.DistanceAnchor(0,0),new HeartRatePlot.DistanceAnchor(0,0),new HeartRatePlot.DistanceAnchor(2000,0)));
+        assertEquals(0,result.get(0).x(),0);assertEquals(0,result.get(1).x(),0);assertTrue(result.get(1).breakBefore());
+    }
+    @Test public void missingDistanceAnchorsHaveAnExplicitEmptyResult() {
+        assertTrue(HeartRatePlot.byDistance(data(5),List.of()).isEmpty());
+    }
+
 }

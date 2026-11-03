@@ -173,7 +173,8 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                     BluetoothManager manager = getContext().getSystemService(BluetoothManager.class);
                     for (ScanResult result : results) {
                         boolean connected = manager != null && manager.getConnectionState(result.getDevice(), BluetoothProfile.GATT) == BluetoothProfile.STATE_CONNECTED;
-                        listAdapter.add(result.getDevice().getAddress(), result.getDevice().getName(), result.getRssi(), connected);
+                        String advertised = result.getScanRecord() != null ? result.getScanRecord().getDeviceName() : null;
+                        listAdapter.add(result.getDevice().getAddress(), BleScanSession.displayName(result.getDevice().getName(),advertised), result.getRssi(), connected);
                     }
                     listAdapter.notifyDataSetChanged();
                 } catch (SecurityException denied) {

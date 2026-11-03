@@ -22,7 +22,7 @@
     <string name="hr_summary">Min %1$.0f · Avg %2$.0f · Max %3$.0f bpm</string>
     <string name="hr_chart_empty">Heart rate · connect a strap to record samples</string>
     <string name="hr_chart_hint">Time chart: full heart-rate samples. Pinch to zoom; swipe to browse.</string>
-    <string name="hr_chart_distance_hint">Distance chart uses track snapshots. Open Time for all heart-rate samples.</string>
+    <string name="hr_chart_distance_hint">Heart-rate distance is estimated between track snapshots. Use Time for precise timing.</string>
     <string name="hr_chart_legacy">Heart rate · recorded track samples</string>
     <string name="hr_connect_selected">Connect / reconnect selected strap</string>
     <string name="hr_disconnect_selected">Disconnect strap</string>

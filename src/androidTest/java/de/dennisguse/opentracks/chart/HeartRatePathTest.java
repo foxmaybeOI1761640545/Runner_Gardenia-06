@@ -31,6 +31,20 @@ public class HeartRatePathTest {
             assertEquals(2,segments(view));
         });
     }
+    @Test public void fullUint16ProtocolRangeFitsWithoutAPersonalMaximumAssumption() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            ChartView view=chart();view.setRawHeartRatePoints(List.of(new HeartRatePlot.Point(0,5,true),new HeartRatePlot.Point(1000,65535,false)));
+            assertTrue(view.heartRateAxisMax()>=65535);assertEquals(1,segments(view));
+        });
+    }
+    @Test public void distanceProjectionKeepsAnExplicitReconnectPathBreak() {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            ChartView view=chart();view.setChartByDistance(true);
+            view.setRawHeartRatePoints(HeartRatePlot.byDistance(List.of(new HeartRatePlot.Point(0,70,true),new HeartRatePlot.Point(1000,75,false),new HeartRatePlot.Point(2000,80,true),new HeartRatePlot.Point(3000,85,false)),
+                    List.of(new HeartRatePlot.DistanceAnchor(0,0),new HeartRatePlot.DistanceAnchor(3000,0.3))));
+            assertEquals(2,segments(view));
+        });
+    }
     @Test public void resetRemovesOldPathAndExtrema() {
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
             ChartView view=chart();view.setRawHeartRatePoints(List.of(new HeartRatePlot.Point(0,70,true),new HeartRatePlot.Point(1000,75,false)));

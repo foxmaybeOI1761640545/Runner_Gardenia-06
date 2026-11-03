@@ -13,10 +13,10 @@ def count(node, name):
     return int(value)
 
 
-def inspect(root_path, source_path):
+def inspect(root_path, source_path, require_environment=True):
     files = sorted(root_path.rglob('TEST-*.xml'))
     if not files:
-        raise ValueError('Instrumentation reports are missing.')
+        raise ValueError(('Instrumentation' if require_environment else 'JVM unit') + ' reports are missing.')
     totals = dict(tests=0, failures=0, errors=0, skipped=0)
     suites = []
     cases = {}
@@ -54,7 +54,7 @@ def inspect(root_path, source_path):
             package = re.search(r'^package ([\w.]+);', text, re.M)
             expected_classes.add(package[1] + '.' + source.stem)
     if not expected_classes:
-        raise ValueError('No configured instrumentation test classes found.')
+        raise ValueError('No configured test classes found.')
     missing = sorted(expected_classes - {identity[0] for identity in cases})
     required = {
         ('de.dennisguse.opentracks.TimezoneEnvironmentTest', 'instrumentationDefaultIsSingapore'),
@@ -62,7 +62,7 @@ def inspect(root_path, source_path):
         ('de.dennisguse.opentracks.TimezoneEnvironmentTest', 'timezoneRuleRestoresPreviousDefaultOnFailure'),
         ('de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest', 'callbackAfterDestroyDoesNotAccessReleasedManagers'),
         ('de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest', 'queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister'),
-    }
+    } if require_environment else set()
     missing_required = sorted(f'{owner}.{name}' for owner, name in required
                               if (owner, name) not in cases or cases[(owner, name)].find('skipped') is not None)
     details = []
@@ -82,16 +82,23 @@ def main():
         report = inspect(Path('build/outputs/androidTest-results'), Path('src/androidTest/java'))
     except (ValueError, ET.ParseError, OSError) as error:
         report = {'passed': False, 'diagnostic': str(error)}
+    try:
+        unit = inspect(Path('build/test-results/testReproducibleDebugUnitTest'),Path('src/test/java'),require_environment=False)
+    except (ValueError, ET.ParseError, OSError) as error:
+        unit = {'passed': False, 'diagnostic': str(error)}
+    report['unitTests'] = unit
+    report['passed'] = report['passed'] and unit['passed']
     report['plan'] = plan
     folder = Path('build/reports/ci-validation')
     folder.mkdir(parents=True, exist_ok=True)
+    (folder / 'unit.json').write_text(json.dumps(unit, indent=2) + '\n')
     (folder / 'instrumentation.json').write_text(json.dumps(report, indent=2) + '\n')
-    text = '## Instrumentation report gate\n\n```json\n' + json.dumps(report, indent=2) + '\n```\n'
+    text = '## Android and JVM test report gate\n\n```json\n' + json.dumps(report, indent=2) + '\n```\n'
     print(text)
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as target: target.write(text)
     if not report['passed']:
-        raise SystemExit('Instrumentation report gate failed.')
+        raise SystemExit('Android/JVM report gate failed.')
 
 
 if __name__ == '__main__': main()

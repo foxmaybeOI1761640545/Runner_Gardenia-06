@@ -2,6 +2,11 @@ package de.dennisguse.opentracks.sensors.driver;
 
 /** Generation guard shared by the scan dialog and fake-scanner tests. */
 public final class BleScanSession {
+    public static String displayName(String cached, String advertised) {
+        if (cached != null && !cached.isBlank()) return cached;
+        return advertised != null && !advertised.isBlank() ? advertised : null;
+    }
+
     public enum State { IDLE, SCANNING, COMPLETE, CANCELLED, FAILED, BLUETOOTH_OFF, PERMISSION_DENIED }
     private int generation;
     private State state = State.IDLE;

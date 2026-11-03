@@ -5,6 +5,14 @@ import org.junit.Test;
 import java.util.List;
 
 public class BleScanSessionTest {
+    @Test public void advertisementNameIsUsedBeforeTheDeviceCacheHasAName() {
+        assertEquals("HR strap",BleScanSession.displayName(null,"HR strap"));
+        assertEquals("HR strap",BleScanSession.displayName(" ","HR strap"));
+        assertEquals("Saved name",BleScanSession.displayName("Saved name","Advertisement"));
+    }
+    @Test public void unnamedAdvertisementsRemainUnnamedRatherThanInventingADevice() {
+        assertNull(BleScanSession.displayName(null,null));assertNull(BleScanSession.displayName("", " "));
+    }
     @Test public void scanAcceptsOnlyCurrentResults() { BleScanSession s=new BleScanSession();int first=s.begin(true,true);int second=s.begin(true,true);assertFalse(s.accepts(first));assertTrue(s.accepts(second)); }
     @Test public void timeoutFinishesScan() { BleScanSession s=new BleScanSession();int t=s.begin(true,true);assertTrue(s.complete(t));assertFalse(s.accepts(t));assertEquals(BleScanSession.State.COMPLETE,s.state()); }
     @Test public void cancelRejectsLateCallbacks() { BleScanSession s=new BleScanSession();int t=s.begin(true,true);s.cancel();assertFalse(s.fail(t));assertFalse(s.accepts(t)); }

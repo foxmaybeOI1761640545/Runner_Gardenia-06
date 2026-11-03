@@ -22,7 +22,7 @@
     <string name="hr_summary">最低 %1$.0f · 平均 %2$.0f · 最高 %3$.0f 次/分</string>
     <string name="hr_chart_empty">心率 · 连接心率带以记录样本</string>
     <string name="hr_chart_hint">时间图显示完整心率样本。双指缩放，滑动浏览。</string>
-    <string name="hr_chart_distance_hint">距离图使用轨迹采样点；完整心率样本请查看时间图。</string>
+    <string name="hr_chart_distance_hint">心率对应的距离在轨迹采样点之间估算；精确时间请查看时间图。</string>
     <string name="hr_chart_legacy">心率 · 历史轨迹采样点</string>
     <string name="hr_connect_selected">连接／重新连接所选心率带</string>
     <string name="hr_disconnect_selected">断开心率带</string>

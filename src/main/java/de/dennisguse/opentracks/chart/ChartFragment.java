@@ -65,6 +65,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     private final HeartRateChartHistory heartRateHistory = new HeartRateChartHistory();
     private HeartRateChartHistory.Result heartRateResult;
     private Track.Id selectedTrack;
+    private final List<HeartRatePlot.DistanceAnchor> distanceAnchors = new ArrayList<>();
 
     // Stats gathered from the received data
     private final List<ChartPoint> pendingPoints = new ArrayList<>();
@@ -184,6 +185,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
                 return;
             }
 
+            if (!track.id().equals(selectedTrack)) distanceAnchors.clear();
             selectedTrack = track.id();
             loadHeartRateHistory(track.id());
             activityTypeLocalized = track.activityTypeLocalized();
@@ -199,6 +201,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     public void clearTrackPoints() {
         if (isResumed()) {
             pendingPoints.clear();
+            distanceAnchors.clear();
             viewBinding.chartView.reset();
             runOnUiThread(() -> {
                 if (isResumed()) {
@@ -212,6 +215,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
         if (isResumed()) {
             ChartPoint point = ChartPoint.create(trackStatistics, trackPoint, trackPoint.position().speed(), chartByDistance, viewBinding.chartView.getUnitSystem());
             pendingPoints.add(point);
+            if (chartByDistance) distanceAnchors.add(new HeartRatePlot.DistanceAnchor(trackStatistics.totalDuration().toMillis(),point.timeOrDistance()));
         }
     }
 
@@ -242,11 +246,13 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
         HeartRateChartHistory.Result result = heartRateResult;
         if (result == null) return;
         Track.Id expectedTrack = selectedTrack;
+        List<HeartRatePlot.Point> plot = chartByDistance
+                ? HeartRatePlot.byDistance(result.points(),List.copyOf(distanceAnchors)) : result.points();
         runOnUiThread(() -> {
             if (!isResumed() || viewBinding == null || !java.util.Objects.equals(expectedTrack,selectedTrack)) return;
             if (result.count() > 0) {
                 viewBinding.heartRateSummary.setText(getString(R.string.hr_summary,result.min(),result.average(),result.max()));
-                if (!chartByDistance) viewBinding.chartView.setRawHeartRatePoints(result.points());
+                if (!chartByDistance || !plot.isEmpty()) viewBinding.chartView.setRawHeartRatePoints(plot);
             } else {
                 viewBinding.heartRateSummary.setText(R.string.hr_chart_legacy);
             }

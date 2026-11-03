@@ -7,7 +7,27 @@ import java.util.List;
 /** Bounded extrema-preserving plot reduction. Gaps are evaluated before reduction. */
 public final class HeartRatePlot {
     public record Point(double x, double bpm, boolean breakBefore) {}
+    public record DistanceAnchor(double activeMillis, double distance) {}
     private HeartRatePlot() {}
+
+    /** Projection changes only the HR chart's axis, never stored GPS/distance statistics. */
+    public static List<Point> byDistance(List<Point> input, List<DistanceAnchor> anchors) {
+        if (anchors.isEmpty()) return List.of();
+        List<Point> result = new ArrayList<>();
+        for (Point point : input) {
+            int low=0,high=anchors.size()-1;
+            while (low<high) {
+                int middle=(low+high+1)/2;
+                if (anchors.get(middle).activeMillis()<=point.x()) low=middle; else high=middle-1;
+            }
+            DistanceAnchor left=anchors.get(low),right=anchors.get(Math.min(low+1,anchors.size()-1));
+            double ratio=right.activeMillis()>left.activeMillis()
+                    ? Math.max(0,Math.min(1,(point.x()-left.activeMillis())/(right.activeMillis()-left.activeMillis()))) : 0;
+            double distance=left.distance()+ratio*(right.distance()-left.distance());
+            result.add(new Point(distance,point.bpm(),point.breakBefore()));
+        }
+        return List.copyOf(result);
+    }
     public static List<Point> reduce(List<Point> input, int budget) {
         if (budget < 8) throw new IllegalArgumentException("Plot budget too small");
         if (input.size() <= budget) return List.copyOf(input);
