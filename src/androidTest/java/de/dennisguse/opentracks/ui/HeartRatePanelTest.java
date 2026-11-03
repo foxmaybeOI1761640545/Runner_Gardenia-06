@@ -34,6 +34,14 @@ public class HeartRatePanelTest {
             assertTrue(((TextView)root.findViewById(R.id.heart_rate_status)).getText().toString().contains(root.getContext().getString(R.string.hr_contact_lost)));
         });
     }
+    @Test public void manualDisconnectClearsTheOldDeviceFromLiveStatus() {
+        de.dennisguse.opentracks.sensors.HeartRateHandler handler = new de.dennisguse.opentracks.sensors.HeartRateHandler(null) {};
+        handler.onConnected("test-address","old strap");handler.onConnectionStateChanged(BleConnectionSession.State.CONNECTED);
+        assertEquals("old strap",handler.getStatus(Instant.EPOCH).device());
+        handler.onDisconnected();assertNull(handler.getStatus(Instant.EPOCH).device());
+        assertEquals(BleConnectionSession.State.DISCONNECTED,handler.getStatus(Instant.EPOCH).state());
+    }
+
     @Test public void everyConnectionStateIsReadableWithoutInventingMeasurements() {
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
             View root=panel();for(var state:BleConnectionSession.State.values()) {

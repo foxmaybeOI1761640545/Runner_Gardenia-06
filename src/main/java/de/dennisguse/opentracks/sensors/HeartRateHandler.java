@@ -63,6 +63,13 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     }
 
     @Override
+    public void onDisconnected() {
+        super.onDisconnected();
+        selectedAddress = null; selectedName = null; lastReceived = null; contactLost = false;
+        connectionState = de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State.DISCONNECTED;
+    }
+
+    @Override
     public void onConnectionLost() {
         super.onConnectionLost();
         if (aggregator instanceof AggregatorHeartRate heartRate) heartRate.invalidate();

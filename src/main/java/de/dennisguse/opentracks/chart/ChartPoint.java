@@ -36,7 +36,7 @@ public record ChartPoint(
                 smoothedSpeed != null
                         ? smoothedSpeed.toPace(unitSystem).toSeconds() / 60d
                         : null,
-                trackPoint.heartRate() != null
+                trackPoint.heartRate() != null && trackPoint.heartRate().isValid()
                         ? (double) trackPoint.heartRate().getBPM()
                         : null,
                 trackPoint.cadence() != null
