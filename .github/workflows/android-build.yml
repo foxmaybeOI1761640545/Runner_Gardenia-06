@@ -6,6 +6,12 @@ on:
     branches: [main]
     tags: ['v*']
   workflow_dispatch:
+    inputs:
+      release:
+        description: "Internal release dispatch; leave false for CI-only runs."
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -85,6 +91,75 @@ jobs:
             build/outputs/androidTest-results/
           retention-days: 14
 
+  create-tag:
+    name: Create version tag after successful CI
+    needs: checks
+    if: >-
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      actions: write
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Create or reuse the exact version tag
+        id: version-tag
+        env:
+          GITHUB_REF: ${{ github.ref }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --force origin '+refs/heads/main:refs/remotes/origin/main' '+refs/tags/*:refs/tags/*'
+          python3 .github/scripts/release_policy.py --promote
+          VERSION_NAME="$(sed -n 's/^VERSION_NAME=//p' version.properties | head -n1)"
+          VERSION_CODE="$(sed -n 's/^VERSION_CODE=//p' version.properties | head -n1)"
+          if [[ -z "$VERSION_NAME" || -z "$VERSION_CODE" ]]; then
+            echo "version.properties must define VERSION_NAME and VERSION_CODE." >&2
+            exit 1
+          fi
+
+          if git show-ref --verify --quiet "refs/tags/$VERSION_NAME"; then
+            EXISTING_COMMIT="$(git rev-parse "${VERSION_NAME}^{commit}")"
+            if [[ "$EXISTING_COMMIT" != "$GITHUB_SHA" ]]; then
+              TAGGED_NAME="$(git show "$VERSION_NAME:version.properties" | sed -n 's/^VERSION_NAME=//p' | head -n1)"
+              TAGGED_CODE="$(git show "$VERSION_NAME:version.properties" | sed -n 's/^VERSION_CODE=//p' | head -n1)"
+              if [[ "$TAGGED_NAME" == "$VERSION_NAME" && "$TAGGED_CODE" == "$VERSION_CODE" ]]; then
+                echo "Version $VERSION_NAME was already tagged at $EXISTING_COMMIT; no duplicate release will be created."
+                echo "dispatch=false" >> "$GITHUB_OUTPUT"
+                exit 0
+              fi
+              echo "Refusing to reuse $VERSION_NAME with different version metadata." >&2
+              exit 1
+            fi
+            echo "The exact version tag already points to this commit; dispatching release workflow again."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git tag -a "$VERSION_NAME" "$GITHUB_SHA" -m "Runner Gardenia $VERSION_NAME"
+            git push origin "refs/tags/$VERSION_NAME"
+            echo "Created annotated tag $VERSION_NAME at $GITHUB_SHA."
+          fi
+
+          echo "tag=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          echo "dispatch=true" >> "$GITHUB_OUTPUT"
+      - name: Dispatch signed release workflow for the tag
+        if: steps.version-tag.outputs.dispatch == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ steps.version-tag.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh workflow run android-build.yml --ref "$RELEASE_TAG" --field release=true
+          printf '\n## Signed release workflow dispatched\n\nTag: `%s`\n' "$RELEASE_TAG" >> "$GITHUB_STEP_SUMMARY"
+
   signed:
     name: Fixed-key release APK
     needs: checks
@@ -92,7 +167,7 @@ jobs:
     if: >-
       github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
       startsWith(github.ref, 'refs/tags/v') &&
-      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release == true))
     environment: android-release
     runs-on: ubuntu-24.04
     timeout-minutes: 35
@@ -153,7 +228,10 @@ jobs:
   publish:
     name: Publish pre-release (never Latest)
     needs: signed
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    if: >-
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
+      startsWith(github.ref, 'refs/tags/v') &&
+      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release == true))
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
