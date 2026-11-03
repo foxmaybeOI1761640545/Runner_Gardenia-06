@@ -1,97 +1,70 @@
 # Runner Gardenia 云端构建与自动预发布
 
-仓库：`foxmaybeOI1761640545/Runner_Gardenia-06`。所有 Android 构建和测试均在 GitHub Actions 完成；Windows 和 Codex Cloud 无需安装 Android SDK。
-
-## 应用身份与版本
-
-正式变体为 `reproducibleRelease`，包名 `com.fox.runner`。保留 Java namespace `de.dennisguse.opentracks`，它是源码类名空间，不是安装包名。Debug 包为 `com.fox.runner.debug`；Nightly 包为 `com.fox.runner.nightly`。Provider、快捷方式及自有 Intent action 随应用包名绑定。
-
-唯一发布版本来源为 `version.properties`。当前首个候选版本为 `v0.1.0-rc1.1`、Version Code `6766`。每一个已发布版本的 Version Code 必须严格递增，不能依赖 Git 提交数量或 Actions 运行次数。
-
-建议版本递进：
-- 首个测试候选：`v0.1.0-rc1.1` / Code `6766`。
-- 同一 RC 系列的下一次测试：`v0.1.0-rc1.2` / Code `6767`，之后依次递增。
-- 新功能阶段可进入下一个版本系列，例如 `v0.2.0-rc1.1`；Version Code 仍在上一已发布版本基础上递增。
-- 所有 GitHub Release 均标记为 **Pre-release**，并显式设置 `latest=false`；不自动设为 Latest。
-
-## 自动工作流
-
-### 1. Pull Request 和 main 推送：Debug CI
-
-- PR 和 `main` 推送自动运行 Debug APK 构建、Lint、单元测试任务及 API 35 仪器测试。
-- 强制检查仪器测试真实执行、必需回归测试存在且没有失败。
-- 验证 Debug APK 的包名、版本、Variant、Debuggable 标记和 APK 完整性。
-- 成功后上传 Debug APK Artifact 和测试/Lint 报告。
-- PR 不注入正式签名 Secrets，也不创建 Tag 或 Release。
-
-### 2. main CI 成功：自动创建版本 Tag
-
-`create-tag` job 仅在规范仓库的 `main` Push 且 `checks` 全部成功后运行：
-
-1. 读取 `version.properties`。
-2. 检查版本格式、当前提交确实属于 main 历史，以及 Version Code 高于此前沿袭的所有版本 Tag。
-3. 若当前版本 Tag 不存在，则在通过 CI 的精确提交上创建 annotated Tag，Tag 名称必须与 `VERSION_NAME` 完全一致。
-4. 使用本 job 的 `GITHUB_TOKEN` 显式 dispatch 同一工作流，并传入内部 `release=true`，启动 Tag 对应的签名发布流程。
-5. 若相同 Tag 已存在于较早提交且版本元数据一致，则跳过，不重复创建版本；若同名 Tag 的版本元数据不一致，则失败退出，禁止覆盖或移动 Tag。
-
-因此，普通 main 提交不会重复发布已经存在的版本。准备新版本时必须更新 `VERSION_NAME` 和递增 `VERSION_CODE`。如果 CI 在创建 Tag 前失败，修复后继续推送同一个候选版本即可；不要仅为重试而增加 Version Code。
-
-GitHub 的 `GITHUB_TOKEN` 推送 Tag 不会自动触发新的 push 工作流，所以创建 Tag 后会显式调用 `workflow_dispatch`。GitHub 官方文档明确允许使用 `GITHUB_TOKEN` 触发 `workflow_dispatch`，无需额外 PAT。手动运行工作流时 `release` 默认是 false，只执行 CI；自动发布任务才会传入 true。
-
-### 3. Tag 对应的签名构建与 Pre-release
-
-自动 dispatch 后，工作流会在该 Tag 对应的精确提交上重新运行完整检查，然后：
-
-- 进入受保护的 `android-release` Environment。
-- 恢复固定 JKS 到 `$RUNNER_TEMP`，使用 JDK 21 构建 `reproducibleRelease`。
-- 验证 APK 签名、证书 SHA-256、包名 `com.fox.runner`、Version Name、Version Code、不可调试标记、快捷方式包名和唯一 APK 产物。
-- 生成 APK SHA-256、`SHA256SUMS`、`build-info.json` 和 Release notes。
-- 验证传递校验和后，自动创建 GitHub Pre-release 并上传 APK、校验和及构建信息。
-- 发布命令固定使用 `--prerelease --latest=false`。同名 Release 已存在时失败退出，不覆盖已分发资产。
-
-Tag 触发的检查会在该 Tag 上再运行一次。这是有意的二次门禁，确保签名与发布基于 Tag 实际指向的提交。
-
-## Codex 的阶段交付规则
-
-Codex 完成一个明确的开发阶段时，先完成代码、回归测试和验收；只有阶段达到可发布状态时，才在最终提交中更新 `version.properties` 并推送 `main`。GitHub Actions 会在 CI 通过后自动创建 Tag、启动签名构建并发布 Pre-release。
-
-Codex 不应手动创建 Tag、手动执行签名发布或手动上传 APK。它应等待并核对 main CI、自动 Tag、签名构建和 Pre-release 的实际结果，再向你报告 Release 链接和可下载 APK。中间开发提交不要提前更新版本号，否则只要当前版本 Tag 尚不存在，成功的 main CI 就会触发版本晋升。
-
-若签名构建或发布因代码问题失败，不得强制移动或复用已经创建的 Tag。修复后使用新的版本名和递增后的 Version Code 创建下一候选版本。纯基础设施故障可重跑原 Tag 工作流，不要重写 Tag。
-
-## 工具链与任务
-
-Ubuntu 24.04、Temurin 21；Java 源码/目标兼容版本保持 17；Gradle Wrapper 9.8.2、AGP 9.5.0 不变。
-
-安装官方 SDK `platforms;android-37.0`、Build Tools 36.0.0；测试额外安装 emulator 和 `system-images;android-35;default;x86_64`，开启 KVM。所有测试和构建统一使用 `Asia/Singapore`（UTC+08:00）。
-
-主要任务：
+只需提交并推送 `foxmaybeOI1761640545/Runner_Gardenia-06` 的 `main`。一个 Actions 运行顺序完成：
 
 ```text
-clean lintReproducibleDebug testReproducibleDebugUnitTest assembleReproducibleDebug
+prepare → checks → create-tag → signed → publish
+           Debug/Lint/Unit/API35    固定签名   Pre-release
+```
+
+不再 dispatch 第二个工作流，也不依赖 `GITHUB_TOKEN` 推送 Tag 触发事件。PR 和手动 CI 只执行 prepare/checks，不接触签名 Secrets、不创建 Tag、不发布。
+
+## 版本与精确提交
+
+- 正式包名 `com.fox.runner`；Debug 包名 `com.fox.runner.debug`。Java namespace 保留 `de.dennisguse.opentracks`。
+- `version.properties` 的已提交内容定义版本系列与最低 Code；初始种子为 `v0.1.0-rc1.1` / `6766`。
+- prepare 检查所有现有版本 Tag：同系列取下一个预发布序号，Code 高于所有已分配版本（包括已创建但发布失败的 Tag）。已存在的 rc1.1 完全保留，因此下一版本从 rc1.2 / 6767 开始。
+- 计算结果写入 `release-plan.json` Artifact；每个构建 Job 用同一计划生成本次 `version.properties`，Gradle 原有读取方式不变。Debug 和 Release 的 Version Name/Code 完全一致，Debug 只保留包名后缀，不再增加版本名称后缀。
+- 不产生机器人版本提交，不改写 Git 历史。Tag 指向经过测试的准确源码 SHA；annotated Tag 内保存分配的版本、Code、SHA、run ID。Tag 内的版本计划及 Release 的 build-info.json 记录实际分发版本，不应把 Tag 源码树中的种子配置误认为本次分配结果。
+- 仅在所有检查、报告门禁、Debug APK 验证和上传成功后创建 Tag。失败的测试不会创建 Tag。
+- 同一次 run 重跑时，若已创建 Tag，恢复其版本计划，绝不移动、删除或覆盖 Tag。后续新提交自动计算下一个候选，不需要手动更新版本号。
+
+## 测试与时区
+
+Ubuntu 24.04，Temurin 21，Java source/target 保持 17，Gradle Wrapper 9.8.2、AGP 9.5.0 不变。使用 SDK API 37、Build Tools 36.0.0，API 35 AOSP Gradle Managed Device。
+
+Runner 使用 timedatectl 设置 Asia/Singapore；TZ 和 JAVA_TOOL_OPTIONS 同时明确设置，实际检查 JVM user.timezone。测试 Runner 通过临时 shell 权限设置模拟设备系统时区、关闭设备自动时区，测试检查 persist.sys.timezone 及进程默认时区均为 Asia/Singapore，2020 年测试时间偏移为 UTC+08:00。此设置仅在测试代码中，正式应用仍尊重设备系统时区。TimezoneRule 在 finally 中恢复默认值。
+
+任务：
+
+```text
+clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest
 mediumPhoneReproducibleDebugAndroidTest
 clean assembleReproducibleRelease
 ```
 
-APK 目录为 `build/outputs/apk/reproducible/{debug,release}/`，不是 `app/build/`。签名验证读取 `output-metadata.json`，核对唯一产物、证书、实际 APK 包名、版本、不可调试标记和身份绑定，导出文件到 `dist/`。
+仪器测试命令保留 `-Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect`，并传入 `-Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore`。
 
-## 固定签名和密钥安全
+报告分别统计 Tests、Failures、Errors、Skipped。缺失/无效 XML、声明数量与 testcase 不一致、重复测试、遗漏已配置测试类、必需回归测试被跳过、执行数量为零或存在失败/错误都会阻止发布。保留原有合理的 @Ignore；跳过不计为通过。当前没有 src/test 单元测试源码，单元测试任务可能显示 NO-SOURCE，不能称作执行了单元测试。
 
-GitHub Environment `android-release` 必须配置：
+## 固定签名与发布
 
-- Secrets：`ANDROID_KEYSTORE_BASE64`、`ANDROID_KEYSTORE_PASSWORD`、`ANDROID_KEY_ALIAS`、`ANDROID_KEY_PASSWORD`。
-- Variable：`ANDROID_SIGNING_CERT_SHA256`，填写可信的 SHA-256 证书指纹，允许冒号分隔。
+signed Job 使用 `environment: android-release`，直接引用已有配置：
 
-工作流不生成密钥。Base64 只是编码，不是加密；不要在聊天、日志或仓库保存密钥内容。运行时只向签名步骤注入 Secrets。JKS 仅恢复到 `$RUNNER_TEMP/runner-gardenia-signing/release.jks`，权限 600，并通过 EXIT trap 和 always 步骤双重清理。签名任务禁用缓存和 configuration cache。
+- Secrets：ANDROID_KEYSTORE_BASE64、ANDROID_KEYSTORE_PASSWORD、ANDROID_KEY_ALIAS、ANDROID_KEY_PASSWORD。
+- Variable：ANDROID_SIGNING_CERT_SHA256。
 
-证书指纹必须独立配置，不能从本次 APK 自动学习。使用固定证书、固定包名和递增 Code 支持覆盖更新；实际设备安装及数据保留仍需用两个版本进行验收。
+不生成密钥、不打印密钥或密码。JKS 只恢复到 RUNNER_TEMP，权限 600，通过 EXIT trap 与 always 步骤清理；签名任务禁用 Gradle 缓存和 configuration cache。保留原有本地 -D 签名参数兼容。
 
-请将原始 JKS、Alias、证书指纹和恢复说明做至少两份独立加密备份，并在安全位置保存密码、定期试验恢复。GitHub Secrets 不是可恢复备份。密钥丢失会阻断正常更新，泄露会使签名身份受损。不要把上游 README 的公开证书指纹当作本项目证书。
+验证脚本读取实际 output-metadata.json 定位唯一 APK，检查包名、版本、Code、debuggable=false、apksigner、独立证书 SHA-256 和快捷方式身份。APK ZIP 内路径为 `res/xml/shortcuts.xml`，不能添加前导 `/`。
 
-## 权限和安全
+发布 Job 再次验证 APK 的校验和、签名和身份，创建 draft pre-release，上传 APK、SHA256SUMS、build-info.json，核对每项资产后再公开。固定 prerelease=true、make_latest=false。Release notes 包含准确提交、包名、版本、Code、指纹和 APK SHA-256。
 
-工作流默认 `contents: read`。自动 Tag job 单独获得 `contents: write` 和 `actions: write`；发布 job 单独获得 `contents: write`。PR 不获得正式 Secrets，不使用 `pull_request_target`，签名步骤不输出敏感环境变量。无需额外 PAT。
+网络中断可在 Actions 选择 Re-run failed jobs：
 
-请在 `android-release` Environment 的 Deployment branches and tags 中限制可信版本 Tag，并按需要配置审批；审批会暂停签名 job，若希望完全无人值守发布，应确认该 Environment 没有要求人工审批。保护 `main` 和 `v*` Tag，限制可修改工作流及发布的人。
+- Tag 已存在：只接受同一 run、同一提交、同一版本计划。
+- draft 已存在：校验身份后补齐缺失资产，已有不同内容的资产会失败退出，不覆盖。
+- 已发布：下载并核对已有 APK、指纹、版本与校验文件，确认同一提交后直接成功，不替换 APK。
+- 代码修复：正常提交到 main，自动分配新版本，不复用旧 Tag。
 
-上游说明、源码类路径、资源文字及导入导出格式仍保留 OpenTracks 引用；它们不是安装身份。此阶段不做 UI 品牌替换、不改业务逻辑。
+无需手动 Run workflow、Tag 或发布确认。Environment 当前无 Required reviewers/Wait timer；若后来添加审批，GitHub 会暂停签名任务。
+
+## 下载和核对
+
+Actions 运行的 Artifacts 包含版本计划、Debug APK、完整测试/Lint 报告、签名 APK 和发布回执。正式签名 APK 在 GitHub Releases 对应 Pre-release 页面下载。SHA256SUMS 是 APK 文件校验值；Artifact 压缩包摘要不是 APK 自身摘要。
+
+后续安装保留固定包名/签名并提高 Code；不要卸载旧应用以保留数据。原始 JKS 应由维护者保留至少两份独立加密备份，GitHub Secrets 不是可恢复备份。
+
+## 权限
+
+默认 contents: read，仅 create-tag、publish 为 contents: write。不使用 pull_request_target，不增加 PAT/GitHub App Token。Actions 固定完整 commit SHA。main 发布运行串行且不取消进行中的发布，PR 可取消过时运行。只缓存依赖，不缓存签名材料。项目业务逻辑、UI、依赖及正式应用时区逻辑不在此工作流修复范围内。

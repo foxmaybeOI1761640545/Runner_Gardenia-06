@@ -91,3 +91,11 @@ Gemfile.lock
 *.keystore.base64
 /signing/
 /dist/
+
+# Per-run CI version/gate artifacts
+/release-plan.json
+/gate/
+
+# Python helper caches
+__pycache__/
+*.pyc

@@ -1,36 +1,22 @@
 # Runner Gardenia agent instructions
 
-## Repository and release identity
+- Work only in foxmaybeOI1761640545/Runner_Gardenia-06, main, unless explicitly directed otherwise.
+- Preserve application ID com.fox.runner, Java namespace and unrelated business logic.
+- CI, JVM, managed device and instrumentation use Asia/Singapore (UTC+08:00). Production follows the user's device timezone.
+- Use the checked-in Gradle Wrapper, AGP and Java compatibility settings. Do not install an Android SDK in Codex Cloud.
 
-- Work only in `foxmaybeOI1761640545/Runner_Gardenia-06`, branch `main`, unless the user explicitly requests otherwise.
-- Android application ID is `com.fox.runner`. Preserve the existing Java namespace unless a task explicitly requires changing it.
-- Use `Asia/Singapore` as the CI and instrumentation timezone (UTC+08:00).
-- The single source of release version metadata is `version.properties`.
+## Automatic publication
 
-## Stage completion and automatic release
+A push to main runs one workflow: prepare → checks → create-tag → signed → publish. PR/manual CI does not publish. Never manually create/move/delete Tags or manually publish a Release to bypass this chain.
 
-- Do not create a Git tag or GitHub Release manually. The repository's GitHub Actions workflow creates the annotated version tag after the main-branch Debug CI passes, then dispatches the signed release run.
-- Do not bump `version.properties` for intermediate commits. Update it only in the final, release-ready commit for a completed development stage. A main push with an untagged version and successful checks automatically promotes that version.
-- The current first candidate is `v0.1.0-rc1.1` with Version Code `6766`. For the next candidate in the same RC series use `v0.1.0-rc1.2` and increment Version Code to `6767`; continue monotonically. New feature milestones may start a new version series, but Version Code must always exceed every previously published version.
-- Never reuse an existing version tag, lower a Version Code, force-move a tag, or overwrite a published Release.
+version.properties defines a version-series seed and minimum Code. The workflow allocates the next candidate and strictly increasing Code, stores release-plan.json, and renders identical per-run version.properties for Debug and signed builds. Do not manually bump the seed for intermediate commits; change the series only for an explicitly requested milestone.
 
-## Required completion procedure
+Annotated Tags store the exact tested commit, allocated version/Code and run ID. Preserve all existing Tags. Retry failed jobs to resume a run; do not rewrite its Tag. A normal new main commit allocates a new version after any already-tagged attempt. Git history is never automatically rewritten or augmented by version-bump commits.
 
-When a user-requested development stage is complete and ready for a test release:
+## Completion evidence
 
-1. Finish implementation and run all relevant local/static checks available in the cloud environment. Do not claim Android build or device tests passed locally if they were not run.
-2. Review the complete diff; preserve unrelated user changes and do not modify signing secrets or business logic outside the requested scope.
-3. Update `version.properties` to the next release candidate name and strictly increasing Version Code in the final stage commit.
-4. Commit and push the completed stage to `main`.
-5. Wait for the GitHub Actions run for that exact main commit. Confirm the Debug build, Lint, unit-test task, API 35 instrumentation tests, report gate, APK identity verification, and Debug APK Artifact upload all succeeded.
-6. The `create-tag` job should then create the exact version tag and dispatch the signed release run. Do not create the tag yourself.
-7. Wait for the tag's release run. Confirm the repeated checks, fixed-key signing, certificate fingerprint, APK identity and release gates succeeded; confirm the GitHub Pre-release exists and contains the APK, `SHA256SUMS`, and `build-info.json`.
-8. Report the exact commit, tag, Actions run, Pre-release URL, APK filename, and checksum. If any of these cannot be verified, state precisely what remains incomplete.
+Before committing, run relevant available static/script tests, inspect the diff and preserve user work. Push normally, without force. Wait for the exact main commit's complete workflow. Verify all Debug checks, nonzero instrumented execution with separate failures/errors/skips, device/process timezone tests, APK identity, immutable Tag, fixed signing fingerprint, APK checksum, actual Pre-release and uploaded assets.
 
-## Failure handling
+Do not claim Android tests ran locally when they did not. A successful Debug workflow, Tag creation or signed Artifact alone is not publication. Report source SHA, run, actual counts, Tag, APK SHA-256, Pre-release and download URLs, and any remaining blocker.
 
-- If main CI fails before the tag is created, fix the issue and push another commit with the same candidate version. Once CI passes, the automatic tag job can create it; do not increment Version Code just to retry an untagged candidate.
-- If a tag already exists on an earlier commit with the same version metadata, the workflow skips it. Do not try to retarget it. Prepare a new version name and increment Version Code for a new release.
-- If the signed release run fails after the tag was created, never force-move or reuse that tag. For code fixes, create a new candidate with a higher Version Code. For a transient infrastructure failure, rerun the existing tag workflow without changing the tag.
-- A manual `workflow_dispatch` defaults to CI-only. The internal automatic release dispatch explicitly passes `release=true`; do not use that input as a shortcut around the main CI gate.
-- Never claim an APK was published merely because a build or Artifact upload succeeded. Verify the actual GitHub Pre-release and its assets.
+Only signed accesses android-release Secrets. Do not generate or disclose signing material, alter credentials, add PATs or suppress failing tests. Published assets are verified and retained, never silently replaced.

@@ -4,21 +4,15 @@ on:
   pull_request:
   push:
     branches: [main]
-    tags: ['v*']
   workflow_dispatch:
-    inputs:
-      release:
-        description: "Internal release dispatch; leave false for CI-only runs."
-        required: false
-        default: false
-        type: boolean
 
 permissions:
   contents: read
 
+# One main publication at a time. Never cancel a run midway through tagging/uploading.
 concurrency:
-  group: android-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
+  group: android-${{ github.ref == 'refs/heads/main' && 'main-publication' || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 defaults:
   run:
@@ -26,158 +20,166 @@ defaults:
 
 env:
   TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
   ANDROID_HOME: /usr/local/lib/android/sdk
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
 
 jobs:
+  prepare:
+    name: Allocate immutable version plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      publishing: ${{ steps.plan.outputs.publishing }}
+      version: ${{ steps.plan.outputs.version }}
+    steps:
+      - run: sudo timedatectl set-timezone Asia/Singapore
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate pipeline helper regression tests
+        run: python3 -m unittest discover -s .github/tests -v -b
+      - name: Allocate or resume this run's exact version
+        id: plan
+        run: python3 .github/scripts/release_policy.py prepare
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: version-plan-${{ github.run_id }}
+          path: release-plan.json
+          overwrite: true
+          if-no-files-found: error
+          retention-days: 90
+
   checks:
-    name: Debug build, lint and tests
+    name: Debug build, lint and API 35 tests
+    needs: prepare
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
-      - name: Check version and tag policy
-        run: python3 .github/scripts/release_policy.py
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: version-plan-${{ github.run_id }}
+      - run: python3 .github/scripts/release_policy.py apply
       - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
         with:
           distribution: temurin
           java-version: '21'
+      - name: Verify Gradle JVM timezone
+        run: |
+          java -XshowSettings:properties -version 2>&1 | tee "$RUNNER_TEMP/java-timezone.txt"
+          grep -F 'user.timezone = Asia/Singapore' "$RUNNER_TEMP/java-timezone.txt"
       - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
         with:
           cmdline-tools-version: '16111833'
           packages: platform-tools
-      - name: Install SDK packages
-        run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
       - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4
         with:
           cache-read-only: ${{ github.event_name == 'pull_request' || github.ref != 'refs/heads/main' }}
-      - name: Enable KVM for the existing managed device
+      - name: Enable KVM
         run: |
           test -c /dev/kvm
           sudo chmod a+rw /dev/kvm
       - name: Debug APK, lint and unit tests
-        run: ./gradlew --no-daemon --no-configuration-cache clean lintReproducibleDebug testReproducibleDebugUnitTest assembleReproducibleDebug
+        run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest
       - name: Existing Android instrumentation tests (API 35)
         run: ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore
-      - name: Require executed instrumentation tests
+      - name: Require complete instrumentation XML and timezone evidence
         if: always()
         run: python3 .github/scripts/check_test_results.py
       - name: Verify actual Debug APK identity
         run: python3 .github/scripts/verify_debug_apk.py
-      - name: Upload debug APK
-        id: debug-apk
+      - name: Upload Debug APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: debug-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          name: debug-apk-${{ github.run_id }}
           path: build/outputs/apk/reproducible/debug/*.apk
+          overwrite: true
           if-no-files-found: error
-          retention-days: 14
-      - name: Record uploaded APK Artifact
-        env:
-          ARTIFACT_URL: ${{ steps.debug-apk.outputs.artifact-url }}
-          ARTIFACT_DIGEST: ${{ steps.debug-apk.outputs.artifact-digest }}
-        run: |
-          printf '\n## Uploaded Debug APK Artifact\n\n%s\n\nArtifact SHA-256: `%s`\n' "$ARTIFACT_URL" "$ARTIFACT_DIGEST" >> "$GITHUB_STEP_SUMMARY"
+          retention-days: 30
+      - name: Export passed gate for tag job
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: ci-gate-${{ github.run_id }}
+          path: build/reports/ci-validation/instrumentation.json
+          overwrite: true
+          if-no-files-found: error
+          retention-days: 90
       - name: Upload test and lint reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: check-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          name: check-reports-${{ github.run_id }}
           path: |
             build/reports/
             build/outputs/androidTest-results/
-          retention-days: 14
+          overwrite: true
+          retention-days: 30
 
   create-tag:
-    name: Create version tag after successful CI
-    needs: checks
+    name: Tag the exact tested commit
+    needs: [prepare, checks]
     if: >-
-      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main'
-    permissions:
-      contents: write
-      actions: write
+      needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    permissions:
+      contents: write
     steps:
+      - run: sudo timedatectl set-timezone Asia/Singapore
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: true
-      - name: Create or reuse the exact version tag
-        id: version-tag
-        env:
-          GITHUB_REF: ${{ github.ref }}
-          GITHUB_SHA: ${{ github.sha }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: version-plan-${{ github.run_id }}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: ci-gate-${{ github.run_id }}
+          path: gate
+      - name: Create or safely reuse this run's immutable tag
         run: |
-          set -euo pipefail
-          git fetch --force origin '+refs/heads/main:refs/remotes/origin/main' '+refs/tags/*:refs/tags/*'
-          python3 .github/scripts/release_policy.py --promote
-          VERSION_NAME="$(sed -n 's/^VERSION_NAME=//p' version.properties | head -n1)"
-          VERSION_CODE="$(sed -n 's/^VERSION_CODE=//p' version.properties | head -n1)"
-          if [[ -z "$VERSION_NAME" || -z "$VERSION_CODE" ]]; then
-            echo "version.properties must define VERSION_NAME and VERSION_CODE." >&2
-            exit 1
-          fi
-
-          if git show-ref --verify --quiet "refs/tags/$VERSION_NAME"; then
-            EXISTING_COMMIT="$(git rev-parse "${VERSION_NAME}^{commit}")"
-            if [[ "$EXISTING_COMMIT" != "$GITHUB_SHA" ]]; then
-              TAGGED_NAME="$(git show "$VERSION_NAME:version.properties" | sed -n 's/^VERSION_NAME=//p' | head -n1)"
-              TAGGED_CODE="$(git show "$VERSION_NAME:version.properties" | sed -n 's/^VERSION_CODE=//p' | head -n1)"
-              if [[ "$TAGGED_NAME" == "$VERSION_NAME" && "$TAGGED_CODE" == "$VERSION_CODE" ]]; then
-                echo "Version $VERSION_NAME was already tagged at $EXISTING_COMMIT; no duplicate release will be created."
-                echo "dispatch=false" >> "$GITHUB_OUTPUT"
-                exit 0
-              fi
-              echo "Refusing to reuse $VERSION_NAME with different version metadata." >&2
-              exit 1
-            fi
-            echo "The exact version tag already points to this commit; dispatching release workflow again."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git tag -a "$VERSION_NAME" "$GITHUB_SHA" -m "Runner Gardenia $VERSION_NAME"
-            git push origin "refs/tags/$VERSION_NAME"
-            echo "Created annotated tag $VERSION_NAME at $GITHUB_SHA."
-          fi
-
-          echo "tag=$VERSION_NAME" >> "$GITHUB_OUTPUT"
-          echo "dispatch=true" >> "$GITHUB_OUTPUT"
-      - name: Dispatch signed release workflow for the tag
-        if: steps.version-tag.outputs.dispatch == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          RELEASE_TAG: ${{ steps.version-tag.outputs.tag }}
-        run: |
-          set -euo pipefail
-          gh workflow run android-build.yml --ref "$RELEASE_TAG" --field release=true
-          printf '\n## Signed release workflow dispatched\n\nTag: `%s`\n' "$RELEASE_TAG" >> "$GITHUB_STEP_SUMMARY"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python3 .github/scripts/release_policy.py tag
 
   signed:
     name: Fixed-key release APK
-    needs: checks
-    # Manual signed builds must select an existing v* tag, never a branch.
+    needs: [prepare, checks, create-tag]
     if: >-
-      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
-      startsWith(github.ref, 'refs/tags/v') &&
-      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release == true))
+      needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     environment: android-release
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 40
     steps:
+      - run: sudo timedatectl set-timezone Asia/Singapore
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          ref: ${{ github.sha }}
           fetch-depth: 0
           persist-credentials: false
-      - name: Require exact version tag and increasing version code
-        run: python3 .github/scripts/release_policy.py --signed
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: version-plan-${{ github.run_id }}
+      - run: |
+          python3 .github/scripts/release_policy.py apply
+          python3 .github/scripts/release_policy.py verify-tag
       - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
         with:
           distribution: temurin
@@ -186,12 +188,9 @@ jobs:
         with:
           cmdline-tools-version: '16111833'
           packages: platform-tools
-      - name: Install SDK packages
-        run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0'
+      - run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0'
       - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4
         with:
-          cache-read-only: true
-          # Signing job never writes configuration state or credentials to caches.
           cache-disabled: true
       - name: Restore key, build and verify signed APK
         env:
@@ -216,42 +215,56 @@ jobs:
       - name: Upload verified release files only
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: signed-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          name: signed-apk-${{ github.run_id }}
           path: |
             dist/*.apk
             dist/SHA256SUMS
             dist/build-info.json
             dist/release-notes.md
+          overwrite: true
           if-no-files-found: error
-          retention-days: 30
+          retention-days: 90
 
   publish:
-    name: Publish pre-release (never Latest)
-    needs: signed
+    name: Publish or resume verified pre-release
+    needs: [prepare, signed]
     if: >-
-      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' &&
-      startsWith(github.ref, 'refs/tags/v') &&
-      (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.release == true))
+      needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     permissions:
       contents: write
     steps:
+      - run: sudo timedatectl set-timezone Asia/Singapore
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
-          name: signed-apk-${{ github.run_id }}-${{ github.run_attempt }}
+          name: signed-apk-${{ github.run_id }}
           path: dist
-      - name: Verify transferred checksums
-        working-directory: dist
-        run: sha256sum --check SHA256SUMS
-      - name: Create pre-release with verified assets
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'build-tools;36.0.0'
+      - name: Verify assets and safely publish or resume pre-release
         env:
           GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-          RELEASE_TAG: ${{ github.ref_name }}
-        run: |
-          set -euo pipefail
-          # Existing releases fail closed: never overwrite an APK for an existing version.
-          gh release create "$RELEASE_TAG" dist/*.apk dist/SHA256SUMS dist/build-info.json \
-            --verify-tag --prerelease --latest=false \
-            --title "Runner Gardenia $RELEASE_TAG" --notes-file dist/release-notes.md
+        run: python3 .github/scripts/publish_release.py
+      - name: Publication receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: publication-${{ github.run_id }}
+          path: dist/publication.json
+          overwrite: true
+          if-no-files-found: error
+          retention-days: 90

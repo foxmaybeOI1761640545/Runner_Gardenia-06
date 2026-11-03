@@ -21,7 +21,7 @@ info = {'applicationId': manifest('application-id'), 'versionName': manifest('ve
         'versionCode': int(manifest('version-code')), 'variant': metadata['variantName'],
         'debuggable': manifest('debuggable'), 'sha256': hashlib.sha256(apk.read_bytes()).hexdigest()}
 assert info['applicationId'] == metadata['applicationId'] == 'com.fox.runner.debug'
-assert info['versionName'] == entry['versionName'] == version['VERSION_NAME'] + '-debug'
+assert info['versionName'] == entry['versionName'] == version['VERSION_NAME']
 assert info['versionCode'] == entry['versionCode'] == int(version['VERSION_CODE'])
 assert info['variant'] == 'reproducibleDebug' and info['debuggable'] == 'true'
 subprocess.run([os.environ['ANDROID_HOME'] + '/build-tools/36.0.0/apksigner', 'verify', str(apk)], check=True)

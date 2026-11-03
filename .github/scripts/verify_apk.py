@@ -22,7 +22,11 @@ version = dict(line.split('=', 1) for line in Path('version.properties').read_te
                if line and not line.startswith('#'))
 expected_name = version['VERSION_NAME']
 expected_code = int(version['VERSION_CODE'])
-require(os.environ['GITHUB_REF'] == f'refs/tags/{expected_name}', 'Not an exact version tag.')
+plan = json.loads(Path('release-plan.json').read_text())
+require(plan['versionName'] == expected_name and plan['versionCode'] == expected_code,
+        'APK version must match the tested plan.')
+require(run('git', 'rev-parse', expected_name + '^{commit}') == plan['commit'] == run('git', 'rev-parse', 'HEAD'),
+        'Tag must point to the exact tested commit.')
 fingerprint = os.environ.get('ANDROID_SIGNING_CERT_SHA256', '').strip().replace(':', '').upper()
 require(re.fullmatch(r'[0-9A-F]{64}', fingerprint), 'Invalid configured SHA-256 certificate fingerprint.')
 folder = Path('build/outputs/apk/reproducible/release')
@@ -58,7 +62,7 @@ for item in manifest.iter():
                 'An upstream application action remains in the manifest.')
 # Class names and Java namespace intentionally remain upstream-compatible.
 # Decode the packaged shortcut XML too: checking only source XML misses flavor overrides.
-shortcut_xml = run(analyzer, 'resources', 'xml', '--file', '/res/xml/shortcuts.xml', apk)
+shortcut_xml = run(analyzer, 'resources', 'xml', '--file', 'res/xml/shortcuts.xml', apk)
 require('de.dennisguse.opentracks.playstore' not in shortcut_xml, 'Upstream shortcut package remains.')
 require(not re.search(r'targetPackage[^\n]*de\.dennisguse\.opentracks', shortcut_xml),
         'Upstream shortcut package remains.')
@@ -83,6 +87,7 @@ info = {
     'sdk': '37', 'buildTools': '36.0.0',
     'run': f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
     'runAttempt': os.environ.get('GITHUB_RUN_ATTEMPT', '1'),
+    'plan': plan,
 }
 (out / 'build-info.json').write_text(json.dumps(info, indent=2) + '\n')
 (out / 'release-notes.md').write_text(

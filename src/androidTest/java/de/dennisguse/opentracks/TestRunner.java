@@ -1,6 +1,9 @@
 package de.dennisguse.opentracks;
 
+import android.Manifest;
+import android.app.AlarmManager;
 import android.app.Application;
+import android.provider.Settings;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +25,22 @@ public class TestRunner extends AndroidJUnitRunner {
         TimeZone.setDefault(TimeZone.getTimeZone(timezone));
         Log.i("TestRunner", "Default test timezone: " + TimeZone.getDefault().getID());
         super.onCreate(arguments);
+    }
+
+    @Override
+    public void onStart() {
+        // Set the managed device itself, not just java.util.TimeZone in this process.
+        getUiAutomation().adoptShellPermissionIdentity(
+                Manifest.permission.SET_TIME_ZONE, Manifest.permission.WRITE_SECURE_SETTINGS);
+        try {
+            Context target = getTargetContext();
+            Settings.Global.putInt(target.getContentResolver(), Settings.Global.AUTO_TIME_ZONE, 0);
+            target.getSystemService(AlarmManager.class).setTimeZone("Asia/Singapore");
+        } finally {
+            getUiAutomation().dropShellPermissionIdentity();
+        }
+        TimeZone.setDefault(TimeZone.getTimeZone("Asia/Singapore"));
+        super.onStart();
     }
 
     @Override

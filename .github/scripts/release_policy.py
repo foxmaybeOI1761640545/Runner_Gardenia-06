@@ -1,8 +1,13 @@
-"""Validate explicit versions for CI, automatic tag promotion, and signed release builds."""
+"""Allocate one immutable version plan, then tag only the exact tested commit."""
+import argparse
+import json
 import os
+from pathlib import Path
 import re
 import subprocess
-import sys
+
+MARKER = 'Runner-Gardenia-Plan: '
+NAME = re.compile(r'(v\d+\.\d+\.\d+-rc\d+\.)(\d+)')
 
 
 def git(*args):
@@ -14,58 +19,119 @@ def properties(text):
                 if line.strip() and not line.lstrip().startswith('#'))
 
 
-def validate_previous_version_codes(head, current_name, current_code):
-    for tag in git('tag', '--list', 'v*').splitlines():
-        if tag == current_name:
-            continue
-        ancestor = subprocess.run(['git', 'merge-base', '--is-ancestor', tag, head],
-                                  stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        if ancestor.returncode == 1:
-            continue
-        if ancestor.returncode != 0:
-            raise SystemExit(f'Cannot establish release ancestry for {tag}.')
-        result = subprocess.run(['git', 'show', f'{tag}:version.properties'],
-                                capture_output=True, text=True)
-        if result.returncode:
-            raise SystemExit(f'Prior version tag {tag} lacks version.properties; review required.')
-        previous = properties(result.stdout)
-        previous_code = int(previous['VERSION_CODE'])
-        if current_code <= previous_code:
-            raise SystemExit(
-                f'VERSION_CODE {current_code} must exceed preceding release {tag} ({previous_code}).'
-            )
+def validate(plan):
+    if not NAME.fullmatch(plan['versionName']) or not 0 < plan['versionCode'] <= 2100000000:
+        raise SystemExit('Invalid release version plan.')
+    if not re.fullmatch('[0-9a-f]{40}', plan['commit']):
+        raise SystemExit('Invalid planned commit.')
 
 
-with open('version.properties') as source:
-    version = properties(source.read())
-name = version['VERSION_NAME']
-code = int(version['VERSION_CODE'])
-if not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?', name):
-    raise SystemExit('Invalid explicit version name.')
-if not 0 < code <= 2100000000:
-    raise SystemExit('Invalid Android version code.')
-print(f'Expected APK: com.fox.runner, versionName={name}, versionCode={code}')
+def tag_plan(tag):
+    message = git('for-each-ref', '--format=%(contents)', 'refs/tags/' + tag)
+    for line in message.splitlines():
+        if line.startswith(MARKER):
+            plan = json.loads(line[len(MARKER):])
+            validate(plan)
+            if plan['versionName'] != tag or git('rev-parse', tag + '^{commit}') != plan['commit']:
+                raise SystemExit('Tag annotation disagrees with its target or version.')
+            return plan
+    # Keep legacy tags, including the existing rc1.1, completely unchanged.
+    previous = properties(git('show', tag + ':version.properties'))
+    return {'versionName': tag, 'versionCode': int(previous['VERSION_CODE']),
+            'commit': git('rev-parse', tag + '^{commit}'), 'runId': None}
 
-ref = os.environ.get('GITHUB_REF', '')
-if ref.startswith('refs/tags/') and ref != 'refs/tags/' + name:
-    raise SystemExit('Tag must exactly match VERSION_NAME.')
 
-if '--promote' in sys.argv:
-    if ref != 'refs/heads/main':
-        raise SystemExit('Automatic version tags may only be created from main.')
+def load(path):
+    plan = json.loads(Path(path).read_text())
+    validate(plan)
+    if git('rev-parse', 'HEAD') != plan['commit']:
+        raise SystemExit('Checkout differs from the planned/tested commit.')
+    return plan
+
+
+def prepare(output):
+    seed = properties(Path('version.properties').read_text())
+    match = NAME.fullmatch(seed['VERSION_NAME'])
+    if not match:
+        raise SystemExit('version.properties must define a vX.Y.Z-rcN.M series.')
     head = git('rev-parse', 'HEAD')
-    if head != os.environ.get('GITHUB_SHA'):
-        raise SystemExit('The tag candidate must be the exact commit that passed main CI.')
-    subprocess.run(['git', 'merge-base', '--is-ancestor', head, 'origin/main'], check=True)
-    validate_previous_version_codes(head, name, code)
-    print(f'{name} is eligible for automatic tagging.')
+    if os.environ.get('GITHUB_SHA') and os.environ['GITHUB_SHA'] != head:
+        raise SystemExit('Checkout differs from the workflow event SHA.')
+    publishing = (os.environ.get('GITHUB_EVENT_NAME') == 'push'
+                  and os.environ.get('GITHUB_REF') == 'refs/heads/main'
+                  and os.environ.get('GITHUB_REPOSITORY') == 'foxmaybeOI1761640545/Runner_Gardenia-06')
+    run_id = os.environ.get('GITHUB_RUN_ID', 'local')
+    previous = [tag_plan(tag) for tag in git('tag', '--list', 'v*').splitlines()]
+    resumed = [item for item in previous if item.get('runId') == run_id]
+    if resumed:
+        if len(resumed) != 1 or resumed[0]['commit'] != head:
+            raise SystemExit('This run already owns an incompatible tag.')
+        plan = resumed[0]
+    else:
+        series = match[1]
+        sequence = max([int(match[2]) - 1] + [int(NAME.fullmatch(p['versionName'])[2])
+                       for p in previous if NAME.fullmatch(p['versionName'])
+                       and NAME.fullmatch(p['versionName'])[1] == series]) + 1
+        code = max([int(seed['VERSION_CODE'])] + [p['versionCode'] + 1 for p in previous])
+        plan = {'versionName': series + str(sequence), 'versionCode': code,
+                'commit': head, 'runId': run_id, 'publishing': publishing}
+    if bool(plan.get('publishing')) != publishing:
+        raise SystemExit('Release plan does not match this event.')
+    validate(plan)
+    Path(output).write_text(json.dumps(plan, indent=2) + '\n')
+    if os.environ.get('GITHUB_OUTPUT'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as target:
+            target.write(f"publishing={str(publishing).lower()}\nversion={plan['versionName']}\n")
+    print(json.dumps(plan, indent=2))
 
-if '--signed' in sys.argv:
-    if ref != 'refs/tags/' + name:
-        raise SystemExit('Signed builds require an exact version tag.')
-    head = git('rev-parse', 'HEAD')
-    if git('rev-parse', f'{ref}^{{commit}}') != head:
-        raise SystemExit('Tag does not point at the checked-out commit.')
-    subprocess.run(['git', 'merge-base', '--is-ancestor', head, 'origin/main'], check=True)
-    validate_previous_version_codes(head, name, code)
-    print(f'{name} passed signed-release version policy.')
+
+def apply(path):
+    plan = load(path)
+    Path('version.properties').write_text(
+        f"VERSION_NAME={plan['versionName']}\nVERSION_CODE={plan['versionCode']}\n")
+    print(f"Applied {plan['versionName']} / {plan['versionCode']} at {plan['commit']}")
+
+
+def create_tag(path, gate_path):
+    plan = load(path)
+    if not plan['publishing'] or os.environ.get('GITHUB_REF') != 'refs/heads/main':
+        raise SystemExit('Only main push runs can publish.')
+    gate = json.loads(Path(gate_path).read_text())
+    if gate['plan'] != plan or not gate['passed']:
+        raise SystemExit('Missing successful test gate for this exact plan.')
+    subprocess.run(['git', 'fetch', 'origin', 'main', '--tags'], check=True)
+    subprocess.run(['git', 'merge-base', '--is-ancestor', plan['commit'], 'origin/main'], check=True)
+    tag = plan['versionName']
+    tags = git('tag', '--list', 'v*').splitlines()
+    if tag in tags:
+        if tag_plan(tag) != plan:
+            raise SystemExit('Existing tag belongs to another commit/run; never move it.')
+        print('Reusing this run\'s exact immutable tag.')
+        return
+    for other in tags:
+        if tag_plan(other)['versionCode'] >= plan['versionCode']:
+            raise SystemExit('A newer version was allocated concurrently; refusing duplicate code.')
+    message = 'Runner Gardenia ' + tag + '\n\n' + MARKER + json.dumps(plan, sort_keys=True)
+    subprocess.run(['git', 'tag', '-a', tag, plan['commit'], '-m', message], check=True)
+    subprocess.run(['git', 'push', 'origin', 'refs/tags/' + tag], check=True)
+
+
+def verify_tag(path):
+    plan = load(path)
+    if tag_plan(plan['versionName']) != plan:
+        raise SystemExit('Signed build requires the exact tested immutable tag plan.')
+    expected = properties(Path('version.properties').read_text())
+    if expected != {'VERSION_NAME': plan['versionName'], 'VERSION_CODE': str(plan['versionCode'])}:
+        raise SystemExit('Build version differs from tested release plan.')
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('command', choices=['prepare', 'apply', 'tag', 'verify-tag'])
+    parser.add_argument('--plan', default='release-plan.json')
+    parser.add_argument('--gate', default='gate/instrumentation.json')
+    args = parser.parse_args()
+    if args.command == 'prepare': prepare(args.plan)
+    elif args.command == 'apply': apply(args.plan)
+    elif args.command == 'tag': create_tag(args.plan, args.gate)
+    else: verify_tag(args.plan)

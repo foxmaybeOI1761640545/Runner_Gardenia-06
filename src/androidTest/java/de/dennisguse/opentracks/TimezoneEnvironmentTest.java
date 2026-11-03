@@ -3,7 +3,14 @@ package de.dennisguse.opentracks;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import android.os.ParcelFileDescriptor;
+import android.util.Log;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import org.junit.Test;
 import org.junit.runner.Description;
@@ -24,6 +31,19 @@ public class TimezoneEnvironmentTest {
                 .getOffset(Instant.parse("2020-02-02T02:02:02Z")));
         assertEquals("2020-02-02T10:02:02+08:00", Instant.parse("2020-02-02T02:02:02Z")
                 .atZone(ZoneId.systemDefault()).toOffsetDateTime().toString());
+    }
+
+    @Test
+    public void emulatorSystemTimezoneIsSingapore() throws IOException {
+        try (ParcelFileDescriptor.AutoCloseInputStream input = new ParcelFileDescriptor.AutoCloseInputStream(
+                InstrumentationRegistry.getInstrumentation().getUiAutomation()
+                        .executeShellCommand("getprop persist.sys.timezone"))) {
+            String systemTimezone = new String(input.readAllBytes(), StandardCharsets.UTF_8).trim();
+            assertEquals("Asia/Singapore", systemTimezone);
+            assertEquals("Asia/Singapore", TimeZone.getDefault().getID());
+            Log.i("TimezoneEnvironmentTest", "Device=" + systemTimezone
+                    + "; process=" + TimeZone.getDefault().getID() + "; offset=UTC+08:00");
+        }
     }
 
     @Test
