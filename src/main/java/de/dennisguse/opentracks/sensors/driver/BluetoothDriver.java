@@ -25,6 +25,7 @@ import android.bluetooth.BluetoothGattCharacteristic;
 import android.bluetooth.BluetoothGattDescriptor;
 import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothProfile;
+import android.bluetooth.BluetoothStatusCodes;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -122,7 +123,7 @@ public class BluetoothDriver<T> implements Driver {
                     BluetoothGattDescriptor descriptor = measurement.getDescriptor(BluetoothUtils.CLIENT_CHARACTERISTIC_CONFIG_UUID);
                     if (descriptor == null || !gatt.setCharacteristicNotification(measurement, true)) return false;
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                        return gatt.writeDescriptor(descriptor, subscription) == 0;
+                        return gatt.writeDescriptor(descriptor, subscription) == BluetoothStatusCodes.SUCCESS;
                     }
                     return descriptor.setValue(subscription) && gatt.writeDescriptor(descriptor);
                 } catch (SecurityException denied) { session.permissionDenied(); return false; }
