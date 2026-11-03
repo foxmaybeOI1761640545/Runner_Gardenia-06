@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 import de.dennisguse.opentracks.data.models.HeartRate;
+import de.dennisguse.opentracks.data.models.HeartRateSample;
 import de.dennisguse.opentracks.sensors.ServiceMeasurementUUID;
 
 public class HeartRateBluetooth implements BluetoothDriver.BluetoothParser<HeartRate> {
@@ -40,20 +41,45 @@ public class HeartRateBluetooth implements BluetoothDriver.BluetoothParser<Heart
 
     @VisibleForTesting
     public static HeartRate parseHeartRate(BluetoothGattCharacteristic characteristic) {
-        //DOCUMENTATION https://www.bluetooth.com/wp-content/uploads/Sitecore-Media-Library/Gatt/Xml/Characteristics/org.bluetooth.characteristic.heart_rate_measurement.xml
-        byte[] raw = characteristic.getValue();
-        if (raw.length == 0) {
-            return null;
-        }
-
-        boolean formatUINT16 = ((raw[0] & 0x1) == 1);
-        if (formatUINT16 && raw.length >= 3) {
-            return HeartRate.of(characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT16, 1));
-        }
-        if (!formatUINT16 && raw.length >= 2) {
-            return HeartRate.of(characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT8, 1));
-        }
-
-        return null;
+        return parseHeartRate(characteristic.getValue());
     }
+
+    public static HeartRate parseHeartRate(byte[] bytes) {
+        HeartRateMeasurement measurement = HeartRateMeasurement.parse(bytes);
+        if (measurement == null) return null;
+        return measurement.hasUsableHeartRate() ? HeartRate.of(measurement.bpm()) : HeartRate.INVALID;
+    }
+
+    @Override
+    public HeartRate parsePayload(ServiceMeasurementUUID service, String name,
+                                  BluetoothGattCharacteristic characteristic, byte[] bytes) {
+        HeartRateMeasurement decoded = HeartRateMeasurement.parse(bytes);
+        if (decoded == null) return null;
+        return new HeartRate(decoded.hasUsableHeartRate() ? decoded.bpm() : 0, new HeartRateSample(null, null, name,
+                decoded.contactDetected(), decoded.energyExpended(), decoded.rrIntervals1024()));
+    }
+
+    public static final ServiceMeasurementUUID BODY_LOCATION = new ServiceMeasurementUUID(
+            HEARTRATE.serviceUUID(), UUID.fromString("00002a38-0000-1000-8000-00805f9b34fb"));
+    private Integer bodySensorLocation;
+    private Integer batteryLevel;
+
+    @Override
+    public List<ServiceMeasurementUUID> getOptionalReads() {
+        return List.of(BODY_LOCATION, de.dennisguse.opentracks.sensors.BluetoothUtils.BATTERY);
+    }
+
+    @Override
+    public void onOptionalRead(UUID characteristic, byte[] bytes) {
+        if (bytes == null || bytes.length != 1) return;
+        int value = bytes[0] & 0xff;
+        if (BODY_LOCATION.measurementUUID().equals(characteristic) && value <= 6) bodySensorLocation = value;
+        if (de.dennisguse.opentracks.sensors.BluetoothUtils.BATTERY.measurementUUID().equals(characteristic)
+                && value <= 100) batteryLevel = value;
+    }
+
+    @Override public void resetOptionalMetadata() { bodySensorLocation = null; batteryLevel = null; }
+
+    public Integer getBodySensorLocation() { return bodySensorLocation; }
+    public Integer getBatteryLevel() { return batteryLevel; }
 }

@@ -27,13 +27,14 @@ expected_code = int(version['VERSION_CODE'])
 plan = json.loads(Path('release-plan.json').read_text())
 require(plan['versionName'] == expected_name and plan['versionCode'] == expected_code,
         'APK version must match the tested plan.')
-require(run('git', 'rev-parse', expected_name + '^{commit}') == plan['commit'] == run('git', 'rev-parse', 'HEAD'),
-        'Tag must point to the exact tested commit.')
+require(plan['publishing'] and plan['commit'] == run('git', 'rev-parse', 'HEAD'),
+        'Signed APK must use the exact tested publishing commit.')
 fingerprint = os.environ.get('ANDROID_SIGNING_CERT_SHA256', '').strip().replace(':', '').upper()
 require(re.fullmatch(r'[0-9A-F]{64}', fingerprint), 'Invalid configured SHA-256 certificate fingerprint.')
 folder = Path('build/outputs/apk/reproducible/release')
 metadata = json.loads((folder / 'output-metadata.json').read_text())
 require(metadata['applicationId'] == 'com.fox.runner', 'Incorrect output metadata application ID.')
+require(metadata['variantName'] == 'reproducibleRelease', 'Incorrect release build variant.')
 elements = metadata['elements']
 require(len(elements) == 1, 'Expected exactly one release APK.')
 element = elements[0]
@@ -76,6 +77,7 @@ info = {
     'applicationId': 'com.fox.runner', 'versionName': expected_name, 'versionCode': expected_code,
     'certificateSha256': fingerprint, 'apkSha256': checksum,
     'commit': run('git', 'rev-parse', 'HEAD'), 'variant': 'reproducibleRelease',
+    'debuggable': False, 'signatureVerified': True,
     'gradle': '9.8.2', 'agp': '9.5.0', 'jdk': 'Temurin 21',
     'sdk': '37', 'buildTools': '36.0.0',
     'run': f"https://github.com/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",

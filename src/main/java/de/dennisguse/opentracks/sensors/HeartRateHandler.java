@@ -11,6 +11,18 @@ import de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRate;
 
 public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
 
+    private String selectedAddress;
+    private String selectedName;
+    private String connectionId;
+    private de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State connectionState = de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State.DISCONNECTED;
+    private java.time.Instant lastReceived;
+    private boolean contactLost;
+
+    @Override public void onConnectionStateChanged(de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State state) { connectionState = state; }
+    public HeartRateStatus getStatus(java.time.Instant now) {
+        return new HeartRateStatus(connectionState,lastReceived,now,selectedName != null ? selectedName : selectedAddress,contactLost);
+    }
+
     protected HeartRateHandler(SensorManager sensorManager) {
         super(sensorManager);
     }
@@ -29,6 +41,38 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     @Override
     protected AggregatorHeartRate createAggregator(String sensorAddress, String sensorName) {
         return new AggregatorHeartRate(sensorAddress, sensorName);
+    }
+
+    @Override
+    public void onConnected(String address, String name) {
+        connectionId = java.util.UUID.randomUUID().toString();
+        selectedAddress = address;
+        selectedName = name;
+        super.onConnected(address, name);
+    }
+
+    @Override
+    public void onDataReceived(HeartRate value) {
+        contactLost = value.sample() != null && Boolean.FALSE.equals(value.sample().contactDetected());
+        if (value.isValid()) lastReceived = sensorManager.getNow();
+        else connectionId = java.util.UUID.randomUUID().toString(); // break continuity after contact loss
+        if (value.sample() != null) {
+            value = new HeartRate(value.value(), value.sample().captured(sensorManager.getNow(), selectedAddress, selectedName, connectionId));
+        }
+        super.onDataReceived(value);
+    }
+
+    @Override
+    public void onDisconnected() {
+        super.onDisconnected();
+        selectedAddress = null; selectedName = null; lastReceived = null; contactLost = false;
+        connectionState = de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State.DISCONNECTED;
+    }
+
+    @Override
+    public void onConnectionLost() {
+        super.onConnectionLost();
+        if (aggregator instanceof AggregatorHeartRate heartRate) heartRate.invalidate();
     }
 
     @Override

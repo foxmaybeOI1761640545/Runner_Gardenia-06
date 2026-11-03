@@ -2,6 +2,7 @@ package de.dennisguse.opentracks.services;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import android.content.Context;
@@ -92,6 +93,61 @@ public class TrackRecordingServiceRecordingTest {
         PreferencesUtils.setString(R.string.idle_duration_key, R.string.idle_duration_default);
 
         service = startService();
+    }
+
+    @Test
+    public void sensorPreviewBeforeRecordingNeverCreatesTrackOrStoresSamples() {
+        contentProviderUtils.deleteAllTracks(context);
+        TrackPointCreator creator=service.getTrackPointCreator();creator.setClock("2020-02-02T02:02:02Z");
+        service.tryStartSensors();AggregatorHeartRate aggregator=new AggregatorHeartRate("address","strap");
+        creator.getSensorManager().setAggregator(aggregator);
+        aggregator.add(creator.getNow(),rawSample(creator.getNow(),75));creator.getSensorManager().onChange();
+        assertFalse(service.isRecording());assertEquals(75,service.getHeartRatePreview().value().getBPM(),0);
+        try(var cursor=context.getContentResolver().query(de.dennisguse.opentracks.data.CustomContentProvider.UrlType.HEART_RATE_SAMPLES.getUri(),null,null,null,null)) {
+            assertNotNull(cursor);assertEquals(0,cursor.getCount());
+        }
+        // Starting a real track is separate; a still-fresh preview snapshot must not become an earlier raw sample.
+        creator.setClock("2020-02-02T02:02:05Z");Track.Id id=service.startNewTrack();assertNotNull(id);assertTrue(service.isRecording());
+        creator.getSensorManager().onChange();assertTrue(new de.dennisguse.opentracks.data.HeartRateRepository(context).read(id).isEmpty());
+        creator.setClock("2020-02-02T02:02:06Z");aggregator.add(creator.getNow(),rawSample(creator.getNow(),76));creator.getSensorManager().onChange();
+        assertEquals(1,new de.dennisguse.opentracks.data.HeartRateRepository(context).read(id).size());
+        creator.setClock("2020-02-02T02:02:07Z");service.endCurrentTrack();
+    }
+
+    @Test
+    public void rawHeartRateBypassesPointThrottlingAndRespectsPauseResume() {
+        TrackPointCreator creator = service.getTrackPointCreator();
+        creator.setClock("2020-02-02T02:02:02Z");
+        Track.Id id = service.startNewTrack();
+        AggregatorHeartRate aggregator = new AggregatorHeartRate("test-address", "test-strap");
+        SensorManager manager = creator.getSensorManager(); manager.setAggregator(aggregator);
+        de.dennisguse.opentracks.data.HeartRateRepository raw = new de.dennisguse.opentracks.data.HeartRateRepository(context);
+        for (int second = 3; second <= 5; second++) {
+            creator.setClock("2020-02-02T02:02:0" + second + "Z");
+            aggregator.add(creator.getNow(), rawSample(creator.getNow(), 70)); manager.onChange();
+        }
+        assertEquals(3, raw.read(id).size()); // All <10s samples survive, even unchanged BPM.
+        creator.setClock("2020-02-02T02:02:06Z"); aggregator.invalidate(); manager.onChange();
+        assertTrue(service.isRecording()); // A strap loss must not end recording.
+        creator.setClock("2020-02-02T02:02:07Z");service.endCurrentTrack();
+        creator.setClock("2020-02-02T02:02:08Z");
+        assertFalse(service.newTrackPoint(new TrackPoint(null, TrackPoint.Type.TRACKPOINT,
+                Position.of(creator.getNow()), null, rawSample(creator.getNow(), 80), null, null, null, null), Distance.ZERO));
+        assertEquals(3, raw.read(id).size()); // Paused: incoming radio values are not recorded.
+        creator.setClock("2020-02-02T02:02:09Z");service.resumeTrack(id);
+        manager.setAggregator(aggregator);
+        creator.setClock("2020-02-02T02:02:10Z");
+        aggregator.add(creator.getNow(), rawSample(creator.getNow(), 82));manager.onChange();
+        creator.setClock("2020-02-02T02:02:11Z");service.endCurrentTrack();
+        List<HeartRate> reopened = new de.dennisguse.opentracks.data.HeartRateRepository(context).read(id);
+        assertEquals(4, reopened.size());assertEquals(82, reopened.get(3).getBPM(),0);
+        assertEquals(Instant.parse("2020-02-02T02:02:10Z"),reopened.get(3).sample().capturedAt());
+        assertEquals(Distance.ZERO,contentProviderUtils.getTrack(id).statistics().totalDistance());
+    }
+
+    private HeartRate rawSample(Instant time, int bpm) {
+        return new HeartRate(bpm, new de.dennisguse.opentracks.data.models.HeartRateSample(
+                time, "test-address", "test-strap", true, null, List.of(1024)));
     }
 
     @MediumTest

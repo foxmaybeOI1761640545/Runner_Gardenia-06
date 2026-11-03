@@ -7,6 +7,7 @@ import re
 import subprocess
 
 MARKER = 'Runner-Gardenia-Plan: '
+APK_MARKER = 'Runner-Gardenia-APK-SHA256: '
 NAME = re.compile(r'(v\d+\.\d+\.\d+-rc\d+\.)(\d+)')
 
 
@@ -49,6 +50,29 @@ def load(path):
     return plan
 
 
+def ledger_history():
+    """Deleted failed allocations remain reserved; never infer history from tags alone."""
+    path = Path('release-ledger.json')
+    if not path.exists():
+        return []  # Legacy snapshots and standalone git-fixture tests.
+    data = json.loads(path.read_text())
+    if data.get('schema') != 1 or not isinstance(data.get('allocations'), list) or not data['allocations']:
+        raise SystemExit('Invalid release ledger schema.')
+    entries = data['allocations']
+    versions, codes, series = set(), set(), {}
+    for entry in entries:
+        validate(entry)
+        name, code = entry['versionName'], entry['versionCode']
+        if name in versions or code in codes:
+            raise SystemExit('Duplicate version or Code in release ledger.')
+        versions.add(name); codes.add(code)
+        match = NAME.fullmatch(name)
+        series[match[1]] = max(series.get(match[1], 0), int(match[2]))
+    if data.get('codeHighWater') != max(codes) or data.get('seriesHighWater') != series:
+        raise SystemExit('Release ledger high-water records disagree with allocated history.')
+    return entries
+
+
 def prepare(output):
     seed = properties(Path('version.properties').read_text())
     match = NAME.fullmatch(seed['VERSION_NAME'])
@@ -62,7 +86,13 @@ def prepare(output):
                   and os.environ.get('GITHUB_REPOSITORY') == 'foxmaybeOI1761640545/Runner_Gardenia-06')
     run_id = os.environ.get('GITHUB_RUN_ID', 'local')
     previous = [tag_plan(tag) for tag in git('tag', '--list', 'v*').splitlines()]
+    history = ledger_history()
+    for entry in history:
+        for tagged in previous:
+            if tagged['versionName'] == entry['versionName'] and any(tagged[key] != entry[key] for key in ('commit', 'versionCode')):
+                raise SystemExit('Existing tag contradicts persisted release history.')
     resumed = [item for item in previous if item.get('runId') == run_id]
+    allocated = previous + history
     if resumed:
         if len(resumed) != 1 or resumed[0]['commit'] != head:
             raise SystemExit('This run already owns an incompatible tag.')
@@ -70,9 +100,9 @@ def prepare(output):
     else:
         series = match[1]
         sequence = max([int(match[2]) - 1] + [int(NAME.fullmatch(p['versionName'])[2])
-                       for p in previous if NAME.fullmatch(p['versionName'])
+                       for p in allocated if NAME.fullmatch(p['versionName'])
                        and NAME.fullmatch(p['versionName'])[1] == series]) + 1
-        code = max([int(seed['VERSION_CODE'])] + [p['versionCode'] + 1 for p in previous])
+        code = max([int(seed['VERSION_CODE'])] + [p['versionCode'] + 1 for p in allocated])
         plan = {'versionName': series + str(sequence), 'versionCode': code,
                 'commit': head, 'runId': run_id, 'publishing': publishing}
     if bool(plan.get('publishing')) != publishing:
@@ -88,17 +118,20 @@ def prepare(output):
 def apply(path):
     plan = load(path)
     Path('version.properties').write_text(
-        f"VERSION_NAME={plan['versionName']}\nVERSION_CODE={plan['versionCode']}\n")
+        f"VERSION_NAME={plan['versionName']}\nVERSION_CODE={plan['versionCode']}\n"
+        f"VERSION_NAME_FULL={plan['versionName']}-{plan['commit'][:12]}\n")
     print(f"Applied {plan['versionName']} / {plan['versionCode']} at {plan['commit']}")
 
 
-def create_tag(path, gate_path):
+def create_tag(path, gate_path, signed_path='dist'):
+    from signed_bundle import validate_bundle
     plan = load(path)
     if not plan['publishing'] or os.environ.get('GITHUB_REF') != 'refs/heads/main':
         raise SystemExit('Only main push runs can publish.')
     gate = json.loads(Path(gate_path).read_text())
     if gate['plan'] != plan or not gate['passed']:
         raise SystemExit('Missing successful test gate for this exact plan.')
+    signed = validate_bundle(plan, Path(signed_path))
     subprocess.run(['git', 'fetch', 'origin', 'main', '--tags'], check=True)
     subprocess.run(['git', 'merge-base', '--is-ancestor', plan['commit'], 'origin/main'], check=True)
     tag = plan['versionName']
@@ -106,12 +139,19 @@ def create_tag(path, gate_path):
     if tag in tags:
         if tag_plan(tag) != plan:
             raise SystemExit('Existing tag belongs to another commit/run; never move it.')
-        print('Reusing this run\'s exact immutable tag.')
+        verify_tag_digest(tag, signed['apkSha256'])
+        print('Reusing this run\'s exact immutable tag and APK digest.')
         return
+    history = ledger_history()
+    if any(item['versionName'] == tag for item in history):
+        raise SystemExit('Version name is already reserved in historical release ledger.')
+    if any(item['versionCode'] >= plan['versionCode'] for item in history):
+        raise SystemExit('Code must exceed historical allocation high-water mark.')
     for other in tags:
         if tag_plan(other)['versionCode'] >= plan['versionCode']:
             raise SystemExit('A newer version was allocated concurrently; refusing duplicate code.')
-    message = 'Runner Gardenia ' + tag + '\n\n' + MARKER + json.dumps(plan, sort_keys=True)
+    message = ('Runner Gardenia ' + tag + '\n\n' + MARKER + json.dumps(plan, sort_keys=True)
+               + '\n' + APK_MARKER + signed['apkSha256'])
     subprocess.run(['git', 'tag', '-a', tag, plan['commit'], '-m', message], check=True)
     subprocess.run(['git', 'push', 'origin', 'refs/tags/' + tag], check=True)
 
@@ -120,9 +160,14 @@ def verify_tag(path):
     plan = load(path)
     if tag_plan(plan['versionName']) != plan:
         raise SystemExit('Signed build requires the exact tested immutable tag plan.')
-    expected = properties(Path('version.properties').read_text())
-    if expected != {'VERSION_NAME': plan['versionName'], 'VERSION_CODE': str(plan['versionCode'])}:
-        raise SystemExit('Build version differs from tested release plan.')
+
+
+def verify_tag_digest(tag, checksum):
+    message = git('for-each-ref', '--format=%(contents)', 'refs/tags/' + tag)
+    recorded = [line[len(APK_MARKER):] for line in message.splitlines() if line.startswith(APK_MARKER)]
+    if recorded != [checksum]:
+        raise SystemExit('Immutable tag APK digest differs or is missing.')
+
 
 
 if __name__ == '__main__':
@@ -130,8 +175,9 @@ if __name__ == '__main__':
     parser.add_argument('command', choices=['prepare', 'apply', 'tag', 'verify-tag'])
     parser.add_argument('--plan', default='release-plan.json')
     parser.add_argument('--gate', default='gate/instrumentation.json')
+    parser.add_argument('--signed', default='dist')
     args = parser.parse_args()
     if args.command == 'prepare': prepare(args.plan)
     elif args.command == 'apply': apply(args.plan)
-    elif args.command == 'tag': create_tag(args.plan, args.gate)
+    elif args.command == 'tag': create_tag(args.plan, args.gate, args.signed)
     else: verify_tag(args.plan)

@@ -1,0 +1,330 @@
+{
+  "physicalBleTested": false,
+  "fixtures": "Synthetic heart-rate notifications and device rows in test code only",
+  "timezone": "Asia/Singapore",
+  "radioScenario": "Offline emulator; scan device rows are test fixtures",
+  "screenshots": [
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-home.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-recording-connected.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-recording-stale.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-recording-reconnecting.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-history.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-time-chart.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-distance-chart.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-settings.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-scan.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 411,
+      "file": "phone-light-scan-fixture.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-home.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-recording-connected.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-recording-stale.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-recording-reconnecting.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-history.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-time-chart.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-distance-chart.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-settings.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-scan.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 411,
+      "file": "phone-dark-scan-fixture.png",
+      "width": 1080,
+      "height": 2400,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-home.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-recording-connected.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-recording-stale.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-recording-reconnecting.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-history.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-time-chart.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-distance-chart.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-settings.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-scan.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 16,
+      "widthDp": 360,
+      "file": "narrow-light-scan-fixture.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-home.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-recording-connected.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-recording-stale.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-recording-reconnecting.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-history.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-time-chart.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-distance-chart.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-settings.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-scan.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": false
+    },
+    {
+      "nightMode": 32,
+      "widthDp": 360,
+      "file": "narrow-dark-scan-fixture.png",
+      "width": 720,
+      "height": 1280,
+      "syntheticHeartRateOrDevices": true
+    }
+  ],
+  "sourceRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41733224958",
+  "featureCommit": "d34c68481427b0bf0e5ceafc2fe2d8b561c3cb06"
+}

@@ -83,6 +83,8 @@ public class ChartView extends View {
     private final ChartValueSeries paceSeries;
     private final ChartValueSeries heartRateSeries;
 
+    private List<ChartPoint> rawHeartRatePoints;
+
     private final LinkedList<ChartPoint> chartPoints = new LinkedList<>();
     private final ExtremityMonitor xExtremityMonitor = new ExtremityMonitor();
     private final int backgroundColor;
@@ -242,8 +244,8 @@ public class ChartView extends View {
                 // will range from ~70 - ~180 (around 4.5 intervals).
                 // For Zone 1 cardio, the 15 value should result in nice visuals, as the values
                 // will range from ~70 - ~120 (around 3.5 intervals)
-                // The fallback of 50 should give appropriate visuals for values outside this range.
-                new int[]{15, 25, 50},
+                // Wider intervals keep the entire valid UINT16 protocol range visible without a personal HR limit.
+                new int[]{15, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000, 20000},
                 R.string.description_sensor_heart_rate,
                 R.string.description_sensor_heart_rate,
                 R.string.description_sensor_heart_rate,
@@ -420,11 +422,32 @@ public class ChartView extends View {
             for (ChartPoint dataPoint : dataPoints) {
                 xExtremityMonitor.update(dataPoint.timeOrDistance());
                 for (ChartValueSeries i : seriesList) {
-                    i.update(dataPoint);
+                    if (i != heartRateSeries || rawHeartRatePoints == null) i.update(dataPoint);
                 }
             }
             updateDimensions();
             updateSeries();
+        }
+    }
+
+    @androidx.annotation.VisibleForTesting
+    int heartRateAxisMax() { return heartRateSeries.getMaxMarkerValue(); }
+
+    @androidx.annotation.VisibleForTesting
+    Path heartRatePath() { synchronized (chartPoints) { return new Path(heartRateSeries.getPath()); } }
+
+    public void setRawHeartRatePoints(List<HeartRatePlot.Point> values) {
+        synchronized (chartPoints) {
+            rawHeartRatePoints = new ArrayList<>();
+            heartRateSeries.resetData();
+            xExtremityMonitor.reset();
+            for (ChartPoint point : chartPoints) xExtremityMonitor.update(point.timeOrDistance());
+            for (HeartRatePlot.Point point : values) {
+                if (point.breakBefore()) rawHeartRatePoints.add(new ChartPoint(point.x(),null,null,null,null,null,null));
+                ChartPoint value = new ChartPoint(point.x(),null,null,null,point.bpm(),null,null);
+                rawHeartRatePoints.add(value);heartRateSeries.update(value);xExtremityMonitor.update(point.x());
+            }
+            updateDimensions();updateSeries();
         }
     }
 
@@ -434,6 +457,8 @@ public class ChartView extends View {
     public void reset() {
         synchronized (chartPoints) {
             chartPoints.clear();
+            rawHeartRatePoints = null;
+            seriesList.forEach(ChartValueSeries::resetData);
             xExtremityMonitor.reset();
             zoomLevel = 1;
             updateDimensions();
@@ -876,8 +901,11 @@ public class ChartView extends View {
 
         Integer finalX = null;
 
-        for (ChartPoint point : chartPoints) {
+        for (ChartPoint point : series == heartRateSeries && rawHeartRatePoints != null ? rawHeartRatePoints : chartPoints) {
             if (!series.isChartPointValid(point)) {
+                if (series == heartRateSeries && drawFirstPoint && finalX != null) {
+                    path.lineTo(finalX,yCorner);path.close();drawFirstPoint = false;finalX = null;
+                }
                 continue;
             }
 

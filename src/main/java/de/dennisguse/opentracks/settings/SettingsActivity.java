@@ -38,6 +38,9 @@ public class SettingsActivity extends AbstractActivity implements ChooseActivity
         if (savedInstanceState != null) {
             fragment = (PreferenceFragmentCompat) getSupportFragmentManager().getFragment(savedInstanceState, FRAGMENT_KEY);
         }
+        if (fragment == null && intent != null && intent.hasExtra(FRAGMENT_KEY)) {
+            fragment = getPreferenceScreen(intent.getStringExtra(FRAGMENT_KEY));
+        }
         if (fragment == null) {
             fragment = new MainSettingsFragment();
         }

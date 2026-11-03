@@ -62,6 +62,10 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     }
 
     private TrackDataHub trackDataHub;
+    private final HeartRateChartHistory heartRateHistory = new HeartRateChartHistory();
+    private HeartRateChartHistory.Result heartRateResult;
+    private Track.Id selectedTrack;
+    private final List<HeartRatePlot.DistanceAnchor> distanceAnchors = new ArrayList<>();
 
     // Stats gathered from the received data
     private final List<ChartPoint> pendingPoints = new ArrayList<>();
@@ -145,6 +149,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewBinding = ChartBinding.inflate(inflater, container, false);
         viewBinding.chartView.setChartByDistance(chartByDistance);
+        viewBinding.heartRateChartHint.setText(chartByDistance ? R.string.hr_chart_distance_hint : R.string.hr_chart_hint);
         return viewBinding.getRoot();
     }
 
@@ -180,6 +185,9 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
                 return;
             }
 
+            if (!track.id().equals(selectedTrack)) distanceAnchors.clear();
+            selectedTrack = track.id();
+            loadHeartRateHistory(track.id());
             activityTypeLocalized = track.activityTypeLocalized();
             boolean reportSpeed = PreferencesUtils.isReportSpeed(activityTypeLocalized);
             if (reportSpeed != viewBinding.chartView.getReportSpeed()) {
@@ -193,6 +201,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
     public void clearTrackPoints() {
         if (isResumed()) {
             pendingPoints.clear();
+            distanceAnchors.clear();
             viewBinding.chartView.reset();
             runOnUiThread(() -> {
                 if (isResumed()) {
@@ -206,6 +215,7 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
         if (isResumed()) {
             ChartPoint point = ChartPoint.create(trackStatistics, trackPoint, trackPoint.position().speed(), chartByDistance, viewBinding.chartView.getUnitSystem());
             pendingPoints.add(point);
+            if (chartByDistance) distanceAnchors.add(new HeartRatePlot.DistanceAnchor(trackStatistics.totalDuration().toMillis(),point.timeOrDistance()));
         }
     }
 
@@ -215,8 +225,39 @@ public class ChartFragment extends Fragment implements TrackDataHub.Listener {
             //Avoid ConcurrentModificationException exception
             viewBinding.chartView.addChartPoints(Collections.unmodifiableList(pendingPoints));
             pendingPoints.clear();
+            applyHeartRateHistory();
             runOnUiThread(updateChart);
         }
+    }
+
+    @Override
+    public void onHeartRateSamplesChanged(Track.Id track) {
+        if (isResumed() && track.equals(selectedTrack)) loadHeartRateHistory(track);
+    }
+
+    private void loadHeartRateHistory(Track.Id track) {
+        android.content.Context context = getContext();
+        if (context == null || !isResumed()) return;
+        heartRateResult = heartRateHistory.load(context,track);
+        applyHeartRateHistory();
+    }
+
+    private void applyHeartRateHistory() {
+        HeartRateChartHistory.Result result = heartRateResult;
+        if (result == null) return;
+        Track.Id expectedTrack = selectedTrack;
+        List<HeartRatePlot.Point> plot = chartByDistance
+                ? HeartRatePlot.byDistance(result.points(),List.copyOf(distanceAnchors)) : result.points();
+        runOnUiThread(() -> {
+            if (!isResumed() || viewBinding == null || !java.util.Objects.equals(expectedTrack,selectedTrack)) return;
+            if (result.count() > 0) {
+                viewBinding.heartRateSummary.setText(getString(R.string.hr_summary,result.min(),result.average(),result.max()));
+                if (!chartByDistance || !plot.isEmpty()) viewBinding.chartView.setRawHeartRatePoints(plot);
+            } else {
+                viewBinding.heartRateSummary.setText(R.string.hr_chart_legacy);
+            }
+            viewBinding.chartView.invalidate();
+        });
     }
 
     /**

@@ -7,11 +7,11 @@
 
 ## Automatic publication
 
-A push to main runs one workflow: prepare → checks → create-tag → signed → publish. PR/manual CI does not publish. Never manually create/move/delete Tags or manually publish a Release to bypass this chain.
+A push to main runs one workflow: prepare → checks → signed/APK verification → create-tag → publish. PR/manual CI does not publish. Never manually create/move/delete Tags or manually publish a Release to bypass this chain.
 
 version.properties defines a version-series seed and minimum Code. The workflow allocates the next candidate and strictly increasing Code, stores release-plan.json, and renders identical per-run version.properties for Debug and signed builds. Do not manually bump the seed for intermediate commits; change the series only for an explicitly requested milestone.
 
-Annotated Tags store the exact tested commit, allocated version/Code and run ID. Preserve all existing Tags. Retry failed jobs to resume a run; do not rewrite its Tag. A normal new main commit allocates a new version after any already-tagged attempt. Git history is never automatically rewritten or augmented by version-bump commits.
+Annotated Tags store the exact tested commit, allocated version/Code and run ID. Preserve valid/unknown Tags. Only explicitly authorized, audited orphan cleanup may delete proven automated failures, after persisting their version high-water marks in release-ledger.json. Retry failed jobs to resume a run; do not rewrite its Tag. A normal new main commit allocates above existing Tags and the historical ledger. Signing failure creates no Tag. A Tag also binds the verified APK SHA-256; reruns reuse its original signed artifact. Git history is never automatically rewritten or augmented by version-bump commits.
 
 ## Completion evidence
 

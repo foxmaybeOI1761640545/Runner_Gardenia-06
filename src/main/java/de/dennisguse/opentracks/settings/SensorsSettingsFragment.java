@@ -24,10 +24,66 @@ public class SensorsSettingsFragment extends PreferenceFragmentCompat {
 
     private final static String TAG = SensorsSettingsFragment.class.getSimpleName();
 
+    private final android.os.Handler previewHandler = new android.os.Handler(android.os.Looper.getMainLooper());
+    private final de.dennisguse.opentracks.services.TrackRecordingServiceConnection previewConnection =
+            new de.dennisguse.opentracks.services.TrackRecordingServiceConnection((service,connection) -> {});
+    private androidx.activity.result.ActivityResultLauncher<String[]> heartRatePermissions;
+    private final Runnable updateHeartRatePreview = new Runnable() {
+        @Override public void run() {
+            if (!isResumed()) return;
+            var service = previewConnection.getTrackRecordingService();
+            var preview = service != null ? service.getHeartRatePreview() : new de.dennisguse.opentracks.sensors.HeartRatePreview(null,de.dennisguse.opentracks.sensors.HeartRateStatus.disconnected());
+            var text = de.dennisguse.opentracks.ui.HeartRatePanel.describe(requireContext(),preview.value(),preview.status());
+            Preference preference = findPreference("runner_heart_rate_preview");
+            preference.setTitle(getString(R.string.hr_preview_title,text.bpm()));
+            preference.setSummary(getString(R.string.hr_preview_detail,text.state(),text.age()));
+            previewHandler.postDelayed(this,1000);
+        }
+    };
+
+    @Override public void onCreate(Bundle state) {
+        super.onCreate(state);
+        heartRatePermissions = registerForActivityResult(new androidx.activity.result.contract.ActivityResultContracts.RequestMultiplePermissions(),result -> {
+            if (PermissionRequester.RECORDING.hasPermission(requireContext())) connectHeartRate();
+            else Toast.makeText(requireContext(),R.string.permission_bluetooth_failed,Toast.LENGTH_LONG).show();
+        });
+    }
+
+    private String selectedHeartRateAddress() {
+        return PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,de.dennisguse.opentracks.sensors.driver.SensorType.NONE.getPreferenceValue());
+    }
+    private void heartRateCommand(String suffix) {
+        requireContext().sendBroadcast(new android.content.Intent(requireContext().getPackageName()+suffix)
+                .setPackage(requireContext().getPackageName()).putExtra("address",selectedHeartRateAddress())
+                .putExtra("measurement",de.dennisguse.opentracks.sensors.driver.HeartRateBluetooth.HEARTRATE.measurementUUID().toString()));
+    }
+    private void connectHeartRate() {
+        if (PreferencesUtils.getSensorType(selectedHeartRateAddress()) != de.dennisguse.opentracks.sensors.driver.SensorType.REMOTE) {
+            Toast.makeText(requireContext(),R.string.hr_choose_first,Toast.LENGTH_SHORT).show();return;
+        }
+        if (!PermissionRequester.RECORDING.hasPermission(requireContext())) {
+            java.util.List<String> permissions = new java.util.ArrayList<>(de.dennisguse.opentracks.sensors.driver.BluetoothPermissionPolicy.forApi(android.os.Build.VERSION.SDK_INT));
+            permissions.add(android.Manifest.permission.ACCESS_FINE_LOCATION);permissions.add(android.Manifest.permission.ACCESS_COARSE_LOCATION);
+            heartRatePermissions.launch(permissions.stream().distinct().toArray(String[]::new));return;
+        }
+        android.content.Context owner = requireContext().getApplicationContext();
+        String selectedAddress = selectedHeartRateAddress();
+        de.dennisguse.opentracks.services.TrackRecordingServiceConnection.executeForeground(owner,(service,connection) -> {
+            boolean alreadyStarted = service.areSensorsStarted();
+            service.tryStartSensors();
+            if (alreadyStarted) owner.sendBroadcast(new android.content.Intent(owner.getPackageName()+de.dennisguse.opentracks.sensors.driver.BluetoothDriver.RECONNECT_SUFFIX)
+                    .setPackage(owner.getPackageName()).putExtra("address",selectedAddress)
+                    .putExtra("measurement",de.dennisguse.opentracks.sensors.driver.HeartRateBluetooth.HEARTRATE.measurementUUID().toString()));
+            if (isResumed()) previewConnection.bind(requireContext());
+        });
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.settings_sensors);
         setWheelCircumferenceInputFilter();
+        findPreference("runner_heart_rate_connect").setOnPreferenceClickListener(preference -> { connectHeartRate();return true; });
+        findPreference("runner_heart_rate_disconnect").setOnPreferenceClickListener(preference -> { heartRateCommand(de.dennisguse.opentracks.sensors.driver.BluetoothDriver.DISCONNECT_SUFFIX);return true; });
 
         UnitSystem unitSystem = PreferencesUtils.getUnitSystem();
 
@@ -66,21 +122,23 @@ public class SensorsSettingsFragment extends PreferenceFragmentCompat {
 
         ListPreference minSamplingInterval = findPreference(getString(R.string.min_sampling_interval_key));
         minSamplingInterval.setEntries(PreferencesUtils.getMinSamplingIntervalEntries());
+        previewConnection.bind(requireContext());
+        previewHandler.removeCallbacks(updateHeartRatePreview);
+        previewHandler.post(updateHeartRatePreview);
 
         ListPreference recordingGpsAccuracy = findPreference(getString(R.string.recording_gps_accuracy_key));
         recordingGpsAccuracy.setEntries(PreferencesUtils.getThresholdHorizontalAccuracyEntries());
     }
 
+    @Override public void onPause() {
+        previewHandler.removeCallbacks(updateHeartRatePreview);
+        previewConnection.unbind(requireContext());
+        super.onPause();
+    }
+
     @Override
     public void onDisplayPreferenceDialog(@NonNull Preference preference) {
         if (preference instanceof BluetoothLeSensorPreference) {
-            if(!PermissionRequester.BLUETOOTH.hasPermission(preference.getContext())) {
-                // TODO: maybe use requestPermissionsIfNeeded here or disable preferences at all
-                FragmentActivity activity = getActivity();
-                Toast.makeText(activity, getString(R.string.permission_bluetooth_failed), Toast.LENGTH_LONG).show();
-                return;
-            }
-
             DialogFragment dialogFragment = ((BluetoothLeSensorPreference) preference).createInstance();
 
             // Deprecation not fixed upstream: https://issuetracker.google.com/issues/181793702

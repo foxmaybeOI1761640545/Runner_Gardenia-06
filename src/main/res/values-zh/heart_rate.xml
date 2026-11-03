@@ -1,0 +1,35 @@
+<resources>
+    <string name="sensor_scan_again">重新扫描</string>
+    <string name="sensor_scan_rssi">%1$d dBm</string>
+    <string name="sensor_scan_connected">蓝牙已连接</string>
+    <string name="hr_title">心率</string>
+    <string name="hr_empty_value">— 次/分</string>
+    <string name="hr_value">%1$.0f 次/分</string>
+    <string name="hr_none">未连接心率带</string>
+    <string name="hr_connecting">正在连接…</string>
+    <string name="hr_subscribing">正在启用心率通知…</string>
+    <string name="hr_connected">已连接</string>
+    <string name="hr_retry">连接中断 · 正在重连…</string>
+    <string name="hr_bluetooth_off">蓝牙已关闭</string>
+    <string name="hr_permission">需要蓝牙权限</string>
+    <string name="hr_unavailable">所选设备不可用</string>
+    <string name="hr_contact_lost">请检查心率带接触状态</string>
+    <string name="hr_stale">正在等待新的心率信号</string>
+    <string name="hr_never">尚未收到测量值</string>
+    <string name="hr_age">%1$d 秒前更新</string>
+    <string name="hr_device_state">%1$s · %2$s</string>
+    <string name="hr_settings">传感器设置</string>
+    <string name="hr_summary">最低 %1$.0f · 平均 %2$.0f · 最高 %3$.0f 次/分</string>
+    <string name="hr_chart_empty">心率 · 连接心率带以记录样本</string>
+    <string name="hr_chart_hint">时间图显示完整心率样本。双指缩放，滑动浏览。</string>
+    <string name="hr_chart_distance_hint">心率对应的距离在轨迹采样点之间估算；精确时间请查看时间图。</string>
+    <string name="hr_chart_legacy">心率 · 历史轨迹采样点</string>
+    <string name="hr_connect_selected">连接／重新连接所选心率带</string>
+    <string name="hr_disconnect_selected">断开心率带</string>
+    <string name="hr_choose_first">请先选择心率带</string>
+    <string name="hr_preview_title">心率 · %1$s</string>
+    <string name="hr_preview_detail">%1$s\n%2$s</string>
+    <string name="hr_connect_summary">开始运动记录前可预览实时心率；仅在运动记录期间保存样本。</string>
+    <string name="hr_disconnect_summary">保留所选心率带，以便下次重新连接。</string>
+    <string name="hr_select_device">所选心率带</string>
+</resources>

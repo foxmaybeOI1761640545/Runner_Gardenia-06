@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import de.dennisguse.opentracks.data.tables.MarkerColumns;
+import de.dennisguse.opentracks.data.tables.HeartRateSamplesColumns;
 import de.dennisguse.opentracks.data.tables.TrackPointsColumns;
 import de.dennisguse.opentracks.data.tables.TracksColumns;
 
@@ -88,6 +89,8 @@ public class CustomSQLiteOpenHelperTest {
 
             assertTrue(hasSqlCreate(db, MarkerColumns.CREATE_TABLE));
             assertTrue(hasSqlCreate(db, MarkerColumns.CREATE_TABLE_INDEX));
+            assertTrue(hasSqlCreate(db, HeartRateSamplesColumns.CREATE_TABLE));
+            assertTrue(hasSqlCreate(db, HeartRateSamplesColumns.CREATE_INDEX));
         } catch (Exception e) {
             fail("Database could not be created: " + e);
         }
@@ -116,16 +119,18 @@ public class CustomSQLiteOpenHelperTest {
 
 
         // then - verify table structure
-        int tableCount = 3 + 2; //Three with data tables + two SQLite
+        int tableCount = 4 + 2; // Four data tables + two SQLite
         assertEquals(tableCount, tableByUpgrade.size());
         assertEquals(tableByUpgrade.size(), tablesByCreate.size());
 
         assertEquals(tablesByCreate.get(TracksColumns.TABLE_NAME), tableByUpgrade.get(TracksColumns.TABLE_NAME));
         assertEquals(tablesByCreate.get(TrackPointsColumns.TABLE_NAME), tableByUpgrade.get(TrackPointsColumns.TABLE_NAME));
         assertEquals(tablesByCreate.get(MarkerColumns.TABLE_NAME), tableByUpgrade.get(MarkerColumns.TABLE_NAME));
+        assertEquals(tablesByCreate.get(HeartRateSamplesColumns.TABLE_NAME), tableByUpgrade.get(HeartRateSamplesColumns.TABLE_NAME));
 
         // then - verify custom indices
-        assertEquals(3, indicesByCreate.size());
+        assertEquals(5, indicesByCreate.size());
+        assertEquals(indicesByUpgrade, indicesByCreate);
         assertEquals(indicesByUpgrade.get(TracksColumns.TABLE_NAME), indicesByCreate.get(TracksColumns.TABLE_NAME));
         assertEquals(indicesByUpgrade.get(TrackPointsColumns.TABLE_NAME), indicesByCreate.get(TrackPointsColumns.TABLE_NAME));
         assertEquals(indicesByUpgrade.get(MarkerColumns.TABLE_NAME), indicesByCreate.get(MarkerColumns.TABLE_NAME));
@@ -259,6 +264,34 @@ public class CustomSQLiteOpenHelperTest {
                     assertEquals(List.of(0, 0, -1, 0, 1, -2, 0, 0), types);
                     assertEquals(List.of(4.1, 4.2, 4.3, 4.4, -1.0, -1.0, 4.5, 4.6), latitude);
                 }
+            }
+        }
+    }
+
+    @Test
+    public void upgrade42PreservesLegacyTrackAndBpmWithoutInventingRawSamples() {
+        try (SQLiteOpenHelper old = new SQLiteOpenHelper(context, DATABASE_NAME, null, 42) {
+            @Override public void onCreate(SQLiteDatabase db) {
+                db.execSQL(TracksColumns.CREATE_TABLE); db.execSQL(TracksColumns.CREATE_TABLE_INDEX);
+                db.execSQL(TrackPointsColumns.CREATE_TABLE); db.execSQL(TrackPointsColumns.CREATE_TABLE_INDEX);
+                db.execSQL(MarkerColumns.CREATE_TABLE); db.execSQL(MarkerColumns.CREATE_TABLE_INDEX);
+            }
+            @Override public void onUpgrade(SQLiteDatabase db, int from, int to) { fail("Unexpected legacy upgrade"); }
+        }) {
+            old.getWritableDatabase().execSQL("INSERT INTO tracks (_id, name) VALUES (10, 'Legacy running')");
+            old.getWritableDatabase().execSQL("INSERT INTO trackpoints (trackid, type, time, sensor_heartrate) VALUES (10, 0, 123456, 72)");
+        }
+        try (CustomSQLiteOpenHelper upgraded = new CustomSQLiteOpenHelper(context, DATABASE_NAME)) {
+            SQLiteDatabase db = upgraded.getReadableDatabase(); assertEquals(43, db.getVersion());
+            try (Cursor row = db.rawQuery("SELECT tracks.name, trackpoints.time, sensor_heartrate FROM tracks JOIN trackpoints ON tracks._id=trackpoints.trackid", null)) {
+                assertTrue(row.moveToFirst());assertEquals("Legacy running",row.getString(0));assertEquals(123456,row.getLong(1));assertEquals(72,row.getFloat(2),0);assertEquals(1,row.getCount());
+            }
+            try (Cursor row = db.rawQuery("SELECT COUNT(*) FROM heart_rate_samples", null)) { assertTrue(row.moveToFirst());assertEquals(0,row.getInt(0)); }
+        }
+        // Compatibility downgrade discards only new raw metadata, never legacy tracks/points.
+        try (CustomSQLiteOpenHelper downgraded = new CustomSQLiteOpenHelper(context, DATABASE_NAME, 42)) {
+            try (Cursor row = downgraded.getReadableDatabase().rawQuery("SELECT sensor_heartrate FROM trackpoints WHERE trackid=10", null)) {
+                assertTrue(row.moveToFirst());assertEquals(72,row.getFloat(0),0);
             }
         }
     }

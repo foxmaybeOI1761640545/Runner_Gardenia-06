@@ -79,6 +79,9 @@ public class StatisticsRecordingFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewBinding = StatisticsRecordingBinding.inflate(inflater, container, false);
+        viewBinding.heartRateSettings.setOnClickListener(view -> startActivity(new android.content.Intent(
+                requireContext(),de.dennisguse.opentracks.settings.SettingsActivity.class)
+                .putExtra(de.dennisguse.opentracks.settings.SettingsActivity.FRAGMENT_KEY,getString(R.string.settings_sensors_key))));
         return viewBinding.getRoot();
     }
 
@@ -181,6 +184,11 @@ public class StatisticsRecordingFragment extends Fragment {
     }
 
     private void updateDataOnUI() {
+        if (isResumed() && viewBinding != null) {
+            de.dennisguse.opentracks.ui.HeartRatePanel.bind(viewBinding.getRoot(),
+                    recordingData.latestTrackPoint() != null ? recordingData.latestTrackPoint().heartRate() : null,
+                    recordingData.heartRateStatus());
+        }
         if (isResumed() && !RecordingData.NOT_RECORDING.equals(recordingData)) {
             viewHolders.forEach(i -> i.onChanged(unitSystem, recordingData));
         }

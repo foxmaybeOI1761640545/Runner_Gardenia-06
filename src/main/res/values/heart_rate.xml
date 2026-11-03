@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="sensor_scan_again">Scan again</string>
+    <string name="sensor_scan_rssi">%1$d dBm</string>
+    <string name="sensor_scan_connected">Bluetooth connected</string>
+    <string name="hr_title">Heart rate</string>
+    <string name="hr_empty_value">— bpm</string>
+    <string name="hr_value">%1$.0f bpm</string>
+    <string name="hr_none">No strap connected</string>
+    <string name="hr_connecting">Connecting…</string>
+    <string name="hr_subscribing">Enabling heart-rate notifications…</string>
+    <string name="hr_connected">Connected</string>
+    <string name="hr_retry">Connection lost · reconnecting…</string>
+    <string name="hr_bluetooth_off">Bluetooth is off</string>
+    <string name="hr_permission">Bluetooth permission required</string>
+    <string name="hr_unavailable">Selected device unavailable</string>
+    <string name="hr_contact_lost">Check strap contact</string>
+    <string name="hr_stale">Waiting for a fresh heart-rate signal</string>
+    <string name="hr_never">No measurement received yet</string>
+    <string name="hr_age">Updated %1$d s ago</string>
+    <string name="hr_device_state">%1$s · %2$s</string>
+    <string name="hr_settings">Sensor settings</string>
+    <string name="hr_summary">Min %1$.0f · Avg %2$.0f · Max %3$.0f bpm</string>
+    <string name="hr_chart_empty">Heart rate · connect a strap to record samples</string>
+    <string name="hr_chart_hint">Time chart: full heart-rate samples. Pinch to zoom; swipe to browse.</string>
+    <string name="hr_chart_distance_hint">Heart-rate distance is estimated between track snapshots. Use Time for precise timing.</string>
+    <string name="hr_chart_legacy">Heart rate · recorded track samples</string>
+    <string name="hr_connect_selected">Connect / reconnect selected strap</string>
+    <string name="hr_disconnect_selected">Disconnect strap</string>
+    <string name="hr_choose_first">Select a heart-rate strap first</string>
+    <string name="hr_preview_title">Heart rate · %1$s</string>
+    <string name="hr_preview_detail">%1$s\n%2$s</string>
+    <string name="hr_connect_summary">Preview live heart rate before recording. Samples are saved only during a recording.</string>
+    <string name="hr_disconnect_summary">Keep the selected strap for the next connection.</string>
+    <string name="hr_select_device">Selected strap</string>
+</resources>

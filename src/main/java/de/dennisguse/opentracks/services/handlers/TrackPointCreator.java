@@ -150,6 +150,15 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         return Instant.now(clock);
     }
 
+    public de.dennisguse.opentracks.sensors.HeartRateStatus getHeartRateStatus() {
+        return sensorManager.getHeartRateStatus();
+    }
+
+    public de.dennisguse.opentracks.sensors.HeartRatePreview getHeartRatePreview() {
+        var heartRate = sensorManager.getSensorDataSet(getNow()).heartRate();
+        return new de.dennisguse.opentracks.sensors.HeartRatePreview(heartRate != null ? heartRate.data() : null,getHeartRateStatus());
+    }
+
     @VisibleForTesting
     public SensorManager getSensorManager() {
         return sensorManager;
@@ -157,7 +166,7 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
 
     @VisibleForTesting
     public void setClock(@NonNull String time) {
-        this.clock = Clock.fixed(Instant.parse(time), ZoneId.of("CET"));
+        this.clock = Clock.fixed(Instant.parse(time), ZoneId.systemDefault());
     }
 
     @Deprecated //TODO This should be refactored. Can we use a SensorDataSet for this?

@@ -83,10 +83,12 @@ public class TrackDataHub {
     private TrackPoint.Id firstSeenTrackPointId;
     private TrackPoint.Id lastSeenTrackPointId;
     private TrackStatisticsUpdater trackStatisticsUpdater;
+    private Boolean lastHeartRatePresence;
 
     // Registered listeners
     private ContentObserver tracksTableObserver;
     private ContentObserver trackPointsTableObserver;
+    private ContentObserver heartRateTableObserver;
 
     public TrackDataHub(Context context) {
         this(context, new ContentProviderUtils(context), TARGET_DISPLAYED_TRACKPOINTS);
@@ -127,6 +129,12 @@ public class TrackDataHub {
             }
         };
         contentResolver.registerContentObserver(CustomContentProvider.UrlType.TRACKPOINTS_BY_ID.getUri(), false, trackPointsTableObserver);
+        heartRateTableObserver = new ContentObserver(handler) {
+            @Override public void onChange(boolean selfChange) {
+                if (selectedTrackId != null) for (Listener listener : listeners) listener.onHeartRateSamplesChanged(selectedTrackId);
+            }
+        };
+        contentResolver.registerContentObserver(CustomContentProvider.UrlType.HEART_RATE_SAMPLES.getUri(), false, heartRateTableObserver);
     }
 
     public void stop() {
@@ -139,6 +147,7 @@ public class TrackDataHub {
         ContentResolver contentResolver = context.getContentResolver();
         contentResolver.unregisterContentObserver(tracksTableObserver);
         contentResolver.unregisterContentObserver(trackPointsTableObserver);
+        contentResolver.unregisterContentObserver(heartRateTableObserver);
 
         if (handlerThread != null) {
             handlerThread.getLooper().quit();
@@ -276,6 +285,7 @@ public class TrackDataHub {
         }
 
         TrackPoint trackPoint = null;
+        Boolean previousHeartRatePresence = updateSamplingState ? lastHeartRatePresence : null;
         try (TrackPointIterator trackPointIterator = contentProviderUtils.getTrackPointIterator(selectedTrackId, next)) {
             long numTotalPoints = trackPointIterator.getCount();
             int samplingFrequency = 1 + (int) (numTotalPoints / targetNumPoints);
@@ -306,8 +316,12 @@ public class TrackDataHub {
                 }
                 Statistics statistics = trackStatisticsUpdater.getTrackStatistics();
 
+                boolean hasHeartRate = trackPoint.heartRate() != null && trackPoint.heartRate().isValid();
+                boolean heartRateTransition = previousHeartRatePresence != null && previousHeartRatePresence != hasHeartRate;
+                previousHeartRatePresence = hasHeartRate;
+                // Preserve HR missing-value transitions before downsampling (legacy distance curves).
                 // Also include the last point if the selected track is not recording.
-                if ((localNumLoadedTrackPoints % samplingFrequency == 0) || (!trackPointIterator.hasNext() && !isSelectedTrackRecording())) {
+                if (heartRateTransition || (localNumLoadedTrackPoints % samplingFrequency == 0) || (!trackPointIterator.hasNext() && !isSelectedTrackRecording())) {
                     for (Listener trackDataListener : listeners)
                         trackDataListener.onSampledInTrackPoint(trackPoint, statistics);
                 }
@@ -321,6 +335,7 @@ public class TrackDataHub {
         }
 
         if (updateSamplingState) {
+            lastHeartRatePresence = previousHeartRatePresence;
             numLoadedPoints = localNumLoadedTrackPoints;
             firstSeenTrackPointId = localFirstSeenTrackPointId;
             lastSeenTrackPointId = localLastSeenTrackPointIdId;
@@ -335,6 +350,7 @@ public class TrackDataHub {
      */
     private void resetSamplingState() {
         numLoadedPoints = 0;
+        lastHeartRatePresence = null;
         firstSeenTrackPointId = null;
         lastSeenTrackPointId = null;
         trackStatisticsUpdater = null;
@@ -349,6 +365,7 @@ public class TrackDataHub {
     }
 
     public interface Listener {
+        default void onHeartRateSamplesChanged(Track.Id track) {}
 
         /**
          * Called when the track or its statistics has been updated.
