@@ -40,6 +40,8 @@ README_TESTED_SENSORS lists upstream experience with Polar H7/H10/OH1, Wahoo Tic
 
 ## Reference architecture and boundaries
 
+HeartRateEnvironment owns shared manager/event sinks; HeartRateForegroundService owns its standalone foreground lifetime. TargetDeviceMatcher includes a project-specific target-name fallback, which will not be adopted: Runner Gardenia must connect only to the user-selected address.
+
 The reference is a Kotlin/Capacitor module with a shared HeartRateBleManager, JS event sinks, a standalone foreground service and JSONL session/sample files. It waits for CCCD success, remembers a selected target, carries contact/energy/RR metadata, reads optional body location/battery, and schedules bounded reconnects. HeartRateStorage reads session-linked timestamped samples; HeartRateChunkWriter also contains upload-oriented chunk state.
 
 Runner Gardenia is a native Java application whose TrackRecordingService owns SensorManager, generic BluetoothDriver, aggregators, TrackPoints and SQLite history. Copying the reference manager/storage/service would duplicate lifecycle and data ownership.
