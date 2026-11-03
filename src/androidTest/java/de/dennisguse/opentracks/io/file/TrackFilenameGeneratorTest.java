@@ -25,7 +25,7 @@ import de.dennisguse.opentracks.data.models.Track;
 public class TrackFilenameGeneratorTest {
 
     @Rule
-    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Europe/Berlin"));
+    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Asia/Singapore"));
 
     @Parameterized.Parameters
     public static Collection<String[]> data() {

@@ -10,7 +10,7 @@
 <Document>
 <open>1</open>
 <visibility>1</visibility>
-<name><![CDATA[2020-02-02T03:02+01]]></name>
+<name><![CDATA[2020-02-02T10:02+08]]></name>
 <atom:generator><![CDATA[OpenTracks]]></atom:generator>
 <Style id="track">
 <LineStyle><color>7f0000ff</color><width>4</width></LineStyle>
@@ -40,12 +40,12 @@
 </SimpleArrayField>
 </Schema>
 <Folder>
-<name><![CDATA[2020-02-02T03:02+01 Markers]]></name>
+<name><![CDATA[2020-02-02T10:02+08 Markers]]></name>
 <open>1</open>
 <Placemark>
 <name><![CDATA[Marker 1]]></name>
 <description><![CDATA[Marker 1 desc]]></description>
-<TimeStamp><when>2020-02-02T03:02:03+01:00</when></TimeStamp>
+<TimeStamp><when>2020-02-02T10:02:03+08:00</when></TimeStamp>
 <styleUrl>#waypoint</styleUrl>
 <ExtendedData>
 <Data name="type"><value><![CDATA[Marker 1 typeLocalized]]></value></Data>
@@ -56,12 +56,12 @@
 </Placemark>
 </Folder>
 <Folder>
-<name><![CDATA[2022-02-02T03:02+01 Markers]]></name>
+<name><![CDATA[2022-02-02T10:02+08 Markers]]></name>
 <open>1</open>
 <Placemark>
 <name><![CDATA[Marker 2]]></name>
 <description><![CDATA[Marker 2 desc]]></description>
-<TimeStamp><when>2022-02-02T03:02:03+01:00</when></TimeStamp>
+<TimeStamp><when>2022-02-02T10:02:03+08:00</when></TimeStamp>
 <styleUrl>#waypoint</styleUrl>
 <ExtendedData>
 <Data name="type"><value><![CDATA[Marker 2 typeLocalized]]></value></Data>
@@ -75,7 +75,7 @@
 <name>Tracks</name>
 <open>1</open>
 <Placemark>
-<name><![CDATA[2020-02-02T03:02+01]]></name>
+<name><![CDATA[2020-02-02T10:02+08]]></name>
 <description><![CDATA[]]></description>
 <opentracks:trackid>ece162fb-d614-4431-9d33-eb20f8ee8e1d</opentracks:trackid>
 <styleUrl>#track</styleUrl>
@@ -89,11 +89,11 @@
 <altitudeMode>absolute</altitudeMode>
 <interpolate>1</interpolate>
 <Track>
-<when>2020-02-02T03:02:02+01:00</when>
+<when>2020-02-02T10:02:02+08:00</when>
 <coord/>
-<when>2020-02-02T03:02:03+01:00</when>
+<when>2020-02-02T10:02:03+08:00</when>
 <coord>14.001456 3.123456 1020.25</coord>
-<when>2020-02-02T03:02:03+01:00</when>
+<when>2020-02-02T10:02:03+08:00</when>
 <coord/>
 <ExtendedData>
 <SchemaData schemaUrl="#schema">
@@ -128,7 +128,7 @@
 </MultiTrack>
 </Placemark>
 <Placemark>
-<name><![CDATA[2022-02-02T03:02+01]]></name>
+<name><![CDATA[2022-02-02T10:02+08]]></name>
 <description><![CDATA[]]></description>
 <opentracks:trackid>6712f4ca-3456-4739-841a-9e62760cc447</opentracks:trackid>
 <styleUrl>#track</styleUrl>
@@ -142,11 +142,11 @@
 <altitudeMode>absolute</altitudeMode>
 <interpolate>1</interpolate>
 <Track>
-<when>2022-02-02T03:02:02+01:00</when>
+<when>2022-02-02T10:02:02+08:00</when>
 <coord/>
-<when>2022-02-02T03:02:03+01:00</when>
+<when>2022-02-02T10:02:03+08:00</when>
 <coord>14.001456 3.123456 1020.25</coord>
-<when>2022-02-02T03:02:03+01:00</when>
+<when>2022-02-02T10:02:03+08:00</when>
 <coord/>
 <ExtendedData>
 <SchemaData schemaUrl="#schema">

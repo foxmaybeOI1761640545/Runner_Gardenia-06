@@ -19,6 +19,7 @@ defaults:
     shell: bash
 
 env:
+  TZ: Asia/Singapore
   ANDROID_HOME: /usr/local/lib/android/sdk
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
 
@@ -54,16 +55,26 @@ jobs:
       - name: Debug APK, lint and unit tests
         run: ./gradlew --no-daemon --no-configuration-cache clean lintReproducibleDebug testReproducibleDebugUnitTest assembleReproducibleDebug
       - name: Existing Android instrumentation tests (API 35)
-        run: ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect
+        run: ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore
       - name: Require executed instrumentation tests
+        if: always()
         run: python3 .github/scripts/check_test_results.py
+      - name: Verify actual Debug APK identity
+        run: python3 .github/scripts/verify_debug_apk.py
       - name: Upload debug APK
+        id: debug-apk
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: debug-apk-${{ github.run_id }}-${{ github.run_attempt }}
           path: build/outputs/apk/reproducible/debug/*.apk
           if-no-files-found: error
           retention-days: 14
+      - name: Record uploaded APK Artifact
+        env:
+          ARTIFACT_URL: ${{ steps.debug-apk.outputs.artifact-url }}
+          ARTIFACT_DIGEST: ${{ steps.debug-apk.outputs.artifact-digest }}
+        run: |
+          printf '\n## Uploaded Debug APK Artifact\n\n%s\n\nArtifact SHA-256: `%s`\n' "$ARTIFACT_URL" "$ARTIFACT_DIGEST" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload test and lint reports
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

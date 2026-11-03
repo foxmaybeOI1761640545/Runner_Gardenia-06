@@ -96,7 +96,7 @@ public class ExportImportTest {
 
     //For csv_export_only() as the timezone is hardcoded in the expectation.
     @Rule
-    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Europe/Berlin"));
+    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Asia/Singapore"));
 
     private static final Context context = ApplicationProvider.getApplicationContext();
 
@@ -225,7 +225,7 @@ public class ExportImportTest {
         Track track = contentProviderUtils.getTrack(trackId);
         Statistics trackStatistics = track.statistics();
 
-        assertEquals(ZoneOffset.of("+01:00"), track.zoneOffset());
+        assertEquals(ZoneOffset.of("+08:00"), track.zoneOffset());
 
         List<TrackPoint> actual = TestDataUtil.getTrackPoints(contentProviderUtils, trackId);
         new TrackPointAssert().assertEquals(List.of(

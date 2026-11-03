@@ -91,11 +91,15 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     private TrackPointCreator trackPointCreator;
     private TrackRecordingManager trackRecordingManager;
 
+    // Guarded by this, together with lifecycle initialization/teardown and preference callbacks.
+    // SharedPreferences can deliver a queued listener snapshot after unregistering it.
+    private boolean preferenceCallbacksEnabled;
+
     private VoiceAnnouncementManager voiceAnnouncementManager;
     private TrackRecordingServiceNotificationManager notificationManager;
 
     @Override
-    public void onCreate() {
+    public synchronized void onCreate() {
         super.onCreate();
         Log.d(TAG, "Create");
 
@@ -112,17 +116,19 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         voiceAnnouncementManager = new VoiceAnnouncementManager(this);
         notificationManager = new TrackRecordingServiceNotificationManager(this);
 
+        preferenceCallbacksEnabled = true;
         PreferencesUtils.registerOnSharedPreferenceChangeListener(this);
     }
 
     @Override
-    public void onDestroy() {
+    public synchronized void onDestroy() {
         Log.d(TAG, "Destroying");
+        // Stop accepting callbacks before releasing any dependency or stopping sensors.
+        preferenceCallbacksEnabled = false;
+        PreferencesUtils.unregisterOnSharedPreferenceChangeListener(this);
         if (trackPointCreator != null && trackPointCreator.isStarted()) {
             stopSensors();
         }
-
-        PreferencesUtils.unregisterOnSharedPreferenceChangeListener(this);
 
         trackPointCreator = null;
 
@@ -359,7 +365,10 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
 
     @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, @Nullable String key) {
+    public synchronized void onSharedPreferenceChanged(SharedPreferences sharedPreferences, @Nullable String key) {
+        if (!preferenceCallbacksEnabled) {
+            return;
+        }
         voiceAnnouncementManager.onSharedPreferenceChanged(sharedPreferences, key);
         trackRecordingManager.onSharedPreferenceChanged(sharedPreferences, key);
         trackPointCreator.onSharedPreferenceChanged(sharedPreferences, key);

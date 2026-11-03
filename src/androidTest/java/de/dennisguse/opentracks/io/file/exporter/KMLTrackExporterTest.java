@@ -48,9 +48,9 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 @RunWith(JUnit4.class)
 public class KMLTrackExporterTest {
 
-    // KML fixture timestamps are expressed in Central European Standard Time.
+    // Export fixtures use the target test environment: Singapore (UTC+08:00).
     @ClassRule
-    public static final TimezoneRule mTimezoneRule = new TimezoneRule(TimeZone.getTimeZone("GMT+01:00"));
+    public static final TimezoneRule mTimezoneRule = new TimezoneRule(TimeZone.getTimeZone("Asia/Singapore"));
 
     @Rule
     public final ServiceTestRule mServiceRule = ServiceTestRule.withTimeout(5, TimeUnit.SECONDS);

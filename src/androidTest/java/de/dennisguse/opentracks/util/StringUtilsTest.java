@@ -58,7 +58,7 @@ public class StringUtilsTest {
     public final LocaleRule mLocaleRule = new LocaleRule(Locale.ENGLISH);
 
     @Rule
-    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Europe/Berlin"));
+    public TimezoneRule timezoneRule = new TimezoneRule(TimeZone.getTimeZone("Asia/Singapore"));
 
     private final Context context = ApplicationProvider.getApplicationContext();
 
