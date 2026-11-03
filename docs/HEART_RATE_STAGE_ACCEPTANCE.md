@@ -77,4 +77,11 @@ Hardware access: unavailable. Emulator/fake transport evidence and real radio ev
 
 - Queried four remote/local tags, all Releases/assets, full failed/successful release logs and retained artifact inventories. rc1.4 is the only published signed APK; rc1.1–rc1.3 have neither a verified signed Artifact nor a Release and cannot be restored. Full evidence and actual APK checksum are in RELEASE_TAG_AUDIT.md.
 - Persisting all original names/Codes/commits/tag objects and high water 4 / 6769 before any deletion. Added allocator/tag gates and three real temporary-Git regression scenarios, including removal of the highest or every tag. Twenty pipeline tests, actionlint, Python syntax and diff checks PASS.
-- Cleanup and final stage 6 CI pending. No later stage may begin before actual cleanup and PR CI acceptance.
+- Actual cleanup: ledger 26fd818 pushed and remote content verified first; three exact orphan refs deleted remotely and locally, rc1.4 object unchanged, no empty Release existed to delete. Remote inventory rechecked; only rc1.4 remains. Actual allocator still selects rc1.5 / 6770; no source history was deleted.
+- Stage 6 static/cleanup validation PASS. Full final PR CI remains the entry gate for stage 7; the exact successful run/counts are retained in PR #1 and the final report without creating an extra main publication just to update documentation.
+
+## Stage 7 — final merge/publication evidence
+
+- Entry requires every prior stage gate, the latest full PR CI, complete XML/UI evidence and a clean normal merge. No protection bypass is permitted.
+- Final main must execute checks → signed APK verification/upload → immutable tag → recoverable Pre-release publication. The source/run/version/code/certificate/APK digest are retained in that run's reports, publication receipt and public build-info.json.
+- Final acceptance is not inferred from this document or BUILD SUCCESSFUL: public APK bytes, checksum, tag target, actual reports, screenshots and uploaded assets must all be checked. PR #1 and the final delivery report record the resolved run/tag/release links after completion. Physical RF/installation/endurance checks remain separately unverified.

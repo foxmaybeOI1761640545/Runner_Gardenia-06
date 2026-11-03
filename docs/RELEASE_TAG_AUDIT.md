@@ -6,9 +6,9 @@ Remote refs, peeled commit IDs, all repository Releases (including drafts), asse
 
 | Tag / Code | Commit | Actions evidence | Signed APK / assets | Classification and action |
 | --- | --- | --- | --- | --- |
-| v0.1.0-rc1.1 / 6766 | ebc6549a6e228328b82a33995d2ebf2329a26579 | [#5](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41671404110), [#6](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41672584767) | Both retained only Debug/report artifacts; no signed artifact or Release. #6 failed reading `/res/xml/shortcuts.xml` after resource optimization. | Automated orphan; reserved in ledger; deletion pending durable ledger push. |
-| v0.1.0-rc1.2 / 6767 | a9f1770fa81d803959434bc25d864a02a885376e | [#7](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41681169734) | Debug/CI gate/plan/reports only; no signed artifact or Release. Failed reading `res/xml/shortcuts.xml`. | Automated orphan; reserved in ledger; deletion pending durable ledger push. |
-| v0.1.0-rc1.3 / 6768 | d0db0556fbd51de6d282f74fb667309acbf7e860 | [#8](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41683034188) | Debug/CI gate/plan/reports only; no signed artifact or Release. Optimized `res/Eq.xml` was found, but typed package binding verification failed. | Automated orphan; reserved in ledger; deletion pending durable ledger push. |
+| v0.1.0-rc1.1 / 6766 | ebc6549a6e228328b82a33995d2ebf2329a26579 | [#5](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41671404110), [#6](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41672584767) | Both retained only Debug/report artifacts; no signed artifact or Release. #6 failed reading `/res/xml/shortcuts.xml` after resource optimization. | Automated orphan; reserved in ledger; remote and local tag deleted after durable ledger push. |
+| v0.1.0-rc1.2 / 6767 | a9f1770fa81d803959434bc25d864a02a885376e | [#7](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41681169734) | Debug/CI gate/plan/reports only; no signed artifact or Release. Failed reading `res/xml/shortcuts.xml`. | Automated orphan; reserved in ledger; remote and local tag deleted after durable ledger push. |
+| v0.1.0-rc1.3 / 6768 | d0db0556fbd51de6d282f74fb667309acbf7e860 | [#8](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41683034188) | Debug/CI gate/plan/reports only; no signed artifact or Release. Optimized `res/Eq.xml` was found, but typed package binding verification failed. | Automated orphan; reserved in ledger; remote and local tag deleted after durable ledger push. |
 | v0.1.0-rc1.4 / 6769 | 24aa0d7d36d244852e796cca6307936e34d989ed | [#9](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41685585228) | Verified signed Artifact, publication receipt, public APK + SHA256SUMS + build-info.json. | Valid published Pre-release; preserve tag object and assets unchanged. |
 
 ## Valid release verification
@@ -29,4 +29,15 @@ Regression tests remove the highest tag, then all tags, and still allocate rc1.5
 
 ## Cleanup result
 
-Pending ledger commit/push and exact-ref recheck. No tag has been deleted at this point. Unknown-purpose tags: zero in this inventory. Recoverable unpublished signed versions: zero. No Git commits or source history will be deleted.
+The ledger was committed and pushed first as `26fd818`, then its remote blob SHA was compared with the local file. Each orphan ref's exact original tag-object SHA and absence of a new Release were checked again before deletion.
+
+- Original tags: **4**; valid preserved: **1** (`v0.1.0-rc1.4`).
+- Restored versions: **0**; no verified signed APK Artifact was available for the failed versions.
+- Deleted invalid remote/local tags: **3** (`v0.1.0-rc1.1`, `v0.1.0-rc1.2`, `v0.1.0-rc1.3`).
+- Deleted Releases/drafts: **0**, because none existed for these orphans.
+- Unknown-purpose tags retained: **0**; all four tags had an established automated-release origin.
+- Remaining rc1.4 tag object: `4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e`, unchanged.
+- Remote/local refs and public Releases were queried again after cleanup; only the valid rc1.4 remained at this stage.
+- Historical high water: **rc1.4 / 6769**; next candidate: **rc1.5 / 6770**, even though three older tags are gone.
+
+No Git commits or source history were deleted. The final feature-branch PR CI must pass before merge; its exact run and final publication evidence are recorded in PR #1 and the final delivery report.
