@@ -8,12 +8,14 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import urllib.request
+import zipfile
 
 SCRIPTS = Path(__file__).resolve().parents[1] / 'scripts'
 sys.path.insert(0, str(SCRIPTS))
 import release_policy as policy
 import check_test_results as reports
 import publish_release as publication
+import apk_resources
 
 
 class VersionTests(unittest.TestCase):
@@ -99,6 +101,24 @@ class ReportTests(unittest.TestCase):
             with self.assertRaises(ValueError):reports.inspect(Path(tmp),source)
             xml.write_text('<not-xml')
             with self.assertRaises(reports.ET.ParseError):reports.inspect(Path(tmp),source)
+
+
+class ApkResourceTests(unittest.TestCase):
+    def test_optimized_resource_path_is_resolved_and_checked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            apk = Path(tmp) / 'fixture.apk'
+            with zipfile.ZipFile(apk, 'w') as archive:
+                archive.writestr('res/a1.xml', b'fixture binary XML')
+            calls = []
+            def analyzer(args, text):
+                calls.append(args)
+                if args[2] == 'value': return '"res/a1.xml"\n'
+                return '<shortcuts/>'
+            with patch.object(apk_resources.subprocess, 'check_output', side_effect=analyzer):
+                self.assertEqual('<shortcuts/>', apk_resources.read_packaged_xml('apkanalyzer', apk, 'shortcuts'))
+                self.assertIn('res/a1.xml', calls[-1])
+            with patch.object(apk_resources.subprocess, 'check_output', return_value='res/missing.xml'):
+                with self.assertRaises(RuntimeError): apk_resources.read_packaged_xml('apkanalyzer', apk, 'shortcuts')
 
 
 class FakeGitHub:

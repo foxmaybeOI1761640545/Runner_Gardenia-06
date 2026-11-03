@@ -46,7 +46,7 @@ signed Job 使用 `environment: android-release`，直接引用已有配置：
 
 不生成密钥、不打印密钥或密码。JKS 只恢复到 RUNNER_TEMP，权限 600，通过 EXIT trap 与 always 步骤清理；签名任务禁用 Gradle 缓存和 configuration cache。保留原有本地 -D 签名参数兼容。
 
-验证脚本读取实际 output-metadata.json 定位唯一 APK，检查包名、版本、Code、debuggable=false、apksigner、独立证书 SHA-256 和快捷方式身份。APK ZIP 内路径为 `res/xml/shortcuts.xml`，不能添加前导 `/`。
+验证脚本读取实际 output-metadata.json 定位唯一 APK，检查包名、版本、Code、debuggable=false、apksigner、独立证书 SHA-256 和快捷方式身份。快捷方式 XML 路径从 APK 资源表解析，并确认对应 ZIP 条目存在后才解码；不假设资源优化后仍保留源码中的文件名。
 
 发布 Job 再次验证 APK 的校验和、签名和身份，创建 draft pre-release，上传 APK、SHA256SUMS、build-info.json，核对每项资产后再公开。固定 prerelease=true、make_latest=false。Release notes 包含准确提交、包名、版本、Code、指纹和 APK SHA-256。
 

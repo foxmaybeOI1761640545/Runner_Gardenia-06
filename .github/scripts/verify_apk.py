@@ -8,6 +8,8 @@ import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 
+from apk_resources import read_packaged_xml
+
 
 def run(*args):
     return subprocess.check_output([str(arg) for arg in args], text=True).strip()
@@ -62,7 +64,7 @@ for item in manifest.iter():
                 'An upstream application action remains in the manifest.')
 # Class names and Java namespace intentionally remain upstream-compatible.
 # Decode the packaged shortcut XML too: checking only source XML misses flavor overrides.
-shortcut_xml = run(analyzer, 'resources', 'xml', '--file', 'res/xml/shortcuts.xml', apk)
+shortcut_xml = read_packaged_xml(analyzer, apk, 'shortcuts')
 require('de.dennisguse.opentracks.playstore' not in shortcut_xml, 'Upstream shortcut package remains.')
 require(not re.search(r'targetPackage[^\n]*de\.dennisguse\.opentracks', shortcut_xml),
         'Upstream shortcut package remains.')
