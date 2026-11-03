@@ -86,7 +86,7 @@ public class TrackShareSummaryGeneratorTest {
                 ));
 
         String expected = //"Created by"
-                "OpenTracks (Debug)\n\n"
+                "OpenTracks\n\n"
                         + "Name: -\n"
                         + "Activity type: hiking\n"
                         + "Description: -\n"

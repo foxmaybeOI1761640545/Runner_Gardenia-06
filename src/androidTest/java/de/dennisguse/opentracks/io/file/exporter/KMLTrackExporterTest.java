@@ -12,6 +12,7 @@ import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.GrantPermissionRule;
 import androidx.test.rule.ServiceTestRule;
 
+import org.junit.ClassRule;
 import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
@@ -25,10 +26,12 @@ import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import de.dennisguse.opentracks.TestUtil;
+import de.dennisguse.opentracks.TimezoneRule;
 import de.dennisguse.opentracks.data.ContentProviderUtils;
 import de.dennisguse.opentracks.data.models.Altitude;
 import de.dennisguse.opentracks.data.models.Distance;
@@ -44,6 +47,10 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 
 @RunWith(JUnit4.class)
 public class KMLTrackExporterTest {
+
+    // KML fixture timestamps are expressed in Central European Standard Time.
+    @ClassRule
+    public static final TimezoneRule mTimezoneRule = new TimezoneRule(TimeZone.getTimeZone("GMT+01:00"));
 
     @Rule
     public final ServiceTestRule mServiceRule = ServiceTestRule.withTimeout(5, TimeUnit.SECONDS);
