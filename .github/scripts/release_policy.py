@@ -50,6 +50,29 @@ def load(path):
     return plan
 
 
+def ledger_history():
+    """Deleted failed allocations remain reserved; never infer history from tags alone."""
+    path = Path('release-ledger.json')
+    if not path.exists():
+        return []  # Legacy snapshots and standalone git-fixture tests.
+    data = json.loads(path.read_text())
+    if data.get('schema') != 1 or not isinstance(data.get('allocations'), list) or not data['allocations']:
+        raise SystemExit('Invalid release ledger schema.')
+    entries = data['allocations']
+    versions, codes, series = set(), set(), {}
+    for entry in entries:
+        validate(entry)
+        name, code = entry['versionName'], entry['versionCode']
+        if name in versions or code in codes:
+            raise SystemExit('Duplicate version or Code in release ledger.')
+        versions.add(name); codes.add(code)
+        match = NAME.fullmatch(name)
+        series[match[1]] = max(series.get(match[1], 0), int(match[2]))
+    if data.get('codeHighWater') != max(codes) or data.get('seriesHighWater') != series:
+        raise SystemExit('Release ledger high-water records disagree with allocated history.')
+    return entries
+
+
 def prepare(output):
     seed = properties(Path('version.properties').read_text())
     match = NAME.fullmatch(seed['VERSION_NAME'])
@@ -63,7 +86,13 @@ def prepare(output):
                   and os.environ.get('GITHUB_REPOSITORY') == 'foxmaybeOI1761640545/Runner_Gardenia-06')
     run_id = os.environ.get('GITHUB_RUN_ID', 'local')
     previous = [tag_plan(tag) for tag in git('tag', '--list', 'v*').splitlines()]
+    history = ledger_history()
+    for entry in history:
+        for tagged in previous:
+            if tagged['versionName'] == entry['versionName'] and any(tagged[key] != entry[key] for key in ('commit', 'versionCode')):
+                raise SystemExit('Existing tag contradicts persisted release history.')
     resumed = [item for item in previous if item.get('runId') == run_id]
+    allocated = previous + history
     if resumed:
         if len(resumed) != 1 or resumed[0]['commit'] != head:
             raise SystemExit('This run already owns an incompatible tag.')
@@ -71,9 +100,9 @@ def prepare(output):
     else:
         series = match[1]
         sequence = max([int(match[2]) - 1] + [int(NAME.fullmatch(p['versionName'])[2])
-                       for p in previous if NAME.fullmatch(p['versionName'])
+                       for p in allocated if NAME.fullmatch(p['versionName'])
                        and NAME.fullmatch(p['versionName'])[1] == series]) + 1
-        code = max([int(seed['VERSION_CODE'])] + [p['versionCode'] + 1 for p in previous])
+        code = max([int(seed['VERSION_CODE'])] + [p['versionCode'] + 1 for p in allocated])
         plan = {'versionName': series + str(sequence), 'versionCode': code,
                 'commit': head, 'runId': run_id, 'publishing': publishing}
     if bool(plan.get('publishing')) != publishing:
@@ -113,6 +142,11 @@ def create_tag(path, gate_path, signed_path='dist'):
         verify_tag_digest(tag, signed['apkSha256'])
         print('Reusing this run\'s exact immutable tag and APK digest.')
         return
+    history = ledger_history()
+    if any(item['versionName'] == tag for item in history):
+        raise SystemExit('Version name is already reserved in historical release ledger.')
+    if any(item['versionCode'] >= plan['versionCode'] for item in history):
+        raise SystemExit('Code must exceed historical allocation high-water mark.')
     for other in tags:
         if tag_plan(other)['versionCode'] >= plan['versionCode']:
             raise SystemExit('A newer version was allocated concurrently; refusing duplicate code.')

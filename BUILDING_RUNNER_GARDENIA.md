@@ -13,11 +13,11 @@ prepare → checks → signed/APK 验证 → create-tag → publish
 
 - 正式包名 `com.fox.runner`；Debug 包名 `com.fox.runner.debug`。Java namespace 保留 `de.dennisguse.opentracks`。
 - `version.properties` 的已提交内容定义版本系列与最低 Code；初始种子为 `v0.1.0-rc1.1` / `6766`。
-- prepare 检查所有现有版本 Tag：同系列取下一个预发布序号，Code 高于所有已分配版本（包括已创建但发布失败的 Tag）。历史已分配版本不会重新使用；当前已发布 rc1.4 / 6769。
+- prepare 检查所有现有版本 Tag 和 `release-ledger.json` 历史分配记录：同系列取下一个预发布序号，Code 高于所有已分配版本（包括清理前已持久化的失败 Tag）。高水位、重复 Code 或存活 Tag 与历史冲突时失败退出。历史已分配版本不会重新使用；当前已发布 rc1.4 / 6769。
 - 计算结果写入 `release-plan.json` Artifact；每个构建 Job 用同一计划生成本次 `version.properties`；`VERSION_NAME_FULL` 固定为计划版本和源码 SHA，避免创建 Tag 前后影响 About 信息或重跑产物。本地无该字段时保留 git-describe。Debug 和 Release 的 Version Name/Code 完全一致，Debug 只保留包名后缀，不再增加版本名称后缀。
 - 不产生机器人版本提交，不改写 Git 历史。Tag 指向经过测试的准确源码 SHA；annotated Tag 内保存分配的版本、Code、SHA、run ID。Tag 内的版本计划及 Release 的 build-info.json 记录实际分发版本，不应把 Tag 源码树中的种子配置误认为本次分配结果。
 - 仅在所有检查、报告门禁、Debug APK 上传、正式签名构建及 APK 身份/独立证书/SHA-256 验证、签名 Artifact 上传成功后创建 Tag。测试或签名失败均不会创建 Tag。Tag 注释另绑定已验证 APK 的 SHA-256。
-- 同一次 run 重跑时，若已创建 Tag，恢复其版本计划，绝不移动、删除或覆盖 Tag。后续新提交自动计算下一个候选，不需要手动更新版本号。
+- 同一次 run 重跑时，若已创建 Tag，恢复其版本计划，绝不移动、删除或覆盖 Tag。后续新提交自动计算下一个候选，不需要手动更新版本号。经授权删除无效 Tag 前，必须先扩充并提交历史 ledger，不能删除版本分配记录。
 
 ## 测试与时区
 

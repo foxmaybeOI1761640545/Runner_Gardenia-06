@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "codeHighWater": 6769,
+  "seriesHighWater": {
+    "v0.1.0-rc1.": 4
+  },
+  "allocations": [
+    {
+      "versionName": "v0.1.0-rc1.1",
+      "versionCode": 6766,
+      "commit": "ebc6549a6e228328b82a33995d2ebf2329a26579",
+      "runId": "41672584767",
+      "tagObject": "ab2ef93df4cf31476e8a3fc7fa05d9aa3e25a719",
+      "classification": "orphan-no-verified-artifact",
+      "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41672584767"
+    },
+    {
+      "versionName": "v0.1.0-rc1.2",
+      "versionCode": 6767,
+      "commit": "a9f1770fa81d803959434bc25d864a02a885376e",
+      "runId": "41681169734",
+      "tagObject": "0367638f1ba7f10cf97b8346ae0cf0ee10153545",
+      "classification": "orphan-no-verified-artifact",
+      "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41681169734"
+    },
+    {
+      "versionName": "v0.1.0-rc1.3",
+      "versionCode": 6768,
+      "commit": "d0db0556fbd51de6d282f74fb667309acbf7e860",
+      "runId": "41683034188",
+      "tagObject": "cb79cceb343cb0bbc0652681663f393ba60560c3",
+      "classification": "orphan-no-verified-artifact",
+      "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41683034188"
+    },
+    {
+      "versionName": "v0.1.0-rc1.4",
+      "versionCode": 6769,
+      "commit": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "runId": "41685585228",
+      "tagObject": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "classification": "valid-published",
+      "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41685585228",
+      "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0"
+    }
+  ]
+}

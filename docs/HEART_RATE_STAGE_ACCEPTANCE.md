@@ -70,3 +70,11 @@ Hardware access: unavailable. Emulator/fake transport evidence and real radio ev
 - VERSION_NAME_FULL is rendered from planned version plus exact source SHA, so creating the tag afterwards cannot change this build field on retry. Local builds retain git-describe fallback.
 - Added negative tests: passed tests without signed bundle, failed signature, corrupted transferred APK, foreign plan, missing/expired tagged artifacts and certificate mismatch cannot proceed. Existing interrupted-upload/rerun publication tests remain.
 - Local validation: 17 Python tests PASS, actionlint/Python syntax/diff checks PASS. Gradle 9.8.2 help also passed locally without installing SDK. Actual stage 5 PR CI pending; stage 6 is not authorized yet. The signed main path is intentionally not exercised from an untrusted PR; final main validation must verify it before publication is claimed.
+
+- Stage 5 acceptance: PASS — https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41735349725 at 8ee51b9430f8df147ac72885a88ce4561189afd9. Downloaded XML confirms 328 instrumentation / 327 executed / 0 failures/errors / 1 original Ignore and 52 JVM / 0 failures/errors/skips. All 40 UI captures exist. Debug/Lint/identity passed; downloaded APK SHA-256 994cb800b05d68fe17e4307adaa90f57929aa9e14e463a6ab879da7cfcf0be5b matches the report. Seventeen pipeline regressions passed. PR correctly skipped signing/tag/publish; actual main signing/publication remains a final-stage requirement. Stage 6 authorized.
+
+## Stage 6 — audited orphan cleanup and allocation ledger
+
+- Queried four remote/local tags, all Releases/assets, full failed/successful release logs and retained artifact inventories. rc1.4 is the only published signed APK; rc1.1–rc1.3 have neither a verified signed Artifact nor a Release and cannot be restored. Full evidence and actual APK checksum are in RELEASE_TAG_AUDIT.md.
+- Persisting all original names/Codes/commits/tag objects and high water 4 / 6769 before any deletion. Added allocator/tag gates and three real temporary-Git regression scenarios, including removal of the highest or every tag. Twenty pipeline tests, actionlint, Python syntax and diff checks PASS.
+- Cleanup and final stage 6 CI pending. No later stage may begin before actual cleanup and PR CI acceptance.
