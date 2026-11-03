@@ -58,7 +58,7 @@ public class HeartRateUiScreenshotTest {
     private TrackRecordingService boundService;
 
     @Test public void realPagesInLightDarkAndTwoWindowSizes() throws Exception {
-        String originalTheme = PreferencesUtils.getString(R.string.theme_key,R.string.theme_default);
+        String originalTheme = PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));
         String overrideSize = shell("wm size");String overrideDensity = shell("wm density");
         String configured = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
         output = new File(configured != null ? new File(configured) : new File(context.getExternalMediaDirs()[0],"additional_test_output"),"heart-rate-ui");
