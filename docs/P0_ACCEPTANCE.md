@@ -25,3 +25,5 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 - Added four pure permission cases and two actual P0 launcher/recreation cases. The prior HR UI scenario still runs all forty original views directly via the legacy TrackList, while P0ActivitySmokeTest now owns the actual launcher check. No upstream test was removed or ignored.
 - Local: 4 JUnit cases PASSED with source/target17 and Singapore; 24 Python helper tests PASSED; actionlint, Python/XML syntax and diff checks PASSED.
 - Android build/install/start/UI and full regression: PENDING actual branch Actions; no next-stage implementation yet.
+
+- Failed candidate d0f7ac9 / Actions 41870121327: AndroidTest Java compilation rejected an integer timeout passed to ActivityTestUtils.waitForResumedActivity, which requires Duration. No instrumentation tests ran in this attempt; missing XML/screenshots correctly failed the gates. Fixed only the call to Duration.ofSeconds(10). Stage 1 remains IN_PROGRESS pending rerun; stage 2 has not begun.

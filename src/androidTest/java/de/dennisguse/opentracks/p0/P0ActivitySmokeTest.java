@@ -17,7 +17,7 @@ public class P0ActivitySmokeTest {
     @Test public void launcherOpensP0HomeWithoutIntroduction() throws Exception {
         Context context=ApplicationProvider.getApplicationContext();
         try (ActivityScenario<Activity> launcher=ActivityScenario.launch(context.getPackageManager().getLaunchIntentForPackage(context.getPackageName()))) {
-            Activity home=ActivityTestUtils.waitForResumedActivity(P0Activity.class,10000);
+            Activity home=ActivityTestUtils.waitForResumedActivity(P0Activity.class,java.time.Duration.ofSeconds(10));
             InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
                 assertNotNull(home.findViewById(R.id.p0_title));
                 assertNotNull(home.findViewById(R.id.p0_location_permission));
