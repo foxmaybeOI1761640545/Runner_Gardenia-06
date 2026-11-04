@@ -1,5 +1,7 @@
 package de.dennisguse.opentracks.sensors;
 
+import de.dennisguse.opentracks.R;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
