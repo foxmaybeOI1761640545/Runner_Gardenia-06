@@ -108,7 +108,15 @@ public class HeartRateUiScreenshotTest {
     }
 
     private void recording(String profile) throws Exception {
-        try (ActivityScenario<TrackListActivity> home = ActivityScenario.launch(TrackListActivity.class)) {
+        android.content.SharedPreferences preferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        String introductionKey = context.getString(R.string.show_introduction_screen_key);
+        boolean hadIntroduction = preferences.contains(introductionKey);
+        boolean originalIntroduction = preferences.getBoolean(introductionKey,true);
+        // Missing on first installation; true/false may remain from older versions.
+        if (profile.equals("phone-light")) preferences.edit().remove(introductionKey).commit();
+        else PreferencesUtils.setShowIntroduction(profile.endsWith("light"));
+        try (ActivityScenario<Activity> launcher = ActivityScenario.launch(context.getPackageManager().getLaunchIntentForPackage(context.getPackageName()))) {
+            Activity home = ActivityTestUtils.waitForResumedActivity(TrackListActivity.class,WAIT);
             waitUntilDisplayed(withId(R.id.track_list),WAIT); capture(profile+"-home",false);
             startRecordingFromTrackList(WAIT);waitUntilDisplayed(withId(R.id.heart_rate_panel),WAIT);
             if (boundService == null) boundService = ((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
@@ -142,6 +150,10 @@ public class HeartRateUiScreenshotTest {
                 capture(profile+"-recording-"+state,true);
             }
             stopRecordingToTrackStopped(WAIT,R.id.finish_button);finishStoppedTrack(WAIT);
+            InstrumentationRegistry.getInstrumentation().runOnMainSync(home::finish);
+        } finally {
+            if (hadIntroduction) preferences.edit().putBoolean(introductionKey,originalIntroduction).commit();
+            else preferences.edit().remove(introductionKey).commit();
         }
         TestEnvironmentUtils.stopTrackRecordingService();
     }
