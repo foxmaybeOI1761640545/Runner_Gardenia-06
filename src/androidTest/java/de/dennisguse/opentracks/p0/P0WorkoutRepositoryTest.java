@@ -61,7 +61,7 @@ public class P0WorkoutRepositoryTest {
         var raw=repository.find(id);assertEquals(de.dennisguse.opentracks.p0.data.WorkoutSummary.HeartRateOrigin.RAW_NOTIFICATIONS,raw.heartRateOrigin());assertEquals(70,raw.heartRate().average(),0);
     }
     @Test public void boundedHistoryAndPausedWorkoutDeletionProtection() {
-        var first=track("First"),second=track("Second"),third=track("Third");
+        var first=track("First");var second=track("Second");var third=track("Third");
         assertEquals(List.of(third,second),repository.listNewest(2).stream().map(row->row.track().id()).toList());
         var journal=new de.dennisguse.opentracks.p0.data.SessionStore(context);
         journal.save(de.dennisguse.opentracks.p0.recording.RecordingSession.ready().begin(first.id()).pause());
