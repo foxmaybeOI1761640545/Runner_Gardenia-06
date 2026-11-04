@@ -16,4 +16,9 @@
     <string name="p0_heart_rate_empty">— bpm · 未连接</string>
     <string name="p0_devices">心率带</string>
     <string name="p0_history">本地运动记录</string>
+    <string name="p0_recording">记录中</string>
+    <string name="p0_paused">已暂停</string>
+    <string name="p0_finished">已结束</string>
+    <string name="p0_metrics_format">运动 %1$s · 移动 %2$s\n距离 %3$.1f m\n速度 %4$s · 配速 %5$s\n%6$s\n%7$s</string>
+    <string name="p0_operation_failed">未能完成操作，请重试。</string>
 </resources>

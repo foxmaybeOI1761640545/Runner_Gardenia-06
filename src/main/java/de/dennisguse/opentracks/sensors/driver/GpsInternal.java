@@ -97,7 +97,8 @@ public class GpsInternal implements Driver {
         return locationManager != null;
     }
 
-    private LocationRequestCompat createLocationRequest() {
+    @VisibleForTesting
+    public LocationRequestCompat createLocationRequest() {
         return new LocationRequestCompat.Builder(PreferencesUtils.getMinSamplingInterval().toMillis())
                 .setQuality(LocationRequestCompat.QUALITY_HIGH_ACCURACY)
                 .setMaxUpdateDelayMillis(0)

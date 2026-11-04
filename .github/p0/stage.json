@@ -1,11 +1,13 @@
 {
-  "stage": 2,
+  "stage": 3,
   "fullRegression": false,
   "classes": [
-    "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
-    "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
-    "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
-    "de.dennisguse.opentracks.p0.P0ActivitySmokeTest"
+    "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+    "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+    "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+    "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+    "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "de.dennisguse.opentracks.sensors.GpsStatusTest"
   ],
   "signed": false
 }

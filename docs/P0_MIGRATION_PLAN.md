@@ -20,7 +20,7 @@ GPX must retain every raw HR sample, exact timestamp and connection identity usi
 | 0 | Clean worktree, latest main, unique branch, protected-ref snapshot, task plan | PASSED | 26ae496; P0_ACCEPTANCE.md |
 | 1 | P0 launcher/facades, branch-only CI, necessary permissions and initial build/install/start | PASSED | 02804a9 / 41870693111 |
 | 2 | Reuse models/database, repository facade, transaction/association/delete/reopen/migration tests | PASSED | b7e60a0 / 41874166590 |
-| 3 | GPS 1Hz request, status/accuracy/pace, run/cycle, pause/resume segments and recovery | PENDING | — |
+| 3 | GPS 1Hz request, status/accuracy/pace, run/cycle, pause/resume segments and recovery | IN_PROGRESS | candidate / cloud validation pending |
 | 4 | Standard HR scan/name/address/selection, GATT/permissions/lifecycle | PENDING | — |
 | 5 | BPM/contact/energy/RR, notification identity, timeout/reconnect/manual control/old callback isolation | PENDING | — |
 | 6 | Raw sample/session/track integration, exact statistics, pause/reopen/durability | PENDING | — |

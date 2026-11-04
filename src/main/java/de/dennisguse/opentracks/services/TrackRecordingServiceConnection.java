@@ -151,8 +151,8 @@ public class TrackRecordingServiceConnection {
 
     public static void execute(Context context, Callback callback) {
         Callback withUnbind = (service, connection) -> {
-            callback.onConnected(service, connection);
-            connection.unbind(context);
+            try { callback.onConnected(service, connection); }
+            finally { connection.unbind(context); }
         };
         new TrackRecordingServiceConnection(withUnbind)
                 .bindWithStart(context);
@@ -160,14 +160,14 @@ public class TrackRecordingServiceConnection {
 
     public static void executeForeground(Context context, Callback callback) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            if (!PermissionRequester.RECORDING.hasPermission(context)) {
-                throw new MissingPermissionException(PermissionRequester.RECORDING);
+            if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(context)) {
+                throw new MissingPermissionException(PermissionRequester.GPS);
             }
         }
 
         Callback withUnbind = (service, connection) -> {
-            callback.onConnected(service, connection);
-            connection.unbind(context);
+            try { callback.onConnected(service, connection); }
+            finally { connection.unbind(context); }
         };
         new TrackRecordingServiceConnection(withUnbind)
                 .bind(context);

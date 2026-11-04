@@ -152,6 +152,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) { stopSelf(startId); return START_NOT_STICKY; }
         if (intent == null) {
             Log.i(TAG, "Service got killed and is restarting");
 
@@ -171,6 +172,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     }
 
     public Track.Id startNewTrack() {
+        if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return null;
         if (isRecording()) {
             Log.w(TAG, "Ignore startNewTrack. Already recording.");
             return null;
@@ -184,6 +186,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     }
 
     public void resumeTrack(Track.Id trackId) {
+        if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
         if (!trackRecordingManager.resumeExistingTrack(trackId)) {
             Log.w(TAG, "Cannot resume a non-existing track.");
             return;
@@ -209,6 +212,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     }
 
     public void tryStartSensors() {
+        if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
         if (trackPointCreator.isStarted()) return;
 
         Log.i(TAG, "tryStartSensors");
@@ -224,7 +228,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         Log.i(TAG, "startSensors");
         trackPointCreator.start(this, handler);
 
-        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this), ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION + ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE);
+        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this));
     }
 
     public void endCurrentTrack() {
@@ -356,6 +360,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     public void stopUpdateRecordingData() {
         handler.removeCallbacks(updateRecordingData);
     }
+
+    public synchronized RecordingStatus getRecordingStatus() { return recordingStatus; }
 
     public LiveData<RecordingStatus> getRecordingStatusObservable() {
         return recordingStatusObservable;
