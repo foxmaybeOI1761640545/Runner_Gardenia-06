@@ -1,6 +1,7 @@
 package de.dennisguse.opentracks.sensors;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_DISABLED;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_ENABLED;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_NONE;
@@ -12,19 +13,19 @@ import android.content.Context;
 import android.location.Location;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.os.Looper;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import de.dennisguse.opentracks.data.models.Distance;
 import de.dennisguse.opentracks.data.models.Position;
@@ -34,10 +35,22 @@ public class GpsStatusTest {
 
     private final Context context = ApplicationProvider.getApplicationContext();
 
-    @BeforeClass
-    public static void preSetUp() {
-        // Prepare looper for Android's message queue
-        if (Looper.myLooper() == null) Looper.prepare();
+    private HandlerThread timerThread;
+    private Handler timerHandler;
+
+    @Before
+    public void prepareTimer() {
+        timerThread = new HandlerThread("GpsStatusTest timer");
+        timerThread.start();
+        timerHandler = new Handler(timerThread.getLooper());
+    }
+
+    @After
+    public void stopTimer() throws InterruptedException {
+        timerHandler.removeCallbacksAndMessages(null);
+        timerThread.quitSafely();
+        timerThread.join(1000);
+        assertFalse("GPS test timer must be released", timerThread.isAlive());
     }
 
     private final static Location badFix = new Location("gps");
@@ -52,10 +65,10 @@ public class GpsStatusTest {
 
     @Test
     public void testStartDisabledEnabledStop() {
-        ArrayList<GpsStatusValue> statusList = new ArrayList<>();
+        List<GpsStatusValue> statusList = new CopyOnWriteArrayList<>();
 
         // given
-        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, new Handler());
+        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
 
         // when / then
         subject.start();
@@ -73,10 +86,10 @@ public class GpsStatusTest {
 
     @Test
     public void testStartBadfixOk() {
-        ArrayList<GpsStatusValue> statusList = new ArrayList<>();
+        List<GpsStatusValue> statusList = new CopyOnWriteArrayList<>();
 
         // given
-        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, new Handler());
+        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
         subject.onRecordingDistanceChanged(Distance.of(10));
 
         // when / then
@@ -96,10 +109,10 @@ public class GpsStatusTest {
 
     @Test
     public void testStartSignalLost() {
-        ArrayList<GpsStatusValue> statusList = new ArrayList<>();
+        List<GpsStatusValue> statusList = new CopyOnWriteArrayList<>();
 
         // given
-        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, new Handler());
+        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
         subject.onRecordingDistanceChanged(Distance.of(10));
         subject.onMinSamplingIntervalChanged(GpsStatusManager.SIGNAL_LOST_THRESHOLD.multipliedBy(-1));
 
@@ -117,13 +130,10 @@ public class GpsStatusTest {
 
     @Test
     public void testStartSignalLostByTimer() throws InterruptedException {
-        ArrayList<GpsStatusValue> statusList = new ArrayList<>();
-
-        final HandlerThread handlerThread = new HandlerThread("solution!");
-        handlerThread.start();
+        List<GpsStatusValue> statusList = new CopyOnWriteArrayList<>();
 
         // given
-        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, new Handler(handlerThread.getLooper()));
+        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
         subject.onRecordingDistanceChanged(Distance.of(10));
         subject.onMinSamplingIntervalChanged(GpsStatusManager.SIGNAL_LOST_THRESHOLD.multipliedBy(-1).plus(Duration.ofMillis(10)));
 
