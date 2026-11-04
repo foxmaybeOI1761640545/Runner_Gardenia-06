@@ -1,0 +1,163 @@
+{
+  "stage": 8,
+  "status": "PASSED",
+  "commit": "56baf73ca414fb11871e6b81b737e470e83b81fc",
+  "runId": "41936236159",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41936236159",
+  "android": {
+    "tests": 110,
+    "executed": 109,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 88,
+    "executed": 88,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debugSha256": "c382c454e7d176e5078697e1fa116a2d3ffe976ef8204a2704fede5e400fccbf",
+  "downloadedXml": {
+    "android": {
+      "files": 1,
+      "tests": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "executed": 109
+    },
+    "unit": {
+      "files": 11,
+      "tests": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executed": 88
+    }
+  },
+  "gpxSchema": {
+    "passed": true,
+    "commit": "56baf73ca414fb11871e6b81b737e470e83b81fc",
+    "files": [
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "eaf544195611653d6ba7b5ee5a00145192dc4fdb864319fdfc528a4c8ced0632",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "0b8d06bede3f2db7c9d73e7e0b292930c137d62d0cfe0274196ba3501ddd7d32",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "a81148e91e46bcbeccb49cc53c010f371076f3bf36274f75a4990648cb8402c3",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "c450c3a3faa763fc9e1c9ec22b749cbcbc2c7691fa18926124127ceee0a9e46b",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "59fba61e09cd052471eb07445bfde9877fc4b02f24d0858cbb8a982e4686b738",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "0032f74f2f061bdf8809f3199add0d6dc676a7f5bcd8fbeeb799265f2653f27a",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "1d15c3ceacb3f81f98e2efd2fda35d3ffd6a8bc0cca0eee8dd815bd439a3b7ea",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "c3daa8fe079382cbcb68054801685368b4e16f0f7566f47b42462eb2f8e8b483",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "offline": {
+    "passed": true,
+    "commit": "56baf73ca414fb11871e6b81b737e470e83b81fc",
+    "debug": {
+      "applicationId": "com.fox.runner.debug",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.health.WRITE_DISTANCE",
+        "android.permission.health.WRITE_ELEVATION_GAINED",
+        "android.permission.health.WRITE_EXERCISE",
+        "android.permission.health.WRITE_EXERCISE_ROUTE",
+        "android.permission.health.WRITE_SPEED",
+        "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {}
+    },
+    "release": {
+      "applicationId": "com.fox.runner",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {
+        "activity": [
+          "de.dennisguse.opentracks.introduction.IntroductionActivity",
+          "de.dennisguse.opentracks.p0.app.P0Activity",
+          "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+          "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+        ],
+        "activity-alias": [],
+        "service": [
+          "androidx.appcompat.app.AppLocalesMetadataHolderService",
+          "de.dennisguse.opentracks.services.TrackRecordingService"
+        ],
+        "provider": [
+          "androidx.core.content.FileProvider",
+          "de.dennisguse.opentracks.data.ShareContentProvider"
+        ],
+        "receiver": []
+      }
+    }
+  }
+}
