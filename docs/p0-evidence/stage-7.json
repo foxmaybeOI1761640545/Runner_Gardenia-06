@@ -1,0 +1,95 @@
+{
+  "stage": 7,
+  "status": "PASSED",
+  "commit": "8c9303829f9c5701a74ceb31969b161356a9f6f6",
+  "runId": "41933012158",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41933012158",
+  "android": {
+    "tests": 105,
+    "executed": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 88,
+    "executed": 88,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debugSha256": "264fcd79dd49786e788152dd2baa9ee2440d32b44f732a017d3bab1fd1143a71",
+  "downloadedXml": {
+    "android": {
+      "files": 1,
+      "tests": 105,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "executed": 104
+    },
+    "unit": {
+      "files": 11,
+      "tests": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executed": 88
+    }
+  },
+  "gpxSchema": {
+    "passed": true,
+    "commit": "8c9303829f9c5701a74ceb31969b161356a9f6f6",
+    "files": [
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "889b1ce44c4fda628771ada3ad15ad3c0557cff81f68474956c13e372cda17c5",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "c8c5f471fdac8d01f2bd138c896a9a187558b44fa3a42dd68f156342e161f33c",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "2b472e6074af64022e86b95dc9e67b8a813972de0bf3eb1e233276313ed4b035",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "9f6c0866363ae815043c004bbe1914af9e6a2583a16f56aa0e0b47785432c265",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "0518fec2d8a91eabe198d451c7b883b99e17cc8eb6f2d09dcc02540a4dfa4f27",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "8f82053f7a0486995e8dbda0f217e161b203fcbbadb4a0495ab415233ef35692",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "43d264d525777eb819a5c52171ed15bbddc2bf5d917e5327d2f2e5a2c2e7a20d",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "624034aab64dc5313d290f574ab0666ce1d8e08b5453fed41c1988fadf5cc7c6",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  }
+}
