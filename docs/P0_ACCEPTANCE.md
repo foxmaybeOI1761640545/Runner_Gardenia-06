@@ -78,7 +78,7 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 
 - Stage 4 accepted: PASSED at fdfd366bbf39ad8a4cba143fda0a33c97a512450; https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41891475431. Downloaded actual reports Android {'tests': 64, 'executed': 63, 'failures': 0, 'errors': 0, 'skipped': 1}, JVM {'tests': 74, 'executed': 74, 'failures': 0, 'errors': 0, 'skipped': 0}; Debug/Lint/identity and protected-ref checks passed. Downloaded Debug SHA-256 9fcdcb7b62569ee5630aa32c1812a95050c0fb1d96825308b193f277c01719a4 matches its report. Stage 5 is authorized.
 
-## Stage 5 — IN_PROGRESS
+## Stage 5 — PASSED
 
 - Reused the strict SIG parser for uint8/uint16, contact, energy and optional RR, retaining malformed-packet rejection and 1/1024-second RR precision. Added an all-fields-wide-BPM case and native equal-payload notification identity/capture-time regression. Every new notification gets a distinct sample ID; re-stamping the same notification preserves identity for repository deduplication. No BPM/content-based deduplication was added.
 - Added a persisted automatic-reconnection switch. The existing selected-device state machine now honors disabled retries, cancels already dequeued stale retries, preserves healthy connections and never overrides explicit manual stop. Direct connection attempts use 1/3/5/10/30/60-second bounded backoff; this is not an unlimited nearby-device scan. Handshake timeout remains 30 seconds and explicit reconnect remains immediate. Added seven pure policy cases while extending the original backoff test.
@@ -88,3 +88,5 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 - Local parser/state-machine JUnit 40 passed. Full Android/JVM, Lint/build, actual screenshots and report gates remain pending; stage 6 is not authorized. Physical H303/power/range/background acceptance is still NEEDS_DEVICE_VALIDATION.
 
 - Candidate 4b558e8 / 41895858575 failed main Java compilation because SensorManager's new preference-key reference lacked its R import. Added the missing import and checked all changed Java files for unqualified R references without their namespace import. No Android or Gradle JVM test execution is claimed for this failed attempt; complete rerun remains required.
+
+- Stage 5 accepted: PASSED at 7d394c2081bda6a03e6fae2cce1f1b09e0d9d431; https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41896259632. Downloaded actual reports Android {'tests': 71, 'executed': 70, 'failures': 0, 'errors': 0, 'skipped': 1}, JVM {'tests': 82, 'executed': 82, 'failures': 0, 'errors': 0, 'skipped': 0}; Debug/Lint/identity and protected-ref checks passed. Downloaded Debug SHA-256 276d317adeeffd0f2db4e7f57454dd68966e4439ece5bb7f94ac4de24d091d30 matches its report. Stage 6 is authorized.
