@@ -84,7 +84,9 @@ jobs:
           timeout --signal=INT --kill-after=30s 15m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore -Pandroid.testInstrumentationRunnerArguments.timeout_msec=300000 "${args[@]}"
       - name: File database survives force-stop and a new instrumentation process
         if: steps.plan.outputs.stage == '6' || steps.plan.outputs.full == 'true'
-        run: python3 .github/scripts/p0_durability.py
+        run: |
+          ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
+          python3 .github/scripts/p0_durability.py
       - name: Require complete upstream UI regression evidence
         if: always() && steps.plan.outputs.full == 'true'
         run: python3 .github/scripts/collect_heart_rate_ui.py

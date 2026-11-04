@@ -54,10 +54,16 @@ def run():
                 time.sleep(2)
             else:raise TimeoutError('Dedicated emulator boot timed out')
             device('install','-r','-t','-g',str(app),timeout=120);device('install','-r','-t','-g',str(tests),timeout=120)
+            registered=device('shell','pm','list','instrumentation').stdout
+            (report/'instrumentation.txt').write_text(registered)
+            component='com.fox.runner.debug.test/de.dennisguse.opentracks.p0.P0DurabilityRunner'
+            if component not in registered:raise ValueError('Dedicated storage test runner is not registered in installed test APK')
             phases={}
             for phase in ('write','read'):
-                result=device('shell','am','instrument','-w','-r','-e','class','de.dennisguse.opentracks.p0.P0DurabilityTest','-e','p0DurabilityPhase',phase,'-e','timezone','Asia/Singapore','com.fox.runner.debug.test/de.dennisguse.opentracks.p0.P0DurabilityRunner',timeout=120)
-                (report/(phase+'.txt')).write_text(result.stdout);phases[phase]=parse_result(result.stdout)
+                result=device('shell','am','instrument','-w','-r','-e','class','de.dennisguse.opentracks.p0.P0DurabilityTest','-e','p0DurabilityPhase',phase,'-e','timezone','Asia/Singapore',component,check=False,timeout=120)
+                (report/(phase+'.txt')).write_text(result.stdout)
+                if result.returncode:raise RuntimeError('Instrumentation '+phase+' failed: '+result.stdout)
+                phases[phase]=parse_result(result.stdout)
                 print('Completed file-backed instrumentation phase: '+phase,flush=True)
                 if phase=='write':
                     device('shell','am','force-stop','com.fox.runner.debug')

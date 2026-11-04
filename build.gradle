@@ -64,7 +64,12 @@ android {
         minSdk = 26
         targetSdk = 37
 
-        testInstrumentationRunner 'de.dennisguse.opentracks.TestRunner'
+        // Only the dedicated debug storage probe swaps its test APK runner.
+        // Production APKs and the normal regression runner are unchanged.
+        testInstrumentationRunner(
+                providers.gradleProperty('p0DurabilityRunner').getOrElse('false') == 'true'
+                        ? 'de.dennisguse.opentracks.p0.P0DurabilityRunner'
+                        : 'de.dennisguse.opentracks.TestRunner')
         testInstrumentationRunnerArguments clearPackageData: 'true'
     }
     testOptions {

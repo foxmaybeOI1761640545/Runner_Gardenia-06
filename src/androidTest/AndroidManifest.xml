@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <instrumentation android:name="de.dennisguse.opentracks.p0.P0DurabilityRunner"
-        android:targetPackage="com.fox.runner.debug" android:functionalTest="true" />
-</manifest>
