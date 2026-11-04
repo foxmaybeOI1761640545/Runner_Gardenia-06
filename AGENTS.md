@@ -1,22 +1,10 @@
-# Runner Gardenia agent instructions
+# Runner Gardenia P0 branch instructions
 
-- Work only in foxmaybeOI1761640545/Runner_Gardenia-06, main, unless explicitly directed otherwise.
-- Preserve application ID com.fox.runner, Java namespace and unrelated business logic.
-- CI, JVM, managed device and instrumentation use Asia/Singapore (UTC+08:00). Production follows the user's device timezone.
-- Use the checked-in Gradle Wrapper, AGP and Java compatibility settings. Do not install an Android SDK in Codex Cloud.
-
-## Automatic publication
-
-A push to main runs one workflow: prepare → checks → signed/APK verification → create-tag → publish. PR/manual CI does not publish. Never manually create/move/delete Tags or manually publish a Release to bypass this chain.
-
-version.properties defines a version-series seed and minimum Code. The workflow allocates the next candidate and strictly increasing Code, stores release-plan.json, and renders identical per-run version.properties for Debug and signed builds. Do not manually bump the seed for intermediate commits; change the series only for an explicitly requested milestone.
-
-Annotated Tags store the exact tested commit, allocated version/Code and run ID. Preserve valid/unknown Tags. Only explicitly authorized, audited orphan cleanup may delete proven automated failures, after persisting their version high-water marks in release-ledger.json. Retry failed jobs to resume a run; do not rewrite its Tag. A normal new main commit allocates above existing Tags and the historical ledger. Signing failure creates no Tag. A Tag also binds the verified APK SHA-256; reruns reuse its original signed artifact. Git history is never automatically rewritten or augmented by version-bump commits.
-
-## Completion evidence
-
-Before committing, run relevant available static/script tests, inspect the diff and preserve user work. Push normally, without force. Wait for the exact main commit's complete workflow. Verify all Debug checks, nonzero instrumented execution with separate failures/errors/skips, device/process timezone tests, APK identity, immutable Tag, fixed signing fingerprint, APK checksum, actual Pre-release and uploaded assets.
-
-Do not claim Android tests ran locally when they did not. A successful Debug workflow, Tag creation or signed Artifact alone is not publication. Report source SHA, run, actual counts, Tag, APK SHA-256, Pre-release and download URLs, and any remaining blocker.
-
-Only signed accesses android-release Secrets. Do not generate or disclose signing material, alter credentials, add PATs or suppress failing tests. Published assets are verified and retained, never silently replaced.
+- Work only in foxmaybeOI1761640545/Runner_Gardenia-06 on feature/p0-core-migration, based on 9b5d7b06afc1eb8e3315ba73874ac088fa4d5169 from remote main. The user explicitly overrides the upstream main auto-publication workflow for this task.
+- Never commit/push/reset/rebase/merge main, modify existing branches, create/move/delete tags, or create/publish GitHub Releases. Only this new branch may be pushed. Preserve the frozen refs in docs/P0_BASELINE.json; do not reset them if they change externally.
+- Keep com.fox.runner, Java namespace, existing Wrapper/AGP/JDK compatibility and mature GPS/BLE/recording algorithms unless a tested P0 requirement needs a minimal adjustment. No P1/P2, cloud upload, account, analytics or online map work.
+- No Android SDK/emulator installation in Codex Cloud. Use Actions with project Wrapper, JDK 21/source 17 and Asia/Singapore for Runner/JVM/emulator/instrumentation; production respects the device timezone.
+- Stages 0–10 and acceptance live in docs/P0_MIGRATION_PLAN.md and docs/P0_ACCEPTANCE.md. Run local checks first; cloud execution requires a candidate commit on this branch. Only actual passed stage gates authorize later work. Missing/failed/zero-execution reports fail closed. Never skip failing tests or misreport NO-SOURCE as execution.
+- Keep relevant upstream regressions. Pure tests/fake BLE and emulator screenshots do not establish physical H303/GPS/power compatibility. Mark those NEEDS_DEVICE_VALIDATION.
+- Final artifact is an optimized, aligned, fixed-key signed Release APK. No APK/JKS/password/cache in Git. Only the branch-only trusted signing job uses android-release with existing ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD, ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD and independent ANDROID_SIGNING_CERT_SHA256. Restore JKS only to RUNNER_TEMP and clean on all outcomes. Do not change credentials or generate a key/PAT.
+- Report baseline/branch/head, actual tests, commit/run, APK identity/size/version/signature/hash/download and remaining device checks. A successful build alone is not completed artifact verification.

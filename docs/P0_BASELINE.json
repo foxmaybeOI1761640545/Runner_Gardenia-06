@@ -1,0 +1,10 @@
+{
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "baselineCommit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+  "branch": "feature/p0-core-migration",
+  "protectedRemoteBranches": {
+    "refs/heads/feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+    "refs/heads/main": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "mainLocalCommit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+}
