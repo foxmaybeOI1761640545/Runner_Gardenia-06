@@ -23,7 +23,7 @@ GPX must retain every raw HR sample, exact timestamp and connection identity usi
 | 3 | GPS 1Hz request, status/accuracy/pace, run/cycle, pause/resume segments and recovery | PASSED | 61a41a5 / 41886672130 |
 | 4 | Standard HR scan/name/address/selection, GATT/permissions/lifecycle | PASSED | fdfd366 / 41891475431 |
 | 5 | BPM/contact/energy/RR, notification identity, timeout/reconnect/manual control/old callback isolation | PASSED | 7d394c2 / 41896259632 |
-| 6 | Raw sample/session/track integration, exact statistics, pause/reopen/durability | IN_PROGRESS | candidate / cloud validation pending |
+| 6 | Raw sample/session/track integration, exact statistics, pause/reopen/durability | PASSED | f126648 / 41929851364 |
 | 7 | Local GPX save/share, all raw HR samples, no fabricated points, XML/schema/round-trip tests | PENDING | — |
 | 8 | Manifest/dependency/code/packaged APK offline audit; no account/upload/cloud/online maps | PENDING | — |
 | 9 | Full relevant JVM + API35 regression, all report gates, screenshots | PENDING | — |

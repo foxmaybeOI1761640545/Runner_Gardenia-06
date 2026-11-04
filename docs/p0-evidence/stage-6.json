@@ -1,0 +1,65 @@
+{
+  "stage": 6,
+  "status": "PASSED",
+  "commit": "f12664800654a2c33c22cd10902ca102105317fb",
+  "runId": "41929851364",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41929851364",
+  "android": {
+    "tests": 94,
+    "executed": 93,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 82,
+    "executed": 82,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debugSha256": "f3f32139606df0770491836c7c0caa506c6eb6d53861a08abec041ce3d03b746",
+  "downloadedXml": {
+    "android": {
+      "files": 1,
+      "tests": 94,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "executed": 93
+    },
+    "unit": {
+      "files": 10,
+      "tests": 82,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executed": 82
+    }
+  },
+  "processDurability": {
+    "passed": true,
+    "commit": "f12664800654a2c33c22cd10902ca102105317fb",
+    "database": "p0-durability.db",
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1771
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2188
+      }
+    }
+  }
+}
