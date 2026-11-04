@@ -12,7 +12,6 @@ import java.util.UUID;
 import de.dennisguse.opentracks.Startup;
 import de.dennisguse.opentracks.data.*;
 import de.dennisguse.opentracks.data.models.*;
-import de.dennisguse.opentracks.data.tables.TracksColumns;
 import de.dennisguse.opentracks.p0.data.WorkoutRepository;
 import de.dennisguse.opentracks.util.TestEnvironmentUtils;
 
@@ -32,9 +31,9 @@ public class P0DurabilityTest {
         }
     }
     private Track.Id id() {
-        try(var cursor=context.getContentResolver().query(CustomContentProvider.UrlType.TRACKS.getUri(),null,TracksColumns.UUID+"=?",new String[]{FIXTURE.toString()},null)) {
-            assertNotNull(cursor);assertEquals(1,cursor.getCount());assertTrue(cursor.moveToFirst());return ContentProviderUtils.createTrack(cursor).id();
-        }
+        Track track=new ContentProviderUtils(context).getTrack(FIXTURE);
+        assertNotNull("Durable workout UUID must survive reopening",track);
+        return track.id();
     }
     private void read() {
         var id=id();var repository=new WorkoutRepository(context);var rows=repository.heartRates(id);

@@ -100,3 +100,5 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 - The process check rejects failed/crashed/zero-test/incomplete instrumentation output even when adb returns success; missing proof fails the stage gate. All selected tests and default full-regression requirements remain enforced. Native UI/history/DB/migration/process evidence is pending actual Actions; stage 7 is not authorized.
 
 - Candidate dd6f17a / 41927892629 failed Android-test Java compilation: a new repository test used compound var declarations, forbidden by Java. Split declarations; parsed all 362 main/test Java files using the JDK compiler parse API with source/target 17 (no Android SDK installation). No Android/JVM execution is claimed for this failed attempt. Stage 7 remains blocked pending a complete rerun.
+
+- Static fixture review found the dedicated durability probe queried a BLOB UUID using a text UUID. Reused ContentProviderUtils.getTrack(UUID), which applies the existing hex/BLOB representation correctly. Candidate dafdf2a is superseded before acceptance; no passed stage is claimed from that run.
