@@ -27,3 +27,5 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 - Android build/install/start/UI and full regression: PENDING actual branch Actions; no next-stage implementation yet.
 
 - Failed candidate d0f7ac9 / Actions 41870121327: AndroidTest Java compilation rejected an integer timeout passed to ActivityTestUtils.waitForResumedActivity, which requires Duration. No instrumentation tests ran in this attempt; missing XML/screenshots correctly failed the gates. Fixed only the call to Duration.ofSeconds(10). Stage 1 remains IN_PROGRESS pending rerun; stage 2 has not begun.
+
+- Stage 1 accepted: PASSED at 02804a9510f3af894d226a4059b50c6ccb242b9c, https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41870693111 . Downloaded XML: Android 330 / executed 329 / failures 0 / errors 0 / skipped 1; JVM 56 / failures/errors/skips 0. Debug/Lint passed; actual installed launcher and Activity recreation passed. P0 screenshot visually inspected, all forty upstream captures retained. Downloaded Debug SHA e1b3754f774e3300ef5b21908739df451b4b1ecbd7825ea6907653ffef2cfebd matches report. Original refs unchanged. Stage 2 authorized.

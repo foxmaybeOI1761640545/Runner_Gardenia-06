@@ -1,0 +1,21 @@
+{
+  "stage": 1,
+  "status": "PASSED",
+  "commit": "02804a9510f3af894d226a4059b50c6ccb242b9c",
+  "runId": "41870693111",
+  "android": {
+    "tests": 330,
+    "executed": 329,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 56,
+    "executed": 56,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debugSha256": "e1b3754f774e3300ef5b21908739df451b4b1ecbd7825ea6907653ffef2cfebd"
+}
