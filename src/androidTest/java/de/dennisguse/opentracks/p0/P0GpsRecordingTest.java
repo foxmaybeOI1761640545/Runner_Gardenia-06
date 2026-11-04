@@ -43,14 +43,25 @@ public class P0GpsRecordingTest {
         service=((TrackRecordingService.Binder)rule.bindService(new Intent(context,TrackRecordingService.class))).getService();
     }
     @After public void after() {
-        if(service!=null){service.endCurrentTrack();service.getTrackPointCreator().getSensorManager().getGpsHandler().onDisconnected();}
+        if(service!=null)service.endCurrentTrack();
         new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.min_sampling_interval_key,sampling);PreferencesUtils.setString(R.string.recording_distance_interval_key,distance);
         if(ownLooper)Looper.myLooper().quit();
     }
     private void time(int second) {service.getTrackPointCreator().setClock(Instant.parse("2020-02-02T02:02:00Z").plusSeconds(second).toString());}
     private void fixtureGps() {
-        var gps=service.getTrackPointCreator().getSensorManager().getGpsHandler();if(gps.driver!=null){gps.driver.disconnect();gps.driver=null;}gps.onConnected(null,"Synthetic GPS fixture");
+        var gps=service.getTrackPointCreator().getSensorManager().getGpsHandler();
+        if(gps.driver!=null)gps.driver.disconnect();
+        // Keep the normal SensorManager -> Driver.disconnect lifecycle. Clearing the driver
+        // here would leave the synthetic GPS status timer running after pause/finish.
+        gps.driver=new de.dennisguse.opentracks.sensors.driver.Driver() {
+            private boolean connected=true;
+            @Override public void connect(Context context,android.os.Handler handler,String address) {}
+            @Override public boolean isConnected() {return connected;}
+            @Override public void updateDriverParameters(Context context,android.os.Handler handler) {}
+            @Override public void disconnect() {connected=false;gps.onDisconnected();}
+        };
+        gps.onConnected(null,"Synthetic GPS fixture");
     }
     private void fix(int second,double latitude) {
         time(second);Location value=new Location("gps");value.setLatitude(latitude);value.setLongitude(103.8);value.setAccuracy(2);value.setSpeed(3);value.setTime(Instant.parse("2020-02-02T02:02:00Z").plusSeconds(second).toEpochMilli());
@@ -75,6 +86,7 @@ public class P0GpsRecordingTest {
         time(20);assertFalse(service.newTrackPoint(new TrackPoint(TrackPoint.Type.TRACKPOINT,new Position(Instant.parse("2020-02-02T02:02:20Z"),5d,103.8,Distance.of(2),null,null,null,Speed.of(3))),Distance.of(2)));
         assertEquals(pausedDistance,store.getTrack(id).statistics().totalDistance().toM(),0);
         time(33);service.resumeTrack(id);fixtureGps();fix(34,2.3);fix(35,2.3001);time(36);service.endCurrentTrack();
+        assertNull(service.getTrackPointCreator().getSensorManager().getGpsHandler());
         var stats=store.getTrack(id).statistics();assertTrue(stats.totalDistance().toM()>10);assertTrue(stats.totalDistance().toM()<100);
         assertEquals(Duration.ofSeconds(6),stats.totalDuration());assertTrue(stats.movingDuration().compareTo(Duration.ofSeconds(6))<=0);
         ArrayList<TrackPoint> points=new ArrayList<>();try(var iterator=store.getTrackPointIterator(id,null)){while(iterator.hasNext())points.add(iterator.next());}
