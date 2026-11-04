@@ -90,6 +90,26 @@ public class P0SensorsTest {
         assertTrue(HeartRateCommands.hasSelection());
         PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,"not-a-device");assertFalse(HeartRateCommands.hasSelection());
     }
+    @Test public void controlsExposePendingCommandAndBecomeAvailableAfterServiceBinding() {
+        PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,ADDRESS);
+        try(ActivityScenario<P0SensorsActivity> scenario=ActivityScenario.launch(P0SensorsActivity.class)) {
+            scenario.onActivity(activity->{
+                P0SensorsFragment settings=fragment(activity);
+                var model=new androidx.lifecycle.ViewModelProvider(activity).get(de.dennisguse.opentracks.p0.recording.P0RecordingViewModel.class);
+                model.previewHeartRate(false);
+                assertTrue(model.snapshot().getValue().busy());
+                assertFalse(settings.findPreference("p0_connect").isEnabled());
+                assertFalse(settings.findPreference("p0_disconnect").isEnabled());
+            });
+            java.util.concurrent.atomic.AtomicBoolean ready=new java.util.concurrent.atomic.AtomicBoolean();
+            long deadline=android.os.SystemClock.uptimeMillis()+10000;
+            do {
+                scenario.onActivity(activity->ready.set(fragment(activity).findPreference("p0_disconnect").isEnabled()));
+                if(ready.get())break;android.os.SystemClock.sleep(50);
+            }while(android.os.SystemClock.uptimeMillis()<deadline);
+            assertTrue("Service command must release busy controls",ready.get());
+        }
+    }
     @Test public void previewToRecordingRefreshesGpsAndIdleStopCannotEndAnActiveWorkout() throws Exception {
         service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{

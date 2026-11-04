@@ -16,6 +16,8 @@
 
 package de.dennisguse.opentracks.services;
 
+import de.dennisguse.opentracks.R;
+
 import android.app.Service;
 import android.content.Intent;
 import android.content.SharedPreferences;

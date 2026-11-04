@@ -66,9 +66,9 @@ public class P0Activity extends AbstractActivity {
         int title=switch(phase) {case READY->R.string.p0_ready;case RECORDING->R.string.p0_recording;case PAUSED->R.string.p0_paused;case FINISHED->R.string.p0_finished;};
         binding.p0RecordingState.setText(title);
         boolean idle=phase==RecordingSession.Phase.READY||phase==RecordingSession.Phase.FINISHED;
-        binding.p0Start.setEnabled(idle);binding.p0Pause.setEnabled(phase==RecordingSession.Phase.RECORDING);
-        binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED);binding.p0Finish.setEnabled(!idle);
-        binding.p0Running.setEnabled(idle);binding.p0Cycling.setEnabled(idle);
+        binding.p0Start.setEnabled(idle&&!value.busy());binding.p0Pause.setEnabled(phase==RecordingSession.Phase.RECORDING&&!value.busy());
+        binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED&&!value.busy());binding.p0Finish.setEnabled(!idle&&!value.busy());
+        binding.p0Running.setEnabled(idle&&!value.busy());binding.p0Cycling.setEnabled(idle&&!value.busy());binding.p0Devices.setEnabled(!value.busy());
         Statistics stats=value.data().track()!=null?value.data().trackStatistics():Statistics.DEFAULT;
         Position position=null;
         if(value.data().sensorDataSet()!=null&&value.data().sensorDataSet().position()!=null)
