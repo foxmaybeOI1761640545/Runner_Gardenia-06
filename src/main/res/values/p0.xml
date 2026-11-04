@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_hr_preview_notification">Heart rate connection · GPS off</string>
+    <string name="p0_enable_notification">Show recording notification (optional)</string>
     <string name="p0_save_gpx">Save GPX</string>
     <string name="p0_share_gpx">Share GPX</string>
     <string name="p0_export_saved">GPX saved</string>

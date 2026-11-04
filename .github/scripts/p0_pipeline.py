@@ -125,6 +125,11 @@ def gate():
             if proof.get('passed') is not True or proof.get('commit')!=plan['commit'] or not required.issubset({item['file'] for item in proof.get('files',[])}):
                 raise ValueError('Missing matching actual GPX schema evidence')
             report['gpxSchema']=proof
+        if config['stage']>=8:
+            proof=json.loads(Path('build/reports/p0-offline/result.json').read_text())
+            if proof.get('passed') is not True or proof.get('commit')!=plan['commit'] or proof.get('release',{}).get('applicationId')!='com.fox.runner':
+                raise ValueError('Missing matching packaged Debug / merged Release offline audit')
+            report['offline']=proof
     except Exception as error:
         report.update(passed=False,diagnostic=str(error))
     folder=Path('build/reports/p0-validation');folder.mkdir(parents=True,exist_ok=True)

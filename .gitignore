@@ -13,6 +13,8 @@ bin/
 gen/
 out/
 release/
+# This Android source overlay is not generated release output.
+!/src/release/
 
 # Gradle files
 .gradle/

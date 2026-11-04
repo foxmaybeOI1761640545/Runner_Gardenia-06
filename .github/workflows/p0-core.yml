@@ -60,6 +60,11 @@ jobs:
           sudo chmod a+rw /dev/kvm
       - name: Debug build, lint, all JVM tests and instrumentation compilation
         run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+      - name: Merge and audit the actual P0 Release manifest without signing
+        if: steps.plan.outputs.stage == '8' || steps.plan.outputs.full == 'true'
+        run: |
+          ./gradlew --no-daemon --no-configuration-cache processReproducibleReleaseManifest
+          python3 .github/scripts/verify_p0_offline.py
       - name: API35 stage instrumentation
         env:
           TEST_CLASSES: ${{ steps.plan.outputs.classes }}

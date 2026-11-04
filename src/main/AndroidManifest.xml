@@ -40,6 +40,7 @@ limitations under the License.
         android:name="android.hardware.touchscreen"
         android:required="false" />
 
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"
         android:minSdkVersion="34" />
@@ -77,9 +78,9 @@ limitations under the License.
 
     <application
         android:name=".Startup"
-        android:allowBackup="true"
-        android:fullBackupContent="@xml/backup_rules_30_lower"
-        android:dataExtractionRules="@xml/backup_rules_31_higher"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/p0_backup_rules"
+        android:dataExtractionRules="@xml/p0_data_extraction_rules"
         android:enableOnBackInvokedCallback="true"
         android:hardwareAccelerated="true"
         android:hasFragileUserData="false"

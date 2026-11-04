@@ -25,7 +25,7 @@ GPX must retain every raw HR sample, exact timestamp and connection identity usi
 | 5 | BPM/contact/energy/RR, notification identity, timeout/reconnect/manual control/old callback isolation | PASSED | 7d394c2 / 41896259632 |
 | 6 | Raw sample/session/track integration, exact statistics, pause/reopen/durability | PASSED | f126648 / 41929851364 |
 | 7 | Local GPX save/share, all raw HR samples, no fabricated points, XML/schema/round-trip tests | PASSED | 8c93038 / 41933012158 |
-| 8 | Manifest/dependency/code/packaged APK offline audit; no account/upload/cloud/online maps | PENDING | — |
+| 8 | Manifest/dependency/code/packaged APK offline audit; no account/upload/cloud/online maps | IN_PROGRESS | candidate / cloud validation pending |
 | 9 | Full relevant JVM + API35 regression, all report gates, screenshots | PENDING | — |
 | 10 | Existing release variant, fixed key, R8/resource shrink, zipalign/apksigner, Release install/start and Artifact | PENDING | — |
 

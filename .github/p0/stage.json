@@ -1,5 +1,5 @@
 {
-  "stage": 7,
+  "stage": 8,
   "fullRegression": false,
   "classes": [
     "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
@@ -22,7 +22,8 @@
     "de.dennisguse.opentracks.p0.P0RecordingDataTest",
     "de.dennisguse.opentracks.p0.P0HistoryUiTest",
     "de.dennisguse.opentracks.p0.P0DurabilityTest",
-    "de.dennisguse.opentracks.p0.P0GpxExporterTest"
+    "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+    "de.dennisguse.opentracks.p0.P0OfflinePolicyTest"
   ],
   "signed": false
 }

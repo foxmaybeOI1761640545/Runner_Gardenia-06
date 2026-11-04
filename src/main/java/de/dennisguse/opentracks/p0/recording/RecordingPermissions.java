@@ -20,6 +20,9 @@ public final class RecordingPermissions {
     public static int foregroundTypes(Context context) {
         return types(ForegroundMode.select(PermissionRequester.GPS.hasPermission(context),hasBluetooth(context)));
     }
+    public static int foregroundTypes(Context context,boolean recording) {
+        return types(ForegroundMode.select(recording&&PermissionRequester.GPS.hasPermission(context),hasBluetooth(context)));
+    }
     public static int types(ForegroundMode mode) {
         return switch(mode) {
             case NONE -> 0;

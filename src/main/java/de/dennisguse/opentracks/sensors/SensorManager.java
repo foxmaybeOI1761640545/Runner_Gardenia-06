@@ -52,6 +52,19 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     private AltitudeChangeHandler altitudeChangeHandler;
 
     private GpsHandler gpsHandler;
+    private boolean gpsRecording=true;
+
+    /** P0 keeps GPS off during an idle heart-rate preview. */
+    public void setGpsRecording(boolean recording) {
+        if(gpsRecording==recording)return;gpsRecording=recording;
+        if(isStarted()){if(recording)gpsHandler.connect();else gpsHandler.disconnect();}
+    }
+
+    @VisibleForTesting public boolean hasNonP0Driver() {
+        if(!isStarted())return false;
+        return temperatureHandler.driver!=null||cyclingCadenceHandler.driver!=null||cyclingDistanceSpeedHandler.driver!=null
+                ||cyclingPowerHandler.driver!=null||runningSpeedCadenceDistanceHandler.driver!=null||altitudeChangeHandler.driver!=null;
+    }
 
     public SensorManager(TrackPointCreator observer) {
         this.observer = observer;
@@ -142,38 +155,22 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, @Nullable String key) {
         if (!isStarted()) return;
 
-        if (PreferencesUtils.isKey(gpsHandler.getSensorPreferenceKey(), key)) {
+        if (gpsRecording && PreferencesUtils.isKey(gpsHandler.getSensorPreferenceKey(), key)) {
             gpsHandler.connect();
         }
 
-        if (PreferencesUtils.isKey(altitudeChangeHandler.getSensorPreferenceKey(), key)) {
-            altitudeChangeHandler.connect();
-        }
 
         if (PreferencesUtils.isKey(heartRateHandler.getSensorPreferenceKey(), key)
                 ||PreferencesUtils.isKey(R.string.p0_hr_connection_enabled_key,key)) {
             heartRateHandler.connect();
         }
 
-        if (PreferencesUtils.isKey(temperatureHandler.getSensorPreferenceKey(), key)) {
-            temperatureHandler.connect();
-        }
 
-        if (PreferencesUtils.isKey(cyclingCadenceHandler.getSensorPreferenceKey(), key)) {
-            cyclingCadenceHandler.connect();
-        }
 
-        if (PreferencesUtils.isKey(cyclingDistanceSpeedHandler.getSensorPreferenceKey(), key)) {
-            cyclingDistanceSpeedHandler.connect();
-        }
 
-        if (PreferencesUtils.isKey(cyclingPowerHandler.getSensorPreferenceKey(), key)) {
-            cyclingPowerHandler.connect();
-        }
 
-        if (PreferencesUtils.isKey(runningSpeedCadenceDistanceHandler.getSensorPreferenceKey(), key)) {
-            runningSpeedCadenceDistanceHandler.connect();
-        }
+
+
     }
 
     public Instant getNow() {

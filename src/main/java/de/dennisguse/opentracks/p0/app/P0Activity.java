@@ -30,13 +30,16 @@ public class P0Activity extends AbstractActivity {
     private P0HomeBinding binding;
     private P0RecordingViewModel model;
     private ActivityResultLauncher<String[]> locationRequest;
+    private ActivityResultLauncher<String> notificationRequest;
 
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state);
         model=new ViewModelProvider(this).get(P0RecordingViewModel.class);
         locationRequest=registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
                 result->{updateLocationPermission();model.completePermission(hasLocation());});
+        notificationRequest=registerForActivityResult(new ActivityResultContracts.RequestPermission(),result->updateLocationPermission());
         binding.p0LocationPermission.setOnClickListener(view->locationRequest.launch(P0PermissionPolicy.location().toArray(new String[0])));
+        binding.p0NotificationPermission.setOnClickListener(view->{if(android.os.Build.VERSION.SDK_INT>=33)notificationRequest.launch(Manifest.permission.POST_NOTIFICATIONS);});
         binding.p0Start.setOnClickListener(view->{
             ActivityType type=binding.p0Cycling.isChecked()?ActivityType.CYCLING:ActivityType.RUNNING;
             if(hasLocation())model.start(type);
@@ -61,6 +64,8 @@ public class P0Activity extends AbstractActivity {
     private void updateLocationPermission() {
         binding.p0LocationStatus.setText(hasLocation()?R.string.p0_location_granted:R.string.p0_location_needed);
         binding.p0LocationPermission.setVisibility(hasLocation()?View.GONE:View.VISIBLE);
+        boolean notification=android.os.Build.VERSION.SDK_INT<33||ContextCompat.checkSelfPermission(this,Manifest.permission.POST_NOTIFICATIONS)==PackageManager.PERMISSION_GRANTED;
+        binding.p0NotificationPermission.setVisibility(notification?View.GONE:View.VISIBLE);
     }
     private void render(P0RecordingViewModel.Snapshot value) {
         RecordingSession.Phase phase=value.session().phase();

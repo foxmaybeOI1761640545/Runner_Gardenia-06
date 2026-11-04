@@ -46,7 +46,7 @@ public class Startup extends Application {
         super.attachBaseContext(base);
 
         // handle crashes only outside the crash reporter activity/process
-        if (!isCrashReportingProcess()) {
+        if (BuildConfig.DEBUG && !isCrashReportingProcess()) {
             Thread.UncaughtExceptionHandler defaultPlatformHandler = Thread.getDefaultUncaughtExceptionHandler();
             ExceptionHandler crashReporter = new ExceptionHandler(this, defaultPlatformHandler);
             Thread.setDefaultUncaughtExceptionHandler(crashReporter);

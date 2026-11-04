@@ -42,7 +42,6 @@ import de.dennisguse.opentracks.data.models.Marker;
 import de.dennisguse.opentracks.data.models.Track;
 import de.dennisguse.opentracks.data.models.TrackPoint;
 import de.dennisguse.opentracks.sensors.GpsStatusValue;
-import de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManager;
 import de.dennisguse.opentracks.services.handlers.TrackPointCreator;
 import de.dennisguse.opentracks.settings.PreferencesUtils;
 
@@ -97,7 +96,6 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     // SharedPreferences can deliver a queued listener snapshot after unregistering it.
     private boolean preferenceCallbacksEnabled;
 
-    private VoiceAnnouncementManager voiceAnnouncementManager;
     private TrackRecordingServiceNotificationManager notificationManager;
 
     @Override
@@ -115,7 +113,6 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         trackPointCreator = new TrackPointCreator(this);
         trackRecordingManager = new TrackRecordingManager(this, trackPointCreator, this, handler);
 
-        voiceAnnouncementManager = new VoiceAnnouncementManager(this);
         notificationManager = new TrackRecordingServiceNotificationManager(this);
 
         preferenceCallbacksEnabled = true;
@@ -142,7 +139,6 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // Reverse order from onCreate
         notificationManager = null;
 
-        voiceAnnouncementManager = null;
 
         recordingStatusObservable = null;
         gpsStatusObservable = null;
@@ -167,6 +163,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
                     de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(this,false);
                 Log.i(TAG, "After restart: resuming recording for " + trackId);
                 resumeTrack(trackId);
+                if(!isRecording()){TrackIdStorage.unset(this);stopSelf(startId);return START_NOT_STICKY;}
             }
         }
         return START_STICKY;
@@ -212,11 +209,9 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
         if (areSensorsStarted()) {
             trackPointCreator.getSensorManager().getHeartRateHandler().beginRecordingSegment(trackPointCreator.getNow());
-            trackPointCreator.onSharedPreferenceChanged(null,getString(R.string.settings_sensor_gps_key));
         }
         startSensors();
 
-        voiceAnnouncementManager.start(trackRecordingManager.getTrackStatistics());
 
         notificationManager.onRecordingStarted(this, recordingStatus.trackId());
 
@@ -226,19 +221,20 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     }
 
     public void tryStartSensors() {
-        if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
+        if (!isRecording()&&!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) {stopSelf();return;}
         Log.i(TAG, "tryStartSensors");
 
         startSensors();
     }
 
     private synchronized void startSensors() {
+        trackPointCreator.getSensorManager().setGpsRecording(isRecording());
         if (!trackPointCreator.isStarted()) {
             Log.i(TAG, "startSensors");
             trackPointCreator.start(this, handler);
         }
         // Refresh the foreground capabilities after a newly granted GPS/Bluetooth permission.
-        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this));
+        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this,isRecording()), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this,isRecording()));
     }
 
     public synchronized void stopIdleSensors() {
@@ -261,7 +257,6 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
         stopUpdateRecordingData();
 
-        voiceAnnouncementManager.stop();
 
         stopSensors();
     }
@@ -363,13 +358,12 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // Compute temporary track statistics using sensorData and update time.
         RecordingData data = trackRecordingManager.getDataForUI();
 
-        voiceAnnouncementManager.announceStatisticsIfNeeded(data);
 
         recordingDataObservable.postValue(data);
     }
 
     public void onIdle() {
-        voiceAnnouncementManager.announceIdle();
+        // P0 keeps recording local and does not invoke an external text-to-speech engine.
     }
 
     @VisibleForTesting
@@ -400,7 +394,6 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         if (!preferenceCallbacksEnabled) {
             return;
         }
-        voiceAnnouncementManager.onSharedPreferenceChanged(sharedPreferences, key);
         trackRecordingManager.onSharedPreferenceChanged(sharedPreferences, key);
         trackPointCreator.onSharedPreferenceChanged(sharedPreferences, key);
         notificationManager.onSharedPreferenceChanged(sharedPreferences, key);
