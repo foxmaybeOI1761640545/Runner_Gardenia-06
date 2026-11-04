@@ -6,7 +6,8 @@ import org.junit.Test;
 public class BluetoothLeAdapterTest {
     @Test public void deviceRowShowsNameMacSignalAndConnection() {
         androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
-            android.content.Context context=androidx.test.core.app.ApplicationProvider.getApplicationContext();
+            android.content.Context context=new androidx.appcompat.view.ContextThemeWrapper(
+                    androidx.test.core.app.ApplicationProvider.getApplicationContext(),de.dennisguse.opentracks.R.style.DayNightDynamicTheme);
             BluetoothLeAdapter adapter=new BluetoothLeAdapter();adapter.add("AA:BB:CC:DD:EE:FF","Generic SIG strap",-45,true);
             android.view.View row=adapter.getView(0,null,new android.widget.FrameLayout(context));
             String text=((android.widget.TextView)row.findViewById(android.R.id.text1)).getText().toString();
