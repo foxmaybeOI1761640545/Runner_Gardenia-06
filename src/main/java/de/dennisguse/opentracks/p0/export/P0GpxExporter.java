@@ -24,6 +24,21 @@ public final class P0GpxExporter {
     private static boolean boundary(TrackPoint point) {
         return point.isSegmentManualStart()||point.isSegmentManualEnd()||point.isIdleTriggered()||point.type()==TrackPoint.Type.SEGMENT_START_AUTOMATIC;
     }
+    private static final class Segments {
+        private java.time.Instant previousGps;
+        private int number;
+        boolean next(TrackPoint point) {
+            boolean split=boundary(point);
+            if(previousGps!=null&&point.position().hasLocation()) {
+                var elapsed=java.time.Duration.between(previousGps,point.getTime());
+                // Match the existing 30-second lost-fix horizon, without fabricating a bridge.
+                split|=elapsed.isNegative()||elapsed.compareTo(java.time.Duration.ofSeconds(30))>0;
+            }
+            if(split){number++;previousGps=null;}
+            if(point.position().hasLocation())previousGps=point.getTime();
+            return split;
+        }
+    }
     private static void interrupted() throws InterruptedIOException {
         if(Thread.currentThread().isInterrupted())throw new InterruptedIOException("GPX export interrupted");
     }
@@ -38,10 +53,10 @@ public final class P0GpxExporter {
         if(repository.isProtected(id))throw new IOException("Finish the workout before exporting");
         var workout=repository.find(id);
         if(workout==null)throw new IOException("Recording no longer exists");
-        List<HeartRateTimeMatcher.Anchor> anchors=new ArrayList<>(); int[] segment={0};
+        List<HeartRateTimeMatcher.Anchor> anchors=new ArrayList<>();Segments index=new Segments();
         repository.forEachPoint(id,point->{
-            if(boundary(point))segment[0]++;
-            if(point.position().hasLocation())anchors.add(new HeartRateTimeMatcher.Anchor(point.id().id(),point.getTime(),segment[0]));
+            index.next(point);
+            if(point.position().hasLocation())anchors.add(new HeartRateTimeMatcher.Anchor(point.id().id(),point.getTime(),index.number));
         });
         HeartRateTimeMatcher matcher=new HeartRateTimeMatcher(anchors);
         Map<Long,HeartRate> matched=new HashMap<>();
@@ -57,12 +72,12 @@ public final class P0GpxExporter {
         xml.startTag(GPX,"gpx").attribute(null,"version","1.1").attribute(null,"creator","Runner Gardenia");
         xml.startTag(GPX,"metadata");text(xml,GPX,"name",workout.track().name());text(xml,GPX,"time",workout.track().statistics().startTime());xml.endTag(GPX,"metadata");
         xml.startTag(GPX,"trk");text(xml,GPX,"name",workout.track().name());text(xml,GPX,"desc",workout.track().description());text(xml,GPX,"type",workout.track().activityType().name());
-        boolean[] open={false};
+        boolean[] open={false};Segments writing=new Segments();
         try {
             repository.forEachPoint(id,point->{
                 try {
                     interrupted();
-                    if(boundary(point)&&open[0]){xml.endTag(GPX,"trkseg");open[0]=false;}
+                    if(writing.next(point)&&open[0]){xml.endTag(GPX,"trkseg");open[0]=false;}
                     if(!point.position().hasLocation())return;
                     Position position=point.position();
                     if(!Double.isFinite(position.latitude())||!Double.isFinite(position.longitude())||Math.abs(position.latitude())>90||Math.abs(position.longitude())>180)

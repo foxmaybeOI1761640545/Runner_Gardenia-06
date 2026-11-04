@@ -12,7 +12,9 @@ eligible for cleanup after seven days.
 
 Only stored coordinate-bearing TrackPoints become trkpt. No location is invented
 for a heart-rate-only sample or workout. Manual pause/resume, automatic GPS gaps
-and idle boundaries form distinct trkseg elements. Existing SQLite microdegree
+and idle boundaries form distinct trkseg elements. GPS silence longer than the
+existing 30-second lost-fix horizon, or a backwards GPS timestamp, also starts a
+new export segment, including old records lacking an explicit segment marker. Existing SQLite microdegree
 coordinate precision is retained. The equivalent antimeridian +180 longitude is
 written as -180 because GPX longitude has an exclusive upper limit of +180.
 Numbers use plain decimal notation independently of the device locale. Times

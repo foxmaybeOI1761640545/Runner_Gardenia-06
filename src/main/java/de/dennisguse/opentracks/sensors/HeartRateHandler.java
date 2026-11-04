@@ -24,7 +24,7 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     }
     public void beginRecordingSegment(java.time.Instant start) {
         // Preview notifications from a paused interval cannot become the first active GPS point's HR.
-        if(lastReceived!=null&&lastReceived.isBefore(start)) {
+        if(lastReceived!=null&&!lastReceived.isAfter(start)) {
             if(aggregator instanceof AggregatorHeartRate heartRate)heartRate.invalidate();
             lastReceived=null;
         }

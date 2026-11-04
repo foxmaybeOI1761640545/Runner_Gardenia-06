@@ -28,7 +28,11 @@ public class P0HistoryActivity extends AbstractActivity {
     private List<WorkoutSummary> rows=List.of();
     private ArrayAdapter<WorkoutSummary> adapter;
     private final androidx.activity.result.ActivityResultLauncher<String> document=registerForActivityResult(
-            new androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/gpx+xml"),uri->{if(uri!=null)model.exportSelected(uri);});
+            new androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/gpx+xml") {
+                @NonNull @Override public Intent createIntent(@NonNull Context context,@NonNull String name) {
+                    return super.createIntent(context,name).addCategory(Intent.CATEGORY_OPENABLE);
+                }
+            },uri->{if(uri!=null)model.exportSelected(uri);});
     public static Intent intent(Context context,long id){return new Intent(context,P0HistoryActivity.class).putExtra(WORKOUT_ID,id);}
     private String date(java.time.Instant time){return DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withZone(ZoneId.systemDefault()).format(time);}
     @Override protected void onCreate(Bundle saved) {

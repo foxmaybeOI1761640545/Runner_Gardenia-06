@@ -85,7 +85,7 @@ public class P0RecordingDataTest {
         var repository=new WorkoutRepository(context);assertEquals(2,repository.heartRates(id.get()).size());
         try{repository.delete(id.get());fail("Active service track must be protected even without a P0 journal");}catch(IllegalStateException expected){}
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
-            time(3);service.endCurrentTrack();time(19);service.tryStartSensors();heart().onDataReceived(notification(80));
+            time(3);service.endCurrentTrack();time(20);service.tryStartSensors();heart().onDataReceived(notification(80));
         });
         assertEquals(2,repository.heartRates(id.get()).size());
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{

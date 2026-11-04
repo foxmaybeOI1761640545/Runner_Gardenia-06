@@ -121,7 +121,7 @@ def gate():
             report['processDurability']=proof
         if config['stage']>=7:
             proof=json.loads(Path('build/reports/p0-gpx/result.json').read_text())
-            required={'raw-complete.gpx','heart-only.gpx','gps-only.gpx','segments.gpx','legacy.gpx','decimal-escaping.gpx','local-file.gpx'}
+            required={'raw-complete.gpx','heart-only.gpx','gps-only.gpx','segments.gpx','legacy.gpx','decimal-escaping.gpx','local-file.gpx','gps-gap.gpx'}
             if proof.get('passed') is not True or proof.get('commit')!=plan['commit'] or not required.issubset({item['file'] for item in proof.get('files',[])}):
                 raise ValueError('Missing matching actual GPX schema evidence')
             report['gpxSchema']=proof

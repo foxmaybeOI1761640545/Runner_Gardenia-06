@@ -87,13 +87,20 @@ public class P0GpxExporterTest {
         assertEquals("80",xml.getElementsByTagNameNS(P0GpxExporter.GARMIN,"hr").item(0).getTextContent());assertEquals(0,count(xml,P0GpxExporter.RAW,"sample"));
         assertEquals(2,count(xml,P0GpxExporter.RAW,"legacyHeartRate"));assertEquals(1,count(xml,P0GpxExporter.GPX,"trkpt"));
     }
+    @Test public void longGpsSilenceDoesNotDrawABridgeEvenWithoutAnOldSegmentMarker() throws Exception {
+        point(0,1.3,TrackPoint.Type.TRACKPOINT,null);point(1,1.3001,TrackPoint.Type.TRACKPOINT,null);
+        point(40,1.301,TrackPoint.Type.TRACKPOINT,null);point(41,1.3011,TrackPoint.Type.TRACKPOINT,null);
+        raw(base.plusSeconds(20),76);Document xml=export("gps-gap");
+        assertEquals(2,count(xml,P0GpxExporter.GPX,"trkseg"));assertEquals(4,count(xml,P0GpxExporter.GPX,"trkpt"));assertEquals(1,count(xml,P0GpxExporter.RAW,"sample"));
+        assertFalse(((Element)xml.getElementsByTagNameNS(P0GpxExporter.RAW,"sample").item(0)).hasAttribute("nearestPointId"));
+    }
     @Test public void xmlEscapingDecimalCoordinatesAndLocaleRemainValid() throws Exception {
         Locale original=Locale.getDefault();
         try {
             Locale.setDefault(Locale.GERMANY);point(0,0.000001,TrackPoint.Type.TRACKPOINT,null);
             store.insertTrackPoint(new TrackPoint(TrackPoint.Type.TRACKPOINT,new Position(base.plusSeconds(1),1.3,180d,null,null,null,null,null)),id);
             Document xml=export("decimal-escaping");assertEquals("Synthetic <run> & heart rate",xml.getElementsByTagNameNS(P0GpxExporter.GPX,"name").item(0).getTextContent());
-            Element first=(Element)xml.getElementsByTagNameNS(P0GpxExporter.GPX,"trkpt").item(0);assertEquals("0.000001",first.getAttribute("lat"));
+            Element first=(Element)xml.getElementsByTagNameNS(P0GpxExporter.GPX,"trkpt").item(0);assertEquals(0,new java.math.BigDecimal("0.000001").compareTo(new java.math.BigDecimal(first.getAttribute("lat"))));
             Element second=(Element)xml.getElementsByTagNameNS(P0GpxExporter.GPX,"trkpt").item(1);assertEquals("-180.0",second.getAttribute("lon"));
         }finally{Locale.setDefault(original);}
     }
