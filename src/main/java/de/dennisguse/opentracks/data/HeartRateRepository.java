@@ -37,12 +37,17 @@ public final class HeartRateRepository {
 
     public List<HeartRate> read(Track.Id track) {
         List<HeartRate> result = new ArrayList<>();
+        forEach(track,result::add);
+        return result;
+    }
+
+    /** Chronological streaming for exports; leaves incremental row-ID chart queries unchanged. */
+    public void forEach(Track.Id track, java.util.function.Consumer<HeartRate> consumer) {
         try (Cursor cursor = resolver.query(CustomContentProvider.UrlType.HEART_RATE_SAMPLES.getUri(),
                 new String[]{"bpm", "metadata"}, "trackid=?", new String[]{Long.toString(track.id())}, "time, _id")) {
             if (cursor == null) throw new IllegalStateException("Heart-rate query returned no cursor");
-            while (cursor.moveToNext()) result.add(new HeartRate(cursor.getFloat(0), decode(cursor.getString(1))));
+            while (cursor.moveToNext()) consumer.accept(new HeartRate(cursor.getFloat(0), decode(cursor.getString(1))));
         }
-        return result;
     }
 
     public void forEachAfter(Track.Id track, long afterId, java.util.function.BiConsumer<Long,HeartRate> consumer) {

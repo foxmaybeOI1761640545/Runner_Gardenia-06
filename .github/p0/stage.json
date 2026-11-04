@@ -1,1 +1,11 @@
-{"stage":1,"fullRegression":true,"classes":[],"signed":false}
+{
+  "stage": 2,
+  "fullRegression": false,
+  "classes": [
+    "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+    "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+    "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+    "de.dennisguse.opentracks.p0.P0ActivitySmokeTest"
+  ],
+  "signed": false
+}

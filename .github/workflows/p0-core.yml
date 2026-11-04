@@ -2,6 +2,7 @@ name: P0 branch validation and APK
 on:
   push:
     branches: [feature/p0-core-migration]
+    paths-ignore: ["docs/**", "AGENTS.md"]
 permissions:
   contents: read
 concurrency:
