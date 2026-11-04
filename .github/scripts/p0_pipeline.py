@@ -69,7 +69,7 @@ def prepare():
     print(json.dumps(plan,indent=2))
 
 
-def collect_p0_ui():
+def collect_p0_ui(matrix=False):
     sources = list(Path('build/outputs').glob('**/p0-ui'))
     if len(sources) != 1:
         raise ValueError('P0 UI screenshot directory missing or ambiguous')
@@ -82,6 +82,19 @@ def collect_p0_ui():
         if min(width,height)<300:raise ValueError('Incomplete P0 screenshot')
         shutil.copyfile(source,destination/source.name);count+=1
     if count==0:raise ValueError('No actual P0 screenshot')
+    if matrix:
+        manifest=json.loads((sources[0]/'matrix.json').read_text())
+        expected={f'p0-matrix-{size}-{theme}-{page}.png' for size in ('small','large') for theme in ('light','dark') for page in ('home','recording','settings','history','detail')}
+        captures=manifest.get('screenshots',[])
+        if manifest.get('physicalBleTested') is not False or manifest.get('timezone')!='Asia/Singapore' or len(captures)!=20 or {row['file'] for row in captures}!=expected:
+            raise ValueError('Missing actual P0 theme/window/page matrix')
+        for row in captures:
+            name=row['file'];payload=(sources[0]/name).read_bytes();width,height=struct.unpack('>II',payload[16:24])
+            if row['nightMode']!=(32 if '-dark-' in name else 16):raise ValueError('P0 theme not applied')
+            if '-small-' in name and (row['widthDp']>360 or width!=720):raise ValueError('P0 small window not applied')
+            if '-large-' in name and (row['widthDp']<600 or width!=1600):raise ValueError('P0 large window not applied')
+            if height<1000:raise ValueError('Incomplete P0 matrix PNG')
+        shutil.copyfile(sources[0]/'matrix.json',destination/'matrix.json')
     return count
 
 
@@ -106,7 +119,7 @@ def gate():
                 android=inspect(Path('build/outputs/androidTest-results'),selected)
         unit=inspect(Path('build/test-results/testReproducibleDebugUnitTest'),Path('src/test/java'),require_environment=False)
         # P0 launcher screenshot is required whenever the corresponding smoke test is configured.
-        ui=collect_p0_ui() if config['fullRegression'] or 'de.dennisguse.opentracks.p0.P0ActivitySmokeTest' in config['classes'] else None
+        ui=collect_p0_ui(config['fullRegression']) if config['fullRegression'] or 'de.dennisguse.opentracks.p0.P0ActivitySmokeTest' in config['classes'] else None
         report={'plan':plan,'stage':config['stage'],'android':android,'unit':unit,'p0Screenshots':ui,
                 'passed':android['passed'] and unit['passed']}
         if config['stage']==6 or config['fullRegression']:

@@ -1,6 +1,6 @@
 {
-  "stage": 8,
-  "fullRegression": false,
+  "stage": 9,
+  "fullRegression": true,
   "classes": [
     "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
     "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
