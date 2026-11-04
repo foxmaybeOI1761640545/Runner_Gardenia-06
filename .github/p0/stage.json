@@ -7,6 +7,7 @@
     "de.dennisguse.opentracks.p0.P0RecordingUiTest",
     "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
     "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
     "de.dennisguse.opentracks.sensors.GpsStatusTest"
   ],
   "signed": false

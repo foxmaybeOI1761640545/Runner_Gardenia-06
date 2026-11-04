@@ -1,8 +1,11 @@
 package de.dennisguse.opentracks.services;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import android.app.NotificationChannel;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
 
@@ -39,6 +42,19 @@ public class TrackRecordingServiceNotificationManagerTest {
     @After
     public void tearDown() {
         notificationManager.cancelAll();
+    }
+
+    @Test
+    public void p0RecordingNotificationIsQuietAndRemainsOngoing() {
+        TrackRecordingServiceNotificationManager subject = new TrackRecordingServiceNotificationManager(context);
+        Notification notification = subject.onSensorsStarted(context);
+        NotificationChannel channel = notificationManager.getNotificationChannel(notification.getChannelId());
+        assertNotNull(channel);
+        assertEquals(TrackRecordingServiceNotificationManager.CHANNEL_ID, channel.getId());
+        assertEquals(NotificationManager.IMPORTANCE_LOW, channel.getImportance());
+        assertEquals(context.getString(R.string.p0_title), channel.getName().toString());
+        assertTrue((notification.flags & Notification.FLAG_ONGOING_EVENT) != 0);
+        assertNotNull(notification.contentIntent);
     }
 
     @Test

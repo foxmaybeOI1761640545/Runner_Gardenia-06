@@ -15,8 +15,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.TaskStackBuilder;
 
 import de.dennisguse.opentracks.R;
-import de.dennisguse.opentracks.TrackListActivity;
-import de.dennisguse.opentracks.TrackRecordingActivity;
+import de.dennisguse.opentracks.p0.app.P0Activity;
 import de.dennisguse.opentracks.data.models.Distance;
 import de.dennisguse.opentracks.data.models.DistanceFormatter;
 import de.dennisguse.opentracks.data.models.SpeedFormatter;
@@ -32,7 +31,9 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
 
     static final int NOTIFICATION_ID = 123;
 
-    private static final String CHANNEL_ID = TrackRecordingServiceNotificationManager.class.getSimpleName();
+    // Separate from the upstream high-importance channel: an upgrade must not inherit
+    // a heads-up overlay that intercepts P0 recording controls. Users retain channel settings.
+    static final String CHANNEL_ID = "runner_gardenia_p0_recording";
 
     private final NotificationCompat.Builder notificationBuilder;
 
@@ -44,20 +45,20 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
 
     TrackRecordingServiceNotificationManager(Context context) {
         notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, context.getString(R.string.app_name), NotificationManager.IMPORTANCE_HIGH);
+        NotificationChannel notificationChannel = new NotificationChannel(CHANNEL_ID, context.getString(R.string.p0_title), NotificationManager.IMPORTANCE_LOW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            notificationChannel.setAllowBubbles(true);
+            notificationChannel.setAllowBubbles(false);
         }
 
         notificationManager.createNotificationChannel(notificationChannel);
 
         notificationBuilder = new NotificationCompat.Builder(context, CHANNEL_ID);
         notificationBuilder
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setOnlyAlertOnce(true)
                 .setOngoing(true)
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)
-                .setContentTitle(context.getString(R.string.app_name))
+                .setContentTitle(context.getString(R.string.p0_title))
                 .setSmallIcon(R.drawable.ic_logo_color_24dp);
     }
 
@@ -68,10 +69,10 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
     }
 
     Notification onSensorsStarted(Context context) {
-        Intent intent = IntentUtils.newIntent(context, TrackListActivity.class);
+        Intent intent = IntentUtils.newIntent(context, P0Activity.class);
 
         PendingIntent pendingIntent = TaskStackBuilder.create(context)
-                .addParentStack(TrackListActivity.class)
+                .addParentStack(P0Activity.class)
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
@@ -89,11 +90,10 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
     }
 
     public void onRecordingStarted(Context context, @NonNull Track.Id trackId) {
-        Intent intent = IntentUtils.newIntent(context, TrackRecordingActivity.class)
-                .putExtra(TrackRecordingActivity.EXTRA_TRACK_ID, trackId);
+        Intent intent = IntentUtils.newIntent(context, P0Activity.class);
 
         PendingIntent pendingIntent = TaskStackBuilder.create(context)
-                .addParentStack(TrackListActivity.class)
+                .addParentStack(P0Activity.class)
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
