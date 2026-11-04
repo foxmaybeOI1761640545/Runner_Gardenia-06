@@ -95,6 +95,7 @@ def scoped_sources(names, destination, root=Path('src/androidTest/java')):
 
 def gate():
     config=configuration();plan=json.loads(Path('release-plan.json').read_text())
+    report={'plan':plan,'stage':config['stage'],'passed':False}
     try:
         if config['fullRegression']:
             android=inspect(Path('build/outputs/androidTest-results'),Path('src/androidTest/java'))
@@ -118,8 +119,14 @@ def gate():
                     raise ValueError('Invalid process durability test counts/PID')
             if proof['phases']['write']['pid']==proof['phases']['read']['pid']:raise ValueError('No actual process change')
             report['processDurability']=proof
+        if config['stage']>=7:
+            proof=json.loads(Path('build/reports/p0-gpx/result.json').read_text())
+            required={'raw-complete.gpx','heart-only.gpx','gps-only.gpx','segments.gpx','legacy.gpx','decimal-escaping.gpx','local-file.gpx'}
+            if proof.get('passed') is not True or proof.get('commit')!=plan['commit'] or not required.issubset({item['file'] for item in proof.get('files',[])}):
+                raise ValueError('Missing matching actual GPX schema evidence')
+            report['gpxSchema']=proof
     except Exception as error:
-        report={'plan':plan,'stage':config['stage'],'passed':False,'diagnostic':str(error)}
+        report.update(passed=False,diagnostic=str(error))
     folder=Path('build/reports/p0-validation');folder.mkdir(parents=True,exist_ok=True)
     (folder/'tests.json').write_text(json.dumps(report,indent=2)+'\n')
     summary={key:({k:value.get(k) for k in ('tests','executed','failures','errors','skipped','passed')} if key in ('android','unit') else value)

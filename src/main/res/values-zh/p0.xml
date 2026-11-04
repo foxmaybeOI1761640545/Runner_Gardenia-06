@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_save_gpx">保存 GPX</string>
+    <string name="p0_share_gpx">分享 GPX</string>
+    <string name="p0_export_saved">GPX 已保存</string>
+    <string name="p0_export_share_ready">GPX 已准备好，可选择分享方式</string>
+    <string name="p0_export_failed">无法导出 GPX，请检查保存位置后重试。</string>
     <string name="p0_all_history">查看全部记录</string>
     <string name="p0_workout">运动记录</string>
     <string name="p0_loading">正在读取…</string>

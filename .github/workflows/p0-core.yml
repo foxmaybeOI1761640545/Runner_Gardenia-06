@@ -82,6 +82,9 @@ jobs:
           # A hung test fails rather than holding the shared instrument process forever.
           # The XML completeness gate still requires every configured test to execute.
           timeout --signal=INT --kill-after=30s 15m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore -Pandroid.testInstrumentationRunnerArguments.timeout_msec=300000 "${args[@]}"
+      - name: Validate actual Android GPX files against offline GPX 1.1 schema
+        if: fromJSON(steps.plan.outputs.stage) >= 7
+        run: python3 .github/scripts/verify_p0_gpx.py
       - name: File database survives force-stop and a new instrumentation process
         if: steps.plan.outputs.stage == '6' || steps.plan.outputs.full == 'true'
         run: |

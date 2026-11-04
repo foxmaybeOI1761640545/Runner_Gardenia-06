@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
+    <cache-path name="p0_gpx" path="p0_exports/" />
     <external-files-path
         name="pictures"
         path="/" />

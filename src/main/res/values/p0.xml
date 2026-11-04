@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_save_gpx">Save GPX</string>
+    <string name="p0_share_gpx">Share GPX</string>
+    <string name="p0_export_saved">GPX saved</string>
+    <string name="p0_export_share_ready">GPX ready to share</string>
+    <string name="p0_export_failed">Could not export GPX. Check the destination and try again.</string>
     <string name="p0_all_history">View all recordings</string>
     <string name="p0_workout">Workout</string>
     <string name="p0_loading">Loading…</string>

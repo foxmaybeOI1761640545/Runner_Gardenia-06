@@ -56,7 +56,34 @@ public class P0HistoryUiTest {
         new SessionStore(context).save(RecordingSession.ready().begin(id.id()).pause());
         try(ActivityScenario<P0HistoryActivity> screen=ActivityScenario.launch(P0HistoryActivity.intent(context,id.id()))) {
             detail(screen);screen.onActivity(activity->{assertFalse(activity.findViewById(R.id.p0_delete_workout).isEnabled());assertEquals(android.view.View.VISIBLE,activity.findViewById(R.id.p0_workout_protected).getVisibility());});
+            screen.onActivity(activity->{assertFalse(activity.findViewById(R.id.p0_save_gpx).isEnabled());assertFalse(activity.findViewById(R.id.p0_share_gpx).isEnabled());});
             assertNotNull(new WorkoutRepository(context).find(id));
         }
+    }
+    @Test public void exportActionsUseAndroidDocumentAndReadOnlyShareContracts() throws Exception {
+        var instrumentation=androidx.test.platform.app.InstrumentationRegistry.getInstrumentation();
+        AtomicReference<android.content.Intent> document=new AtomicReference<>();AtomicReference<android.content.Intent> share=new AtomicReference<>();
+        var monitor=new android.app.Instrumentation.ActivityMonitor() {
+            @Override public android.app.Instrumentation.ActivityResult onStartActivity(android.content.Intent intent) {
+                if(android.content.Intent.ACTION_CREATE_DOCUMENT.equals(intent.getAction()))document.set(new android.content.Intent(intent));
+                else if(android.content.Intent.ACTION_CHOOSER.equals(intent.getAction()))share.set(intent.getParcelableExtra(android.content.Intent.EXTRA_INTENT));
+                else return null;
+                return new android.app.Instrumentation.ActivityResult(android.app.Activity.RESULT_CANCELED,null);
+            }
+        };
+        instrumentation.addMonitor(monitor);
+        try(ActivityScenario<P0HistoryActivity> screen=ActivityScenario.launch(P0HistoryActivity.intent(context,id.id()))) {
+            detail(screen);P0UiCapture.save("p0-gpx-export-actions-synthetic");
+            onView(withId(R.id.p0_save_gpx)).perform(scrollTo(),click());
+            assertNotNull(document.get());assertEquals("application/gpx+xml",document.get().getType());assertTrue(document.get().hasCategory(android.content.Intent.CATEGORY_OPENABLE));
+            onView(withId(R.id.p0_share_gpx)).perform(scrollTo(),click());
+            long end=SystemClock.uptimeMillis()+10000;
+            while(share.get()==null&&SystemClock.uptimeMillis()<end)SystemClock.sleep(50);
+            assertNotNull(share.get());assertEquals(android.content.Intent.ACTION_SEND,share.get().getAction());assertEquals(android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION,share.get().getFlags());
+            try(var input=context.getContentResolver().openInputStream(share.get().getClipData().getItemAt(0).getUri())) {
+                assertNotNull(input);String xml=new String(input.readAllBytes(),java.nio.charset.StandardCharsets.UTF_8);
+                assertTrue(xml.contains("urn:runner-gardenia:gpx:1"));assertTrue(xml.contains("Synthetic history workout"));
+            }
+        }finally{instrumentation.removeMonitor(monitor);}
     }
 }

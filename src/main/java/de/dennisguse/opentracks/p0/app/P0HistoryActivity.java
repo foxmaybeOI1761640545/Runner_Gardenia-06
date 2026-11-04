@@ -27,6 +27,8 @@ public class P0HistoryActivity extends AbstractActivity {
     private P0HistoryViewModel model;
     private List<WorkoutSummary> rows=List.of();
     private ArrayAdapter<WorkoutSummary> adapter;
+    private final androidx.activity.result.ActivityResultLauncher<String> document=registerForActivityResult(
+            new androidx.activity.result.contract.ActivityResultContracts.CreateDocument("application/gpx+xml"),uri->{if(uri!=null)model.exportSelected(uri);});
     public static Intent intent(Context context,long id){return new Intent(context,P0HistoryActivity.class).putExtra(WORKOUT_ID,id);}
     private String date(java.time.Instant time){return DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withZone(ZoneId.systemDefault()).format(time);}
     @Override protected void onCreate(Bundle saved) {
@@ -47,6 +49,8 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0HistoryList.setAdapter(adapter);
         binding.p0HistoryList.setOnItemClickListener((parent,view,index,id)->model.open(rows.get(index).track().id().id()));
         binding.p0LoadMore.setOnClickListener(view->model.more());
+        binding.p0SaveGpx.setOnClickListener(view->document.launch("RunnerGardenia-"+model.selectedId()+".gpx"));
+        binding.p0ShareGpx.setOnClickListener(view->model.exportSelected(null));
         binding.p0DeleteWorkout.setOnClickListener(view->new AlertDialog.Builder(this).setTitle(R.string.p0_delete_workout)
                 .setMessage(R.string.p0_delete_workout_confirm).setNegativeButton(android.R.string.cancel,null)
                 .setPositiveButton(R.string.p0_delete_workout,(dialog,which)->model.deleteSelected()).show());
@@ -54,6 +58,12 @@ public class P0HistoryActivity extends AbstractActivity {
             @Override public void handleOnBackPressed(){if(model.selectedId()!=null)model.open(null);else{setEnabled(false);getOnBackPressedDispatcher().onBackPressed();}}
         });
         model.state().observe(this,this::render);
+        model.exported().observe(this,result->{
+            if(result==null)return;model.consumeExport();
+            android.widget.Toast.makeText(this,result.message(),android.widget.Toast.LENGTH_LONG).show();
+            if(result.share()!=null)try{startActivity(Intent.createChooser(result.share(),getString(R.string.p0_share_gpx)));}
+            catch(android.content.ActivityNotFoundException unavailable){android.widget.Toast.makeText(this,R.string.p0_export_failed,android.widget.Toast.LENGTH_LONG).show();}
+        });
         long selected=saved!=null?saved.getLong(WORKOUT_ID,0):getIntent().getLongExtra(WORKOUT_ID,0);
         model.open(selected>0?selected:null);
     }
@@ -69,6 +79,8 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0LoadMore.setVisibility(!detail&&state.more()?View.VISIBLE:View.GONE);binding.p0LoadMore.setEnabled(!state.loading());
         WorkoutSummary selected=state.selected();
         binding.p0DeleteWorkout.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
+        binding.p0SaveGpx.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
+        binding.p0ShareGpx.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
         binding.p0WorkoutProtected.setVisibility(detail&&state.protectedWorkout()?View.VISIBLE:View.GONE);
         if(!detail||selected==null){binding.p0WorkoutDetails.setText("");return;}
         var track=selected.track();var stats=track.statistics();
