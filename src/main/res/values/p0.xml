@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p0_title">Runner Gardenia P0</string>
+    <string name="p0_privacy">Offline GPS and heart rate. Your recordings stay on this device.</string>
+    <string name="p0_ready">Ready</string>
+    <string name="p0_running">Running</string>
+    <string name="p0_cycling">Cycling</string>
+    <string name="p0_location_needed">Precise location permission is needed for GPS recording.</string>
+    <string name="p0_location_granted">GPS permission granted</string>
+    <string name="p0_enable_location">Enable GPS permission</string>
+    <string name="p0_metrics_empty">Time 00:00\nDistance 0 m\nSpeed — · Pace —\nGPS — · Accuracy —</string>
+    <string name="p0_start">Start</string>
+    <string name="p0_pause">Pause</string>
+    <string name="p0_resume">Resume</string>
+    <string name="p0_finish">Finish</string>
+    <string name="p0_heart_rate_empty">— bpm · Disconnected</string>
+    <string name="p0_devices">Heart-rate strap</string>
+    <string name="p0_history">Local recordings</string>
+</resources>

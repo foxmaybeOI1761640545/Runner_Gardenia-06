@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p0_title">Runner Gardenia P0</string>
+    <string name="p0_privacy">离线 GPS 与心率记录。运动数据保存在本机。</string>
+    <string name="p0_ready">就绪</string>
+    <string name="p0_running">跑步</string>
+    <string name="p0_cycling">骑行</string>
+    <string name="p0_location_needed">GPS 记录需要精确位置权限。</string>
+    <string name="p0_location_granted">已获得 GPS 权限</string>
+    <string name="p0_enable_location">开启 GPS 权限</string>
+    <string name="p0_metrics_empty">时间 00:00\n距离 0 m\n速度 — · 配速 —\nGPS — · 精度 —</string>
+    <string name="p0_start">开始</string>
+    <string name="p0_pause">暂停</string>
+    <string name="p0_resume">恢复</string>
+    <string name="p0_finish">结束</string>
+    <string name="p0_heart_rate_empty">— bpm · 未连接</string>
+    <string name="p0_devices">心率带</string>
+    <string name="p0_history">本地运动记录</string>
+</resources>

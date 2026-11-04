@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:id="@+id/p0_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/p0_title" android:textAppearance="?attr/textAppearanceHeadlineMedium" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="@string/p0_privacy" android:textAppearance="?attr/textAppearanceBodyMedium" />
+        <TextView android:id="@+id/p0_recording_state" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="@string/p0_ready" android:textAppearance="?attr/textAppearanceTitleLarge" />
+        <RadioGroup android:id="@+id/p0_sport" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/p0_running" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p0_running" android:checked="true" />
+            <RadioButton android:id="@+id/p0_cycling" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p0_cycling" />
+        </RadioGroup>
+        <TextView android:id="@+id/p0_location_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_location_needed" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_location_permission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_enable_location" />
+        <TextView android:id="@+id/p0_metrics" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/p0_metrics_empty" android:textAppearance="?attr/textAppearanceBodyLarge" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/p0_start" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/p0_start" android:enabled="false" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/p0_pause" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/p0_pause" android:enabled="false" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/p0_resume" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/p0_resume" android:enabled="false" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/p0_finish" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/p0_finish" android:enabled="false" />
+        </LinearLayout>
+        <TextView android:id="@+id/p0_heart_rate" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="@string/p0_heart_rate_empty" android:textAppearance="?attr/textAppearanceTitleMedium" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_devices" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_devices" android:enabled="false" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp"
+            android:text="@string/p0_history" android:textAppearance="?attr/textAppearanceTitleLarge" />
+        <LinearLayout android:id="@+id/p0_history_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

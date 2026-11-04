@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import androidx.core.splashscreen.SplashScreen;
 
-import de.dennisguse.opentracks.TrackListActivity;
+import de.dennisguse.opentracks.p0.app.P0Activity;
 import de.dennisguse.opentracks.util.IntentUtils;
 
 /** Keeps the existing launcher component compatible with desktop icons and shortcuts. */
@@ -18,7 +18,7 @@ public class IntroductionActivity extends Activity {
 
         // Route directly to the home screen without ever drawing the old introduction.
         splashScreen.setKeepOnScreenCondition(() -> true);
-        startActivity(IntentUtils.newIntent(this, TrackListActivity.class));
+        startActivity(IntentUtils.newIntent(this, P0Activity.class));
         finish();
     }
 }

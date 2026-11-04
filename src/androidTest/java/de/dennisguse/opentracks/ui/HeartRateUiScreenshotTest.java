@@ -112,10 +112,10 @@ public class HeartRateUiScreenshotTest {
         String introductionKey = context.getString(R.string.show_introduction_screen_key);
         boolean hadIntroduction = preferences.contains(introductionKey);
         boolean originalIntroduction = preferences.getBoolean(introductionKey,true);
-        // Missing on first installation; true/false may remain from older versions.
+        // Legacy UI regression; the P0 launcher is exercised by P0ActivitySmokeTest.
         if (profile.equals("phone-light")) preferences.edit().remove(introductionKey).commit();
         else PreferencesUtils.setShowIntroduction(profile.endsWith("light"));
-        try (ActivityScenario<Activity> launcher = ActivityScenario.launch(context.getPackageManager().getLaunchIntentForPackage(context.getPackageName()))) {
+        try (ActivityScenario<TrackListActivity> launcher = ActivityScenario.launch(TrackListActivity.class)) {
             Activity home = ActivityTestUtils.waitForResumedActivity(TrackListActivity.class,WAIT);
             waitUntilDisplayed(withId(R.id.track_list),WAIT); capture(profile+"-home",false);
             startRecordingFromTrackList(WAIT);waitUntilDisplayed(withId(R.id.heart_rate_panel),WAIT);

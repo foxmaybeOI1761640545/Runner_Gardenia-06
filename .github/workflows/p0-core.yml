@@ -1,0 +1,95 @@
+name: P0 branch validation and APK
+on:
+  push:
+    branches: [feature/p0-core-migration]
+permissions:
+  contents: read
+concurrency:
+  group: p0-core-migration
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  checks:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-core-migration' && github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    outputs:
+      stage: ${{ steps.plan.outputs.stage }}
+      signed: ${{ steps.plan.outputs.signed }}
+    steps:
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Pipeline helper regression
+        run: python3 -m unittest discover -s .github/tests -v -b
+      - name: Verify isolated branch and exact stage plan
+        id: plan
+        run: python3 .github/scripts/p0_pipeline.py prepare
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - name: Verify JVM timezone
+        run: |
+          java -XshowSettings:properties -version 2>&1 | tee "$RUNNER_TEMP/java-timezone.txt"
+          grep -F 'user.timezone = Asia/Singapore' "$RUNNER_TEMP/java-timezone.txt"
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4
+        with:
+          cache-read-only: true
+      - name: Enable KVM
+        run: |
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - name: Debug build, lint, all JVM tests and instrumentation compilation
+        run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+      - name: API35 stage instrumentation
+        env:
+          TEST_CLASSES: ${{ steps.plan.outputs.classes }}
+        run: |
+          args=()
+          if [[ -n "$TEST_CLASSES" ]]; then args+=("-Pandroid.testInstrumentationRunnerArguments.class=$TEST_CLASSES"); fi
+          ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "${args[@]}"
+      - name: Require complete upstream UI regression evidence
+        if: always() && steps.plan.outputs.full == 'true'
+        run: python3 .github/scripts/collect_heart_rate_ui.py
+      - name: Require actual Android/JVM stage reports and P0 screenshots
+        if: always()
+        run: python3 .github/scripts/p0_pipeline.py gate
+      - name: Verify Debug APK identity
+        run: python3 .github/scripts/verify_debug_apk.py
+      - name: Recheck protected original refs
+        run: python3 .github/scripts/p0_pipeline.py refs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: P0-Debug-stage${{ steps.plan.outputs.stage }}-${{ github.run_id }}
+          path: build/outputs/apk/reproducible/debug/*.apk
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: P0-reports-${{ github.run_id }}
+          path: |
+            build/reports/
+            build/test-results/
+            build/outputs/androidTest-results/
+            release-plan.json
+          if-no-files-found: error
+          retention-days: 90

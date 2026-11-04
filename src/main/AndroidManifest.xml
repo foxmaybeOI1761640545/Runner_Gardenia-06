@@ -84,7 +84,7 @@ limitations under the License.
         android:hardwareAccelerated="true"
         android:hasFragileUserData="false"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/launcher_name"
+        android:label="@string/p0_title"
         android:supportsRtl="true"
         android:theme="@style/DayNightDynamicTheme"> <!-- Default for AppCompatActivities -->
 
@@ -129,6 +129,8 @@ limitations under the License.
                 android:resource="@xml/shortcuts"
             />
         </activity>
+
+        <activity android:name=".p0.app.P0Activity" />
 
         <activity android:name=".AboutActivity" />
 
