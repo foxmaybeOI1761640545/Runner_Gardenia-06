@@ -66,7 +66,22 @@ jobs:
         run: |
           args=()
           if [[ -n "$TEST_CLASSES" ]]; then args+=("-Pandroid.testInstrumentationRunnerArguments.class=$TEST_CLASSES"); fi
-          ./gradlew --no-daemon --no-configuration-cache mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "${args[@]}"
+          mkdir -p build/reports/p0-diagnostics
+          # Capture the live device while Gradle owns it; cancellation may remove the
+          # managed device before an always() step can retrieve its diagnostic output.
+          (
+            while true; do
+              sleep 30
+              timeout 10s adb devices -l > build/reports/p0-diagnostics/devices.txt 2>&1 || true
+              timeout 15s adb logcat -d -v threadtime > build/reports/p0-diagnostics/logcat.txt 2>&1 || true
+              timeout 10s adb shell dumpsys activity activities > build/reports/p0-diagnostics/activities.txt 2>&1 || true
+            done
+          ) &
+          monitor_pid=$!
+          trap 'kill "$monitor_pid" 2>/dev/null || true; wait "$monitor_pid" 2>/dev/null || true' EXIT
+          # A hung test fails rather than holding the shared instrument process forever.
+          # The XML completeness gate still requires every configured test to execute.
+          timeout --signal=INT --kill-after=30s 15m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore -Pandroid.testInstrumentationRunnerArguments.timeout_msec=300000 "${args[@]}"
       - name: Require complete upstream UI regression evidence
         if: always() && steps.plan.outputs.full == 'true'
         run: python3 .github/scripts/collect_heart_rate_ui.py
