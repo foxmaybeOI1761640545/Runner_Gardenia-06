@@ -1,0 +1,40 @@
+{
+  "stage": 3,
+  "status": "PASSED",
+  "commit": "61a41a56b1be3d5ec6231252489f15d574b49186",
+  "runId": "41886672130",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41886672130",
+  "android": {
+    "tests": 41,
+    "executed": 40,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 73,
+    "executed": 73,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "debugSha256": "2333d4e99c24cd5871458b2e9df9e27815148a1670a3664892fdf995dfb4d1ef",
+  "downloadedXml": {
+    "android": {
+      "files": 1,
+      "tests": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "executed": 40
+    },
+    "unit": {
+      "files": 10,
+      "tests": 73,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executed": 73
+    }
+  }
+}
