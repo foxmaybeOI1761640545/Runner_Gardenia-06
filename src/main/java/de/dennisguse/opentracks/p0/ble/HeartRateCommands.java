@@ -25,4 +25,19 @@ public final class HeartRateCommands {
     }
     public static void reconnect(Context context) {context.sendBroadcast(intent(context,BluetoothDriver.RECONNECT_SUFFIX));}
     public static void disconnect(Context context) {context.sendBroadcast(intent(context,BluetoothDriver.DISCONNECT_SUFFIX));}
+    public static boolean autoReconnectEnabled(Context context) {
+        return androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.p0_hr_auto_reconnect_key),true);
+    }
+    public static boolean connectionEnabled(Context context) {
+        return androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.p0_hr_connection_enabled_key),true);
+    }
+    private static void save(Context context,int key,boolean value) {
+        if(!androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean(context.getString(key),value).commit())
+            throw new IllegalStateException("Cannot save heart-rate connection preferences");
+    }
+    public static void setConnectionEnabled(Context context,boolean enabled) {save(context,R.string.p0_hr_connection_enabled_key,enabled);}
+    public static void setAutoReconnect(Context context,boolean enabled) {
+        try {save(context,R.string.p0_hr_auto_reconnect_key,enabled);}
+        finally {context.sendBroadcast(intent(context,BluetoothDriver.RECONNECT_POLICY_SUFFIX).putExtra("enabled",enabled));}
+    }
 }

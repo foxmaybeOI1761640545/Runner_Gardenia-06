@@ -11,6 +11,40 @@ import java.util.List;
 import de.dennisguse.opentracks.data.models.HeartRate;
 
 public class BluetoothDriverLifecycleTest {
+    @Test public void equalPayloadNotificationsHaveIndependentIdentityAndCaptureTimes() {
+        HeartRateBluetooth parser=new HeartRateBluetooth();
+        var characteristic=new android.bluetooth.BluetoothGattCharacteristic(HeartRateBluetooth.HEARTRATE.measurementUUID(),0,0);
+        HeartRate first=parser.parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic strap",characteristic,new byte[]{0,76});
+        HeartRate second=parser.parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic strap",characteristic,new byte[]{0,76});
+        assertEquals(first.value(),second.value(),0);assertNotEquals(first.sample().sampleId(),second.sample().sampleId());
+        var one=first.sample().captured(java.time.Instant.EPOCH,"AA:BB:CC:DD:EE:FF","Synthetic strap","connection-1");
+        var two=second.sample().captured(java.time.Instant.EPOCH.plusSeconds(1),"AA:BB:CC:DD:EE:FF","Synthetic strap","connection-1");
+        assertNotEquals(one.capturedAt(),two.capturedAt());
+        assertEquals(one.sampleId(),one.captured(java.time.Instant.EPOCH.plusSeconds(2),one.deviceAddress(),one.deviceName(),one.connectionId()).sampleId());
+    }
+    @Test public void liveReconnectPolicyIsMeasurementScopedEvenForSharedDeviceAddress() {
+        android.content.Context context=ApplicationProvider.getApplicationContext();
+        DriverObserver<HeartRate> observer=new DriverObserver<>() {
+            public void onConnected(String address,String name){fail("No adapter is supplied");}
+            public void onConnectionLost(){}public void onDisconnected(){}
+            public void onDataReceived(HeartRate value){fail("No adapter is supplied");}
+        };
+        BluetoothDriver<HeartRate> heart=new BluetoothDriver<>(null,observer,new HeartRateBluetooth());
+        BluetoothDriver<HeartRate> other=new BluetoothDriver<>(null,observer,new BluetoothDriver.BluetoothParser<>() {
+            public java.util.List<de.dennisguse.opentracks.sensors.ServiceMeasurementUUID> getServices(){return List.of(new de.dennisguse.opentracks.sensors.ServiceMeasurementUUID(java.util.UUID.fromString("00001816-0000-1000-8000-00805f9b34fb"),java.util.UUID.fromString("00002a5b-0000-1000-8000-00805f9b34fb")));}
+            public HeartRate parsePayload(de.dennisguse.opentracks.sensors.ServiceMeasurementUUID service,String name,android.bluetooth.BluetoothGattCharacteristic characteristic){return null;}
+        });
+        try {
+            InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+                Handler owner=new Handler(Looper.getMainLooper());heart.connect(context,owner,"AA:BB:CC:DD:EE:FF");other.connect(context,owner,"AA:BB:CC:DD:EE:FF");
+                context.sendBroadcast(new android.content.Intent(context.getPackageName()+BluetoothDriver.RECONNECT_POLICY_SUFFIX).setPackage(context.getPackageName())
+                        .putExtra("address","AA:BB:CC:DD:EE:FF").putExtra("measurement",HeartRateBluetooth.HEARTRATE.measurementUUID().toString()).putExtra("enabled",false));
+            });
+            long deadline=android.os.SystemClock.uptimeMillis()+5000;
+            while(heart.isAutoReconnectEnabled()&&android.os.SystemClock.uptimeMillis()<deadline)android.os.SystemClock.sleep(20);
+            assertFalse(heart.isAutoReconnectEnabled());assertTrue(other.isAutoReconnectEnabled());
+        }finally{InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{heart.disconnect();other.disconnect();});}
+    }
     @Test public void alreadyGrantedPermissionRunsSuccessWithoutLaunchingAnotherRequest() {
         int[] successes = {0};
         // No permissions are missing; a null launcher deliberately fails if registration is attempted.

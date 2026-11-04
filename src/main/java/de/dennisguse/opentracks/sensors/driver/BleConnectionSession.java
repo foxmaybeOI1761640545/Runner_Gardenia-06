@@ -22,12 +22,13 @@ public final class BleConnectionSession {
         void stopped();
     }
 
-    private static final long[] RETRY_MILLIS = {1000, 3000, 5000, 10000};
+    private static final long[] RETRY_MILLIS = {1000, 3000, 5000, 10000, 30000, 60000};
     private final Transport transport;
     private final Scheduler scheduler;
     private final Listener listener;
     private State state = State.DISCONNECTED;
     private boolean desired;
+    private boolean autoReconnect = true;
     private int generation;
     private int retries;
     private Runnable timeout;
@@ -81,7 +82,7 @@ public final class BleConnectionSession {
 
     public synchronized void disconnected(int token) {
         if (desired && token == generation && state != State.RECONNECT_WAIT
-                && state != State.BLUETOOTH_OFF && state != State.PERMISSION_DENIED) failed(token);
+                && state != State.DISCONNECTED && state != State.BLUETOOTH_OFF && state != State.PERMISSION_DENIED) failed(token);
     }
 
     private synchronized void timeout(int token) {
@@ -94,6 +95,7 @@ public final class BleConnectionSession {
         cancelTimeout();
         transport.close();
         listener.lost();
+        if (!autoReconnect) { change(State.DISCONNECTED); return; }
         change(State.RECONNECT_WAIT);
         long delay = RETRY_MILLIS[retries];
         retries = Math.min(retries + 1, RETRY_MILLIS.length - 1);
@@ -102,7 +104,7 @@ public final class BleConnectionSession {
     }
 
     private synchronized void retry(int token) {
-        if (desired && token == generation && state == State.RECONNECT_WAIT) {
+        if (desired && autoReconnect && token == generation && state == State.RECONNECT_WAIT) {
             retry = null;
             attempt();
         }
@@ -118,8 +120,21 @@ public final class BleConnectionSession {
     }
 
     public synchronized void bluetoothOn() {
-        if (desired && state == State.BLUETOOTH_OFF) attempt();
+        if (desired && state == State.BLUETOOTH_OFF) {
+            if (autoReconnect) attempt(); else change(State.DISCONNECTED);
+        }
     }
+
+    public synchronized void setAutoReconnectEnabled(boolean enabled) {
+        if (autoReconnect == enabled) return;
+        autoReconnect = enabled;
+        if (!enabled && state == State.RECONNECT_WAIT) {
+            cancelTasks();generation++;change(State.DISCONNECTED);
+        } else if (enabled && desired && state == State.DISCONNECTED) {
+            retries=0;attempt();
+        }
+    }
+    public synchronized boolean isAutoReconnectEnabled() { return autoReconnect; }
 
     public synchronized void permissionDenied() {
         blocked(State.PERMISSION_DENIED);

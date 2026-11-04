@@ -160,7 +160,11 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
             //Best guess: do we need to resume a recording?
             Track.Id trackId = TrackIdStorage.get(this);
+            if(trackId==null) {stopSelf(startId);return START_NOT_STICKY;}
             if (trackId != null) {
+                // System recovery is not an explicit Connect action when automatic retry is off.
+                if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.autoReconnectEnabled(this))
+                    de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(this,false);
                 Log.i(TAG, "After restart: resuming recording for " + trackId);
                 resumeTrack(trackId);
             }

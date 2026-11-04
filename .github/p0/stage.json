@@ -1,5 +1,5 @@
 {
-  "stage": 4,
+  "stage": 5,
   "fullRegression": false,
   "classes": [
     "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
@@ -14,7 +14,8 @@
     "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
     "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
     "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
-    "de.dennisguse.opentracks.ui.HeartRatePanelTest"
+    "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+    "de.dennisguse.opentracks.p0.P0HeartRateUiTest"
   ],
   "signed": false
 }

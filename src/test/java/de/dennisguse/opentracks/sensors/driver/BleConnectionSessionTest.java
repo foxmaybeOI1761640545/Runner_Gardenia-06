@@ -35,7 +35,8 @@ public class BleConnectionSessionTest {
     @Test public void retriesAreBoundedAndDelayed() {
         canOpen=false;session.start();
         assertEquals(1000,runFirst());assertEquals(3000,runFirst());assertEquals(5000,runFirst());
-        assertEquals(10000,runFirst());assertEquals(10000,runFirst());
+        assertEquals(10000,runFirst());assertEquals(30000,runFirst());
+        assertEquals(60000,runFirst());assertEquals(60000,runFirst());
     }
     @Test public void manualStopCancelsEvenAlreadyQueuedRetry() {
         canOpen=false;session.start();Runnable stale=firstTask();session.stop();stale.run();
@@ -59,4 +60,35 @@ public class BleConnectionSessionTest {
         session.reconnect();assertEquals(2,opens);assertEquals(BleConnectionSession.State.CONNECTING,session.state());
     }
     @Test public void rejectedSubscriptionRetries() { canSubscribe=false;session.start();int t=session.generation();session.connected(t,true);session.servicesDiscovered(t,true);assertEquals(BleConnectionSession.State.RECONNECT_WAIT,session.state()); }
+    @Test public void disabledAutoReconnectStillAllowsOneExplicitConnection() {
+        session.setAutoReconnectEnabled(false);establish();assertEquals(1,ready);
+        session.disconnected(session.generation());assertEquals(BleConnectionSession.State.DISCONNECTED,session.state());
+        assertTrue(tasks.isEmpty());assertEquals(1,opens);
+    }
+    @Test public void disablingPolicyCancelsEvenADequeuedRetry() {
+        canOpen=false;session.start();Runnable stale=firstTask();session.setAutoReconnectEnabled(false);stale.run();
+        assertTrue(tasks.isEmpty());assertEquals(1,opens);assertEquals(BleConnectionSession.State.DISCONNECTED,session.state());
+        session.setAutoReconnectEnabled(true);assertEquals(2,opens);assertFalse(tasks.isEmpty());
+    }
+    @Test public void disabledPolicyWaitsForExplicitConnectionAfterBluetoothPowerCycle() {
+        session.setAutoReconnectEnabled(false);establish();session.bluetoothOff();session.bluetoothOn();
+        assertEquals(1,opens);assertEquals(BleConnectionSession.State.DISCONNECTED,session.state());
+        session.reconnect();assertEquals(2,opens);assertEquals(BleConnectionSession.State.CONNECTING,session.state());
+    }
+    @Test public void changingPolicyDoesNotCloseAHealthyConnection() {
+        establish();session.setAutoReconnectEnabled(false);
+        assertFalse(session.isAutoReconnectEnabled());assertEquals(0,closes);assertEquals(BleConnectionSession.State.CONNECTED,session.state());
+    }
+    @Test public void enablingPolicyNeverOverridesManualStop() {
+        establish();session.stop();session.setAutoReconnectEnabled(false);session.setAutoReconnectEnabled(true);session.bluetoothOn();
+        assertEquals(1,opens);assertTrue(tasks.isEmpty());assertEquals(BleConnectionSession.State.DISCONNECTED,session.state());
+    }
+    @Test public void disabledPolicyClosesTimedOutHandshakeWithoutRetry() {
+        session.setAutoReconnectEnabled(false);session.start();assertEquals(30000,runFirst());
+        assertEquals(1,closes);assertEquals(1,lost);assertTrue(tasks.isEmpty());assertEquals(BleConnectionSession.State.DISCONNECTED,session.state());
+    }
+    @Test public void duplicateDisconnectAfterDisabledRetryIsIgnored() {
+        session.setAutoReconnectEnabled(false);establish();int old=session.generation();
+        session.disconnected(old);session.disconnected(old);assertEquals(1,closes);assertEquals(1,lost);assertTrue(tasks.isEmpty());
+    }
 }

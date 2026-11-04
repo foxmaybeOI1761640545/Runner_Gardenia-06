@@ -49,6 +49,7 @@ public class BluetoothDriver<T> implements Driver {
     private static final String TAG = BluetoothDriver.class.getSimpleName();
     public static final String RECONNECT_SUFFIX = ".RECONNECT_BLE_SENSOR";
     public static final String DISCONNECT_SUFFIX = ".DISCONNECT_BLE_SENSOR";
+    public static final String RECONNECT_POLICY_SUFFIX = ".SET_BLE_RECONNECT_POLICY";
     private final DriverObserver<T> observer;
     private final BluetoothParser<T> parser;
     private final BluetoothAdapter adapter;
@@ -64,6 +65,13 @@ public class BluetoothDriver<T> implements Driver {
     private BluetoothGattCharacteristic optionalRead;
     private Runnable optionalTimeout;
     private boolean receiversRegistered;
+    private boolean autoReconnectEnabled=true;
+
+    public synchronized void setAutoReconnectEnabled(boolean enabled) {
+        autoReconnectEnabled=enabled;
+        if(session!=null)session.setAutoReconnectEnabled(enabled);
+    }
+    public synchronized boolean isAutoReconnectEnabled() {return autoReconnectEnabled;}
 
     public BluetoothDriver(BluetoothAdapter adapter, DriverObserver<T> observer, BluetoothParser<T> parser) {
         this.adapter = adapter;
@@ -91,7 +99,9 @@ public class BluetoothDriver<T> implements Driver {
             String measurement = intent.getStringExtra("measurement");
             if (measurement != null && parser.getServices().stream().noneMatch(s -> s.measurementUUID().toString().equals(measurement))) return;
             if (current != null && address != null && address.equals(intent.getStringExtra("address"))) {
-                if ((unused.getPackageName()+DISCONNECT_SUFFIX).equals(intent.getAction())) current.stop();
+                if ((unused.getPackageName()+RECONNECT_POLICY_SUFFIX).equals(intent.getAction())) {
+                    if((measurement!=null||measurements!=null)&&intent.hasExtra("enabled"))setAutoReconnectEnabled(intent.getBooleanExtra("enabled",true));
+                } else if ((unused.getPackageName()+DISCONNECT_SUFFIX).equals(intent.getAction())) current.stop();
                 else current.reconnect();
             }
         }
@@ -152,9 +162,11 @@ public class BluetoothDriver<T> implements Driver {
             @Override public void lost() { observer.onConnectionLost(); }
             @Override public void stopped() { observer.onDisconnected(); }
         });
+        session.setAutoReconnectEnabled(autoReconnectEnabled);
         ContextCompat.registerReceiver(context, powerReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED), ContextCompat.RECEIVER_EXPORTED);
         IntentFilter commands = new IntentFilter(context.getPackageName() + RECONNECT_SUFFIX);
         commands.addAction(context.getPackageName() + DISCONNECT_SUFFIX);
+        commands.addAction(context.getPackageName() + RECONNECT_POLICY_SUFFIX);
         ContextCompat.registerReceiver(context, reconnectReceiver, commands, ContextCompat.RECEIVER_NOT_EXPORTED);
         receiversRegistered = true;
         session.start();

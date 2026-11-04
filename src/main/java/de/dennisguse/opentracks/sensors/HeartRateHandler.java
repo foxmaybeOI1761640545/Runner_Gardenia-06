@@ -27,14 +27,23 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
         super(sensorManager);
     }
 
+    @Override void connect() {
+        if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(getContext())) {
+            disconnect();onDisconnected();return;
+        }
+        super.connect();
+    }
+
     @NonNull
     @Override
     protected Driver createDriverBluetooth(String address) {
-        return new BluetoothDriver<>(
+        BluetoothDriver<HeartRate> driver = new BluetoothDriver<>(
                 BluetoothUtils.getAdapter(getContext()),
                 this,
                 new HeartRateBluetooth()
         );
+        driver.setAutoReconnectEnabled(de.dennisguse.opentracks.p0.ble.HeartRateCommands.autoReconnectEnabled(getContext()));
+        return driver;
     }
 
     @NonNull
@@ -46,6 +55,7 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     @Override
     public void onConnected(String address, String name) {
         connectionId = java.util.UUID.randomUUID().toString();
+        lastReceived=null;contactLost=false;
         selectedAddress = address;
         selectedName = name;
         super.onConnected(address, name);

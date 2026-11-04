@@ -32,9 +32,12 @@ public class P0SensorsTest {
             Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.POST_NOTIFICATIONS);
     private final Context context=ApplicationProvider.getApplicationContext();
     private String selected,gpsSelection;
+    private boolean originalAuto,originalEnabled;
     private TrackRecordingService service;
     @Before public void before() {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
+        originalAuto=HeartRateCommands.autoReconnectEnabled(context);originalEnabled=HeartRateCommands.connectionEnabled(context);
+        HeartRateCommands.setAutoReconnect(context,true);HeartRateCommands.setConnectionEnabled(context,true);
         selected=HeartRateCommands.selected();PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
         gpsSelection=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
@@ -44,6 +47,7 @@ public class P0SensorsTest {
         TestEnvironmentUtils.stopTrackRecordingService();
         PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,selected);
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gpsSelection);
+        HeartRateCommands.setAutoReconnect(context,originalAuto);HeartRateCommands.setConnectionEnabled(context,originalEnabled);
     }
     private P0SensorsFragment fragment(P0SensorsActivity activity) {
         activity.getSupportFragmentManager().executePendingTransactions();
@@ -119,6 +123,62 @@ public class P0SensorsTest {
             assertNotSame(previousGps,manager.getGpsHandler().driver);
             service.stopIdleSensors();assertTrue(service.isRecording());assertTrue(service.areSensorsStarted());
             service.endCurrentTrack();service.stopIdleSensors();assertFalse(service.areSensorsStarted());assertNull(service.getHeartRatePreview().value());
+        });
+    }
+    @Test public void reconnectSwitchPersistsAcrossSettingsRecreation() throws Exception {
+        try(ActivityScenario<P0SensorsActivity> scenario=ActivityScenario.launch(P0SensorsActivity.class)) {
+            scenario.onActivity(activity->{
+                androidx.preference.SwitchPreferenceCompat toggle=fragment(activity).findPreference(context.getString(R.string.p0_hr_auto_reconnect_key));
+                assertTrue(toggle.isChecked());toggle.performClick();assertFalse(toggle.isChecked());
+                assertFalse(HeartRateCommands.autoReconnectEnabled(context));
+            });
+            scenario.recreate();
+            scenario.onActivity(activity->{
+                androidx.preference.SwitchPreferenceCompat toggle=fragment(activity).findPreference(context.getString(R.string.p0_hr_auto_reconnect_key));
+                assertFalse(toggle.isChecked());
+            });
+            P0UiCapture.save("p0-auto-reconnect-off");
+        }
+    }
+    @Test public void manualDisconnectIntentSurvivesSensorRecreationWithoutForgettingDevice() throws Exception {
+        service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+            PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,ADDRESS);
+            HeartRateCommands.setConnectionEnabled(context,false);service.tryStartSensors();
+            assertNull(service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+            service.stopIdleSensors();service.tryStartSensors();
+            assertNull(service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+            assertEquals(ADDRESS,HeartRateCommands.selected());
+            HeartRateCommands.setConnectionEnabled(context,true);
+            assertNotNull(service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+            HeartRateCommands.setConnectionEnabled(context,false);
+            assertNull(service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+        });
+    }
+    @Test public void systemServiceRecoveryRespectsDisabledAutomaticReconnect() throws Exception {
+        service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        java.util.concurrent.atomic.AtomicReference<de.dennisguse.opentracks.data.models.Track.Id> id=new java.util.concurrent.atomic.AtomicReference<>();
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+            HeartRateCommands.setAutoReconnect(context,false);HeartRateCommands.setConnectionEnabled(context,true);
+            PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,ADDRESS);
+            id.set(service.startNewTrack());assertNotNull(id.get());
+        });
+        TrackRecordingService previous=service;serviceRule.unbindService();TestEnvironmentUtils.stopTrackRecordingService();
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        assertNotSame(previous,service);
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+            service.onStartCommand(null,0,1);
+            assertTrue(service.isRecording());assertEquals(id.get(),service.getRecordingStatus().trackId());
+            assertFalse(HeartRateCommands.connectionEnabled(context));
+            assertNull(service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+        });
+    }
+    @Test public void orphanServiceRestartWithoutWorkoutStopsInsteadOfMissingForegroundDeadline() throws Exception {
+        service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+            assertEquals(android.app.Service.START_NOT_STICKY,service.onStartCommand(null,0,1));
+            assertFalse(service.isRecording());assertFalse(service.areSensorsStarted());
         });
     }
 }

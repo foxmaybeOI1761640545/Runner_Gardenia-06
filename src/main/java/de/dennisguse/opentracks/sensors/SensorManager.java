@@ -148,7 +148,8 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
             altitudeChangeHandler.connect();
         }
 
-        if (PreferencesUtils.isKey(heartRateHandler.getSensorPreferenceKey(), key)) {
+        if (PreferencesUtils.isKey(heartRateHandler.getSensorPreferenceKey(), key)
+                ||PreferencesUtils.isKey(R.string.p0_hr_connection_enabled_key,key)) {
             heartRateHandler.connect();
         }
 
@@ -266,6 +267,8 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     public HeartRateStatus getHeartRateStatus() {
         return heartRateHandler != null ? heartRateHandler.getStatus(getNow()) : HeartRateStatus.disconnected();
     }
+
+    @VisibleForTesting public HeartRateHandler getHeartRateHandler() {return heartRateHandler;}
 
     @VisibleForTesting
     public void setAggregator(AggregatorHeartRate data) {

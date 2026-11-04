@@ -5,6 +5,11 @@ import org.junit.Test;
 import java.util.List;
 
 public class HeartRateMeasurementTest {
+    @Test public void wideBpmAndAllOptionalFieldsUseTheirOwnOffsets() {
+        HeartRateMeasurement sample=parse(31,44,1,16,0,0,4,0,2);
+        assertEquals(300,sample.bpm());assertEquals(Boolean.TRUE,sample.contactDetected());
+        assertEquals(Integer.valueOf(16),sample.energyExpended());assertEquals(List.of(1024,512),sample.rrIntervals1024());
+    }
     private HeartRateMeasurement parse(int... values) {
         byte[] bytes = new byte[values.length];
         for (int i=0;i<values.length;i++) bytes[i]=(byte)values[i];

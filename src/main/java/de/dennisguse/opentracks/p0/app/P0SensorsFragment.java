@@ -38,10 +38,14 @@ public class P0SensorsFragment extends PreferenceFragmentCompat {
             return true;
         });
         findPreference("p0_disconnect").setOnPreferenceClickListener(preference->{model.disconnectHeartRate();return true;});
+        findPreference(getString(R.string.p0_hr_auto_reconnect_key)).setOnPreferenceChangeListener((preference,value)->{
+            model.setHeartRateAutoReconnect((Boolean)value);return true;
+        });
         model.snapshot().observe(this,value->{
             var preview=value.preview();
             findPreference("p0_connect").setEnabled(!value.busy());
             findPreference("p0_disconnect").setEnabled(!value.busy());
+            findPreference(getString(R.string.p0_hr_auto_reconnect_key)).setEnabled(!value.busy());
             findPreference(getString(R.string.settings_sensor_bluetooth_heart_rate_key)).setEnabled(!value.busy());
             var description=HeartRatePanel.describe(requireContext(),preview.value(),preview.status());
             Preference output=findPreference("p0_preview");

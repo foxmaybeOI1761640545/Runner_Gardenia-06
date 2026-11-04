@@ -8,5 +8,7 @@
     <Preference android:key="p0_preview" android:title="@string/hr_title" android:selectable="false" />
     <Preference android:key="p0_connect" android:title="@string/hr_connect_selected" android:summary="@string/hr_connect_summary" />
     <Preference android:key="p0_disconnect" android:title="@string/hr_disconnect_selected" android:summary="@string/hr_disconnect_summary" />
+    <androidx.preference.SwitchPreferenceCompat android:key="@string/p0_hr_auto_reconnect_key"
+        android:defaultValue="true" android:title="@string/p0_auto_reconnect" android:summary="@string/p0_auto_reconnect_detail" />
     <Preference android:key="p0_sensor_error" android:title="@string/p0_operation_failed" android:selectable="false" />
 </PreferenceScreen>

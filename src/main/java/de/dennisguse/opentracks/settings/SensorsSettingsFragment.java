@@ -53,6 +53,8 @@ public class SensorsSettingsFragment extends PreferenceFragmentCompat {
         return PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,de.dennisguse.opentracks.sensors.driver.SensorType.NONE.getPreferenceValue());
     }
     private void heartRateCommand(String suffix) {
+        if(suffix.equals(de.dennisguse.opentracks.sensors.driver.BluetoothDriver.DISCONNECT_SUFFIX))
+            de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(requireContext(),false);
         requireContext().sendBroadcast(new android.content.Intent(requireContext().getPackageName()+suffix)
                 .setPackage(requireContext().getPackageName()).putExtra("address",selectedHeartRateAddress())
                 .putExtra("measurement",de.dennisguse.opentracks.sensors.driver.HeartRateBluetooth.HEARTRATE.measurementUUID().toString()));
@@ -69,9 +71,11 @@ public class SensorsSettingsFragment extends PreferenceFragmentCompat {
         android.content.Context owner = requireContext().getApplicationContext();
         String selectedAddress = selectedHeartRateAddress();
         de.dennisguse.opentracks.services.TrackRecordingServiceConnection.executeForeground(owner,(service,connection) -> {
+            boolean wasEnabled=de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(owner);
+            de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(owner,true);
             boolean alreadyStarted = service.areSensorsStarted();
             service.tryStartSensors();
-            if (alreadyStarted) owner.sendBroadcast(new android.content.Intent(owner.getPackageName()+de.dennisguse.opentracks.sensors.driver.BluetoothDriver.RECONNECT_SUFFIX)
+            if (alreadyStarted&&wasEnabled) owner.sendBroadcast(new android.content.Intent(owner.getPackageName()+de.dennisguse.opentracks.sensors.driver.BluetoothDriver.RECONNECT_SUFFIX)
                     .setPackage(owner.getPackageName()).putExtra("address",selectedAddress)
                     .putExtra("measurement",de.dennisguse.opentracks.sensors.driver.HeartRateBluetooth.HEARTRATE.measurementUUID().toString()));
             if (isResumed()) previewConnection.bind(requireContext());

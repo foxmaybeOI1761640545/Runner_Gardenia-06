@@ -123,15 +123,25 @@ public class P0RecordingViewModel extends AndroidViewModel {
     public void previewHeartRate(boolean reconnect) {
         if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.hasSelection())return;
         command(true,service->{
-            boolean alreadyStarted=service.areSensorsStarted();service.tryStartSensors();
-            if(reconnect&&alreadyStarted)de.dennisguse.opentracks.p0.ble.HeartRateCommands.reconnect(getApplication());
+            boolean alreadyStarted=service.areSensorsStarted();
+            boolean wasEnabled=de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(getApplication());
+            de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(getApplication(),true);
+            service.tryStartSensors();
+            if(reconnect&&alreadyStarted&&wasEnabled)de.dennisguse.opentracks.p0.ble.HeartRateCommands.reconnect(getApplication());
         });
     }
     public void disconnectHeartRate() {
         command(false,service->{
-            de.dennisguse.opentracks.p0.ble.HeartRateCommands.disconnect(getApplication());
-            service.stopIdleSensors();
+            try {de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(getApplication(),false);}
+            finally {
+                de.dennisguse.opentracks.p0.ble.HeartRateCommands.disconnect(getApplication());
+                service.stopIdleSensors();
+            }
         });
+    }
+    public void setHeartRateAutoReconnect(boolean enabled) {
+        try {de.dennisguse.opentracks.p0.ble.HeartRateCommands.setAutoReconnect(getApplication(),enabled);}
+        catch(RuntimeException failure){reportError(failure);emit();}
     }
     private void command(boolean foreground,Consumer<TrackRecordingService> action) {
         if(busy||closed)return;busy=true;error=null;emit();
