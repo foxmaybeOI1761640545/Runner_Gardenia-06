@@ -122,26 +122,28 @@ public class TrackRecordingServiceStateMachineTest {
     @MediumTest
     @Test
     public void gps_startStop() {
-        // given
         assertEquals(GpsStatusValue.GPS_NONE, service.getGpsStatusObservable().getValue());
 
-        // when
+        // P0 idle sensor preview must not acquire the user's location.
         service.tryStartSensors();
-        waitUntilGpsStatusIs(GpsStatusValue.GPS_ENABLED);
-
-        // then
-        assertEquals(TrackRecordingService.STATUS_DEFAULT, service.getRecordingStatusObservable().getValue());
-        assertEquals(RecordingData.NOT_RECORDING, service.getRecordingDataObservable().getValue());
-        assertEquals(GpsStatusValue.GPS_ENABLED, service.getGpsStatusObservable().getValue());
-
-        // when
-        service.stopSensors();
-        waitUntilGpsStatusIs(GpsStatusValue.GPS_NONE);
-
-        // then
         assertEquals(TrackRecordingService.STATUS_DEFAULT, service.getRecordingStatusObservable().getValue());
         assertEquals(RecordingData.NOT_RECORDING, service.getRecordingDataObservable().getValue());
         assertEquals(GpsStatusValue.GPS_NONE, service.getGpsStatusObservable().getValue());
+        assertTrue(contentProviderUtils.getTracks().isEmpty());
+
+        Track.Id trackId = service.startNewTrack();
+        assertNotNull(trackId);
+        waitUntilRecordingStatusIs(new RecordingStatus(trackId));
+        waitUntilRecordingDataIsNotDefault();
+        waitUntilGpsStatusIs(GpsStatusValue.GPS_ENABLED);
+        assertTrue(service.isRecording());
+
+        service.endCurrentTrack();
+        waitUntilRecordingStatusIs(TrackRecordingService.STATUS_DEFAULT);
+        waitUntilGpsStatusIs(GpsStatusValue.GPS_NONE);
+        assertFalse(service.isRecording());
+        assertNotEquals(RecordingData.NOT_RECORDING, service.getRecordingDataObservable().getValue());
+        assertNotNull(contentProviderUtils.getTrack(trackId));
     }
 
     @MediumTest
