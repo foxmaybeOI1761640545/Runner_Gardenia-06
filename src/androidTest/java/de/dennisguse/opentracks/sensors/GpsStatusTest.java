@@ -2,6 +2,8 @@ package de.dennisguse.opentracks.sensors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_DISABLED;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_ENABLED;
 import static de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_NONE;
@@ -26,6 +28,9 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 import de.dennisguse.opentracks.data.models.Distance;
 import de.dennisguse.opentracks.data.models.Position;
@@ -114,11 +119,12 @@ public class GpsStatusTest {
         // given
         GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
         subject.onRecordingDistanceChanged(Distance.of(10));
-        subject.onMinSamplingIntervalChanged(GpsStatusManager.SIGNAL_LOST_THRESHOLD.multipliedBy(-1));
+        // This case advances time explicitly; keep the live timer from racing the assertions.
+        subject.onMinSamplingIntervalChanged(GpsStatusManager.SIGNAL_LOST_THRESHOLD.negated().plusSeconds(10));
 
         // when / then
         subject.start();
-        subject.onNewTrackPoint(Position.of(ok, Instant.now().minusMillis(1000)));
+        subject.onNewTrackPoint(Position.of(ok, Instant.now().minusSeconds(20)));
         assertEquals(List.of(GPS_ENABLED, GPS_SIGNAL_FIX), statusList);
 
         subject.determineGpsStatusByTime(Instant.now());
@@ -130,28 +136,25 @@ public class GpsStatusTest {
 
     @Test
     public void testStartSignalLostByTimer() throws InterruptedException {
-        List<GpsStatusValue> statusList = new CopyOnWriteArrayList<>();
+        BlockingQueue<GpsStatusValue> events = new LinkedBlockingQueue<>();
 
         // given
-        GpsStatusManager subject = new GpsStatusManager(context, statusList::add, timerHandler);
+        GpsStatusManager subject = new GpsStatusManager(context, events::add, timerHandler);
         subject.onRecordingDistanceChanged(Distance.of(10));
         subject.onMinSamplingIntervalChanged(GpsStatusManager.SIGNAL_LOST_THRESHOLD.multipliedBy(-1).plus(Duration.ofMillis(10)));
 
         // when / then
         subject.start();
-        Thread.sleep(100);
-        assertEquals(List.of(GPS_ENABLED), statusList);
+        assertEquals(GPS_ENABLED, events.poll(2, TimeUnit.SECONDS));
+        assertNull(events.poll(100, TimeUnit.MILLISECONDS));
 
         subject.onNewTrackPoint(Position.of(ok, Instant.now()));
-        assertEquals(List.of(GPS_ENABLED, GPS_SIGNAL_FIX), statusList);
-
-        Thread.sleep(100);
-        assertEquals(List.of(GPS_ENABLED, GPS_SIGNAL_FIX, GPS_SIGNAL_LOST), statusList);
+        assertEquals(GPS_SIGNAL_FIX, events.poll(2, TimeUnit.SECONDS));
+        assertEquals(GPS_SIGNAL_LOST, events.poll(2, TimeUnit.SECONDS));
 
         subject.onNewTrackPoint(Position.of(badFix, Instant.now()));
-        assertEquals(List.of(GPS_ENABLED, GPS_SIGNAL_FIX, GPS_SIGNAL_LOST, GPS_SIGNAL_BAD), statusList);
-
-        Thread.sleep(100);
-        assertEquals(List.of(GPS_ENABLED, GPS_SIGNAL_FIX, GPS_SIGNAL_LOST, GPS_SIGNAL_BAD, GPS_SIGNAL_LOST), statusList);
+        assertEquals(GPS_SIGNAL_BAD, events.poll(2, TimeUnit.SECONDS));
+        assertEquals(GPS_SIGNAL_LOST, events.poll(2, TimeUnit.SECONDS));
+        assertTrue(events.isEmpty());
     }
 }
