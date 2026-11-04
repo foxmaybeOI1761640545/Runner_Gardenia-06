@@ -108,6 +108,16 @@ def gate():
         ui=collect_p0_ui() if config['fullRegression'] or 'de.dennisguse.opentracks.p0.P0ActivitySmokeTest' in config['classes'] else None
         report={'plan':plan,'stage':config['stage'],'android':android,'unit':unit,'p0Screenshots':ui,
                 'passed':android['passed'] and unit['passed']}
+        if config['stage']==6 or config['fullRegression']:
+            proof=json.loads(Path('build/reports/p0-durability/result.json').read_text())
+            if not proof.get('passed') or not proof.get('forceStopped') or proof.get('commit')!=plan['commit'] or proof.get('timezone')!='Asia/Singapore' or proof.get('database')!='p0-durability.db':
+                raise ValueError('Missing matching real process durability evidence')
+            if set(proof.get('phases',{}))!={'write','read'}:raise ValueError('Both durability phases must complete')
+            for result in proof['phases'].values():
+                if any(result.get(key)!=value for key,value in {'tests':1,'executed':1,'failures':0,'errors':0,'skipped':0}.items()) or result.get('pid',0)<=0:
+                    raise ValueError('Invalid process durability test counts/PID')
+            if proof['phases']['write']['pid']==proof['phases']['read']['pid']:raise ValueError('No actual process change')
+            report['processDurability']=proof
     except Exception as error:
         report={'plan':plan,'stage':config['stage'],'passed':False,'diagnostic':str(error)}
     folder=Path('build/reports/p0-validation');folder.mkdir(parents=True,exist_ok=True)

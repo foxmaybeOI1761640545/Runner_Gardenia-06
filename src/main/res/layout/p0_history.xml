@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/p0_history_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <TextView android:id="@+id/p0_history_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" />
+    <LinearLayout android:id="@+id/p0_history_rows" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical">
+        <ListView android:id="@+id/p0_history_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_load_more" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_load_more" />
+    </LinearLayout>
+    <ScrollView android:id="@+id/p0_workout_pane" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <TextView android:id="@+id/p0_workout_details" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceBodyLarge" />
+            <TextView android:id="@+id/p0_workout_protected" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/p0_workout_protected" android:visibility="gone" />
+            <LinearLayout android:id="@+id/p0_workout_actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <com.google.android.material.button.MaterialButton android:id="@+id/p0_delete_workout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/p0_delete_workout" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

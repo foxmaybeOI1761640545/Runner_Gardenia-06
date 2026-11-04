@@ -191,6 +191,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         return trackId;
     }
 
+    public static Track.Id activeTrackId(android.content.Context context) {return TrackIdStorage.get(context);}
+
     public void resumeTrack(Track.Id trackId) {
         if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
         if (!trackRecordingManager.resumeExistingTrack(trackId)) {
@@ -208,7 +210,10 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
         // A Bluetooth-only preview may have started before GPS permission was granted.
         // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
-        if (areSensorsStarted()) trackPointCreator.onSharedPreferenceChanged(null,getString(R.string.settings_sensor_gps_key));
+        if (areSensorsStarted()) {
+            trackPointCreator.getSensorManager().getHeartRateHandler().beginRecordingSegment(trackPointCreator.getNow());
+            trackPointCreator.onSharedPreferenceChanged(null,getString(R.string.settings_sensor_gps_key));
+        }
         startSensors();
 
         voiceAnnouncementManager.start(trackRecordingManager.getTrackStatistics());

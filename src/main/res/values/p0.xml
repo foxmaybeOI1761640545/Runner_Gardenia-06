@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_all_history">View all recordings</string>
+    <string name="p0_workout">Workout</string>
+    <string name="p0_loading">Loading…</string>
+    <string name="p0_no_workouts">No recordings yet</string>
+    <string name="p0_workout_missing">Recording not found</string>
+    <string name="p0_load_more">Load more recordings</string>
+    <string name="p0_history_row">%1$s · %2$.0f m · %3$s</string>
+    <string name="p0_workout_identity">%1$s\n%2$s\nStarted %3$s\nFinished %4$s\nID %5$d</string>
+    <string name="p0_workout_motion">Time %1$s · Moving %2$s\nDistance %3$.1f m\nAverage speed %4$s\nMaximum speed %5$s\nAverage pace %6$s</string>
+    <string name="p0_workout_heart">%1$s\nSamples %2$d\nMin / Avg / Max %3$.1f / %4$.1f / %5$.1f bpm</string>
+    <string name="p0_hr_raw">Heart rate · raw notifications</string>
+    <string name="p0_hr_legacy">Heart rate · legacy track points</string>
+    <string name="p0_hr_none">No heart-rate data</string>
+    <string name="p0_workout_protected">Finish the active or paused workout before deleting or exporting it.</string>
+    <string name="p0_delete_workout">Delete recording</string>
+    <string name="p0_delete_workout_confirm">Permanently delete this recording and its GPS and heart-rate samples?</string>
     <string name="p0_hr_auto_reconnect_key" translatable="false">p0_hr_auto_reconnect</string>
     <string name="p0_hr_connection_enabled_key" translatable="false">p0_hr_connection_enabled</string>
     <string name="p0_auto_reconnect">Automatic reconnection</string>

@@ -50,6 +50,7 @@ public class P0Activity extends AbstractActivity {
         binding.p0Finish.setOnClickListener(view->model.finish());
         binding.p0Devices.setEnabled(true);
         binding.p0Devices.setOnClickListener(view->startActivity(new android.content.Intent(this,P0SensorsActivity.class)));
+        binding.p0AllHistory.setOnClickListener(view->startActivity(new android.content.Intent(this,P0HistoryActivity.class)));
         model.snapshot().observe(this,this::render);
         model.history().observe(this,this::renderHistory);
         updateLocationPermission();
@@ -94,6 +95,7 @@ public class P0Activity extends AbstractActivity {
             String hr=row.heartRate().count()==0?"—":String.format(Locale.ROOT,"%.0f / %.0f / %.0f bpm",row.heartRate().minimum(),row.heartRate().average(),row.heartRate().maximum());
             text.setText(row.track().name()+"\n"+String.format(Locale.ROOT,"%.0f m · %s · HR %s",row.track().statistics().totalDistance().toM(),MotionFormat.duration(row.track().statistics().totalDuration()),hr));
             binding.p0HistoryList.addView(text);
+            text.setOnClickListener(view->startActivity(P0HistoryActivity.intent(this,row.track().id().id())));
         }
     }
     @NonNull @Override protected View createRootView() {binding=P0HomeBinding.inflate(getLayoutInflater());return binding.getRoot();}

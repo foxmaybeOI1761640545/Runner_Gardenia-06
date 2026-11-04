@@ -159,7 +159,7 @@ public class P0RecordingViewModel extends AndroidViewModel {
         Long id=session.trackId();boolean finalSnapshot=session.phase()!=RecordingSession.Phase.RECORDING;
         worker.execute(()->{
             try {
-                List<WorkoutSummary> rows=repository.list();history.postValue(rows);
+                List<WorkoutSummary> rows=repository.listNewest(5);history.postValue(rows);
                 if(id!=null&&finalSnapshot) {
                     WorkoutSummary saved=repository.find(new Track.Id(id));
                     handler.post(()->{if(!closed&&saved!=null&&session.trackId()!=null&&session.trackId().equals(id)&&session.phase()!=RecordingSession.Phase.RECORDING){data=new RecordingData(saved.track(),null,null,null);emit();}});

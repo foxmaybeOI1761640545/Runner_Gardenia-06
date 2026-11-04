@@ -52,4 +52,22 @@ public class P0WorkoutRepositoryTest {
         try {context.getContentResolver().bulkInsert(CustomContentProvider.UrlType.HEART_RATE_SAMPLES.getUri(),new ContentValues[]{valid,invalid});fail("Invalid batch must fail");}
         catch(SQLiteException expected) {assertEquals(0,repository.find(id).heartRate().count());}
     }
+    @Test public void legacyHeartRateRemainsReadableWithoutInventingRawNotifications() {
+        var id=track("Legacy heart rate");
+        for(int bpm:new int[]{80,100})store.insertTrackPoint(new TrackPoint(null,TrackPoint.Type.TRACKPOINT,Position.of(Instant.EPOCH.plusSeconds(bpm)),null,HeartRate.of(bpm),null,null,null,null),id);
+        var old=repository.find(id);assertEquals(de.dennisguse.opentracks.p0.data.WorkoutSummary.HeartRateOrigin.LEGACY_TRACK_POINTS,old.heartRateOrigin());
+        assertEquals(90,old.heartRate().average(),0);assertTrue(repository.heartRates(id).isEmpty());
+        new HeartRateRepository(context).insert(id,sample(70,1));
+        var raw=repository.find(id);assertEquals(de.dennisguse.opentracks.p0.data.WorkoutSummary.HeartRateOrigin.RAW_NOTIFICATIONS,raw.heartRateOrigin());assertEquals(70,raw.heartRate().average(),0);
+    }
+    @Test public void boundedHistoryAndPausedWorkoutDeletionProtection() {
+        var first=track("First"),second=track("Second"),third=track("Third");
+        assertEquals(List.of(third,second),repository.listNewest(2).stream().map(row->row.track().id()).toList());
+        var journal=new de.dennisguse.opentracks.p0.data.SessionStore(context);
+        journal.save(de.dennisguse.opentracks.p0.recording.RecordingSession.ready().begin(first.id()).pause());
+        try {assertTrue(repository.isProtected(first));repository.delete(first);fail("Paused workout must be retained");}
+        catch(IllegalStateException expected){assertNotNull(repository.find(first));}
+        finally{journal.save(de.dennisguse.opentracks.p0.recording.RecordingSession.ready());}
+        repository.delete(first);assertNull(repository.find(first));assertEquals(2,repository.list().size());
+    }
 }

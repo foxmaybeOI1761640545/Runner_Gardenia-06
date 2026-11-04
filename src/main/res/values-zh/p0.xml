@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_all_history">查看全部记录</string>
+    <string name="p0_workout">运动记录</string>
+    <string name="p0_loading">正在读取…</string>
+    <string name="p0_no_workouts">暂无运动记录</string>
+    <string name="p0_workout_missing">找不到运动记录</string>
+    <string name="p0_load_more">读取更多记录</string>
+    <string name="p0_history_row">%1$s · %2$.0f 米 · %3$s</string>
+    <string name="p0_workout_identity">%1$s\n%2$s\n开始 %3$s\n结束 %4$s\n编号 %5$d</string>
+    <string name="p0_workout_motion">运动时间 %1$s · 移动时间 %2$s\n距离 %3$.1f 米\n平均速度 %4$s\n最高速度 %5$s\n平均配速 %6$s</string>
+    <string name="p0_workout_heart">%1$s\n样本数 %2$d\n最低 / 平均 / 最高 %3$.1f / %4$.1f / %5$.1f BPM</string>
+    <string name="p0_hr_raw">心率 · 原始通知样本</string>
+    <string name="p0_hr_legacy">心率 · 旧版轨迹点</string>
+    <string name="p0_hr_none">无心率数据</string>
+    <string name="p0_workout_protected">请先结束正在进行或暂停中的运动，再删除或导出。</string>
+    <string name="p0_delete_workout">删除记录</string>
+    <string name="p0_delete_workout_confirm">永久删除本次运动及其 GPS 和心率样本？</string>
     <string name="p0_auto_reconnect">自动重连</string>
     <string name="p0_auto_reconnect_detail">意外断开后重试选定心率带。主动断开后会停止连接尝试，直到再次点击连接。</string>
     <string name="p0_ble_guide">选择标准蓝牙心率带后连接，仅使用选定设备。可重新打开扫描窗口或点击重新扫描刷新列表。</string>

@@ -47,7 +47,7 @@ class GpsStatusManager {
         this.context = context;
         this.handler = handler;
 
-        onRecordingDistanceChanged(PreferencesUtils.getRecordingDistanceInterval());
+        onRequiredAccuracyChanged(PreferencesUtils.getThresholdHorizontalAccuracy());
         onMinSamplingIntervalChanged(PreferencesUtils.getMinSamplingInterval());
     }
 
@@ -69,6 +69,10 @@ class GpsStatusManager {
      * @param value New preference value to signalBadThreshold.
      */
     public void onRecordingDistanceChanged(@NonNull Distance value) {
+        onRequiredAccuracyChanged(value);
+    }
+
+    public void onRequiredAccuracyChanged(@NonNull Distance value) {
         horizontalAccuracyThreshold = value;
     }
 

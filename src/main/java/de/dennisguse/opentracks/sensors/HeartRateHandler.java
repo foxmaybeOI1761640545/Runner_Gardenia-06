@@ -22,6 +22,13 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     public HeartRateStatus getStatus(java.time.Instant now) {
         return new HeartRateStatus(connectionState,lastReceived,now,selectedName != null ? selectedName : selectedAddress,contactLost);
     }
+    public void beginRecordingSegment(java.time.Instant start) {
+        // Preview notifications from a paused interval cannot become the first active GPS point's HR.
+        if(lastReceived!=null&&lastReceived.isBefore(start)) {
+            if(aggregator instanceof AggregatorHeartRate heartRate)heartRate.invalidate();
+            lastReceived=null;
+        }
+    }
 
     protected HeartRateHandler(SensorManager sensorManager) {
         super(sensorManager);
