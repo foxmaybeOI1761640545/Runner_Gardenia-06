@@ -97,12 +97,13 @@ public class P0RecordingViewModel extends AndroidViewModel {
     }
     private void configureGps() {
         // Both are existing driver/filter settings: one-second requests, retain each valid GPS fix.
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,de.dennisguse.opentracks.sensors.driver.SensorType.INTERNAL.getPreferenceValue());
         PreferencesUtils.setString(R.string.min_sampling_interval_key,"1");
         PreferencesUtils.setString(R.string.recording_distance_interval_key,"0");
     }
     public void pause() {
         if(session.phase()!=RecordingSession.Phase.RECORDING)return;
-        command(false,service->{session=session.pause();service.endCurrentTrack();store.save(session);reloadHistory();});
+        command(false,service->{session=session.pause();service.endCurrentTrack();service.stopIdleSensors();store.save(session);reloadHistory();});
     }
     public void resume() {
         if(session.phase()!=RecordingSession.Phase.PAUSED)return;
@@ -116,7 +117,20 @@ public class P0RecordingViewModel extends AndroidViewModel {
     public void finish() {
         if(session.phase()!=RecordingSession.Phase.RECORDING&&session.phase()!=RecordingSession.Phase.PAUSED)return;
         command(false,service->{
-            session=session.finish();service.endCurrentTrack();store.save(session);reloadHistory();
+            session=session.finish();service.endCurrentTrack();service.stopIdleSensors();store.save(session);reloadHistory();
+        });
+    }
+    public void previewHeartRate(boolean reconnect) {
+        if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.hasSelection())return;
+        command(true,service->{
+            boolean alreadyStarted=service.areSensorsStarted();service.tryStartSensors();
+            if(reconnect&&alreadyStarted)de.dennisguse.opentracks.p0.ble.HeartRateCommands.reconnect(getApplication());
+        });
+    }
+    public void disconnectHeartRate() {
+        command(false,service->{
+            de.dennisguse.opentracks.p0.ble.HeartRateCommands.disconnect(getApplication());
+            service.stopIdleSensors();
         });
     }
     private void command(boolean foreground,Consumer<TrackRecordingService> action) {

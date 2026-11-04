@@ -28,7 +28,7 @@ limitations under the License.
         android:name="android.hardware.location.gps"
         android:required="true" />
     <uses-feature
-        android:name="android.hardware.android.hardware.bluetooth_le"
+        android:name="android.hardware.bluetooth_le"
         android:required="false" />
     <uses-feature
         android:name="android.hardware.camera"
@@ -131,6 +131,7 @@ limitations under the License.
         </activity>
 
         <activity android:name=".p0.app.P0Activity" />
+        <activity android:name=".p0.app.P0SensorsActivity" android:parentActivityName=".p0.app.P0Activity" />
 
         <activity android:name=".AboutActivity" />
 

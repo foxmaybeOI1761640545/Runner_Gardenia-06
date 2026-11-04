@@ -55,7 +55,9 @@ public class BluetoothLeAdapter extends BaseAdapter {
         if (device.connected) detail += (detail.isEmpty() ? "" : " · ") + parent.getContext().getString(R.string.sensor_scan_connected);
         textView.setSingleLine(false);
         textView.setMaxLines(3);
-        textView.setText(device.getNameOrAddress() + (detail.isEmpty() ? "" : "\n" + detail));
+        String title=device.getNameOrAddress();
+        if(!title.equals(device.address)&&android.bluetooth.BluetoothAdapter.checkBluetoothAddress(device.address))title+="\n"+device.address;
+        textView.setText(title + (detail.isEmpty() ? "" : "\n" + detail));
 
         return currentView;
     }

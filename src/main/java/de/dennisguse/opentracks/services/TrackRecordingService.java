@@ -200,6 +200,9 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         updateRecordingStatus(RecordingStatus.record(trackId));
         TrackIdStorage.set(this, trackId);
 
+        // A Bluetooth-only preview may have started before GPS permission was granted.
+        // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
+        if (areSensorsStarted()) trackPointCreator.onSharedPreferenceChanged(null,getString(R.string.settings_sensor_gps_key));
         startSensors();
 
         voiceAnnouncementManager.start(trackRecordingManager.getTrackStatistics());
@@ -213,22 +216,24 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     public void tryStartSensors() {
         if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
-        if (trackPointCreator.isStarted()) return;
-
         Log.i(TAG, "tryStartSensors");
 
         startSensors();
     }
 
     private synchronized void startSensors() {
-        if (trackPointCreator.isStarted()) {
-            Log.i(TAG, "sensors already started; skipping");
-            return;
+        if (!trackPointCreator.isStarted()) {
+            Log.i(TAG, "startSensors");
+            trackPointCreator.start(this, handler);
         }
-        Log.i(TAG, "startSensors");
-        trackPointCreator.start(this, handler);
-
+        // Refresh the foreground capabilities after a newly granted GPS/Bluetooth permission.
         ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this));
+    }
+
+    public synchronized void stopIdleSensors() {
+        if (isRecording()) return;
+        if (areSensorsStarted()) stopSensors();
+        stopSelf();
     }
 
     public void endCurrentTrack() {

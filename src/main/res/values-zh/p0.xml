@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_ble_guide">选择标准蓝牙心率带后连接，仅使用选定设备。可重新打开扫描窗口或点击重新扫描刷新列表。</string>
     <string name="p0_title">Runner Gardenia P0</string>
     <string name="p0_privacy">离线 GPS 与心率记录。运动数据保存在本机。</string>
     <string name="p0_ready">就绪</string>

@@ -48,6 +48,8 @@ public class P0Activity extends AbstractActivity {
             else {model.pendingResume();locationRequest.launch(P0PermissionPolicy.location().toArray(new String[0]));}
         });
         binding.p0Finish.setOnClickListener(view->model.finish());
+        binding.p0Devices.setEnabled(true);
+        binding.p0Devices.setOnClickListener(view->startActivity(new android.content.Intent(this,P0SensorsActivity.class)));
         model.snapshot().observe(this,this::render);
         model.history().observe(this,this::renderHistory);
         updateLocationPermission();

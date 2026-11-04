@@ -4,6 +4,17 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class BluetoothLeAdapterTest {
+    @Test public void deviceRowShowsNameMacSignalAndConnection() {
+        androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+            android.content.Context context=androidx.test.core.app.ApplicationProvider.getApplicationContext();
+            BluetoothLeAdapter adapter=new BluetoothLeAdapter();adapter.add("AA:BB:CC:DD:EE:FF","Generic SIG strap",-45,true);
+            android.view.View row=adapter.getView(0,null,new android.widget.FrameLayout(context));
+            String text=((android.widget.TextView)row.findViewById(android.R.id.text1)).getText().toString();
+            assertTrue(text.contains("Generic SIG strap"));assertTrue(text.contains("AA:BB:CC:DD:EE:FF"));
+            assertTrue(text.contains(context.getString(de.dennisguse.opentracks.R.string.sensor_scan_rssi,-45)));
+            assertTrue(text.contains(context.getString(de.dennisguse.opentracks.R.string.sensor_scan_connected)));
+        });
+    }
     @Test public void allResultsAreRetainedAndDeduplicatedByAddress() {
         BluetoothLeAdapter adapter=new BluetoothLeAdapter();
         adapter.add("first","One",-70,false);adapter.add("second","Two",-65,false);adapter.add("third","Three",-55,true);

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/p0_ble_guide" android:selectable="false" />
+    <de.dennisguse.opentracks.p0.ble.P0HeartRatePreference
+        android:defaultValue="@string/sensor_type_value_none"
+        android:key="@string/settings_sensor_bluetooth_heart_rate_key"
+        android:title="@string/hr_select_device" />
+    <Preference android:key="p0_preview" android:title="@string/hr_title" android:selectable="false" />
+    <Preference android:key="p0_connect" android:title="@string/hr_connect_selected" android:summary="@string/hr_connect_summary" />
+    <Preference android:key="p0_disconnect" android:title="@string/hr_disconnect_selected" android:summary="@string/hr_disconnect_summary" />
+    <Preference android:key="p0_sensor_error" android:title="@string/p0_operation_failed" android:selectable="false" />
+</PreferenceScreen>

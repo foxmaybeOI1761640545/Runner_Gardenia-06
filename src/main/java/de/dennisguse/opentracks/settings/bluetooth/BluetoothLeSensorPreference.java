@@ -54,6 +54,7 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
     private static final String ARG_BLE_SERVICE_UUIDS = "bluetoothUUID";
     private static final String ARG_BLE_MEASUREMENTS = "bluetoothMeasurements";
     private static final String ARG_INCLUDE_INTERNAL = "supportsInternal";
+    private static final String ARG_FORCE_SERVICE_FILTER = "forceServiceFilter";
 
     private static final int DEVICE_NONE_RESOURCEID = R.string.value_none;
 
@@ -201,6 +202,10 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
         }
 
         public static BluetoothLeSensorPreferenceDialog newInstance(String preferenceKey, List<ServiceMeasurementUUID> sensorUUIDs, boolean includeInternalSensor) {
+            return newInstance(preferenceKey,sensorUUIDs,includeInternalSensor,false);
+        }
+
+        public static BluetoothLeSensorPreferenceDialog newInstance(String preferenceKey, List<ServiceMeasurementUUID> sensorUUIDs, boolean includeInternalSensor, boolean forceServiceFilter) {
             final BluetoothLeSensorPreferenceDialog fragment = new BluetoothLeSensorPreferenceDialog();
             final Bundle b = new Bundle(3);
             b.putString(ARG_KEY, preferenceKey);
@@ -210,6 +215,7 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                     .toList()));
             b.putStringArrayList(ARG_BLE_MEASUREMENTS,new ArrayList<>(sensorUUIDs.stream().map(it -> it.measurementUUID().toString()).distinct().toList()));
             b.putBoolean(ARG_INCLUDE_INTERNAL, includeInternalSensor);
+            b.putBoolean(ARG_FORCE_SERVICE_FILTER,forceServiceFilter);
 
             fragment.setArguments(b);
             return fragment;
@@ -297,11 +303,18 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
             }
 
             // Pre-populate with already-bonded BLE devices so that devices that are paired but not actively advertising (e.g. Bosch eBike) are still shown. In case we dont have any cached UUIDs for a device, we just add it to the list and let the user decide
-            boolean filterEnabled = PreferencesUtils.getBluetoothFilterEnabled();
+            boolean filterEnabled = getArguments().getBoolean(ARG_FORCE_SERVICE_FILTER,false)||PreferencesUtils.getBluetoothFilterEnabled();
+            BluetoothManager manager=getContext().getSystemService(BluetoothManager.class);
+            if(deviceSelected!=null&&BluetoothAdapter.checkBluetoothAddress(deviceSelected)) {
+                BluetoothDevice remembered=bluetoothAdapter.getRemoteDevice(deviceSelected);
+                listAdapter.add(remembered.getAddress(),remembered.getName(),null,
+                        manager!=null&&manager.getConnectionState(remembered,BluetoothProfile.GATT)==BluetoothProfile.STATE_CONNECTED);
+            }
             bluetoothAdapter.getBondedDevices().stream()
                     .filter(bonded -> bonded.getType() == BluetoothDevice.DEVICE_TYPE_LE || bonded.getType() == BluetoothDevice.DEVICE_TYPE_DUAL)
                     .filter(bonded -> !filterEnabled || bonded.getUuids() == null || java.util.Arrays.stream(bonded.getUuids()).anyMatch(serviceUUIDs::contains))
-                    .forEach(bonded -> listAdapter.add(bonded.getAddress(), bonded.getName()));
+                    .forEach(bonded -> listAdapter.add(bonded.getAddress(), bonded.getName(),null,
+                            manager!=null&&manager.getConnectionState(bonded,BluetoothProfile.GATT)==BluetoothProfile.STATE_CONNECTED));
 
             List<ScanFilter> scanFilter = null;
             if (filterEnabled) {

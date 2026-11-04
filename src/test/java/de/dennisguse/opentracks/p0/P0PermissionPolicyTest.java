@@ -5,6 +5,10 @@ import org.junit.Test;
 import de.dennisguse.opentracks.p0.app.P0PermissionPolicy;
 
 public class P0PermissionPolicyTest {
+    @Test public void connectingRememberedStrapDoesNotRequireScanOrGps() {
+        assertEquals(java.util.List.of("android.permission.BLUETOOTH_CONNECT"),P0PermissionPolicy.bluetoothConnection(31));
+        assertTrue(P0PermissionPolicy.bluetoothConnection(30).isEmpty());
+    }
     @Test public void gpsDoesNotRequireBluetooth() {
         assertEquals(2,P0PermissionPolicy.location().size());
         assertTrue(P0PermissionPolicy.location().contains("android.permission.ACCESS_FINE_LOCATION"));

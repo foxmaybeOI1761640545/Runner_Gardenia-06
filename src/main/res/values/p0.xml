@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="p0_ble_guide">Choose a standard heart-rate strap, then connect. Only the selected device is used. Close and reopen the scan dialog or use Scan again to refresh.</string>
     <string name="p0_title">Runner Gardenia P0</string>
     <string name="p0_privacy">Offline GPS and heart rate. Your recordings stay on this device.</string>
     <string name="p0_ready">Ready</string>
