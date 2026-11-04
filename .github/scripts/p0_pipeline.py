@@ -85,6 +85,14 @@ def collect_p0_ui():
     return count
 
 
+def scoped_sources(names, destination, root=Path('src/androidTest/java')):
+    for name in names:
+        relative=Path(*name.split('.')).with_suffix('.java')
+        target=destination/relative
+        target.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copyfile(root/relative,target)
+
+
 def gate():
     config=configuration();plan=json.loads(Path('release-plan.json').read_text())
     try:
@@ -93,9 +101,7 @@ def gate():
         else:
             with tempfile.TemporaryDirectory() as temporary:
                 selected=Path(temporary)
-                for name in sorted(set(MANDATORY+config['classes'])):
-                    source=Path('src/androidTest/java',*name.split('.')).with_suffix('.java')
-                    shutil.copyfile(source,selected/(name+'.java'))
+                scoped_sources(sorted(set(MANDATORY+config['classes'])),selected)
                 android=inspect(Path('build/outputs/androidTest-results'),selected)
         unit=inspect(Path('build/test-results/testReproducibleDebugUnitTest'),Path('src/test/java'),require_environment=False)
         # P0 launcher screenshot is required whenever the corresponding smoke test is configured.
