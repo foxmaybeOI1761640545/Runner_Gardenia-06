@@ -102,3 +102,5 @@ No physical GPS handset or H303 is attached to this environment. Real outdoor 1H
 - Candidate dd6f17a / 41927892629 failed Android-test Java compilation: a new repository test used compound var declarations, forbidden by Java. Split declarations; parsed all 362 main/test Java files using the JDK compiler parse API with source/target 17 (no Android SDK installation). No Android/JVM execution is claimed for this failed attempt. Stage 7 remains blocked pending a complete rerun.
 
 - Static fixture review found the dedicated durability probe queried a BLOB UUID using a text UUID. Reused ContentProviderUtils.getTrack(UUID), which applies the existing hex/BLOB representation correctly. Candidate dafdf2a is superseded before acceptance; no passed stage is claimed from that run.
+
+- Actual logs from run 41928368419 additionally exposed that CustomSQLiteOpenHelper is package-private. The durability fixture now opens its existing test database through Android SQLiteDatabase.OPEN_READONLY for independent verification, without broadening production helper visibility. Complete rerun is required.

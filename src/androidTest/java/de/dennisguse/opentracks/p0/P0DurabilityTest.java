@@ -51,9 +51,9 @@ public class P0DurabilityTest {
         if(!phase.equals("write"))read();
         if(!phase.equals("both")) {
             assertEquals("p0-durability.db",((Startup)context.getApplicationContext()).getDatabaseName());
-            try(CustomSQLiteOpenHelper independent=new CustomSQLiteOpenHelper(context);
-                var cursor=independent.getReadableDatabase().rawQuery("SELECT COUNT(*) FROM heart_rate_samples WHERE trackid=?",new String[]{Long.toString(id().id())})) {
-                assertTrue(cursor.moveToFirst());assertEquals(2,cursor.getLong(0));assertEquals(43,independent.getReadableDatabase().getVersion());
+            try(android.database.sqlite.SQLiteDatabase independent=android.database.sqlite.SQLiteDatabase.openDatabase(context.getDatabasePath("p0-durability.db").getPath(),null,android.database.sqlite.SQLiteDatabase.OPEN_READONLY);
+                var cursor=independent.rawQuery("SELECT COUNT(*) FROM heart_rate_samples WHERE trackid=?",new String[]{Long.toString(id().id())})) {
+                assertTrue(cursor.moveToFirst());assertEquals(2,cursor.getLong(0));assertEquals(43,independent.getVersion());
             }
             android.os.Bundle status=new android.os.Bundle();status.putString("p0DurabilityPid",Integer.toString(android.os.Process.myPid()));
             status.putString("p0DurabilityPhase",phase);InstrumentationRegistry.getInstrumentation().sendStatus(0,status);
