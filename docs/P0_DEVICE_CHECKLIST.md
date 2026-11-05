@@ -12,7 +12,7 @@ Automated tests use explicit synthetic GPS/BLE fixtures. No outdoor GPS handset 
 6. Switch apps, turn screen off for at least 30 minutes, then reopen. Confirm recording continued in the foreground service and UI restored the same workout.
 7. Finish and reopen history after a process/device restart. Confirm timestamps, distances and saved samples persist.
 
-## H303 and generic SIG HR straps (to be expanded with BLE stages)
+## H303 and generic SIG HR straps
 
 - Actual H303 discovery/name/MAC, subscription, live BPM/contact/optional RR/energy.
 - Strap power-off/on, out-of-range/re-entry, Bluetooth off/on, denied/revoked permissions, explicit disconnect and disabled automatic reconnect.

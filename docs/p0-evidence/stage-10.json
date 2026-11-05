@@ -190,5 +190,61 @@
         "receiver": []
       }
     }
-  }
+  },
+  "signedDelivery": {
+    "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41974364095",
+    "artifactId": 13391972069,
+    "artifact": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41974364095/artifacts/13391972069",
+    "apk": "RunnerGardenia-P0-Release.apk",
+    "bytes": 2715993,
+    "sha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+    "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+    "runtime": {
+      "passed": true,
+      "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "installed": true,
+      "upgradeFromVersionCode": 6771,
+      "retainedGpsPoints": 1,
+      "retainedRawHeartSamples": 2,
+      "gpsPoints": 46,
+      "manualSegments": 2,
+      "gpsDistanceMeters": 20.27205514907837,
+      "activeMillis": 57781,
+      "wallMillis": 69490,
+      "forceStopRecovery": true,
+      "bluetoothAndNotificationPermissionDenied": true,
+      "timezone": "Asia/Singapore",
+      "physicalBleTested": false,
+      "liveGpsFieldsVerified": true,
+      "releaseGpxSchemaVerified": true,
+      "releaseExportGpsPoints": 1,
+      "releaseExportRawSamples": 2
+    },
+    "downloadedSignatureProof": "Actual Actions apksigner and same-certificate Android install -r passed; independently compared downloaded APK/SHA/build-info/runtime and previously verified baseline public fingerprint (CI separately compares Environment variable)",
+    "mappingSha256": "b9de8f8b995bd1ec7b41873691dacf21cbc1321ba1b21dbf5b9a790346a215b1"
+  },
+  "pipelineHelperTests": {
+    "tests": 39,
+    "executed": 39,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "uiReview": {
+    "nativeLegacyCaptures": 40,
+    "nativeP0MatrixCaptures": 20,
+    "nativeP0AdditionalCaptures": 9,
+    "actualSignedReleaseCaptures": 5,
+    "reviewedReleasePages": [
+      "home",
+      "recording",
+      "settings",
+      "history",
+      "detail"
+    ],
+    "physicalBleTested": false
+  },
+  "physicalValidation": "NEEDS_DEVICE_VALIDATION"
 }
