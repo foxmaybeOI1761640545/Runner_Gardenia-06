@@ -38,6 +38,26 @@ def run():
     def dump():
         device('shell','uiautomator','dump','--compressed','/sdcard/p0-window.xml',timeout=45)
         text=device('shell','cat','/sdcard/p0-window.xml');(output/'last-window.xml').write_text(text);return ET.fromstring(text)
+    def deny_baseline_optional_permissions():
+        # The preserved upstream APK requests nearby-device/notification access on
+        # launch. Complete those OS dialogs before upgrading; force-stop alone
+        # does not dismiss a PermissionController-owned window.
+        denied=[]
+        for attempt in range(4):
+            root=dump()
+            buttons=[node for node in root.iter('node') if node.get('resource-id')=='com.android.permissioncontroller:id/permission_deny_button']
+            if not buttons:
+                (output/'baseline-optional-permissions.json').write_text(json.dumps({'denied':denied},indent=2)+'\n')
+                return denied
+            messages=[node.get('text','') for node in root.iter('node') if node.get('resource-id')=='com.android.permissioncontroller:id/permission_message']
+            message=' '.join(messages)
+            if not any(word in message.lower() for word in ('nearby devices','notifications')):
+                raise ValueError('Unexpected baseline permission dialog: '+message)
+            bounds=list(map(int,re.findall(r'\d+',buttons[0].get('bounds',''))))
+            if len(bounds)!=4:raise ValueError('Missing system permission-denial button bounds')
+            device('shell','input','tap',str((bounds[0]+bounds[2])//2),str((bounds[1]+bounds[3])//2))
+            denied.append(message);time.sleep(1)
+        raise ValueError('Baseline optional permission dialog did not finish')
     def wait_text(text,seconds=30):
         deadline=time.monotonic()+seconds
         while time.monotonic()<deadline:
@@ -84,7 +104,7 @@ def run():
             if device('shell','getprop','persist.sys.timezone')!='Asia/Singapore':raise ValueError('Wrong Release device timezone')
             device('install','-r',old,timeout=120)
             for permission in ('ACCESS_COARSE_LOCATION','ACCESS_FINE_LOCATION'):device('shell','pm','grant',PACKAGE,'android.permission.'+permission)
-            start();time.sleep(2);device('shell','content','query','--uri','content://com.fox.runner.content/tracks',check=False)
+            start();time.sleep(2);deny_baseline_optional_permissions();device('shell','content','query','--uri','content://com.fox.runner.content/tracks',check=False)
             device('shell','am','force-stop',PACKAGE);db=database('baseline-db')
             with sqlite3.connect(db) as connection:
                 if connection.execute('PRAGMA user_version').fetchone()[0]!=43:raise ValueError('Unexpected baseline schema')
