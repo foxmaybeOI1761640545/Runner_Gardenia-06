@@ -11,13 +11,13 @@ import android.location.Location;
 import android.os.Looper;
 
 import androidx.annotation.NonNull;
-import androidx.core.location.LocationManagerCompat;
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.MediumTest;
 import androidx.test.rule.GrantPermissionRule;
 import androidx.test.rule.ServiceTestRule;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -46,7 +46,8 @@ import de.dennisguse.opentracks.data.models.Track;
 import de.dennisguse.opentracks.data.models.TrackPoint;
 import de.dennisguse.opentracks.io.file.importer.TrackPointAssert;
 import de.dennisguse.opentracks.sensors.SensorManager;
-import de.dennisguse.opentracks.sensors.driver.GpsInternal;
+import de.dennisguse.opentracks.sensors.driver.Driver;
+import de.dennisguse.opentracks.sensors.driver.SensorType;
 import de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetooth;
 import de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometer;
 import de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRate;
@@ -67,6 +68,7 @@ public class TrackRecordingServiceRecordingTest {
     private ContentProviderUtils contentProviderUtils;
 
     private TrackRecordingService service;
+    private String gpsPreference, distancePreference, idlePreference;
 
     @BeforeClass
     public static void preSetUp() {
@@ -88,11 +90,28 @@ public class TrackRecordingServiceRecordingTest {
     @Before
     public void setUp() throws TimeoutException {
         contentProviderUtils = new ContentProviderUtils(context);
+        gpsPreference=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
+        distancePreference=PreferencesUtils.getString(R.string.recording_distance_interval_key,context.getString(R.string.recording_distance_interval_default));
+        idlePreference=PreferencesUtils.getString(R.string.idle_duration_key,context.getString(R.string.idle_duration_default));
+        // These exact-clock recording tests inject their own positions. Never subscribe to
+        // real/emulator GPS: a provider callback can otherwise insert an unsolicited point.
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,SensorType.NONE.getPreferenceValue());
 
         PreferencesUtils.setString(R.string.recording_distance_interval_key, R.string.recording_distance_interval_default);
         PreferencesUtils.setString(R.string.idle_duration_key, R.string.idle_duration_default);
 
         service = startService();
+    }
+
+    @After
+    public void restorePreferences() {
+        try {
+            if(service!=null){service.endCurrentTrack();service.stopIdleSensors();}
+        } finally {
+            PreferencesUtils.setString(R.string.settings_sensor_gps_key,gpsPreference);
+            PreferencesUtils.setString(R.string.recording_distance_interval_key,distancePreference);
+            PreferencesUtils.setString(R.string.idle_duration_key,idlePreference);
+        }
     }
 
     @Test
@@ -243,10 +262,6 @@ public class TrackRecordingServiceRecordingTest {
         String startTime = "2020-02-02T02:02:02Z";
         trackPointCreator.setClock(startTime);
         Track.Id trackId = service.startNewTrack();
-
-        //We do not want the real GPS to interfere.
-        GpsInternal gpsInternal = (GpsInternal)trackPointCreator.getSensorManager().getGpsHandler().driver;
-        LocationManagerCompat.removeUpdates(gpsInternal.locationManager, gpsInternal.locationListenerCompat);
 
         String gps1 = "2020-02-02T02:02:03Z";
         sendGPSLocation(trackPointCreator, gps1, 45.0, 35.0, 1, 15);
@@ -1090,6 +1105,17 @@ public class TrackRecordingServiceRecordingTest {
         location.setSpeed(speed);
 
         trackPointCreator.setClock(time);
-        trackPointCreator.getSensorManager().getGpsHandler().onDataReceived(location);
+        var gps=trackPointCreator.getSensorManager().getGpsHandler();
+        if(gps.driver==null) {
+            gps.driver=new Driver() {
+                private boolean connected=true;
+                @Override public void connect(Context context,android.os.Handler handler,String address) {}
+                @Override public boolean isConnected(){return connected;}
+                @Override public void updateDriverParameters(Context context,android.os.Handler handler) {}
+                @Override public void disconnect(){connected=false;gps.onDisconnected();}
+            };
+            gps.onConnected(null,"Synthetic exact-clock GPS fixture");
+        }
+        gps.onDataReceived(location);
     }
 }
