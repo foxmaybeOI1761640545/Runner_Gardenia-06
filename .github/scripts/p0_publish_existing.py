@@ -39,7 +39,10 @@ def main():
     if ref['object']['type']!='tag':raise ValueError('An annotated tag is required')
     tag=api.request(base+'/git/tags/'+ref['object']['sha'])
     if tag['object']['type']!='commit' or tag['object']['sha']!=BUILD:raise ValueError('Tag targets another commit')
-    with zipfile.ZipFile(io.BytesIO(api.request(base+f'/actions/artifacts/{ARTIFACT}/zip',binary=True))) as archive:
+    # The Artifact redirect endpoint requires the GitHub API media type, unlike
+    # Release asset downloads. gh follows its signed CDN redirect without exposing it.
+    artifact_zip=subprocess.check_output(['gh','api',f'repos/{REPO}/actions/artifacts/{ARTIFACT}/zip'])
+    with zipfile.ZipFile(io.BytesIO(artifact_zip)) as archive:
         if set(archive.namelist())!={APK,'SHA256SUMS','build-info.json','runtime-smoke.json'}:raise ValueError('Unexpected Artifact contents')
         files={name:archive.read(name) for name in archive.namelist()}
     if len(files[APK])!=2715993 or digest(files[APK])!=SHA or files['SHA256SUMS']!=(SHA+'  '+APK+'\n').encode():raise ValueError('APK changed; never substitute/rebuild')

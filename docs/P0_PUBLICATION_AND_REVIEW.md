@@ -14,3 +14,5 @@
 上传认证恢复不需要新的PAT/密钥：仅给专用附件传递Job contents:write/actions:read，使用GitHub Actions自己的短期Token；不配置Environment，不访问签名Secrets，不运行Gradle，不重建或重新签名APK。上传Job只操作既有Draft434907895，重新下载原始固定Artifact和每一份Draft资产，发现差异即失败，禁止clobber/删除资产/修改Tag。
 
 正常源码推送仍需原有完整P0测试和签名门禁。只有显式[p0-existing-apk]提交、与已验收构建相比仅改变本次发布脚本/工作流/新范围测试/文档，才走原始APK附件传递路线；任何生产源码、Gradle/版本/签名或原有测试/门禁变更均拒绝该路线。新增5项范围回归和原有39项辅助测试在本地均通过。
+
+- 附件传递 run41990943575：范围5项测试通过，原始run/Artifact/Tag信息检查通过，既有APK构建和签名Job均未运行。下载原Artifact时HTTP415，原因是原通用Release客户端将binary响应与Accept:application/octet-stream绑定，而Artifact重定向端点要求GitHub API媒体类型。改用gh api的标准媒体类型和重定向处理；未改动原APK、签名或Draft资产。重新执行附件传递验证。
