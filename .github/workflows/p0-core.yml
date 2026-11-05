@@ -17,8 +17,25 @@ env:
   ANDROID_HOME: /usr/local/lib/android/sdk
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
 jobs:
-  checks:
+  route:
+    name: Classify normal CI or accepted-APK publication
     if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-core-migration' && github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    outputs:
+      publication: ${{ steps.route.outputs.publication }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - run: python3 -m unittest discover -s .github/tests -p test_p0_publication_scope.py -v -b
+      - id: route
+        run: python3 .github/scripts/p0_publication_scope.py
+
+  checks:
+    needs: route
+    if: needs.route.outputs.publication == 'false'
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     outputs:
@@ -216,5 +233,31 @@ jobs:
           path: |
             build/reports/
             build/outputs/mapping/reproducibleRelease/
+          if-no-files-found: error
+          retention-days: 90
+
+  publish-existing:
+    name: Upload the already accepted P0 APK to its existing Draft
+    needs: route
+    if: needs.route.outputs.publication == 'true'
+    permissions:
+      contents: write
+      actions: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Reverify original run, tag, immutable APK and Draft, then transfer assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p0_publish_existing.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: P0-Draft-publication-proof-${{ github.run_id }}
+          path: build/reports/p0-publication/result.json
           if-no-files-found: error
           retention-days: 90
