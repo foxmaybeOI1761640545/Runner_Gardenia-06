@@ -55,6 +55,10 @@ public class P0ResponsiveUiTest {
         fail("P0 page did not display "+expected);
     }
     private <T extends Activity> void capture(ActivityScenario<T> screen,String name) throws Exception {
+        long deadline=SystemClock.uptimeMillis()+5000;AtomicBoolean focused=new AtomicBoolean();
+        do{screen.onActivity(activity->focused.set(activity.hasWindowFocus()));if(focused.get())break;SystemClock.sleep(50);}while(SystemClock.uptimeMillis()<deadline);
+        assertTrue("Capture must belong to the focused P0 page",focused.get());
+        SystemClock.sleep(800); // Let the platform finish the old Activity's system-bar transition.
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();P0UiCapture.save(name);
         screen.onActivity(activity->{
             var config=activity.getResources().getConfiguration();int night=config.uiMode&android.content.res.Configuration.UI_MODE_NIGHT_MASK;
