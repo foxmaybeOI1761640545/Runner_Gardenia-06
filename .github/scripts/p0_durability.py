@@ -43,7 +43,7 @@ def run():
     try:
         subprocess.run([manager,'create','avd','-n',avd,'-k','system-images;android-35;default;x86_64','-d','pixel_6','-p',str(temporary/'avd'),'-f'],input='no\n',text=True,check=True,timeout=60)
         with (report/'emulator.log').open('w') as log:
-            process=subprocess.Popen([str(emulator),'-avd',avd,'-port','5560','-no-window','-no-audio','-no-snapshot','-no-boot-anim','-gpu','swiftshader_indirect','-memory','2048','-cores','2'],stdout=log,stderr=subprocess.STDOUT)
+            process=subprocess.Popen([str(emulator),'-avd',avd,'-port','5560','-no-window','-no-audio','-no-snapshot','-no-boot-anim','-partition-size','2048','-gpu','swiftshader_indirect','-memory','2048','-cores','2'],stdout=log,stderr=subprocess.STDOUT)
             print('Booting dedicated API35 storage validation device',flush=True)
             deadline=time.monotonic()+240
             while time.monotonic()<deadline:
