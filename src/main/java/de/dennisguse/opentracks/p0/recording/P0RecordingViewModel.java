@@ -21,7 +21,7 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 
 /** Application-context gateway. Unbinding a screen never stops a started recording service. */
 public class P0RecordingViewModel extends AndroidViewModel {
-    public record Snapshot(RecordingSession session,RecordingData data,GpsStatusValue gps,HeartRatePreview preview,String error,boolean busy) {}
+    public record Snapshot(RecordingSession session,RecordingData data,GpsStatusValue gps,Position position,HeartRatePreview preview,String error,boolean busy) {}
     private final MutableLiveData<Snapshot> snapshot=new MutableLiveData<>();
     private final MutableLiveData<List<WorkoutSummary>> history=new MutableLiveData<>(List.of());
     private final Handler handler=new Handler(Looper.getMainLooper());
@@ -173,7 +173,7 @@ public class P0RecordingViewModel extends AndroidViewModel {
     }
     private void emit() {
         HeartRatePreview preview=observed!=null?observed.getHeartRatePreview():new HeartRatePreview(null,HeartRateStatus.disconnected());
-        snapshot.setValue(new Snapshot(session,data,gps,preview,error,busy));
+        snapshot.setValue(new Snapshot(session,data,gps,observed!=null?observed.getGpsPreview():null,preview,error,busy));
     }
     @Override protected void onCleared() {
         closed=true;detach();worker.shutdownNow();super.onCleared();

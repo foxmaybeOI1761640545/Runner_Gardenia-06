@@ -76,13 +76,13 @@ public class P0Activity extends AbstractActivity {
         binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED&&!value.busy());binding.p0Finish.setEnabled(!idle&&!value.busy());
         binding.p0Running.setEnabled(idle&&!value.busy());binding.p0Cycling.setEnabled(idle&&!value.busy());binding.p0Devices.setEnabled(!value.busy());
         Statistics stats=value.data().track()!=null?value.data().trackStatistics():Statistics.DEFAULT;
-        Position position=null;
-        if(value.data().sensorDataSet()!=null&&value.data().sensorDataSet().position()!=null)
-            position=value.data().sensorDataSet().position().data();
+        // SensorDataSet is consumable by the recorder. Render the last real GPS
+        // measurement instead, preserving its capture time and accuracy between ticks.
+        Position position=value.position();
         boolean fix=value.gps()==GpsStatusValue.GPS_SIGNAL_FIX||value.gps()==GpsStatusValue.GPS_SIGNAL_BAD;
-        double speed=fix&&position!=null&&position.hasSpeed()?position.speed().toMPS():Double.NaN;
+        double speed=fix&&position!=null&&position.hasValidLocation()&&position.hasSpeed()?position.speed().toMPS():Double.NaN;
         String location="—";
-        if(fix&&position!=null&&position.hasLocation()) {
+        if(fix&&position!=null&&position.hasValidLocation()) {
             String accuracy=position.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",position.horizontalAccuracy().toM()):"—";
             location=String.format(Locale.ROOT,"%.6f, %.6f · %s",position.latitude(),position.longitude(),accuracy);
             if(position.time()!=null)location+="\n"+DateTimeFormatter.ISO_LOCAL_TIME.withZone(ZoneId.systemDefault()).format(position.time());

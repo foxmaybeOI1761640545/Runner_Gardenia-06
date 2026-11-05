@@ -329,6 +329,11 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
                 : new de.dennisguse.opentracks.sensors.HeartRatePreview(null,de.dennisguse.opentracks.sensors.HeartRateStatus.disconnected());
     }
 
+    @Nullable
+    public synchronized de.dennisguse.opentracks.data.models.Position getGpsPreview() {
+        return areSensorsStarted() ? trackPointCreator.getSensorManager().getGpsHandler().latestPosition() : null;
+    }
+
     @Deprecated
     @VisibleForTesting
     public TrackPointCreator getTrackPointCreator() {

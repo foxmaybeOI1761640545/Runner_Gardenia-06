@@ -53,6 +53,9 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         sharedPreferenceChangeListener.onSharedPreferenceChanged(null, null);
     }
 
+    /** Last actual GPS measurement, with its original timestamp/accuracy; never consumes recording data. */
+    public Position latestPosition() {return gpsStatusManager.latestPosition();}
+
     @Override
     public void onConnected(String sensorAddress, String sensorName) {
         super.onConnected(sensorAddress, sensorName);

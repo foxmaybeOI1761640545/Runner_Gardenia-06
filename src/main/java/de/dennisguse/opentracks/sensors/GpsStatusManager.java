@@ -33,7 +33,7 @@ class GpsStatusManager {
     private final Context context;
 
     @Nullable
-    private Position lastPosition = null;
+    private volatile Position lastPosition = null;
 
     private Handler handler;
 
@@ -50,6 +50,8 @@ class GpsStatusManager {
         onRequiredAccuracyChanged(PreferencesUtils.getThresholdHorizontalAccuracy());
         onMinSamplingIntervalChanged(PreferencesUtils.getMinSamplingInterval());
     }
+
+    Position latestPosition() {return lastPosition;}
 
     public void start() {
         observer.onGpsStatusChanged(GpsStatusValue.GPS_ENABLED);

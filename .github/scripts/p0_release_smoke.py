@@ -71,8 +71,13 @@ def run():
             for node in root.iter('node'):
                 if node.get('resource-id')==PACKAGE+':id/'+identity and node.get('enabled')=='true':
                     bounds=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
-                    if len(bounds)==4 and bounds[2]>bounds[0] and bounds[3]>bounds[1] and (bounds[1]+bounds[3])//2<2200:
-                        device('shell','input','tap',str((bounds[0]+bounds[2])//2),str((bounds[1]+bounds[3])//2));return
+                    screen=list(map(int,re.findall(r'\d+',root.find('node').get('bounds',''))))
+                    if len(bounds)==4 and len(screen)==4:
+                        # Tap the visible part above system bars, rather than rejecting
+                        # a valid low button using one hard-coded center coordinate.
+                        top=max(bounds[1],screen[3]*0.05);bottom=min(bounds[3],screen[3]*0.95)
+                        if bounds[2]>bounds[0] and bottom-top>=16:
+                            device('shell','input','tap',str((bounds[0]+bounds[2])//2),str(int((top+bottom)/2)));return
             device('shell','input','swipe','540','1800','540','650','350')
         raise ValueError('Release control unavailable: '+identity)
     def tap_text(text):
@@ -125,8 +130,10 @@ def run():
             tree.write(local,encoding='utf-8',xml_declaration=True);device('push',local,pref);device('shell','chown',uid+':'+uid,pref)
             print('Installing verified fixed-key P0 APK over baseline without clearing data',flush=True);device('install','-r',apk,timeout=120)
             device('shell','cmd','location','set-location-enabled','true');start();wait_text('Ready');screenshot('release-home-gps-only')
-            tap('p0_start');wait_text('Recording')
-            for index in range(8):device('emu','geo','fix','103.8',str(1.3+index*0.00002));time.sleep(1)
+            device('emu','geo','fix','103.8','1.3','12','8','4');tap('p0_start');wait_text('Recording')
+            for index in range(8):device('emu','geo','fix','103.8',str(1.3+index*0.00002),'12','8','4');time.sleep(1)
+            wait_text('1.300');metrics=dump();metric=next(node.get('text','') for node in metrics.iter('node') if node.get('resource-id')==PACKAGE+':id/p0_metrics');
+            if '103.800000' not in metric or '±' not in metric or 'Speed —' in metric or 'Pace —' in metric:raise ValueError('Actual Release GPS values missing: '+metric)
             screenshot('release-recording-gps-only');tap('p0_pause');wait_text('Paused');device('shell','am','force-stop',PACKAGE)
             paused=database('paused-db')
             with sqlite3.connect(paused) as connection:
@@ -134,7 +141,7 @@ def run():
                 if row is None:raise ValueError('Real Release workout was not saved')
                 workout,before=row
             device('emu','geo','fix','103.8','1.30064');time.sleep(3);start();wait_text('Paused');tap('p0_resume');wait_text('Recording')
-            for index in range(5):device('emu','geo','fix','103.8',str(1.30064+index*0.00002));time.sleep(1)
+            for index in range(5):device('emu','geo','fix','103.8',str(1.30064+index*0.00002),'12','8','4');time.sleep(1)
             tap('p0_finish');wait_text('Finished');tap('p0_devices');wait_text('Selected strap');screenshot('release-settings-no-bluetooth-permission')
             device('shell','input','keyevent','4');tap('p0_all_history');wait_text(TITLE);screenshot('release-retained-history')
             tap_text(TITLE);wait_text('Samples 2');screenshot('release-retained-workout-detail');tap('p0_share_gpx')
@@ -156,7 +163,7 @@ def run():
                 stats=connection.execute('SELECT distance,duration_total,time_stop-time_start FROM tracks WHERE _id=?',(workout,)).fetchone()
                 points=connection.execute('SELECT COUNT(*) FROM trackpoints WHERE trackid=? AND latitude IS NOT NULL AND type=0',(workout,)).fetchone()[0]
                 segments=connection.execute('SELECT COUNT(*) FROM trackpoints WHERE trackid=? AND type=-2',(workout,)).fetchone()[0]
-                if points<2 or stats[0]<=0 or stats[0]-before>=35 or segments<2 or stats[2]-stats[1]<3000:raise ValueError('Actual GPS/pause/resume acceptance failed: '+str((points,stats,before,segments)))
+                if points<2 or not 0<stats[0]<100 or stats[0]-before>=35 or segments<2 or stats[2]-stats[1]<3000:raise ValueError('Actual GPS/pause/resume acceptance failed: '+str((points,stats,before,segments)))
             permissions=device('shell','dumpsys','package',PACKAGE)
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
             proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':6771,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}

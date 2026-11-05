@@ -5,6 +5,11 @@ import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.action.ViewActions.*;
 import android.Manifest;
+import android.content.Intent;
+import android.location.Location;
+import androidx.test.rule.ServiceTestRule;
+import de.dennisguse.opentracks.services.TrackRecordingService;
+import de.dennisguse.opentracks.sensors.driver.Driver;
 import android.content.Context;
 import android.os.SystemClock;
 import android.widget.TextView;
@@ -27,6 +32,7 @@ import de.dennisguse.opentracks.util.TestEnvironmentUtils;
 
 public class P0RecordingUiTest {
     @Rule public final GrantPermissionRule permissions=GrantPermissionRule.grant(Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.BLUETOOTH_CONNECT,Manifest.permission.POST_NOTIFICATIONS);
+    @Rule public final ServiceTestRule serviceRule=new ServiceTestRule();
     private final Context context=ApplicationProvider.getApplicationContext();
     private String sampling,distance,activityType;
     @Before public void before() {
@@ -55,4 +61,41 @@ public class P0RecordingUiTest {
             assertEquals(ActivityType.CYCLING,new ContentProviderUtils(context).getTrack(new Track.Id(id.get())).activityType());
         }
     }
+    private String metrics(ActivityScenario<P0Activity> screen) {
+        AtomicReference<String> value=new AtomicReference<>();
+        screen.onActivity(a->value.set(((TextView)a.findViewById(R.id.p0_metrics)).getText().toString()));
+        return value.get();
+    }
+    @Test public void realGpsPreviewSurvivesConsumedRecordingSnapshotsAndClearsOnDisabledProvider() throws Exception {
+        try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
+            onView(withId(R.id.p0_start)).perform(scrollTo(),click());phase(screen,R.string.p0_recording);
+            TrackRecordingService core=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+            InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
+                var gps=core.getTrackPointCreator().getSensorManager().getGpsHandler();
+                if(gps.driver!=null)gps.driver.disconnect();
+                gps.driver=new Driver() {
+                    private boolean connected=true;
+                    @Override public void connect(Context c,android.os.Handler h,String address) {}
+                    @Override public boolean isConnected(){return connected;}
+                    @Override public void updateDriverParameters(Context c,android.os.Handler h) {}
+                    @Override public void disconnect(){connected=false;gps.onDisconnected();}
+                };
+                gps.onConnected(null,"Synthetic UI GPS");
+                Location fix=new Location("gps");fix.setLatitude(1.3);fix.setLongitude(103.8);fix.setAccuracy(2);fix.setSpeed(3);fix.setTime(System.currentTimeMillis());
+                gps.onDataReceived(fix);
+            });
+            long deadline=SystemClock.uptimeMillis()+10000;
+            while(!metrics(screen).contains("1.300000")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(50);
+            SystemClock.sleep(2200); // Multiple UI ticks after the recorder has consumed the one GPS event.
+            String displayed=metrics(screen);assertTrue(displayed,displayed.contains("1.300000, 103.800000"));
+            assertTrue(displayed,displayed.contains("±2.0 m"));assertTrue(displayed,displayed.contains("10.8 km/h"));assertTrue(displayed,displayed.contains("5:33 /km"));
+            assertNotNull(core.getGpsPreview());
+            InstrumentationRegistry.getInstrumentation().runOnMainSync(()->core.getTrackPointCreator().getSensorManager().getGpsHandler().onSensorDeactivated());
+            deadline=SystemClock.uptimeMillis()+5000;
+            while(metrics(screen).contains("1.300000")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(50);
+            assertFalse(metrics(screen).contains("1.300000"));assertFalse(metrics(screen).contains("10.8 km/h"));
+            onView(withId(R.id.p0_finish)).perform(scrollTo(),click());phase(screen,R.string.p0_finished);
+        }
+    }
+
 }
