@@ -111,7 +111,9 @@ android {
         }
         release {
             crunchPngs = false
-            minifyEnabled = false
+            minifyEnabled = true
+            shrinkResources = true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-p0.pro'
         }
     }
 
