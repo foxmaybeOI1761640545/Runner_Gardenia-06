@@ -2,9 +2,20 @@
 
 Development branch: feature/p0-core-migration. Baseline main is
 9b5d7b06afc1eb8e3315ba73874ac088fa4d5169. This task does not merge or push main,
-modify existing branches, or create tags/GitHub Releases.
+or modify other existing branches. The accepted P0 APK is now published at
+https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.1
+under an annotated test tag pinned to build3116e5fa7a56ce6f299ea45d5a45745f1aed4466.
+It remains a non-Latest Pre-release; no rebuild/re-signing was performed for publication.
 
-Push code changes to this branch. The branch-only P0 workflow runs Debug, Lint,
+Normal product-code pushes to this branch retain the complete build/test gates.
+The explicit [p0-existing-apk] route permits only publication-helper/workflow/scope-test
+and documentation differences from that accepted build. It rejects product, version,
+signing and existing-test changes, verifies the original run/tag/Artifact, then uses
+a separate contents:write/actions:read job to transfer files to the one existing Draft.
+It has no Environment/signing Secrets and runs no Gradle. This one-shot Draft transfer
+is not a new APK build or a generic automatic version publisher.
+
+For ordinary code pushes, The branch-only P0 workflow runs Debug, Lint,
 all 88 JVM tests and the full API35 Android suite, original/P0 UI evidence,
 real file-database process recovery, GPX schema and offline/identity checks.
 Missing, failed or zero-execution reports fail closed. NO-SOURCE is not a test.
@@ -39,7 +50,12 @@ GPS recording without Bluetooth/notification permission, pause/resume, process
 recovery, unchanged schema43/history and actual Release GPX export/schema.
 Physical H303/RF/outdoor GPS/background/battery remain separate device checks.
 
-After all checks, download the RunnerGardenia-P0-Release-RUNID Artifact from the
+The permanent test download is
+https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/RunnerGardenia-P0-Release.apk
+with SHA256SUMS.txt and the original acceptance-document snapshots on that Release.
+The independent closing review is docs/P0_FINAL_TECHNICAL_REVIEW.md.
+
+The original RunnerGardenia-P0-Release-RUNID Artifact is also available from the
 Actions run page. It contains RunnerGardenia-P0-Release.apk, SHA256SUMS,
 build-info.json and runtime-smoke.json. GitHub's normal Artifact download is a
 platform archive; the APK is not wrapped in an additional archive by this build.
@@ -58,3 +74,15 @@ Open Local recordings for motion/raw-HR statistics, confirmed deletion, Save GPX
 or Share GPX. The core works offline, has no INTERNET permission and disables
 system cloud/device-transfer backups. See docs/P0_GPX_FORMAT.md and
 docs/P0_DEVICE_CHECKLIST.md for export details and pending real-device acceptance.
+
+The final APK is 2,715,993bytes,75.326% smaller than the actual rc1.6/6771 APK
+(11,007,368bytes), with DEX class definitions14838->1519 and resource IDs8280->5050.
+This combines P0 feature/component removal with R8/resources; it is not an isolated
+R8-only benchmark.42 Health-related DEX classes and some dormant old exporters/drivers
+remain through shared preferences/provider/handler roots; they are not exposed or
+started by the P0 UI and do not carry Health permissions. Do not claim zero residual
+legacy code. No production functional defect requiring a new APK was found.
+
+Do not overwrite the published p0.1 tag/assets. Any later production fix needs a new
+version name/code, full regression, signed build, upgrade verification and new test
+Tag/Pre-release (for example p0.2/code6773), after a new authorized task.

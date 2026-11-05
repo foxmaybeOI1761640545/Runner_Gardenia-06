@@ -1,0 +1,558 @@
+{
+  "reviewedBuild": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+  "originalDocs": "e8973de980398f9f64f72eae510a789b86338356",
+  "originalRun": 41974364095,
+  "originalArtifact": 13391972069,
+  "publicationRun": 41991238827,
+  "release": {
+    "id": 434907895,
+    "tag_name": "test-p0-v0.1.0-p0.1",
+    "name": "[TEST][P0] v0.1.0-p0.1",
+    "html_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.1",
+    "target_commitish": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-11-05T08:01:50Z"
+  },
+  "assets": [
+    {
+      "id": 712576218,
+      "name": "build-info.json",
+      "size": 2607,
+      "digest": "sha256:b0b7082ad2a9ea656c0e40fe2c0d1eee9996a2d666c4058be6f8ee7b89e1f2ee",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/build-info.json"
+    },
+    {
+      "id": 712576370,
+      "name": "P0_DELIVERY_REPORT.md",
+      "size": 7797,
+      "digest": "sha256:21fa47fb8cd7aa81dbb40f42a99f3dfaa0870db6d26b52c53e84d2f7aee936bf",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/P0_DELIVERY_REPORT.md"
+    },
+    {
+      "id": 712576406,
+      "name": "P0_DEVICE_CHECKLIST.md",
+      "size": 6203,
+      "digest": "sha256:7cc3239bdf6601d5875089ea9e1e9962564a4ffbd26ecf2a01c86315b3e1e064",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/P0_DEVICE_CHECKLIST.md"
+    },
+    {
+      "id": 712576255,
+      "name": "RunnerGardenia-P0-Release.apk",
+      "size": 2715993,
+      "digest": "sha256:94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/RunnerGardenia-P0-Release.apk"
+    },
+    {
+      "id": 712576307,
+      "name": "runtime-smoke.json",
+      "size": 680,
+      "digest": "sha256:109bf34b7ff2c45598d796646848bda6c48b73567709092a3c283bc92f375fc0",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/runtime-smoke.json"
+    },
+    {
+      "id": 712576355,
+      "name": "SHA256SUMS.txt",
+      "size": 96,
+      "digest": "sha256:48ddcb76da5da22dc91b439700c2a01bc837ce81e5398a6b6536b2eb14421da8",
+      "browser_download_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/SHA256SUMS.txt"
+    }
+  ],
+  "originalApkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+  "originalApkBytes": 2715993,
+  "draftAndPublicRedownloadsVerified": true,
+  "publicBrowserDownloadVerified": true,
+  "notLatestVerified": true,
+  "noApkRebuildOrResigning": true,
+  "productionSourceUnchangedSinceBuild": true,
+  "signature": {
+    "verified": true,
+    "minSdk": 26,
+    "maxSdk": 37,
+    "v2": true,
+    "v3": false,
+    "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+  },
+  "baselineSignature": {
+    "verified": true,
+    "minSdk": 26,
+    "maxSdk": 37,
+    "v2": true,
+    "v3": false,
+    "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+  },
+  "tests": {
+    "android": {
+      "tests": 379,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "executed": 378
+    },
+    "unit": {
+      "tests": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "executed": 88
+    }
+  },
+  "originalHelperTests": 39,
+  "addedPublicationScopeTests": 5,
+  "currentLocalHelperTests": 44,
+  "ignoredTest": {
+    "class": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "name": "recording_stopGPS_noop",
+    "reason": "TODO Bug: GPS can be stopped although the current track is recording",
+    "review": "Existing package-private hard-stop contract TODO; not a P0 UI action. Public stopIdleSensors guards active recording; normal pause/finish/destroy callers audited. Retained unchanged."
+  },
+  "processDurability": {
+    "passed": true,
+    "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "database": "p0-durability.db",
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1943
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2306
+      }
+    }
+  },
+  "gpx": {
+    "passed": true,
+    "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "files": [
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "4283728aa216b7597498f97dbfe75475bb876ff2cbed8349ce2ae29d9247844e",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "event-boundaries.gpx",
+        "sha256": "b15662fc9d7b33f28bf30481120099e2a0fc1002fa414f3d325cb5c085d5fedb",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "0619395fa961d87f1e603836854c3f76b44ddcd60b568c986ed0e3b90eea98ac",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "f6fde0f3ab6819a5abdf0d857cebc90b7a5589c3cf9d546a212fb495d0dafcf1",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "047a013683773bac20d642e8701989eb6f8ae9462bc5b87fc13682839c7c6ccc",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "c11a7cf2bc2057ed4f2aa39293cabe019ab89671821f8a5e2e585c14ea4343c0",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "efb5bcd6b0f30a7461eff9c3b82d2de6b22c740f97110173ce3e808e01543358",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "a34b98d9227d9bcdf198fcccc09ca55bad75c3bb54c85b816a07096d509bf2ae",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "0bbaf74fb0ab2e0c24f8a37c301552e0beaa0ef34029489542cd21810031c46a",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "runtime": {
+    "passed": true,
+    "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+    "installed": true,
+    "upgradeFromVersionCode": 6771,
+    "retainedGpsPoints": 1,
+    "retainedRawHeartSamples": 2,
+    "gpsPoints": 46,
+    "manualSegments": 2,
+    "gpsDistanceMeters": 20.27205514907837,
+    "activeMillis": 57781,
+    "wallMillis": 69490,
+    "forceStopRecovery": true,
+    "bluetoothAndNotificationPermissionDenied": true,
+    "timezone": "Asia/Singapore",
+    "physicalBleTested": false,
+    "liveGpsFieldsVerified": true,
+    "releaseGpxSchemaVerified": true,
+    "releaseExportGpsPoints": 1,
+    "releaseExportRawSamples": 2
+  },
+  "timezone": {
+    "checks": 160,
+    "zones": 4,
+    "singapore": "2020-02-02T10:02:02+08:00",
+    "epochPreserved": true,
+    "isoRoundTrip": true,
+    "dstAbsoluteDifferenceMillis": 3600000,
+    "externalOffsetPreserved": true,
+    "androidTimezoneSwitchTested": false
+  },
+  "apkInventory": {
+    "baseline": {
+      "bytes": 11007368,
+      "sha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+      "dexClasses": 14838,
+      "definedMethods": 119317,
+      "methodIdReferences": 142011,
+      "zipCategories": {
+        "metadata": {
+          "entries": 91,
+          "uncompressed": 155806,
+          "compressed": 43340
+        },
+        "assets": {
+          "entries": 3,
+          "uncompressed": 109952,
+          "compressed": 84738
+        },
+        "dex": {
+          "entries": 5,
+          "uncompressed": 18872496,
+          "compressed": 6877711
+        },
+        "resources": {
+          "entries": 1519,
+          "uncompressed": 4469521,
+          "compressed": 3813387
+        }
+      },
+      "resourceIds": 8280,
+      "resourceTypes": {
+        "color": 1005,
+        "dimen": 1159,
+        "attr": 1560,
+        "string": 979,
+        "id": 910,
+        "layout": 198,
+        "style": 1603,
+        "drawable": 587,
+        "anim": 47,
+        "animator": 40,
+        "xml": 19,
+        "integer": 81,
+        "interpolator": 20,
+        "array": 22,
+        "bool": 37,
+        "plurals": 2,
+        "menu": 10,
+        "raw": 1
+      }
+    },
+    "p0": {
+      "bytes": 2715993,
+      "sha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "dexClasses": 1519,
+      "definedMethods": 8472,
+      "methodIdReferences": 11967,
+      "zipCategories": {
+        "metadata": {
+          "entries": 91,
+          "uncompressed": 126150,
+          "compressed": 38871
+        },
+        "assets": {
+          "entries": 3,
+          "uncompressed": 108454,
+          "compressed": 83240
+        },
+        "dex": {
+          "entries": 2,
+          "uncompressed": 1471200,
+          "compressed": 702689
+        },
+        "resources": {
+          "entries": 690,
+          "uncompressed": 2092022,
+          "compressed": 1789450
+        }
+      },
+      "resourceIds": 5050,
+      "resourceTypes": {
+        "attr": 1075,
+        "string": 514,
+        "id": 941,
+        "drawable": 218,
+        "layout": 62,
+        "color": 528,
+        "dimen": 624,
+        "style": 900,
+        "xml": 17,
+        "interpolator": 18,
+        "integer": 52,
+        "array": 18,
+        "animator": 28,
+        "bool": 27,
+        "anim": 28
+      }
+    },
+    "savedBytes": 8291375,
+    "reductionPercent": 75.326,
+    "baselineHealthClasses": 1582,
+    "p0OriginalHealthMappingsToLiveDex": 42,
+    "p0UniqueHealthDexClasses": 42,
+    "p0HealthClassExamples": [
+      "androidx.health.connect.client.HealthConnectClient",
+      "androidx.health.connect.client.HealthConnectClient$Companion",
+      "androidx.health.connect.client.permission.HealthPermission",
+      "androidx.health.connect.client.records.ActiveCaloriesBurnedRecord",
+      "androidx.health.connect.client.records.BasalBodyTemperatureRecord",
+      "androidx.health.connect.client.records.BasalMetabolicRateRecord",
+      "androidx.health.connect.client.records.BloodGlucoseRecord",
+      "androidx.health.connect.client.records.BloodPressureRecord",
+      "androidx.health.connect.client.records.BodyFatRecord",
+      "androidx.health.connect.client.records.BodyTemperatureRecord",
+      "androidx.health.connect.client.records.BodyWaterMassRecord",
+      "androidx.health.connect.client.records.BoneMassRecord",
+      "androidx.health.connect.client.records.CervicalMucusRecord",
+      "androidx.health.connect.client.records.CyclingPedalingCadenceRecord",
+      "androidx.health.connect.client.records.ElevationGainedRecord",
+      "androidx.health.connect.client.records.ExerciseSessionRecord",
+      "androidx.health.connect.client.records.FloorsClimbedRecord",
+      "androidx.health.connect.client.records.HeartRateRecord",
+      "androidx.health.connect.client.records.HeartRateVariabilityRmssdRecord",
+      "androidx.health.connect.client.records.HeightRecord",
+      "androidx.health.connect.client.records.HydrationRecord",
+      "androidx.health.connect.client.records.IntermenstrualBleedingRecord",
+      "androidx.health.connect.client.records.LeanBodyMassRecord",
+      "androidx.health.connect.client.records.MenstruationFlowRecord",
+      "androidx.health.connect.client.records.MindfulnessSessionRecord",
+      "androidx.health.connect.client.records.NutritionRecord",
+      "androidx.health.connect.client.records.OvulationTestRecord",
+      "androidx.health.connect.client.records.OxygenSaturationRecord",
+      "androidx.health.connect.client.records.PowerRecord",
+      "androidx.health.connect.client.records.RespiratoryRateRecord",
+      "androidx.health.connect.client.records.RestingHeartRateRecord",
+      "androidx.health.connect.client.records.SexualActivityRecord",
+      "androidx.health.connect.client.records.SpeedRecord",
+      "androidx.health.connect.client.records.StepsRecord",
+      "androidx.health.connect.client.records.TotalCaloriesBurnedRecord",
+      "androidx.health.connect.client.records.Vo2MaxRecord",
+      "androidx.health.connect.client.records.WeightRecord",
+      "androidx.health.connect.client.records.WheelchairPushesRecord",
+      "de.dennisguse.opentracks.io.healthconnect.exporter.HealthConnectUtils",
+      "de.dennisguse.opentracks.io.healthconnect.exporter.HealthConnectWorker"
+    ],
+    "nonP0MappingsToLiveDex": {
+      "TrackListActivity": [],
+      "ChartFragment": [],
+      "ChartView": [],
+      "HealthConnect": [
+        "androidx.health.connect.client.HealthConnectClient",
+        "androidx.health.connect.client.HealthConnectClient$Companion",
+        "de.dennisguse.opentracks.io.healthconnect.exporter.HealthConnectUtils",
+        "de.dennisguse.opentracks.io.healthconnect.exporter.HealthConnectWorker",
+        "de.dennisguse.opentracks.settings.HealthConnect$ExportAll",
+        "de.dennisguse.opentracks.settings.HealthConnect$Settings"
+      ],
+      "HealthData": [],
+      "CyclingCadenceBluetooth": [
+        "de.dennisguse.opentracks.sensors.driver.CyclingCadenceBluetooth",
+        "de.dennisguse.opentracks.sensors.driver.CyclingCadenceBluetooth$CrankData",
+        "de.dennisguse.opentracks.sensors.driver.CyclingCadenceBluetooth$CyclingCadenceMeasurement",
+        "de.dennisguse.opentracks.sensors.driver.CyclingCadenceBluetooth$DirectCadenceData"
+      ],
+      "CyclingPowerBluetooth": [
+        "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetooth",
+        "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetooth$Data"
+      ],
+      "RunningSpeedAndCadenceBluetooth": [
+        "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetooth",
+        "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetooth$Data"
+      ]
+    },
+    "p0KeptLayouts": [
+      "layout/abc_action_bar_title_item",
+      "layout/abc_action_menu_item_layout",
+      "layout/abc_action_menu_layout",
+      "layout/abc_action_mode_bar",
+      "layout/abc_action_mode_close_item_material",
+      "layout/abc_alert_dialog_button_bar_material",
+      "layout/abc_alert_dialog_material",
+      "layout/abc_alert_dialog_title_material",
+      "layout/abc_cascading_menu_item_layout",
+      "layout/abc_dialog_title_material",
+      "layout/abc_expanded_menu_layout",
+      "layout/abc_list_menu_item_checkbox",
+      "layout/abc_list_menu_item_icon",
+      "layout/abc_list_menu_item_layout",
+      "layout/abc_list_menu_item_radio",
+      "layout/abc_popup_menu_header_item_layout",
+      "layout/abc_popup_menu_item_layout",
+      "layout/abc_screen_content_include",
+      "layout/abc_screen_simple",
+      "layout/abc_screen_simple_overlay_action_mode",
+      "layout/abc_screen_toolbar",
+      "layout/abc_search_dropdown_item_icons_2line",
+      "layout/abc_search_view",
+      "layout/abc_select_dialog_material",
+      "layout/design_text_input_end_icon",
+      "layout/design_text_input_start_icon",
+      "layout/expand_button",
+      "layout/image_frame",
+      "layout/m3_alert_dialog",
+      "layout/m3_alert_dialog_actions",
+      "layout/m3_alert_dialog_title",
+      "layout/m3_auto_complete_simple_item",
+      "layout/mtrl_alert_dialog",
+      "layout/mtrl_alert_dialog_actions",
+      "layout/mtrl_alert_dialog_title",
+      "layout/mtrl_alert_select_dialog_item",
+      "layout/mtrl_alert_select_dialog_multichoice",
+      "layout/mtrl_alert_select_dialog_singlechoice",
+      "layout/mtrl_auto_complete_simple_item",
+      "layout/p0_history",
+      "layout/p0_home",
+      "layout/p0_sensors",
+      "layout/preference",
+      "layout/preference_activity_type",
+      "layout/preference_category",
+      "layout/preference_category_material",
+      "layout/preference_dialog_edittext",
+      "layout/preference_dropdown",
+      "layout/preference_dropdown_material",
+      "layout/preference_list_fragment",
+      "layout/preference_material",
+      "layout/preference_recyclerview",
+      "layout/preference_widget_checkbox",
+      "layout/preference_widget_seekbar",
+      "layout/preference_widget_seekbar_material",
+      "layout/preference_widget_switch",
+      "layout/preference_widget_switch_compat",
+      "layout/select_dialog_item_material",
+      "layout/select_dialog_multichoice_material",
+      "layout/select_dialog_singlechoice_material",
+      "layout/support_simple_spinner_dropdown_item",
+      "layout/view_preference_switch"
+    ],
+    "mappingSha256": "b9de8f8b995bd1ec7b41873691dacf21cbc1321ba1b21dbf5b9a790346a215b1"
+  },
+  "residualCode": "42 Health-related live DEX classes, dormant legacy KML/CSV exporters and cadence/power drivers remain. Legacy preference XML intents and private ShareContentProvider/shared handler roots retain them. No P0 UI/component/permission/driver dispatch enables these features; not a functional defect or a claim of zero residue.",
+  "physicalValidation": "NEEDS_DEVICE_VALIDATION",
+  "stages": {
+    "0": "PASSED",
+    "1": "PASSED",
+    "2": "PASSED",
+    "3": "PASSED",
+    "4": "PASSED",
+    "5": "PASSED",
+    "6": "PASSED",
+    "7": "PASSED",
+    "8": "PASSED",
+    "9": "PASSED",
+    "10": "PASSED",
+    "11": "PASSED",
+    "12": "PASSED",
+    "13": "PASSED"
+  },
+  "newProductionDefectsFound": false,
+  "newApkVersionRequired": false,
+  "retainedLibraryDexClasses": {
+    "androidx.health.": 38,
+    "androidx.work.": 29,
+    "androidx.mediarouter.": 0,
+    "androidx.constraintlayout.": 0,
+    "androidx.gridlayout.": 0,
+    "kotlinx.coroutines.": 98
+  },
+  "actualBinaryManifestAndPolicies": {
+    "applicationId": "com.fox.runner",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "allowBackup": false,
+    "components": {
+      "activity": [
+        "de.dennisguse.opentracks.introduction.IntroductionActivity",
+        "de.dennisguse.opentracks.p0.app.P0Activity",
+        "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+        "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+      ],
+      "activity-alias": [],
+      "service": [
+        "androidx.appcompat.app.AppLocalesMetadataHolderService",
+        "de.dennisguse.opentracks.services.TrackRecordingService"
+      ],
+      "provider": [
+        "androidx.core.content.FileProvider",
+        "de.dennisguse.opentracks.data.ShareContentProvider"
+      ],
+      "receiver": []
+    },
+    "debuggable": false,
+    "versionName": "v0.1.0-p0.1",
+    "versionCode": 6772,
+    "foregroundServiceType": "0x18",
+    "decodedPolicies": {
+      "backup": {
+        "resource": {
+          "name": "xml/p0_backup_rules",
+          "file": "res/Mg.xml"
+        },
+        "xml": "<full-backup-content><exclude domain=\"root\" path=\".\" /><exclude domain=\"file\" path=\".\" /><exclude domain=\"database\" path=\".\" /><exclude domain=\"sharedpref\" path=\".\" /><exclude domain=\"external\" path=\".\" /><exclude domain=\"device_root\" path=\".\" /><exclude domain=\"device_file\" path=\".\" /><exclude domain=\"device_database\" path=\".\" /><exclude domain=\"device_sharedpref\" path=\".\" /></full-backup-content>"
+      },
+      "extraction": {
+        "resource": {
+          "name": "xml/p0_data_extraction_rules",
+          "file": "res/k5.xml"
+        },
+        "xml": "<data-extraction-rules><cloud-backup disableIfNoEncryptionCapabilities=\"true\"><exclude domain=\"root\" path=\".\" /><exclude domain=\"file\" path=\".\" /><exclude domain=\"database\" path=\".\" /><exclude domain=\"sharedpref\" path=\".\" /><exclude domain=\"external\" path=\".\" /><exclude domain=\"device_root\" path=\".\" /><exclude domain=\"device_file\" path=\".\" /><exclude domain=\"device_database\" path=\".\" /><exclude domain=\"device_sharedpref\" path=\".\" /></cloud-backup><device-transfer><exclude domain=\"root\" path=\".\" /><exclude domain=\"file\" path=\".\" /><exclude domain=\"database\" path=\".\" /><exclude domain=\"sharedpref\" path=\".\" /><exclude domain=\"external\" path=\".\" /><exclude domain=\"device_root\" path=\".\" /><exclude domain=\"device_file\" path=\".\" /><exclude domain=\"device_database\" path=\".\" /><exclude domain=\"device_sharedpref\" path=\".\" /></device-transfer></data-extraction-rules>"
+      },
+      "filepaths": {
+        "resource": {
+          "name": "xml/file_paths",
+          "file": "res/8K.xml"
+        },
+        "xml": "<paths><cache-path name=\"p0_gpx\" path=\"p0_exports/\" /></paths>"
+      }
+    }
+  }
+}

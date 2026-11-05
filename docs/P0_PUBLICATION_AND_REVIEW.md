@@ -7,12 +7,14 @@
 | 0 原始发布证据 | PASSED | 新下载 Artifact13391972069，2,715,993bytes，SHA25694d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0；aapt2身份与非Debug；独立apksig9.5.0验证SDK26–37/v2及固定证书；run41974364095成功/构建3116e5f；e8973de及b4d8070均只含docs变更 |
 | 1 测试 annotated Tag | PASSED | test-p0-v0.1.0-p0.1远程重新读取，解析目标3116e5fa7a56ce6f299ea45d5a45745f1aed4466；原有3个rc Tag均保留 |
 | 2 Draft Pre-release | PASSED | Draft434907895，title[TEST][P0]v0.1.0-p0.1，prerelease=true，target_commitish=构建SHA；make_latest=false；原仓库没有Latest稳定Release（API404） |
-| 3 附件准备与上传 | IN_PROGRESS | 原始APK及SHA256SUMS.txt、e8973de原始两份文档、build-info/runtime-smoke共6个附件；工作区uploads.github.com认证401，而api.github.com可正常创建/读取Draft |
-| 4 Draft复核、发布、公开下载复核 | PENDING | 全部资产重新下载核验后才允许发布 |
-| 5–13 技术审查及最终收口 | PENDING | 必须在阶段4通过后执行；尚未开始 |
+| 3 附件准备与上传 | PASSED | 原始APK及SHA256SUMS.txt、e8973de原始两份文档、build-info/runtime-smoke共6个附件；工作区uploads.github.com认证401，而api.github.com可正常创建/读取Draft |
+| 4 Draft复核、发布、公开下载复核 | PASSED | 六个资产Draft与公开阶段分别重下载核验；公开browser URL再下载；prerelease/non-Latest/Tag保持正确 |
+| 5–13 技术审查及最终收口 | PASSED（真机项目独立待验收） | 第一部分完成后实际执行；详见P0_FINAL_TECHNICAL_REVIEW.md与p0-final-review.json |
 
 上传认证恢复不需要新的PAT/密钥：仅给专用附件传递Job contents:write/actions:read，使用GitHub Actions自己的短期Token；不配置Environment，不访问签名Secrets，不运行Gradle，不重建或重新签名APK。上传Job只操作既有Draft434907895，重新下载原始固定Artifact和每一份Draft资产，发现差异即失败，禁止clobber/删除资产/修改Tag。
 
 正常源码推送仍需原有完整P0测试和签名门禁。只有显式[p0-existing-apk]提交、与已验收构建相比仅改变本次发布脚本/工作流/新范围测试/文档，才走原始APK附件传递路线；任何生产源码、Gradle/版本/签名或原有测试/门禁变更均拒绝该路线。新增5项范围回归和原有39项辅助测试在本地均通过。
 
 - 附件传递 run41990943575：范围5项测试通过，原始run/Artifact/Tag信息检查通过，既有APK构建和签名Job均未运行。下载原Artifact时HTTP415，原因是原通用Release客户端将binary响应与Accept:application/octet-stream绑定，而Artifact重定向端点要求GitHub API媒体类型。改用gh api的标准媒体类型和重定向处理；未改动原APK、签名或Draft资产。重新执行附件传递验证。
+
+- 附件传递run41991238827成功，6个附件均重下载核验；原APK构建/签名Job未运行。Draft复核后才设置draft=false/prerelease=true/make_latest=false，公开阶段及browser URL再次核验一致。第二部分随后执行，原始XML、40个导出时间值/4时区、实际DEX/资源、旧版11,007,368bytes APK、binary Manifest/备份规则、升级/权限/生命周期/UI/硬件边界均已审查。发现非功能性Health/旧导出器/驱动残留并如实记录，没有发现需要改版的生产功能缺陷；仅更新过时发布文档和真机清单，不重建APK。

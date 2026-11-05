@@ -41,3 +41,20 @@ restrictions, reboot and battery use remain NEEDS_DEVICE_VALIDATION. Emulator an
 source evidence cannot establish those hardware properties. Optional notification
 denial does not gate a GPS recording; preview uses only its connected-device
 foreground capability. Missing system recovery records stop non-sticky safely.
+
+## Final signed APK review
+
+The published immutable p0.1 APK was independently decoded from binary AndroidManifest.xml,
+not just the source merge: no INTERNET/Health/network-state/boot permissions; only the four
+P0 Activities, private data/FileProviders, recording service and disabled app-locale service.
+The actual compiled backup/data-extraction XML excludes all nine domains for cloud/device
+transfer, and FileProvider exposes only p0_exports/. The FGS mask is0x18(location|connectedDevice);
+runtime chooses the permitted recording/preview subset. Full details and limits are in
+P0_FINAL_TECHNICAL_REVIEW.md and p0-evidence/p0-final-review.json.
+
+Class presence is separate from enabled functionality:42 Health-related DEX classes, old
+KML/CSV export classes and some non-P0 sensor drivers remain through legacy preference XML,
+private shared provider and handler references. They have no P0 UI/Manifest/permission or
+active-driver path. Health post-export callers are the removed TrackStopped/Health Activities;
+P0 finish uses the core service directly. This is a measured nonfunctional size residue, not
+a claim that every obsolete dependency has vanished.

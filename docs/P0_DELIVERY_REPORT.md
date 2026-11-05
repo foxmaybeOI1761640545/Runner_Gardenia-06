@@ -1,14 +1,14 @@
 # Runner Gardenia P0 最终交付报告
 
-自动化开发及 APK 交付：PASSED。真实心率带、户外 GPS 和长期后台运行：NEEDS_DEVICE_VALIDATION。
+自动化开发及 APK 交付：PASSED。原始 APK 现已发布为 [P0 测试 Pre-release](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.1)，没有重新构建或重新签名。真实心率带、户外 GPS 和长期后台运行：NEEDS_DEVICE_VALIDATION。
 
 ## 1. Git 分支情况
 
 - 原仓库：https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
 - 原 main 基线：`9b5d7b06afc1eb8e3315ba73874ac088fa4d5169`。
 - 新开发分支：`feature/p0-core-migration`。
-- 本次实际构建源代码：`3116e5fa7a56ce6f299ea45d5a45745f1aed4466`。其后仅补充验收文档，没有重新构建或改变业务代码。
-- main 和原有 `feature/heart-rate-monitoring` 分支保持初始 SHA；未合并 main，未创建或修改 Tag/GitHub Release。
+- 本次实际构建源代码：`3116e5fa7a56ce6f299ea45d5a45745f1aed4466`。其后补充验收文档及仅传递既有附件的发布辅助流程；没有重新构建 APK 或改变业务代码。
+- main 和原有 `feature/heart-rate-monitoring` 分支保持初始 SHA；未合并 main。最初 Artifact 交付时未创建 Tag/Release；本轮按新指令发布了独立测试 Tag `test-p0-v0.1.0-p0.1`，仍指向原始构建提交。
 - 分阶段提交及验收：[迁移计划](P0_MIGRATION_PLAN.md)、[完整验收记录](P0_ACCEPTANCE.md)、[冻结基线](P0_BASELINE.json)。
 
 ## 2. P0 功能完成情况
@@ -85,4 +85,4 @@
 - [R8/正式运行记录和5张截图](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41974364095/artifacts/13391757704)
 - [完整测试报告与截图](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41974364095/artifacts/13391716581)
 
-流程：精确分支/提交准备 → Debug/Lint/JVM/API35 → 报告/GPX/文件恢复/UI/离线身份门禁 → 同轮报告验证 → R8正式签名 → APK安全/身份/证书验证 → 实际安装/升级/记录/GPX → Artifact。PR 和其他分支不能进入这个签名 Job。没有 Tag 或 GitHub Release 发布操作。
+原始构建流程：精确分支/提交准备 → Debug/Lint/JVM/API35 → 报告/GPX/文件恢复/UI/离线身份门禁 → 同轮报告验证 → R8正式签名 → APK安全/身份/证书验证 → 实际安装/升级/记录/GPX → Artifact。PR 和其他分支不能进入这个签名 Job。原始构建运行没有 Tag 或 GitHub Release 发布操作；后续单独附件传递 run41991238827 复用同一 APK，完成测试发布，没有执行构建或签名。最终技术审查见 [P0_FINAL_TECHNICAL_REVIEW.md](P0_FINAL_TECHNICAL_REVIEW.md)。

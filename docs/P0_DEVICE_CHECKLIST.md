@@ -70,3 +70,20 @@ Record phone model/Android version, H303 firmware, permissions, timezone, APK SH
 and certificate, expected/actual result and logs for each trial. These items are
 not automatically PASSED by synthetic UI/protocol/storage tests. No real device
 has been connected to this execution environment.
+
+## Xiaomi / HyperOS / MIUI and cross-timezone trials — NEEDS_DEVICE_VALIDATION
+
+- Record handset model, Android/HyperOS/MIUI version and the app's GPS/BLE/notification
+  grants. First test the default battery policy; then separately document any user-selected
+  background-permitted policy. Do not assume autostart or additional permissions are required.
+- Run 30-minute and two-hour screen-off workouts, including strap power cycles; compare
+  start/end battery, temperature, notification visibility, GPS intervals, raw HR counts and
+  reconnection delay. Repeat on a non-Xiaomi phone. Forced-stop is different from OS process
+  reclamation: manually reopen after force-stop, without promising automatic background restart.
+- Keep a completed workout, change device timezone from Asia/Singapore to UTC/Europe/Berlin,
+  reopen history and export GPX. Local display should convert, while epoch timestamps, durations,
+  sorting and exported absolute instants remain unchanged. Restore the original timezone afterward.
+- Test Android system Save GPX and Share GPX with real local document providers while offline;
+  verify the file externally without treating an optional cloud provider as an app dependency.
+- Capture actual device/model/firmware/permission/timezone/APK-hash evidence. No item here is
+  PASSED by the historical emulator screenshots or host timezone arithmetic.
