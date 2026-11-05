@@ -24,18 +24,21 @@ public final class P0GpxExporter {
     private static boolean boundary(TrackPoint point) {
         return point.isSegmentManualStart()||point.isSegmentManualEnd()||point.isIdleTriggered()||point.type()==TrackPoint.Type.SEGMENT_START_AUTOMATIC;
     }
+    private static boolean gpsPoint(TrackPoint point) {
+        return point.position().hasLocation()&&(point.type()==TrackPoint.Type.TRACKPOINT||point.type()==TrackPoint.Type.SEGMENT_START_AUTOMATIC);
+    }
     private static final class Segments {
         private java.time.Instant previousGps;
         private int number;
         boolean next(TrackPoint point) {
             boolean split=boundary(point);
-            if(previousGps!=null&&point.position().hasLocation()) {
+            if(previousGps!=null&&gpsPoint(point)) {
                 var elapsed=java.time.Duration.between(previousGps,point.getTime());
                 // Match the existing 30-second lost-fix horizon, without fabricating a bridge.
                 split|=elapsed.isNegative()||elapsed.compareTo(java.time.Duration.ofSeconds(30))>0;
             }
             if(split){number++;previousGps=null;}
-            if(point.position().hasLocation())previousGps=point.getTime();
+            if(gpsPoint(point))previousGps=point.getTime();
             return split;
         }
     }
@@ -56,7 +59,7 @@ public final class P0GpxExporter {
         List<HeartRateTimeMatcher.Anchor> anchors=new ArrayList<>();Segments index=new Segments();
         repository.forEachPoint(id,point->{
             index.next(point);
-            if(point.position().hasLocation())anchors.add(new HeartRateTimeMatcher.Anchor(point.id().id(),point.getTime(),index.number));
+            if(gpsPoint(point))anchors.add(new HeartRateTimeMatcher.Anchor(point.id().id(),point.getTime(),index.number));
         });
         HeartRateTimeMatcher matcher=new HeartRateTimeMatcher(anchors);
         Map<Long,HeartRate> matched=new HashMap<>();
@@ -78,7 +81,7 @@ public final class P0GpxExporter {
                 try {
                     interrupted();
                     if(writing.next(point)&&open[0]){xml.endTag(GPX,"trkseg");open[0]=false;}
-                    if(!point.position().hasLocation())return;
+                    if(!gpsPoint(point))return;
                     Position position=point.position();
                     if(!Double.isFinite(position.latitude())||!Double.isFinite(position.longitude())||Math.abs(position.latitude())>90||Math.abs(position.longitude())>180)
                         throw new IOException("Invalid GPS coordinates");

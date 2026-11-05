@@ -59,6 +59,8 @@ public class P0ResponsiveUiTest {
         screen.onActivity(activity->{
             var config=activity.getResources().getConfiguration();int night=config.uiMode&android.content.res.Configuration.UI_MODE_NIGHT_MASK;
             assertEquals(name.contains("-dark-")?32:16,night);
+            var bars=androidx.core.view.WindowCompat.getInsetsController(activity.getWindow(),activity.getWindow().getDecorView());
+            assertEquals(night!=32,bars.isAppearanceLightStatusBars());assertEquals(night!=32,bars.isAppearanceLightNavigationBars());
             assertTrue(name.contains("-small-")?config.screenWidthDp<=360:config.screenWidthDp>=600);
             assertNoEllipsis(activity.findViewById(android.R.id.content));
             try{captures.put(new JSONObject().put("file",name+".png").put("nightMode",night).put("widthDp",config.screenWidthDp));}catch(Exception failure){throw new AssertionError(failure);}
@@ -116,6 +118,7 @@ public class P0ResponsiveUiTest {
         }finally {
             if(service!=null){final TrackRecordingService core=service;InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{core.endCurrentTrack();core.stopIdleSensors();});}
             new SessionStore(context).save(RecordingSession.ready());PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,selected);PreferencesUtils.setString(R.string.theme_key,theme);
+            TestEnvironmentUtils.deleteAllTracks();
             InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);restore("size",size);restore("density",density);
         }
     }

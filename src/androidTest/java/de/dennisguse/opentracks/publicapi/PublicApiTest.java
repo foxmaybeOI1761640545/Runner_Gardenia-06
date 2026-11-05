@@ -9,6 +9,8 @@ import androidx.test.filters.LargeTest;
 import androidx.test.rule.GrantPermissionRule;
 
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,6 +32,16 @@ public class PublicApiTest {
     public GrantPermissionRule mGrantPermissionRule = TestUtil.createGrantPermissionRule();
 
     private final Context context = ApplicationProvider.getApplicationContext();
+    private boolean publicApiEnabled;
+
+    @Before public void isolate() {
+        publicApiEnabled=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).getBoolean(context.getString(R.string.publicapi_enabled_key),false);
+        de.dennisguse.opentracks.util.TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
+    }
+    @After public void cleanup() {
+        de.dennisguse.opentracks.util.TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
+        PreferencesUtils.setBoolean(R.string.publicapi_enabled_key,publicApiEnabled);
+    }
 
     //NOTE: this doesn't check if the TrackRecordingService was started in foreground.
     @Test

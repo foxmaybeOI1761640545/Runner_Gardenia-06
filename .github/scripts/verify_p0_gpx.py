@@ -7,7 +7,7 @@ import shutil
 import subprocess
 import xml.etree.ElementTree as ET
 
-REQUIRED={'raw-complete','heart-only','gps-only','segments','legacy','decimal-escaping','local-file','gps-gap'}
+REQUIRED={'raw-complete','heart-only','gps-only','segments','legacy','decimal-escaping','local-file','gps-gap','event-boundaries'}
 
 
 def verify():

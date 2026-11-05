@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteException;
 import androidx.test.core.app.ApplicationProvider;
 import org.junit.Before;
+import org.junit.After;
 import org.junit.Test;
 import java.time.Instant;
 import java.time.ZoneOffset;
@@ -20,6 +21,7 @@ public class P0WorkoutRepositoryTest {
     private ContentProviderUtils store;
     private WorkoutRepository repository;
     @Before public void prepare() {store=new ContentProviderUtils(context);store.deleteAllTracks(context);repository=new WorkoutRepository(context);}
+    @After public void cleanup() {if(store!=null)store.deleteAllTracks(context);}
     private Track.Id track(String name) {return store.insertTrack(new Track(null,UUID.randomUUID(),name,"","",ActivityType.RUNNING,ZoneOffset.UTC,Statistics.DEFAULT));}
     private HeartRate sample(float bpm, long time) {return new HeartRate(bpm,new HeartRateSample(Instant.EPOCH.plusSeconds(time),"AA:BB:CC:DD:EE:FF","Test strap",true,5,List.of(1024,1000)));}
     @Test public void snapshotsPreserveRawDataAndStatisticsAcrossRepositoryReopen() {

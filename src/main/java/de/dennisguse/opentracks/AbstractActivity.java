@@ -49,6 +49,14 @@ public abstract class AbstractActivity extends AppCompatActivity {
         View rootView = createRootView();
         setContentView(rootView);
 
+        // AppCompat applies the selected app theme in super.onCreate. Use that
+        // resolved mode rather than the previous Activity's system-bar appearance.
+        boolean light=(getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK)
+                !=android.content.res.Configuration.UI_MODE_NIGHT_YES;
+        var bars=androidx.core.view.WindowCompat.getInsetsController(getWindow(),getWindow().getDecorView());
+        bars.setAppearanceLightStatusBars(light);
+        bars.setAppearanceLightNavigationBars(light);
+
         edge2edgeApplyInsets(rootView);
     }
 

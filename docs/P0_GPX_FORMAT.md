@@ -10,7 +10,9 @@ eligible for cleanup after seven days.
 
 ## Coordinates and time
 
-Only stored coordinate-bearing TrackPoints become trkpt. No location is invented
+Only stored coordinate-bearing TRACKPOINT/SEGMENT_START_AUTOMATIC rows become
+trkpt. Control/event rows (manual start/end and idle) never become extra GPS
+samples even if an old row carries a previously received coordinate. No location is invented
 for a heart-rate-only sample or workout. Manual pause/resume, automatic GPS gaps
 and idle boundaries form distinct trkseg elements. GPS silence longer than the
 existing 30-second lost-fix horizon, or a backwards GPS timestamp, also starts a

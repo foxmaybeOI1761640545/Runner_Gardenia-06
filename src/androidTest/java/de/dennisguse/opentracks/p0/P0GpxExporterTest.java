@@ -104,6 +104,11 @@ public class P0GpxExporterTest {
             Element second=(Element)xml.getElementsByTagNameNS(P0GpxExporter.GPX,"trkpt").item(1);assertEquals("-180.0",second.getAttribute("lon"));
         }finally{Locale.setDefault(original);}
     }
+    @Test public void controlEventsWithCoordinatesNeverBecomeExtraGpsSamples() throws Exception {
+        point(0,1.3,TrackPoint.Type.TRACKPOINT,null);point(1,1.3,TrackPoint.Type.SEGMENT_END_MANUAL,null);
+        point(10,2.3,TrackPoint.Type.SEGMENT_START_MANUAL,null);point(11,2.3,TrackPoint.Type.TRACKPOINT,null);point(12,2.3,TrackPoint.Type.IDLE,null);
+        Document xml=export("event-boundaries");assertEquals(2,count(xml,P0GpxExporter.GPX,"trkpt"));assertEquals(2,count(xml,P0GpxExporter.GPX,"trkseg"));
+    }
     @Test public void outputFailureIsPropagatedAndProtectedWorkoutCannotExport() throws Exception {
         try {
             new P0GpxExporter(context).write(id,new OutputStream(){@Override public void write(int value) throws IOException{throw new IOException("Synthetic disk failure");}});fail("Must report write failure");
