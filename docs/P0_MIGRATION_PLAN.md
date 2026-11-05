@@ -27,7 +27,7 @@ GPX must retain every raw HR sample, exact timestamp and connection identity usi
 | 7 | Local GPX save/share, all raw HR samples, no fabricated points, XML/schema/round-trip tests | PASSED | 8c93038 / 41933012158 |
 | 8 | Manifest/dependency/code/packaged APK offline audit; no account/upload/cloud/online maps | PASSED | 56baf73 / 41936236159 |
 | 9 | Full relevant JVM + API35 regression, all report gates, screenshots | PASSED | 6c2a4c2 / 41943762519 |
-| 10 | Existing release variant, fixed key, R8/resource shrink, zipalign/apksigner, Release install/start and Artifact | IN_PROGRESS | candidate / cloud signing and runtime acceptance pending |
+| 10 | Existing release variant, fixed key, R8/resource shrink, zipalign/apksigner, Release install/start and Artifact | PASSED | 3116e5f / 41974364095 |
 
 Candidate commits are necessary inputs to GitHub Actions: run available local checks, commit/push the stage candidate only to this branch, inspect actual cloud reports, then record acceptance. A failed candidate never authorizes the next stage. Stage records distinguish code candidates and accepted results; no Android result is inferred from local script checks or NO-SOURCE.
 
