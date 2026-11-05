@@ -17,6 +17,19 @@ FIXTURE=991001
 TITLE='Synthetic retained P0 workout'
 
 
+
+def validate_live_metrics(metric):
+    # The emulator's GNSS/NMEA round-trip is not decimal-string exact. Require
+    # numeric coordinates within the short controlled route and a 5m-class fix.
+    position=re.search(r'([-+]?\d+\.\d+), ([-+]?\d+\.\d+) · ±(\d+\.\d+) m',metric)
+    motion=re.search(r'Speed (\d+\.\d+) km/h · Pace (\d+):(\d{2}) /km',metric)
+    if not position or not motion:raise ValueError('Actual Release GPS fields missing: '+metric)
+    latitude,longitude,accuracy=map(float,position.groups())
+    speed=float(motion[1]);minutes=int(motion[2]);seconds=int(motion[3])
+    if not (1.29999<=latitude<=1.3002 and abs(longitude-103.8)<=0.0001 and 0<accuracy<=20
+            and speed>0 and 0<=seconds<60 and minutes*60+seconds>0):
+        raise ValueError('Actual Release GPS metrics outside the controlled route: '+metric)
+
 def run():
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
     output=Path('build/reports/p0-release-smoke');output.mkdir(parents=True,exist_ok=True)
@@ -133,7 +146,7 @@ def run():
             device('emu','geo','fix','103.8','1.3','12','8','4');tap('p0_start');wait_text('Recording')
             for index in range(8):device('emu','geo','fix','103.8',str(1.3+index*0.00002),'12','8','4');time.sleep(1)
             wait_text('1.300');metrics=dump();metric=next(node.get('text','') for node in metrics.iter('node') if node.get('resource-id')==PACKAGE+':id/p0_metrics');
-            if '103.800000' not in metric or '±' not in metric or 'Speed —' in metric or 'Pace —' in metric:raise ValueError('Actual Release GPS values missing: '+metric)
+            validate_live_metrics(metric)
             screenshot('release-recording-gps-only');tap('p0_pause');wait_text('Paused');device('shell','am','force-stop',PACKAGE)
             paused=database('paused-db')
             with sqlite3.connect(paused) as connection:
@@ -166,7 +179,7 @@ def run():
                 if points<2 or not 0<stats[0]<100 or stats[0]-before>=35 or segments<2 or stats[2]-stats[1]<3000:raise ValueError('Actual GPS/pause/resume acceptance failed: '+str((points,stats,before,segments)))
             permissions=device('shell','dumpsys','package',PACKAGE)
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
-            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':6771,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
+            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':6771,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=6771;Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:(output/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15))
