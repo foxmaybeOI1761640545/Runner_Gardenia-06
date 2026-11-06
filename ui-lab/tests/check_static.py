@@ -33,6 +33,12 @@ assert not re.search(r'url\([\s\'\"]*(https?:)?//', css), 'External CSS asset'
 js = (ROOT / 'app.js').read_text()
 assert not re.search(r'\b(fetch|XMLHttpRequest|WebSocket|geolocation|requestDevice)\s*\(', js), 'Unexpected network/device API'
 assert len(re.findall(r"\{id:'(?:precision|quiet|explorer|neon|swiss|industrial|wellness|aurora|racing|brutal)'", js)) == 10
+# The CI font is not a web dependency. Its local subset must cover every Chinese
+# codepoint in the rendered source, preventing tofu in retained screenshots.
+required = {ord(c) for c in js + css + (ROOT / 'index.html').read_text() if 0x3400 <= ord(c) <= 0x9fff}
+covered = {int(line.strip()[2:],16) for line in (ROOT / 'tests/fonts/codepoints.txt').read_text().splitlines() if line.strip()}
+assert required <= covered, f'CI CJK subset needs regeneration: {required - covered}'
+
 for name in ['precision','quiet','explorer','neon','swiss','industrial','wellness','aurora','racing','brutal']:
     assert f'[data-theme={name}]' in css, f'Missing theme: {name}'
 for doc in ['ANDROID_TECH_STACK_AUDIT.md','NATIVE_UI_IMPLEMENTATION_GUIDE.md','DESIGN_SPEC.md','PAGE_STRUCTURE.md','TEST_REPORT.md']:

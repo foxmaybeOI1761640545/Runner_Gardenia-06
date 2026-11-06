@@ -260,6 +260,7 @@ with site_url() as url, sync_playwright() as p:
         expect(page.locator('#phone-screen')).to_have_attribute('data-theme','brutal')
         page.locator('footer a').first.focus()
         page.mouse.move(0,0)
+        page.clock.run_for(10)  # flush the focusout task before advancing the autoplay deadline
         page.clock.fast_forward(9000)
         expect(page.locator('#phone-screen')).to_have_attribute('data-theme','precision')
         checked('autoplay loops 10 to 01; focus pauses and leaving resumes')
