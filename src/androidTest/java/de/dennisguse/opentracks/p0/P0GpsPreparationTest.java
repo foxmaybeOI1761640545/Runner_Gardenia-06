@@ -128,4 +128,11 @@ public class P0GpsPreparationTest {
         }
     }
 
+    @Test public void fixtureDatabaseCleanupCancelsPreparationBeforeDeletingRecords() {
+        assertTrue(service.isAcquiringGps());
+        TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
+        assertFalse(service.isAcquiringGps());assertFalse(service.isRecording());assertFalse(service.areSensorsStarted());
+        SystemClock.sleep(1200);noWorkout();
+    }
+
 }

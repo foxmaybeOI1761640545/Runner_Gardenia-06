@@ -164,6 +164,7 @@ public class P0SensorsTest {
             id.set(service.startNewTrack());assertNotNull(id.get());
         });
         TrackRecordingService previous=service;serviceRule.unbindService();TestEnvironmentUtils.stopTrackRecordingService();
+        TestEnvironmentUtils.awaitTrackRecordingServiceDestroyed();
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         service=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
         assertNotSame(previous,service);
