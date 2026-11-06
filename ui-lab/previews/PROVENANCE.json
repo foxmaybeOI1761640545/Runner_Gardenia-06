@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "6910416c2125fbdf8bf0719db00759062c7944a7",
+  "actionsRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42269278260",
+  "artifactId": 13529081407,
+  "artifactSha256": "01155efee3855f83059f5c7676ad77d7e2217abe4806efedfb565ee65d34a302",
+  "browserVersion": "156.0.8078.79",
+  "phoneCaptureViewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "pageScreenshots": "full-page captures of the named viewport; image height may exceed viewport height",
+  "files": [
+    {
+      "name": "desktop-1366.png",
+      "width": 1366,
+      "height": 1075,
+      "sha256": "bea37513ee45ada048444859721932f7a3100b8f4665dc3d0ee4bdc3e19c3036"
+    },
+    {
+      "name": "desktop-1440.png",
+      "width": 1440,
+      "height": 1220,
+      "sha256": "e3a86cbb3edfd97f30ca35bba78f6a5828c2f96e65fe3e5209a67ab2e804c047"
+    },
+    {
+      "name": "mobile-390.png",
+      "width": 390,
+      "height": 1770,
+      "sha256": "fe95f1d378f8c12be0e51783dd8aabed2006932f8b4fb30ea60376b21e41c0d7"
+    },
+    {
+      "name": "theme-01.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "1099b429b665490afa7b2eeaa1840e10f1e20eb1e61326dbf12741aa84c3e4ed"
+    },
+    {
+      "name": "theme-02.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "bacd1e3abae1e21c1ccae87312e57aa7df78f6474bce62600ca1dd74d7a21e5d"
+    },
+    {
+      "name": "theme-03.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "b9946c74b9a3948c29368d1b7c1fe0f9887d09a72c96376041c35eaf28556b9c"
+    },
+    {
+      "name": "theme-04.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "dcae46e8aae7fc43fb3a515cbb6801c92ea6fc2f74e4fb98f075eee9e939aa61"
+    },
+    {
+      "name": "theme-05.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "ecff1b2a560084973b458828d84a16a2077d5f14aaae9db19aab0fde376f8877"
+    },
+    {
+      "name": "theme-06.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "1cb00ed98096c4a9e081974c48e45e7f2551326338aaf6345adbe66ff4fc7c37"
+    },
+    {
+      "name": "theme-07.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "1f7bb3785e262c606e7f45761dceb73da47a62ea247aa200d8173979471fde51"
+    },
+    {
+      "name": "theme-08.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "48ba2dffd6c4664dd63cb833089f7af798f7cdc8332835da175a636d468bd93d"
+    },
+    {
+      "name": "theme-09.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "99a85891b87e2286f3a4f17f325943518110fd9f71b34681882c44ae1f40b369"
+    },
+    {
+      "name": "theme-10.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "a94c046c0a981c467db46ec339dba02d16f395ca7a7c02b93b841cc0e1ef5df0"
+    }
+  ]
+}

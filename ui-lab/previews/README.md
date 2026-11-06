@@ -1,7 +1,21 @@
 # 实际浏览器截图
 
-`theme-01.png` 至 `theme-10.png`：同一应用状态（模拟记录中）的十套主题截图，均由 `tests/browser_acceptance.py` 在实际 Chromium 中渲染本站后截取手机外框。
+本站真实运行后的截图，已取回并人工审查，来源为 [GitHub Actions 42269278260](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42269278260)，源码 `6910416c2125fbdf8bf0719db00759062c7944a7`，Chrome `156.0.8078.79`。
 
-`desktop-1440.png`、`desktop-1366.png`、`mobile-390.png`：1440×1000、1366×768、390×844 视口的整页截图。
+- `theme-01.png` 至 `theme-10.png`：同一模拟记录状态的十套完整手机界面，截图时浏览器视口 1440×1000，手机按网站规则等比缩放。
+- `desktop-1440.png`、`desktop-1366.png`、`mobile-390.png`：1440×1000、1366×768、390×844 视口的整页截图；整页图片高度可以大于视口高度。
+- [PROVENANCE.json](PROVENANCE.json) 记录截图 SHA-256、尺寸、浏览器版本、来源提交与运行链接。
+- 每次 CI 验收成功后重新捕获当前版本并更新其部署包中的来源记录；仓库保留此处已审查的归档快照。不会将网上图片或生成图片用作界面截图。
+- 可下载后打开 [对比画廊](index.html)，或运行网站在下方轮播中查看。
 
-首次 CI 将生成并保留截图 Artifact，下载审查后提交到本目录。未生成的图片不作为已完成交付。脚本/trace/results.json 留在 Actions 测试 Artifact 中，不用外部设计图片替代实际预览。
+| 01 Precision Pro | 02 Quiet Minimal |
+|---|---|
+| ![01 实际截图](theme-01.png) | ![02 实际截图](theme-02.png) |
+| 03 Outdoor Explorer | 04 Neon Pulse |
+| ![03 实际截图](theme-03.png) | ![04 实际截图](theme-04.png) |
+| 05 Swiss Editorial | 06 Industrial Gauge |
+| ![05 实际截图](theme-05.png) | ![06 实际截图](theme-06.png) |
+| 07 Calm Wellness | 08 Aurora Glass |
+| ![07 实际截图](theme-07.png) | ![08 实际截图](theme-08.png) |
+| 09 Racing Performance | 10 Data Brutalism |
+| ![09 实际截图](theme-09.png) | ![10 实际截图](theme-10.png) |

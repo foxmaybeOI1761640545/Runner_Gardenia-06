@@ -2,6 +2,8 @@
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import json
+import hashlib
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +29,22 @@ for link in parser.links:
     assert not re.match(r'^(https?:)?//', link), f'External dependency: {link}'
     if link and not link.startswith('#'):
         assert (ROOT / link).exists(), f'Missing resource: {link}'
+# Validate the retained gallery and screenshot package, not just the app entry.
+for html in ROOT.rglob('*.html'):
+    if html == ROOT / 'index.html':
+        continue
+    gallery = Markup()
+    gallery.feed(html.read_text())
+    for link in gallery.links:
+        assert not re.match(r'^(https?:)?//', link), f'External gallery dependency: {link}'
+        if link and not link.startswith('#'):
+            assert (html.parent / link).exists(), f'Missing gallery resource: {link}'
+manifest = json.loads((ROOT / 'previews/PROVENANCE.json').read_text())
+assert len(manifest['files']) == 13
+for entry in manifest['files']:
+    image = ROOT / 'previews' / entry['name']
+    assert hashlib.sha256(image.read_bytes()).hexdigest() == entry['sha256'], f'Screenshot integrity mismatch: {image}'
+assert len(list((ROOT / 'previews').glob('theme-*.png'))) == 10
 css = (ROOT / 'styles.css').read_text()
 assert '@import' not in css, 'External stylesheet import'
 assert not re.search(r'url\([\s\'\"]*(https?:)?//', css), 'External CSS asset'

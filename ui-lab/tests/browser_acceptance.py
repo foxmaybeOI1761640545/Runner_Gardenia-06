@@ -10,6 +10,9 @@ import contextlib
 from datetime import datetime, timezone
 from functools import partial
 import http.server
+import hashlib
+import struct
+import subprocess
 import json
 import os
 from pathlib import Path
@@ -239,6 +242,10 @@ with site_url() as url, sync_playwright() as p:
     try:
         page.clock.install(time=datetime(2026,11,7,1,41,tzinfo=timezone.utc))
         page.goto(url, wait_until='networkidle')
+        if page.locator('html').get_attribute('data-previews') == 'ready':
+            expect(page.locator('.thumb img')).to_have_count(10)
+            assert page.locator('.thumb img').evaluate_all('(imgs)=>imgs.every(i=>i.complete && i.naturalWidth>0)')
+            checked('all ten local browser screenshot thumbnails loaded successfully')
         # Freeze UI timers; acceptance explicitly advances the browser's clock.
         page.clock.pause_at(page.evaluate('Date.now()') + 1000)
         for width,height in [(1440,1000),(1366,768),(390,844)]:
@@ -325,6 +332,21 @@ with site_url() as url, sync_playwright() as p:
         assert not report['external_requests'], report['external_requests']
         checked('no browser console errors and no external network dependencies')
         report['passed']=True
+        source_sha = os.getenv('GITHUB_SHA') or subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+        run_url = None
+        if os.getenv('GITHUB_RUN_ID'):
+            run_url = f"{os.getenv('GITHUB_SERVER_URL','https://github.com')}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+        provenance = {'sourceCommit':source_sha, 'actionsRun':run_url, 'browserVersion':browser.version,
+                      'phoneCaptureViewport':{'width':1440,'height':1000},
+                      'pageScreenshots':'Full-page captures of the named viewport; image height may exceed viewport height',
+                      'files':[]}
+        for file in sorted(PREVIEWS.glob('*.png')):
+            data=file.read_bytes()
+            assert data[:8] == b'\x89PNG\r\n\x1a\n'
+            width,height=struct.unpack('>II',data[16:24])
+            provenance['files'].append({'name':file.name,'width':width,'height':height,'sha256':hashlib.sha256(data).hexdigest()})
+        (PREVIEWS / 'PROVENANCE.json').write_text(json.dumps(provenance,ensure_ascii=False,indent=2)+'\n')
+        (ROOT / 'docs/BROWSER_ACCEPTANCE_RESULTS.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     except Exception:
         report['failure']=traceback.format_exc()
         page.screenshot(path=str(RESULTS / 'failure.png'),full_page=True)
