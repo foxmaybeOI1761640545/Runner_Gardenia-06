@@ -274,3 +274,7 @@ Some early historical failed runs never uploaded a report Artifact. Their run me
 ## Public APK verification
 
 [Original public Release assets and independent verification](../../evidence/releases/). All four public APKs were freshly downloaded, sizes/GitHub digests matched, package identity checked using aapt2, and actual APK signatures verified against the fixed certificate using official Android apksig. APK bytes remain outside Git. Small original build-info/checksum/delivery assets are retained.
+
+## Archive acceptance
+
+PASSED: archive commit `eed6c6e239aa9be3e831c83f1bcd6b782fa68f8f`, [cloud validation 42179918190](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42179918190), and [independent remote verification receipt](../feature-p0-2-gps-ui/archive-verification.json). 1,821 tracked report/screenshot/checksum paths matched remote Git blob hashes; newly recovered E/C/D files are now A. Protected original refs are unchanged.

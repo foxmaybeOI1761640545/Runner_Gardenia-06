@@ -1,6 +1,6 @@
 # P0.2 baseline
 
-Stage 0: IN_PROGRESS — original history scan and Artifact recovery completed; commit/push/cloud archive validation and remote byte comparison pending. No GPS/UI/BLE product changes made.
+Stage 0: PASSED — archive commit `eed6c6e239aa9be3e831c83f1bcd6b782fa68f8f`; [cloud verification](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42179918190) passed; 1,821 report/screenshot/checksum paths independently matched remote Git blobs. [Verification receipt](archive-verification.json). No GPS/UI/BLE product changes made.
 
 The isolated branch was created early solely to archive documents without writing the protected P0 branch. Formal stage 1 acceptance follows archive acceptance.
 
@@ -15,7 +15,7 @@ The isolated branch was created early solely to archive documents without writin
 
 | Stage | Scope | State |
 |---|---|---|
-| 0 | Historical inventory/archive/remote verification | IN_PROGRESS |
+| 0 | Historical inventory/archive/remote verification | PASSED |
 | 1 | Formal baseline | PENDING |
 | 2 | One read-only BLE reconnect audit | PENDING |
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PENDING |
