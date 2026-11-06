@@ -33,14 +33,13 @@ public class P0GpsPreparationTest {
     private TrackRecordingService service;
     private String gps,heart;
     private long begin;
-    private boolean hadAccuracy;
-    private int accuracy;
+    private Object originalAccuracy;
     private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
     @Before public void before() throws Exception {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         var prefs=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
         String accuracyKey=context.getString(R.string.recording_gps_accuracy_key);
-        hadAccuracy=prefs.contains(accuracyKey);accuracy=prefs.getInt(accuracyKey,50);
+        originalAccuracy=prefs.getAll().get(accuracyKey);
         gps=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
         heart=PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,SensorType.NONE.getPreferenceValue());
@@ -53,8 +52,13 @@ public class P0GpsPreparationTest {
         TestEnvironmentUtils.stopTrackRecordingService();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);
         var editor=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).edit();
-        if(hadAccuracy)editor.putInt(context.getString(R.string.recording_gps_accuracy_key),accuracy);else editor.remove(context.getString(R.string.recording_gps_accuracy_key));
+        String accuracyKey=context.getString(R.string.recording_gps_accuracy_key);
+        if(originalAccuracy instanceof String value)editor.putString(accuracyKey,value);
+        else if(originalAccuracy instanceof Integer value)editor.putInt(accuracyKey,value);
+        else if(originalAccuracy==null)editor.remove(accuracyKey);
+        else throw new AssertionError("Unexpected original accuracy preference type: "+originalAccuracy.getClass());
         assertTrue(editor.commit());
+        assertEquals(originalAccuracy,androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).getAll().get(accuracyKey));
     }
     public static void fixture(TrackRecordingService core) {
         var handler=core.getTrackPointCreator().getSensorManager().getGpsHandler();

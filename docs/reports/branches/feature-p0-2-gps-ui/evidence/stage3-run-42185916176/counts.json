@@ -1,0 +1,23 @@
+{
+  "run": "42185916176",
+  "source": "fe83a5a667c8a5876318d0a87d55b821a22a5460",
+  "conclusion": "failure",
+  "counts": {
+    "android": {
+      "tests": 393,
+      "executed": 392,
+      "failures": 16,
+      "errors": 0,
+      "skipped": 1,
+      "xmlFiles": 1
+    },
+    "unit": {
+      "tests": 108,
+      "executed": 108,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xmlFiles": 12
+    }
+  }
+}
