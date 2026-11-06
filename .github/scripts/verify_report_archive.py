@@ -58,8 +58,10 @@ def verify(remote=False):
         raise ValueError('Unindexed archive objects')
     for row in json.loads((EVIDENCE / 'git-inventory.json').read_text())['files']:
         p = ROOT / row['path']
-        # AGENTS is intentionally updated for the new task; original is retained in Git.
-        if p.name != 'AGENTS.md' and hashlib.sha256(p.read_bytes()).hexdigest() != row['sha256']:
+        # Operational instructions/ledger evolve; verify their archived baseline bytes
+        # from the frozen P0 object, rather than pretending they are immutable reports.
+        raw = subprocess.check_output(['git','show','60daeb21aa50bdbceec6e6ad354a431b8c1be434:'+row['path']],cwd=ROOT) if row['path'] in ('AGENTS.md','release-ledger.json') else p.read_bytes()
+        if hashlib.sha256(raw).hexdigest() != row['sha256']:
             raise ValueError('Original report/resource changed: ' + row['path'])
     broken = []
     for p in (ROOT / 'docs/reports').rglob('*.md'):

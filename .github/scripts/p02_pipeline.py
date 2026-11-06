@@ -42,12 +42,19 @@ def prepare():
         raise ValueError('P0.2 only accepts exact isolated branch pushes')
     sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     if sha!=os.environ['GITHUB_SHA']:raise ValueError('Wrong source checkout')
+    if config['signed']:
+        from p02_version import check
+        check(sha)
     version=dict(line.split('=',1) for line in Path('version.properties').read_text().splitlines() if line)
     version['VERSION_NAME_FULL']=version['VERSION_NAME']+'-'+sha[:12]
     Path('version.properties').write_text(''.join(k+'='+v+'\n' for k,v in version.items()))
     plan={'versionName':version['VERSION_NAME'],'versionCode':int(version['VERSION_CODE']),
           'commit':sha,'stage':config['stage'],'p02Phase':config['phase'],'branch':baseline['branch'],
           'runId':os.environ['GITHUB_RUN_ID'],'publishing':False}
+    if config['signed']:
+        from p02_version import TAG
+        plan['testTag']=TAG
+        plan['publicationStrategy']='verified-p02-test-only; legacy-main-publication-disabled'
     Path('release-plan.json').write_text(json.dumps(plan,indent=2)+'\n')
     with open(os.environ['GITHUB_OUTPUT'],'a') as out:
         out.write(f"stage={config['stage']}\nfull=true\nsigned={str(config['signed']).lower()}\nclasses=\n")

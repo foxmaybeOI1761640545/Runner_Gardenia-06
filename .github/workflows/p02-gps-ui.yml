@@ -39,6 +39,8 @@ jobs:
         run: python3 .github/scripts/verify_report_archive.py
       - name: Verify isolated branch and exact stage plan
         id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: python3 .github/scripts/p02_pipeline.py prepare
       - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
         with:
@@ -142,3 +144,173 @@ jobs:
           if-no-files-found: error
           retention-days: 90
 
+
+  signed:
+    name: Optimized fixed-key P0.2 Release and P0.1 upgrade
+    needs: checks
+    if: >-
+      needs.checks.outputs.stage == '10' && needs.checks.outputs.signed == 'true' &&
+      github.event_name == 'push' && github.ref == 'refs/heads/feature/p0-2-gps-ui' &&
+      github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
+    environment: android-release
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      artifact-id: ${{ steps.bundle.outputs.artifact-id || steps.existing.outputs.artifact-id }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: P02-reports-${{ github.run_id }}
+          path: gate
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/scripts/p02_pipeline.py prepare
+          python3 .github/scripts/p02_signing.py gate
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407 # v3
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a # v4
+        with:
+          cache-disabled: true
+      - name: Find an immutable same-run accepted bundle on retry
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p02_signing.py existing
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: steps.existing.outputs.artifact-id != ''
+        with:
+          artifact-ids: ${{ steps.existing.outputs.artifact-id }}
+          path: dist
+          merge-multiple: true
+      - name: Restore fixed key, shrink and sign, then independently verify actual APK
+        if: steps.existing.outputs.artifact-id == ''
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_SIGNING_CERT_SHA256: ${{ vars.ANDROID_SIGNING_CERT_SHA256 }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          umask 077
+          export ANDROID_KEYSTORE_FILE="$RUNNER_TEMP/runner-gardenia-p0-signing/release.jks"
+          mkdir -p "$(dirname "$ANDROID_KEYSTORE_FILE")"
+          trap 'rm -rf "$RUNNER_TEMP/runner-gardenia-p0-signing"; rm -f "$RUNNER_TEMP/p02-release-gradle.log"' EXIT
+          python3 .github/scripts/restore_keystore.py
+          unset ANDROID_KEYSTORE_BASE64
+          ./gradlew --no-daemon --no-configuration-cache --no-build-cache clean assembleReproducibleRelease | tee "$RUNNER_TEMP/p02-release-gradle.log"
+          python3 .github/scripts/p02_signing.py verify
+      - name: Always clean temporary signing files
+        if: always()
+        run: |
+          rm -rf "$RUNNER_TEMP/runner-gardenia-p0-signing"
+          rm -f "$RUNNER_TEMP/p02-release-gradle.log"
+      - name: Download preserved P0.1 APK for isolated upgrade verification
+        if: steps.existing.outputs.artifact-id == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/p0-baseline"
+          gh release download test-p0-v0.1.0-p0.1 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p0-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS.txt'
+      - name: Actual API35 signed install, GPS acquisition, recording and retained P0.1 upgrade
+        if: steps.existing.outputs.artifact-id == ''
+        env:
+          P0_BASELINE_DIR: ${{ runner.temp }}/p0-baseline
+        run: |
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+          python3 .github/scripts/p02_release_smoke.py
+          python3 .github/scripts/p02_pipeline.py refs
+      - name: Verify accepted bundle including the fixed certificate and upgrade proof
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p02_signing.py bundle
+      - name: Upload only the accepted formal APK and public build information
+        id: bundle
+        if: steps.existing.outputs.artifact-id == ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: RunnerGardenia-P02-Release-${{ github.run_id }}
+          path: |
+            dist/RunnerGardenia-P0-Release.apk
+            dist/SHA256SUMS
+            dist/build-info.json
+            dist/runtime-smoke.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Upload R8 and signed runtime acceptance diagnostics
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: P02-Release-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/reports/
+            build/outputs/mapping/reproducibleRelease/
+          if-no-files-found: error
+          retention-days: 90
+
+  publish:
+    name: Create accepted test Tag and verified non-Latest Pre-release
+    needs: [checks, signed]
+    if: needs.checks.outputs.signed == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/feature/p0-2-gps-ui' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
+    permissions:
+      contents: write
+      actions: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: ${{ needs.signed.outputs.artifact-id }}
+          path: dist
+          merge-multiple: true
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: P02-reports-${{ github.run_id }}
+          path: gate
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'build-tools;36.0.0'
+      - name: Recheck exact source and bundle, annotate Tag, verify every Draft asset and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/scripts/p02_pipeline.py prepare
+          python3 .github/scripts/p02_publish.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P02-publication-proof-${{ github.run_id }}-${{ github.run_attempt }}
+          path: dist/publication.json
+          if-no-files-found: error
+          retention-days: 90

@@ -1,8 +1,9 @@
 {
   "schema": 1,
-  "codeHighWater": 6769,
+  "codeHighWater": 6773,
   "seriesHighWater": {
-    "v0.1.0-rc1.": 4
+    "v0.1.0-rc1.": 6,
+    "v0.1.0-p0.": 2
   },
   "allocations": [
     {
@@ -41,6 +42,42 @@
       "classification": "valid-published",
       "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41685585228",
       "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0"
+    },
+    {
+      "versionName": "v0.1.0-rc1.5",
+      "versionCode": 6770,
+      "commit": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "apkSha256": "6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e",
+      "classification": "valid-published",
+      "tag": "v0.1.0-rc1.5",
+      "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/v0.1.0-rc1.5"
+    },
+    {
+      "versionName": "v0.1.0-rc1.6",
+      "versionCode": 6771,
+      "commit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "apkSha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+      "classification": "valid-published",
+      "tag": "v0.1.0-rc1.6",
+      "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/v0.1.0-rc1.6"
+    },
+    {
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772,
+      "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "classification": "valid-published",
+      "tag": "test-p0-v0.1.0-p0.1",
+      "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.1"
+    },
+    {
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773,
+      "commit": null,
+      "allocationBasisCommit": "f7beafabc7f960a0fb46f29995c76b02ba8eeb94",
+      "classification": "reserved-p02-test",
+      "tag": "test-p0-v0.1.0-p0.2",
+      "sourceEvidence": "Actual release source will be the immutable annotated test tag and signed build-info; allocation basis is the accepted stage5 source, not a claimed future build SHA."
     }
   ]
 }

@@ -30,14 +30,15 @@ def validate_live_metrics(metric):
             and speed>0 and 0<=seconds<60 and minutes*60+seconds>0):
         raise ValueError('Actual Release GPS metrics outside the controlled route: '+metric)
 
-def run():
+def run(p02=False):
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
     output=Path('build/reports/p0-release-smoke');output.mkdir(parents=True,exist_ok=True)
     info=json.loads(Path('dist/build-info.json').read_text());apk=Path('dist/RunnerGardenia-P0-Release.apk').resolve()
     if hashlib.sha256(apk.read_bytes()).hexdigest()!=info['apkSha256']:raise ValueError('Signed APK changed before installation')
-    baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/'runner-gardenia-v0.1.0-rc1.6-6771.apk'
+    baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/('RunnerGardenia-P0-Release.apk' if p02 else 'runner-gardenia-v0.1.0-rc1.6-6771.apk')
     oldInfo=json.loads((baseline/'build-info.json').read_text())
-    if oldInfo['commit']!='9b5d7b06afc1eb8e3315ba73874ac088fa4d5169' or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=oldInfo['apkSha256']:raise ValueError('Baseline APK differs from preserved main release')
+    baseline_commit='3116e5fa7a56ce6f299ea45d5a45745f1aed4466' if p02 else '9b5d7b06afc1eb8e3315ba73874ac088fa4d5169'
+    if oldInfo['commit']!=baseline_commit or (p02 and (oldInfo['versionCode']!=6772 or oldInfo['apkSha256']!='94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0')) or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=oldInfo['apkSha256']:raise ValueError('Baseline APK differs from preserved main release')
     certificate=subprocess.check_output([str(sdk/'build-tools/36.0.0/apksigner'),'verify','--print-certs',str(old)],text=True)
     fingerprints=re.findall(r'^Signer #\d+ certificate SHA-256 digest:\s*([0-9a-fA-F]+)\s*$',certificate,re.M)
     if len(fingerprints)!=1 or fingerprints[0].upper()!=info['certificateSha256']:raise ValueError('Baseline and new fixed signing certificate differ')
@@ -142,10 +143,23 @@ def run():
             ET.SubElement(root,'string',{'name':'bluetoothSensor'}).text='AA:BB:CC:DD:EE:FF';ET.SubElement(root,'boolean',{'name':'p0_hr_connection_enabled','value':'true'})
             tree.write(local,encoding='utf-8',xml_declaration=True);device('push',local,pref);device('shell','chown',uid+':'+uid,pref)
             print('Installing verified fixed-key P0 APK over baseline without clearing data',flush=True);device('install','-r',apk,timeout=120)
-            device('shell','cmd','location','set-location-enabled','true');start();wait_text('Ready');screenshot('release-home-gps-only')
-            device('emu','geo','fix','103.8','1.3','12','8','4');tap('p0_start');wait_text('Recording')
+            device('shell','cmd','location','set-location-enabled','false' if p02 else 'true');start();wait_text('Not recording' if p02 else 'Ready');screenshot('release-home-gps-only')
+            device('emu','geo','fix','103.8','1.3','12','8','4');tap('p0_start')
+            if p02:
+                wait_text('Acquiring GPS');screenshot('release-acquiring-no-workout')
+                pending=database('pending-db')
+                with sqlite3.connect(pending) as connection:
+                    if connection.execute('SELECT COUNT(*) FROM tracks WHERE _id!=?',(FIXTURE,)).fetchone()[0]!=0:raise ValueError('GPS preparation created a workout')
+                current=dump();values={n.get('resource-id'):n.get('text','') for n in current.iter('node')}
+                if values.get(PACKAGE+':id/p02_time_value')!='00:00' or values.get(PACKAGE+':id/p02_distance_value')!='0.0 m':raise ValueError('GPS wait counted as activity')
+                device('shell','cmd','location','set-location-enabled','true')
+                for index in range(3):device('emu','geo','fix','103.8',str(1.3+index*0.000001),'12','8','4');time.sleep(1)
+            wait_text('Recording')
             for index in range(8):device('emu','geo','fix','103.8',str(1.3+index*0.00002),'12','8','4');time.sleep(1)
             wait_text('1.300');metrics=dump();metric=next(node.get('text','') for node in metrics.iter('node') if node.get('resource-id')==PACKAGE+':id/p0_metrics');
+            if p02:
+                fields={n.get('resource-id'):n.get('text','') for n in metrics.iter('node')}
+                metric+='\nSpeed '+fields.get(PACKAGE+':id/p02_speed_value','')+' · Pace '+fields.get(PACKAGE+':id/p02_pace_value','')
             validate_live_metrics(metric)
             screenshot('release-recording-gps-only');tap('p0_pause');wait_text('Paused');device('shell','am','force-stop',PACKAGE)
             paused=database('paused-db')
@@ -177,10 +191,15 @@ def run():
                 points=connection.execute('SELECT COUNT(*) FROM trackpoints WHERE trackid=? AND latitude IS NOT NULL AND type=0',(workout,)).fetchone()[0]
                 segments=connection.execute('SELECT COUNT(*) FROM trackpoints WHERE trackid=? AND type=-2',(workout,)).fetchone()[0]
                 if points<2 or not 0<stats[0]<100 or stats[0]-before>=35 or segments<2 or stats[2]-stats[1]<3000:raise ValueError('Actual GPS/pause/resume acceptance failed: '+str((points,stats,before,segments)))
+            device('pull',pref,temporary/'final-preferences.xml')
+            preferences=ET.parse(temporary/'final-preferences.xml').getroot()
+            selected=next((n.text for n in preferences if n.get('name')=='bluetoothSensor'),None)
+            enabled=next((n.get('value') for n in preferences if n.get('name')=='p0_hr_connection_enabled'),None)
+            if selected!='AA:BB:CC:DD:EE:FF' or enabled!='true':raise ValueError('Upgrade lost device configuration')
             permissions=device('shell','dumpsys','package',PACKAGE)
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
-            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':6771,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
-            (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=6771;Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
+            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
+            (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:(output/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15))
         except (OSError,subprocess.TimeoutExpired):pass

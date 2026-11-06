@@ -9,6 +9,7 @@ import subprocess
 MARKER = 'Runner-Gardenia-Plan: '
 APK_MARKER = 'Runner-Gardenia-APK-SHA256: '
 NAME = re.compile(r'(v\d+\.\d+\.\d+-rc\d+\.)(\d+)')
+HISTORY_NAME = re.compile(r'(v\d+\.\d+\.\d+-(?:rc\d+|p0)\.)(\d+)')
 
 
 def git(*args):
@@ -61,12 +62,21 @@ def ledger_history():
     entries = data['allocations']
     versions, codes, series = set(), set(), {}
     for entry in entries:
-        validate(entry)
         name, code = entry['versionName'], entry['versionCode']
+        match = HISTORY_NAME.fullmatch(name)
+        if not match or not isinstance(code,int) or not 0 < code <= 2100000000:
+            raise SystemExit('Invalid historical allocation.')
+        # P0 test tags have their own prefix. A reservation is an allocation basis,
+        # never a fabricated self-referential future source commit.
+        reserved = entry.get('classification') == 'reserved-p02-test'
+        source = entry.get('allocationBasisCommit') if reserved else entry.get('commit')
+        if not isinstance(source,str) or not re.fullmatch('[0-9a-f]{40}',source):
+            raise SystemExit('Invalid history source/basis.')
+        if reserved and (name!='v0.1.0-p0.2' or entry.get('commit') is not None or entry.get('tag')!='test-p0-'+name):
+            raise SystemExit('Invalid P0.2 reservation.')
         if name in versions or code in codes:
             raise SystemExit('Duplicate version or Code in release ledger.')
         versions.add(name); codes.add(code)
-        match = NAME.fullmatch(name)
         series[match[1]] = max(series.get(match[1], 0), int(match[2]))
     if data.get('codeHighWater') != max(codes) or data.get('seriesHighWater') != series:
         raise SystemExit('Release ledger high-water records disagree with allocated history.')

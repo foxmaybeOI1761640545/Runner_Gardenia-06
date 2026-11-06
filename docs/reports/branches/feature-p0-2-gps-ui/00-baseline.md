@@ -21,7 +21,7 @@ The isolated branch was created early solely to archive documents without writin
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PASSED |
 | 4 | Home UI and actual screenshot matrix | PASSED |
 | 5 | Full regression | PASSED |
-| 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PENDING |
+| 6 | Fixed-key signed P0.2, upgrade and test Pre-release | IN_PROGRESS |
 | 7 | Final reports/index/remote verification | PENDING |
 
 No merge/main/P0 branch writes; no old Tag/Release replacement; no new signing key, identity, SDK/toolchain or cloud functionality. Hardware validation remains separate.
@@ -53,3 +53,9 @@ Stage4 documentation/evidence commit5158380d31e96237b1c0def535fdd641d8b5ab55 pas
 ## Stage5 receipt
 
 [Full regression acceptance](04-regression-report.md): run42202541308/sourcef7beafa, main Android395/394/0/0/1, JVM110 and helpers56 passed; all auxiliary/storage/GPX/offline/UI gates passed. Phase6 follows report push, remote byte verification and archive cloud PASS.
+
+## Stage6 entry
+
+Stage5 report commit `ee6b5abe7cf38b89839749bf241072572229279b` passed [cloud archive42249747455](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42249747455); all1992 report/evidence paths matched remote Git blobs. Fresh remote inspection still found four preserved Releases and their original annotated Tags. Verified historical ledger/public build-info codes6769/6770/6771/6772; next P0.2 code6773 is explicitly reserved. The reservation basis is accepted stage5 sourcef7beafa, not a fabricated future source SHA; the actual source will be recorded by signed build-info and the immutable test Tag.
+
+Signing remains gated by a new complete same-run regression with the updated version. Only afterward: existing-key optimized build → exact certificate/identity/offline/alignment checks → P0.1 `adb install -r` upgrade preserving synthetic schema43 GPS/rawHR/device preferences → actual GPS acquisition/record/pause/recovery/history/GPX → immutable signed Artifact → annotated test Tag → verified Draft assets → non-Latest Pre-release. No Tag exists yet and no successful signed APK is claimed at entry.
