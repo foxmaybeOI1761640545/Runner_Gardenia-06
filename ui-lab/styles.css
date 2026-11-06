@@ -255,7 +255,7 @@ main {
   position:absolute;
   width:440px;
   height:440px;
-  max-width:120%;
+  max-width:100%;
   background:radial-gradient(ellipse,#dce3cf88,transparent 70%);
   z-index:-1
 }
