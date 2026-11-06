@@ -1,0 +1,90 @@
+2026-11-06T10:25:30.0516082Z [command]/usr/bin/git log -1 --format=%H
+2026-11-06T10:25:30.0545405Z f7beafabc7f960a0fb46f29995c76b02ba8eeb94
+2026-11-06T10:25:30.0554670Z ##[group]Removing auth
+2026-11-06T10:25:30.0558291Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T10:25:30.0593210Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T10:25:30.0804064Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T10:25:30.0834191Z http.https://github.com/.extraheader
+2026-11-06T10:25:30.0840023Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-06T10:25:30.0875270Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T10:25:30.1083739Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T10:25:30.1120008Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T10:25:30.1328169Z ##[endgroup]
+2026-11-06T10:25:30.1456667Z ##[group]Run python3 -m unittest discover -s .github/tests -v -b
+2026-11-06T10:25:30.1457054Z [36;1mpython3 -m unittest discover -s .github/tests -v -b[0m
+2026-11-06T10:25:30.1474506Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-06T10:25:30.1474776Z env:
+2026-11-06T10:25:30.1474941Z   TZ: Asia/Singapore
+2026-11-06T10:25:30.1475159Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T10:25:30.1475429Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T10:25:30.1475691Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T10:25:30.1475916Z ##[endgroup]
+2026-11-06T10:25:30.2661057Z test_incomplete_capture_manifest_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_incomplete_capture_manifest_is_a_failure) ... ok
+2026-11-06T10:25:30.2662132Z test_missing_capture_directory_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_missing_capture_directory_is_a_failure) ... ok
+2026-11-06T10:25:30.2722887Z test_named_files_without_png_pixels_are_rejected (test_heart_rate_gates.UiEvidenceTests.test_named_files_without_png_pixels_are_rejected) ... ok
+2026-11-06T10:25:30.2728911Z test_offset_alias_cannot_replace_the_singapore_timezone_identity (test_heart_rate_gates.UiEvidenceTests.test_offset_alias_cannot_replace_the_singapore_timezone_identity) ... ok
+2026-11-06T10:25:30.2737064Z test_actual_jvm_execution_is_counted_separately (test_heart_rate_gates.UnitEvidenceTests.test_actual_jvm_execution_is_counted_separately) ... ok
+2026-11-06T10:25:30.2744692Z test_all_skipped_or_missing_test_class_blocks_the_gate (test_heart_rate_gates.UnitEvidenceTests.test_all_skipped_or_missing_test_class_blocks_the_gate) ... ok
+2026-11-06T10:25:30.2750019Z test_no_source_or_missing_xml_cannot_be_described_as_executed (test_heart_rate_gates.UnitEvidenceTests.test_no_source_or_missing_xml_cannot_be_described_as_executed) ... ok
+2026-11-06T10:25:30.2758672Z test_unit_errors_failures_and_inconsistent_counts_are_not_hidden (test_heart_rate_gates.UnitEvidenceTests.test_unit_errors_failures_and_inconsistent_counts_are_not_hidden) ... ok
+2026-11-06T10:25:30.3283132Z test_complete_matrix_is_tied_to_this_source_and_original_pixels (test_p02_home_ui.HomeCaptureGateTests.test_complete_matrix_is_tied_to_this_source_and_original_pixels) ... ok
+2026-11-06T10:25:30.3355052Z test_hardware_claim_or_missing_timezone_is_rejected (test_p02_home_ui.HomeCaptureGateTests.test_hardware_claim_or_missing_timezone_is_rejected) ... ok
+2026-11-06T10:25:30.3378825Z test_missing_or_duplicated_state_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_missing_or_duplicated_state_never_passes) ... ok
+2026-11-06T10:25:30.3452413Z test_wrong_theme_window_or_phase_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_wrong_theme_window_or_phase_never_passes) ... ok
+2026-11-06T10:25:30.3457283Z test_changed_original_p0_branch_is_detected_without_resetting_it (test_p02_pipeline.P02IsolationTests.test_changed_original_p0_branch_is_detected_without_resetting_it) ... ok
+2026-11-06T10:25:30.3464620Z test_development_and_ordinary_checks_cannot_request_signing (test_p02_pipeline.P02IsolationTests.test_development_and_ordinary_checks_cannot_request_signing) ... ok
+2026-11-06T10:25:30.3468926Z test_incomplete_and_scoped_regression_never_authorize_phase (test_p02_pipeline.P02IsolationTests.test_incomplete_and_scoped_regression_never_authorize_phase) ... ok
+2026-11-06T10:25:30.3470277Z test_crash_or_failure_is_never_a_successful_adb_exit (test_p0_durability.ProcessEvidenceTests.test_crash_or_failure_is_never_a_successful_adb_exit) ... ok
+2026-11-06T10:25:30.3472519Z test_missing_pid_zero_cases_or_missing_finish_code_fail_closed (test_p0_durability.ProcessEvidenceTests.test_missing_pid_zero_cases_or_missing_finish_code_fail_closed) ... ok
+2026-11-06T10:25:30.3474090Z test_success_requires_executed_case_and_process_identity (test_p0_durability.ProcessEvidenceTests.test_success_requires_executed_case_and_process_identity) ... ok
+2026-11-06T10:25:30.3475744Z test_cloud_backup_or_exported_private_activity_blocks_release (test_p0_offline.OfflineGateTests.test_cloud_backup_or_exported_private_activity_blocks_release) ... ok
+2026-11-06T10:25:30.3477125Z test_extra_permission_or_external_entry_point_blocks_release (test_p0_offline.OfflineGateTests.test_extra_permission_or_external_entry_point_blocks_release) ... ok
+2026-11-06T10:25:30.3489575Z test_internet_is_rejected_in_debug_as_well_as_release (test_p0_offline.OfflineGateTests.test_internet_is_rejected_in_debug_as_well_as_release) ... ok
+2026-11-06T10:25:30.3498995Z test_minimal_release_manifest_is_accepted (test_p0_offline.OfflineGateTests.test_minimal_release_manifest_is_accepted) ... ok
+2026-11-06T10:25:30.3519289Z test_class_arguments_cannot_inject_gradle_options (test_p0_pipeline.P0ConfigurationTests.test_class_arguments_cannot_inject_gradle_options) ... ok
+2026-11-06T10:25:30.3520321Z test_empty_scope_cannot_pass (test_p0_pipeline.P0ConfigurationTests.test_empty_scope_cannot_pass) ... ok
+2026-11-06T10:25:30.3521617Z test_final_regression_cannot_be_narrowed (test_p0_pipeline.P0ConfigurationTests.test_final_regression_cannot_be_narrowed) ... ok
+2026-11-06T10:25:30.3523084Z test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names (test_p0_pipeline.P0ConfigurationTests.test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names) ... ok
+2026-11-06T10:25:30.3524614Z test_signing_cannot_start_before_final_complete_regression (test_p0_pipeline.P0ConfigurationTests.test_signing_cannot_start_before_final_complete_regression) ... ok
+2026-11-06T10:25:30.3525652Z test_android_or_existing_gate_tests_cannot_be_skipped (test_p0_publication_scope.PublicationScopeTests.test_android_or_existing_gate_tests_cannot_be_skipped) ... ok
+2026-11-06T10:25:30.3526494Z test_empty_scope_does_not_authorize_publication (test_p0_publication_scope.PublicationScopeTests.test_empty_scope_does_not_authorize_publication) ... ok
+2026-11-06T10:25:30.3527296Z test_explicit_publication_and_only_allowed_files (test_p0_publication_scope.PublicationScopeTests.test_explicit_publication_and_only_allowed_files) ... ok
+2026-11-06T10:25:30.3528223Z test_normal_code_push_keeps_complete_ci (test_p0_publication_scope.PublicationScopeTests.test_normal_code_push_keeps_complete_ci) ... ok
+2026-11-06T10:25:30.3529084Z test_product_or_build_or_signing_changes_cannot_use_old_apk (test_p0_publication_scope.PublicationScopeTests.test_product_or_build_or_signing_changes_cannot_use_old_apk) ... ok
+2026-11-06T10:25:30.3529901Z test_actual_gnss_round_trip_uses_numeric_tolerance (test_p0_release.ActualGpsMetricTests.test_actual_gnss_round_trip_uses_numeric_tolerance) ... ok
+2026-11-06T10:25:30.3530624Z test_blank_or_zero_motion_fields_do_not_pass (test_p0_release.ActualGpsMetricTests.test_blank_or_zero_motion_fields_do_not_pass) ... ok
+2026-11-06T10:25:30.3531287Z test_wrong_coordinates_or_accuracy_fail (test_p0_release.ActualGpsMetricTests.test_wrong_coordinates_or_accuracy_fail) ... ok
+2026-11-06T10:25:30.3531972Z test_another_commit_or_publishing_plan_is_rejected (test_p0_release.SigningGateTests.test_another_commit_or_publishing_plan_is_rejected) ... ok
+2026-11-06T10:25:30.3532651Z test_exact_passed_branch_gate_is_accepted (test_p0_release.SigningGateTests.test_exact_passed_branch_gate_is_accepted) ... ok
+2026-11-06T10:25:30.3533392Z test_missing_or_other_commit_storage_evidence_blocks_signing (test_p0_release.SigningGateTests.test_missing_or_other_commit_storage_evidence_blocks_signing) ... ok
+2026-11-06T10:25:30.3534652Z test_no_execution_or_failed_tests_never_authorize_signing (test_p0_release.SigningGateTests.test_no_execution_or_failed_tests_never_authorize_signing) ... ok
+2026-11-06T10:25:30.3536095Z test_optimized_resource_path_and_typed_binding (test_pipeline.ApkResourceTests.test_optimized_resource_path_and_typed_binding) ... ok
+2026-11-06T10:25:30.3559842Z test_draft_resume_published_rerun_and_identity_rejection (test_pipeline.PublicationTests.test_draft_resume_published_rerun_and_identity_rejection) ... ok
+2026-11-06T10:25:30.3562083Z test_no_credentials_on_cross_host_redirect (test_pipeline.PublicationTests.test_no_credentials_on_cross_host_redirect) ... ok
+2026-11-06T10:25:30.3574411Z test_complete_and_separate_errors (test_pipeline.ReportTests.test_complete_and_separate_errors) ... ok
+2026-11-06T10:25:30.3585561Z test_missing_corrupt_and_miscounted_reports (test_pipeline.ReportTests.test_missing_corrupt_and_miscounted_reports) ... ok
+2026-11-06T10:25:30.4456145Z test_allocation_gate_immutable_tag_and_rerun (test_pipeline.VersionTests.test_allocation_gate_immutable_tag_and_rerun) ... From /tmp/tmpgykabz0n/remote
+2026-11-06T10:25:30.4456842Z  * branch            main       -> FETCH_HEAD
+2026-11-06T10:25:30.4676321Z To /tmp/tmpgykabz0n/remote.git
+2026-11-06T10:25:30.4676800Z  * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+2026-11-06T10:25:30.4907453Z From /tmp/tmpgykabz0n/remote
+2026-11-06T10:25:30.4907872Z  * branch            main       -> FETCH_HEAD
+2026-11-06T10:25:30.5378417Z ok
+2026-11-06T10:25:30.7615572Z test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed (test_release_ledger.LedgerTests.test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed) ... ok
+2026-11-06T10:25:30.8020962Z test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code (test_release_ledger.LedgerTests.test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code) ... ok
+2026-11-06T10:25:30.8700858Z test_historical_name_or_code_cannot_be_tagged_again (test_release_ledger.LedgerTests.test_historical_name_or_code_cannot_be_tagged_again) ... ok
+2026-11-06T10:25:30.8706148Z test_exact_tracked_original_is_accepted (test_report_archive_receipts.ReceiptTests.test_exact_tracked_original_is_accepted) ... ok
+2026-11-06T10:25:30.8715584Z test_incomplete_or_unaccepted_receipt_cannot_claim_pass (test_report_archive_receipts.ReceiptTests.test_incomplete_or_unaccepted_receipt_cannot_claim_pass) ... ok
+2026-11-06T10:25:30.8721735Z test_local_ignored_or_untracked_evidence_never_counts_as_archived (test_report_archive_receipts.ReceiptTests.test_local_ignored_or_untracked_evidence_never_counts_as_archived) ... ok
+2026-11-06T10:25:30.8729797Z test_missing_or_changed_bytes_fail_closed (test_report_archive_receipts.ReceiptTests.test_missing_or_changed_bytes_fail_closed) ... ok
+2026-11-06T10:25:30.8737423Z test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match (test_report_archive_receipts.ReceiptTests.test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match) ... ok
+2026-11-06T10:25:30.8765042Z test_restore_existing_bytes_and_reverify_independent_certificate (test_signed_bundle.SignedRecoveryTests.test_restore_existing_bytes_and_reverify_independent_certificate) ... ok
+2026-11-06T10:25:30.8775300Z test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk (test_signed_bundle.SignedRecoveryTests.test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk) ... ok
+2026-11-06T10:25:30.8793282Z test_unsigned_or_foreign_plan_rejected (test_signed_bundle.SignedRecoveryTests.test_unsigned_or_foreign_plan_rejected) ... ok
+2026-11-06T10:25:30.8793915Z 
+2026-11-06T10:25:30.8794117Z ----------------------------------------------------------------------
+2026-11-06T10:25:30.8794532Z Ran 56 tests in 0.615s
+2026-11-06T10:25:30.8794706Z 
+2026-11-06T10:25:30.8794796Z OK
+2026-11-06T10:25:30.9027808Z ##[group]Run python3 .github/scripts/verify_report_archive.py
+2026-11-06T10:25:30.9028403Z [36;1mpython3 .github/scripts/verify_report_archive.py[0m

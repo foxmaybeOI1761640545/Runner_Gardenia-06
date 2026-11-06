@@ -20,7 +20,7 @@ The isolated branch was created early solely to archive documents without writin
 | 2 | One read-only BLE reconnect audit | PASSED |
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PASSED |
 | 4 | Home UI and actual screenshot matrix | PASSED |
-| 5 | Full regression | IN_PROGRESS |
+| 5 | Full regression | PASSED |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PENDING |
 | 7 | Final reports/index/remote verification | PENDING |
 
@@ -49,3 +49,7 @@ Stage 3 acceptance report commit `2a0636f8dae78f76f8c505a6512ca3272dbacb06` pass
 ## Stage5 entry
 
 Stage4 documentation/evidence commit5158380d31e96237b1c0def535fdd641d8b5ab55 passed [archive run42202340679](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42202340679). All1958 tracked report/evidence paths matched remote blobs; all70 phase4 receipt paths were explicitly tracked/hash-checked. Product source remains accepted48693c4. Phase5 enables the receipt guard with regression tests and runs the complete original/new validation suite, without signing.
+
+## Stage5 receipt
+
+[Full regression acceptance](04-regression-report.md): run42202541308/sourcef7beafa, main Android395/394/0/0/1, JVM110 and helpers56 passed; all auxiliary/storage/GPX/offline/UI gates passed. Phase6 follows report push, remote byte verification and archive cloud PASS.
