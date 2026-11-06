@@ -45,7 +45,8 @@ public class P0RecordingViewModel extends AndroidViewModel {
     private final Observer<RecordingData> dataObserver=value->{if(value!=null){data=value;emit();}};
     private final Observer<GpsStatusValue> gpsObserver=value->{gps=value;emit();};
     private final Observer<RecordingStatus> statusObserver=this::onStatus;
-    private final Observer<GpsPreparation> preparationObserver=value->{
+    private final Observer<GpsPreparation> preparationObserver=this::onPreparation;
+    private void onPreparation(GpsPreparation value) {
         if (value != null && value.active()) {
             if (session.phase()!=RecordingSession.Phase.ACQUIRING_GPS)
                 session=new RecordingSession(RecordingSession.Phase.ACQUIRING_GPS,null);
@@ -58,7 +59,7 @@ public class P0RecordingViewModel extends AndroidViewModel {
         if (value!=null && value.state()==GpsPreparation.State.UNAVAILABLE)
             error=getApplication().getString(R.string.p0_location_needed);
         emit();
-    };
+    }
     private void onStatus(RecordingStatus value) {
         if(value!=null&&value.isRecording()) {
             session=RecordingSession.recover(value.trackId().id(),true);store.save(session);

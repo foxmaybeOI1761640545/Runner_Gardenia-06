@@ -23,3 +23,9 @@ Status: IN_PROGRESS. No next-stage UI redesign or signing is authorized until th
 New branch-only p02-gps-ui workflow reuses the full existing Debug/Lint/JVM/API35/GPX/schema/two-process durability/offline/UI/XML completeness gates. It grants no signing Environment, write permission, Tag or Release access during this phase. Actual reports must be downloaded and independently recounted before PASSED.
 
 New Android tests cover preparation without records, stale/cached/inaccurate/invalid fixes, stable start and point/time boundary, cancellation, timeout/continue, preview exclusion, signal loss/recovery, emulator screen-off service continuity. Existing recording UI assertions are retained and now explicitly supply valid fresh GPS before expecting RECORDING; they also exercise recreation/background while acquiring. Physical H303, outdoor GNSS rate/accuracy, vendor lock-screen/power behavior remain NEEDS_DEVICE_VALIDATION.
+
+## First candidate failure (retained)
+
+Source `a8ee1f87c79bda4d313a540a35277b60959efcaf`, [run 42181627583](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42181627583): compileReproducibleDebugJavaWithJavac failed at P0RecordingViewModel.java:55, `variable store might not have been initialized`. A field-initializer lambda directly captured the constructor-initialized final repository journal. Replaced it with a method-reference observer whose body executes only after construction. No test/gate changes; Android/JVM suites did not execute on this candidate. Complete stage rerun required.
+
+Local Gradle `help`: first attempt failed because AGP tried to initialize `/home/agent/.android` in a read-only directory; with `ANDROID_USER_HOME=/tmp/p02-android-user` and the existing Gradle cache it passed (8s, one actual help task). No SDK/emulator/JDK installed; no project configuration changed to mask the environment.
