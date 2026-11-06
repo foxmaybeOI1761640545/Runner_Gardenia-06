@@ -26,7 +26,7 @@ Java 路径前缀：`src/main/java/de/dennisguse/opentracks/`。
 | SVG 心率曲线 | `chart/ChartFragment`、`ChartView`、`HeartRatePlot`、`HeartRateChartHistory` | 扩展现有 Canvas 绘图样式；P0 详情目前未嵌图，未来需 UI 适配接入 TrackDataHub；复用原始样本与断点处理 |
 | SVG GPS 轨迹概览 | `WorkoutRepository.forEachPoint()` 在 worker 读真实点，未来小型 Canvas View 按包围盒归一化分段绘制 | 基线无内嵌地图 SDK；不引入在线地图，不把 SVG 示例当真地图。保留已有外部地图 Intent；新增概览需单独原生 UI 实现 |
 | `.export-sheet` | MaterialAlertDialogBuilder / 原生 DialogFragment；`P0HistoryActivity` 的 CreateDocument；`P0HistoryViewModel.exportSelected()` / `P0GpxFiles` | 文件保存 SAF，分享 FileProvider / ACTION_SEND；复用准备/失败/完成事件；取消不宣称成功；活动/暂停记录受保护 |
-| 设置 | `SettingsActivity` / `UserInterfaceSettingsFragment` / `PreferencesUtils`、`P0SensorsFragment` | 单位、配速/速度、自动重连绑定已有 preference key；整理入口不重写存储逻辑 |
+| 设置 | `SettingsActivity` / `DefaultsSettingsFragment`（`settings_defaults.xml` 的 `stats_units_key` / `stats_rate_key`）/ `UserInterfaceSettingsFragment` / `PreferencesUtils`、`P0SensorsFragment` | 单位、配速/速度、自动重连绑定已有 preference key；整理入口不重写存储逻辑 |
 | 环形仪表/等高线/硬边装饰 | 少量自定义 View 或 XML drawable / VectorDrawable | 仅显示层、无采集职责；无必要时不做每帧动画 |
 
 ## 可直接采用的设计 Token
@@ -100,3 +100,5 @@ Aurora 的强调色规范值为 `#BCCAFF`。渐变背景上使用不低于原型
 7. 首选验证 01/02/03 的基础布局，复杂的 06 自绘刻度、08 玻璃层次和 10 硬边阴影按选定方案单独实现，不需要一次将十套主题装入 APK。
 
 迁移可行性：十套主要页面均可用现有技术栈实现。新增四栏导航、详情图表接入与轨迹概览是后续 UI 适配工作；服务/数据层保持不变。正式 Android UI 是否采用某方案由用户最终选择。
+
+机器可读的同源参数：[assets/design-tokens.json](../assets/design-tokens.json)。所有颜色为 CSS 十六进制，Android 导入时将 RGBA 转成 ARGB；不要直接复制带 alpha 的 CSS 色值顺序。

@@ -108,6 +108,7 @@ def exercise_theme(page, index, width, height):
     expect(page.locator('#phone-content')).to_contain_text('恢复后仅记录新位置')
     expect(page.locator('.record-state')).to_contain_text('正在记录')
     sim(page, 'gps', 'fixed')
+    assert page.locator('[data-route-line]').get_attribute('d').count('M') == 2, 'GPS recovery must preserve a route gap'
     if index != 3:
         expect(page.locator('.hero-number')).to_contain_text('0.00')
     click(page, '[data-action="gps-page"]')
@@ -165,8 +166,14 @@ def exercise_theme(page, index, width, height):
     click(page, '[data-action="export"]')
     expect(page.get_by_role('dialog')).to_be_visible()
     expect(page.get_by_role('dialog')).to_contain_text('SIMULATION')
+    page.locator('[aria-label="关闭导出弹窗"]').focus()
+    page.keyboard.press('Shift+Tab')
+    expect(page.locator('.sheet-buttons .text-button')).to_be_focused()
+    page.keyboard.press('Tab')
+    expect(page.locator('[aria-label="关闭导出弹窗"]')).to_be_focused()
     page.keyboard.press('Escape')
     expect(page.get_by_role('dialog')).to_have_count(0)
+    expect(page.locator('[data-action="export"]')).to_be_focused()
     page.locator('#export-failure').check()
     click(page, '[data-action="export"]')
     click(page, '[data-action="save-gpx"]')
@@ -184,6 +191,11 @@ def exercise_theme(page, index, width, height):
     root = ET.parse(path).getroot()
     assert root.tag == '{http://www.topografix.com/GPX/1/1}gpx'
     assert len(root.findall('.//{http://www.topografix.com/GPX/1/1}trkseg')) == 2
+    expect(page.locator('#export-title')).to_have_text('导出成功')
+    click(page, '[aria-label="关闭导出弹窗"]')
+    click(page, '[data-action="export"]')
+    with page.expect_download():
+        click(page, '[data-action="share-gpx"]')
     expect(page.locator('#export-title')).to_have_text('导出成功')
     click(page, '[aria-label="关闭导出弹窗"]')
     click(page, '[aria-label="返回历史记录"]')

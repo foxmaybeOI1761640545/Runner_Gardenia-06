@@ -44,13 +44,13 @@
 | BLE transport | `sensors/driver/BluetoothDriver.java`、`BleConnectionSession.java`、`HeartRateBluetooth.java`、`HeartRateMeasurement.java` | 连接/发现/订阅/重连/解析通知；UI 不重写此层 |
 | 心率显示 | `ui/HeartRatePanel.java`；`sensors/HeartRateStatus.java`、`HeartRatePreview.java` | fresh 需有效数据、CONNECTED、未失去接触且 age ≤ 5000 ms；过期显示占位符 |
 | GPS 获取 | `sensors/driver/GpsInternal.java`；`sensors/GpsStatusValue.java` | LocationManager GPS_PROVIDER，经 AndroidX location 更新；GPS 状态与运动暂停是不同维度 |
-| 记录服务 | `services/TrackRecordingService.java`；`services/TrackPointCreator.java` | 服务生命周期、传感器、实际轨迹、记录状态与预览；UI 不另建记录引擎 |
+| 记录服务 | `services/TrackRecordingService.java`；`services/handlers/TrackPointCreator.java` | 服务生命周期、传感器、实际轨迹、记录状态与预览；UI 不另建记录引擎 |
 | 历史/详情 | `p0/app/P0HistoryActivity.java`；`P0HistoryViewModel.java`；`src/main/res/layout/p0_history.xml` | ListView + ArrayAdapter；详情当前主要为文本指标和 GPX 操作，并无原型那样的内嵌轨迹卡 |
 | 数据查询 | `p0/data/WorkoutRepository.java`、`WorkoutSummary.java` | ContentResolver / CustomContentProvider，worker 线程；raw heart-rate 优先、legacy fallback；保护活动记录 |
 | 存储 | `data/CustomContentProvider.java`、`data/HeartRateRepository.java`、`data/tables/HeartRateSamplesColumns.java` | 现有 SQLite / ContentProvider 链路，禁止另建浏览器式数据层替代 |
 | 原生心率图表 | `chart/ChartFragment.java`、`ChartView.java`、`ChartValueSeries.java`、`HeartRateChartHistory.java`、`HeartRatePlot.java` | ChartFragment 接 TrackDataHub；原始心率、暂停活动时间轴、超过 5 秒/连接变化断线、极值保留降采样 |
 | GPX | `p0/export/P0GpxExporter.java`、`P0GpxFiles.java`；`P0HistoryViewModel.exportSelected()` | CreateDocument 保存；FileProvider + ACTION_SEND / chooser 分享；禁止导出活动/暂停记录 |
-| 设置 | `settings/SettingsActivity.java`、`UserInterfaceSettingsFragment.java`、`PreferencesUtils.java`；P0 的 `P0SensorsFragment` | 现有单位/速度配速偏好与传感器偏好；原型统一入口是 UI 整理提案 |
+| 设置 | `settings/SettingsActivity.java`、`DefaultsSettingsFragment.java`、`UserInterfaceSettingsFragment.java`、`PreferencesUtils.java`（单位/配速键见 `src/main/res/xml/settings_defaults.xml`）；P0 的 `P0SensorsFragment` | 现有单位/速度配速偏好与传感器偏好；原型统一入口是 UI 整理提案 |
 | 既有地图方式 | `util/IntentUtils.java`、`introduction/OSMDashboardFragment.java`、`src/main/res/layout/osm_dashboard.xml` | 外部地图 / OSMDashboard 集成；没有发现内嵌地图 SDK。原型本地 SVG 不是现有原生地图能力 |
 
 ## 能力差距与可扩展性
