@@ -47,3 +47,11 @@ Correction is test-only: reset explicitly quiesces the service on its own thread
 ## Accuracy boundary found during stage review
 
 The mature recorder also applies the existing user-configured accuracy threshold (strictly less than its value; default 50m). Readiness's independent ≤30m ceiling alone would be insufficient if that existing setting is stricter, e.g. 1m: it could create a workout whose initial 2m fix is then rejected by the recorder. The GPS callback now passes the exact cached recorder threshold to the preparation gate, so every confirming fix must satisfy both filters. No user setting or mature filter was changed. A new Android regression uses the real 1m recorder setting, proves 2m fixes cannot start, then proves 0.5m fixes start with exactly one GPS point. Test preference presence/value are restored. This correction remains part of stage 3 and requires another complete cloud run.
+
+## Concrete leaked test binding identified
+
+[Run 42184396681](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42184396681), source `4ac7a7cb83b06b079d66d865ae0262c4ecd84879`: [XML](evidence/stage3-run-42184396681/TEST-mediumPhone.xml) contains 291 records, 290 executed, 8 failures, 0 errors, 1 original skip; JVM 108 passed. The stronger destruction wait correctly failed instead of accepting the same service instance. Later legacy service cases inherited its stale data/fixed clock, then the instrumentation process crashed.
+
+The specific binding leak was in the **new GPS UI fixture**: `prepare()` bound ServiceTestRule, then the real-GPS-metrics test bound the same rule again. That overwrote the rule's tracked connection and left the first binding alive. This is a test change introduced in this stage, not a demonstrated BLE transport defect. The earlier asynchronous cleanup observation was valid but incomplete: merely waiting cannot release a leaked binding.
+
+Correction: the UI fixture now shares exactly one bound service per test across preparation/metric checks, explicitly unbinds it in teardown, then verifies actual service destruction. Original metric, lifecycle, new-instance, GPS and BLE policy assertions remain unchanged. Shared quiescent database cleanup is retained to prevent independent stop/delete races. Full cloud rerun required; stage 4 is still blocked.

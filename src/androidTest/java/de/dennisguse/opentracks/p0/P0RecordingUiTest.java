@@ -35,12 +35,18 @@ public class P0RecordingUiTest {
     @Rule public final ServiceTestRule serviceRule=new ServiceTestRule();
     private final Context context=ApplicationProvider.getApplicationContext();
     private String sampling,distance,activityType;
+    private TrackRecordingService boundService;
+    private TrackRecordingService service() throws Exception {
+        if(boundService==null)boundService=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        return boundService;
+    }
     @Before public void before() {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         sampling=PreferencesUtils.getString(R.string.min_sampling_interval_key,"0");distance=PreferencesUtils.getString(R.string.recording_distance_interval_key,"5");activityType=PreferencesUtils.getDefaultActivityTypeLocalized();
     }
     @After public void after() {
-        TestEnvironmentUtils.stopTrackRecordingService();new SessionStore(context).save(RecordingSession.ready());
+        if(boundService!=null)serviceRule.unbindService();
+        TestEnvironmentUtils.stopTrackRecordingService();TestEnvironmentUtils.awaitTrackRecordingServiceDestroyed();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.min_sampling_interval_key,sampling);PreferencesUtils.setString(R.string.recording_distance_interval_key,distance);PreferencesUtils.setDefaultActivityLocalized(activityType);
     }
     private void phase(ActivityScenario<P0Activity> scenario,int expected) {
@@ -63,7 +69,7 @@ public class P0RecordingUiTest {
     }
     private void prepare(ActivityScenario<P0Activity> screen) throws Exception {
         phase(screen,R.string.p02_acquiring_gps);
-        TrackRecordingService core=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+        TrackRecordingService core=service();
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->P0GpsPreparationTest.fixture(core));
         screen.recreate();phase(screen,R.string.p02_acquiring_gps);
         screen.moveToState(Lifecycle.State.CREATED);SystemClock.sleep(300);screen.moveToState(Lifecycle.State.RESUMED);phase(screen,R.string.p02_acquiring_gps);
@@ -73,7 +79,7 @@ public class P0RecordingUiTest {
     @Test public void waitingUiHasNoCoordinatesAndCancelLeavesNoWorkout() throws Exception {
         try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
             onView(withId(R.id.p0_start)).perform(scrollTo(),click());phase(screen,R.string.p02_acquiring_gps);
-            TrackRecordingService core=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+            TrackRecordingService core=service();
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->P0GpsPreparationTest.fixture(core));
             assertNull(TrackRecordingService.activeTrackId(context));assertFalse(metrics(screen).contains("1.300000"));
             assertTrue(new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().isEmpty());
@@ -89,7 +95,7 @@ public class P0RecordingUiTest {
     @Test public void realGpsPreviewSurvivesConsumedRecordingSnapshotsAndClearsOnDisabledProvider() throws Exception {
         try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
             onView(withId(R.id.p0_start)).perform(scrollTo(),click());prepare(screen);phase(screen,R.string.p0_recording);
-            TrackRecordingService core=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
+            TrackRecordingService core=service();
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
                 var gps=core.getTrackPointCreator().getSensorManager().getGpsHandler();
                 if(gps.driver!=null)gps.driver.disconnect();
