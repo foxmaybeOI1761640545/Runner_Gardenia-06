@@ -24,3 +24,9 @@ Nine states × light/dark × small/large = 36 original API35 screenshots: IDLE, 
 The Android producer records actual configuration, session phase, source SHA, capture epoch and each PNG SHA-256. A mandatory gate checks the exact set, complete PNG chunk CRCs, original hashes, actual window dimensions and theme metadata. Native assertions check contextual controls are visible/unclipped, labels do not ellipsize, stale data stays hidden and entry navigation creates no workout. Manual inspection of downloaded original images is still required; a green build alone cannot accept the UI.
 
 Screenshots will be retained under `screenshots/` here after successful retrieval, with manifest/checksums; full matrices remain in the same-run Actions Artifact. All hardware items remain NEEDS_DEVICE_VALIDATION. Signing/Tag/Release are still disabled in this phase.
+
+## First cloud run: automated PASS, visual acceptance FAILED
+
+Run [42194157975](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42194157975), source 9b8642ac4886bc366809e9d7d116f551dda45601: actual Android XML 395/394 executed/0 failures/0 errors/1 skipped; JVM 110/110/0/0/0; 51 helper cases. Debug and all report gates passed. Downloaded original small-light idle/acquisition images showed the bottom HR reconnect label clipped by the scroll viewport; large-dark connected left excessive space between content and actions. This is not UI acceptance despite green CI.
+
+Correction: tighter home spacing and shorter equivalent guidance; a centered content/action cluster for wide windows; a small gap between actions. Added strict full-height visibility checks for all five HR summary fields in every standard screenshot profile. Scroll remains available for larger accessibility fonts and permission/error guidance. No GPS/BLE/service changes. Full cloud regression and new original screenshot review are required before phase 5.

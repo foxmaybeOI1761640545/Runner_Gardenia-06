@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="p02_page_padding">16dp</dimen>
+    <style name="P02HomeContent">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
     <style name="P02MetricLabel" parent="TextAppearance.Material3.LabelMedium">
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
     </style>
@@ -24,8 +28,8 @@
         <item name="strokeColor">?attr/colorOutline</item>
     </style>
     <string name="p02_idle">Not recording</string>
-    <string name="p02_idle_detail">Choose your activity and start when you are ready.</string>
-    <string name="p02_acquiring_detail">Move to an open area. Recording starts after a reliable GPS fix; waiting time is excluded.</string>
+    <string name="p02_idle_detail">Choose your sport, then start.</string>
+    <string name="p02_acquiring_detail">Move outdoors. The timer starts when GPS is ready.</string>
     <string name="p02_gps_waiting">GPS not ready</string>
     <string name="p02_gps_ready">GPS ready</string>
     <string name="p02_gps_weak">GPS signal weak · recording continues</string>

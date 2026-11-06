@@ -93,6 +93,11 @@ public class P02HomeUiTest {
         assertTrue("Actual P0 window must have focus",focused.get());SystemClock.sleep(800);
         screen.onActivity(a->{
             assertNoTruncation(a.findViewById(android.R.id.content));
+            // Standard phone/tablet profiles must expose the complete HR summary without scrolling.
+            for(int id:new int[]{R.id.p0_heart_rate,R.id.p02_heart_device,R.id.p02_heart_state,R.id.p02_heart_updated,R.id.p02_heart_reconnect}) {
+                View item=a.findViewById(id);Rect bounds=new Rect();assertTrue("Heart summary offscreen",item.getGlobalVisibleRect(bounds));
+                assertEquals("Heart summary clipped",item.getHeight(),bounds.height());
+            }
             String detail=((TextView)a.findViewById(R.id.p02_status_detail)).getText().toString();
             if(Set.of("gps-ready","recording","resumed").contains(state))assertEquals(context.getString(R.string.p02_gps_ready),detail);
             if(state.equals("gps-lost"))assertEquals(context.getString(R.string.p02_gps_weak),detail);

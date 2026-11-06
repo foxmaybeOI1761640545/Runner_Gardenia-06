@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="p02_idle">空闲</string>
-    <string name="p02_idle_detail">选择运动类型，准备好后点击开始。</string>
-    <string name="p02_acquiring_detail">请移至开阔处。获得可靠定位后自动开始，等待时间不计入运动。</string>
+    <string name="p02_idle_detail">选择运动类型，点击开始。</string>
+    <string name="p02_acquiring_detail">请移至开阔处，定位就绪后才开始计时。</string>
     <string name="p02_gps_waiting">定位未完成</string>
     <string name="p02_gps_ready">GPS 已就绪</string>
     <string name="p02_gps_weak">GPS 信号较弱，运动记录继续</string>
