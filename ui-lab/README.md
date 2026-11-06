@@ -40,7 +40,7 @@ python -m playwright install --with-deps chromium
 python ui-lab/tests/browser_acceptance.py
 ```
 
-测试在自己的临时本地端口提供静态文件；可用 `UI_LAB_URL` 指向已部署网站。验收生成 `previews/` 实际截图、`test-results/results.json`、失败截图与 Playwright trace。测试失败不会部署。三个尺寸是 1440×1000、1366×768、390×844，覆盖每个主题。
+GitHub Actions 使用托管 Ubuntu runner 已预装的 Google Chrome（记录实际版本），不额外下载浏览器或安装系统字体包。上面的 Playwright install 命令仅供缺少浏览器的开发环境；已有 Chrome 时可设置 `CHROMIUM_EXECUTABLE`。测试在自己的临时本地端口提供静态文件；可用 `UI_LAB_URL` 指向已部署网站。验收生成 `previews/` 实际截图、`test-results/results.json`、失败截图与 Playwright trace。测试失败不会部署。三个尺寸是 1440×1000、1366×768、390×844，覆盖每个主题。
 
 ## GitHub Pages
 
