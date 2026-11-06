@@ -83,6 +83,10 @@ def exercise_theme(page, index, width, height):
     choose(page, index)
     reset(page)
     nav(page, 'run')
+    dom = cdp.send('DOM.getDocument')
+    node = cdp.send('DOM.querySelector', {'nodeId':dom['root']['nodeId'], 'selector':'#phone-content .app-header h2'})
+    fonts = cdp.send('CSS.getPlatformFontsForNode', {'nodeId':node['nodeId']})['fonts']
+    assert any(f['glyphCount']>0 and any(n in f['familyName'] for n in ['Gardenia UI Lab CJK','Noto Sans CJK','WenQuanYi']) for f in fonts), f'Chinese glyph fallback missing: {fonts}'
     assert_layout(page, f'{width}x{height} theme {index+1} run')
     if width == 1440:
         page.clock.fast_forward(3500)
@@ -214,13 +218,18 @@ def exercise_theme(page, index, width, height):
 
 with site_url() as url, sync_playwright() as p:
     report['url'] = url
+    report['font_check'] = 'Chrome CSS.getPlatformFontsForNode verifies CJK title glyphs for every theme and viewport'
     options = {'headless': True}
     if os.getenv('CHROMIUM_EXECUTABLE'):
         options['executable_path'] = os.environ['CHROMIUM_EXECUTABLE']
     browser = p.chromium.launch(**options)
+    report['browser_version'] = browser.version
     context = browser.new_context(viewport={'width':1440,'height':1000}, accept_downloads=True)
     context.tracing.start(screenshots=True, snapshots=True, sources=True)
     page = context.new_page()
+    cdp = context.new_cdp_session(page)
+    cdp.send('DOM.enable')
+    cdp.send('CSS.enable')
     page.on('pageerror', lambda error: report['console_errors'].append(str(error)))
     page.on('console', lambda msg: report['console_errors'].append(msg.text) if msg.type == 'error' else None)
     allowed_host = urlparse(url).netloc
