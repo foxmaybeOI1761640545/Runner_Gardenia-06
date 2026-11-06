@@ -195,7 +195,7 @@
     $('#concept-title').innerHTML=t.name.split(' ').map(safe).join(' <br>');$('#concept-cn').textContent=t.cn;$('#concept-description').textContent=t.description;
     $('#concept-language').textContent=t.language;$('#native-note').textContent=t.native;$('#swatches').innerHTML=t.colors.map(c=>`<span style="background:${c}" title="${c}"></span>`).join('');
     $$('.theme-card').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===themeIndex)));$$('#pagination button').forEach((b,i)=>b.setAttribute('aria-current',String(i===themeIndex)));
-    if(manual){const card=$$('.theme-card')[themeIndex];const track=$('#theme-track');const target=card.offsetLeft-track.offsetLeft-track.clientWidth/2+card.clientWidth/2;track.scrollTo({left:target,behavior:reducedMotion.matches?'auto':'smooth'});}
+    {const card=$$('.theme-card')[themeIndex];const track=$('#theme-track');const target=card.offsetLeft-track.offsetLeft-track.clientWidth/2+card.clientWidth/2;track.scrollTo({left:target,behavior:reducedMotion.matches?'auto':'smooth'});}
     updateFavorite();render({animate:true});
   }
   function updateFavorite(){const saved=favoriteIds.includes(themes[themeIndex].id);$('#favorite').setAttribute('aria-pressed',String(saved));$('#favorite').innerHTML=`<span aria-hidden="true">${saved?'★':'☆'}</span> ${saved?'已收藏方案':'收藏当前方案'}`;}

@@ -1877,8 +1877,8 @@ footer>div {
 [data-theme=wellness] .wellness-hero:before {
   content:"";
   position:absolute;
-  inset:-14px;
-  border:14px solid transparent;
+  inset:0;
+  border:8px solid transparent;
   border-top-color:#80a289;
   border-right-color:#80a289;
   border-radius:50%;
