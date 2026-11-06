@@ -40,7 +40,7 @@ jobs:
           sudo mkdir -p /usr/local/share/fonts/ui-lab
           sudo cp ui-lab/tests/fonts/GardeniaLabCJK-Subset.otf /usr/local/share/fonts/ui-lab/
           fc-cache -f
-          fc-match ':charset=8fd0' 
+          fc-match ':charset=8fd0'
       - name: Actual Chromium acceptance - 10 themes at 3 viewports
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
