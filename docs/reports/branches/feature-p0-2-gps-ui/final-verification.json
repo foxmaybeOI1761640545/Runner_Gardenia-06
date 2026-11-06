@@ -1,0 +1,7 @@
+{
+  "status": "PENDING",
+  "release_source_sha": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "publication_code_sha": "4444c0d30925b146ac693ef0fcfa0cceabfa99ad",
+  "report_commit_sha": null,
+  "note": "Filled after the final report commit is pushed, fetched and remotely verified; no self-referential invented SHA."
+}

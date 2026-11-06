@@ -22,7 +22,7 @@ The isolated branch was created early solely to archive documents without writin
 | 4 | Home UI and actual screenshot matrix | PASSED |
 | 5 | Full regression | PASSED |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PASSED |
-| 7 | Final reports/index/remote verification | PENDING |
+| 7 | Final reports/index/remote verification | IN_PROGRESS |
 
 No merge/main/P0 branch writes; no old Tag/Release replacement; no new signing key, identity, SDK/toolchain or cloud functionality. Hardware validation remains separate.
 
@@ -63,3 +63,7 @@ Signing remains gated by a new complete same-run regression with the updated ver
 ## Stage6 receipt
 
 [Signed delivery/recovery acceptance](stage6-publication-recovery.md) and [raw receipt](stage6-verification.json): actual build/check/sign/install source4454d71/run42251766485, recovered publication run42255705842 attempt4 SUCCESS, testTag at4454d71, public verified2753061-byte APK/hash48c4a855…c6d046/code6773. Default-token403 metadata limitations and configured-identity fallback are explicit. Phase7 follows this evidence/report push and remote archive PASS.
+
+## Stage7 entry
+
+Stage6 evidence commitdb1af76e54aae5f853191577e8c381b7f46894f0 passed [archive42257474866](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42257474866). All2053 report/evidence paths matched remote blobs. Public APK/signature and all6 assets independently downloaded/hash-checked; final stage changes only reports/index/checklist and a remote-verification seal, never APK/Tag/build source.
