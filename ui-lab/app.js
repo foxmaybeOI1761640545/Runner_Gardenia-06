@@ -113,12 +113,13 @@
   function render({top=false,animate=false}={}){
     const scroll=content.scrollTop;
     const focus=document.activeElement;
+    const restoreFocus=content.contains(focus);
     const focusKey=focus?.dataset?.action?`[data-action="${focus.dataset.action}"]`:focus?.dataset?.setting?`[data-setting="${focus.dataset.setting}"]`:focus?.dataset?.device?`[data-device="${focus.dataset.device}"]`:null;
     content.innerHTML=pageRenderers[state.page]();
     content.scrollTop=top?0:scroll;
     if(animate){content.classList.remove('screen-enter');void content.offsetWidth;content.classList.add('screen-enter');}
     renderNav();syncControls();renderModal();
-    if(focusKey&&content.contains(focus)===false&&focus?.closest('.app-scroller'))$(focusKey,content)?.focus({preventScroll:true});
+    if(focusKey&&restoreFocus)$(focusKey,content)?.focus({preventScroll:true});
   }
   function navigate(page){if(!pageRenderers[page])return;stopForInteraction();state.page=page;state.modal=null;render({top:true,animate:true});content.focus({preventScroll:true});}
   function syncControls(){for(const kind of ['gps','heart','session']){$$(`#${kind}-control button`).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.value===state[kind])));}$('#gps-help').textContent=state.gps==='fixed'?'有效模拟定位 · 精度 ± 5 m':state.gps==='searching'?'尚无有效位置 · 精度未确定':'停止更新轨迹 · 恢复后不补点';$('#empty-history').checked=state.emptyHistory;$('#export-failure').checked=state.exportFailure;}

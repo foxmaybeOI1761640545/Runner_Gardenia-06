@@ -2426,3 +2426,12 @@ footer>div {
   clip-path:none;
   padding:12px
 }
+/* Fluorescent yellow is a fill in Brutalism; small semantic labels need ink. */
+[data-theme=brutal] .record-state,
+[data-theme=brutal] .recent-icon,
+[data-theme=brutal] .empty-state svg,
+[data-theme=brutal] .device-hero .heart-symbol svg,
+[data-theme=brutal] .export-result svg,
+[data-theme=brutal] .card>.row>svg {
+  color:var(--fg);
+}

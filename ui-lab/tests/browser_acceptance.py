@@ -205,6 +205,7 @@ def exercise_theme(page, index, width, height):
     click(page, '[aria-label="返回历史记录"]')
     nav(page, 'settings')
     page.locator('[data-setting="unit"]').select_option('mi')
+    expect(page.locator('[data-setting="unit"]')).to_be_focused()
     page.locator('[data-setting="rate"]').select_option('speed')
     page.locator('[data-setting="autoReconnect"]').uncheck()
     choose(page, (index+1)%10)
@@ -304,6 +305,21 @@ with site_url() as url, sync_playwright() as p:
         for i in range(10):
             choose(page,i)
             page.locator('#phone-frame').screenshot(path=str(PREVIEWS / f'theme-{i+1:02}.png'),animations='disabled')
+        # Verify the buildless distribution with actual file URLs and networking off.
+        offline_page = context.new_page()
+        offline_page.on('pageerror', lambda error: report['console_errors'].append(str(error)))
+        offline_page.on('console', lambda msg: report['console_errors'].append(msg.text) if msg.type == 'error' else None)
+        offline_page.on('request', lambda request: report['external_requests'].append(request.url) if urlparse(request.url).scheme in ('http','https') else None)
+        context.set_offline(True)
+        offline_page.goto((ROOT / 'index.html').as_uri(), wait_until='load')
+        expect(offline_page.locator('#app-nav button')).to_have_count(4)
+        nav(offline_page, 'settings')
+        expect(offline_page.locator('#phone-content')).to_contain_text('隐私与离线')
+        choose(offline_page, 9)
+        expect(offline_page.locator('#phone-screen')).to_have_attribute('data-theme','brutal')
+        offline_page.close()
+        context.set_offline(False)
+        checked('direct file:// opening and navigation work with browser networking disabled')
         assert not report['console_errors'], report['console_errors']
         assert not report['external_requests'], report['external_requests']
         checked('no browser console errors and no external network dependencies')
