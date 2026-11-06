@@ -44,7 +44,7 @@ def helper_counts(api,run):
     selected=[j for j in jobs if j['name']=='checks' and j['conclusion']=='success']
     if not selected:raise ValueError('Successful same-run checks job missing')
     selected=[max(selected,key=lambda j:j['id'])]
-    log=api.request(api.base+f"/actions/jobs/{selected[0]['id']}/logs",binary=True).decode('utf-8')
+    log=api.request(api.base+f"/actions/jobs/{selected[0]['id']}/logs",binary=True,api_binary=True).decode('utf-8')
     matches=list(re.finditer(r'Ran (\d+) tests in [^\r\n]+',log))
     if len(matches)!=1 or int(matches[0][1])<=0:raise ValueError('Actual helper execution count missing')
     tail=log[matches[0].end():].splitlines()[:5]

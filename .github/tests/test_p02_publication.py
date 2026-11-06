@@ -16,7 +16,7 @@ class API:
     base='https://api.github.com/repos/test/fixture'
     def __init__(self):self.ref=None;self.tag=None;self.release=None;self.content={};self.downloads=set();self.fail=None;self.tag_creations=0;self.patch_count=0
     def assets(self,r):return list(self.release['assets'])
-    def request(self,url,method='GET',data=None,binary=False,optional=False):
+    def request(self,url,method='GET',data=None,binary=False,optional=False,api_binary=False):
         path=urlsplit(url).path
         if '/actions/runs/' in path:return {'jobs':[{'name':'checks','conclusion':'success','id':123}]}
         if '/actions/jobs/' in path:return b'2026-11-07T01:00:00Z Ran 66 tests in 0.4s\n2026-11-07T01:00:00Z \n2026-11-07T01:00:00Z OK\n'

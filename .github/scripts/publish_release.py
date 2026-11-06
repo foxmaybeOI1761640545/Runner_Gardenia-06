@@ -29,11 +29,11 @@ class GitHub:
         self.base = 'https://api.github.com/repos/' + self.repo
         self.opener = urllib.request.build_opener(SafeRedirect())
 
-    def request(self, url, method='GET', data=None, binary=False, optional=False):
+    def request(self, url, method='GET', data=None, binary=False, optional=False, api_binary=False):
         if not url.startswith('https://') or urllib.parse.urlsplit(url).hostname not in {'api.github.com', 'uploads.github.com'}:
             raise RuntimeError('Unexpected GitHub API destination.')
         headers = {'Authorization': 'Bearer ' + self.token, 'User-Agent': 'Runner-Gardenia-release',
-                   'Accept': 'application/octet-stream' if binary else 'application/vnd.github+json',
+                   'Accept': 'application/octet-stream' if binary and not api_binary else 'application/vnd.github+json',
                    'X-GitHub-Api-Version': '2022-11-28'}
         if isinstance(data, dict):
             data = json.dumps(data).encode()
