@@ -1,0 +1,81 @@
+name: P0 UI Lab Pages
+
+on:
+  push:
+    branches: [design/p0-ui-lab]
+    paths:
+      - 'ui-lab/**'
+      - '.github/workflows/p0-ui-lab-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: p0-ui-lab-pages
+  cancel-in-progress: false
+
+jobs:
+  frontend:
+    if: github.ref == 'refs/heads/design/p0-ui-lab'
+    name: Frontend and real-browser acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # Official stable versions resolved from GitHub Releases on 2026-11-07.
+      # Full commit SHA pinning follows this repository's existing policy.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Static source, runtime dependency and isolation checks
+        run: python ui-lab/tests/check_static.py
+      - name: Install acceptance tooling only
+        run: |
+          python -m pip install -r ui-lab/tests/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Actual Chromium acceptance - 10 themes at 3 viewports
+        run: python ui-lab/tests/browser_acceptance.py
+      - name: Retain screenshots and diagnostic evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: p0-ui-lab-acceptance-${{ github.sha }}
+          path: |
+            ui-lab/previews/
+            ui-lab/test-results/
+          retention-days: 30
+          if-no-files-found: error
+      - name: Stage only the static design lab
+        run: |
+          python - <<'PY'
+          import os, pathlib, shutil
+          destination = pathlib.Path(os.environ['RUNNER_TEMP']) / 'ui-lab-pages'
+          shutil.copytree('ui-lab', destination, ignore=shutil.ignore_patterns('test-results', 'tests', '__pycache__', '.gitignore'))
+          PY
+      - name: Prepare Pages artifact after all frontend checks pass
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/ui-lab-pages
+
+  deploy:
+    if: github.ref == 'refs/heads/design/p0-ui-lab'
+    name: Deploy independent UI Lab to Pages
+    needs: frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure existing GitHub Actions Pages source
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Deploy via GitHub OIDC
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

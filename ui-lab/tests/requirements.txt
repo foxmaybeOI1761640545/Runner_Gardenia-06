@@ -1,0 +1,2 @@
+# Acceptance tooling only. No package installation is needed to open the website.
+playwright==1.62.0
