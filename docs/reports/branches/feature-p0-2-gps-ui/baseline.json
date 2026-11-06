@@ -1,0 +1,71 @@
+{
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branch": "feature/p0-2-gps-ui",
+  "baselineCommit": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+  "archiveReportCommit": "c7a6275bcbb2ba3d945d9d86570014fba8460814",
+  "protectedRemoteBranches": {
+    "refs/heads/feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+    "refs/heads/feature/p0-core-migration": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+    "refs/heads/main": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "protectedTags": {
+    "refs/tags/test-p0-v0.1.0-p0.1": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+    "refs/tags/test-p0-v0.1.0-p0.1^{}": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "refs/tags/v0.1.0-rc1.4": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+    "refs/tags/v0.1.0-rc1.4^{}": "24aa0d7d36d244852e796cca6307936e34d989ed",
+    "refs/tags/v0.1.0-rc1.5": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+    "refs/tags/v0.1.0-rc1.5^{}": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+    "refs/tags/v0.1.0-rc1.6": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+    "refs/tags/v0.1.0-rc1.6^{}": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "ledger": {
+    "schema": 1,
+    "codeHighWater": 6769,
+    "seriesHighWater": {
+      "v0.1.0-rc1.": 4
+    },
+    "allocations": [
+      {
+        "versionName": "v0.1.0-rc1.1",
+        "versionCode": 6766,
+        "commit": "ebc6549a6e228328b82a33995d2ebf2329a26579",
+        "runId": "41672584767",
+        "tagObject": "ab2ef93df4cf31476e8a3fc7fa05d9aa3e25a719",
+        "classification": "orphan-no-verified-artifact",
+        "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41672584767"
+      },
+      {
+        "versionName": "v0.1.0-rc1.2",
+        "versionCode": 6767,
+        "commit": "a9f1770fa81d803959434bc25d864a02a885376e",
+        "runId": "41681169734",
+        "tagObject": "0367638f1ba7f10cf97b8346ae0cf0ee10153545",
+        "classification": "orphan-no-verified-artifact",
+        "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41681169734"
+      },
+      {
+        "versionName": "v0.1.0-rc1.3",
+        "versionCode": 6768,
+        "commit": "d0db0556fbd51de6d282f74fb667309acbf7e860",
+        "runId": "41683034188",
+        "tagObject": "cb79cceb343cb0bbc0652681663f393ba60560c3",
+        "classification": "orphan-no-verified-artifact",
+        "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41683034188"
+      },
+      {
+        "versionName": "v0.1.0-rc1.4",
+        "versionCode": 6769,
+        "commit": "24aa0d7d36d244852e796cca6307936e34d989ed",
+        "runId": "41685585228",
+        "tagObject": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+        "classification": "valid-published",
+        "auditRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41685585228",
+        "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0"
+      }
+    ]
+  },
+  "initialVersionProperties": "VERSION_NAME=v0.1.0-p0.1\nVERSION_CODE=6772\n",
+  "initialWorkingTree": "clean",
+  "newBranchExistedBeforeTask": false,
+  "productTreeUnchangedThroughStage1": true
+}

@@ -16,7 +16,7 @@ The isolated branch was created early solely to archive documents without writin
 | Stage | Scope | State |
 |---|---|---|
 | 0 | Historical inventory/archive/remote verification | PASSED |
-| 1 | Formal baseline | PENDING |
+| 1 | Formal baseline | PASSED |
 | 2 | One read-only BLE reconnect audit | PENDING |
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PENDING |
 | 4 | Home UI and actual screenshot matrix | PENDING |
@@ -25,3 +25,7 @@ The isolated branch was created early solely to archive documents without writin
 | 7 | Final reports/index/remote verification | PENDING |
 
 No merge/main/P0 branch writes; no old Tag/Release replacement; no new signing key, identity, SDK/toolchain or cloud functionality. Hardware validation remains separate.
+
+## Stage 1 acceptance
+
+PASSED: isolated new branch created from freshly fetched latest remote P0, pushed and independently fetched back. [Full baseline/ref/ledger snapshot](baseline.json). Original branches/Tags unchanged; working tree clean at entry; product/build/version tree exactly matches protected P0. Stage 1 is a Git/document stage: no Android tests or APK build are claimed. The archive cloud verifier checks the frozen refs and every source object; the baseline report commit must also pass that job before stage 2.
