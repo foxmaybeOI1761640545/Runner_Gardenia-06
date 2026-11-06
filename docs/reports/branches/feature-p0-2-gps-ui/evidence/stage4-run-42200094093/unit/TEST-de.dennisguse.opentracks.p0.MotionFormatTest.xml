@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.MotionFormatTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-06T10:08:07.290Z" hostname="runnervm7aw5e" time="0.008">
+  <properties/>
+  <testcase name="durationRetainsHoursBeyondADay" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.001"/>
+  <testcase name="distanceChangesUnitsAtOneKilometerWithoutChangingStoredValues" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.006"/>
+  <testcase name="subHourDurationIsReadable" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="invalidDistanceNeverBecomesPlausibleData" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="zeroOrMissingSpeedDoesNotInventPace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="speedAndPaceUseConsistentMetricUnits" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

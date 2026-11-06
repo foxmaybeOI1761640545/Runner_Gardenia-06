@@ -1024,169 +1024,169 @@
     },
     {
       "artifactMember": "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
-      "path": "evidence/stage4-run-42200094093/build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "path": "evidence/stage4-run-42200094093/android/TEST-mediumPhone.xml",
       "bytes": 81228,
       "sha256": "e5e81da2d846b538cf59b4d796d05dd6599babd27f3933c1f4be1fafceae1a2f"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
       "bytes": 478,
       "sha256": "c71a4eeb09d62163d32bb276a6e529e14d6f15d907730cb025f06ada8e1769f2"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
       "bytes": 1714,
       "sha256": "1141d82160d7b4b31f164534aec780ad3ec364f8d6ace1eb3e0721321e1cfcfa"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
       "bytes": 830,
       "sha256": "d4b82533b9761908fb6a339bb70f96d23e41d19860691656bd8bdf96fe8866b1"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
       "bytes": 2720,
       "sha256": "8f4c94291a2cb92faa65671300c640b906fa8d2f77b3b052b7bdc99c191320eb"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
       "bytes": 864,
       "sha256": "482a37445bdfc5b3e1b5bd82072ff793019fcf701a60007b5ab34f1ce84ab2ed"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
       "bytes": 1104,
       "sha256": "9aba06130c48510563797ca7ea42403d5a925afd744529783f07eed8cfa75d6b"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
       "bytes": 1012,
       "sha256": "d62c3c179bdd6eeb88d15cfd2df37a0a8b2e75a9dd0aa14d916e9d45b3f9563e"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
       "bytes": 1166,
       "sha256": "e6ee90d7626e159edb90715c07d4afc49476d1ba7eb852ce6718659a43b71853"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
       "bytes": 1266,
       "sha256": "5528bdc3793a2c9a828afe1e2cb3085f871cdb8cfecd5e05fbf3c7575969d562"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
       "bytes": 3751,
       "sha256": "6953cd2066aaa37244b05e1b912ea5bc05862dea84beb5a92e7cd936faa0576f"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
       "bytes": 1587,
       "sha256": "6a5c84bdf5da1acf306d516eaab67873c7828a02e18e34ab2132d97e703089ba"
     },
     {
       "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
-      "path": "evidence/stage4-run-42200094093/build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "path": "evidence/stage4-run-42200094093/unit/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
       "bytes": 2563,
       "sha256": "49b411d914b44bacdc55a2215ddfe5e1958c7cce3167fcdcb78ae575419004a1"
     },
     {
       "artifactMember": "build/reports/p0-gpx/decimal-escaping.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/decimal-escaping.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/decimal-escaping.gpx",
       "bytes": 1076,
       "sha256": "6fe2dbdbe33de117ead93b0002ca697019f1ce48e138d8445744902b71bb393b"
     },
     {
       "artifactMember": "build/reports/p0-gpx/event-boundaries.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/event-boundaries.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/event-boundaries.gpx",
       "bytes": 1238,
       "sha256": "6aad92bea8786079272f2cee0f71dd202a527959e7e2bdfcdbee243d71f54d5b"
     },
     {
       "artifactMember": "build/reports/p0-gpx/gps-gap.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/gps-gap.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/gps-gap.gpx",
       "bytes": 2112,
       "sha256": "115a369d3338f05ff77f12a07c698fe493440da2396d7f7e6559cf44d18cb54b"
     },
     {
       "artifactMember": "build/reports/p0-gpx/gps-only.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/gps-only.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/gps-only.gpx",
       "bytes": 951,
       "sha256": "32c18efdc3970e17777bd1f347c57fa3d206a85c7b42d9d1de36af36323e6a58"
     },
     {
       "artifactMember": "build/reports/p0-gpx/heart-only.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/heart-only.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/heart-only.gpx",
       "bytes": 1305,
       "sha256": "acd530a558b6c5dbab2813b8211ca49a136e58d1525b8eac2981c76b93c6ce05"
     },
     {
       "artifactMember": "build/reports/p0-gpx/legacy.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/legacy.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/legacy.gpx",
       "bytes": 1141,
       "sha256": "2090931f9c7ecc3416566f3a98977be962c180f0b7f2fc246511aa6570cd1eb8"
     },
     {
       "artifactMember": "build/reports/p0-gpx/local-file.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/local-file.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/local-file.gpx",
       "bytes": 1325,
       "sha256": "fdf3ee00ca9d2f3fd03ac6a5196f504dc1ca0dca5185e250611b76bcb1928add"
     },
     {
       "artifactMember": "build/reports/p0-gpx/raw-complete.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/raw-complete.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/raw-complete.gpx",
       "bytes": 2629,
       "sha256": "d97db3b5913929a0ac315bcd015132df02c84ccd64c15ab541d10960bc1c6d25"
     },
     {
       "artifactMember": "build/reports/p0-gpx/result.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/result.json",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/result.json",
       "bytes": 1686,
       "sha256": "58c567bb8ffd9ab616566ae2a224ddfaf2f7d3337be15194a2ac0123fa97c39b"
     },
     {
       "artifactMember": "build/reports/p0-gpx/segments.gpx",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-gpx/segments.gpx",
+      "path": "evidence/stage4-run-42200094093/p0-gpx/segments.gpx",
       "bytes": 3051,
       "sha256": "87cb07e6501e61873dd203c464d4e77cfb7326d4a227c93e5928e09b8408bbb9"
     },
     {
       "artifactMember": "build/reports/p0-durability/result.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-durability/result.json",
+      "path": "evidence/stage4-run-42200094093/p0-durability/result.json",
       "bytes": 462,
       "sha256": "66d333313403cee8e585840014ac246d5b3a2b49cecefd1bb6cb208dc66d9f9f"
     },
     {
       "artifactMember": "build/reports/p0-offline/result.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-offline/result.json",
+      "path": "evidence/stage4-run-42200094093/p0-offline/result.json",
       "bytes": 2586,
       "sha256": "9af046bb52ee75f9a95c3f54d86f6605c9c0373119c6f49d1317e52f363c050a"
     },
     {
       "artifactMember": "build/reports/p0-validation/tests.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/p0-validation/tests.json",
+      "path": "evidence/stage4-run-42200094093/p0-validation/tests.json",
       "bytes": 21779,
       "sha256": "f452adf373ca8a8b718b6c58e3433cb37c0f140315b05a8e01c90ca7de413f5a"
     },
     {
       "artifactMember": "build/reports/ci-validation/debug-apk.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/ci-validation/debug-apk.json",
+      "path": "evidence/stage4-run-42200094093/ci-validation/debug-apk.json",
       "bytes": 239,
       "sha256": "fc2b74b8eba1d5bfd22c3eb50e4762b32b4746e8f3879723df891287c4fb5fa9"
     },
     {
       "artifactMember": "build/reports/p02-home/result.json",
-      "path": "evidence/stage4-run-42200094093/build/reports/p02-home/result.json",
+      "path": "evidence/stage4-run-42200094093/p02-home/result.json",
       "bytes": 10696,
       "sha256": "43cef08d5dc49e4bd0c74c3224e8cbb1d5ec4e6b2209690662f7ec7acf9ab7c2"
     },
