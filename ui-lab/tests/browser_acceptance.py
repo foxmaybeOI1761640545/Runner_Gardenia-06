@@ -153,7 +153,7 @@ def exercise_theme(page, index, width, height):
     expect(page.locator('.empty-state')).to_contain_text('第一条记录')
     page.locator('#empty-history').uncheck()
     expect(page.locator('.history-row')).to_have_count(3)
-    click(page, '.history-row:first-child')
+    page.locator('.history-row').first.click()
     expect(page.locator('.detail-heading h2')).to_have_text('运动详情')
     expect(page.locator('#phone-content')).to_contain_text('最低心率')
     expect(page.locator('svg.chart')).to_have_count(1)

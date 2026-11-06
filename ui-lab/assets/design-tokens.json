@@ -1,0 +1,211 @@
+{
+  "referenceCommit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+  "coordinateSystem": "CSS px at 393x873; map spacing to dp and typography to sp, adapt to real insets",
+  "spacing": [
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32
+  ],
+  "nativeTouchTargetDp": 48,
+  "nativeTypographySp": {
+    "pageTitle": [
+      22,
+      26
+    ],
+    "primaryMetric": [
+      64,
+      88
+    ],
+    "secondaryMetric": [
+      24,
+      30
+    ],
+    "body": [
+      14,
+      16
+    ],
+    "caption": [
+      12,
+      14
+    ]
+  },
+  "themes": [
+    {
+      "id": "precision",
+      "name": "Precision Pro",
+      "cssTokens": {
+        "bg": "#121614",
+        "surface": "#1c221e",
+        "fg": "#f2f5ec",
+        "muted": "#a0ad9f",
+        "accent": "#ccf96b",
+        "on-accent": "#18240b",
+        "tint": "#c9f96b13",
+        "line": "#343e34",
+        "radius": "12px",
+        "danger": "#ff9690",
+        "font": "Arial,\"Noto Sans CJK SC\",sans-serif"
+      },
+      "nativeShapeRadiusDp": 12
+    },
+    {
+      "id": "quiet",
+      "name": "Quiet Minimal",
+      "cssTokens": {
+        "bg": "#fafbf9",
+        "surface": "#fff",
+        "fg": "#24352e",
+        "muted": "#728178",
+        "accent": "#3c6a54",
+        "on-accent": "#fff",
+        "tint": "#eaf1ec",
+        "line": "#e2e8e3",
+        "radius": "16px",
+        "danger": "#b64034"
+      },
+      "nativeShapeRadiusDp": 16
+    },
+    {
+      "id": "explorer",
+      "name": "Outdoor Explorer",
+      "cssTokens": {
+        "bg": "#f0eee2",
+        "surface": "#e5e7d7",
+        "fg": "#233e30",
+        "muted": "#72816b",
+        "accent": "#345c3d",
+        "on-accent": "#fff9e6",
+        "tint": "#cbd5b780",
+        "line": "#c9cfbb",
+        "radius": "9px",
+        "danger": "#aa4f27"
+      },
+      "nativeShapeRadiusDp": 9
+    },
+    {
+      "id": "neon",
+      "name": "Neon Pulse",
+      "cssTokens": {
+        "bg": "#0c0e1b",
+        "surface": "#17162a",
+        "fg": "#f1ecff",
+        "muted": "#aaa5c9",
+        "accent": "#70f4ed",
+        "on-accent": "#09202b",
+        "tint": "#62efeb10",
+        "line": "#37304d",
+        "radius": "18px",
+        "danger": "#ff92c4"
+      },
+      "nativeShapeRadiusDp": 18
+    },
+    {
+      "id": "swiss",
+      "name": "Swiss Editorial",
+      "cssTokens": {
+        "bg": "#f6f2e9",
+        "surface": "#f6f2e9",
+        "fg": "#171816",
+        "muted": "#77766b",
+        "accent": "#d13627",
+        "on-accent": "#fff",
+        "tint": "#d1362710",
+        "line": "#c8c5b9",
+        "radius": "0px",
+        "danger": "#b1261b"
+      },
+      "nativeShapeRadiusDp": 0
+    },
+    {
+      "id": "industrial",
+      "name": "Industrial Gauge",
+      "cssTokens": {
+        "bg": "#262824",
+        "surface": "#30332c",
+        "fg": "#f5e9ca",
+        "muted": "#b1b19e",
+        "accent": "#efbd5d",
+        "on-accent": "#292517",
+        "tint": "#efbd5d15",
+        "line": "#535548",
+        "radius": "3px",
+        "danger": "#ffac87",
+        "font": "\"Courier New\",\"Noto Sans CJK SC\",monospace"
+      },
+      "nativeShapeRadiusDp": 3
+    },
+    {
+      "id": "wellness",
+      "name": "Calm Wellness",
+      "cssTokens": {
+        "bg": "#f7f5ec",
+        "surface": "#fffdf7",
+        "fg": "#354c42",
+        "muted": "#7e9084",
+        "accent": "#4c8069",
+        "on-accent": "#fff",
+        "tint": "#e0eee0",
+        "line": "#e1e7db",
+        "radius": "25px",
+        "danger": "#ae5c4e"
+      },
+      "nativeShapeRadiusDp": 25
+    },
+    {
+      "id": "aurora",
+      "name": "Aurora Glass",
+      "cssTokens": {
+        "bg": "#151b39",
+        "surface": "#2b3455",
+        "fg": "#f2f5ff",
+        "muted": "#b7c4e1",
+        "accent": "#bccaff",
+        "on-accent": "#1c274d",
+        "tint": "#c4d3ff20",
+        "line": "#7f94cc55",
+        "radius": "22px",
+        "danger": "#ffb2bc"
+      },
+      "nativeShapeRadiusDp": 22
+    },
+    {
+      "id": "racing",
+      "name": "Racing Performance",
+      "cssTokens": {
+        "bg": "#f3f3ef",
+        "surface": "#fff",
+        "fg": "#161817",
+        "muted": "#7c807c",
+        "accent": "#cc302c",
+        "on-accent": "#fff",
+        "tint": "#cc302c0d",
+        "line": "#d5d7d2",
+        "radius": "4px",
+        "danger": "#b12622"
+      },
+      "nativeShapeRadiusDp": 4
+    },
+    {
+      "id": "brutal",
+      "name": "Data Brutalism",
+      "cssTokens": {
+        "bg": "#fafaf2",
+        "surface": "#fafaf2",
+        "fg": "#11120c",
+        "muted": "#666959",
+        "accent": "#e9f34b",
+        "on-accent": "#10120a",
+        "tint": "#e9f34b",
+        "line": "#11120c",
+        "radius": "0px",
+        "danger": "#ab2721",
+        "font": "\"Courier New\",\"Noto Sans CJK SC\",monospace"
+      },
+      "nativeShapeRadiusDp": 0
+    }
+  ]
+}
