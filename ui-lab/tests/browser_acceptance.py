@@ -85,6 +85,7 @@ def exercise_theme(page, index, width, height):
     nav(page, 'run')
     assert_layout(page, f'{width}x{height} theme {index+1} run')
     if width == 1440:
+        page.clock.fast_forward(3500)
         page.locator('#phone-frame').screenshot(path=str(PREVIEWS / f'theme-{index+1:02}.png'), animations='disabled')
     click(page, '#phone-content [data-action="pause"]')
     expect(page.locator('.record-state')).to_contain_text('用户主动暂停')
@@ -184,7 +185,7 @@ def exercise_theme(page, index, width, height):
     assert root.tag == '{http://www.topografix.com/GPX/1/1}gpx'
     assert len(root.findall('.//{http://www.topografix.com/GPX/1/1}trkseg')) == 2
     expect(page.locator('#export-title')).to_have_text('导出成功')
-    click(page, '[data-action="close-export"]')
+    click(page, '[aria-label="关闭导出弹窗"]')
     click(page, '[aria-label="返回历史记录"]')
     nav(page, 'settings')
     page.locator('[data-setting="unit"]').select_option('mi')
@@ -221,6 +222,8 @@ with site_url() as url, sync_playwright() as p:
             page.set_viewport_size({'width':width,'height':height})
             reset(page)
             choose(page,0)
+            page.clock.fast_forward(3500)
+            page.evaluate('scrollTo(0,0)')
             page.screenshot(path=str(PREVIEWS / f'desktop-{width}.png' if width>500 else PREVIEWS / 'mobile-390.png'), full_page=True, animations='disabled')
             for i in range(10):
                 exercise_theme(page,i,width,height)
@@ -275,6 +278,7 @@ with site_url() as url, sync_playwright() as p:
         checked('reduced motion disables automatic playback')
         # Restore screenshot state, and capture all ten complete phone interfaces.
         reset(page)
+        page.clock.fast_forward(3500)
         for i in range(10):
             choose(page,i)
             page.locator('#phone-frame').screenshot(path=str(PREVIEWS / f'theme-{i+1:02}.png'),animations='disabled')
