@@ -51,6 +51,16 @@ jobs:
             ui-lab/test-results/
           retention-days: 30
           if-no-files-found: error
+      - name: Keep a compact preview package for visual review
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: p0-ui-lab-previews-${{ github.sha }}
+          path: |
+            ui-lab/previews/
+            ui-lab/test-results/results.json
+          retention-days: 30
+          if-no-files-found: error
       - name: Stage only the static design lab
         run: |
           python - <<'PY'
