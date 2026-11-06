@@ -1,0 +1,821 @@
+{
+  "run": "42198290386",
+  "source": "3f608902f7f280c07f8caa02a683818cfb0d2e5f",
+  "conclusion": "failure",
+  "counts": {
+    "android": {
+      "tests": 395,
+      "executed": 394,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 1,
+      "xmlFiles": 1
+    },
+    "unit": {
+      "tests": 110,
+      "executed": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xmlFiles": 12
+    }
+  },
+  "gate": {
+    "plan": {
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772,
+      "commit": "3f608902f7f280c07f8caa02a683818cfb0d2e5f",
+      "stage": 9,
+      "p02Phase": 4,
+      "branch": "feature/p0-2-gps-ui",
+      "runId": "42198290386",
+      "publishing": false
+    },
+    "stage": 9,
+    "android": {
+      "tests": 395,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 1,
+      "total": 395,
+      "executed": 394,
+      "missingClasses": [],
+      "missingRequiredTests": [],
+      "suites": [
+        {
+          "name": "de.dennisguse.opentracks.EspressoDeleteTrackTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.EspressoEditTrackRecordingTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.EspressoUITest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.ChartValueSeriesTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRateChartHistoryTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRatePathTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.CustomContentProviderUtilsTest",
+          "tests": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.ShareContentProviderTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.TrackSelectionTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.UUIDUtilsTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.model.TrackPointTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.ActivityTypeTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.DistanceFormatterTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.SpeedFormatterTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.StatisticsTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.ExportImportTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0DurabilityTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+          "tests": 13,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0OfflinePolicyTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0RecordingDataTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0SensorsTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.publicapi.DataProviderTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.publicapi.PublicApiTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.GpsStatusTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.PressureSensorUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.UintUtilsTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+          "tests": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 1
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceUITest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest",
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.PreferencesOpenHelperTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.PreferencesUtilsTest",
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.share.ShareUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest",
+          "tests": 1,
+          "failures": 1,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.FileUtilsTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.StringUtilsTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.TrackNameUtilsTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "failureDetails": [
+        "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest.realPagesInLightDarkAndTwoWindowSizes\n\nandroidx.test.espresso.NoMatchingViewException: No views in hierarchy found matching: an instance of android.widget.TextView and view.getText() equals string from resource id: <2131821191> [sensor_scan_again] value: Scan again\n\nView Hierarchy:\n+>DecorView{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params={(0,0)(fillxfill) ty=BASE_APPLICATION wanim=0x1030309\n  fl=LAYOUT_IN_SCREEN LAYOUT_INSET_DECOR SPLIT_TOUCH HARDWARE_ACCELERATED DRAWS_SYSTEM_BAR_BACKGROUNDS\n  pfl=NO_MOVE_ANIMATION EDGE_TO_EDGE_ENFORCED FORCE_DRAW_STATUS_BAR_BACKGROUND FIT_INSETS_CONTROLLED\n  bhv=DEFAULT\n  fitSides=\n  frameRateBoostOnTouch=true\n  dvrrWindowFrameRateHint=true}, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+->LinearLayout{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-->ViewStub{id=16908747, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+-->FrameLayout{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+--->FitWindowsFrameLayout{id=2131296316, res-name=action_bar_root, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+---->ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+----->CoordinatorLayout{id=-1, visibility=VISIBLE, width=720, height=1280, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3} \n|\n+------>AppBarLayout{id=-1, visibility=VISIBLE, width=720, height=176, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=48.0, child-count=1} \n|\n+------->MaterialToolbar{id=2131297129, res-name=top_app_bar, visibility=VISIBLE, width=720, height=176, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=com.google.android.material.appbar.AppBarLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+-------->AppCompatTextView{id=-1, visibility=VISIBLE, width=160, height=59, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.Toolbar$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=120.0, y=58.0, text=Settings, input-type=0, ime-target=false, has-links=false} \n|\n+-------->AppCompatImageButton{id=-1, desc=Navigate up, visibility=VISIBLE, width=112, height=112, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.Toolbar$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0} \n|\n+------>LinearLayout{id=-1, visibility=VISIBLE, width=720, height=960, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=224.0, child-count=1} \n|\n+------->FrameLayout{id=2131296972, res-name=settings_fragment, visibility=VISIBLE, width=720, height=784, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+-------->LinearLayout{id=-1, visibility=VISIBLE, width=720, height=784, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2} \n|\n+--------->FrameLayout{id=16908351, res-name=list_container, visibility=VISIBLE, width=720, height=784, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1} \n|\n+---------->RecyclerView{id=2131296929, res-name=recycler_view, visibility=VISIBLE, width=720, height=784, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=true, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=5} \n|\n+----------->LinearLayout{id=0, visibility=VISIBLE, width=720, height=70, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0, child-count=2} \n|\n+------------>LinearLayout{id=2131296580, res-name=icon_frame, visibility=INVISIBLE, width=112, height=16, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=27.0, child-count=1} \n|\n+------------->PreferenceImageView{id=16908294, res-name=icon, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=8.0} \n|\n+------------>RelativeLayout{id=-1, visibility=VISIBLE, width=544, height=70, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=144.0, y=0.0, child-count=2} \n|\n+------------->MaterialTextView{id=16908310, res-name=title, visibility=VISIBLE, width=544, height=38, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=16.0, text=Heart rate, input-type=0, ime-target=false, has-links=false} \n|\n+------------->MaterialTextView{id=16908304, res-name=summary, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+----------->LinearLayout{id=0, visibility=VISIBLE, width=720, height=145, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=102.0, child-count=3} \n|\n+------------>LinearLayout{id=2131296580, res-name=icon_frame, visibility=INVISIBLE, width=112, height=16, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=64.0, child-count=1} \n|\n+------------->PreferenceImageView{id=16908294, res-name=icon, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=8.0} \n|\n+------------>RelativeLayout{id=-1, visibility=VISIBLE, width=544, height=145, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=144.0, y=0.0, child-count=2} \n|\n+------------->MaterialTextView{id=16908310, res-name=title, visibility=VISIBLE, width=209, height=43, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0, text=Selected strap, input-type=0, ime-target=false, has-links=false} \n|\n+------------->MaterialTextView{id=16908304, res-name=summary, visibility=VISIBLE, width=68, height=38, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, text=None, input-type=0, ime-target=false, has-links=false} \n|\n+------------>LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0} \n|\n+----------->LinearLayout{id=0, visibility=VISIBLE, width=720, height=185, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=247.0, child-count=3} \n|\n+------------>LinearLayout{id=2131296580, res-name=icon_frame, visibility=INVISIBLE, width=112, height=16, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=84.0, child-count=1} \n|\n+------------->PreferenceImageView{id=16908294, res-name=icon, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=8.0} \n|\n+------------>RelativeLayout{id=-1, visibility=VISIBLE, width=544, height=185, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=144.0, y=0.0, child-count=2} \n|\n+------------->MaterialTextView{id=16908310, res-name=title, visibility=VISIBLE, width=271, height=43, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0, text=Heart rate \u00b7 \u2014 bpm, input-type=0, ime-target=false, has-links=false} \n|\n+------------->MaterialTextView{id=16908304, res-name=summary, visibility=VISIBLE, width=385, height=78, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, text=No strap connected\nNo measurement received yet, input-type=0, ime-target=false, has-links=false} \n|\n+------------>LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0} \n|\n+----------->LinearLayout{id=0, visibility=VISIBLE, width=720, height=225, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=432.0, child-count=3} \n|\n+------------>LinearLayout{id=2131296580, res-name=icon_frame, visibility=INVISIBLE, width=112, height=16, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=104.0, child-count=1} \n|\n+------------->PreferenceImageView{id=16908294, res-name=icon, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=8.0} \n|\n+------------>RelativeLayout{id=-1, visibility=VISIBLE, width=544, height=225, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=144.0, y=0.0, child-count=2} \n|\n+------------->MaterialTextView{id=16908310, res-name=title, visibility=VISIBLE, width=512, height=43, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0, text=Connect / reconnect selected strap, input-type=0, ime-target=false, has-links=false} \n|\n+------------->MaterialTextView{id=16908304, res-name=summary, visibility=VISIBLE, width=544, height=118, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, text=Preview live heart rate before recording. Samples are saved only during a recording., input-type=0, ime-target=false, has-links=false} \n|\n+------------>LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0} \n|\n+----------->LinearLayout{id=0, visibility=VISIBLE, width=720, height=185, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.recyclerview.widget.RecyclerView$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=657.0, child-count=3} \n|\n+------------>LinearLayout{id=2131296580, res-name=icon_frame, visibility=INVISIBLE, width=112, height=16, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=32.0, y=84.0, child-count=1} \n|\n+------------->PreferenceImageView{id=16908294, res-name=icon, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=8.0} \n|\n+------------>RelativeLayout{id=-1, visibility=VISIBLE, width=544, height=185, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=144.0, y=0.0, child-count=2} \n|\n+------------->MaterialTextView{id=16908310, res-name=title, visibility=VISIBLE, width=246, height=43, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=32.0, text=Disconnect strap, input-type=0, ime-target=false, has-links=false} \n|\n+------------->MaterialTextView{id=16908304, res-name=summary, visibility=VISIBLE, width=544, height=78, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.RelativeLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=75.0, text=Keep the selected strap for the next connection., input-type=0, ime-target=false, has-links=false} \n|\n+------------>LinearLayout{id=16908312, res-name=widget_frame, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0} \n|\n+--------->MaterialTextView{id=16908292, res-name=empty, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.LinearLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false} \n|\n+------>CoordinatorLayout{id=2131296386, res-name=bottom_app_bar_layout, visibility=VISIBLE, width=720, height=1136, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=48.0, child-count=1} \n|\n+------->BottomAppBar{id=2131296385, res-name=bottom_app_bar, visibility=VISIBLE, width=720, height=176, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=960.0, child-count=2} \n|\n+-------->AppCompatImageButton{id=-1, desc=Navigate up, visibility=VISIBLE, width=96, height=160, has-focus=false, has-focusable=true, has-window-focus=false, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.Toolbar$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=8.0, y=0.0} \n|\n+-------->ActionMenuView{id=-1, visibility=VISIBLE, width=0, height=160, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=androidx.appcompat.widget.Toolbar$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=104.0, y=0.0, child-count=0} \n|\n+---->ViewStubCompat{id=2131296327, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0} \n|\n+->View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=720, height=96, has-focus=false, has-focusable=false, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, layout-params=android.widget.FrameLayout$LayoutParams@YYYYYY, tag=null, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1184.0} \nThe complete view hierarchy is available in artifact file 'view-hierarchy-1.txt'.\n\tat androidx.test.espresso.NoMatchingViewException$Builder.build(NoMatchingViewException.java:185)\n\tat androidx.test.espresso.base.DefaultFailureHandler.lambda$getNoMatchingViewExceptionTruncater$0(DefaultFailureHandler.java:93)\n\tat androidx.test.espresso.base.DefaultFailureHandler$$ExternalSyntheticLambda1.truncateExceptionMessage(D8$$SyntheticClass:0)\n\tat androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:72)\n\tat androidx.test.espresso.base.ViewHierarchyExceptionHandler.handleSafely(ViewHierarchyExceptionHandler.java:38)\n\tat androidx.test.espresso.base.DefaultFailureHandler$TypedFailureHandler.handle(DefaultFailureHandler.java:158)\n\tat androidx.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:120)\n\tat androidx.test.espresso.ViewInteraction.waitForAndHandleInteractionResults(ViewInteraction.java:385)\n\tat androidx.test.espresso.ViewInteraction.check(ViewInteraction.java:366)\n\tat de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest.settings(HeartRateUiScreenshotTest.java:199)\n\tat de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest.realPagesInLightDarkAndTwoWindowSizes(HeartRateUiScreenshotTest.java:90)\n"
+      ],
+      "passed": false
+    },
+    "unit": {
+      "tests": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "total": 110,
+      "executed": 110,
+      "missingClasses": [],
+      "missingRequiredTests": [],
+      "suites": [
+        {
+          "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+          "tests": 19,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+          "tests": 23,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+          "tests": 17,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "failureDetails": [],
+      "passed": true
+    },
+    "p0Screenshots": 65,
+    "passed": false,
+    "diagnostic": "[Errno 2] No such file or directory: 'build/reports/p0-durability/result.json'"
+  },
+  "gpx": {
+    "passed": true,
+    "commit": "3f608902f7f280c07f8caa02a683818cfb0d2e5f",
+    "files": [
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "b79f665d5d002535c5a060134dc51766876bf03ee0048b9cc24ad56dec63a9c3",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "event-boundaries.gpx",
+        "sha256": "b0c6a8426c886077d878a59067145799d3527df86051f65f81780b01b8a01feb",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "76c95997248adb437876a4ef05df7d17f5e1fd351972093e4836c5dd6f53080f",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "eeaf9268fa73ac4e5f8dc6cb53c02e22fdb44e212bff298b6c7fdc24552f7931",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "28e90b3083072461472809e9f21fc849d23cd7fe5a2c99ed5aa2b68268f03ae1",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "1518d84b638dbf8bcb37be34dfc776165b2ccf717dffcd5d5c292ea8a60c900b",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "14326fad7ff255fae2caeee0e181ce6bcd9f0387784709bfaaa6010c5431a678",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "0042e235712054892ce3ed35dba3f2868a1ab995a0b37fd0bf84ea28d85a1b42",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "60b1d268f82372d7d3390ef8528262a1e6208727f6ba0f2f1b6660aee29899f0",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "offline": {
+    "passed": true,
+    "commit": "3f608902f7f280c07f8caa02a683818cfb0d2e5f",
+    "debug": {
+      "applicationId": "com.fox.runner.debug",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.health.WRITE_DISTANCE",
+        "android.permission.health.WRITE_ELEVATION_GAINED",
+        "android.permission.health.WRITE_EXERCISE",
+        "android.permission.health.WRITE_EXERCISE_ROUTE",
+        "android.permission.health.WRITE_SPEED",
+        "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {}
+    },
+    "release": {
+      "applicationId": "com.fox.runner",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {
+        "activity": [
+          "de.dennisguse.opentracks.introduction.IntroductionActivity",
+          "de.dennisguse.opentracks.p0.app.P0Activity",
+          "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+          "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+        ],
+        "activity-alias": [],
+        "service": [
+          "androidx.appcompat.app.AppLocalesMetadataHolderService",
+          "de.dennisguse.opentracks.services.TrackRecordingService"
+        ],
+        "provider": [
+          "androidx.core.content.FileProvider",
+          "de.dennisguse.opentracks.data.ShareContentProvider"
+        ],
+        "receiver": []
+      }
+    }
+  }
+}

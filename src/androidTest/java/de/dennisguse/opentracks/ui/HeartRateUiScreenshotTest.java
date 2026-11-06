@@ -195,8 +195,10 @@ public class HeartRateUiScreenshotTest {
             scenario.onActivity(activity -> {
                 SensorsSettingsFragment fragment=(SensorsSettingsFragment)activity.getSupportFragmentManager().findFragmentById(R.id.settings_fragment);
                 fragment.onDisplayPreferenceDialog(fragment.findPreference(context.getString(R.string.settings_sensor_bluetooth_heart_rate_key)));
+                activity.getSupportFragmentManager().executePendingTransactions();
             });
-            onView(withText(R.string.sensor_scan_again)).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));
+            waitForScanDialog(scenario);
+            onView(withText(R.string.sensor_scan_again)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));
             capture(profile+"-scan",false);
             scenario.onActivity(activity -> {
                 BluetoothLeSensorPreference.BluetoothLeSensorPreferenceDialog dialog=(BluetoothLeSensorPreference.BluetoothLeSensorPreferenceDialog)activity.getSupportFragmentManager().findFragmentByTag(SensorsSettingsFragment.class.getSimpleName());
@@ -204,6 +206,23 @@ public class HeartRateUiScreenshotTest {
             });
             capture(profile+"-scan-fixture",true);
         }
+    }
+
+    private void waitForScanDialog(ActivityScenario<SettingsActivity> scenario) {
+        long deadline=android.os.SystemClock.uptimeMillis()+WAIT.toMillis();
+        java.util.concurrent.atomic.AtomicBoolean ready=new java.util.concurrent.atomic.AtomicBoolean();
+        do {
+            scenario.onActivity(activity->{
+                var fragment=(androidx.fragment.app.DialogFragment)activity.getSupportFragmentManager().findFragmentByTag(SensorsSettingsFragment.class.getSimpleName());
+                var dialog=fragment==null?null:fragment.getDialog();
+                View button=dialog==null?null:dialog.findViewById(android.R.id.button3);
+                ready.set(dialog!=null&&dialog.isShowing()&&dialog.getWindow()!=null&&dialog.getWindow().getDecorView().hasWindowFocus()
+                        &&button!=null&&button.isShown()&&button.getWidth()>0&&button.getHeight()>0);
+            });
+            if(ready.get())return;
+            android.os.SystemClock.sleep(50);
+        } while(android.os.SystemClock.uptimeMillis()<deadline);
+        fail("Actual scan dialog must own a painted window before its rescan assertion");
     }
 
     private void waitForTab(int index) {
