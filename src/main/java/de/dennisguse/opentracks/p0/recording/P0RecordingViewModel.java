@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 
 import de.dennisguse.opentracks.R;
+import de.dennisguse.opentracks.p0.gps.GpsPreparation;
 import de.dennisguse.opentracks.data.models.*;
 import de.dennisguse.opentracks.p0.data.*;
 import de.dennisguse.opentracks.sensors.*;
@@ -21,7 +22,11 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 
 /** Application-context gateway. Unbinding a screen never stops a started recording service. */
 public class P0RecordingViewModel extends AndroidViewModel {
-    public record Snapshot(RecordingSession session,RecordingData data,GpsStatusValue gps,Position position,HeartRatePreview preview,String error,boolean busy) {}
+    public record Snapshot(RecordingSession session,RecordingData data,GpsStatusValue gps,Position position,HeartRatePreview preview,String error,boolean busy,GpsPreparation preparation,boolean freshGps) {
+        public Snapshot(RecordingSession session,RecordingData data,GpsStatusValue gps,Position position,HeartRatePreview preview,String error,boolean busy) {
+            this(session,data,gps,position,preview,error,busy,GpsPreparation.idle(),true);
+        }
+    }
     private final MutableLiveData<Snapshot> snapshot=new MutableLiveData<>();
     private final MutableLiveData<List<WorkoutSummary>> history=new MutableLiveData<>(List.of());
     private final Handler handler=new Handler(Looper.getMainLooper());
@@ -40,6 +45,20 @@ public class P0RecordingViewModel extends AndroidViewModel {
     private final Observer<RecordingData> dataObserver=value->{if(value!=null){data=value;emit();}};
     private final Observer<GpsStatusValue> gpsObserver=value->{gps=value;emit();};
     private final Observer<RecordingStatus> statusObserver=this::onStatus;
+    private final Observer<GpsPreparation> preparationObserver=value->{
+        if (value != null && value.active()) {
+            if (session.phase()!=RecordingSession.Phase.ACQUIRING_GPS)
+                session=new RecordingSession(RecordingSession.Phase.ACQUIRING_GPS,null);
+        } else if (session.phase()==RecordingSession.Phase.ACQUIRING_GPS) {
+            if (observed!=null && observed.isRecording()) {
+                session=RecordingSession.recover(observed.getRecordingStatus().trackId().id(),true);
+                store.save(session);reloadHistory();
+            } else session=RecordingSession.ready();
+        }
+        if (value!=null && value.state()==GpsPreparation.State.UNAVAILABLE)
+            error=getApplication().getString(R.string.p0_location_needed);
+        emit();
+    };
     private void onStatus(RecordingStatus value) {
         if(value!=null&&value.isRecording()) {
             session=RecordingSession.recover(value.trackId().id(),true);store.save(session);
@@ -71,13 +90,15 @@ public class P0RecordingViewModel extends AndroidViewModel {
         service.getRecordingStatusObservable().observeForever(statusObserver);
         service.getRecordingDataObservable().observeForever(dataObserver);
         service.getGpsStatusObservable().observeForever(gpsObserver);
+        service.getGpsPreparationObservable().observeForever(preparationObserver);
         emit();
     }
     private void unobserve() {
         if(observed==null)return;
         observed.getRecordingStatusObservable().removeObserver(statusObserver);
         observed.getRecordingDataObservable().removeObserver(dataObserver);
-        observed.getGpsStatusObservable().removeObserver(gpsObserver);observed=null;
+        observed.getGpsStatusObservable().removeObserver(gpsObserver);
+        observed.getGpsPreparationObservable().removeObserver(preparationObserver);observed=null;
     }
     public void pendingStart(ActivityType type) {pendingSport=type;pendingResume=false;}
     public void pendingResume() {pendingSport=null;pendingResume=true;}
@@ -87,14 +108,17 @@ public class P0RecordingViewModel extends AndroidViewModel {
         if(resume)resume();else if(type!=null)start(type);
     }
     public void start(ActivityType type) {
-        if(session.phase()==RecordingSession.Phase.RECORDING||session.phase()==RecordingSession.Phase.PAUSED)return;
+        if(session.phase()==RecordingSession.Phase.RECORDING||session.phase()==RecordingSession.Phase.PAUSED||session.phase()==RecordingSession.Phase.ACQUIRING_GPS)return;
         command(true,service->{
             configureGps();PreferencesUtils.setDefaultActivityLocalized(getApplication().getString(type.getLocalizedStringId()));
-            Track.Id id=service.isRecording()?service.getRecordingStatus().trackId():service.startNewTrack();
-            if(id==null)throw new IllegalStateException("GPS permission unavailable");
-            session=RecordingSession.recover(id.id(),true);store.save(session);reloadHistory();
+            if(service.isRecording())return;
+            service.beginGpsAcquisition();
+            if(service.isAcquiringGps())session=new RecordingSession(RecordingSession.Phase.ACQUIRING_GPS,null);
+            data=RecordingData.NOT_RECORDING;
         });
     }
+    public void cancelGpsAcquisition() { command(false,TrackRecordingService::cancelGpsAcquisition); }
+    public void continueGpsAcquisition() { command(false,TrackRecordingService::continueGpsAcquisition); }
     private void configureGps() {
         // Both are existing driver/filter settings: one-second requests, retain each valid GPS fix.
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,de.dennisguse.opentracks.sensors.driver.SensorType.INTERNAL.getPreferenceValue());
@@ -173,7 +197,7 @@ public class P0RecordingViewModel extends AndroidViewModel {
     }
     private void emit() {
         HeartRatePreview preview=observed!=null?observed.getHeartRatePreview():new HeartRatePreview(null,HeartRateStatus.disconnected());
-        snapshot.setValue(new Snapshot(session,data,gps,observed!=null?observed.getGpsPreview():null,preview,error,busy));
+        snapshot.setValue(new Snapshot(session,data,gps,observed!=null?observed.getGpsPreview():null,preview,error,busy,observed!=null?observed.getGpsPreparation():GpsPreparation.idle(),observed!=null&&observed.hasFreshGpsPreview()));
     }
     @Override protected void onCleared() {
         closed=true;detach();worker.shutdownNow();super.onCleared();

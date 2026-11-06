@@ -27,6 +27,13 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     private GpsStatusManager gpsStatusManager;
     private Distance thresholdHorizontalAccuracy;
+    private volatile long latestElapsedNanos;
+
+    public boolean hasFreshPreview() {
+        long now = android.os.SystemClock.elapsedRealtimeNanos();
+        return latestElapsedNanos > 0 && now >= latestElapsedNanos
+                && now - latestElapsedNanos <= de.dennisguse.opentracks.p0.gps.GpsReadiness.DEFAULT.maxAgeNanos();
+    }
 
     private final SharedPreferences.OnSharedPreferenceChangeListener sharedPreferenceChangeListener = (sharedPreferences, key) -> {
         if (PreferencesUtils.isKey(R.string.recording_gps_accuracy_key, key)) {
@@ -65,18 +72,22 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onDisconnected() {
+        latestElapsedNanos = 0;
         super.onDisconnected();
         gpsStatusManager.stop();
     }
 
     @Override
     public void onSensorDeactivated() {
+        latestElapsedNanos = 0;
         super.onSensorDeactivated();
         gpsStatusManager.onGpsDisabled();
     }
 
     @Override
     public void onDataReceived(Location location) {
+        if (!trackPointCreator.acceptGpsLocation(location)) return;
+        latestElapsedNanos = location.getElapsedRealtimeNanos();
         // Send each update to the status; please note that this TrackPoint is not stored.
         Position position = Position.of(location, trackPointCreator.getNow());
         gpsStatusManager.onNewTrackPoint(position);

@@ -19,6 +19,9 @@
         <TextView android:id="@+id/p0_location_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_location_needed" />
         <com.google.android.material.button.MaterialButton android:id="@+id/p0_location_permission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_enable_location" />
         <com.google.android.material.button.MaterialButton android:id="@+id/p0_notification_permission" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_enable_notification" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_cancel_gps" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p02_cancel_gps" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_continue_gps" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p02_continue_gps" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/p0_location_settings" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p02_location_settings" android:visibility="gone" />
         <TextView android:id="@+id/p0_metrics" android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="12dp" android:text="@string/p0_metrics_empty" android:textAppearance="?attr/textAppearanceBodyLarge" />
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">

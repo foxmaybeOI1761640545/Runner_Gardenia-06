@@ -18,7 +18,7 @@ The isolated branch was created early solely to archive documents without writin
 | 0 | Historical inventory/archive/remote verification | PASSED |
 | 1 | Formal baseline | PASSED |
 | 2 | One read-only BLE reconnect audit | PASSED |
-| 3 | GPS acquisition state and actual JVM/API35 acceptance | PENDING |
+| 3 | GPS acquisition state and actual JVM/API35 acceptance | IN_PROGRESS |
 | 4 | Home UI and actual screenshot matrix | PENDING |
 | 5 | Full regression | PENDING |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PENDING |

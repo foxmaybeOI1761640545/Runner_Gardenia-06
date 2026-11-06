@@ -45,6 +45,9 @@ public class P0Activity extends AbstractActivity {
             if(hasLocation())model.start(type);
             else {model.pendingStart(type);locationRequest.launch(P0PermissionPolicy.location().toArray(new String[0]));}
         });
+        binding.p0CancelGps.setOnClickListener(view->model.cancelGpsAcquisition());
+        binding.p0ContinueGps.setOnClickListener(view->model.continueGpsAcquisition());
+        binding.p0LocationSettings.setOnClickListener(view->startActivity(new android.content.Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)));
         binding.p0Pause.setOnClickListener(view->model.pause());
         binding.p0Resume.setOnClickListener(view->{
             if(hasLocation())model.resume();
@@ -69,17 +72,23 @@ public class P0Activity extends AbstractActivity {
     }
     private void render(P0RecordingViewModel.Snapshot value) {
         RecordingSession.Phase phase=value.session().phase();
-        int title=switch(phase) {case READY->R.string.p0_ready;case RECORDING->R.string.p0_recording;case PAUSED->R.string.p0_paused;case FINISHED->R.string.p0_finished;};
+        int title=switch(phase) {case IDLE->R.string.p0_ready;case ACQUIRING_GPS->R.string.p02_acquiring_gps;case RECORDING->R.string.p0_recording;case PAUSED->R.string.p0_paused;case FINISHED->R.string.p0_finished;};
+        boolean acquiring=phase==RecordingSession.Phase.ACQUIRING_GPS;
+        if(acquiring&&value.preparation().state()==de.dennisguse.opentracks.p0.gps.GpsPreparation.State.TIMED_OUT)title=R.string.p02_gps_timeout;
         binding.p0RecordingState.setText(title);
-        boolean idle=phase==RecordingSession.Phase.READY||phase==RecordingSession.Phase.FINISHED;
+        binding.p0CancelGps.setVisibility(acquiring?View.VISIBLE:View.GONE);
+        binding.p0CancelGps.setEnabled(!value.busy());
+        binding.p0ContinueGps.setVisibility(acquiring&&value.preparation().state()==de.dennisguse.opentracks.p0.gps.GpsPreparation.State.TIMED_OUT?View.VISIBLE:View.GONE);
+        binding.p0LocationSettings.setVisibility(acquiring?View.VISIBLE:View.GONE);
+        boolean idle=phase==RecordingSession.Phase.IDLE||phase==RecordingSession.Phase.FINISHED;
         binding.p0Start.setEnabled(idle&&!value.busy());binding.p0Pause.setEnabled(phase==RecordingSession.Phase.RECORDING&&!value.busy());
-        binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED&&!value.busy());binding.p0Finish.setEnabled(!idle&&!value.busy());
+        binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED&&!value.busy());binding.p0Finish.setEnabled(!idle&&!acquiring&&!value.busy());
         binding.p0Running.setEnabled(idle&&!value.busy());binding.p0Cycling.setEnabled(idle&&!value.busy());binding.p0Devices.setEnabled(!value.busy());
-        Statistics stats=value.data().track()!=null?value.data().trackStatistics():Statistics.DEFAULT;
+        Statistics stats=!acquiring&&value.data().track()!=null?value.data().trackStatistics():Statistics.DEFAULT;
         // SensorDataSet is consumable by the recorder. Render the last real GPS
         // measurement instead, preserving its capture time and accuracy between ticks.
         Position position=value.position();
-        boolean fix=value.gps()==GpsStatusValue.GPS_SIGNAL_FIX||value.gps()==GpsStatusValue.GPS_SIGNAL_BAD;
+        boolean fix=!acquiring&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX;
         double speed=fix&&position!=null&&position.hasValidLocation()&&position.hasSpeed()?position.speed().toMPS():Double.NaN;
         String location="—";
         if(fix&&position!=null&&position.hasValidLocation()) {
@@ -87,7 +96,7 @@ public class P0Activity extends AbstractActivity {
             location=String.format(Locale.ROOT,"%.6f, %.6f · %s",position.latitude(),position.longitude(),accuracy);
             if(position.time()!=null)location+="\n"+DateTimeFormatter.ISO_LOCAL_TIME.withZone(ZoneId.systemDefault()).format(position.time());
         }
-        binding.p0Metrics.setText(getString(R.string.p0_metrics_format,MotionFormat.duration(stats.totalDuration()),MotionFormat.duration(stats.movingDuration()),stats.totalDistance().toM(),MotionFormat.speed(speed),MotionFormat.pace(speed),getString(value.gps().message),location));
+        binding.p0Metrics.setText(getString(R.string.p0_metrics_format,MotionFormat.duration(stats.totalDuration()),MotionFormat.duration(stats.movingDuration()),stats.totalDistance().toM(),MotionFormat.speed(speed),MotionFormat.pace(speed),getString(phase==RecordingSession.Phase.RECORDING&&!value.freshGps()?GpsStatusValue.GPS_SIGNAL_LOST.message:value.gps().message),location));
         var heart=HeartRatePanel.describe(this,value.preview().value(),value.preview().status());
         binding.p0HeartRate.setText(heart.bpm()+"\n"+heart.state()+"\n"+heart.age());
         binding.p0Error.setText(value.error());binding.p0Error.setVisibility(value.error()==null?View.GONE:View.VISIBLE);

@@ -179,7 +179,13 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         sensorManager.onSharedPreferenceChanged(sharedPreferences, key);
     }
 
+    public boolean acceptGpsLocation(android.location.Location location) {
+        return service.acceptGpsLocation(location);
+    }
+
     public interface Callback {
+        default boolean acceptGpsLocation(android.location.Location location) { return true; }
+
         /**
          * @return Was TrackPoint stored (not discarded)?
          */
