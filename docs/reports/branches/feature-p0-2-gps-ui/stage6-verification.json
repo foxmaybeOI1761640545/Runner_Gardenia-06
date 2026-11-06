@@ -1,0 +1,1386 @@
+{
+  "run": "42251766485",
+  "source": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "conclusion": "failure",
+  "counts": {
+    "android": {
+      "tests": 395,
+      "executed": 394,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "xmlFiles": 1
+    },
+    "unit": {
+      "tests": 110,
+      "executed": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xmlFiles": 12
+    }
+  },
+  "gate": {
+    "plan": {
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773,
+      "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "stage": 10,
+      "p02Phase": 6,
+      "branch": "feature/p0-2-gps-ui",
+      "runId": "42251766485",
+      "publishing": false,
+      "testTag": "test-p0-v0.1.0-p0.2",
+      "publicationStrategy": "verified-p02-test-only; legacy-main-publication-disabled"
+    },
+    "stage": 10,
+    "android": {
+      "tests": 395,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "total": 395,
+      "executed": 394,
+      "missingClasses": [],
+      "missingRequiredTests": [],
+      "suites": [
+        {
+          "name": "de.dennisguse.opentracks.EspressoDeleteTrackTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.EspressoEditTrackRecordingTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.EspressoUITest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.ChartValueSeriesTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRateChartHistoryTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRatePathTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.CustomContentProviderUtilsTest",
+          "tests": 39,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.ShareContentProviderTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.TrackSelectionTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.UUIDUtilsTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.model.TrackPointTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.ActivityTypeTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.DistanceFormatterTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.SpeedFormatterTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.data.models.StatisticsTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.ExportImportTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0DurabilityTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+          "tests": 13,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0OfflinePolicyTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0RecordingDataTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0SensorsTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.publicapi.DataProviderTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.publicapi.PublicApiTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.GpsStatusTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.PressureSensorUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.UintUtilsTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+          "tests": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 1
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.TrackRecordingServiceUITest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest",
+          "tests": 18,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.PreferencesOpenHelperTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.PreferencesUtilsTest",
+          "tests": 11,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.share.ShareUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest",
+          "tests": 7,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.FileUtilsTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.StringUtilsTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.util.TrackNameUtilsTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "failureDetails": [],
+      "passed": true
+    },
+    "unit": {
+      "tests": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "total": 110,
+      "executed": 110,
+      "missingClasses": [],
+      "missingRequiredTests": [],
+      "suites": [
+        {
+          "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+          "tests": 10,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+          "tests": 19,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+          "tests": 23,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+          "tests": 17,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "failureDetails": [],
+      "passed": true
+    },
+    "p0Screenshots": 65,
+    "passed": true,
+    "processDurability": {
+      "passed": true,
+      "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "database": "p0-durability.db",
+      "forceStopped": true,
+      "timezone": "Asia/Singapore",
+      "phases": {
+        "write": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 1772
+        },
+        "read": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 2162
+        }
+      }
+    },
+    "gpxSchema": {
+      "passed": true,
+      "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "files": [
+        {
+          "file": "decimal-escaping.gpx",
+          "sha256": "e896080619868a334e4fd744b3e5a2c75d944a9c5fe3d6f8d29ddaffdd7364e8",
+          "points": 2,
+          "samples": 0
+        },
+        {
+          "file": "event-boundaries.gpx",
+          "sha256": "067002e99fc67b39e2f9f0bd1ddc294f2057daa9acc06508d78f3363e6743504",
+          "points": 2,
+          "samples": 0
+        },
+        {
+          "file": "gps-gap.gpx",
+          "sha256": "30715f16634b8aaed75a60b0d5ab2ef721605052a89f23b766ba601ccd73305c",
+          "points": 4,
+          "samples": 1
+        },
+        {
+          "file": "gps-only.gpx",
+          "sha256": "c040067f31ff020a1c6a77bfa1c40b0fd3782dd7d99b5258be27cab676e9f082",
+          "points": 1,
+          "samples": 0
+        },
+        {
+          "file": "heart-only.gpx",
+          "sha256": "5b5e45404af4089fd46820c5fc2870805cce4a0ab3b6883055e1aa07a515b418",
+          "points": 0,
+          "samples": 2
+        },
+        {
+          "file": "legacy.gpx",
+          "sha256": "e7ff5a812b2672e0490d7facb27d19b3dbc8751ddbc08885d8f408c8fdabc401",
+          "points": 1,
+          "samples": 0
+        },
+        {
+          "file": "local-file.gpx",
+          "sha256": "30652ec2c422d3a3ad4baaa5544b17803eb8b8a9299392d889cf2bb98917431b",
+          "points": 1,
+          "samples": 1
+        },
+        {
+          "file": "raw-complete.gpx",
+          "sha256": "0a10067fe1a76307d77e3821848336f4dcdf9ae49b24f20fac6a2c7144862032",
+          "points": 2,
+          "samples": 4
+        },
+        {
+          "file": "segments.gpx",
+          "sha256": "5cdcacc57e09db0d626be0fae2272597f929a3b24a72c895691ea9edc5c49c6e",
+          "points": 6,
+          "samples": 2
+        }
+      ],
+      "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+    },
+    "offline": {
+      "passed": true,
+      "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "debug": {
+        "applicationId": "com.fox.runner.debug",
+        "permissions": [
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "android.permission.ACCESS_NETWORK_STATE",
+          "android.permission.BLUETOOTH",
+          "android.permission.BLUETOOTH_ADMIN",
+          "android.permission.BLUETOOTH_CONNECT",
+          "android.permission.BLUETOOTH_SCAN",
+          "android.permission.FOREGROUND_SERVICE",
+          "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+          "android.permission.FOREGROUND_SERVICE_LOCATION",
+          "android.permission.POST_NOTIFICATIONS",
+          "android.permission.RECEIVE_BOOT_COMPLETED",
+          "android.permission.VIBRATE",
+          "android.permission.WAKE_LOCK",
+          "android.permission.health.WRITE_DISTANCE",
+          "android.permission.health.WRITE_ELEVATION_GAINED",
+          "android.permission.health.WRITE_EXERCISE",
+          "android.permission.health.WRITE_EXERCISE_ROUTE",
+          "android.permission.health.WRITE_SPEED",
+          "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ],
+        "allowBackup": false,
+        "components": {}
+      },
+      "release": {
+        "applicationId": "com.fox.runner",
+        "permissions": [
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "android.permission.BLUETOOTH",
+          "android.permission.BLUETOOTH_ADMIN",
+          "android.permission.BLUETOOTH_CONNECT",
+          "android.permission.BLUETOOTH_SCAN",
+          "android.permission.FOREGROUND_SERVICE",
+          "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+          "android.permission.FOREGROUND_SERVICE_LOCATION",
+          "android.permission.POST_NOTIFICATIONS",
+          "android.permission.VIBRATE",
+          "android.permission.WAKE_LOCK",
+          "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ],
+        "allowBackup": false,
+        "components": {
+          "activity": [
+            "de.dennisguse.opentracks.introduction.IntroductionActivity",
+            "de.dennisguse.opentracks.p0.app.P0Activity",
+            "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+            "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+          ],
+          "activity-alias": [],
+          "service": [
+            "androidx.appcompat.app.AppLocalesMetadataHolderService",
+            "de.dennisguse.opentracks.services.TrackRecordingService"
+          ],
+          "provider": [
+            "androidx.core.content.FileProvider",
+            "de.dennisguse.opentracks.data.ShareContentProvider"
+          ],
+          "receiver": []
+        }
+      }
+    }
+  },
+  "durability": {
+    "passed": true,
+    "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "database": "p0-durability.db",
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1772
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2162
+      }
+    }
+  },
+  "gpx": {
+    "passed": true,
+    "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "files": [
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "e896080619868a334e4fd744b3e5a2c75d944a9c5fe3d6f8d29ddaffdd7364e8",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "event-boundaries.gpx",
+        "sha256": "067002e99fc67b39e2f9f0bd1ddc294f2057daa9acc06508d78f3363e6743504",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "30715f16634b8aaed75a60b0d5ab2ef721605052a89f23b766ba601ccd73305c",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "c040067f31ff020a1c6a77bfa1c40b0fd3782dd7d99b5258be27cab676e9f082",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "5b5e45404af4089fd46820c5fc2870805cce4a0ab3b6883055e1aa07a515b418",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "e7ff5a812b2672e0490d7facb27d19b3dbc8751ddbc08885d8f408c8fdabc401",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "30652ec2c422d3a3ad4baaa5544b17803eb8b8a9299392d889cf2bb98917431b",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "0a10067fe1a76307d77e3821848336f4dcdf9ae49b24f20fac6a2c7144862032",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "5cdcacc57e09db0d626be0fae2272597f929a3b24a72c895691ea9edc5c49c6e",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "offline": {
+    "passed": true,
+    "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "debug": {
+      "applicationId": "com.fox.runner.debug",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.health.WRITE_DISTANCE",
+        "android.permission.health.WRITE_ELEVATION_GAINED",
+        "android.permission.health.WRITE_EXERCISE",
+        "android.permission.health.WRITE_EXERCISE_ROUTE",
+        "android.permission.health.WRITE_SPEED",
+        "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {}
+    },
+    "release": {
+      "applicationId": "com.fox.runner",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {
+        "activity": [
+          "de.dennisguse.opentracks.introduction.IntroductionActivity",
+          "de.dennisguse.opentracks.p0.app.P0Activity",
+          "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+          "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+        ],
+        "activity-alias": [],
+        "service": [
+          "androidx.appcompat.app.AppLocalesMetadataHolderService",
+          "de.dennisguse.opentracks.services.TrackRecordingService"
+        ],
+        "provider": [
+          "androidx.core.content.FileProvider",
+          "de.dennisguse.opentracks.data.ShareContentProvider"
+        ],
+        "receiver": []
+      }
+    }
+  },
+  "debug": {
+    "applicationId": "com.fox.runner.debug",
+    "versionName": "v0.1.0-p0.2",
+    "versionCode": 6773,
+    "variant": "reproducibleDebug",
+    "debuggable": "true",
+    "sha256": "9362451cbe7f909be22739a40dd25fc869a875490bbe63741460516e8b83756c"
+  },
+  "downloadedDebugSha256": "9362451cbe7f909be22739a40dd25fc869a875490bbe63741460516e8b83756c",
+  "files": [
+    {
+      "artifactMember": "independent-verification.json",
+      "path": "evidence/stage6-run-42251766485/independent-verification.json",
+      "bytes": 29416,
+      "sha256": "5608ef76184affc6805c67d44733c2f28c65c8cdeefbea3701c34149b449d428"
+    },
+    {
+      "artifactMember": "artifacts.json",
+      "path": "evidence/stage6-run-42251766485/artifacts.json",
+      "bytes": 3504,
+      "sha256": "2a4fa9be539003bf058fac737e1f50fb3e6b37db9e48cc9089b022a6c0d04cea"
+    },
+    {
+      "artifactMember": "run.json",
+      "path": "evidence/stage6-run-42251766485/run.json",
+      "bytes": 16111,
+      "sha256": "e332323ea16681ea4140a311c73587db3d993103a33ed2cf592c738731d54653"
+    },
+    {
+      "artifactMember": "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "path": "evidence/stage6-run-42251766485/android/TEST-mediumPhone.xml",
+      "bytes": 81229,
+      "sha256": "6212d2e48a26e26d3b789908fdd3e1e0a8b55f1655b797d1cb0c98806cb2dc71"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "bytes": 478,
+      "sha256": "3e73fa00c7e8018ea33f4b73c8774a0474fdecad42d2575d49adfb7a24176771"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "bytes": 1713,
+      "sha256": "a6d3f47131b4a929a6fce3be986369b997d22140eac6676a192f2f5838185c43"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "bytes": 834,
+      "sha256": "d6dbfcd17e22ca4c16034d9b5cc8c98eed4ce125edcc737b2804a4db2236f53f"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "bytes": 2710,
+      "sha256": "f0362f4aadfb6a4f84112c97408bb678c9fadfd7f33d58ff4d27ec5453598aba"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "bytes": 864,
+      "sha256": "ace2445aff5006de33238dcf53d5449a3b0f9afc9eecd7286d61dde4c82a07d5"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "bytes": 1106,
+      "sha256": "b472ace53f9dc89d41bc2bea86cea9fd81e91e420091050699eb7c1e86c5ceee"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "bytes": 1014,
+      "sha256": "ef4616cff21a9932926648e536a8195ac8c89d8008f04e29165bff27031cea88"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "bytes": 1166,
+      "sha256": "ea7ff2299edea7b397fe287245b35ae51cc826b293e20ec0ae101b04dbdbe9fc"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "bytes": 1266,
+      "sha256": "e6c03f24f88db0d71bd666e13fe8768a1b55968d600733c666c48177f8b378d1"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "bytes": 3755,
+      "sha256": "2dfe589e7392ae77ff25df1e5c99828274dcaafd7c00e56212ae3e54070182c6"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "bytes": 1591,
+      "sha256": "e2d048b64190e0b4307615379cae0573e271d6391e033f91166ccba239a23ddc"
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "path": "evidence/stage6-run-42251766485/unit/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "bytes": 2565,
+      "sha256": "9137d1d44d2aff8df8d562a081892f997857cd3314819a421ade47062c7801b5"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/decimal-escaping.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/decimal-escaping.gpx",
+      "bytes": 1076,
+      "sha256": "e896080619868a334e4fd744b3e5a2c75d944a9c5fe3d6f8d29ddaffdd7364e8"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/event-boundaries.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/event-boundaries.gpx",
+      "bytes": 1238,
+      "sha256": "067002e99fc67b39e2f9f0bd1ddc294f2057daa9acc06508d78f3363e6743504"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/gps-gap.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/gps-gap.gpx",
+      "bytes": 2112,
+      "sha256": "30715f16634b8aaed75a60b0d5ab2ef721605052a89f23b766ba601ccd73305c"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/gps-only.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/gps-only.gpx",
+      "bytes": 951,
+      "sha256": "c040067f31ff020a1c6a77bfa1c40b0fd3782dd7d99b5258be27cab676e9f082"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/heart-only.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/heart-only.gpx",
+      "bytes": 1305,
+      "sha256": "5b5e45404af4089fd46820c5fc2870805cce4a0ab3b6883055e1aa07a515b418"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/legacy.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/legacy.gpx",
+      "bytes": 1141,
+      "sha256": "e7ff5a812b2672e0490d7facb27d19b3dbc8751ddbc08885d8f408c8fdabc401"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/local-file.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/local-file.gpx",
+      "bytes": 1325,
+      "sha256": "30652ec2c422d3a3ad4baaa5544b17803eb8b8a9299392d889cf2bb98917431b"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/raw-complete.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/raw-complete.gpx",
+      "bytes": 2629,
+      "sha256": "0a10067fe1a76307d77e3821848336f4dcdf9ae49b24f20fac6a2c7144862032"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/result.json",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/result.json",
+      "bytes": 1686,
+      "sha256": "2b350912a5be59c37ae32f9fd7a73480241f6c08c999d01bea7b0cea63f9faf6"
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/segments.gpx",
+      "path": "evidence/stage6-run-42251766485/p0-gpx/segments.gpx",
+      "bytes": 3051,
+      "sha256": "5cdcacc57e09db0d626be0fae2272597f929a3b24a72c895691ea9edc5c49c6e"
+    },
+    {
+      "artifactMember": "build/reports/p0-durability/result.json",
+      "path": "evidence/stage6-run-42251766485/p0-durability/result.json",
+      "bytes": 462,
+      "sha256": "172aaf334d56b3863213314f39aaa1807ebd63a202ca56f13fb34a1243437ca7"
+    },
+    {
+      "artifactMember": "build/reports/p0-offline/result.json",
+      "path": "evidence/stage6-run-42251766485/p0-offline/result.json",
+      "bytes": 2586,
+      "sha256": "e9cc7efceacb68a23e9a8f69919473147230c60a648eb396b55829531910b42c"
+    },
+    {
+      "artifactMember": "build/reports/p0-validation/tests.json",
+      "path": "evidence/stage6-run-42251766485/p0-validation/tests.json",
+      "bytes": 21906,
+      "sha256": "abbbd835b302cc803ad1dd6a2a5712706643ff9c9e04d8d2f8663efcca911c54"
+    },
+    {
+      "artifactMember": "build/reports/ci-validation/debug-apk.json",
+      "path": "evidence/stage6-run-42251766485/ci-validation/debug-apk.json",
+      "bytes": 239,
+      "sha256": "caf13d55163b5fe79a2aa6c8382e5fd03a23b57a5c90f8567a71d1f1b496a92a"
+    },
+    {
+      "artifactMember": "build/reports/p02-home/result.json",
+      "path": "evidence/stage6-run-42251766485/p02-home/result.json",
+      "bytes": 10696,
+      "sha256": "13ac48c0cda0ed6dd178f9e59a69b5b0c645af03536f5d52a45d59098483c0d5"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p02-release/manifest.xml",
+      "artifactMember": "reports/p02-release/manifest.xml",
+      "bytes": 5502,
+      "sha256": "b4df74c7243ba92174dc742fe97e63ece3a522d8e86b4ffa2ab5cd0252a14272"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p02-release/optimization-tasks.txt",
+      "artifactMember": "reports/p02-release/optimization-tasks.txt",
+      "bytes": 2855,
+      "sha256": "7563ace2e781242a72a9b002b49477d76b905e895ee786ef2dccc7fb86a2173a"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p02-release/output-metadata.json",
+      "artifactMember": "reports/p02-release/output-metadata.json",
+      "bytes": 851,
+      "sha256": "64701a821b34d486a6f7ea45a12ab7a55c6176dfd452286beb4fb2224764ec99"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p02-release/signature.txt",
+      "artifactMember": "reports/p02-release/signature.txt",
+      "bytes": 1005,
+      "sha256": "e79628bb79cfb303dd6bd2c3b653852eb420f71cd03ec46c02836d35ef1544b0"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p02-bundle/result.json",
+      "artifactMember": "reports/p02-bundle/result.json",
+      "bytes": 225,
+      "sha256": "854d72e8c1c27e74700029cb6f8584959282381dd6bf56dfa8791a7385c020b7"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-acquiring-no-workout.png",
+      "artifactMember": "reports/p0-release-smoke/release-acquiring-no-workout.png",
+      "bytes": 142106,
+      "sha256": "c2d0635961f6b6f54785330e76931b584f9852b9536606533d424d75467dd924"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-home-gps-only.png",
+      "artifactMember": "reports/p0-release-smoke/release-home-gps-only.png",
+      "bytes": 128066,
+      "sha256": "2f02380a999e9f60cccf8c95b135a95e4df4f1159a44d331d11c57afe2a8ff6a"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-recording-gps-only.png",
+      "artifactMember": "reports/p0-release-smoke/release-recording-gps-only.png",
+      "bytes": 146915,
+      "sha256": "da51af129e9e8eab5cbbc582438edc6e4337cc4b0090289baa45ff2f9853962f"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-retained-history.png",
+      "artifactMember": "reports/p0-release-smoke/release-retained-history.png",
+      "bytes": 68018,
+      "sha256": "ef5d13c63cedd1e7050bbcf525b6ff23193d2100371daa4663fa6ce37bf4c48c"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-retained-workout-detail.png",
+      "artifactMember": "reports/p0-release-smoke/release-retained-workout-detail.png",
+      "bytes": 149382,
+      "sha256": "83fbb95a3e210b1dfb7c44ebf948666aa2221e37fc8c7bc776b38465a01093ea"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-settings-no-bluetooth-permission.png",
+      "artifactMember": "reports/p0-release-smoke/release-settings-no-bluetooth-permission.png",
+      "bytes": 210273,
+      "sha256": "34087ea00cb0679e8827de54de7e545e8aefa4ebaffddb070fb3c60997177dac"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/result.json",
+      "artifactMember": "reports/p0-release-smoke/result.json",
+      "bytes": 757,
+      "sha256": "664c53004e272535e8a64f2bfccf3b2d02c0692ab8044328fe2320418538929d"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/release-export.gpx",
+      "artifactMember": "reports/p0-release-smoke/release-export.gpx",
+      "bytes": 1636,
+      "sha256": "fdc217efc66c219c3ed23d74c5ef90c58c6db66a2b38913106d29fd7ed9545ee"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/signed/reports/p0-release-smoke/baseline-optional-permissions.json",
+      "artifactMember": "reports/p0-release-smoke/baseline-optional-permissions.json",
+      "bytes": 19,
+      "sha256": "e5e3518e772b3f717282f664f587d0bac664de244979690950bd21a55115e0d1"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication/publication.json",
+      "artifactMember": "recovery Artifact13523032214/publication.json",
+      "bytes": 2254,
+      "sha256": "fbb4ea8cc8824772c4f3bd46d56bb3896ea624663dcd54880fe0328eb5f58939"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication/recovery.json",
+      "artifactMember": "recovery Artifact13523032214/recovery.json",
+      "bytes": 423,
+      "sha256": "9ddd0e206c07593191932a1db2d6da03797aa50d2c52a24c57e37eefea32e729"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/RELEASE_NOTES.md",
+      "artifactMember": "downloaded Release436759328/RELEASE_NOTES.md",
+      "bytes": 1597,
+      "sha256": "6430ac5451715730b270712e043a73b32e156c630be0ce0938b270ceef60304f"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/test-summary.json",
+      "artifactMember": "downloaded Release436759328/test-summary.json",
+      "bytes": 702,
+      "sha256": "d7768a5f6ad8942498faebcf4330a7d92e6e44f7904811e7b8ba4c1edc8ceb1f"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/runtime-smoke.json",
+      "artifactMember": "downloaded Release436759328/runtime-smoke.json",
+      "bytes": 757,
+      "sha256": "664c53004e272535e8a64f2bfccf3b2d02c0692ab8044328fe2320418538929d"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/build-info.json",
+      "artifactMember": "downloaded Release436759328/build-info.json",
+      "bytes": 2817,
+      "sha256": "c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/release-api.json",
+      "artifactMember": "downloaded Release436759328/release-api.json",
+      "bytes": 13911,
+      "sha256": "5e4ddb7ea1e2eb48d3b581d5ec06ccce64326907f451d6945b13cfec12fe70cd"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/public-release/SHA256SUMS",
+      "artifactMember": "downloaded Release436759328/SHA256SUMS",
+      "bytes": 96,
+      "sha256": "fbb348dd055a64d936b7fac1ea221832c525519a38d2926b5b3039a03d80f34d"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication/artifacts.json",
+      "artifactMember": "GitHub API recovery artifacts",
+      "bytes": 790,
+      "sha256": "a9be93a0268f76e1ff6bccb73a6e2ed9312d701eeb232932fe4da75122e1ce2c"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication-failures/attempt1-job.txt",
+      "artifactMember": "original GitHub publication job logs",
+      "bytes": 25169,
+      "sha256": "a140467d14c4b5370d056e3d2b74910cb50ddf9556b0313ffd49fb3a6c3701b1"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication-failures/attempt2-job.txt",
+      "artifactMember": "original GitHub publication job logs",
+      "bytes": 25453,
+      "sha256": "5c7bc968ebfeef59abeba6bfa94085b5e72f555cd179d9c355e0d980ed809f54"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication/route-original.txt",
+      "artifactMember": "actual recovery route job128025633540 log",
+      "bytes": 27912,
+      "sha256": "d33bc195f10e96f74047601352ac1085e5e911b2fd529ba992727de1adc3b1c8"
+    },
+    {
+      "path": "evidence/stage6-run-42251766485/publication/recovery-original.txt",
+      "artifactMember": "actual recovery job128025632196 log",
+      "bytes": 31237,
+      "sha256": "17d979b76b77a5cd4ca1be2a58cd5c8ee036808338055b189f457d1e94b052ea"
+    },
+    {
+      "path": "evidence/stage6-publication-failed-42251766485/publication-job-original.txt",
+      "artifactMember": "original publication job128018794849 log",
+      "bytes": 31040,
+      "sha256": "55c39cb274b44e43c19bfa679017cf8bba327b576f52f625fcd28ab45eafa56a"
+    }
+  ],
+  "pipelineTests": 66,
+  "stage": "6",
+  "status": "PASSED",
+  "hardware": "NEEDS_DEVICE_VALIDATION",
+  "originalBuildRunOverallResult": "failure in publication only; checks and signed-install jobs succeeded",
+  "publicationRun": 42255705842,
+  "publicationAttempt": 4,
+  "publicationResult": "success",
+  "publicationCodeCommit": "4444c0d30925b146ac693ef0fcfa0cceabfa99ad",
+  "formalArtifactId": 13522176163,
+  "signedReportArtifactId": 13522905114,
+  "reportArtifactId": 13521268691,
+  "debugArtifactId": 13520334761,
+  "recoveryArtifactId": 13523032214,
+  "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "apkBytes": 2753061,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.2",
+  "tagObject": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+  "fixedCertificateIndependentlyVerified": true,
+  "publicBrowserDownloadVerified": true,
+  "noRebuildOrResignForRecovery": true
+}

@@ -1,0 +1,11 @@
+{
+  "acceptedBuildCommit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "acceptedRun": 42251766485,
+  "formalArtifact": 13522176163,
+  "reportArtifact": 13521268691,
+  "publicationCodeCommit": "4444c0d30925b146ac693ef0fcfa0cceabfa99ad",
+  "publicationRun": "42255705842",
+  "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "noBuildOrSigning": true,
+  "originalRunConclusion": "failure"
+}

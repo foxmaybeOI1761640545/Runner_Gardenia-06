@@ -1,0 +1,301 @@
+﻿2026-11-06T16:50:49.6871278Z Current runner version: '2.338.2'
+2026-11-06T16:50:49.6898287Z ##[group]Runner Image Provisioner
+2026-11-06T16:50:49.6899170Z Hosted Compute Agent
+2026-11-06T16:50:49.6899840Z Version: 20261028.624
+2026-11-06T16:50:49.6900561Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-06T16:50:49.6901288Z Build Date: 2026-10-28T21:51:42Z
+2026-11-06T16:50:49.6902029Z Worker ID: {2cb88b2c-59a2-430d-8cbb-355d96206bbf}
+2026-11-06T16:50:49.6902744Z Region: westus2
+2026-11-06T16:50:49.6903277Z Cloud: Azure
+2026-11-06T16:50:49.6903920Z ##[endgroup]
+2026-11-06T16:50:49.6905760Z ##[group]Operating System
+2026-11-06T16:50:49.6907106Z Ubuntu
+2026-11-06T16:50:49.6907666Z 24.04.5
+2026-11-06T16:50:49.6908211Z LTS
+2026-11-06T16:50:49.6908794Z ##[endgroup]
+2026-11-06T16:50:49.6909357Z ##[group]Runner Image
+2026-11-06T16:50:49.6909988Z Image: ubuntu-24.04
+2026-11-06T16:50:49.6910595Z Version: 20261101.360.1
+2026-11-06T16:50:49.6911981Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-06T16:50:49.6913567Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-06T16:50:49.6914611Z ##[endgroup]
+2026-11-06T16:50:49.6916302Z ##[group]GITHUB_TOKEN Permissions
+2026-11-06T16:50:49.6918421Z Actions: read
+2026-11-06T16:50:49.6919081Z Contents: write
+2026-11-06T16:50:49.6919761Z Metadata: read
+2026-11-06T16:50:49.6920404Z ##[endgroup]
+2026-11-06T16:50:49.6923059Z Secret source: Actions
+2026-11-06T16:50:49.6924128Z Cache mode: write
+2026-11-06T16:50:49.6925104Z Prepare workflow directory
+2026-11-06T16:50:49.7383290Z Prepare all required actions
+2026-11-06T16:50:49.7433444Z Getting action download info
+2026-11-06T16:50:50.1077823Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-06T16:50:50.2295745Z Download action repository 'actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-11-06T16:50:50.5386146Z Download action repository 'android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407' (SHA:9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407)
+2026-11-06T16:50:50.7346351Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-06T16:50:50.9542522Z Complete job name: Recover accepted P0.2 APK without rebuilding or signing
+2026-11-06T16:50:51.0452671Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-06T16:50:51.0453753Z with:
+2026-11-06T16:50:51.0454253Z   ref: 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:50:51.0454844Z   fetch-depth: 0
+2026-11-06T16:50:51.0455292Z   persist-credentials: false
+2026-11-06T16:50:51.0456116Z   repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:50:51.0460207Z   token: ***
+2026-11-06T16:50:51.0460634Z   ssh-strict: true
+2026-11-06T16:50:51.0461081Z   ssh-user: git
+2026-11-06T16:50:51.0461498Z   clean: true
+2026-11-06T16:50:51.0461952Z   sparse-checkout-cone-mode: true
+2026-11-06T16:50:51.0462489Z   fetch-tags: false
+2026-11-06T16:50:51.0462931Z   show-progress: true
+2026-11-06T16:50:51.0463367Z   lfs: false
+2026-11-06T16:50:51.0463774Z   submodules: false
+2026-11-06T16:50:51.0464212Z   set-safe-directory: true
+2026-11-06T16:50:51.0464713Z   allow-unsafe-pr-checkout: false
+2026-11-06T16:50:51.0465823Z env:
+2026-11-06T16:50:51.0466353Z   TZ: Asia/Singapore
+2026-11-06T16:50:51.0466925Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:50:51.0467577Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:50:51.0468172Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:50:51.0468729Z ##[endgroup]
+2026-11-06T16:50:51.3684420Z Syncing repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:50:51.3687478Z ##[group]Getting Git version info
+2026-11-06T16:50:51.3688618Z Working directory is '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-06T16:50:51.3690514Z [command]/usr/bin/git version
+2026-11-06T16:50:51.3804863Z git version 2.56.0
+2026-11-06T16:50:51.3832407Z ##[endgroup]
+2026-11-06T16:50:51.3850438Z Temporarily overriding HOME='/home/runner/work/_temp/ab4f1c9d-cd45-4499-802a-bdd590207372' before making global git config changes
+2026-11-06T16:50:51.3853139Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T16:50:51.3856634Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:50:51.3935213Z Deleting the contents of '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-06T16:50:51.3941679Z ##[group]Initializing the repository
+2026-11-06T16:50:51.3948026Z [command]/usr/bin/git init /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:50:51.4081387Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-06T16:50:51.4084166Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-06T16:50:51.4087312Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-06T16:50:51.4089185Z hint: call:
+2026-11-06T16:50:51.4090497Z hint:
+2026-11-06T16:50:51.4092129Z hint: 	git config --global init.defaultBranch <name>
+2026-11-06T16:50:51.4093669Z hint:
+2026-11-06T16:50:51.4095702Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-06T16:50:51.4098026Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-06T16:50:51.4100616Z hint:
+2026-11-06T16:50:51.4101817Z hint: 	git branch -m <name>
+2026-11-06T16:50:51.4103196Z hint:
+2026-11-06T16:50:51.4105085Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-06T16:50:51.4108403Z Initialized empty Git repository in /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.git/
+2026-11-06T16:50:51.4112821Z [command]/usr/bin/git remote add origin https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:50:51.4163964Z ##[endgroup]
+2026-11-06T16:50:51.4166260Z ##[group]Disabling automatic garbage collection
+2026-11-06T16:50:51.4168349Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-06T16:50:51.4208088Z ##[endgroup]
+2026-11-06T16:50:51.4210117Z ##[group]Setting up auth
+2026-11-06T16:50:51.4216825Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:50:51.4259972Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:50:51.4686421Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:50:51.4733280Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:50:51.4984155Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:50:51.5031522Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:50:51.5285076Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-06T16:50:51.5341268Z ##[endgroup]
+2026-11-06T16:50:51.5343048Z ##[group]Fetching the repository
+2026-11-06T16:50:51.5357051Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-06T16:50:53.8929327Z From https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:50:53.8931910Z  * [new branch]      feature/heart-rate-monitoring -> origin/feature/heart-rate-monitoring
+2026-11-06T16:50:53.8933236Z  * [new branch]      feature/p0-2-gps-ui -> origin/feature/p0-2-gps-ui
+2026-11-06T16:50:53.8934502Z  * [new branch]      feature/p0-core-migration -> origin/feature/p0-core-migration
+2026-11-06T16:50:53.8936453Z  * [new branch]      main                -> origin/main
+2026-11-06T16:50:53.8937701Z  * [new tag]         test-p0-v0.1.0-p0.1 -> test-p0-v0.1.0-p0.1
+2026-11-06T16:50:53.8938833Z  * [new tag]         test-p0-v0.1.0-p0.2 -> test-p0-v0.1.0-p0.2
+2026-11-06T16:50:53.8939950Z  * [new tag]         v0.1.0-rc1.4        -> v0.1.0-rc1.4
+2026-11-06T16:50:53.8940943Z  * [new tag]         v0.1.0-rc1.5        -> v0.1.0-rc1.5
+2026-11-06T16:50:53.8941800Z  * [new tag]         v0.1.0-rc1.6        -> v0.1.0-rc1.6
+2026-11-06T16:50:53.8947670Z [command]/usr/bin/git rev-parse --verify --quiet 4444c0d30925b146ac693ef0fcfa0cceabfa99ad^{object}
+2026-11-06T16:50:53.8988110Z 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:50:53.8993927Z ##[endgroup]
+2026-11-06T16:50:53.8995601Z ##[group]Determining the checkout info
+2026-11-06T16:50:53.8997194Z ##[endgroup]
+2026-11-06T16:50:53.9002994Z [command]/usr/bin/git sparse-checkout disable
+2026-11-06T16:50:53.9068891Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-06T16:50:53.9188856Z ##[group]Checking out the ref
+2026-11-06T16:50:53.9189969Z [command]/usr/bin/git checkout --progress --force 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:50:54.6685982Z Note: switching to '4444c0d30925b146ac693ef0fcfa0cceabfa99ad'.
+2026-11-06T16:50:54.6686686Z 
+2026-11-06T16:50:54.6687325Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-06T16:50:54.6727093Z changes and commit them, and you can discard any commits you make in this
+2026-11-06T16:50:54.6728039Z state without impacting any branches by switching back to a branch.
+2026-11-06T16:50:54.6728569Z 
+2026-11-06T16:50:54.6729180Z If you want to create a new branch to retain commits you create, you may
+2026-11-06T16:50:54.6729759Z do so (now or later) by using -c with the switch command. Example:
+2026-11-06T16:50:54.6730124Z 
+2026-11-06T16:50:54.6730265Z   git switch -c <new-branch-name>
+2026-11-06T16:50:54.6730584Z 
+2026-11-06T16:50:54.6731221Z Or undo this operation with:
+2026-11-06T16:50:54.6731450Z 
+2026-11-06T16:50:54.6731570Z   git switch -
+2026-11-06T16:50:54.6731812Z 
+2026-11-06T16:50:54.6732103Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-06T16:50:54.6732520Z 
+2026-11-06T16:50:54.6732936Z HEAD is now at 4444c0d fix(publish): recover accepted APK with correct API log media type [p02-existing-apk]
+2026-11-06T16:50:54.6797722Z ##[endgroup]
+2026-11-06T16:50:54.6801901Z [command]/usr/bin/git log -1 --format=%H
+2026-11-06T16:50:54.6841096Z 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:50:54.6853073Z ##[group]Removing auth
+2026-11-06T16:50:54.6857737Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:50:54.6903702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:50:54.7181000Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:50:54.7236647Z http.https://github.com/.extraheader
+2026-11-06T16:50:54.7238242Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-06T16:50:54.7282716Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:50:54.7571476Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:50:54.7621145Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:50:54.7893034Z ##[endgroup]
+2026-11-06T16:50:54.8192595Z ##[group]Run actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+2026-11-06T16:50:54.8193007Z with:
+2026-11-06T16:50:54.8193463Z   distribution: temurin
+2026-11-06T16:50:54.8193701Z   java-version: 21
+2026-11-06T16:50:54.8193918Z   java-package: jdk
+2026-11-06T16:50:54.8194147Z   check-latest: false
+2026-11-06T16:50:54.8194364Z   server-id: github
+2026-11-06T16:50:54.8194578Z   server-username: GITHUB_ACTOR
+2026-11-06T16:50:54.8194836Z   server-password: GITHUB_TOKEN
+2026-11-06T16:50:54.8195087Z   overwrite-settings: true
+2026-11-06T16:50:54.8195323Z   job-status: success
+2026-11-06T16:50:54.8198218Z   token: ***
+2026-11-06T16:50:54.8198434Z env:
+2026-11-06T16:50:54.8198626Z   TZ: Asia/Singapore
+2026-11-06T16:50:54.8198893Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:50:54.8199230Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:50:54.8199531Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:50:54.8199817Z ##[endgroup]
+2026-11-06T16:50:55.0123235Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-06T16:50:55.0134292Z ##[group]Installed distributions
+2026-11-06T16:50:55.0186869Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-06T16:50:55.0187403Z Setting Java 21.0.13+9 as the default
+2026-11-06T16:50:55.0198325Z (node:2709) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T16:50:55.0199062Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T16:50:55.0202259Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-06T16:50:55.0284621Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-06T16:50:55.0285335Z 
+2026-11-06T16:50:55.0285753Z Java configuration:
+2026-11-06T16:50:55.0286198Z   Distribution: temurin
+2026-11-06T16:50:55.0286623Z   Version: 21.0.13+9
+2026-11-06T16:50:55.0287197Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:50:55.0287765Z 
+2026-11-06T16:50:55.0288339Z ##[endgroup]
+2026-11-06T16:50:55.0308605Z Creating settings.xml with server-id: github
+2026-11-06T16:50:55.0336308Z Writing to /home/runner/.m2/settings.xml
+2026-11-06T16:50:55.0577686Z ##[group]Run android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+2026-11-06T16:50:55.0578178Z with:
+2026-11-06T16:50:55.0578397Z   cmdline-tools-version: 16111833
+2026-11-06T16:50:55.0578670Z   packages: platform-tools
+2026-11-06T16:50:55.0578935Z   accept-android-sdk-licenses: true
+2026-11-06T16:50:55.0579240Z   log-accepted-android-sdk-licenses: true
+2026-11-06T16:50:55.0579518Z env:
+2026-11-06T16:50:55.0579702Z   TZ: Asia/Singapore
+2026-11-06T16:50:55.0579964Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:50:55.0580300Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:50:55.0580606Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:50:55.0581137Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:50:55.0582301Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:50:55.0583148Z ##[endgroup]
+2026-11-06T16:50:55.1573377Z Found preinstalled sdkmanager in /usr/local/lib/android/sdk/cmdline-tools/latest with following source.properties:
+2026-11-06T16:50:55.1574408Z Pkg.Revision=12.0
+2026-11-06T16:50:55.1574854Z Pkg.Path=cmdline-tools;12.0
+2026-11-06T16:50:55.1575593Z Pkg.Desc=Android SDK Command-line Tools
+2026-11-06T16:50:55.1576011Z 
+2026-11-06T16:50:55.1576225Z Wrong version in preinstalled sdkmanager
+2026-11-06T16:50:55.1577039Z Downloading commandline tools from https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip
+2026-11-06T16:50:55.9386305Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/72f66cfa-0a1a-41d4-9f38-6131f20820c2
+2026-11-06T16:50:56.7843097Z Accepting Android SDK licenses
+2026-11-06T16:50:56.7852391Z [command]/usr/local/lib/android/sdk/cmdline-tools/16111833/bin/sdkmanager --licenses
+2026-11-06T16:50:56.7933281Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-06T16:50:56.7934762Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-06T16:50:56.7937039Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-06T16:50:56.7938023Z 
+2026-11-06T16:50:56.7938283Z Warning: The --licenses option is no longer needed.
+2026-11-06T16:50:56.7943090Z [command]/usr/local/lib/android/sdk/cmdline-tools/16111833/bin/sdkmanager platform-tools
+2026-11-06T16:50:56.8018628Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-06T16:50:56.8019894Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-06T16:50:56.8021331Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-06T16:50:56.8022121Z 
+2026-11-06T16:50:56.8062716Z Downloading Android CLI...
+2026-11-06T16:50:57.1490326Z Unpacking embedded installation...
+2026-11-06T16:50:57.7668830Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:50:58.1396247Z 
+2026-11-06T16:50:58.1398819Z Terms of Service and License Agreement for the Android Software Development Kit
+2026-11-06T16:50:58.1399464Z 
+2026-11-06T16:50:58.1399737Z https://developer.android.com/studio/terms
+2026-11-06T16:50:58.1400139Z 
+2026-11-06T16:50:58.1401720Z Google collects usage data for the Android CLI, such as commands, sub-commands, and flags used. This data does not include custom parameters or identifiable information. This information helps improve the tool and is collected in accordance with Google's Privacy Policy.
+2026-11-06T16:50:58.1403467Z 
+2026-11-06T16:50:58.1403672Z https://policies.google.com/privacy
+2026-11-06T16:50:58.1403961Z 
+2026-11-06T16:50:58.1404272Z Disable Android CLI metrics collection by using the --no-metrics flag.
+2026-11-06T16:50:58.1404716Z 
+2026-11-06T16:50:58.1406421Z Tip: For the best experience using Android CLI with agents, we strongly recommend running android init to install the necessary skills and resources.
+2026-11-06T16:50:59.3933953Z Nov 07, 2026 12:50:59 AM java.util.prefs.FileSystemPreferences setupUserRoot
+2026-11-06T16:50:59.3946909Z INFO: Created user preferences directory.
+2026-11-06T16:50:59.8436748Z ##[group]Run sdkmanager 'build-tools;36.0.0'
+2026-11-06T16:50:59.8437414Z [36;1msdkmanager 'build-tools;36.0.0'[0m
+2026-11-06T16:50:59.8475789Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-06T16:50:59.8476416Z env:
+2026-11-06T16:50:59.8476776Z   TZ: Asia/Singapore
+2026-11-06T16:50:59.8477272Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:50:59.8477871Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:50:59.8478439Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:50:59.8479169Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:50:59.8480077Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:50:59.8480804Z ##[endgroup]
+2026-11-06T16:50:59.8631424Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-06T16:50:59.8632464Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-06T16:50:59.8635925Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-06T16:50:59.8641537Z 
+2026-11-06T16:50:59.8717141Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:02.3817088Z ##[group]Run python3 .github/scripts/p02_publish_existing.py
+2026-11-06T16:51:02.3817641Z [36;1mpython3 .github/scripts/p02_publish_existing.py[0m
+2026-11-06T16:51:02.3838923Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-06T16:51:02.3839277Z env:
+2026-11-06T16:51:02.3839478Z   TZ: Asia/Singapore
+2026-11-06T16:51:02.3839756Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:02.3840281Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:51:02.3840588Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:51:02.3840984Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:51:02.3841477Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-06T16:51:02.3844404Z   GH_TOKEN: ***
+2026-11-06T16:51:02.3844624Z ##[endgroup]
+2026-11-06T16:51:07.6764953Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:09.5587024Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:11.1605558Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:12.1410531Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:13.1066630Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:14.2143775Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:51:22.4154667Z Traceback (most recent call last):
+2026-11-06T16:51:22.4156361Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p02_publish_existing.py", line 81, in <module>
+2026-11-06T16:51:22.4157231Z     if __name__=='__main__':main()
+2026-11-06T16:51:22.4157615Z                             ^^^^^^
+2026-11-06T16:51:22.4158480Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p02_publish_existing.py", line 74, in main
+2026-11-06T16:51:22.4159284Z     p02_publish.publish(api,folder)
+2026-11-06T16:51:22.4167450Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p02_publish.py", line 84, in publish
+2026-11-06T16:51:22.4169258Z     try:release=api.request(api.base+'/releases','POST',{'tag_name':TAG,'target_commitish':info['commit'],'name':title,'body':body,'draft':True,'prerelease':True,'make_latest':'false'})
+2026-11-06T16:51:22.4170690Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-06T16:51:22.4171827Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/publish_release.py", line 52, in request
+2026-11-06T16:51:22.4172844Z     raise RuntimeError(f'GitHub {method} failed with HTTP {error.code}') from None
+2026-11-06T16:51:22.4173503Z RuntimeError: GitHub POST failed with HTTP 403
+2026-11-06T16:51:22.4374858Z ##[error]Process completed with exit code 1.
+2026-11-06T16:51:22.4547695Z Post job cleanup.
+2026-11-06T16:51:22.6019610Z (node:3176) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-06T16:51:22.6020583Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-06T16:51:22.6259320Z Post job cleanup.
+2026-11-06T16:51:22.7272295Z [command]/usr/bin/git version
+2026-11-06T16:51:22.7323708Z git version 2.56.0
+2026-11-06T16:51:22.7368518Z Temporarily overriding HOME='/home/runner/work/_temp/dc1951c3-ca64-4ed6-a273-afa7d8d33697' before making global git config changes
+2026-11-06T16:51:22.7370254Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T16:51:22.7375160Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:51:22.7426578Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:51:22.7509583Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:51:22.7829744Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:51:22.7902324Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:51:22.8338049Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:51:22.8392950Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:51:22.8910459Z Cleaning up orphan processes
+2026-11-06T16:51:22.9305037Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3, android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

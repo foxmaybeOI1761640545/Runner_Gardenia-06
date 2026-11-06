@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.RecordingSessionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-06T16:24:03.720Z" hostname="runnervm7aw5e" time="0.009">
+  <properties/>
+  <testcase name="finishedWorkoutCanStartANewIdentity" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.0"/>
+  <testcase name="gpsPreparationHasNoWorkoutIdentityAndCanTransitionOnlyFromIdle" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.005"/>
+  <testcase name="invalidTransitionsAreRejected" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.001"/>
+  <testcase name="processRestoreRequiresServiceEvidenceBeforeRecording" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.0"/>
+  <testcase name="pausedWorkoutCanFinishWithoutResumingSensors" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.001"/>
+  <testcase name="pauseAndResumePreserveWorkoutIdentity" classname="de.dennisguse.opentracks.p0.RecordingSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

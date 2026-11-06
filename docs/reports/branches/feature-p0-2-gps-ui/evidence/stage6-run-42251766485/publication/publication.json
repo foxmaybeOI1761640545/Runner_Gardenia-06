@@ -1,0 +1,45 @@
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "versionCode": 6773,
+  "apk": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "apkBytes": 2753061,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 2817,
+      "sha256": "c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 2753061,
+      "sha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "fbb348dd055a64d936b7fac1ea221832c525519a38d2926b5b3039a03d80f34d",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 757,
+      "sha256": "664c53004e272535e8a64f2bfccf3b2d02c0692ab8044328fe2320418538929d",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 702,
+      "sha256": "d7768a5f6ad8942498faebcf4330a7d92e6e44f7904811e7b8ba4c1edc8ceb1f",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1597,
+      "sha256": "6430ac5451715730b270712e043a73b32e156c630be0ce0938b270ceef60304f",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/RELEASE_NOTES.md"
+    }
+  }
+}

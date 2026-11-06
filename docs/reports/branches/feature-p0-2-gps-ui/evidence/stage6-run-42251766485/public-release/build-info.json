@@ -1,0 +1,84 @@
+{
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-p0.2",
+  "versionCode": 6773,
+  "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "variant": "reproducibleRelease",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "debuggable": false,
+  "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "apkBytes": 2753061,
+  "r8MappingSha256": "6f13ea5a780dd844164e766e29c73bc0c45de6d607b0e25fdebd37f0848fd960",
+  "offline": {
+    "applicationId": "com.fox.runner",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "allowBackup": false,
+    "components": {
+      "activity": [
+        "de.dennisguse.opentracks.introduction.IntroductionActivity",
+        "de.dennisguse.opentracks.p0.app.P0Activity",
+        "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+        "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+      ],
+      "activity-alias": [],
+      "service": [
+        "androidx.appcompat.app.AppLocalesMetadataHolderService",
+        "de.dennisguse.opentracks.services.TrackRecordingService"
+      ],
+      "provider": [
+        "androidx.core.content.FileProvider",
+        "de.dennisguse.opentracks.data.ShareContentProvider"
+      ],
+      "receiver": []
+    }
+  },
+  "plan": {
+    "versionName": "v0.1.0-p0.2",
+    "versionCode": 6773,
+    "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "stage": 10,
+    "p02Phase": 6,
+    "branch": "feature/p0-2-gps-ui",
+    "runId": "42251766485",
+    "publishing": false,
+    "testTag": "test-p0-v0.1.0-p0.2",
+    "publicationStrategy": "verified-p02-test-only; legacy-main-publication-disabled"
+  },
+  "tests": {
+    "android": {
+      "tests": 395,
+      "executed": 394,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 110,
+      "executed": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42251766485",
+  "r8TaskExecuted": true,
+  "resourceOptimizationTaskExecuted": true,
+  "runtimeSmokeVerified": true,
+  "upgradeFromVersionCode": 6772
+}

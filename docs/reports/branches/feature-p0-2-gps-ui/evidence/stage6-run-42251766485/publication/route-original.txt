@@ -1,0 +1,255 @@
+﻿2026-11-06T16:47:59.0762284Z Current runner version: '2.338.2'
+2026-11-06T16:47:59.0787043Z ##[group]Runner Image Provisioner
+2026-11-06T16:47:59.0787949Z Hosted Compute Agent
+2026-11-06T16:47:59.0788492Z Version: 20261028.624
+2026-11-06T16:47:59.0789389Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-06T16:47:59.0790106Z Build Date: 2026-10-28T21:51:42Z
+2026-11-06T16:47:59.0790737Z Worker ID: {8ffe4a9c-3c6a-4ee7-b9ad-44c78815bcb2}
+2026-11-06T16:47:59.0791443Z Region: eastus3
+2026-11-06T16:47:59.0791980Z Cloud: Azure
+2026-11-06T16:47:59.0792500Z ##[endgroup]
+2026-11-06T16:47:59.0793956Z ##[group]Operating System
+2026-11-06T16:47:59.0794591Z Ubuntu
+2026-11-06T16:47:59.0795070Z 24.04.5
+2026-11-06T16:47:59.0795566Z LTS
+2026-11-06T16:47:59.0796041Z ##[endgroup]
+2026-11-06T16:47:59.0796553Z ##[group]Runner Image
+2026-11-06T16:47:59.0797111Z Image: ubuntu-24.04
+2026-11-06T16:47:59.0797645Z Version: 20261101.360.1
+2026-11-06T16:47:59.0799167Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-06T16:47:59.0800941Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-06T16:47:59.0801854Z ##[endgroup]
+2026-11-06T16:47:59.0802882Z ##[group]GITHUB_TOKEN Permissions
+2026-11-06T16:47:59.0805034Z Contents: read
+2026-11-06T16:47:59.0805574Z Metadata: read
+2026-11-06T16:47:59.0806125Z ##[endgroup]
+2026-11-06T16:47:59.0808262Z Secret source: Actions
+2026-11-06T16:47:59.0809380Z Cache mode: write
+2026-11-06T16:47:59.0810301Z Prepare workflow directory
+2026-11-06T16:47:59.1213246Z Prepare all required actions
+2026-11-06T16:47:59.1262658Z Getting action download info
+2026-11-06T16:47:59.4019520Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-06T16:47:59.5921248Z Complete job name: route
+2026-11-06T16:47:59.6771571Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-06T16:47:59.6772717Z with:
+2026-11-06T16:47:59.6773280Z   ref: 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:47:59.6774012Z   fetch-depth: 0
+2026-11-06T16:47:59.6774522Z   persist-credentials: false
+2026-11-06T16:47:59.6775194Z   repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:47:59.6779379Z   token: ***
+2026-11-06T16:47:59.6779863Z   ssh-strict: true
+2026-11-06T16:47:59.6780366Z   ssh-user: git
+2026-11-06T16:47:59.6780830Z   clean: true
+2026-11-06T16:47:59.6781306Z   sparse-checkout-cone-mode: true
+2026-11-06T16:47:59.6781965Z   fetch-tags: false
+2026-11-06T16:47:59.6782464Z   show-progress: true
+2026-11-06T16:47:59.6782986Z   lfs: false
+2026-11-06T16:47:59.6783452Z   submodules: false
+2026-11-06T16:47:59.6783948Z   set-safe-directory: true
+2026-11-06T16:47:59.6784550Z   allow-unsafe-pr-checkout: false
+2026-11-06T16:47:59.6785442Z env:
+2026-11-06T16:47:59.6786063Z   TZ: Asia/Singapore
+2026-11-06T16:47:59.6786643Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:47:59.6787326Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:47:59.6788013Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:47:59.6788851Z ##[endgroup]
+2026-11-06T16:47:59.9021249Z Syncing repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:47:59.9025973Z ##[group]Getting Git version info
+2026-11-06T16:47:59.9027817Z Working directory is '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-06T16:47:59.9030610Z [command]/usr/bin/git version
+2026-11-06T16:47:59.9060410Z git version 2.56.0
+2026-11-06T16:47:59.9081995Z ##[endgroup]
+2026-11-06T16:47:59.9104725Z Temporarily overriding HOME='/home/runner/work/_temp/80a07f85-2872-41b9-b528-3318b161c965' before making global git config changes
+2026-11-06T16:47:59.9108513Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T16:47:59.9112179Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:47:59.9164279Z Deleting the contents of '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-06T16:47:59.9172676Z ##[group]Initializing the repository
+2026-11-06T16:47:59.9176381Z [command]/usr/bin/git init /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:47:59.9281791Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-06T16:47:59.9283668Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-06T16:47:59.9285062Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-06T16:47:59.9286170Z hint: call:
+2026-11-06T16:47:59.9286783Z hint:
+2026-11-06T16:47:59.9287540Z hint: 	git config --global init.defaultBranch <name>
+2026-11-06T16:47:59.9288449Z hint:
+2026-11-06T16:47:59.9289525Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-06T16:47:59.9290885Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-06T16:47:59.9292026Z hint:
+2026-11-06T16:47:59.9292624Z hint: 	git branch -m <name>
+2026-11-06T16:47:59.9293354Z hint:
+2026-11-06T16:47:59.9294265Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-06T16:47:59.9304710Z Initialized empty Git repository in /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.git/
+2026-11-06T16:47:59.9322681Z [command]/usr/bin/git remote add origin https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:47:59.9368403Z ##[endgroup]
+2026-11-06T16:47:59.9369911Z ##[group]Disabling automatic garbage collection
+2026-11-06T16:47:59.9373711Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-06T16:47:59.9406934Z ##[endgroup]
+2026-11-06T16:47:59.9407960Z ##[group]Setting up auth
+2026-11-06T16:47:59.9416450Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:47:59.9454727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:47:59.9811790Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:47:59.9848246Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:48:00.0067882Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:48:00.0104294Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:48:00.0304612Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-06T16:48:00.0344328Z ##[endgroup]
+2026-11-06T16:48:00.0345705Z ##[group]Fetching the repository
+2026-11-06T16:48:00.0356759Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-06T16:48:02.1996973Z From https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-06T16:48:02.2001367Z  * [new branch]      feature/heart-rate-monitoring -> origin/feature/heart-rate-monitoring
+2026-11-06T16:48:02.2004616Z  * [new branch]      feature/p0-2-gps-ui -> origin/feature/p0-2-gps-ui
+2026-11-06T16:48:02.2007468Z  * [new branch]      feature/p0-core-migration -> origin/feature/p0-core-migration
+2026-11-06T16:48:02.2010398Z  * [new branch]      main                -> origin/main
+2026-11-06T16:48:02.2012862Z  * [new tag]         test-p0-v0.1.0-p0.1 -> test-p0-v0.1.0-p0.1
+2026-11-06T16:48:02.2015163Z  * [new tag]         v0.1.0-rc1.4        -> v0.1.0-rc1.4
+2026-11-06T16:48:02.2017434Z  * [new tag]         v0.1.0-rc1.5        -> v0.1.0-rc1.5
+2026-11-06T16:48:02.2020255Z  * [new tag]         v0.1.0-rc1.6        -> v0.1.0-rc1.6
+2026-11-06T16:48:02.2025293Z [command]/usr/bin/git rev-parse --verify --quiet 4444c0d30925b146ac693ef0fcfa0cceabfa99ad^{object}
+2026-11-06T16:48:02.2045221Z 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:48:02.2050894Z ##[endgroup]
+2026-11-06T16:48:02.2053101Z ##[group]Determining the checkout info
+2026-11-06T16:48:02.2054870Z ##[endgroup]
+2026-11-06T16:48:02.2057514Z [command]/usr/bin/git sparse-checkout disable
+2026-11-06T16:48:02.2110959Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-06T16:48:02.2142364Z ##[group]Checking out the ref
+2026-11-06T16:48:02.2145221Z [command]/usr/bin/git checkout --progress --force 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:48:02.9041764Z Note: switching to '4444c0d30925b146ac693ef0fcfa0cceabfa99ad'.
+2026-11-06T16:48:02.9043022Z 
+2026-11-06T16:48:02.9043651Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-06T16:48:02.9044961Z changes and commit them, and you can discard any commits you make in this
+2026-11-06T16:48:02.9046000Z state without impacting any branches by switching back to a branch.
+2026-11-06T16:48:02.9046667Z 
+2026-11-06T16:48:02.9047129Z If you want to create a new branch to retain commits you create, you may
+2026-11-06T16:48:02.9048070Z do so (now or later) by using -c with the switch command. Example:
+2026-11-06T16:48:02.9048855Z 
+2026-11-06T16:48:02.9049206Z   git switch -c <new-branch-name>
+2026-11-06T16:48:02.9049702Z 
+2026-11-06T16:48:02.9050120Z Or undo this operation with:
+2026-11-06T16:48:02.9050540Z 
+2026-11-06T16:48:02.9050829Z   git switch -
+2026-11-06T16:48:02.9051164Z 
+2026-11-06T16:48:02.9051730Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-06T16:48:02.9052408Z 
+2026-11-06T16:48:02.9053091Z HEAD is now at 4444c0d fix(publish): recover accepted APK with correct API log media type [p02-existing-apk]
+2026-11-06T16:48:02.9073608Z ##[endgroup]
+2026-11-06T16:48:02.9126398Z [command]/usr/bin/git log -1 --format=%H
+2026-11-06T16:48:02.9155086Z 4444c0d30925b146ac693ef0fcfa0cceabfa99ad
+2026-11-06T16:48:02.9165204Z ##[group]Removing auth
+2026-11-06T16:48:02.9169514Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:48:02.9201934Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:48:02.9404748Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:48:02.9430863Z http.https://github.com/.extraheader
+2026-11-06T16:48:02.9437555Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-06T16:48:02.9470071Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:48:02.9672948Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:48:02.9704251Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:48:02.9912765Z ##[endgroup]
+2026-11-06T16:48:03.0112091Z ##[group]Run python3 -m unittest discover -s .github/tests -v -b
+2026-11-06T16:48:03.0112799Z [36;1mpython3 -m unittest discover -s .github/tests -v -b[0m
+2026-11-06T16:48:03.0113285Z [36;1mpython3 .github/scripts/p02_publication_scope.py[0m
+2026-11-06T16:48:03.0132442Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-06T16:48:03.0132810Z env:
+2026-11-06T16:48:03.0133038Z   TZ: Asia/Singapore
+2026-11-06T16:48:03.0133304Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-06T16:48:03.0133629Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-06T16:48:03.0133930Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-06T16:48:03.0134206Z ##[endgroup]
+2026-11-06T16:48:03.1916649Z test_job_logs_keep_api_media_type_while_returning_raw_bytes (test_github_media.MediaTests.test_job_logs_keep_api_media_type_while_returning_raw_bytes) ... ok
+2026-11-06T16:48:03.2097590Z test_release_asset_download_still_uses_octet_stream (test_github_media.MediaTests.test_release_asset_download_still_uses_octet_stream) ... ok
+2026-11-06T16:48:03.2110792Z test_incomplete_capture_manifest_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_incomplete_capture_manifest_is_a_failure) ... ok
+2026-11-06T16:48:03.2112550Z test_missing_capture_directory_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_missing_capture_directory_is_a_failure) ... ok
+2026-11-06T16:48:03.2175850Z test_named_files_without_png_pixels_are_rejected (test_heart_rate_gates.UiEvidenceTests.test_named_files_without_png_pixels_are_rejected) ... ok
+2026-11-06T16:48:03.2181941Z test_offset_alias_cannot_replace_the_singapore_timezone_identity (test_heart_rate_gates.UiEvidenceTests.test_offset_alias_cannot_replace_the_singapore_timezone_identity) ... ok
+2026-11-06T16:48:03.2192033Z test_actual_jvm_execution_is_counted_separately (test_heart_rate_gates.UnitEvidenceTests.test_actual_jvm_execution_is_counted_separately) ... ok
+2026-11-06T16:48:03.2200995Z test_all_skipped_or_missing_test_class_blocks_the_gate (test_heart_rate_gates.UnitEvidenceTests.test_all_skipped_or_missing_test_class_blocks_the_gate) ... ok
+2026-11-06T16:48:03.2205618Z test_no_source_or_missing_xml_cannot_be_described_as_executed (test_heart_rate_gates.UnitEvidenceTests.test_no_source_or_missing_xml_cannot_be_described_as_executed) ... ok
+2026-11-06T16:48:03.2214311Z test_unit_errors_failures_and_inconsistent_counts_are_not_hidden (test_heart_rate_gates.UnitEvidenceTests.test_unit_errors_failures_and_inconsistent_counts_are_not_hidden) ... ok
+2026-11-06T16:48:03.2924405Z test_complete_matrix_is_tied_to_this_source_and_original_pixels (test_p02_home_ui.HomeCaptureGateTests.test_complete_matrix_is_tied_to_this_source_and_original_pixels) ... ok
+2026-11-06T16:48:03.2988145Z test_hardware_claim_or_missing_timezone_is_rejected (test_p02_home_ui.HomeCaptureGateTests.test_hardware_claim_or_missing_timezone_is_rejected) ... ok
+2026-11-06T16:48:03.3010876Z test_missing_or_duplicated_state_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_missing_or_duplicated_state_never_passes) ... ok
+2026-11-06T16:48:03.3075460Z test_wrong_theme_window_or_phase_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_wrong_theme_window_or_phase_never_passes) ... ok
+2026-11-06T16:48:03.3081383Z test_changed_original_p0_branch_is_detected_without_resetting_it (test_p02_pipeline.P02IsolationTests.test_changed_original_p0_branch_is_detected_without_resetting_it) ... ok
+2026-11-06T16:48:03.3104289Z test_development_and_ordinary_checks_cannot_request_signing (test_p02_pipeline.P02IsolationTests.test_development_and_ordinary_checks_cannot_request_signing) ... ok
+2026-11-06T16:48:03.3110739Z test_incomplete_and_scoped_regression_never_authorize_phase (test_p02_pipeline.P02IsolationTests.test_incomplete_and_scoped_regression_never_authorize_phase) ... ok
+2026-11-06T16:48:03.3130646Z test_different_commit_tag_is_never_moved (test_p02_publication.PublicationTests.test_different_commit_tag_is_never_moved) ... ok
+2026-11-06T16:48:03.3151394Z test_different_existing_apk_is_never_replaced (test_p02_publication.PublicationTests.test_different_existing_apk_is_never_replaced) ... ok
+2026-11-06T16:48:03.3173147Z test_identical_retry_reuses_tag_and_assets_without_overwrite (test_p02_publication.PublicationTests.test_identical_retry_reuses_tag_and_assets_without_overwrite) ... ok
+2026-11-06T16:48:03.3193310Z test_network_interruption_after_upload_resumes_partial_draft (test_p02_publication.PublicationTests.test_network_interruption_after_upload_resumes_partial_draft) ... ok
+2026-11-06T16:48:03.3206616Z test_success_verifies_draft_downloads_then_publishes_non_latest (test_p02_publication.PublicationTests.test_success_verifies_draft_downloads_then_publishes_non_latest) ... ok
+2026-11-06T16:48:03.3209878Z test_tag_only_after_bundle_gate_and_no_tag_on_failed_gate (test_p02_publication.PublicationTests.test_tag_only_after_bundle_gate_and_no_tag_on_failed_gate) ... ok
+2026-11-06T16:48:03.3211774Z test_explicit_recovery_accepts_only_publication_and_reports (test_p02_publication_scope.ScopeTests.test_explicit_recovery_accepts_only_publication_and_reports) ... ok
+2026-11-06T16:48:03.3213029Z test_marker_never_bypasses_product_version_signing_or_tests (test_p02_publication_scope.ScopeTests.test_marker_never_bypasses_product_version_signing_or_tests) ... ok
+2026-11-06T16:48:03.3214082Z test_normal_push_keeps_full_gates (test_p02_publication_scope.ScopeTests.test_normal_push_keeps_full_gates) ... ok
+2026-11-06T16:48:03.3220137Z test_duplicate_or_skipped_next_code_is_rejected (test_p02_version.VersionTests.test_duplicate_or_skipped_next_code_is_rejected) ... ok
+2026-11-06T16:48:03.3221272Z test_empty_own_draft_can_resume_but_unknown_version_cannot (test_p02_version.VersionTests.test_empty_own_draft_can_resume_but_unknown_version_cannot) ... ok
+2026-11-06T16:48:03.3224486Z test_only_explicit_reservation_can_omit_a_future_source (test_p02_version.VersionTests.test_only_explicit_reservation_can_omit_a_future_source) ... ok
+2026-11-06T16:48:03.3228190Z test_published_p0_codes_and_reservation_survive_even_with_no_git_tags (test_p02_version.VersionTests.test_published_p0_codes_and_reservation_survive_even_with_no_git_tags) ... ok
+2026-11-06T16:48:03.3229632Z test_crash_or_failure_is_never_a_successful_adb_exit (test_p0_durability.ProcessEvidenceTests.test_crash_or_failure_is_never_a_successful_adb_exit) ... ok
+2026-11-06T16:48:03.3232330Z test_missing_pid_zero_cases_or_missing_finish_code_fail_closed (test_p0_durability.ProcessEvidenceTests.test_missing_pid_zero_cases_or_missing_finish_code_fail_closed) ... ok
+2026-11-06T16:48:03.3233719Z test_success_requires_executed_case_and_process_identity (test_p0_durability.ProcessEvidenceTests.test_success_requires_executed_case_and_process_identity) ... ok
+2026-11-06T16:48:03.3234982Z test_cloud_backup_or_exported_private_activity_blocks_release (test_p0_offline.OfflineGateTests.test_cloud_backup_or_exported_private_activity_blocks_release) ... ok
+2026-11-06T16:48:03.3236480Z test_extra_permission_or_external_entry_point_blocks_release (test_p0_offline.OfflineGateTests.test_extra_permission_or_external_entry_point_blocks_release) ... ok
+2026-11-06T16:48:03.3237533Z test_internet_is_rejected_in_debug_as_well_as_release (test_p0_offline.OfflineGateTests.test_internet_is_rejected_in_debug_as_well_as_release) ... ok
+2026-11-06T16:48:03.3238443Z test_minimal_release_manifest_is_accepted (test_p0_offline.OfflineGateTests.test_minimal_release_manifest_is_accepted) ... ok
+2026-11-06T16:48:03.3240734Z test_class_arguments_cannot_inject_gradle_options (test_p0_pipeline.P0ConfigurationTests.test_class_arguments_cannot_inject_gradle_options) ... ok
+2026-11-06T16:48:03.3242777Z test_empty_scope_cannot_pass (test_p0_pipeline.P0ConfigurationTests.test_empty_scope_cannot_pass) ... ok
+2026-11-06T16:48:03.3244808Z test_final_regression_cannot_be_narrowed (test_p0_pipeline.P0ConfigurationTests.test_final_regression_cannot_be_narrowed) ... ok
+2026-11-06T16:48:03.3256781Z test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names (test_p0_pipeline.P0ConfigurationTests.test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names) ... ok
+2026-11-06T16:48:03.3270092Z test_signing_cannot_start_before_final_complete_regression (test_p0_pipeline.P0ConfigurationTests.test_signing_cannot_start_before_final_complete_regression) ... ok
+2026-11-06T16:48:03.3271744Z test_android_or_existing_gate_tests_cannot_be_skipped (test_p0_publication_scope.PublicationScopeTests.test_android_or_existing_gate_tests_cannot_be_skipped) ... ok
+2026-11-06T16:48:03.3273021Z test_empty_scope_does_not_authorize_publication (test_p0_publication_scope.PublicationScopeTests.test_empty_scope_does_not_authorize_publication) ... ok
+2026-11-06T16:48:03.3273987Z test_explicit_publication_and_only_allowed_files (test_p0_publication_scope.PublicationScopeTests.test_explicit_publication_and_only_allowed_files) ... ok
+2026-11-06T16:48:03.3274910Z test_normal_code_push_keeps_complete_ci (test_p0_publication_scope.PublicationScopeTests.test_normal_code_push_keeps_complete_ci) ... ok
+2026-11-06T16:48:03.3276229Z test_product_or_build_or_signing_changes_cannot_use_old_apk (test_p0_publication_scope.PublicationScopeTests.test_product_or_build_or_signing_changes_cannot_use_old_apk) ... ok
+2026-11-06T16:48:03.3277596Z test_actual_gnss_round_trip_uses_numeric_tolerance (test_p0_release.ActualGpsMetricTests.test_actual_gnss_round_trip_uses_numeric_tolerance) ... ok
+2026-11-06T16:48:03.3279079Z test_blank_or_zero_motion_fields_do_not_pass (test_p0_release.ActualGpsMetricTests.test_blank_or_zero_motion_fields_do_not_pass) ... ok
+2026-11-06T16:48:03.3280142Z test_wrong_coordinates_or_accuracy_fail (test_p0_release.ActualGpsMetricTests.test_wrong_coordinates_or_accuracy_fail) ... ok
+2026-11-06T16:48:03.3280996Z test_another_commit_or_publishing_plan_is_rejected (test_p0_release.SigningGateTests.test_another_commit_or_publishing_plan_is_rejected) ... ok
+2026-11-06T16:48:03.3281847Z test_exact_passed_branch_gate_is_accepted (test_p0_release.SigningGateTests.test_exact_passed_branch_gate_is_accepted) ... ok
+2026-11-06T16:48:03.3282756Z test_missing_or_other_commit_storage_evidence_blocks_signing (test_p0_release.SigningGateTests.test_missing_or_other_commit_storage_evidence_blocks_signing) ... ok
+2026-11-06T16:48:03.3283767Z test_no_execution_or_failed_tests_never_authorize_signing (test_p0_release.SigningGateTests.test_no_execution_or_failed_tests_never_authorize_signing) ... ok
+2026-11-06T16:48:03.3302626Z test_optimized_resource_path_and_typed_binding (test_pipeline.ApkResourceTests.test_optimized_resource_path_and_typed_binding) ... ok
+2026-11-06T16:48:03.3329640Z test_draft_resume_published_rerun_and_identity_rejection (test_pipeline.PublicationTests.test_draft_resume_published_rerun_and_identity_rejection) ... ok
+2026-11-06T16:48:03.3330879Z test_no_credentials_on_cross_host_redirect (test_pipeline.PublicationTests.test_no_credentials_on_cross_host_redirect) ... ok
+2026-11-06T16:48:03.3343117Z test_complete_and_separate_errors (test_pipeline.ReportTests.test_complete_and_separate_errors) ... ok
+2026-11-06T16:48:03.3352985Z test_missing_corrupt_and_miscounted_reports (test_pipeline.ReportTests.test_missing_corrupt_and_miscounted_reports) ... ok
+2026-11-06T16:48:03.3986442Z test_allocation_gate_immutable_tag_and_rerun (test_pipeline.VersionTests.test_allocation_gate_immutable_tag_and_rerun) ... From /tmp/tmp4ma7tc2g/remote
+2026-11-06T16:48:03.3987156Z  * branch            main       -> FETCH_HEAD
+2026-11-06T16:48:03.4206019Z To /tmp/tmp4ma7tc2g/remote.git
+2026-11-06T16:48:03.4206820Z  * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+2026-11-06T16:48:03.4447011Z From /tmp/tmp4ma7tc2g/remote
+2026-11-06T16:48:03.4447534Z  * branch            main       -> FETCH_HEAD
+2026-11-06T16:48:03.4887270Z ok
+2026-11-06T16:48:03.5571223Z test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed (test_release_ledger.LedgerTests.test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed) ... ok
+2026-11-06T16:48:03.5978781Z test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code (test_release_ledger.LedgerTests.test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code) ... ok
+2026-11-06T16:48:03.6297854Z test_historical_name_or_code_cannot_be_tagged_again (test_release_ledger.LedgerTests.test_historical_name_or_code_cannot_be_tagged_again) ... ok
+2026-11-06T16:48:03.6303219Z test_exact_tracked_original_is_accepted (test_report_archive_receipts.ReceiptTests.test_exact_tracked_original_is_accepted) ... ok
+2026-11-06T16:48:03.6310914Z test_incomplete_or_unaccepted_receipt_cannot_claim_pass (test_report_archive_receipts.ReceiptTests.test_incomplete_or_unaccepted_receipt_cannot_claim_pass) ... ok
+2026-11-06T16:48:03.6316573Z test_local_ignored_or_untracked_evidence_never_counts_as_archived (test_report_archive_receipts.ReceiptTests.test_local_ignored_or_untracked_evidence_never_counts_as_archived) ... ok
+2026-11-06T16:48:03.6323482Z test_missing_or_changed_bytes_fail_closed (test_report_archive_receipts.ReceiptTests.test_missing_or_changed_bytes_fail_closed) ... ok
+2026-11-06T16:48:03.6329956Z test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match (test_report_archive_receipts.ReceiptTests.test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match) ... ok
+2026-11-06T16:48:03.6363891Z test_restore_existing_bytes_and_reverify_independent_certificate (test_signed_bundle.SignedRecoveryTests.test_restore_existing_bytes_and_reverify_independent_certificate) ... ok
+2026-11-06T16:48:03.6375142Z test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk (test_signed_bundle.SignedRecoveryTests.test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk) ... ok
+2026-11-06T16:48:03.6389852Z test_unsigned_or_foreign_plan_rejected (test_signed_bundle.SignedRecoveryTests.test_unsigned_or_foreign_plan_rejected) ... ok
+2026-11-06T16:48:03.6390671Z 
+2026-11-06T16:48:03.6390919Z ----------------------------------------------------------------------
+2026-11-06T16:48:03.6391496Z Ran 71 tests in 0.467s
+2026-11-06T16:48:03.6391741Z 
+2026-11-06T16:48:03.6391864Z OK
+2026-11-06T16:48:03.6886070Z Recover the immutable accepted APK only; no Gradle/build/signing
+2026-11-06T16:48:03.7073748Z Post job cleanup.
+2026-11-06T16:48:03.7917450Z [command]/usr/bin/git version
+2026-11-06T16:48:03.7958785Z git version 2.56.0
+2026-11-06T16:48:03.7996691Z Temporarily overriding HOME='/home/runner/work/_temp/c52edbb0-dc01-4d3a-a99e-990143143550' before making global git config changes
+2026-11-06T16:48:03.7997997Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-06T16:48:03.8002401Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-06T16:48:03.8046824Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-06T16:48:03.8084968Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-06T16:48:03.8317000Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-06T16:48:03.8355232Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-06T16:48:03.8593152Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-06T16:48:03.8630028Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-06T16:48:03.8982664Z Evaluate and set job outputs
+2026-11-06T16:48:03.8989286Z Set output 'publication'
+2026-11-06T16:48:03.8991305Z Cleaning up orphan processes
+2026-11-06T16:48:03.9372832Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
