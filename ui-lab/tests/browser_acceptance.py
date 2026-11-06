@@ -238,7 +238,7 @@ with site_url() as url, sync_playwright() as p:
         page.clock.install(time=datetime(2026,11,7,1,41,tzinfo=timezone.utc))
         page.goto(url, wait_until='networkidle')
         # Freeze UI timers; acceptance explicitly advances the browser's clock.
-        page.clock.pause_at(datetime(2026,11,7,1,41,1,tzinfo=timezone.utc))
+        page.clock.pause_at(page.evaluate('Date.now()') + 1000)
         for width,height in [(1440,1000),(1366,768),(390,844)]:
             page.set_viewport_size({'width':width,'height':height})
             reset(page)
