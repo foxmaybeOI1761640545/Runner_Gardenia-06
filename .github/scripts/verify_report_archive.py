@@ -11,6 +11,21 @@ ROOT = Path(__file__).resolve().parents[2]
 EVIDENCE = ROOT / 'docs/reports/evidence'
 
 
+def verify_stage_receipt(receipt, root, tracked):
+    data = json.loads(receipt.read_text())
+    if data.get('status') != 'PASSED' or not data.get('files'):
+        raise ValueError('Incomplete accepted stage receipt: ' + str(receipt))
+    for row in data['files']:
+        p = (receipt.parent / row['path']).resolve()
+        if not p.is_relative_to(receipt.parent) or not p.is_file():
+            raise ValueError('Missing/unsafe stage evidence: ' + row['path'])
+        raw = p.read_bytes()
+        if len(raw) != row['bytes'] or hashlib.sha256(raw).hexdigest() != row['sha256']:
+            raise ValueError('Stage evidence bytes changed: ' + row['path'])
+        if str(p.relative_to(root)) not in tracked:
+            raise ValueError('Stage receipt references an untracked/ignored file: ' + row['path'])
+
+
 def verify(remote=False):
     manifests = sorted((EVIDENCE / 'artifacts').glob('*/manifest.json'))
     if not manifests:
@@ -77,6 +92,9 @@ def verify(remote=False):
         rows = [r for r in counts if r['runId'] == '41974364095' and r['kind'] == kind]
         if len(rows) != 1 or rows[0]['tests'] != expected or rows[0]['failures'] or rows[0]['errors']:
             raise ValueError('Accepted P0.1 raw XML not confirmed: ' + kind)
+    tracked = set(subprocess.check_output(['git', 'ls-files'], cwd=ROOT, text=True).splitlines())
+    for receipt in (ROOT / 'docs/reports/branches/feature-p0-2-gps-ui').glob('stage*-verification.json'):
+        verify_stage_receipt(receipt, ROOT, tracked)
     current = dict(line.split('\t')[::-1] for line in subprocess.check_output(
         ['git', 'ls-remote', '--heads', '--tags', 'origin'], cwd=ROOT, text=True).splitlines())
     for line in (EVIDENCE / 'protected-refs.txt').read_text().splitlines():

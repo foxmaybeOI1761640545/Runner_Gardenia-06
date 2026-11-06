@@ -35,6 +35,8 @@ jobs:
           persist-credentials: false
       - name: Pipeline helper regression
         run: python3 -m unittest discover -s .github/tests -v -b
+      - name: Verify archived reports and accepted stage receipts
+        run: python3 .github/scripts/verify_report_archive.py
       - name: Verify isolated branch and exact stage plan
         id: plan
         run: python3 .github/scripts/p02_pipeline.py prepare

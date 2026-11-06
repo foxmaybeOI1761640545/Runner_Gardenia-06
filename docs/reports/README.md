@@ -32,3 +32,5 @@ Raw XML, screenshots and JSON are exact-byte content-addressed objects. [Each Ar
 - [Recovered rc1.5 final delivery report](evidence/codex-local/gardenia-final-delivery.md)
 - [Other Codex-only historical documents and provenance](evidence/codex-local/provenance.json)
 - [Verified public Release assets](evidence/releases/)
+
+- [P0.2 full regression](branches/feature-p0-2-gps-ui/04-regression-report.md).
