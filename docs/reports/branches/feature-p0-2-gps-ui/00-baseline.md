@@ -17,7 +17,7 @@ The isolated branch was created early solely to archive documents without writin
 |---|---|---|
 | 0 | Historical inventory/archive/remote verification | PASSED |
 | 1 | Formal baseline | PASSED |
-| 2 | One read-only BLE reconnect audit | PENDING |
+| 2 | One read-only BLE reconnect audit | PASSED |
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PENDING |
 | 4 | Home UI and actual screenshot matrix | PENDING |
 | 5 | Full regression | PENDING |
@@ -29,3 +29,7 @@ No merge/main/P0 branch writes; no old Tag/Release replacement; no new signing k
 ## Stage 1 acceptance
 
 PASSED: isolated new branch created from freshly fetched latest remote P0, pushed and independently fetched back. [Full baseline/ref/ledger snapshot](baseline.json). Original branches/Tags unchanged; working tree clean at entry; product/build/version tree exactly matches protected P0. Stage 1 is a Git/document stage: no Android tests or APK build are claimed. The archive cloud verifier checks the frozen refs and every source object; the baseline report commit must also pass that job before stage 2.
+
+## Stage 2 acceptance
+
+[One bounded BLE audit](01-ble-reconnect-audit.md) completed; 23 unchanged state-machine tests passed in one actual local execution. No BLE production changes. H303 root cause remains unconfirmed; no-notification CONNECTED handling is a supported candidate, not a hardware finding. Report/remote/cloud archive validation precede stage 3.

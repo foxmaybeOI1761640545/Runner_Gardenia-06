@@ -6,6 +6,7 @@
 - [Complete historical inventory](branches/feature-p0-core-migration/INVENTORY.md)
 - [P0 delivery](../P0_DELIVERY_REPORT.md), [device acceptance checklist](../P0_DEVICE_CHECKLIST.md)
 - [P0.2 baseline and progress](branches/feature-p0-2-gps-ui/00-baseline.md)
+- [P0.2 read-only BLE reconnect audit](branches/feature-p0-2-gps-ui/01-ble-reconnect-audit.md)
 
 ## Heart-rate development
 
