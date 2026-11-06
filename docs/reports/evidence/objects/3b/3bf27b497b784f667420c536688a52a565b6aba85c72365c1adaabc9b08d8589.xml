@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.chart.HeartRatePlotTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-04T18:47:04.684Z" hostname="runnervm48cm3" time="0.1">
+  <properties/>
+  <testcase name="rereReductionKeepsGapFlagsAndExtrema" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.065"/>
+  <testcase name="narrowExtremaAreNotLost" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.01"/>
+  <testcase name="smallInputRemainsExactAndImmutable" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.0"/>
+  <testcase name="distanceProjectionClampsUnlocatedSamplesWithoutInventingTravel" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.001"/>
+  <testcase name="hiddenGapsCannotBecomeConnectedAfterReduction" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.001"/>
+  <testcase name="missingDistanceAnchorsHaveAnExplicitEmptyResult" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.0"/>
+  <testcase name="invalidBudgetFailsExplicitly" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.005"/>
+  <testcase name="longRecordingIsBoundedAndChronological" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.01"/>
+  <testcase name="distanceProjectionInterpolatesButPreservesReconnectBoundaries" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.001"/>
+  <testcase name="stationaryAndDuplicateTimeAnchorsDoNotDivideByZero" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

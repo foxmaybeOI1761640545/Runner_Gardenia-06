@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.HeartRateSummaryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-04T18:25:07.281Z" hostname="runnervm48cm3" time="0.046">
+  <properties/>
+  <testcase name="invalidAndMissingValuesDoNotInventZeroHeartRate" classname="de.dennisguse.opentracks.p0.HeartRateSummaryTest" time="0.045"/>
+  <testcase name="fullSigRangeIsRetained" classname="de.dennisguse.opentracks.p0.HeartRateSummaryTest" time="0.001"/>
+  <testcase name="equalValuesCountAsSeparateNotifications" classname="de.dennisguse.opentracks.p0.HeartRateSummaryTest" time="0.0"/>
+  <testcase name="exactExtremaAndNotificationWeightedMean" classname="de.dennisguse.opentracks.p0.HeartRateSummaryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

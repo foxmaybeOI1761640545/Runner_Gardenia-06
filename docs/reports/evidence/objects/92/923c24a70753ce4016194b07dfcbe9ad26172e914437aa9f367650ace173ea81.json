@@ -1,0 +1,170 @@
+{
+  "plan": {
+    "versionName": "v0.1.0-p0.1",
+    "versionCode": 6772,
+    "commit": "b8b66dd73418a02e856f930080f794717db6e256",
+    "stage": 3,
+    "branch": "feature/p0-core-migration",
+    "runId": "41884722256",
+    "publishing": false
+  },
+  "stage": 3,
+  "android": {
+    "tests": 39,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 1,
+    "total": 39,
+    "executed": 38,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+        "tests": 1,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.GpsStatusTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    ],
+    "failureDetails": [
+      "de.dennisguse.opentracks.p0.P0RecordingUiTest.cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes\n\norg.junit.ComparisonFailure: expected:<[Recording]> but was:<[Paused]>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat de.dennisguse.opentracks.p0.P0RecordingUiTest.phase(P0RecordingUiTest.java:43)\n\tat de.dennisguse.opentracks.p0.P0RecordingUiTest.cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes(P0RecordingUiTest.java:53)\n"
+    ],
+    "passed": false
+  },
+  "unit": {
+    "tests": 73,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 73,
+    "executed": 73,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "p0Screenshots": 1,
+  "passed": false
+}

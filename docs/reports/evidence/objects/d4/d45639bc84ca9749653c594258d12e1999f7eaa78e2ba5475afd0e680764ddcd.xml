@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.chart.HeartRatePlotTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-03T19:35:12.103Z" hostname="ip-10-0-135-197" time="0.045">
+  <properties/>
+  <testcase name="rereReductionKeepsGapFlagsAndExtrema" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.021"/>
+  <testcase name="narrowExtremaAreNotLost" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.01"/>
+  <testcase name="smallInputRemainsExactAndImmutable" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.0"/>
+  <testcase name="hiddenGapsCannotBecomeConnectedAfterReduction" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.0"/>
+  <testcase name="invalidBudgetFailsExplicitly" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.001"/>
+  <testcase name="longRecordingIsBoundedAndChronological" classname="de.dennisguse.opentracks.chart.HeartRatePlotTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

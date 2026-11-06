@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="105" failures="0" errors="0" skipped="1" time="0.000" timestamp="2026-11-04T23:26:05" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.TimezoneEnvironmentTest" tests="3" failures="0" errors="0" skipped="0" time="0.009" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="emulatorSystemTimezoneIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.003" />
+    <testcase name="timezoneRuleRestoresPreviousDefaultOnFailure" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.000" />
+    <testcase name="instrumentationDefaultIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.006" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" tests="6" failures="0" errors="0" skipped="0" time="0.268" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="onDowngrade_ToVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.087" />
+    <testcase name="upgrade42PreservesLegacyTrackAndBpmWithoutInventingRawSamples" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.037" />
+    <testcase name="onUpgrade_FromVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.067" />
+    <testcase name="onCreate" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.016" />
+    <testcase name="upgrade_data_to_30" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.044" />
+    <testcase name="track_uuid_unique" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.017" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.HeartRateRepositoryTest" tests="6" failures="0" errors="0" skipped="0" time="0.080" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="exactMetadataSurvivesRepositoryReopening" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.021" />
+    <testcase name="invalidSamplesAreRejectedWithoutInventingMissingValues" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.010" />
+    <testcase name="missingOptionalDataAndNoStrapTracksRemainReadable" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.008" />
+    <testcase name="snapshotDuplicatesDoNotDiscardNewIdenticalBpmNotifications" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.012" />
+    <testcase name="deletingTrackCascadesOnlyItsOwnRawSamples" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.016" />
+    <testcase name="samplesAreOrderedByCaptureTimeAndIsolatedByTrack" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.013" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" tests="2" failures="0" errors="0" skipped="0" time="10.263" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="activityRecreationRetainsCoreControls" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="4.016" />
+    <testcase name="launcherOpensP0HomeWithoutIntroduction" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="6.247" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0DurabilityTest" tests="1" failures="0" errors="0" skipped="0" time="0.039" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="committedGpsAndRawHeartRateRemainReadable" classname="de.dennisguse.opentracks.p0.P0DurabilityTest" time="0.039" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0GpsRecordingTest" tests="4" failures="0" errors="0" skipped="0" time="0.563" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="pauseResumeDoesNotBridgeFarCoordinatesOrAccumulatePausedTime" classname="de.dennisguse.opentracks.p0.P0GpsRecordingTest" time="0.495" />
+    <testcase name="realDriverRequestTargetsOneHertzWithoutBatching" classname="de.dennisguse.opentracks.p0.P0GpsRecordingTest" time="0.040" />
+    <testcase name="deniedBluetoothDoesNotAddConnectedDeviceForegroundType" classname="de.dennisguse.opentracks.p0.P0GpsRecordingTest" time="0.017" />
+    <testcase name="sessionIntentReopensPausedWithoutInventingRunningService" classname="de.dennisguse.opentracks.p0.P0GpsRecordingTest" time="0.011" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0GpxExporterTest" tests="10" failures="0" errors="0" skipped="0" time="0.230" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="heartRateOnlyWorkoutHasNoInventedGpsPoints" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.030" />
+    <testcase name="longGpsSilenceDoesNotDrawABridgeEvenWithoutAnOldSegmentMarker" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.026" />
+    <testcase name="invalidCoordinatesFailAndIncompletePrivateFileIsRemoved" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.018" />
+    <testcase name="outputFailureIsPropagatedAndProtectedWorkoutCannotExport" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.017" />
+    <testcase name="everyRawSampleAndExactMetadataSurviveWithOnlyRealGpsPoints" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.028" />
+    <testcase name="xmlEscapingDecimalCoordinatesAndLocaleRemainValid" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.027" />
+    <testcase name="gpsOnlyWorkoutExportsWithoutHeartRate" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.016" />
+    <testcase name="pausesAutomaticGapsAndIdleCreateSeparateSegments" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.021" />
+    <testcase name="legacyPointHeartRateIsExportedWithoutInventingRawNotifications" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.018" />
+    <testcase name="localDocumentStreamAndReadOnlyShareUriContainTheActualGpx" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.029" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0HeartRateUiTest" tests="1" failures="0" errors="0" skipped="0" time="6.607" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="realPanelClearsStaleContactLostAndDisconnectedDataThenAcceptsNewSession" classname="de.dennisguse.opentracks.p0.P0HeartRateUiTest" time="6.607" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0HistoryUiTest" tests="3" failures="0" errors="0" skipped="0" time="15.080" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="pausedWorkoutDetailCannotDeleteProtectedData" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="2.906" />
+    <testcase name="historyOpensExactRawStatisticsAndDeletesOnlyAfterConfirmation" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="7.495" />
+    <testcase name="exportActionsUseAndroidDocumentAndReadOnlyShareContracts" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="4.679" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0RecordingDataTest" tests="1" failures="0" errors="0" skipped="0" time="1.376" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="gpsAndEveryRawNotificationStayAlignedAcrossPausePreviewAndResume" classname="de.dennisguse.opentracks.p0.P0RecordingDataTest" time="1.376" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0RecordingUiTest" tests="1" failures="0" errors="0" skipped="0" time="9.501" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes" classname="de.dennisguse.opentracks.p0.P0RecordingUiTest" time="9.501" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0SensorsTest" tests="9" failures="0" errors="0" skipped="0" time="19.424" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="heartRateCommandsArePackageAddressAndMeasurementScoped" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="0.879" />
+    <testcase name="manualDisconnectIntentSurvivesSensorRecreationWithoutForgettingDevice" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="0.485" />
+    <testcase name="scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="5.698" />
+    <testcase name="previewToRecordingRefreshesGpsAndIdleStopCannotEndAnActiveWorkout" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="0.983" />
+    <testcase name="reconnectSwitchPersistsAcrossSettingsRecreation" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="3.260" />
+    <testcase name="orphanServiceRestartWithoutWorkoutStopsInsteadOfMissingForegroundDeadline" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="0.158" />
+    <testcase name="controlsExposePendingCommandAndBecomeAvailableAfterServiceBinding" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="3.355" />
+    <testcase name="p0SettingsExposeOnlyHeartRateAndForceStandardServiceDiscovery" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="3.134" />
+    <testcase name="systemServiceRecoveryRespectsDisabledAutomaticReconnect" classname="de.dennisguse.opentracks.p0.P0SensorsTest" time="1.472" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" tests="7" failures="0" errors="0" skipped="0" time="0.132" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="snapshotsPreserveRawDataAndStatisticsAcrossRepositoryReopen" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.014" />
+    <testcase name="noSensorWorkoutsRemainReadableWithoutSyntheticStatistics" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.033" />
+    <testcase name="legacyHeartRateRemainsReadableWithoutInventingRawNotifications" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.024" />
+    <testcase name="chronologicalStreamingRetainsEqualBpmAndIndependentCaptureTimes" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.016" />
+    <testcase name="deletionCascadesGpsAndHeartRateOnlyForSelectedWorkout" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.015" />
+    <testcase name="boundedHistoryAndPausedWorkoutDeletionProtection" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.023" />
+    <testcase name="failedRawBatchRollsBackEveryRow" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.007" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.GpsStatusTest" tests="4" failures="0" errors="0" skipped="0" time="0.143" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testStartBadfixOk" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.003" />
+    <testcase name="testStartDisabledEnabledStop" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.005" />
+    <testcase name="testStartSignalLost" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.001" />
+    <testcase name="testStartSignalLostByTimer" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.134" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" tests="7" failures="0" errors="0" skipped="0" time="0.031" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="missingAdapterDoesNotPretendConnectedOrRegisterTwice" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.002" />
+    <testcase name="alreadyGrantedPermissionRunsSuccessWithoutLaunchingAnotherRequest" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="equalPayloadNotificationsHaveIndependentIdentityAndCaptureTimes" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.002" />
+    <testcase name="optionalMetadataIsBoundedAndResetBetweenConnections" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="liveReconnectPolicyIsMeasurementScopedEvenForSharedDeviceAddress" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.023" />
+    <testcase name="runtimeParserRetainsOptionalFieldsAndNotificationIdentity" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="notificationAndIndicationSubscriptionsPreserveOtherSensorSupport" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" tests="2" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseHeartRate_uint8" classname="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" time="0.002" />
+    <testcase name="parseHeartRate_uint16" classname="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" tests="4" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="currentDataExpiresAfterFiveSeconds" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.001" />
+    <testcase name="disconnectInvalidatesImmediately" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.001" />
+    <testcase name="trackpointAggregationResetPreservesInstantValue" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.000" />
+    <testcase name="invalidContactOrZeroImmediatelyClearsPreviousData" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest" tests="2" failures="0" errors="0" skipped="0" time="0.014" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="p0RecordingNotificationIsQuietAndRemainsOngoing" classname="de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest" time="0.005" />
+    <testcase name="updateLocation_triggersAlertOnlyOnFirstInaccurateLocation" classname="de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest" time="0.009" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" tests="2" failures="0" errors="0" skipped="0" time="0.013" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.006" />
+    <testcase name="callbackAfterDestroyDoesNotAccessReleasedManagers" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.007" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" tests="16" failures="0" errors="0" skipped="0" time="19.031" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testRecording_startStopResumeStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.145" />
+    <testcase name="testRecording_gpsAndSensor_gpsIdleMoving_sensorMoving" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.263" />
+    <testcase name="recording_startIdle" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="15.576" />
+    <testcase name="recording_startStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.098" />
+    <testcase name="testRecording_startPauseResume" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.376" />
+    <testcase name="testRecording_gpsOnly_segment" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.239" />
+    <testcase name="reCreate_not_recording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.028" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_movement_non_idle" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.183" />
+    <testcase name="testRecording_startPauseStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.144" />
+    <testcase name="reCreate_recording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.197" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_above" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.294" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_below" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.309" />
+    <testcase name="testRecording_blesensor_only_no_distance" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.224" />
+    <testcase name="sensorPreviewBeforeRecordingNeverCreatesTrackOrStoresSamples" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.242" />
+    <testcase name="rawHeartRateBypassesPointThrottlingAndRespectsPauseResume" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.441" />
+    <testcase name="testRecording_gpsOnly_ignore_inaccurate" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.272" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" tests="7" failures="0" errors="0" skipped="1" time="1.033" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="cannotResume_non_existing_track" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.060" />
+    <testcase name="recording_stopGPS_noop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.000">
+      <skipped />
+    </testcase>
+    <testcase name="cannotEnd_without_starting" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.044" />
+    <testcase name="initialState" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.107" />
+    <testcase name="recording_startStopResume_no_data" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.556" />
+    <testcase name="recording_startRecording_alreadyRecording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.140" />
+    <testcase name="gps_startStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.126" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" tests="3" failures="0" errors="0" skipped="0" time="0.077" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="allResultsAreRetainedAndDeduplicatedByAddress" classname="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" time="0.008" />
+    <testcase name="deviceRowShowsNameMacSignalAndConnection" classname="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" time="0.060" />
+    <testcase name="unnamedDeviceUsesAddressAndSavedRowsHaveNoFakeSignal" classname="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" time="0.009" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.HeartRatePanelTest" tests="4" failures="0" errors="0" skipped="0" time="0.170" timestamp="2026-11-04T23:26:05" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="exactFreshnessBoundaryDoesNotShowOldBpm" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.102" />
+    <testcase name="everyConnectionStateIsReadableWithoutInventingMeasurements" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.047" />
+    <testcase name="contactLossHidesBpmAndExplainsContactProblem" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.020" />
+    <testcase name="manualDisconnectClearsTheOldDeviceFromLiveStatus" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.001" />
+  </testsuite>
+</testsuites>

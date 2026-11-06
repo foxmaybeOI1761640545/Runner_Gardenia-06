@@ -1,0 +1,40 @@
+{
+  "artifact": {
+    "id": 13370790662,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM3MDc5MDY2Mg==",
+    "name": "P0-reports-41928368419",
+    "size_in_bytes": 44625,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13370790662",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13370790662/zip",
+    "expired": false,
+    "digest": "sha256:d876d6eae6aef8835447326a095be56bc057fb93faa839fbd8005fe07b0bc503",
+    "created_at": "2026-11-04T22:48:56Z",
+    "updated_at": "2026-11-04T22:48:56Z",
+    "expires_at": "2027-02-02T22:47:52Z",
+    "workflow_run": {
+      "id": 41928368419,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "dafdf2a2ab1dd22b764d0571a26290bc6193f038"
+    }
+  },
+  "archiveSha256": "d876d6eae6aef8835447326a095be56bc057fb93faa839fbd8005fe07b0bc503",
+  "files": [
+    {
+      "originalPath": "build/reports/p0-validation/tests.json",
+      "bytes": 337,
+      "sha256": "92de6b8d9fc3990bd683eea112caacf0e22239c5e782d158de5ece417629bc1e",
+      "object": "objects/92/92de6b8d9fc3990bd683eea112caacf0e22239c5e782d158de5ece417629bc1e.json"
+    },
+    {
+      "originalPath": "release-plan.json",
+      "bytes": 218,
+      "sha256": "8f9871db6f5efd64232d99db8bddab61a085a652cd2133d65d2df959815b56d1",
+      "object": "objects/8f/8f9871db6f5efd64232d99db8bddab61a085a652cd2133d65d2df959815b56d1.json"
+    }
+  ],
+  "notArchived": [
+    "build/reports/problems/problems-report.html"
+  ]
+}

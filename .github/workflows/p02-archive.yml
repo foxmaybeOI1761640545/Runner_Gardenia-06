@@ -1,0 +1,22 @@
+name: P0.2 historical archive verification
+on:
+  push:
+    branches: [feature/p0-2-gps-ui]
+    paths: ['docs/**', 'AGENTS.md', '.github/scripts/verify_report_archive.py', '.github/workflows/p02-archive.yml']
+permissions:
+  contents: read
+concurrency:
+  group: p02-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify raw report bytes, links, counts and frozen historical refs
+        run: python3 .github/scripts/verify_report_archive.py

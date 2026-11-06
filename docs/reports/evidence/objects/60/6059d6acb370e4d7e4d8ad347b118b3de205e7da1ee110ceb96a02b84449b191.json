@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "diagnostic": "Instrumentation reports are missing.",
+  "plan": {
+    "versionName": "v0.1.0-rc1.5",
+    "versionCode": 6770,
+    "commit": "1686181c7e7f5df0221d2df340dd1dbddb803896",
+    "runId": "41727601648",
+    "publishing": false
+  }
+}

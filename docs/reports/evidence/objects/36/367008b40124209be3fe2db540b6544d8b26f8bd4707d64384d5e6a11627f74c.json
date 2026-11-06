@@ -1,0 +1,14 @@
+{
+  "plan": {
+    "versionName": "v0.1.0-p0.1",
+    "versionCode": 6772,
+    "commit": "878bd3db54cf75841013b60651b8450ab3372abc",
+    "stage": 3,
+    "branch": "feature/p0-core-migration",
+    "runId": "41880252503",
+    "publishing": false
+  },
+  "stage": 3,
+  "passed": false,
+  "diagnostic": "Instrumentation reports are missing."
+}

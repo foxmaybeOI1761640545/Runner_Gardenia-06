@@ -1,0 +1,200 @@
+{
+  "artifact": {
+    "id": 13348414922,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM0ODQxNDkyMg==",
+    "name": "P0-reports-41880252503",
+    "size_in_bytes": 380398,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13348414922",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13348414922/zip",
+    "expired": false,
+    "digest": "sha256:3d875fb005772562dd6253e6732f88f0ac377b3a16060ab83b7eb4402d479260",
+    "created_at": "2026-11-04T18:03:34Z",
+    "updated_at": "2026-11-04T18:03:34Z",
+    "expires_at": "2027-02-02T17:45:43Z",
+    "workflow_run": {
+      "id": 41880252503,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "878bd3db54cf75841013b60651b8450ab3372abc"
+    }
+  },
+  "archiveSha256": "3d875fb005772562dd6253e6732f88f0ac377b3a16060ab83b7eb4402d479260",
+  "files": [
+    {
+      "originalPath": "build/reports/lint-results-reproducibleDebug.xml",
+      "bytes": 1423744,
+      "sha256": "5dbdafd31c6d77f9815641bd887c2a709d2f69ab7cd2910ab302c1bd6158e53b",
+      "object": "objects/5d/5dbdafd31c6d77f9815641bd887c2a709d2f69ab7cd2910ab302c1bd6158e53b.xml"
+    },
+    {
+      "originalPath": "build/reports/p0-validation/tests.json",
+      "bytes": 337,
+      "sha256": "367008b40124209be3fe2db540b6544d8b26f8bd4707d64384d5e6a11627f74c",
+      "object": "objects/36/367008b40124209be3fe2db540b6544d8b26f8bd4707d64384d5e6a11627f74c.json"
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "bytes": 478,
+      "sha256": "71bf421bda50021348a7c8b51b5f149fedb86a4598cd5768591365085890c208",
+      "object": "objects/71/71bf421bda50021348a7c8b51b5f149fedb86a4598cd5768591365085890c208.xml",
+      "counts": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 1
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "bytes": 830,
+      "sha256": "c33c515231198cab45211b453f79b3aa7a32adf2ddaea9d2761299e062308e67",
+      "object": "objects/c3/c33c515231198cab45211b453f79b3aa7a32adf2ddaea9d2761299e062308e67.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "bytes": 862,
+      "sha256": "f2b15206825362c9c019a2b93f964b76f5ffb1a3028970d637454cd14ade3ca2",
+      "object": "objects/f2/f2b15206825362c9c019a2b93f964b76f5ffb1a3028970d637454cd14ade3ca2.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "bytes": 1716,
+      "sha256": "f5fe0d767aee4582d2f96c915c33569a1b170e353771b37be407de09264fb35a",
+      "object": "objects/f5/f5fe0d767aee4582d2f96c915c33569a1b170e353771b37be407de09264fb35a.xml",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 10
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "bytes": 823,
+      "sha256": "5bfba8647c6d5e4fae2d3781644059425ba6ccfe613f71abe2333947e437e368",
+      "object": "objects/5b/5bfba8647c6d5e4fae2d3781644059425ba6ccfe613f71abe2333947e437e368.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "bytes": 870,
+      "sha256": "67668dc8c440c48a41de9376751942383edf544d058eeea1b564027bbea2e587",
+      "object": "objects/67/67668dc8c440c48a41de9376751942383edf544d058eeea1b564027bbea2e587.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "bytes": 1006,
+      "sha256": "68332362bd410e88d4d6d7d5afba8cf70bf80d0f21a143ca627c80ced5b81515",
+      "object": "objects/68/68332362bd410e88d4d6d7d5afba8cf70bf80d0f21a143ca627c80ced5b81515.xml",
+      "counts": {
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 5
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "bytes": 2643,
+      "sha256": "33311c29ef3a7216d6614407afb59277157c4e424eac11c57db59885513d7e3c",
+      "object": "objects/33/33311c29ef3a7216d6614407afb59277157c4e424eac11c57db59885513d7e3c.xml",
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 16
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "bytes": 1589,
+      "sha256": "e20890c9b1fd1b2b7459bf00793ce260cc477848b953dd49a216d71275c5ea18",
+      "object": "objects/e2/e20890c9b1fd1b2b7459bf00793ce260cc477848b953dd49a216d71275c5ea18.xml",
+      "counts": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 9
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "bytes": 2408,
+      "sha256": "4a82cfd18c0edd92760fe4ff0e5e26a505c07b508bb7b2cecbeb1f1713cbbb33",
+      "object": "objects/4a/4a82cfd18c0edd92760fe4ff0e5e26a505c07b508bb7b2cecbeb1f1713cbbb33.xml",
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 16
+      }
+    },
+    {
+      "originalPath": "release-plan.json",
+      "bytes": 218,
+      "sha256": "c9b9b6c6b6e4725e78c5da03b3a8a54eac0a00937339b2281c9b4793098a86e3",
+      "object": "objects/c9/c9b9b6c6b6e4725e78c5da03b3a8a54eac0a00937339b2281c9b4793098a86e3.json"
+    }
+  ],
+  "notArchived": [
+    "build/reports/lint-results-reproducibleDebug.html",
+    "build/reports/lint-results-reproducibleDebug.sarif",
+    "build/reports/lint-results-reproducibleDebug.txt",
+    "build/reports/problems/problems-report.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/css/base-style.css",
+    "build/reports/tests/testReproducibleDebugUnitTest/css/style.css",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.TimezoneEnvironmentUnitTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.chart.HeartRatePlotTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.ForegroundModeTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.HeartRateSummaryTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.MotionFormatTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.P0PermissionPolicyTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.RecordingSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleScanSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/js/report.js",
+    "build/test-results/testReproducibleDebugUnitTest/binary/output-events.bin",
+    "build/test-results/testReproducibleDebugUnitTest/binary/results-generic.bin",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/device-info.pb",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-emulatorSystemTimezoneIsSingapore.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-instrumentationDefaultIsSingapore.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-timezoneRuleRestoresPreviousDefaultOnFailure.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0ActivitySmokeTest-activityRecreationRetainsCoreControls.txt"
+  ]
+}

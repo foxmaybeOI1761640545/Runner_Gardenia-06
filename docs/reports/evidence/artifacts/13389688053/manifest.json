@@ -1,0 +1,64 @@
+{
+  "artifact": {
+    "id": 13389688053,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM4OTY4ODA1Mw==",
+    "name": "P0-Release-reports-41970434767",
+    "size_in_bytes": 4253759,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13389688053",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13389688053/zip",
+    "expired": false,
+    "digest": "sha256:e1b04b870ca5aaa5f98d5cf11b16a1bbcd6a8c3ad5e53d972f0f8313fb5a03f6",
+    "created_at": "2026-11-05T05:07:47Z",
+    "updated_at": "2026-11-05T05:07:47Z",
+    "expires_at": "2027-02-03T04:52:10Z",
+    "workflow_run": {
+      "id": 41970434767,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "4657ef8ab5e5d105f80b240478101738c9d93570"
+    }
+  },
+  "archiveSha256": "e1b04b870ca5aaa5f98d5cf11b16a1bbcd6a8c3ad5e53d972f0f8313fb5a03f6",
+  "files": [
+    {
+      "originalPath": "reports/p0-release-smoke/baseline-optional-permissions.json",
+      "bytes": 172,
+      "sha256": "56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e",
+      "object": "objects/56/56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e.json"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-home-gps-only.png",
+      "bytes": 173636,
+      "sha256": "8d814a01d1c91a089322429514ae6dcd322831745dbce332036cb72d779e9f12",
+      "object": "objects/8d/8d814a01d1c91a089322429514ae6dcd322831745dbce332036cb72d779e9f12.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-settings-no-bluetooth-permission.png",
+      "bytes": 208966,
+      "sha256": "3bfda87d8e82093b22bea8287d47e4856b5f3ce0a561583525d4ef7d6fc32adf",
+      "object": "objects/3b/3bfda87d8e82093b22bea8287d47e4856b5f3ce0a561583525d4ef7d6fc32adf.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-recording-gps-only.png",
+      "bytes": 187465,
+      "sha256": "6aadb0df5b83b340e5d172160e3c29058ea12928abad9f8c7f20e7dddb8958c1",
+      "object": "objects/6a/6aadb0df5b83b340e5d172160e3c29058ea12928abad9f8c7f20e7dddb8958c1.png"
+    }
+  ],
+  "notArchived": [
+    "reports/p0-release-smoke/emulator.log",
+    "reports/p0-release-smoke/logcat.txt",
+    "reports/p0-release-smoke/last-window.xml",
+    "reports/problems/problems-report.html",
+    "reports/resources_config_map_file/reproducibleRelease/resources.cfg",
+    "outputs/mapping/reproducibleRelease/configanalyzer.html",
+    "outputs/mapping/reproducibleRelease/configanalyzer.pb",
+    "outputs/mapping/reproducibleRelease/configuration.txt",
+    "outputs/mapping/reproducibleRelease/mapping.prt",
+    "outputs/mapping/reproducibleRelease/mapping.txt",
+    "outputs/mapping/reproducibleRelease/resources.txt",
+    "outputs/mapping/reproducibleRelease/seeds.txt",
+    "outputs/mapping/reproducibleRelease/usage.txt"
+  ]
+}

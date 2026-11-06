@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="24" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-04T17:04:30" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.TimezoneEnvironmentTest" tests="3" failures="0" errors="0" skipped="0" time="0.126" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="emulatorSystemTimezoneIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.039" />
+    <testcase name="timezoneRuleRestoresPreviousDefaultOnFailure" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.000" />
+    <testcase name="instrumentationDefaultIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.087" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" tests="6" failures="0" errors="0" skipped="0" time="0.576" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="onDowngrade_ToVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.392" />
+    <testcase name="upgrade42PreservesLegacyTrackAndBpmWithoutInventingRawSamples" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.046" />
+    <testcase name="onUpgrade_FromVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.078" />
+    <testcase name="onCreate" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.014" />
+    <testcase name="upgrade_data_to_30" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.032" />
+    <testcase name="track_uuid_unique" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.014" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.HeartRateRepositoryTest" tests="6" failures="0" errors="0" skipped="0" time="0.072" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="exactMetadataSurvivesRepositoryReopening" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.016" />
+    <testcase name="invalidSamplesAreRejectedWithoutInventingMissingValues" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.008" />
+    <testcase name="missingOptionalDataAndNoStrapTracksRemainReadable" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.014" />
+    <testcase name="snapshotDuplicatesDoNotDiscardNewIdenticalBpmNotifications" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.010" />
+    <testcase name="deletingTrackCascadesOnlyItsOwnRawSamples" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.014" />
+    <testcase name="samplesAreOrderedByCaptureTimeAndIsolatedByTrack" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.010" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" tests="2" failures="0" errors="0" skipped="0" time="10.293" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="activityRecreationRetainsCoreControls" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="3.995" />
+    <testcase name="launcherOpensP0HomeWithoutIntroduction" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="6.298" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" tests="5" failures="0" errors="0" skipped="0" time="0.171" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="snapshotsPreserveRawDataAndStatisticsAcrossRepositoryReopen" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.049" />
+    <testcase name="noSensorWorkoutsRemainReadableWithoutSyntheticStatistics" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.072" />
+    <testcase name="chronologicalStreamingRetainsEqualBpmAndIndependentCaptureTimes" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.010" />
+    <testcase name="deletionCascadesGpsAndHeartRateOnlyForSelectedWorkout" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.025" />
+    <testcase name="failedRawBatchRollsBackEveryRow" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.015" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" tests="2" failures="0" errors="0" skipped="0" time="0.029" timestamp="2026-11-04T17:04:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.019" />
+    <testcase name="callbackAfterDestroyDoesNotAccessReleasedManagers" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.010" />
+  </testsuite>
+</testsuites>

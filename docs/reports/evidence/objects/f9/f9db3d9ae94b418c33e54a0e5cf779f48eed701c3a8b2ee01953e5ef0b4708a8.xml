@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-04T23:55:25.065Z" hostname="runnervm48cm3" time="0.007">
+  <properties/>
+  <testcase name="gapAndPausedIntervalsDoNotJoinSegments" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.003"/>
+  <testcase name="deterministicEarlierPointWinsTiesAndLargeTimesDoNotOverflow" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.0"/>
+  <testcase name="sparsePointsNeverMatchBeyondOneSecond" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.001"/>
+  <testcase name="overlappingOrBackwardsImportedTimesRemainUnmatched" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.0"/>
+  <testcase name="exactAndNearestWithinOneSecondUseRealPointIds" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.001"/>
+  <testcase name="emptyAndSinglePointWorkoutsDoNotInventCoordinates" classname="de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

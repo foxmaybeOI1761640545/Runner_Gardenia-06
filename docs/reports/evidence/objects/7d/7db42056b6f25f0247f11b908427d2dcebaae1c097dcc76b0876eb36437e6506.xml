@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-04T14:34:00.098Z" hostname="runnervm48cm3" time="0.006">
+  <properties/>
+  <testcase name="permissionsRemainMinimalAcrossAndroidVersions" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="cancelRejectsLateCallbacks" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.004"/>
+  <testcase name="advertisementNameIsUsedBeforeTheDeviceCacheHasAName" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="unnamedAdvertisementsRemainUnnamedRatherThanInventingADevice" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="rejectedPermissionNeverScans" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="timeoutFinishesScan" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.001"/>
+  <testcase name="powerOffNeverScans" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="failedScanCanBeRestarted" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <testcase name="scanAcceptsOnlyCurrentResults" classname="de.dennisguse.opentracks.sensors.driver.BleScanSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

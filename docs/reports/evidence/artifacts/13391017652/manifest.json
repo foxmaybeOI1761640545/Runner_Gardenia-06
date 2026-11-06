@@ -1,0 +1,52 @@
+{
+  "artifact": {
+    "id": 13391017652,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM5MTAxNzY1Mg==",
+    "name": "P0-Release-reports-41972826140",
+    "size_in_bytes": 3896153,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13391017652",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13391017652/zip",
+    "expired": false,
+    "digest": "sha256:5592e31435e5e56c87bf352599ea27c83647581807d70554e402610975cb3956",
+    "created_at": "2026-11-05T05:28:18Z",
+    "updated_at": "2026-11-05T05:28:18Z",
+    "expires_at": "2027-02-03T05:15:10Z",
+    "workflow_run": {
+      "id": 41972826140,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "23ff1198c88aff688696f19d029486449de66898"
+    }
+  },
+  "archiveSha256": "5592e31435e5e56c87bf352599ea27c83647581807d70554e402610975cb3956",
+  "files": [
+    {
+      "originalPath": "reports/p0-release-smoke/baseline-optional-permissions.json",
+      "bytes": 172,
+      "sha256": "56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e",
+      "object": "objects/56/56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e.json"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-home-gps-only.png",
+      "bytes": 174896,
+      "sha256": "aea3238fb055669fd1558fac4e202aeac9b8574f53f0ee42ff9b2f08741b6c86",
+      "object": "objects/ae/aea3238fb055669fd1558fac4e202aeac9b8574f53f0ee42ff9b2f08741b6c86.png"
+    }
+  ],
+  "notArchived": [
+    "reports/p0-release-smoke/last-window.xml",
+    "reports/p0-release-smoke/emulator.log",
+    "reports/p0-release-smoke/logcat.txt",
+    "reports/resources_config_map_file/reproducibleRelease/resources.cfg",
+    "reports/problems/problems-report.html",
+    "outputs/mapping/reproducibleRelease/configanalyzer.html",
+    "outputs/mapping/reproducibleRelease/configanalyzer.pb",
+    "outputs/mapping/reproducibleRelease/configuration.txt",
+    "outputs/mapping/reproducibleRelease/mapping.prt",
+    "outputs/mapping/reproducibleRelease/mapping.txt",
+    "outputs/mapping/reproducibleRelease/resources.txt",
+    "outputs/mapping/reproducibleRelease/seeds.txt",
+    "outputs/mapping/reproducibleRelease/usage.txt"
+  ]
+}

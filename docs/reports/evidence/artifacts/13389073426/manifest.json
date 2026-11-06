@@ -1,0 +1,39 @@
+{
+  "artifact": {
+    "id": 13389073426,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM4OTA3MzQyNg==",
+    "name": "P0-Release-reports-41968727319",
+    "size_in_bytes": 3711600,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13389073426",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13389073426/zip",
+    "expired": false,
+    "digest": "sha256:1b550794955554633d1a2eae75425746fd677aee5d424bc148b946e6c0aef164",
+    "created_at": "2026-11-05T04:50:34Z",
+    "updated_at": "2026-11-05T04:50:34Z",
+    "expires_at": "2027-02-03T04:35:16Z",
+    "workflow_run": {
+      "id": 41968727319,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "b452027fe39517394e85b48ccb8cc92a6f264b51"
+    }
+  },
+  "archiveSha256": "1b550794955554633d1a2eae75425746fd677aee5d424bc148b946e6c0aef164",
+  "files": [],
+  "notArchived": [
+    "reports/p0-release-smoke/emulator.log",
+    "reports/p0-release-smoke/logcat.txt",
+    "reports/p0-release-smoke/last-window.xml",
+    "reports/problems/problems-report.html",
+    "reports/resources_config_map_file/reproducibleRelease/resources.cfg",
+    "outputs/mapping/reproducibleRelease/configanalyzer.html",
+    "outputs/mapping/reproducibleRelease/configanalyzer.pb",
+    "outputs/mapping/reproducibleRelease/configuration.txt",
+    "outputs/mapping/reproducibleRelease/mapping.prt",
+    "outputs/mapping/reproducibleRelease/mapping.txt",
+    "outputs/mapping/reproducibleRelease/resources.txt",
+    "outputs/mapping/reproducibleRelease/seeds.txt",
+    "outputs/mapping/reproducibleRelease/usage.txt"
+  ]
+}

@@ -1,0 +1,653 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="325" failures="1" errors="0" skipped="1" time="0.000" timestamp="2026-11-03T19:53:32" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.EspressoDeleteTrackTest" tests="2" failures="0" errors="0" skipped="0" time="35.612" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="deleteTrackFromTrackStoppedActivity" classname="de.dennisguse.opentracks.EspressoDeleteTrackTest" time="14.420" />
+    <testcase name="deleteTrackFromSelectedTrackInTrackList" classname="de.dennisguse.opentracks.EspressoDeleteTrackTest" time="21.192" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.EspressoEditTrackRecordingTest" tests="1" failures="0" errors="0" skipped="0" time="12.354" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="espressoEditTrackRecordingTest" classname="de.dennisguse.opentracks.EspressoEditTrackRecordingTest" time="12.354" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.EspressoUITest" tests="3" failures="0" errors="0" skipped="0" time="27.465" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="selectAndDeleteTrack" classname="de.dennisguse.opentracks.EspressoUITest" time="4.083" />
+    <testcase name="record_move_through_tabs" classname="de.dennisguse.opentracks.EspressoUITest" time="10.621" />
+    <testcase name="record_stop_resume_stop_finish" classname="de.dennisguse.opentracks.EspressoUITest" time="12.761" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.TimezoneEnvironmentTest" tests="3" failures="0" errors="0" skipped="0" time="0.094" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="emulatorSystemTimezoneIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.034" />
+    <testcase name="timezoneRuleRestoresPreviousDefaultOnFailure" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.001" />
+    <testcase name="instrumentationDefaultIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.059" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.chart.ChartValueSeriesTest" tests="6" failures="0" errors="0" skipped="0" time="0.080" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testEnabled" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.016" />
+    <testcase name="testVerySmallUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.006" />
+    <testcase name="testNotZeroBasedUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.011" />
+    <testcase name="testBigUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.047" />
+    <testcase name="testSmallUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.000" />
+    <testcase name="testInitialConditions" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.chart.HeartRateChartHistoryTest" tests="4" failures="0" errors="0" skipped="0" time="0.721" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="connectionChangesAndStaleIntervalsBreakCurves" classname="de.dennisguse.opentracks.chart.HeartRateChartHistoryTest" time="0.614" />
+    <testcase name="oldTrackWithoutRawSamplesIsNotInvented" classname="de.dennisguse.opentracks.chart.HeartRateChartHistoryTest" time="0.001" />
+    <testcase name="pausedWallTimeIsExcludedFromChartXAxis" classname="de.dennisguse.opentracks.chart.HeartRateChartHistoryTest" time="0.060" />
+    <testcase name="incrementalReloadKeepsExactStatsWithoutDuplicateFrames" classname="de.dennisguse.opentracks.chart.HeartRateChartHistoryTest" time="0.046" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.chart.HeartRatePathTest" tests="3" failures="0" errors="0" skipped="0" time="0.264" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="legacyMissingValueBreaksInsteadOfBridging" classname="de.dennisguse.opentracks.chart.HeartRatePathTest" time="0.049" />
+    <testcase name="resetRemovesOldPathAndExtrema" classname="de.dennisguse.opentracks.chart.HeartRatePathTest" time="0.040" />
+    <testcase name="rawReconnectCreatesTwoSeparatePathContours" classname="de.dennisguse.opentracks.chart.HeartRatePathTest" time="0.175" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" tests="39" failures="0" errors="0" skipped="0" time="2.809" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetSensorStats_noSensorData" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.031" />
+    <testcase name="testLocationIterator_largeTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.979" />
+    <testcase name="testDeleteTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.025" />
+    <testcase name="testGetSensorStats_needAtLeastTwoTrackPointsFalse" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testGetSensorStats_veryLongActivity12h" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.371" />
+    <testcase name="testUpdateMarker_withPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.024" />
+    <testcase name="testDeleteMarker_onlyOneMarkerWithPhotoUrl" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.017" />
+    <testcase name="testDeleteAllTracks_withMarkerAndPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.016" />
+    <testcase name="testUpdateTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.012" />
+    <testcase name="testInsertAndLoadTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testCreateTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testLocationIterator_noAscending" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.021" />
+    <testcase name="testGetSensorStats_withStartAutomatic" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetSensorStats" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testGetTrack_by_id" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testDeleteTrack_withMarkerPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.019" />
+    <testcase name="testUpdateMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.010" />
+    <testcase name="testGetSensorStats_withSeveralRandomStartSegments" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="1.063" />
+    <testcase name="testDeleteAllTracks" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.023" />
+    <testcase name="testInsertTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testBulkInsertTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.009" />
+    <testcase name="testFormatIdListForUri" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.003" />
+    <testcase name="testUpdateMarker_delPhotoAndDir" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.010" />
+    <testcase name="testGetSensorStats_onlyPower" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.004" />
+    <testcase name="testGetSensorStats_withManualResume" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetAllTracks" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetNextMarkerNumber" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.011" />
+    <testcase name="testUpdateMarker_delPhotoNotDir" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.014" />
+    <testcase name="testGetTrackPointCursor_asc" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.010" />
+    <testcase name="testInsertAndGetMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testGetSensorStats_onlyCadence" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testCreateContentValues_marker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testGetSensorStats_needAtLeastTwoTrackPointsTrue" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testDeleteMarker_onlyOneMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.009" />
+    <testcase name="testGetTrackPointIterator_asc" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.010" />
+    <testcase name="testDeleteMarker_hasNextMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.013" />
+    <testcase name="testGetSensorStats_onlyHr" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testLocationIterator_noPoints" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.009" />
+    <testcase name="testGetTrack_by_uuid" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" tests="6" failures="0" errors="0" skipped="0" time="0.143" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="onDowngrade_ToVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.035" />
+    <testcase name="upgrade42PreservesLegacyTrackAndBpmWithoutInventingRawSamples" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.019" />
+    <testcase name="onUpgrade_FromVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.043" />
+    <testcase name="onCreate" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.010" />
+    <testcase name="upgrade_data_to_30" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.026" />
+    <testcase name="track_uuid_unique" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.010" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.HeartRateRepositoryTest" tests="6" failures="0" errors="0" skipped="0" time="0.043" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="exactMetadataSurvivesRepositoryReopening" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.008" />
+    <testcase name="invalidSamplesAreRejectedWithoutInventingMissingValues" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.005" />
+    <testcase name="missingOptionalDataAndNoStrapTracksRemainReadable" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.007" />
+    <testcase name="snapshotDuplicatesDoNotDiscardNewIdenticalBpmNotifications" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.007" />
+    <testcase name="deletingTrackCascadesOnlyItsOwnRawSamples" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.009" />
+    <testcase name="samplesAreOrderedByCaptureTimeAndIsolatedByTrack" classname="de.dennisguse.opentracks.data.HeartRateRepositoryTest" time="0.007" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.ShareContentProviderTest" tests="3" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testCreateURIescapeFilename" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.002" />
+    <testcase name="testCreateAndParseURI_invalid" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.002" />
+    <testcase name="testCreateAndParseURI_valid" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.TrackSelectionTest" tests="9" failures="0" errors="0" skipped="0" time="0.007" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilterBuildSelection_tracksId_and_categories" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.002" />
+    <testcase name="testFilterBuildSelection_severalTracksId" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_tracksId_and_dateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_onlyOneTrackId" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_empty" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_onlyDateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_categories_and_dateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_onlyOneactivity_type_localized" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.002" />
+    <testcase name="testFilterBuildSelection_severalCategories" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.UUIDUtilsTest" tests="1" failures="0" errors="0" skipped="0" time="0.002" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="test" classname="de.dennisguse.opentracks.data.UUIDUtilsTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.model.TrackPointTest" tests="4" failures="0" errors="0" skipped="0" time="0.005" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="distanceToPrevious_sensor_distance_second" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.000" />
+    <testcase name="distanceToPrevious_gps" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.002" />
+    <testcase name="distanceToPrevious_sensor_distance_both" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.001" />
+    <testcase name="distanceToPrevious_sensor_distance_first" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.ActivityTypeTest" tests="10" failures="0" errors="0" skipped="0" time="0.095" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="findBy_ignoresCase" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.001" />
+    <testcase name="findBy_unknown" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.002" />
+    <testcase name="findBy_ignoresSeparators" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.003" />
+    <testcase name="findBy_synonymsOfEveryActivityType" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.040" />
+    <testcase name="findBy_id" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.004" />
+    <testcase name="findBy_idOfEveryActivityType" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.040" />
+    <testcase name="findBy_null" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.001" />
+    <testcase name="findBy_ignoresSurroundingAndRepeatedWhitespace" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.001" />
+    <testcase name="findBy_blank" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.002" />
+    <testcase name="findBy_synonym" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.DistanceFormatterTest" tests="3" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFormatDistance_metric" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.002" />
+    <testcase name="testFormatDistance_nautical" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.002" />
+    <testcase name="testFormatDistance_imperial" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.SpeedFormatterTest" tests="7" failures="0" errors="0" skipped="0" time="0.008" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetSpeedParts_speed_imperial" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.002" />
+    <testcase name="testGetSpeedParts_speed_metric" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.001" />
+    <testcase name="testGetSpeedParts_pace_imperial" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.002" />
+    <testcase name="testGetSpeedParts_pace_metric" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.001" />
+    <testcase name="testFormatSpeed" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.001" />
+    <testcase name="testGetSpeedParts_speed_nautical" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.001" />
+    <testcase name="testGetSpeedParts_pace_nautical" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.StatisticsTest" tests="1" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testMerge" classname="de.dennisguse.opentracks.data.models.StatisticsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" tests="3" failures="0" errors="0" skipped="0" time="0.002" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilenameTemplate[0]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.000" />
+    <testcase name="testFilenameTemplate[1]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.001" />
+    <testcase name="testFilenameTemplate[2]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" tests="5" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilenameTemplate[0]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.001" />
+    <testcase name="testFilenameTemplate[1]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.001" />
+    <testcase name="testFilenameTemplate[2]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.001" />
+    <testcase name="testFilenameTemplate[3]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.002" />
+    <testcase name="testFilenameTemplate[4]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest" tests="1" failures="0" errors="0" skipped="0" time="0.250" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="twoTrack_with_oneMarker" classname="de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest" time="0.250" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.importer.ExportImportTest" tests="6" failures="0" errors="0" skipped="0" time="8.120" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="csv_export_only" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="1.216" />
+    <testcase name="kml_with_trackdetail_and_sensordata_duplicate_trackUUID" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="2.163" />
+    <testcase name="kmz_with_trackdetail_and_sensordata" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="1.605" />
+    <testcase name="gpx_duplicate_trackUUID" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="0.833" />
+    <testcase name="gpx" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="0.650" />
+    <testcase name="track" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="1.653" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" tests="7" failures="0" errors="0" skipped="0" time="0.477" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="gpx_legacy_trackpointextension" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.339" />
+    <testcase name="gpx_with_power_pwd" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.000" />
+    <testcase name="gpx_speed_no_namespace" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.000" />
+    <testcase name="gpx_missing_time" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.000" />
+    <testcase name="gpx_without_speed" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.000" />
+    <testcase name="gpx_with_power_gpxpx" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.049" />
+    <testcase name="importExportTest_timezone" classname="de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest" time="0.089" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" tests="5" failures="0" errors="0" skipped="0" time="0.265" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="kml22_with_statistics_marker" classname="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" time="0.119" />
+    <testcase name="kml_without_locations" classname="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" time="0.000" />
+    <testcase name="kml_when_locations_different" classname="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" time="0.000" />
+    <testcase name="kml22_order_location_and_when" classname="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" time="0.146" />
+    <testcase name="kml22_time_decreases" classname="de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.publicapi.DataProviderTest" tests="6" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="supportsVersion2_tracks" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+    <testcase name="supportsVersion3_markers" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+    <testcase name="supportsVersion3_tracks" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+    <testcase name="supportsVersion3_trackpoints" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+    <testcase name="supportsVersion2_trackpoints" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+    <testcase name="supportsVersion2_markers" classname="de.dennisguse.opentracks.publicapi.DataProviderTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.publicapi.PublicApiTest" tests="2" failures="0" errors="0" skipped="0" time="15.105" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="StartStopTest" classname="de.dennisguse.opentracks.publicapi.PublicApiTest" time="5.161" />
+    <testcase name="StopAndWait" classname="de.dennisguse.opentracks.publicapi.PublicApiTest" time="9.944" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.GpsStatusTest" tests="4" failures="0" errors="0" skipped="0" time="0.304" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testStartBadfixOk" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.000" />
+    <testcase name="testStartDisabledEnabledStop" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.000" />
+    <testcase name="testStartSignalLost" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.002" />
+    <testcase name="testStartSignalLostByTimer" classname="de.dennisguse.opentracks.sensors.GpsStatusTest" time="0.302" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.PressureSensorUtilsTest" tests="2" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="altitudeChanges_none" classname="de.dennisguse.opentracks.sensors.PressureSensorUtilsTest" time="0.002" />
+    <testcase name="computeChanges_downhill" classname="de.dennisguse.opentracks.sensors.PressureSensorUtilsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.UintUtilsTest" tests="5" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="diff_uint16_valid" classname="de.dennisguse.opentracks.sensors.UintUtilsTest" time="0.001" />
+    <testcase name="realData" classname="de.dennisguse.opentracks.sensors.UintUtilsTest" time="0.000" />
+    <testcase name="diff_uint16_invalid" classname="de.dennisguse.opentracks.sensors.UintUtilsTest" time="0.001" />
+    <testcase name="diff_uint32" classname="de.dennisguse.opentracks.sensors.UintUtilsTest" time="0.001" />
+    <testcase name="diff_unint32_invalid" classname="de.dennisguse.opentracks.sensors.UintUtilsTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" tests="5" failures="0" errors="0" skipped="0" time="0.008" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="missingAdapterDoesNotPretendConnectedOrRegisterTwice" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.004" />
+    <testcase name="alreadyGrantedPermissionRunsSuccessWithoutLaunchingAnotherRequest" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="optionalMetadataIsBoundedAndResetBetweenConnections" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="runtimeParserRetainsOptionalFieldsAndNotificationIdentity" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+    <testcase name="notificationAndIndicationSubscriptionsPreserveOtherSensorSupport" classname="de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest" tests="1" failures="0" errors="0" skipped="0" time="0.002" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseEnvironmentalSensing_Pa" classname="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" tests="2" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseHeartRate_uint8" classname="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" time="0.000" />
+    <testcase name="parseHeartRate_uint16" classname="de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" tests="10" failures="0" errors="0" skipped="0" time="0.009" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parse_multiByteVarint_returnsScaledSpeed" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.001" />
+    <testcase name="parse_validMeasurementBeforeMalformedFrame_returnsValidMeasurement" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.002" />
+    <testcase name="parse_malformedVarintDoesNotConsumeNextFrameStartByte" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.000" />
+    <testcase name="parse_unimplementedMeasurementsOnly_returnsNull" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.000" />
+    <testcase name="parse_unsupportedMeasurementsOnly_returnsNull" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.001" />
+    <testcase name="parse_malformedVarint_returnsNull" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.003" />
+    <testcase name="parse_zeroValueFrame_returnsZeroCadence" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.001" />
+    <testcase name="parse_multipleFrames_returnsCombinedMeasurements" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.001" />
+    <testcase name="parse_leadingNoise_ignored" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.000" />
+    <testcase name="parse_varintLargerThan32Bit_returnsNull" classname="de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest" tests="3" failures="0" errors="0" skipped="0" time="0.004" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseCyclingSpeedCadence_crankWheel" classname="de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest" time="0.002" />
+    <testcase name="parseCyclingSpeedCadence_crankOnly" classname="de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest" time="0.001" />
+    <testcase name="parseCyclingSpeedCadence_wheelOnly" classname="de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest" tests="4" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseCyclingPower_power_with_cadence" classname="de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest" time="0.001" />
+    <testcase name="parseCyclingPower_power" classname="de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest" time="0.001" />
+    <testcase name="parsePayload_boschPower" classname="de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest" time="0.000" />
+    <testcase name="parsePayload_boschCadenceOnly_returnsNull" classname="de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest" tests="1" failures="0" errors="0" skipped="0" time="0.002" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="parseRunningSpeedAndCadence_with_distance" classname="de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest" tests="1" failures="0" errors="0" skipped="0" time="0.002" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="getAltitudeGainLoss_downhill" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" tests="4" failures="0" errors="0" skipped="0" time="0.004" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="currentDataExpiresAfterFiveSeconds" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.000" />
+    <testcase name="disconnectInvalidatesImmediately" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.001" />
+    <testcase name="trackpointAggregationResetPreservesInstantValue" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.002" />
+    <testcase name="invalidContactOrZeroImmediatelyClearsPreviousData" classname="de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" tests="10" failures="0" errors="0" skipped="0" time="0.008" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="compute_cadence_sameCount" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+    <testcase name="compute_cadence_directCadence_winsOverCrankData" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+    <testcase name="compute_cadence_rollOverCount" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.002" />
+    <testcase name="compute_cadence_1" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.000" />
+    <testcase name="compute_cadence_2" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+    <testcase name="compute_speed_rollOverCount" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.000" />
+    <testcase name="compute_speed" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+    <testcase name="compute_cadence_rollOverTime" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.000" />
+    <testcase name="compute_cadence_sameTime" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+    <testcase name="compute_cadence_directCadence_withoutPrevious" classname="de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest" tests="1" failures="0" errors="0" skipped="0" time="0.009" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="updateLocation_triggersAlertOnlyOnFirstInaccurateLocation" classname="de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest" time="0.009" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" tests="2" failures="0" errors="0" skipped="0" time="0.013" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.007" />
+    <testcase name="callbackAfterDestroyDoesNotAccessReleasedManagers" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.006" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" tests="15" failures="0" errors="0" skipped="0" time="19.775" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testRecording_startStopResumeStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.213" />
+    <testcase name="testRecording_gpsAndSensor_gpsIdleMoving_sensorMoving" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.235" />
+    <testcase name="recording_startIdle" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="15.171" />
+    <testcase name="recording_startStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.131" />
+    <testcase name="testRecording_startPauseResume" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.206" />
+    <testcase name="testRecording_gpsOnly_segment" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.256" />
+    <testcase name="reCreate_not_recording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.000" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_movement_non_idle" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.476" />
+    <testcase name="testRecording_startPauseStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.380" />
+    <testcase name="reCreate_recording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.501" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_above" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.683" />
+    <testcase name="testRecording_gpsOnly_recordingDistance_below" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.514" />
+    <testcase name="testRecording_blesensor_only_no_distance" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.397" />
+    <testcase name="rawHeartRateBypassesPointThrottlingAndRespectsPauseResume" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.442" />
+    <testcase name="testRecording_gpsOnly_ignore_inaccurate" classname="de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest" time="0.170" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" tests="7" failures="0" errors="0" skipped="1" time="0.578" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="cannotResume_non_existing_track" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.026" />
+    <testcase name="recording_stopGPS_noop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.001">
+      <skipped />
+    </testcase>
+    <testcase name="cannotEnd_without_starting" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.016" />
+    <testcase name="initialState" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.009" />
+    <testcase name="recording_startStopResume_no_data" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.296" />
+    <testcase name="recording_startRecording_alreadyRecording" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.173" />
+    <testcase name="gps_startStop" classname="de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest" time="0.057" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServiceUITest" tests="1" failures="0" errors="0" skipped="0" time="1.112" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="getDataForUI_gps" classname="de.dennisguse.opentracks.services.TrackRecordingServiceUITest" time="1.112" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest" tests="2" failures="0" errors="0" skipped="0" time="0.166" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="calculateNextTotalTime" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest" time="0.098" />
+    <testcase name="calculateNextTaskDistance" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest" time="0.068" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" tests="18" failures="0" errors="0" skipped="0" time="0.144" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="getAnnouncement_withInterval_metric_speed" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.026" />
+    <testcase name="ICUMessageDemo" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.014" />
+    <testcase name="getAnnouncement_imperial_speed" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.005" />
+    <testcase name="getAnnouncement_imperial_speed_1" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.005" />
+    <testcase name="getAnnouncement_metric_distance_rounding_check" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.004" />
+    <testcase name="getAnnouncement_withInterval_imperial_pace" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.020" />
+    <testcase name="getAnnouncement_heart_rate_and_sensor_statistics" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.018" />
+    <testcase name="getAnnouncement_imperial_meter_speed_1" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.003" />
+    <testcase name="getAnnouncement_imperial_pace" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.003" />
+    <testcase name="getAnnouncement_metric_pace" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.002" />
+    <testcase name="getAnnouncement_metric_speed" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.003" />
+    <testcase name="getAnnouncement_withInterval_metric_pace" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.012" />
+    <testcase name="getAnnouncement_metric_speed_1" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.002" />
+    <testcase name="getAnnouncement_withInterval_imperial_speed" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.012" />
+    <testcase name="getAnnouncement_heart_rate" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.011" />
+    <testcase name="getAnnouncement_metric_distance_without_unit" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.002" />
+    <testcase name="getAnnouncement_metric_distance_rounding_check_two" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.002" />
+    <testcase name="getAnnouncement_metric_speed_rounding_check" classname="de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest" tests="2" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="applicationIdResource_matchesInstalledPackage" classname="de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest" time="0.002" />
+    <testcase name="importExportPreferenceTargets_areResolvableInCurrentPackage" classname="de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest" time="0.004" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.settings.PreferencesOpenHelperTest" tests="4" failures="0" errors="0" skipped="0" time="0.014" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="test_upgradeFrom1To2_withOldVersion" classname="de.dennisguse.opentracks.settings.PreferencesOpenHelperTest" time="0.004" />
+    <testcase name="test_upgradeFrom0To1_withoutStatsCustomLayouts" classname="de.dennisguse.opentracks.settings.PreferencesOpenHelperTest" time="0.004" />
+    <testcase name="test_upgradeFrom1To2_withNewVersion" classname="de.dennisguse.opentracks.settings.PreferencesOpenHelperTest" time="0.003" />
+    <testcase name="test_downgrade" classname="de.dennisguse.opentracks.settings.PreferencesOpenHelperTest" time="0.003" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.settings.PreferencesUtilsTest" tests="11" failures="0" errors="0" skipped="0" time="0.025" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetCustomLayout_default" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.003" />
+    <testcase name="testSetCustomLayout" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.002" />
+    <testcase name="testEditCustomLayout" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.001" />
+    <testcase name="ExportTrackFileFormat_invalid" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.005" />
+    <testcase name="ExportTrackFileFormat_noValue" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.004" />
+    <testcase name="ExportTrackFileFormat_ok" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.003" />
+    <testcase name="testGetCustomLayout_coordinatesIsWide" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.001" />
+    <testcase name="testGetCustomLayout_whenSelectedOneNotExists" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.001" />
+    <testcase name="testEditCustomLayouts" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.002" />
+    <testcase name="testGetAllCustomLayouts_default" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.002" />
+    <testcase name="testGetCustomLayout_1" classname="de.dennisguse.opentracks.settings.PreferencesUtilsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" tests="2" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="allResultsAreRetainedAndDeduplicatedByAddress" classname="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" time="0.001" />
+    <testcase name="unnamedDeviceUsesAddressAndSavedRowsHaveNoFakeSignal" classname="de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.share.ShareUtilsTest" tests="2" failures="0" errors="0" skipped="0" time="0.022" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testMultipleTracks" classname="de.dennisguse.opentracks.share.ShareUtilsTest" time="0.011" />
+    <testcase name="testSingleTrack" classname="de.dennisguse.opentracks.share.ShareUtilsTest" time="0.011" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" tests="6" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testWriteSpeed" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.000" />
+    <testcase name="testWritePace" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.001" />
+    <testcase name="testWriteTime" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.000" />
+    <testcase name="testWriteDistance" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.001" />
+    <testcase name="testGenerateTrackDescription" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.002" />
+    <testcase name="testWriteAltitude" classname="de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" tests="10" failures="0" errors="0" skipped="0" time="0.015" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="startTime" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_distance_from_GPS_moving_and_sensor_moving" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_distance_from_GPS_moving" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_idle_withDistance" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_maxSpeed_multiple_segments" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.000" />
+    <testcase name="addTrackPoint_distance_from_GPS_moving_and_sensor_disconnecting" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.006" />
+    <testcase name="addTrackPoint_TestingTrack" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_idle_remain_idle" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+    <testcase name="addTrackPoint_idle_withoutDistance" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.002" />
+    <testcase name="copy_constructor" classname="de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.HeartRatePanelTest" tests="4" failures="0" errors="0" skipped="0" time="0.086" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="exactFreshnessBoundaryDoesNotShowOldBpm" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.031" />
+    <testcase name="everyConnectionStateIsReadableWithoutInventingMeasurements" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.036" />
+    <testcase name="contactLossHidesBpmAndExplainsContactProblem" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.014" />
+    <testcase name="manualDisconnectClearsTheOldDeviceFromLiveStatus" classname="de.dennisguse.opentracks.ui.HeartRatePanelTest" time="0.005" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest" tests="1" failures="1" errors="0" skipped="0" time="35.400" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="realPagesInLightDarkAndTwoWindowSizes" classname="de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest" time="35.400">
+      <failure>java.lang.AssertionError: Timed out waiting for view to match (an instance of android.widget.TextView and view.getText() equals string from resource id: &lt;2131821109&gt; and (view has effective visibility &lt;VISIBLE&gt; and view.getGlobalVisibleRect() to return non-empty rectangle))
+	at de.dennisguse.opentracks.util.EspressoUtils.waitForResumedViewCondition(EspressoUtils.java:133)
+	at de.dennisguse.opentracks.util.EspressoUtils.waitForResumedView(EspressoUtils.java:87)
+	at de.dennisguse.opentracks.util.EspressoUtils.waitUntilDisplayed(EspressoUtils.java:91)
+	at de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest.settings(HeartRateUiScreenshotTest.java:165)
+	at de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest.realPagesInLightDarkAndTwoWindowSizes(HeartRateUiScreenshotTest.java:76)
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" tests="5" failures="0" errors="0" skipped="0" time="0.149" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testAggregate_oneBikingTrack" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" time="0.035" />
+    <testcase name="testAggregate_empty" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" time="0.000" />
+    <testcase name="testAggregate_severalTracksWithSeveralActivities_TrackSelection" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" time="0.114" />
+    <testcase name="testAggregate_twoBikingTracks" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" time="0.000" />
+    <testcase name="testAggregate_severalTracksWithSeveralActivities" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest" tests="1" failures="0" errors="0" skipped="0" time="4.160" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="espressoAggregatedFilterTest" classname="de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest" time="4.160" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest" tests="2" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetCsvLineParts" classname="de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest" time="0.000" />
+    <testcase name="testGetCsvFieldParts" classname="de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" tests="7" failures="0" errors="0" skipped="0" time="0.275" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testToCsv_columnsByDefault" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.056" />
+    <testcase name="testToCsv" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.006" />
+    <testcase name="testFromCsv" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.016" />
+    <testcase name="testFromCsv_Wrong1" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.018" />
+    <testcase name="testFromCsv_Wrong2" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.014" />
+    <testcase name="testFromCsv_Wrong3" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.000" />
+    <testcase name="testFromCsv_Wrong4" classname="de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest" time="0.165" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" tests="6" failures="0" errors="0" skipped="0" time="1.752" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testBuild_1" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.409" />
+    <testcase name="testBuild_2" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.000" />
+    <testcase name="testBuild_3" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.163" />
+    <testcase name="testBuild_4" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.055" />
+    <testcase name="testBuild_5" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.991" />
+    <testcase name="testWithNoLossTrackPoints" classname="de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest" time="0.134" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.util.FileUtilsTest" tests="9" failures="0" errors="0" skipped="0" time="0.011" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testBuildUniqueFileName_exist" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.002" />
+    <testcase name="testBuildUniqueFileName_new" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.001" />
+    <testcase name="testSanitizeFileName_i18n" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.001" />
+    <testcase name="testSanitizeFileName_collapse" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.003" />
+    <testcase name="testTruncateFileName" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.000" />
+    <testcase name="testSanitizeFileName_emoji" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.000" />
+    <testcase name="testSanitizeFileName_special_characters" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.001" />
+    <testcase name="testSanitizeFileName" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.002" />
+    <testcase name="testSanitizeFileNameWithSuffix" classname="de.dennisguse.opentracks.util.FileUtilsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.util.StringUtilsTest" tests="6" failures="0" errors="0" skipped="0" time="0.012" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testParseTime" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.001" />
+    <testcase name="testformatElapsedTime" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.002" />
+    <testcase name="testFormatDecimal" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.003" />
+    <testcase name="testFormatDateTodayRelative" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.002" />
+    <testcase name="testFormatCData" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.002" />
+    <testcase name="testformatElapsedTimeWithHour" classname="de.dennisguse.opentracks.util.StringUtilsTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.util.TrackNameUtilsTest" tests="3" failures="0" errors="0" skipped="0" time="0.003" timestamp="2026-11-03T19:53:32" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testTrackName_date_iso_8601" classname="de.dennisguse.opentracks.util.TrackNameUtilsTest" time="0.002" />
+    <testcase name="testTrackName_date_local" classname="de.dennisguse.opentracks.util.TrackNameUtilsTest" time="0.001" />
+    <testcase name="testTrackName_number" classname="de.dennisguse.opentracks.util.TrackNameUtilsTest" time="0.000" />
+  </testsuite>
+</testsuites>

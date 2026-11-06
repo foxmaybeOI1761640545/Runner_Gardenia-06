@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "diagnostic": "Instrumentation reports are missing.",
+  "unitTests": {
+    "passed": false,
+    "diagnostic": "JVM unit reports are missing."
+  },
+  "plan": {
+    "versionName": "v0.1.0-rc1.5",
+    "versionCode": 6770,
+    "commit": "99d58a85291e1b56243058e3c13f972520f7ecd2",
+    "runId": "41736907818",
+    "publishing": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "artifact": {
+    "id": 13232583546,
+    "node_id": "MDg6QXJ0aWZhY3QxMzIzMjU4MzU0Ng==",
+    "name": "check-reports-41641699738-1",
+    "size_in_bytes": 40088,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13232583546",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13232583546/zip",
+    "expired": false,
+    "digest": "sha256:3fe6a56676ef61714527e9c184353a19c6c45358342d006abb4572c2b143e749",
+    "created_at": "2026-11-03T13:09:38Z",
+    "updated_at": "2026-11-03T13:09:38Z",
+    "expires_at": "2026-11-17T13:09:37Z",
+    "workflow_run": {
+      "id": 41641699738,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "main",
+      "head_sha": "42dc778c4e6f151f9ad6dd2960550b543c0aca07"
+    }
+  },
+  "archiveSha256": "3fe6a56676ef61714527e9c184353a19c6c45358342d006abb4572c2b143e749",
+  "files": [],
+  "notArchived": [
+    "reports/problems/problems-report.html"
+  ]
+}

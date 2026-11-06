@@ -1,0 +1,106 @@
+{
+  "physicalBleTested": false,
+  "timezone": "Asia\/Singapore",
+  "screenshots": [
+    {
+      "file": "p0-matrix-small-light-home.png",
+      "nightMode": 16,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-light-recording.png",
+      "nightMode": 16,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-light-settings.png",
+      "nightMode": 16,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-light-history.png",
+      "nightMode": 16,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-light-detail.png",
+      "nightMode": 16,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-dark-home.png",
+      "nightMode": 32,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-dark-recording.png",
+      "nightMode": 32,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-dark-settings.png",
+      "nightMode": 32,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-dark-history.png",
+      "nightMode": 32,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-small-dark-detail.png",
+      "nightMode": 32,
+      "widthDp": 360
+    },
+    {
+      "file": "p0-matrix-large-light-home.png",
+      "nightMode": 16,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-light-recording.png",
+      "nightMode": 16,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-light-settings.png",
+      "nightMode": 16,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-light-history.png",
+      "nightMode": 16,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-light-detail.png",
+      "nightMode": 16,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-dark-home.png",
+      "nightMode": 32,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-dark-recording.png",
+      "nightMode": 32,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-dark-settings.png",
+      "nightMode": 32,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-dark-history.png",
+      "nightMode": 32,
+      "widthDp": 800
+    },
+    {
+      "file": "p0-matrix-large-dark-detail.png",
+      "nightMode": 32,
+      "widthDp": 800
+    }
+  ]
+}

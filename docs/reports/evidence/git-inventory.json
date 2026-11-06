@@ -1,0 +1,768 @@
+{
+  "baseline": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+  "files": [
+    {
+      "path": ".forgejo/workflows/test.yaml",
+      "category": "CI configuration",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "0fc824c8c64e0ba233865423cda8875a50c91234",
+      "sha256": "06943070d066c9a72ab491460d27e6de7df816015bb66737169cb4081918793d",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".gitea/ISSUE_TEMPLATE/bug_report.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "5027a6dac708546a4e86378b82c4379a2844f5a3",
+      "sha256": "ff83bf8a0d8a8401994c5787651ed464a32fe45e8f5e65bb7e2a7f01f7f13297",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".gitea/ISSUE_TEMPLATE/data_not_recorded.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "94a4136fd92b249d7ec2b1372b04cb2da38b1136",
+      "sha256": "c846fd4c221c8823925a1a50608e33bb12d622f6e0a1154bc8478898d11ab3ff",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".gitea/ISSUE_TEMPLATE/feature_request.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "64517387de14009b24b4e76b2cd32a7cf8cdd24c",
+      "sha256": "0f9add32cab23032aa35f026b6105871f23893007c4defa6d2cf0a1ee2705754",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".gitea/PULL_REQUEST_TEMPLATE.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "8cd403239d5d413cab25d07e4c5338714dbeaa17",
+      "sha256": "4124a894a2273e245ae6e01eea95a1fe96ce8eaded5c7a081d60e9faebf6972a",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".github/workflows/android-build.yml",
+      "category": "CI configuration",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "c7742212b04e2195b0e3eace646f045baa288926",
+      "sha256": "9e9968aa39a2dce431c07ec64a4bbfe27808ae6fddea41ef48b030d7c669bce5",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": ".github/workflows/p0-core.yml",
+      "category": "CI configuration",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "99f34dedcf9b715f1b9321e6a6fde31c5c8b7f75",
+      "sha256": "1957c4adac576269f1d2ddccf83d4084ce5ae0942ffb79d4629ff253557a77dd",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "AGENTS.md",
+      "category": "build/development instructions",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "5ddbcd8bbea7f04fa4b4f8f56c6becfebc3e3729",
+      "sha256": "141d68078997d0d686975e688937df199ef294b464a106cbc210e7dc55144c45",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "BUILDING_P0.md",
+      "category": "build/development instructions",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "56317c25d06fbbe87ab68c56dbc5580f2e3bb395",
+      "sha256": "b68e090fa3a21696de6e24d8b35da98039c43320a07f4a6d6894e24427fff666",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "BUILDING_RUNNER_GARDENIA.md",
+      "category": "build/development instructions",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "48473736dfe7a5d1904bf1ed39b6bf6a54a93ea9",
+      "sha256": "464708bed41fb4263157c3febd6259772d291a1da8fd60a95d5886ad6e79101a",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "c676a1e95697fd1148208c8ace1a97ccac055219",
+      "sha256": "a6faee4d65c8ebddcd6b5cbbf78c2eb9d679adc3e3fc7622e77e4877f2d617f0",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "README.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "d06dd4b7b78152a828b69c44b1ab112915950c9d",
+      "sha256": "36039a61175f302ff2cde80f5ab1311f2fb9d7866921a7b61b840b951e2a3a2f",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "README_API.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "96b1d2c58f636e9b42e39bdaf7a6fad490b8b8a1",
+      "sha256": "537c769cd7a9f0a5dd69892eaed6cddd20bba231a376b5cd3f41585de467eaa2",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "README_RELEASE.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "24b3059930f42c65ac235273ed52f79389a86b47",
+      "sha256": "89b4d10699b7e6db2a947f2f475277b713d681347d60c0af1b66cf0ed8ae8773",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "README_TESTED_SENSORS.md",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "307c4492f7c0b4ae095236fc12f20af1a781d60d",
+      "sha256": "023a115c4821780933ecc5b37ac3197cb46eb7c6cccafadd1d28471921062c5d",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/activities.txt",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "effa3e71c8f7390edfd24655eade679cd6a929f7",
+      "sha256": "53d7988066cd6b1ef3206c362eeef5aa3613777e845826ca65586fe0a7a43d93",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/data-exportimport.txt",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "c8310c7ff54b88828c253b429f26f0a1ac1cab86",
+      "sha256": "cab2e5389e32cde23e019213aadcb891e97f5469d5d31225dd9ea9420abc437e",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/data-flow.txt",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "d0e570a30c9c17d1a05be2fbb98bee8e976a33b7",
+      "sha256": "8e7cdf98ec4641c3744218d71278373fd35b673c84b072b761a661104cd5da72",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/data-structure.txt",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "73c8d587d7cc910c0b50a410380f781314c2d673",
+      "sha256": "11976f125d1b2fe9c25a29f8b5f0ad9fa2b33968207208989bd6198e83cc892c",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/xml/gpx.xsd",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "a113a41c30c9c50e39b24c3cbf2a0b27b6c54f5c",
+      "sha256": "9e4d1988b862edbe556305b130f8f6f1b29864fefd0dc02d5dab04ccdd1f34d6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/xml/ogckml23.xsd",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "e6e825cbef1ab9fb78167593c6cb05b92a826a51",
+      "sha256": "5222be3703c634add22c0bfa0f90df8935cb01c4a1c60b287d33dc88fc695bcd",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "doc/xml/opentracks-schema-1.0.xsd",
+      "category": "upstream documentation/template/resource",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "89b187fb1423a59abcd8dff4db6dc3eb59cc9cbd",
+      "sha256": "5d137654ce2cc1fe3b479e8081213fa8b76c7208686eac161da701b09d4ba410",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/HEART_RATE_BLE_TEST_CHECKLIST.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "d678d541801c825506bc69a128fe66ea9d9e8814",
+      "sha256": "817fad998761ba348d7cb8c0b43e49921d615f0327aff312b0ca89f3cc29f3c5",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/HEART_RATE_IMPLEMENTATION_AUDIT.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "631d8390c8dc3ad32dd9357eb9ab82e6bcef09d1",
+      "sha256": "ea10230b50db3920ec3425505fb2e8981cba34b89ef159511ec789a6c36220ce",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/HEART_RATE_STAGE_ACCEPTANCE.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "c88052347fc98d2c06d3b0ab1d3e40c4bb0058c6",
+      "sha256": "667baf5480d6b511df363ff8e9af30fd25fcb8034c34eea34ea10ea227a0d181",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/HEART_RATE_UI_REVIEW.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "f744084600cec6da76ce649ac2015e1e16a98287",
+      "sha256": "e410410b0e989b481c7ac2755bc997c8591e41b86f568b1ef3783feccafc38f3",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_ACCEPTANCE.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "ad468781089e4e520f2bdf710b333de4aaad9964",
+      "sha256": "2219bae560c1a8c82293387594df776782ef06c23f5baa39bd528b3a9c63424e",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_BASELINE.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "976c5fe521f8fa1ba9e47b29ea9b6db07655e20b",
+      "sha256": "f406e24a2ff74f27ce9ae40369fb132953f65f151f97a1b23c232dc76ba50f51",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_DELIVERY_REPORT.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "4ccde07ff8cf012b7942a69f631570a6c5db4961",
+      "sha256": "1c2f11de9bbab672b6155d2d3011b9d23445071fb7582b7afa4d718e8d787624",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_DEVICE_CHECKLIST.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "3ec60a40827d79f8bf1dbb21e9dae02321f97f5e",
+      "sha256": "aff9a2707a6bdb83818273055368ed30884b2ad6057dd1fc996c2f7ac8d852aa",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_FINAL_TECHNICAL_REVIEW.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "0166b9a83cc3ba8f599bc9c38badb4b8138b4011",
+      "sha256": "312a2942af7a2247de2613ab77475ce8be17c7bc3cab653dde30baf8ef8fa690",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_GPX_FORMAT.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "6b8080860799a1e8e01ad9f6c8f63bdef5802378",
+      "sha256": "1e1e4829adb6d947867d81261d14419af0f4d25f98121df4e43ca7f1dce1e32e",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_MIGRATION_PLAN.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "275222d11e650110a0a9b31163075ce69360b326",
+      "sha256": "54d411a7051683b9e0a55426cb97faef57015eef88cc204fdec975ebb429c4b6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_OFFLINE_AUDIT.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "167d1343a9cdcf227b43437d41103e3f96e12a0c",
+      "sha256": "2c62720a5a001042ca6e06f24f6351c711a026e11792b0e6e0d9d794b27f22b6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/P0_PUBLICATION_AND_REVIEW.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "cfc13517867083ed1ce8ca27d813c61d8d50a57c",
+      "sha256": "71cd6f34467ac3d3638bd00ee7452b35808618593d0b686328d2dcfd45d2714f",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/RELEASE_TAG_AUDIT.md",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "c6134725d083e9a886e077b29ffec7b1bf009113",
+      "sha256": "be1b857c243e58b6d6987a655606ccb8da9de3b4c6dd877b377e6bd0f2dcc8a6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/p0-final-review.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "8500d79e5f6e659cc7409581f7dadab60b293a21",
+      "sha256": "164f7c2d3ba65ea452881349d636695831cc6a69ab89c32fc991aa8e8bc3f1f6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-1.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "ed8a2885a301c3697977799b33c0246a9951850e",
+      "sha256": "ec95a57c25accb8f198315e3bec7d3763bf0d124781837b6b22baeea8e1c988f",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-10.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "24ea3a441d7f6b3b8129cd8b200ef405ed670cb8",
+      "sha256": "cb3b211da3439f3d5c41e6051a79a76fdc119616d00e39ff20d33cac2e1ae4ee",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-2.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "0008f6d79eb94541b3f077f00974a236b816eea5",
+      "sha256": "71c876728a3efb4e982ca1115de8c16ec7ebb30a4cc5ccbea9d7c9ee396086c2",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-3.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "f2f4c317461cd7039df2034b0bbcff30f58e2df5",
+      "sha256": "2dbcf373f7083f6508b8054fbdd7b3086ba3eb4614bdd19175dd0fac4f9da642",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-4.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "00e54d4254e03b18ff26cc789e769bcc8af0708b",
+      "sha256": "1b7c4ad4b5e63eb973dd96fae84501413db2b5ccd1e56b842f414e51a7c982e3",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-5.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "54532a1ad7f43f21a51d22262b230e413bd479ab",
+      "sha256": "5156c8796616e6db7ce17e3d3ecb232577dd1447ea32357f3ef3a68fee210ccb",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-6.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "b007f94ba8e6d4755ff95b09b970a190325f2529",
+      "sha256": "584bc0c7cd29992aa48095bd29645a9fa5c48719508205eaa41d9673737934bd",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-7.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "c1fcace41d55a6664df1f79a345756e3480bef43",
+      "sha256": "27cfe43bdd0339decea1bb59987deb8e5a08205073a77e0eca7cbed82e6731ac",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-8.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "b9a3562db7c58d506199ef157993ea584f05fcb4",
+      "sha256": "585ab276aca11d4ad9f59408d06d78ec359de83d99c569fa9ca66f8e85bd221a",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/p0-evidence/stage-9.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "feature/p0-core-migration"
+      ],
+      "gitBlob": "cd6165d973692787e56fabf95769b254fd3b95bc",
+      "sha256": "62dc270d5212fb48fb7e93d24b0af1e77115782b4147633d028599b088008b3a",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/SHA256SUMS",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "62e5f9d6f19f85bd58368d0fb16a055e61f2a093",
+      "sha256": "93647660f9df35be25b0d5c867e59151050a13716689cfb088bda95913d4f403",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/capture-manifest.json",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "2f0ad358834d0c147582c5432d4c9b517063fe2b",
+      "sha256": "9cf59b79b1e11b414cf5a7972336a3966389506a28defa829a6d52bd0d4c4739",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-dark-home.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "7f54762a58a96b1fd432220d05e4ddff93930574",
+      "sha256": "916da6165f922794936ada66fc13937b64816e01a688a7f7d0285133519e5092",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-dark-recording-connected.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "828e6f6585fae17c71975f11884f94b4dc829392",
+      "sha256": "af845931d1238e5151f1ddf1e4f628ebe6e359e2b434bda8d50d8f94e1973fe9",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-dark-settings.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "5eb1f34ccc3f2e455359afa652d529bdaf01113a",
+      "sha256": "73047cb7a9a9a1418975c65abff71ebdb4570ff7a4c6878de6eb3578e7b6bdd8",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-dark-time-chart.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "80f794a27e850e073c7bc7cb1faa90dd37e6aba6",
+      "sha256": "92d2113078369a7e3f2487d82598ae31f9f0155719a7a7a2a2d807be463e45d6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-light-history.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "0238cb27637127ac4b79a34e20bc561a7967851b",
+      "sha256": "5ebbbf63ed1add0ad5d00b168b50ffcada37510a2f3c863e92dcf077c0886325",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-light-recording-connected.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "07eb9003a72c94be97d0b578ed4c6d425c39e6fe",
+      "sha256": "b27afb336a355050481542b747a47a2e9b7f8a4fbcb184e8cf2215ffbb80053d",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/narrow-light-scan-fixture.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "cf217e0cdcb8c1f8b920ebb98f9df7e14b26f15d",
+      "sha256": "9af8ecddcb0fae75a7511d05f668c7cf069eae34d481bcb53837e714a54dd0a6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/phone-dark-distance-chart.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "4c094aacc628077137fb70910e3f030f8f8f5ba7",
+      "sha256": "c4715897c92ed92c2c85fd5fa18418bef64e79db741efdec1a4b6ccd4ae03de6",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/phone-dark-recording-stale.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "53cea2be852929895dad0bca6bfdb072addbfd72",
+      "sha256": "f8250f9148808eab7a2b74e59fbd28054407494b2e4d01f15b4bae9e346c2237",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/phone-dark-settings.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "e0a10b2a2516ef7a16156cbc681db6d110747759",
+      "sha256": "80a791d67b10d83db106bb9c1bbe2e45c5d61f33c9c72b130f614520e988e2f2",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/phone-light-recording-connected.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "dc1ed13d12299717143b9d2376c07d8225baec29",
+      "sha256": "e25c456309010ad424a73c5827092b12a63a3b2810cc6ec33e675474e6e8936c",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "docs/screenshots/heart-rate/phone-light-time-chart.png",
+      "category": "Runner Gardenia report/evidence",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "97cf3147230d16238b5e6498e00cfa58472e4a7b",
+      "sha256": "6d9458c944cdfe9124d93547650aad285e3b84550355463efe996271d8eef257",
+      "action": "preserved original path/bytes"
+    },
+    {
+      "path": "release-ledger.json",
+      "category": "build/development instructions",
+      "state": "A",
+      "remoteBranches": [
+        "main",
+        "feature/p0-core-migration",
+        "feature/heart-rate-monitoring"
+      ],
+      "gitBlob": "602ea443293c346a3664ab29b068e5426b7e6165",
+      "sha256": "a0138c9c970034185d63d5cbc92c391fb5744f5df2b293b7de628bfed9abc093",
+      "action": "preserved original path/bytes"
+    }
+  ],
+  "historicalRecoveries": [],
+  "historicalPaths": 59,
+  "untrackedAtStart": []
+}

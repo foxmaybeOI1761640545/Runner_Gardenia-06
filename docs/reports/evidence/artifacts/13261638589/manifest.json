@@ -1,0 +1,91 @@
+{
+  "artifact": {
+    "id": 13261638589,
+    "node_id": "MDg6QXJ0aWZhY3QxMzI2MTYzODU4OQ==",
+    "name": "check-reports-41699182101",
+    "size_in_bytes": 334100,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13261638589",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13261638589/zip",
+    "expired": false,
+    "digest": "sha256:a8a24b9a78ddc77d1c47388c99597ce1824fbd8e8d7aabdf4da5e4acf2e32a1b",
+    "created_at": "2026-11-03T19:02:34Z",
+    "updated_at": "2026-11-03T19:02:34Z",
+    "expires_at": "2026-12-03T19:02:33Z",
+    "workflow_run": {
+      "id": 41699182101,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/heart-rate-monitoring",
+      "head_sha": "ed92bbe3b235609f17a6bd034c421dd7895c3879"
+    }
+  },
+  "archiveSha256": "a8a24b9a78ddc77d1c47388c99597ce1824fbd8e8d7aabdf4da5e4acf2e32a1b",
+  "files": [
+    {
+      "originalPath": "reports/ci-validation/instrumentation.json",
+      "bytes": 265,
+      "sha256": "5c1bb460acd50bb6a3ecb5c568baf57b07f933a7320a4794a2818ae9aa6a79a9",
+      "object": "objects/5c/5c1bb460acd50bb6a3ecb5c568baf57b07f933a7320a4794a2818ae9aa6a79a9.json"
+    },
+    {
+      "originalPath": "reports/lint-results-reproducibleDebug.xml",
+      "bytes": 1355463,
+      "sha256": "45384d5c1f13d8ce18cf7305d1f0913be080d1e1a96f11e420756791b343ac62",
+      "object": "objects/45/45384d5c1f13d8ce18cf7305d1f0913be080d1e1a96f11e420756791b343ac62.xml"
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "bytes": 2485,
+      "sha256": "e44140b1a08660b4c847deb5ddb6e90361697371f3a02b35f639f7fb4a512376",
+      "object": "objects/e4/e44140b1a08660b4c847deb5ddb6e90361697371f3a02b35f639f7fb4a512376.xml",
+      "counts": {
+        "tests": 15,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 15
+      }
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "bytes": 1266,
+      "sha256": "abc42eea251f490bb66a2184f5083cc684b7a712b3b91982de62902114318b62",
+      "object": "objects/ab/abc42eea251f490bb66a2184f5083cc684b7a712b3b91982de62902114318b62.xml",
+      "counts": {
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 7
+      }
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "bytes": 2412,
+      "sha256": "31d4832afb43f61adbc6932b99e9e325c1b6f90586bed7b62e10d9cee9757e72",
+      "object": "objects/31/31d4832afb43f61adbc6932b99e9e325c1b6f90586bed7b62e10d9cee9757e72.xml",
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 16
+      }
+    }
+  ],
+  "notArchived": [
+    "reports/lint-results-reproducibleDebug.html",
+    "reports/lint-results-reproducibleDebug.sarif",
+    "reports/lint-results-reproducibleDebug.txt",
+    "reports/problems/problems-report.html",
+    "reports/tests/testReproducibleDebugUnitTest/css/base-style.css",
+    "reports/tests/testReproducibleDebugUnitTest/css/style.css",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleScanSessionTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/js/report.js",
+    "test-results/testReproducibleDebugUnitTest/binary/output-events.bin",
+    "test-results/testReproducibleDebugUnitTest/binary/results-generic.bin"
+  ]
+}

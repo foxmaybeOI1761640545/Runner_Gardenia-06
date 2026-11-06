@@ -1,0 +1,111 @@
+{
+  "artifact": {
+    "id": 13278193212,
+    "node_id": "MDg6QXJ0aWZhY3QxMzI3ODE5MzIxMg==",
+    "name": "check-reports-41732992884",
+    "size_in_bytes": 335950,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13278193212",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13278193212/zip",
+    "expired": false,
+    "digest": "sha256:2b31cf4295d2a817b772004ea9bd90133158b8b9f25a93d21c0764a252e0930d",
+    "created_at": "2026-11-03T22:44:28Z",
+    "updated_at": "2026-11-03T22:44:28Z",
+    "expires_at": "2026-12-03T22:44:27Z",
+    "workflow_run": {
+      "id": 41732992884,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/heart-rate-monitoring",
+      "head_sha": "c0d992323d2bb275c975ff3e0afd1f6a4cd54279"
+    }
+  },
+  "archiveSha256": "2b31cf4295d2a817b772004ea9bd90133158b8b9f25a93d21c0764a252e0930d",
+  "files": [
+    {
+      "originalPath": "reports/ci-validation/instrumentation.json",
+      "bytes": 1245,
+      "sha256": "fbb9896e669086112d28d207ee9c02705404ce38537c12346c7879ec643cf8f3",
+      "object": "objects/fb/fbb9896e669086112d28d207ee9c02705404ce38537c12346c7879ec643cf8f3.json"
+    },
+    {
+      "originalPath": "reports/ci-validation/unit.json",
+      "bytes": 882,
+      "sha256": "b04a12b9a8a7734ec8e5eebe29e32021c78bf2b49f2b6ed7d23a26c091da5a7c",
+      "object": "objects/b0/b04a12b9a8a7734ec8e5eebe29e32021c78bf2b49f2b6ed7d23a26c091da5a7c.json"
+    },
+    {
+      "originalPath": "reports/lint-results-reproducibleDebug.xml",
+      "bytes": 1354422,
+      "sha256": "54afe5c8ec15657a7b93aa7270e9a6f0859a81e505f1c09b6c9e5a167c2c46e0",
+      "object": "objects/54/54afe5c8ec15657a7b93aa7270e9a6f0859a81e505f1c09b6c9e5a167c2c46e0.xml"
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "bytes": 1716,
+      "sha256": "24ae049b2fdc035a1902b11bcd5ca849114084d06fcfb4d8e41ed7bf06d5ce5d",
+      "object": "objects/24/24ae049b2fdc035a1902b11bcd5ca849114084d06fcfb4d8e41ed7bf06d5ce5d.xml",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 10
+      }
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "bytes": 2643,
+      "sha256": "a37cbdc358cefd2e8096c59d397701123eef72449e8a8c70e157b95d94ba2d3f",
+      "object": "objects/a3/a37cbdc358cefd2e8096c59d397701123eef72449e8a8c70e157b95d94ba2d3f.xml",
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 16
+      }
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "bytes": 1589,
+      "sha256": "e79e70d03afcd67140546fb8a79df6dbca3e5e280f4b0494764e35cab6197a09",
+      "object": "objects/e7/e79e70d03afcd67140546fb8a79df6dbca3e5e280f4b0494764e35cab6197a09.xml",
+      "counts": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 9
+      }
+    },
+    {
+      "originalPath": "test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "bytes": 2412,
+      "sha256": "23878b108f3970e51c6aab8e4ea1f4d891be7d839e8042af52d3d0c7a357e116",
+      "object": "objects/23/23878b108f3970e51c6aab8e4ea1f4d891be7d839e8042af52d3d0c7a357e116.xml",
+      "counts": {
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 16
+      }
+    }
+  ],
+  "notArchived": [
+    "reports/lint-results-reproducibleDebug.html",
+    "reports/lint-results-reproducibleDebug.sarif",
+    "reports/lint-results-reproducibleDebug.txt",
+    "reports/problems/problems-report.html",
+    "reports/tests/testReproducibleDebugUnitTest/css/base-style.css",
+    "reports/tests/testReproducibleDebugUnitTest/css/style.css",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.chart.HeartRatePlotTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleScanSessionTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/index.html",
+    "reports/tests/testReproducibleDebugUnitTest/js/report.js",
+    "test-results/testReproducibleDebugUnitTest/binary/output-events.bin",
+    "test-results/testReproducibleDebugUnitTest/binary/results-generic.bin"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-rc1.6",
+  "versionCode": 6771,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "apkSha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+  "commit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+  "variant": "reproducibleRelease",
+  "debuggable": false,
+  "signatureVerified": true,
+  "gradle": "9.8.2",
+  "agp": "9.5.0",
+  "jdk": "Temurin 21",
+  "sdk": "37",
+  "buildTools": "36.0.0",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41848524070",
+  "runAttempt": "1",
+  "plan": {
+    "versionName": "v0.1.0-rc1.6",
+    "versionCode": 6771,
+    "commit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+    "runId": "41848524070",
+    "publishing": true
+  }
+}

@@ -1,0 +1,518 @@
+{
+  "artifact": {
+    "id": 13371489682,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM3MTQ4OTY4Mg==",
+    "name": "P0-reports-41933012158",
+    "size_in_bytes": 2647058,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13371489682",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13371489682/zip",
+    "expired": false,
+    "digest": "sha256:224c2cfea1c1d83d2bde056b75b4b87969008f480cfebb40ee0546276c091ea7",
+    "created_at": "2026-11-04T23:26:22Z",
+    "updated_at": "2026-11-04T23:26:22Z",
+    "expires_at": "2027-02-02T23:21:03Z",
+    "workflow_run": {
+      "id": 41933012158,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "8c9303829f9c5701a74ceb31969b161356a9f6f6"
+    }
+  },
+  "archiveSha256": "224c2cfea1c1d83d2bde056b75b4b87969008f480cfebb40ee0546276c091ea7",
+  "files": [
+    {
+      "originalPath": "build/reports/ci-validation/debug-apk.json",
+      "bytes": 239,
+      "sha256": "676559c9d1c531a96ae5d2400a92bb896f0e9a837773b0532b44bbced45614e9",
+      "object": "objects/67/676559c9d1c531a96ae5d2400a92bb896f0e9a837773b0532b44bbced45614e9.json"
+    },
+    {
+      "originalPath": "build/reports/lint-results-reproducibleDebug.xml",
+      "bytes": 1495895,
+      "sha256": "7338440f78e6583bfa5fd1091a640e308c84a8ed219d76c0af0fd2dbc9d60e04",
+      "object": "objects/73/7338440f78e6583bfa5fd1091a640e308c84a8ed219d76c0af0fd2dbc9d60e04.xml"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/decimal-escaping.gpx",
+      "bytes": 1059,
+      "sha256": "889b1ce44c4fda628771ada3ad15ad3c0557cff81f68474956c13e372cda17c5",
+      "object": "objects/88/889b1ce44c4fda628771ada3ad15ad3c0557cff81f68474956c13e372cda17c5.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/gps-gap.gpx",
+      "bytes": 2089,
+      "sha256": "c8c5f471fdac8d01f2bd138c896a9a187558b44fa3a42dd68f156342e161f33c",
+      "object": "objects/c8/c8c5f471fdac8d01f2bd138c896a9a187558b44fa3a42dd68f156342e161f33c.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/gps-only.gpx",
+      "bytes": 937,
+      "sha256": "2b472e6074af64022e86b95dc9e67b8a813972de0bf3eb1e233276313ed4b035",
+      "object": "objects/2b/2b472e6074af64022e86b95dc9e67b8a813972de0bf3eb1e233276313ed4b035.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/heart-only.gpx",
+      "bytes": 1294,
+      "sha256": "9f6c0866363ae815043c004bbe1914af9e6a2583a16f56aa0e0b47785432c265",
+      "object": "objects/9f/9f6c0866363ae815043c004bbe1914af9e6a2583a16f56aa0e0b47785432c265.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/legacy.gpx",
+      "bytes": 1121,
+      "sha256": "0518fec2d8a91eabe198d451c7b883b99e17cc8eb6f2d09dcc02540a4dfa4f27",
+      "object": "objects/05/0518fec2d8a91eabe198d451c7b883b99e17cc8eb6f2d09dcc02540a4dfa4f27.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/local-file.gpx",
+      "bytes": 1308,
+      "sha256": "8f82053f7a0486995e8dbda0f217e161b203fcbbadb4a0495ab415233ef35692",
+      "object": "objects/8f/8f82053f7a0486995e8dbda0f217e161b203fcbbadb4a0495ab415233ef35692.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/raw-complete.gpx",
+      "bytes": 2603,
+      "sha256": "43d264d525777eb819a5c52171ed15bbddc2bf5d917e5327d2f2e5a2c2e7a20d",
+      "object": "objects/43/43d264d525777eb819a5c52171ed15bbddc2bf5d917e5327d2f2e5a2c2e7a20d.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/result.json",
+      "bytes": 1513,
+      "sha256": "20a1c954da2611af0a6cd58175910743dcf64fe24d380eec19c1a194d9c56995",
+      "object": "objects/20/20a1c954da2611af0a6cd58175910743dcf64fe24d380eec19c1a194d9c56995.json"
+    },
+    {
+      "originalPath": "build/reports/p0-gpx/segments.gpx",
+      "bytes": 3019,
+      "sha256": "624034aab64dc5313d290f574ab0666ce1d8e08b5453fed41c1988fadf5cc7c6",
+      "object": "objects/62/624034aab64dc5313d290f574ab0666ce1d8e08b5453fed41c1988fadf5cc7c6.gpx"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-auto-reconnect-off.png",
+      "bytes": 191856,
+      "sha256": "fd432deabe3dd84bd2d52bb7b8da55a3964e25e98ef9e86fcb5b61fd609c6db0",
+      "object": "objects/fd/fd432deabe3dd84bd2d52bb7b8da55a3964e25e98ef9e86fcb5b61fd609c6db0.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-gpx-export-actions-synthetic.png",
+      "bytes": 130782,
+      "sha256": "bc7b582b73c80740865b5244797307fdb7c8d7e2fce9bd9739c7cc34d639125d",
+      "object": "objects/bc/bc7b582b73c80740865b5244797307fdb7c8d7e2fce9bd9739c7cc34d639125d.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-heart-rate-scan-synthetic.png",
+      "bytes": 176708,
+      "sha256": "daa9c24b9529bc5147227b5625908e53722cb52b1c7cc761d7081378324eb5e4",
+      "object": "objects/da/daa9c24b9529bc5147227b5625908e53722cb52b1c7cc761d7081378324eb5e4.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-heart-rate-settings.png",
+      "bytes": 190938,
+      "sha256": "d14f1a3b3b7bbd00466c603b401389103aa71c516b08909e2776fd33e9be6d8e",
+      "object": "objects/d1/d14f1a3b3b7bbd00466c603b401389103aa71c516b08909e2776fd33e9be6d8e.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-home.png",
+      "bytes": 167932,
+      "sha256": "7f87015ee05df76d4069a2697c58624e66778dca1b34197027fff8bd1c1c3dbe",
+      "object": "objects/7f/7f87015ee05df76d4069a2697c58624e66778dca1b34197027fff8bd1c1c3dbe.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-live-heart-rate-synthetic.png",
+      "bytes": 146080,
+      "sha256": "5d23f93d162e1c6210b76cf5325b08fd047f912054cb1886fe16627e4b8f4e75",
+      "object": "objects/5d/5d23f93d162e1c6210b76cf5325b08fd047f912054cb1886fe16627e4b8f4e75.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-local-history-synthetic.png",
+      "bytes": 43574,
+      "sha256": "f0bc952bbcf2290fc64cd0a2761f1760c0bbb6c09525c4f9eedc347ef595d309",
+      "object": "objects/f0/f0bc952bbcf2290fc64cd0a2761f1760c0bbb6c09525c4f9eedc347ef595d309.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-workout-detail-synthetic.png",
+      "bytes": 131232,
+      "sha256": "2a2693a3cfba118fbb4b65ab02d848e8804257d0b859e82ef239265098e76a78",
+      "object": "objects/2a/2a2693a3cfba118fbb4b65ab02d848e8804257d0b859e82ef239265098e76a78.png"
+    },
+    {
+      "originalPath": "build/reports/p0-ui/p0-stale-heart-rate-synthetic.png",
+      "bytes": 151763,
+      "sha256": "82a0c05bfd77f4531d9a32495733a45d9a3fd92bd8a13ea8cb72e8af9795fe7f",
+      "object": "objects/82/82a0c05bfd77f4531d9a32495733a45d9a3fd92bd8a13ea8cb72e8af9795fe7f.png"
+    },
+    {
+      "originalPath": "build/reports/p0-validation/tests.json",
+      "bytes": 8447,
+      "sha256": "6303aad861f345bc86708c4fd52d389d70f9cdfa700f1fed909499667caf1cba",
+      "object": "objects/63/6303aad861f345bc86708c4fd52d389d70f9cdfa700f1fed909499667caf1cba.json"
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "bytes": 478,
+      "sha256": "02d2887db18515953b0c8f37a4468de3b83ed338e1737ed2d52374f36c5edfc6",
+      "object": "objects/02/02d2887db18515953b0c8f37a4468de3b83ed338e1737ed2d52374f36c5edfc6.xml",
+      "counts": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 1
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "bytes": 1716,
+      "sha256": "2e4994016de698735237efc6e7b9d42036980d00760d9e3083b6e0a6e10dbfd9",
+      "object": "objects/2e/2e4994016de698735237efc6e7b9d42036980d00760d9e3083b6e0a6e10dbfd9.xml",
+      "counts": {
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 10
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "bytes": 830,
+      "sha256": "3373648f175fc233602632b0ed383db1a0b8c61a1ff03040c97ddc46c8de8d0e",
+      "object": "objects/33/3373648f175fc233602632b0ed383db1a0b8c61a1ff03040c97ddc46c8de8d0e.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "bytes": 866,
+      "sha256": "fdbaf63f400c5d5e890014dd316347a521414735f66c3900b1eb5ab58a7156c4",
+      "object": "objects/fd/fdbaf63f400c5d5e890014dd316347a521414735f66c3900b1eb5ab58a7156c4.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "bytes": 823,
+      "sha256": "6a508d6ec42a21d4b854ba83e0536aeb6e3430719c491c89e5bc02dc73fe2ccd",
+      "object": "objects/6a/6a508d6ec42a21d4b854ba83e0536aeb6e3430719c491c89e5bc02dc73fe2ccd.xml",
+      "counts": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 4
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "bytes": 1014,
+      "sha256": "a659332ce19e56605155971c94df7e07e5f0a055314f25f2c2179f2a58b1e851",
+      "object": "objects/a6/a659332ce19e56605155971c94df7e07e5f0a055314f25f2c2179f2a58b1e851.xml",
+      "counts": {
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 5
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "bytes": 1012,
+      "sha256": "460c087977c9bc691e625ffb2b15e63d3f8cc106ce038b8b69dc357d37f41067",
+      "object": "objects/46/460c087977c9bc691e625ffb2b15e63d3f8cc106ce038b8b69dc357d37f41067.xml",
+      "counts": {
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 5
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "bytes": 1261,
+      "sha256": "14fc76154e68916add5e2858ee2cdcbadf12a1b57f3b3a60fb816f26d6487d34",
+      "object": "objects/14/14fc76154e68916add5e2858ee2cdcbadf12a1b57f3b3a60fb816f26d6487d34.xml",
+      "counts": {
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 6
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "bytes": 3749,
+      "sha256": "b746314df6c5d47463aa73b9dc7b451a9c3cb9dd8b85a8899ba2cd680bd83105",
+      "object": "objects/b7/b746314df6c5d47463aa73b9dc7b451a9c3cb9dd8b85a8899ba2cd680bd83105.xml",
+      "counts": {
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 23
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "bytes": 1587,
+      "sha256": "1a55ca02c3c66009075696ee4a00dbee75b3844f14e351ae63fbe0553353a640",
+      "object": "objects/1a/1a55ca02c3c66009075696ee4a00dbee75b3844f14e351ae63fbe0553353a640.xml",
+      "counts": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 9
+      }
+    },
+    {
+      "originalPath": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "bytes": 2567,
+      "sha256": "61a25982202d0244c78fb1cdcce1f302f4e0e0d81608e6a7a59d343e58b39168",
+      "object": "objects/61/61a25982202d0244c78fb1cdcce1f302f4e0e0d81608e6a7a59d343e58b39168.xml",
+      "counts": {
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "executed": 17
+      }
+    },
+    {
+      "originalPath": "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "bytes": 23595,
+      "sha256": "920925f0ed05e8969c0af5c866d3ec41c34485aad435443473dfec0960ebf8ec",
+      "object": "objects/92/920925f0ed05e8969c0af5c866d3ec41c34485aad435443473dfec0960ebf8ec.xml",
+      "counts": {
+        "tests": 105,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1,
+        "executed": 104
+      }
+    },
+    {
+      "originalPath": "release-plan.json",
+      "bytes": 218,
+      "sha256": "02191d663490f86c2d165882606806e4f721796b3023ca8bf3ee98efd191d151",
+      "object": "objects/02/02191d663490f86c2d165882606806e4f721796b3023ca8bf3ee98efd191d151.json"
+    }
+  ],
+  "notArchived": [
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/css/base-style.css",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/css/style.css",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.TimezoneEnvironmentTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.data.HeartRateRepositoryTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.data.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0ActivitySmokeTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0DurabilityTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0GpsRecordingTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0GpxExporterTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0HeartRateUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0HistoryUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0RecordingDataTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0RecordingUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0SensorsTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.p0.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.GpsStatusTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.driver.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.sensors.sensorData.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.services.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.settings.bluetooth.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.ui.HeartRatePanelTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/de.dennisguse.opentracks.ui.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/index.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/allDevices/js/report.js",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/css/base-style.css",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/css/style.css",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.TimezoneEnvironmentTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.data.HeartRateRepositoryTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.data.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0ActivitySmokeTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0DurabilityTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0GpsRecordingTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0HeartRateUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0GpxExporterTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0HistoryUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0RecordingDataTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0RecordingUiTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0SensorsTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.p0.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.GpsStatusTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.driver.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.sensors.sensorData.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.services.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.ui.HeartRatePanelTest.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.settings.bluetooth.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/de.dennisguse.opentracks.ui.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/index.html",
+    "build/reports/androidTests/managedDevice/debug/flavors/reproducible/mediumPhone/js/report.js",
+    "build/reports/lint-results-reproducibleDebug.html",
+    "build/reports/lint-results-reproducibleDebug.sarif",
+    "build/reports/lint-results-reproducibleDebug.txt",
+    "build/reports/p0-diagnostics/activities.txt",
+    "build/reports/p0-diagnostics/devices.txt",
+    "build/reports/p0-diagnostics/logcat.txt",
+    "build/reports/problems/problems-report.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/css/base-style.css",
+    "build/reports/tests/testReproducibleDebugUnitTest/css/style.css",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.TimezoneEnvironmentUnitTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.chart.HeartRatePlotTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.ForegroundModeTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.HeartRateSummaryTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.MotionFormatTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.P0PermissionPolicyTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.RecordingSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.BleScanSessionTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/index.html",
+    "build/reports/tests/testReproducibleDebugUnitTest/js/report.js",
+    "build/test-results/testReproducibleDebugUnitTest/binary/output-events.bin",
+    "build/test-results/testReproducibleDebugUnitTest/binary/results-generic.bin",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/device-info.pb",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-emulatorSystemTimezoneIsSingapore.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-instrumentationDefaultIsSingapore.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.TimezoneEnvironmentTest-timezoneRuleRestoresPreviousDefaultOnFailure.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-onCreate.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-onDowngrade_ToVersion23.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-onUpgrade_FromVersion23.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-track_uuid_unique.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-upgrade42PreservesLegacyTrackAndBpmWithoutInventingRawSamples.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest-upgrade_data_to_30.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-deletingTrackCascadesOnlyItsOwnRawSamples.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-exactMetadataSurvivesRepositoryReopening.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-invalidSamplesAreRejectedWithoutInventingMissingValues.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-missingOptionalDataAndNoStrapTracksRemainReadable.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-samplesAreOrderedByCaptureTimeAndIsolatedByTrack.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.data.HeartRateRepositoryTest-snapshotDuplicatesDoNotDiscardNewIdenticalBpmNotifications.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0ActivitySmokeTest-activityRecreationRetainsCoreControls.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0ActivitySmokeTest-launcherOpensP0HomeWithoutIntroduction.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0DurabilityTest-committedGpsAndRawHeartRateRemainReadable.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpsRecordingTest-deniedBluetoothDoesNotAddConnectedDeviceForegroundType.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpsRecordingTest-pauseResumeDoesNotBridgeFarCoordinatesOrAccumulatePausedTime.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpsRecordingTest-realDriverRequestTargetsOneHertzWithoutBatching.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpsRecordingTest-sessionIntentReopensPausedWithoutInventingRunningService.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-everyRawSampleAndExactMetadataSurviveWithOnlyRealGpsPoints.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-gpsOnlyWorkoutExportsWithoutHeartRate.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-heartRateOnlyWorkoutHasNoInventedGpsPoints.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-invalidCoordinatesFailAndIncompletePrivateFileIsRemoved.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-legacyPointHeartRateIsExportedWithoutInventingRawNotifications.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-localDocumentStreamAndReadOnlyShareUriContainTheActualGpx.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-longGpsSilenceDoesNotDrawABridgeEvenWithoutAnOldSegmentMarker.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-outputFailureIsPropagatedAndProtectedWorkoutCannotExport.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-pausesAutomaticGapsAndIdleCreateSeparateSegments.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0GpxExporterTest-xmlEscapingDecimalCoordinatesAndLocaleRemainValid.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0HeartRateUiTest-realPanelClearsStaleContactLostAndDisconnectedDataThenAcceptsNewSession.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0HistoryUiTest-historyOpensExactRawStatisticsAndDeletesOnlyAfterConfirmation.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0HistoryUiTest-exportActionsUseAndroidDocumentAndReadOnlyShareContracts.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0HistoryUiTest-pausedWorkoutDetailCannotDeleteProtectedData.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0RecordingDataTest-gpsAndEveryRawNotificationStayAlignedAcrossPausePreviewAndResume.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0RecordingUiTest-cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-controlsExposePendingCommandAndBecomeAvailableAfterServiceBinding.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-heartRateCommandsArePackageAddressAndMeasurementScoped.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-manualDisconnectIntentSurvivesSensorRecreationWithoutForgettingDevice.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-orphanServiceRestartWithoutWorkoutStopsInsteadOfMissingForegroundDeadline.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-p0SettingsExposeOnlyHeartRateAndForceStandardServiceDiscovery.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-previewToRecordingRefreshesGpsAndIdleStopCannotEndAnActiveWorkout.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-reconnectSwitchPersistsAcrossSettingsRecreation.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0SensorsTest-systemServiceRecoveryRespectsDisabledAutomaticReconnect.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-boundedHistoryAndPausedWorkoutDeletionProtection.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-chronologicalStreamingRetainsEqualBpmAndIndependentCaptureTimes.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-deletionCascadesGpsAndHeartRateOnlyForSelectedWorkout.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-failedRawBatchRollsBackEveryRow.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-legacyHeartRateRemainsReadableWithoutInventingRawNotifications.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-noSensorWorkoutsRemainReadableWithoutSyntheticStatistics.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest-snapshotsPreserveRawDataAndStatisticsAcrossRepositoryReopen.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.GpsStatusTest-testStartBadfixOk.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.GpsStatusTest-testStartDisabledEnabledStop.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.GpsStatusTest-testStartSignalLost.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.GpsStatusTest-testStartSignalLostByTimer.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-alreadyGrantedPermissionRunsSuccessWithoutLaunchingAnotherRequest.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-equalPayloadNotificationsHaveIndependentIdentityAndCaptureTimes.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-liveReconnectPolicyIsMeasurementScopedEvenForSharedDeviceAddress.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-missingAdapterDoesNotPretendConnectedOrRegisterTwice.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-notificationAndIndicationSubscriptionsPreserveOtherSensorSupport.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-optionalMetadataIsBoundedAndResetBetweenConnections.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest-runtimeParserRetainsOptionalFieldsAndNotificationIdentity.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest-parseHeartRate_uint16.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest-parseHeartRate_uint8.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest-currentDataExpiresAfterFiveSeconds.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest-disconnectInvalidatesImmediately.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest-invalidContactOrZeroImmediatelyClearsPreviousData.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest-trackpointAggregationResetPreservesInstantValue.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest-p0RecordingNotificationIsQuietAndRemainsOngoing.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest-updateLocation_triggersAlertOnlyOnFirstInaccurateLocation.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest-callbackAfterDestroyDoesNotAccessReleasedManagers.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest-queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-rawHeartRateBypassesPointThrottlingAndRespectsPauseResume.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-reCreate_not_recording.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-reCreate_recording.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-recording_startIdle.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-recording_startStop.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-sensorPreviewBeforeRecordingNeverCreatesTrackOrStoresSamples.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_blesensor_only_no_distance.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsAndSensor_gpsIdleMoving_sensorMoving.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsOnly_ignore_inaccurate.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsOnly_recordingDistance_above.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsOnly_recordingDistance_below.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsOnly_recordingDistance_movement_non_idle.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_gpsOnly_segment.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_startPauseResume.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_startStopResumeStop.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest-testRecording_startPauseStop.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-cannotEnd_without_starting.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-cannotResume_non_existing_track.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-gps_startStop.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-initialState.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-recording_startRecording_alreadyRecording.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest-recording_startStopResume_no_data.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest-allResultsAreRetainedAndDeduplicatedByAddress.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest-deviceRowShowsNameMacSignalAndConnection.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest-unnamedDeviceUsesAddressAndSavedRowsHaveNoFakeSignal.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.ui.HeartRatePanelTest-contactLossHidesBpmAndExplainsContactProblem.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.ui.HeartRatePanelTest-everyConnectionStateIsReadableWithoutInventingMeasurements.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.ui.HeartRatePanelTest-exactFreshnessBoundaryDoesNotShowOldBpm.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/logcat-de.dennisguse.opentracks.ui.HeartRatePanelTest-manualDisconnectClearsTheOldDeviceFromLiveStatus.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/test-result-exit-code.txt",
+    "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/test-result.pb"
+  ]
+}

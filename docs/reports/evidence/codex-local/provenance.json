@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/tmp/gardenia-final-delivery.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-final-delivery.md",
+    "sha256": "da632858828c80b10f75189ef093cf69525347c27ec2de245d1d1464970e0f3e",
+    "bytes": 3452,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-final-pr-body.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-final-pr-body.md",
+    "sha256": "842a8a511526da57976a7e7fc76ef1c7e7105a8d68d801455e650779e3b7300e",
+    "bytes": 4526,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-heart-pr.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-heart-pr.md",
+    "sha256": "aab870dc1f26412f935f1270e3d9f37f0411a58b3314c44108a530141aee252d",
+    "bytes": 900,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-p0-stage8-readonly-findings.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-p0-stage8-readonly-findings.md",
+    "sha256": "a43e1406320aabf76d07bfb485f91afb4a04899a94da2b635f9d3253b60a0bdc",
+    "bytes": 2909,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-p0-active-state.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-p0-active-state.md",
+    "sha256": "b23bbff211080fd7d8a78d6060531e36db47a18f1def4ee980474f3b8a62b3a6",
+    "bytes": 27721,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-p0-stage10-current.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-p0-stage10-current.md",
+    "sha256": "bed3979993a58a66ef1c4b9f573c9a303e3d46b6f2ec7609f995683bbbe1b9ae",
+    "bytes": 6300,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-p0-publication/release-notes.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-p0-publication-release-notes.md",
+    "sha256": "02773e5a983132fa6c54ec7f5f6771b7b6074c8452dae571b4b6004ed805a677",
+    "bytes": 2838,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-p0-publication/release-notes-final.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-p0-publication-release-notes-final.md",
+    "sha256": "b4ff1e01002edbbef4f301bbe0aa934e590973930a8e0fe1adb0371cfa03a93c",
+    "bytes": 4296,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-main-signed/release-notes.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-main-signed-release-notes.md",
+    "sha256": "e8350a03d71f494dea6eeb44eaa993d51c20147dd16e47856651ca4754c46aad",
+    "bytes": 805,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  },
+  {
+    "source": "/tmp/gardenia-no-intro-signed/release-notes.md",
+    "path": "docs/reports/evidence/codex-local/gardenia-no-intro-signed-release-notes.md",
+    "sha256": "fc4ec8d8d7cdb6701ef1e8054c83197f68506557a53ab3c9daf8274bbc3f97bd",
+    "bytes": 805,
+    "originalState": "D",
+    "classification": "historical report/PR draft/release notes/transient planning snapshot; not a new current acceptance claim",
+    "sourceCommit": "not independently attributable; see original text and authoritative Artifact manifests"
+  }
+]

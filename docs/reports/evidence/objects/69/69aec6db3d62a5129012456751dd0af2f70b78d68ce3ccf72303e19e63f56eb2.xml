@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="105" failures="2" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.EspressoDeleteTrackTest" tests="2" failures="0" errors="0" skipped="0" time="33.164" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="deleteTrackFromTrackStoppedActivity" classname="de.dennisguse.opentracks.EspressoDeleteTrackTest" time="12.932" />
+    <testcase name="deleteTrackFromSelectedTrackInTrackList" classname="de.dennisguse.opentracks.EspressoDeleteTrackTest" time="20.232" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.EspressoEditTrackRecordingTest" tests="1" failures="0" errors="0" skipped="0" time="11.475" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="espressoEditTrackRecordingTest" classname="de.dennisguse.opentracks.EspressoEditTrackRecordingTest" time="11.475" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.EspressoUITest" tests="3" failures="0" errors="0" skipped="0" time="24.469" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="selectAndDeleteTrack" classname="de.dennisguse.opentracks.EspressoUITest" time="3.436" />
+    <testcase name="record_move_through_tabs" classname="de.dennisguse.opentracks.EspressoUITest" time="9.793" />
+    <testcase name="record_stop_resume_stop_finish" classname="de.dennisguse.opentracks.EspressoUITest" time="11.240" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.chart.ChartValueSeriesTest" tests="6" failures="0" errors="0" skipped="0" time="0.090" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testEnabled" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.005" />
+    <testcase name="testVerySmallUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.007" />
+    <testcase name="testNotZeroBasedUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.078" />
+    <testcase name="testBigUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.000" />
+    <testcase name="testSmallUpdates" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.000" />
+    <testcase name="testInitialConditions" classname="de.dennisguse.opentracks.chart.ChartValueSeriesTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" tests="39" failures="0" errors="0" skipped="0" time="2.917" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetSensorStats_noSensorData" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.000" />
+    <testcase name="testLocationIterator_largeTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="1.991" />
+    <testcase name="testDeleteTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.026" />
+    <testcase name="testGetSensorStats_needAtLeastTwoTrackPointsFalse" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testGetSensorStats_veryLongActivity12h" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.327" />
+    <testcase name="testUpdateMarker_withPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.018" />
+    <testcase name="testDeleteMarker_onlyOneMarkerWithPhotoUrl" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.020" />
+    <testcase name="testDeleteAllTracks_withMarkerAndPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.021" />
+    <testcase name="testUpdateTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.010" />
+    <testcase name="testInsertAndLoadTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testCreateTrack" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testLocationIterator_noAscending" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.017" />
+    <testcase name="testGetSensorStats_withStartAutomatic" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetSensorStats" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testGetTrack_by_id" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testDeleteTrack_withMarkerPhoto" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.020" />
+    <testcase name="testUpdateMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.012" />
+    <testcase name="testGetSensorStats_withSeveralRandomStartSegments" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.234" />
+    <testcase name="testDeleteAllTracks" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.020" />
+    <testcase name="testInsertTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testBulkInsertTrackPoint" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.009" />
+    <testcase name="testFormatIdListForUri" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.002" />
+    <testcase name="testUpdateMarker_delPhotoAndDir" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.013" />
+    <testcase name="testGetSensorStats_onlyPower" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testGetSensorStats_withManualResume" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetAllTracks" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.007" />
+    <testcase name="testGetNextMarkerNumber" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.013" />
+    <testcase name="testUpdateMarker_delPhotoNotDir" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.015" />
+    <testcase name="testGetTrackPointCursor_asc" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.011" />
+    <testcase name="testInsertAndGetMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testGetSensorStats_onlyCadence" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testCreateContentValues_marker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.005" />
+    <testcase name="testGetSensorStats_needAtLeastTwoTrackPointsTrue" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testDeleteMarker_onlyOneMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.011" />
+    <testcase name="testGetTrackPointIterator_asc" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testDeleteMarker_hasNextMarker" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.012" />
+    <testcase name="testGetSensorStats_onlyHr" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+    <testcase name="testLocationIterator_noPoints" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.008" />
+    <testcase name="testGetTrack_by_uuid" classname="de.dennisguse.opentracks.data.CustomContentProviderUtilsTest" time="0.006" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" tests="5" failures="0" errors="0" skipped="0" time="0.127" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="onDowngrade_ToVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.034" />
+    <testcase name="onUpgrade_FromVersion23" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.046" />
+    <testcase name="onCreate" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.010" />
+    <testcase name="upgrade_data_to_30" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.027" />
+    <testcase name="track_uuid_unique" classname="de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest" time="0.010" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.ShareContentProviderTest" tests="3" failures="0" errors="0" skipped="0" time="0.004" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testCreateURIescapeFilename" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.004" />
+    <testcase name="testCreateAndParseURI_invalid" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.000" />
+    <testcase name="testCreateAndParseURI_valid" classname="de.dennisguse.opentracks.data.ShareContentProviderTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.TrackSelectionTest" tests="9" failures="0" errors="0" skipped="0" time="0.006" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilterBuildSelection_tracksId_and_categories" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_severalTracksId" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.002" />
+    <testcase name="testFilterBuildSelection_tracksId_and_dateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_onlyOneTrackId" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_empty" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_onlyDateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.000" />
+    <testcase name="testFilterBuildSelection_categories_and_dateRange" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_onlyOneactivity_type_localized" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+    <testcase name="testFilterBuildSelection_severalCategories" classname="de.dennisguse.opentracks.data.TrackSelectionTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.UUIDUtilsTest" tests="1" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="test" classname="de.dennisguse.opentracks.data.UUIDUtilsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.model.TrackPointTest" tests="4" failures="0" errors="0" skipped="0" time="0.005" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="distanceToPrevious_sensor_distance_second" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.001" />
+    <testcase name="distanceToPrevious_gps" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.001" />
+    <testcase name="distanceToPrevious_sensor_distance_both" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.002" />
+    <testcase name="distanceToPrevious_sensor_distance_first" classname="de.dennisguse.opentracks.data.model.TrackPointTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.ActivityTypeTest" tests="10" failures="0" errors="0" skipped="0" time="0.449" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="findBy_ignoresCase" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.000" />
+    <testcase name="findBy_unknown" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.007" />
+    <testcase name="findBy_ignoresSeparators" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.016" />
+    <testcase name="findBy_synonymsOfEveryActivityType" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.170" />
+    <testcase name="findBy_id" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.000" />
+    <testcase name="findBy_idOfEveryActivityType" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.140" />
+    <testcase name="findBy_null" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.010" />
+    <testcase name="findBy_ignoresSurroundingAndRepeatedWhitespace" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.006" />
+    <testcase name="findBy_blank" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.005" />
+    <testcase name="findBy_synonym" classname="de.dennisguse.opentracks.data.models.ActivityTypeTest" time="0.095" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.DistanceFormatterTest" tests="3" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFormatDistance_metric" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.000" />
+    <testcase name="testFormatDistance_nautical" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.000" />
+    <testcase name="testFormatDistance_imperial" classname="de.dennisguse.opentracks.data.models.DistanceFormatterTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.SpeedFormatterTest" tests="7" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testGetSpeedParts_speed_imperial" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testGetSpeedParts_speed_metric" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testGetSpeedParts_pace_imperial" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testGetSpeedParts_pace_metric" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testFormatSpeed" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testGetSpeedParts_speed_nautical" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+    <testcase name="testGetSpeedParts_pace_nautical" classname="de.dennisguse.opentracks.data.models.SpeedFormatterTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.data.models.StatisticsTest" tests="1" failures="0" errors="0" skipped="0" time="0.001" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testMerge" classname="de.dennisguse.opentracks.data.models.StatisticsTest" time="0.001" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" tests="3" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilenameTemplate[0]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.000" />
+    <testcase name="testFilenameTemplate[1]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.000" />
+    <testcase name="testFilenameTemplate[2]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" tests="5" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testFilenameTemplate[0]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.000" />
+    <testcase name="testFilenameTemplate[1]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.000" />
+    <testcase name="testFilenameTemplate[2]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.000" />
+    <testcase name="testFilenameTemplate[3]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.000" />
+    <testcase name="testFilenameTemplate[4]" classname="de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest" time="0.000" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest" tests="1" failures="0" errors="0" skipped="0" time="0.413" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="twoTrack_with_oneMarker" classname="de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest" time="0.413" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.io.file.importer.ExportImportTest" tests="1" failures="1" errors="0" skipped="0" time="0.030" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="csv_export_only" classname="de.dennisguse.opentracks.io.file.importer.ExportImportTest" time="0.030">
+      <failure>java.lang.NullPointerException: Attempt to invoke virtual method 'void de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManager.onSharedPreferenceChanged(android.content.SharedPreferences, java.lang.String)' on a null object reference
+	at de.dennisguse.opentracks.services.TrackRecordingService.onSharedPreferenceChanged(TrackRecordingService.java:363)
+	at android.app.SharedPreferencesImpl$EditorImpl.notifyListeners(SharedPreferencesImpl.java:637)
+	at android.app.SharedPreferencesImpl$EditorImpl.lambda$notifyListeners$0(SharedPreferencesImpl.java:651)
+	at android.app.SharedPreferencesImpl$EditorImpl.$r8$lambda$K3ZhT5raBwBpi0ZNTVZjjuEvbWI(Unknown Source:0)
+	at android.app.SharedPreferencesImpl$EditorImpl$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+	at android.os.Handler.handleCallback(Handler.java:959)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loopOnce(Looper.java:232)
+	at android.os.Looper.loop(Looper.java:317)
+	at android.app.ActivityThread.main(ActivityThread.java:8705)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="android-test" tests="1" failures="1" errors="0" skipped="0" time="0.000" timestamp="2026-11-03T13:34:47" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="testRunFailed" classname="android-test" time="0.000">
+      <failure>Test run failed to complete. Instrumentation run failed due to Process crashed.</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

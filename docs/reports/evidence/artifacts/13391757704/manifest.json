@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "id": 13391757704,
+    "node_id": "MDg6QXJ0aWZhY3QxMzM5MTc1NzcwNA==",
+    "name": "P0-Release-reports-41974364095",
+    "size_in_bytes": 4531416,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13391757704",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13391757704/zip",
+    "expired": false,
+    "digest": "sha256:c5010ea019affc0f733075318032f86ae663756a5b774266352fb4c7f040f67d",
+    "created_at": "2026-11-05T05:46:51Z",
+    "updated_at": "2026-11-05T05:46:51Z",
+    "expires_at": "2027-02-03T05:29:55Z",
+    "workflow_run": {
+      "id": 41974364095,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/p0-core-migration",
+      "head_sha": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466"
+    }
+  },
+  "archiveSha256": "c5010ea019affc0f733075318032f86ae663756a5b774266352fb4c7f040f67d",
+  "files": [
+    {
+      "originalPath": "reports/p0-release-smoke/baseline-optional-permissions.json",
+      "bytes": 172,
+      "sha256": "56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e",
+      "object": "objects/56/56bf64b834ec201963be7e32fa0b85899eb7294c244d5df72aa223a61a68bf1e.json"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-export.gpx",
+      "bytes": 1636,
+      "sha256": "7e00dcf95873c9122ae843c844066fa9e9969f5e494324c1945a67c895b1d00c",
+      "object": "objects/7e/7e00dcf95873c9122ae843c844066fa9e9969f5e494324c1945a67c895b1d00c.gpx"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-recording-gps-only.png",
+      "bytes": 203905,
+      "sha256": "3fdc24f3176bbcce0d4c4d3eeaaf34def7bada7f39a9136cce099977f258024b",
+      "object": "objects/3f/3fdc24f3176bbcce0d4c4d3eeaaf34def7bada7f39a9136cce099977f258024b.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-home-gps-only.png",
+      "bytes": 174929,
+      "sha256": "4031903c17ff4104102fef088f32b48d23d5057071781dcc39907221947e6ece",
+      "object": "objects/40/4031903c17ff4104102fef088f32b48d23d5057071781dcc39907221947e6ece.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-retained-history.png",
+      "bytes": 65835,
+      "sha256": "5c2d11a87ea5a9a9c9185eec9ffd109adb4ffa046fe764d682928997c67f264c",
+      "object": "objects/5c/5c2d11a87ea5a9a9c9185eec9ffd109adb4ffa046fe764d682928997c67f264c.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-retained-workout-detail.png",
+      "bytes": 149497,
+      "sha256": "dd9cb1779a184ba9b05ac2584095e710f36e1ff5011f8101445ec7675344c25f",
+      "object": "objects/dd/dd9cb1779a184ba9b05ac2584095e710f36e1ff5011f8101445ec7675344c25f.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/release-settings-no-bluetooth-permission.png",
+      "bytes": 210405,
+      "sha256": "3145dd928ce08decf8cfa4965922e33ea3cd2cc315104b749e8531525ae143bc",
+      "object": "objects/31/3145dd928ce08decf8cfa4965922e33ea3cd2cc315104b749e8531525ae143bc.png"
+    },
+    {
+      "originalPath": "reports/p0-release-smoke/result.json",
+      "bytes": 680,
+      "sha256": "109bf34b7ff2c45598d796646848bda6c48b73567709092a3c283bc92f375fc0",
+      "object": "objects/10/109bf34b7ff2c45598d796646848bda6c48b73567709092a3c283bc92f375fc0.json"
+    }
+  ],
+  "notArchived": [
+    "reports/p0-release-smoke/last-window.xml",
+    "reports/p0-release-smoke/emulator.log",
+    "reports/p0-release-smoke/logcat.txt",
+    "reports/problems/problems-report.html",
+    "reports/resources_config_map_file/reproducibleRelease/resources.cfg",
+    "outputs/mapping/reproducibleRelease/configanalyzer.html",
+    "outputs/mapping/reproducibleRelease/configanalyzer.pb",
+    "outputs/mapping/reproducibleRelease/configuration.txt",
+    "outputs/mapping/reproducibleRelease/mapping.prt",
+    "outputs/mapping/reproducibleRelease/mapping.txt",
+    "outputs/mapping/reproducibleRelease/resources.txt",
+    "outputs/mapping/reproducibleRelease/seeds.txt",
+    "outputs/mapping/reproducibleRelease/usage.txt"
+  ]
+}

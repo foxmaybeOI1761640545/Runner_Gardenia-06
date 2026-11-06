@@ -1,0 +1,32 @@
+{
+  "artifact": {
+    "id": 13260959972,
+    "node_id": "MDg6QXJ0aWZhY3QxMzI2MDk1OTk3Mg==",
+    "name": "check-reports-41698875373",
+    "size_in_bytes": 386,
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13260959972",
+    "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13260959972/zip",
+    "expired": false,
+    "digest": "sha256:8f699ded84b37da85891b7c48fd164e01238998e73918b9bf706ceae6ee370b3",
+    "created_at": "2026-11-03T19:00:36Z",
+    "updated_at": "2026-11-03T19:00:36Z",
+    "expires_at": "2026-12-03T19:00:35Z",
+    "workflow_run": {
+      "id": 41698875373,
+      "repository_id": 1444212075,
+      "head_repository_id": 1444212075,
+      "head_branch": "feature/heart-rate-monitoring",
+      "head_sha": "49452c972d60d417c7c0f85655a18b430149700f"
+    }
+  },
+  "archiveSha256": "8f699ded84b37da85891b7c48fd164e01238998e73918b9bf706ceae6ee370b3",
+  "files": [
+    {
+      "originalPath": "reports/ci-validation/instrumentation.json",
+      "bytes": 265,
+      "sha256": "7a6a11750ecfefed9bf6e283bab8e50fd497474fc99b5739f5d3b945d1d952ab",
+      "object": "objects/7a/7a6a11750ecfefed9bf6e283bab8e50fd497474fc99b5739f5d3b945d1d952ab.json"
+    }
+  ],
+  "notArchived": []
+}

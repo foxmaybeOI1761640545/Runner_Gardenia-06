@@ -1,0 +1,79 @@
+{
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-p0.1",
+  "versionCode": 6772,
+  "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+  "variant": "reproducibleRelease",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "debuggable": false,
+  "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+  "apkBytes": 2715993,
+  "r8MappingSha256": "b9de8f8b995bd1ec7b41873691dacf21cbc1321ba1b21dbf5b9a790346a215b1",
+  "offline": {
+    "applicationId": "com.fox.runner",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "allowBackup": false,
+    "components": {
+      "activity": [
+        "de.dennisguse.opentracks.introduction.IntroductionActivity",
+        "de.dennisguse.opentracks.p0.app.P0Activity",
+        "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+        "de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+      ],
+      "activity-alias": [],
+      "service": [
+        "androidx.appcompat.app.AppLocalesMetadataHolderService",
+        "de.dennisguse.opentracks.services.TrackRecordingService"
+      ],
+      "provider": [
+        "androidx.core.content.FileProvider",
+        "de.dennisguse.opentracks.data.ShareContentProvider"
+      ],
+      "receiver": []
+    }
+  },
+  "plan": {
+    "versionName": "v0.1.0-p0.1",
+    "versionCode": 6772,
+    "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "stage": 10,
+    "branch": "feature/p0-core-migration",
+    "runId": "41974364095",
+    "publishing": false
+  },
+  "tests": {
+    "android": {
+      "tests": 379,
+      "executed": 378,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 88,
+      "executed": 88,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/41974364095",
+  "runtimeSmokeVerified": true,
+  "upgradeFromVersionCode": 6771
+}

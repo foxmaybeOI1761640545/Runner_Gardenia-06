@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "commit": "23ff1198c88aff688696f19d029486449de66898",
+  "files": [
+    {
+      "file": "decimal-escaping.gpx",
+      "sha256": "fb948edaefb16110e7d0cc90bc2e9e98956e1b7fb6ba31f8b03ab01454bce797",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "event-boundaries.gpx",
+      "sha256": "8e7ac642a803c7004703500082d183dc1d5852d212a604a079f1871aa7f50178",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "gps-gap.gpx",
+      "sha256": "2a65f221c4b188307642da78a34a9bb312fa1cef0581157761de71cfa8fb299b",
+      "points": 4,
+      "samples": 1
+    },
+    {
+      "file": "gps-only.gpx",
+      "sha256": "aa11b7f44d18f47c76d8350011556f4521bfb9af1eb3079c88b0e15e1cad511c",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "heart-only.gpx",
+      "sha256": "197eaf8869589923f2b163d3509d8e983ee8328a578739eb645056650a4951dc",
+      "points": 0,
+      "samples": 2
+    },
+    {
+      "file": "legacy.gpx",
+      "sha256": "8ae75697c8acad2f8fa3f464f831c5658074a984cf3ec3113d45e383af60023c",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "local-file.gpx",
+      "sha256": "f7d7cb4e3614dd7a2f6fecdeba70b4db938669a0bf8112047f53a985ce0acb67",
+      "points": 1,
+      "samples": 1
+    },
+    {
+      "file": "raw-complete.gpx",
+      "sha256": "b08303ccbf0667c2b810e0a6f4a8913e9edfb6408d40c805683a82306dda4c7e",
+      "points": 2,
+      "samples": 4
+    },
+    {
+      "file": "segments.gpx",
+      "sha256": "03f1d06d6d0acc8e7e59848a77cdbedf4d0e3ddf4a494446cd1e836cb8db4d0f",
+      "points": 6,
+      "samples": 2
+    }
+  ],
+  "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+}

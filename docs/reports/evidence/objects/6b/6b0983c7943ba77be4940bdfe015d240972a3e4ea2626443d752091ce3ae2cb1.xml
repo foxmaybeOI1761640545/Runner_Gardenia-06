@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-11-04T18:54:30.203Z" hostname="runnervm7aw5e" time="0.011">
+  <properties/>
+  <testcase name="uint16LittleEndian" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="emptyOrZeroRr" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.001"/>
+  <testcase name="energyAndMultipleRr" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="extraOrReservedBytes" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="zeroBpmIsNotUsable" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="contactSupportedDetected" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="emptyAndNull" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="truncatedRr" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.001"/>
+  <testcase name="truncatedWideBpm" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="unsigned16Boundary" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="rrRetainsFractionalMillisecondPrecision" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.002"/>
+  <testcase name="uint8" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="truncatedEnergy" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.001"/>
+  <testcase name="contactSupportedNotDetected" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.002"/>
+  <testcase name="contactUnsupported" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.0"/>
+  <testcase name="rrListIsImmutable" classname="de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

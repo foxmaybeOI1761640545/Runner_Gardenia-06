@@ -1,0 +1,6 @@
+{
+  "denied": [
+    "Allow OpenTracks to find, connect to, and determine the relative position of nearby devices?",
+    "Allow OpenTracks to send you notifications?"
+  ]
+}

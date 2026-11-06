@@ -1,3 +1,11 @@
+# Runner Gardenia P0.2 branch instructions
+
+The current user task supersedes the old P0-only branch restriction below. Work only on feature/p0-2-gps-ui based on remote P0 60daeb21aa50bdbceec6e6ad354a431b8c1be434. Never change main, feature/p0-core-migration or other existing branches. Do not merge main or force-push. Archive all historical evidence and verify its remote bytes before GPS/UI development. Keep original report paths; only extract documents from other branches, never merge their product code.
+
+Stages and reports: docs/reports/branches/feature-p0-2-gps-ui/00-baseline.md. Advance only after actual stage tests, report commit/push and remote verification. BLE review is one bounded read-only pass: no production BLE changes/retries. GPS acquisition must reuse the existing service, require fresh monotonic stable accurate fixes, create no workout/timer/distance/associated HR before readiness, and support cancel/timeout. UI work is limited to the home screen and necessary components. Full API35/JVM/Debug/Lint/GPX/durability/offline/UI/upgrade gates precede fixed-key signing and a new P0.2 test Tag/Pre-release. Never overwrite P0.1. Report-only commits do not rebuild/re-sign. No cloud SDK/emulator installation, identity/key/dependency changes. Production timezone remains device local; CI uses Asia/Singapore. Actual hardware remains NEEDS_DEVICE_VALIDATION.
+
+## Historical P0 instructions (apply only where consistent with the new task)
+
 # Runner Gardenia P0 branch instructions
 
 - Work only in foxmaybeOI1761640545/Runner_Gardenia-06 on feature/p0-core-migration, based on 9b5d7b06afc1eb8e3315ba73874ac088fa4d5169 from remote main. The user explicitly overrides the upstream main auto-publication workflow for this task.
