@@ -18,7 +18,7 @@ The isolated branch was created early solely to archive documents without writin
 | 0 | Historical inventory/archive/remote verification | PASSED |
 | 1 | Formal baseline | PASSED |
 | 2 | One read-only BLE reconnect audit | PASSED |
-| 3 | GPS acquisition state and actual JVM/API35 acceptance | IN_PROGRESS |
+| 3 | GPS acquisition state and actual JVM/API35 acceptance | PASSED |
 | 4 | Home UI and actual screenshot matrix | PENDING |
 | 5 | Full regression | PENDING |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PENDING |
@@ -33,3 +33,7 @@ PASSED: isolated new branch created from freshly fetched latest remote P0, pushe
 ## Stage 2 acceptance
 
 [One bounded BLE audit](01-ble-reconnect-audit.md) completed; 23 unchanged state-machine tests passed in one actual local execution. No BLE production changes. H303 root cause remains unconfirmed; no-notification CONNECTED handling is a supported candidate, not a hardware finding. Report/remote/cloud archive validation precede stage 3.
+
+## Stage 3 receipt
+
+[GPS acceptance](02-gps-state-acceptance.md) and [raw verification receipt](stage3-verification.json): source6046e6f/run42187525349, Android393/392 executed/0 failures/0 errors/1 original skip; JVM108 all passed; pipeline47 passed; GPX9, actual two-process durability, Debug/Lint/identity/offline and original screenshot gates passed. Stage 4 may start only after report push and remote byte verification.

@@ -1,6 +1,6 @@
 # GPS preparation acceptance
 
-Status: IN_PROGRESS. No next-stage UI redesign or signing is authorized until the full actual API35/JVM gate passes.
+Status: PASSED for automated GPS acceptance. Final successful source/run and independently checked evidence are below. Hardware remains NEEDS_DEVICE_VALIDATION.
 
 ## Implementation
 
@@ -69,3 +69,20 @@ The test reset now first checks for an actual running own service instance (`pid
 Actual first failure was the newly added precision fixture's `SharedPreferences.getInt` snapshot: the existing ListPreference stores a String, while the mature PreferencesUtils deliberately supports both String and Integer. The test setup threw ClassCastException and teardown wrote its uninitialized numeric field back, corrupting later tests' accuracy setting and causing GPS assertion failures. This was test-fixture contamination, not evidence for changing GPS algorithms or old assertions.
 
 Correction: snapshot the raw preference Object, restore its exact String/Integer/absent representation, and assert the restored raw value/type equals the original. The stricter-accuracy production check and all GPS assertions remain. Complete rerun is required before acceptance.
+
+## Stage 3 final automated acceptance: PASSED
+
+- Source: `6046e6fa5d5b26230aee2bb4e5eaa17dcff3d54f`. [Successful Actions 42187525349](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42187525349).
+- [Independent verification receipt and per-file hashes](stage3-verification.json); [retained raw XML/GPX/JSON/screenshot evidence](evidence/stage3-run-42187525349/).
+- Android API35: **393 tests, 392 executed, Failures 0, Errors 0, Skipped 1**. All 13 GPS preparation methods and all three recording UI methods actually passed. Original `recording_stopGPS_noop` Ignore retained with its pre-existing hard-stop TODO; no new Ignore.
+- JVM: **108 tests, 108 executed, 0 failures/errors/skips**, from 12 downloaded XML files. Python pipeline helpers: **47 passed**, verified in actual job output.
+- Debug build/Lint/instrumentation compilation passed. Actual downloaded Debug: `com.fox.runner.debug`, `reproducibleDebug`, development version remains `v0.1.0-p0.1` / 6772 until the authorized phase-6 version allocation. SHA-256 `90b1a852f9a8e5f98b293c0532f2c8fd8c0213117da2367972057731b5d49c48` matched report and actual aapt2 identity. [Debug Artifact](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42187525349/artifacts/13489655467).
+- Nine actual Android-generated GPX files downloaded; each hash matched its report, and all nine independently revalidated against the pinned GPX schema using JDK XML validation with external schema/DTD access disabled.
+- Actual file database survived force-stop and two instrumentation processes: write PID 1936 / read PID 2221, each one test, no failures/errors/skips. These are repeated durability phases, not extra unique suite cases.
+- Packaged Debug/actual merged Release offline audit passed; identity, no INTERNET, disabled backup and private exports retained. No schema/signing/identity/dependency changes.
+- All 40 legacy UI captures and 20 original P0 theme/size/page matrix captures plus nine P0 diagnostics validated. Two original key images were viewed directly: correct dark/light system bars, expected real page state, no overlapping text. The old home remains dense and idle metrics can show a retained prior snapshot in synthetic fixture setup; phase 4 will reorganize the home and show zero current metrics in IDLE. This is not acceptance of the requested new home design.
+- Runner/JVM/device/instrumentation timezone checks passed for Asia/Singapore. Production still respects device timezone.
+- Timeout verification combines a deterministic 60-second monotonic boundary test with the actual Android timeout callback/continue/cancel path; it does not claim a physical 60-second outdoor wait. Screen-off evidence uses the real emulator power state with synthetic GPS, not real GNSS/RF.
+- Intervening [run 42186676746](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42186676746) on pre-preference-fix source also reported 393/392/16 failures/0 errors/1 skip; [its original XML](evidence/stage3-run-42186676746/TEST-mediumPhone.xml) and [counts](evidence/stage3-run-42186676746/counts.json) are retained. The final run resolves those failures without reducing assertions or gates.
+
+Remote report/blob verification after this acceptance commit is the final entry condition for stage 4. Formal signing/Tag/Release remain disabled until phases 5–6. Physical H303, outdoor accuracy/rate, vendor screen-off/background and battery checks remain NEEDS_DEVICE_VALIDATION.

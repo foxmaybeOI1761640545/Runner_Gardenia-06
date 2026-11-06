@@ -1,0 +1,238 @@
+{
+  "status": "PASSED",
+  "sourceCommit": "6046e6fa5d5b26230aee2bb4e5eaa17dcff3d54f",
+  "runId": "42187525349",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42187525349",
+  "counts": {
+    "android": {
+      "tests": 393,
+      "executed": 392,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "xmlFiles": 1
+    },
+    "unit": {
+      "tests": 108,
+      "executed": 108,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "xmlFiles": 12
+    }
+  },
+  "pipelineTests": 47,
+  "debug": {
+    "applicationId": "com.fox.runner.debug",
+    "versionName": "v0.1.0-p0.1",
+    "versionCode": 6772,
+    "variant": "reproducibleDebug",
+    "debuggable": "true",
+    "sha256": "90b1a852f9a8e5f98b293c0532f2c8fd8c0213117da2367972057731b5d49c48"
+  },
+  "debugArtifactId": 13489655467,
+  "reportArtifactId": 13489725358,
+  "gpxFiles": 9,
+  "processPids": {
+    "write": 1936,
+    "read": 2221
+  },
+  "legacyUiPngs": 40,
+  "p0MatrixPngs": 20,
+  "additionalP0Pngs": 9,
+  "hardware": "NEEDS_DEVICE_VALIDATION",
+  "files": [
+    {
+      "artifactMember": "independent-verification.json",
+      "path": "evidence/stage3-run-42187525349/independent-verification.json",
+      "sha256": "2b5de1d52af4f905b66b2e1ce8d85d2a1380e09c430dea8851dc5a639b9adc4f",
+      "bytes": 29108
+    },
+    {
+      "artifactMember": "artifacts.json",
+      "path": "evidence/stage3-run-42187525349/artifacts.json",
+      "sha256": "e152778f06c57dc3c82a1b448abd4f3332fa80e4525e947d1da8db924c77974f",
+      "bytes": 1740
+    },
+    {
+      "artifactMember": "build/outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "path": "evidence/stage3-run-42187525349/android/TEST-mediumPhone.xml",
+      "sha256": "9e444e625084fc0d753aa7787f9ac083a5b8aca25571fa412f208421667dd688",
+      "bytes": 80619
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "sha256": "4f071da0d288ff00eed95dc70b8c60bcd14bee922c28d3332af93fb973c07ebc",
+      "bytes": 862
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "sha256": "40cbe789ba0f6de711a8178819217c5d701a6c5303b2ab630fc90b47ae2cd6d3",
+      "bytes": 1262
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "sha256": "cf28451e60035753fc481d184a36ae0556cc630a26583022a71f7b6d3a603ace",
+      "bytes": 1718
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "sha256": "d7b29196a3887a98ce0876da82b85c800539e4efcffdc22ed8afc8c742337c35",
+      "bytes": 3748
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "sha256": "9d314a77ca73d2ddb7320661a40e4deac0512992ba2ce62aa34046f96dafa25e",
+      "bytes": 1014
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "sha256": "469e98a5aa54dc36a901029649c15b1771172a2aa3c6ec7c970ccff683397dc1",
+      "bytes": 2565
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "sha256": "be0a5125fb698683160f507a1dfffbb8b93d33eaf05e6d550114346da05412c0",
+      "bytes": 1587
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "sha256": "fe3e11afa0ebf885f54f040765cf1f1bdc2ffa31bab8cec9285940ca85ee37a5",
+      "bytes": 2704
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "sha256": "c2a6be9a412da402b1c5ada70c756096b72e6a288cf123f566ff7ca7cbef8041",
+      "bytes": 1166
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "sha256": "1fed938cf04775d0c19b7f4e522d37264554bd6b1a93b288ebb6b585936b7025",
+      "bytes": 834
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "sha256": "fe962ec4b48a2a587c679a6a7dc0aba1a59368f5d9c32fd359e29be6cfcd83f0",
+      "bytes": 478
+    },
+    {
+      "artifactMember": "build/test-results/testReproducibleDebugUnitTest/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "path": "evidence/stage3-run-42187525349/unit/TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "sha256": "4fe736a8fb376915e6032131b9049f3ebc54725a8b24d015dd0aeed0c0c10ead",
+      "bytes": 823
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/segments.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/segments.gpx",
+      "sha256": "8b20df6af65c89adf5ff02281235ffdc719468dc25dbc6c30b9264152386673c",
+      "bytes": 3051
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/event-boundaries.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/event-boundaries.gpx",
+      "sha256": "5c60e04df0a26d496f9411e57dfe385aa04d0dbfa68d36a07be77e4477b21aa7",
+      "bytes": 1238
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/gps-gap.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/gps-gap.gpx",
+      "sha256": "10c0bd68c0089fb47fc31e232dda39650b34f54d712e49172489cd730ae89429",
+      "bytes": 2112
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/gps-only.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/gps-only.gpx",
+      "sha256": "20ecf0600e1bb32aba466b389c6a5f7388c21ace048584f991bada156b28e4f6",
+      "bytes": 951
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/local-file.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/local-file.gpx",
+      "sha256": "4b6a4f1f928087fe3ae8e1189405bc2c3de0364ceaa627a0257cf7f2a2b6684c",
+      "bytes": 1325
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/legacy.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/legacy.gpx",
+      "sha256": "bcb589404c0588979f0bd0830f372df8588fdc9e6aaca390fc1cb5eb6228bd18",
+      "bytes": 1141
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/decimal-escaping.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/decimal-escaping.gpx",
+      "sha256": "4371b18fe1a8aeefb880b0b2dd8a98179006677d19f0390366acf9f80fd24b1a",
+      "bytes": 1076
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/heart-only.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/heart-only.gpx",
+      "sha256": "d710b99f439ed109fc112e52a5f8ebb0318285c64e898be66acd808e1c49131a",
+      "bytes": 1305
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/result.json",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/result.json",
+      "sha256": "c355525c10b083b8c5304647a067381cea88ac3c4270e0e2e3bba6e076f5002a",
+      "bytes": 1686
+    },
+    {
+      "artifactMember": "build/reports/p0-gpx/raw-complete.gpx",
+      "path": "evidence/stage3-run-42187525349/p0-gpx/raw-complete.gpx",
+      "sha256": "068b9ddd62f3cb603fd27520920fdbc6cc5d8a617293cd25ec3daa19b88cb283",
+      "bytes": 2629
+    },
+    {
+      "artifactMember": "build/reports/p0-durability/result.json",
+      "path": "evidence/stage3-run-42187525349/p0-durability/result.json",
+      "sha256": "8ff77db6aa8338b48a1a2ca5f67c33bbc2a3e1175bef8026daee1f545dac4c99",
+      "bytes": 462
+    },
+    {
+      "artifactMember": "build/reports/p0-offline/result.json",
+      "path": "evidence/stage3-run-42187525349/p0-offline/result.json",
+      "sha256": "5efe8bc46739e25746e11d2ef10a8c64ea65fa95c20921fbc2e2151adc581ec3",
+      "bytes": 2586
+    },
+    {
+      "artifactMember": "build/reports/p0-validation/tests.json",
+      "path": "evidence/stage3-run-42187525349/p0-validation/tests.json",
+      "sha256": "96f2162cdcd018c03477016b75348c24a416b6ada0de13f28677194efccb1a95",
+      "bytes": 21616
+    },
+    {
+      "artifactMember": "build/reports/ci-validation/debug-apk.json",
+      "path": "evidence/stage3-run-42187525349/ci-validation/debug-apk.json",
+      "sha256": "3e76dc52d97c2fac6adbc65adbe5a73cb9deae2022e9718ccbdc2bc9580e130e",
+      "bytes": 239
+    },
+    {
+      "artifactMember": "build/reports/p0-ui/matrix.json",
+      "path": "evidence/stage3-run-42187525349/screenshots/matrix.json",
+      "sha256": "189ed6d119d982b0bb2a725f539a53363e45a941d8936ff70fcb1f78c53c5632",
+      "bytes": 2234
+    },
+    {
+      "artifactMember": "build/reports/p0-ui/p0-matrix-small-dark-home.png",
+      "path": "evidence/stage3-run-42187525349/screenshots/p0-matrix-small-dark-home.png",
+      "sha256": "10c2a08e356247f39fc070b6b2e139e8bc649cc4bd945caf301b2cb37a49ed73",
+      "bytes": 87473
+    },
+    {
+      "artifactMember": "build/reports/p0-ui/p0-matrix-large-light-recording.png",
+      "path": "evidence/stage3-run-42187525349/screenshots/p0-matrix-large-light-recording.png",
+      "sha256": "78dc5364390221f52510cf5db23c7868ca617541e9d14d2c7d0b37d5cffd4707",
+      "bytes": 131861
+    }
+  ]
+}

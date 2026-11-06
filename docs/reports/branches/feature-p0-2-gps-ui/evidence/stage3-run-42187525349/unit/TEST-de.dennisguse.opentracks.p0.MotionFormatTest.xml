@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.MotionFormatTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-06T08:32:13.379Z" hostname="runnervm7aw5e" time="0.006">
+  <properties/>
+  <testcase name="durationRetainsHoursBeyondADay" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.001"/>
+  <testcase name="subHourDurationIsReadable" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="zeroOrMissingSpeedDoesNotInventPace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="speedAndPaceUseConsistentMetricUnits" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

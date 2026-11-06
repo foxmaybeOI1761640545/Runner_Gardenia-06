@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "commit": "6046e6fa5d5b26230aee2bb4e5eaa17dcff3d54f",
+  "database": "p0-durability.db",
+  "forceStopped": true,
+  "timezone": "Asia/Singapore",
+  "phases": {
+    "write": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1936
+    },
+    "read": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2221
+    }
+  }
+}
