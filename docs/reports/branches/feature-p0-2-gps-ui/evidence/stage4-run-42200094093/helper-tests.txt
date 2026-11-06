@@ -1,0 +1,71 @@
+checks	Pipeline helper regression	﻿2026-11-06T10:06:37.7766848Z ##[group]Run python3 -m unittest discover -s .github/tests -v -b
+checks	Pipeline helper regression	2026-11-06T10:06:37.7767475Z [36;1mpython3 -m unittest discover -s .github/tests -v -b[0m
+checks	Pipeline helper regression	2026-11-06T10:06:37.7788458Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Pipeline helper regression	2026-11-06T10:06:37.7788893Z env:
+checks	Pipeline helper regression	2026-11-06T10:06:37.7789134Z   TZ: Asia/Singapore
+checks	Pipeline helper regression	2026-11-06T10:06:37.7789472Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Pipeline helper regression	2026-11-06T10:06:37.7789893Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Pipeline helper regression	2026-11-06T10:06:37.7790292Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Pipeline helper regression	2026-11-06T10:06:37.7790656Z ##[endgroup]
+checks	Pipeline helper regression	2026-11-06T10:06:38.0062661Z test_incomplete_capture_manifest_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_incomplete_capture_manifest_is_a_failure) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0065477Z test_missing_capture_directory_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_missing_capture_directory_is_a_failure) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0157541Z test_named_files_without_png_pixels_are_rejected (test_heart_rate_gates.UiEvidenceTests.test_named_files_without_png_pixels_are_rejected) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0167151Z test_offset_alias_cannot_replace_the_singapore_timezone_identity (test_heart_rate_gates.UiEvidenceTests.test_offset_alias_cannot_replace_the_singapore_timezone_identity) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0179120Z test_actual_jvm_execution_is_counted_separately (test_heart_rate_gates.UnitEvidenceTests.test_actual_jvm_execution_is_counted_separately) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0190245Z test_all_skipped_or_missing_test_class_blocks_the_gate (test_heart_rate_gates.UnitEvidenceTests.test_all_skipped_or_missing_test_class_blocks_the_gate) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0198829Z test_no_source_or_missing_xml_cannot_be_described_as_executed (test_heart_rate_gates.UnitEvidenceTests.test_no_source_or_missing_xml_cannot_be_described_as_executed) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.0212360Z test_unit_errors_failures_and_inconsistent_counts_are_not_hidden (test_heart_rate_gates.UnitEvidenceTests.test_unit_errors_failures_and_inconsistent_counts_are_not_hidden) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1076409Z test_complete_matrix_is_tied_to_this_source_and_original_pixels (test_p02_home_ui.HomeCaptureGateTests.test_complete_matrix_is_tied_to_this_source_and_original_pixels) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1191488Z test_hardware_claim_or_missing_timezone_is_rejected (test_p02_home_ui.HomeCaptureGateTests.test_hardware_claim_or_missing_timezone_is_rejected) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1230108Z test_missing_or_duplicated_state_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_missing_or_duplicated_state_never_passes) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1342821Z test_wrong_theme_window_or_phase_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_wrong_theme_window_or_phase_never_passes) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1349595Z test_changed_original_p0_branch_is_detected_without_resetting_it (test_p02_pipeline.P02IsolationTests.test_changed_original_p0_branch_is_detected_without_resetting_it) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1360174Z test_development_and_ordinary_checks_cannot_request_signing (test_p02_pipeline.P02IsolationTests.test_development_and_ordinary_checks_cannot_request_signing) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1367963Z test_incomplete_and_scoped_regression_never_authorize_phase (test_p02_pipeline.P02IsolationTests.test_incomplete_and_scoped_regression_never_authorize_phase) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1370232Z test_crash_or_failure_is_never_a_successful_adb_exit (test_p0_durability.ProcessEvidenceTests.test_crash_or_failure_is_never_a_successful_adb_exit) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1373331Z test_missing_pid_zero_cases_or_missing_finish_code_fail_closed (test_p0_durability.ProcessEvidenceTests.test_missing_pid_zero_cases_or_missing_finish_code_fail_closed) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1375762Z test_success_requires_executed_case_and_process_identity (test_p0_durability.ProcessEvidenceTests.test_success_requires_executed_case_and_process_identity) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1378093Z test_cloud_backup_or_exported_private_activity_blocks_release (test_p0_offline.OfflineGateTests.test_cloud_backup_or_exported_private_activity_blocks_release) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1380675Z test_extra_permission_or_external_entry_point_blocks_release (test_p0_offline.OfflineGateTests.test_extra_permission_or_external_entry_point_blocks_release) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1383001Z test_internet_is_rejected_in_debug_as_well_as_release (test_p0_offline.OfflineGateTests.test_internet_is_rejected_in_debug_as_well_as_release) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1384864Z test_minimal_release_manifest_is_accepted (test_p0_offline.OfflineGateTests.test_minimal_release_manifest_is_accepted) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1386709Z test_class_arguments_cannot_inject_gradle_options (test_p0_pipeline.P0ConfigurationTests.test_class_arguments_cannot_inject_gradle_options) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1388545Z test_empty_scope_cannot_pass (test_p0_pipeline.P0ConfigurationTests.test_empty_scope_cannot_pass) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1390190Z test_final_regression_cannot_be_narrowed (test_p0_pipeline.P0ConfigurationTests.test_final_regression_cannot_be_narrowed) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1407777Z test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names (test_p0_pipeline.P0ConfigurationTests.test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1424709Z test_signing_cannot_start_before_final_complete_regression (test_p0_pipeline.P0ConfigurationTests.test_signing_cannot_start_before_final_complete_regression) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1427210Z test_android_or_existing_gate_tests_cannot_be_skipped (test_p0_publication_scope.PublicationScopeTests.test_android_or_existing_gate_tests_cannot_be_skipped) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1429545Z test_empty_scope_does_not_authorize_publication (test_p0_publication_scope.PublicationScopeTests.test_empty_scope_does_not_authorize_publication) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1431617Z test_explicit_publication_and_only_allowed_files (test_p0_publication_scope.PublicationScopeTests.test_explicit_publication_and_only_allowed_files) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1433959Z test_normal_code_push_keeps_complete_ci (test_p0_publication_scope.PublicationScopeTests.test_normal_code_push_keeps_complete_ci) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1436058Z test_product_or_build_or_signing_changes_cannot_use_old_apk (test_p0_publication_scope.PublicationScopeTests.test_product_or_build_or_signing_changes_cannot_use_old_apk) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1438070Z test_actual_gnss_round_trip_uses_numeric_tolerance (test_p0_release.ActualGpsMetricTests.test_actual_gnss_round_trip_uses_numeric_tolerance) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1439769Z test_blank_or_zero_motion_fields_do_not_pass (test_p0_release.ActualGpsMetricTests.test_blank_or_zero_motion_fields_do_not_pass) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1441416Z test_wrong_coordinates_or_accuracy_fail (test_p0_release.ActualGpsMetricTests.test_wrong_coordinates_or_accuracy_fail) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1446700Z test_another_commit_or_publishing_plan_is_rejected (test_p0_release.SigningGateTests.test_another_commit_or_publishing_plan_is_rejected) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1447707Z test_exact_passed_branch_gate_is_accepted (test_p0_release.SigningGateTests.test_exact_passed_branch_gate_is_accepted) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1448685Z test_missing_or_other_commit_storage_evidence_blocks_signing (test_p0_release.SigningGateTests.test_missing_or_other_commit_storage_evidence_blocks_signing) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1449741Z test_no_execution_or_failed_tests_never_authorize_signing (test_p0_release.SigningGateTests.test_no_execution_or_failed_tests_never_authorize_signing) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1498833Z test_optimized_resource_path_and_typed_binding (test_pipeline.ApkResourceTests.test_optimized_resource_path_and_typed_binding) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1536156Z test_draft_resume_published_rerun_and_identity_rejection (test_pipeline.PublicationTests.test_draft_resume_published_rerun_and_identity_rejection) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1539551Z test_no_credentials_on_cross_host_redirect (test_pipeline.PublicationTests.test_no_credentials_on_cross_host_redirect) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1559031Z test_complete_and_separate_errors (test_pipeline.ReportTests.test_complete_and_separate_errors) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.1575254Z test_missing_corrupt_and_miscounted_reports (test_pipeline.ReportTests.test_missing_corrupt_and_miscounted_reports) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.2405931Z test_allocation_gate_immutable_tag_and_rerun (test_pipeline.VersionTests.test_allocation_gate_immutable_tag_and_rerun) ... From /tmp/tmpb4idw9ch/remote
+checks	Pipeline helper regression	2026-11-06T10:06:38.2407268Z  * branch            main       -> FETCH_HEAD
+checks	Pipeline helper regression	2026-11-06T10:06:38.2682986Z To /tmp/tmpb4idw9ch/remote.git
+checks	Pipeline helper regression	2026-11-06T10:06:38.2683534Z  * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+checks	Pipeline helper regression	2026-11-06T10:06:38.2961002Z From /tmp/tmpb4idw9ch/remote
+checks	Pipeline helper regression	2026-11-06T10:06:38.2961872Z  * branch            main       -> FETCH_HEAD
+checks	Pipeline helper regression	2026-11-06T10:06:38.3519418Z ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.4417167Z test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed (test_release_ledger.LedgerTests.test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.4907785Z test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code (test_release_ledger.LedgerTests.test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.5304017Z test_historical_name_or_code_cannot_be_tagged_again (test_release_ledger.LedgerTests.test_historical_name_or_code_cannot_be_tagged_again) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.5338981Z test_restore_existing_bytes_and_reverify_independent_certificate (test_signed_bundle.SignedRecoveryTests.test_restore_existing_bytes_and_reverify_independent_certificate) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.5352922Z test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk (test_signed_bundle.SignedRecoveryTests.test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.5369081Z test_unsigned_or_foreign_plan_rejected (test_signed_bundle.SignedRecoveryTests.test_unsigned_or_foreign_plan_rejected) ... ok
+checks	Pipeline helper regression	2026-11-06T10:06:38.5370068Z 
+checks	Pipeline helper regression	2026-11-06T10:06:38.5370331Z ----------------------------------------------------------------------
+checks	Pipeline helper regression	2026-11-06T10:06:38.5370932Z Ran 51 tests in 0.532s
+checks	Pipeline helper regression	2026-11-06T10:06:38.5371177Z 
+checks	Pipeline helper regression	2026-11-06T10:06:38.5371310Z OK

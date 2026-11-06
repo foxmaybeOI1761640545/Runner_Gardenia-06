@@ -19,7 +19,7 @@ The isolated branch was created early solely to archive documents without writin
 | 1 | Formal baseline | PASSED |
 | 2 | One read-only BLE reconnect audit | PASSED |
 | 3 | GPS acquisition state and actual JVM/API35 acceptance | PASSED |
-| 4 | Home UI and actual screenshot matrix | IN_PROGRESS |
+| 4 | Home UI and actual screenshot matrix | PASSED |
 | 5 | Full regression | PENDING |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PENDING |
 | 7 | Final reports/index/remote verification | PENDING |
@@ -41,3 +41,7 @@ PASSED: isolated new branch created from freshly fetched latest remote P0, pushe
 ## Stage 4 entry
 
 Stage 3 acceptance report commit `2a0636f8dae78f76f8c505a6512ca3272dbacb06` passed [cloud archive verification](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42190116476), and all 1,873 remote report/evidence paths matched local Git blobs. Home redesign started only after that gate.
+
+## Stage4 receipt
+
+[UI acceptance](03-ui-acceptance.md): source48693c4/run42200094093, Android395/394/0/0/1, JVM110 all passed, helper51. All36 new original states/themes/windows manually reviewed and retained with producer hashes; original40+20 UI regressions preserved. Phase5 starts only after report push and remote/cloud archive verification.
