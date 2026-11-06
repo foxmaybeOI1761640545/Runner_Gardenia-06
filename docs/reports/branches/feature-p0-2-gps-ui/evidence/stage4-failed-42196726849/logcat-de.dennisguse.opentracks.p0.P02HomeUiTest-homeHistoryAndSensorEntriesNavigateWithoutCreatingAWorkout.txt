@@ -1,0 +1,1046 @@
+11-06 17:45:35.558  2260  2287 I TestRunner: started: homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout(de.dennisguse.opentracks.p0.P02HomeUiTest)
+11-06 17:45:35.560  2260  2287 I UiAutomationPermGranter: Permission: android.permission.BLUETOOTH_SCAN is already granted!
+11-06 17:45:35.560  2260  2287 I UiAutomationPermGranter: Permission: android.permission.BLUETOOTH_CONNECT is already granted!
+11-06 17:45:35.560  2260  2287 I UiAutomationPermGranter: Permission: android.permission.ACCESS_FINE_LOCATION is already granted!
+11-06 17:45:35.560  2260  2287 I UiAutomationPermGranter: Permission: android.permission.POST_NOTIFICATIONS is already granted!
+11-06 17:45:35.563  2260  2287 W CustomContentProvider: Deleting from table tracks
+11-06 17:45:35.564  1281  1281 E Overrides: Bad overriden class
+11-06 17:45:35.564  1281  1281 E Overrides: java.lang.NoSuchMethodException: com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.<init> [class android.content.Context]
+11-06 17:45:35.564  1281  1281 E Overrides: 	at java.lang.Class.getConstructor0(Class.java:3395)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at java.lang.Class.getDeclaredConstructor(Class.java:3077)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.util.ResourceBasedOverride$Overrides.getObject(ResourceBasedOverride.java:42)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory$Companion.newInstance(TaskbarViewCallbacksFactory.kt:36)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.newInstance(Unknown Source:2)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewController.init(TaskbarViewController.java:177)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarControllers.init(TaskbarControllers.java:156)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarActivityContext.init(TaskbarActivityContext.java:367)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager.recreateTaskbar(TaskbarManager.java:477)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager$4.onConfigurationChanged(TaskbarManager.java:284)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController$$ExternalSyntheticLambda2.accept(D8$$SyntheticClass:0)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.forAllComponentCallbacks(ComponentCallbacksController.java:124)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.dispatchConfigurationChanged(ComponentCallbacksController.java:91)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.window.WindowContext.dispatchConfigurationChanged(WindowContext.java:142)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChangedInner(WindowTokenClient.java:205)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:155)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:112)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.window.WindowTokenClientController.onWindowContextInfoChanged(WindowTokenClientController.java:207)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.ActivityThread.handleWindowContextInfoChanged(ActivityThread.java:6595)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.servertransaction.WindowContextInfoChangeItem.execute(WindowContextInfoChangeItem.java:45)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:35.564  1281  1281 E Overrides: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:35.565  2260  2287 I CustomContentProvider: Deleted 0 rows of table tracks
+11-06 17:45:35.568  2260  2287 I CustomContentProvider: Deleted 0 total rows from database
+11-06 17:45:35.573  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.581  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- removeAllViews(ViewGroup.java:5740) <- recreateTaskbar(TaskbarManager.java:486) <- onConfigurationChanged(TaskbarManager.java:284) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- executeNonLifecycleItem(TransactionExecutor.java:174) <- executeTransactionItems(TransactionExecutor.java:109) <- execute(TransactionExecutor.java:81) <- 
+11-06 17:45:35.584  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.584  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- addView(ViewGroup.java:5083) <- addView(ViewGroup.java:5025) <- addView(ViewGroup.java:4997) <- recreateTaskbar(TaskbarManager.java:487) <- onConfigurationChanged(TaskbarManager.java:284) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- executeNonLifecycleItem(TransactionExecutor.java:174) <- 
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: No service published for: ethernet
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: android.os.ServiceManager$ServiceNotFoundException: No service published for: ethernet
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.ServiceManager.getServiceOrThrow(ServiceManager.java:203)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$145.createService(SystemServiceRegistry.java:2120)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry$CachedServiceFetcher.getService(SystemServiceRegistry.java:2231)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.SystemServiceRegistry.getSystemService(SystemServiceRegistry.java:1812)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.ContextImpl.getSystemService(ContextImpl.java:2241)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.content.ContextWrapper.getSystemService(ContextWrapper.java:936)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.isEthernetSupported(Tethering.java:1579)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.makeSupportedDownstreams(Tethering.java:2562)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateSupportedDownstreams(Tethering.java:2536)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.updateConfiguration(Tethering.java:549)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering.-$$Nest$mupdateConfiguration(Tethering.java:0)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at com.android.networkstack.tethering.Tethering$StateReceiver.onReceive(Tethering.java:1186)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.lambda$getRunnable$0(LoadedApk.java:1814)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args.$r8$lambda$mcNAAl1SQ4MyJPyDg8TJ2x2h0Rk(Unknown Source:0)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.app.LoadedApk$ReceiverDispatcher$Args$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.584   930  1041 E SystemServiceRegistry: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+11-06 17:45:35.584  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.585  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- recreateTaskbar(TaskbarManager.java:488) <- onConfigurationChanged(TaskbarManager.java:284) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- 
+11-06 17:45:35.585  1281  1281 W WindowTokenClientController: Can't find attached WindowTokenClient for android.window.WindowTokenClient@b73ecf
+11-06 17:45:35.585  1281  1281 W WindowTokenClientController: Can't find attached WindowTokenClient for android.window.WindowTokenClient@1d098de
+11-06 17:45:35.585  1281  1281 W WindowTokenClientController: Can't find attached WindowTokenClient for android.window.WindowTokenClient@7b05415
+11-06 17:45:35.585  1281  1281 D b/254119092: DisplayController#onConfigurationChanged: {1.0 310mcc260mnc [en_US] ldltr sw540dp w540dp h1200dp 320dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.176 fontWeightAdjustment=0}
+11-06 17:45:35.599  1281  1281 E DisplayController: Unexpected normalizedDisplayInfo found, invalidating cache: CachedDisplayInfo{size=Point(1080, 2400), cutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}} sideOverrides=null}, rotation=0}
+11-06 17:45:35.599  1281  1281 E DisplayController: (Invalid Cache) perDisplayBounds : {CachedDisplayInfo{size=Point(1600, 2560), cutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}} sideOverrides=null}, rotation=0}=[WindowBounds{bounds=Rect(0, 0 - 1600, 2560), insets=Rect(0, 48 - 0, 0), availableSize=Point(1600, 2512), rotationHint=0}, WindowBounds{bounds=Rect(0, 0 - 2560, 1600), insets=Rect(0, 48 - 0, 0), availableSize=Point(2560, 1552), rotationHint=1}, WindowBounds{bounds=Rect(0, 0 - 1600, 2560), insets=Rect(0, 48 - 0, 0), availableSize=Point(1600, 2512), rotationHint=2}, WindowBounds{bounds=Rect(0, 0 - 2560, 1600), insets=Rect(0, 48 - 0, 0), availableSize=Point(2560, 1552), rotationHint=3}]}
+11-06 17:45:35.612  1281  1281 W DisplayController: (CHANGE_SUPPORTED_BOUNDS) perDisplayBounds: {CachedDisplayInfo{size=Point(1080, 2400), cutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}} sideOverrides=null}, rotation=0}=[WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 48 - 0, 96), availableSize=Point(1080, 2256), rotationHint=0}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(0, 48 - 96, 0), availableSize=Point(2304, 1032), rotationHint=1}, WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 48 - 0, 96), availableSize=Point(1080, 2256), rotationHint=2}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(96, 48 - 0, 0), availableSize=Point(2304, 1032), rotationHint=3}]}
+11-06 17:45:35.629  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.630  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- onTaskbarOrBubblebarWindowHeightOrInsetsChanged(TaskbarInsetsController.kt:186) <- run(D8$$SyntheticClass:0) <- runAfterInit(TaskbarControllers.java:263) <- setTaskbarWindowSize(TaskbarActivityContext.java:956) <- onRotationChanged(TaskbarViewController.java:842) <- lambda$new$0(LauncherTaskbarUIController.java:86) <- $r8$lambda$7Eu1TdYqMLfD92olgiojwXPjDos(null:0) <- onDeviceProfileChanged(D8$$SyntheticClass:0) <- dispatchDeviceProfileChanged(ActivityContext.java:193) <- dispatchDeviceProfileChanged(Launcher.java:721) <- dispatchDeviceProfileChanged(QuickstepLauncher.java:1355) <- onHandleConfigurationChanged(Launcher.java:766) <- onIdpChanged(Launcher.java:755) <- 
+11-06 17:45:35.630  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.630  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- setTaskbarWindowSize(TaskbarActivityContext.java:959) <- onRotationChanged(TaskbarViewController.java:842) <- lambda$new$0(LauncherTaskbarUIController.java:86) <- $r8$lambda$7Eu1TdYqMLfD92olgiojwXPjDos(null:0) <- onDeviceProfileChanged(D8$$SyntheticClass:0) <- dispatchDeviceProfileChanged(ActivityContext.java:193) <- dispatchDeviceProfileChanged(Launcher.java:721) <- dispatchDeviceProfileChanged(QuickstepLauncher.java:1355) <- onHandleConfigurationChanged(Launcher.java:766) <- onIdpChanged(Launcher.java:755) <- onConfigChanged(InvariantDeviceProfile.java:520) <- lambda$new$1(InvariantDeviceProfile.java:242) <- $r8$lambda$DigzT-gcvBuOZ-YyJMZ3Hx4MU98(null:0) <- 
+11-06 17:45:35.630  1281  1281 D b/254119092: mActivity onDeviceProfileChanged
+11-06 17:45:35.630  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.630   863   863 D DisplayRepository: combining enabled=[0], connectedExternalDisplayIds=[], ignored=[]
+11-06 17:45:35.631  1281  1281 D b/254119092: QuickstepLauncher#onDeviceProfileChanged
+11-06 17:45:35.631  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.632  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:35.636   863   863 I NoBackGesture: Config changed: newConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.266 fontWeightAdjustment=0} lastReportedConfig={1.0 310mcc260mnc [en_US] ldltr sw540dp w540dp h1200dp 320dpi lrg long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.219 fontWeightAdjustment=0}
+11-06 17:45:35.636   863   863 D NavigationModeController: getCurrentUserContext: contextUser=0 currentUser=0
+11-06 17:45:35.636  1281  1281 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-06 17:45:35.636  1281  1281 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:453)
+11-06 17:45:35.636  1281  1281 D StateManager: 	at com.android.launcher3.uioverrides.QuickstepLauncher.onDisplayInfoChanged(QuickstepLauncher.java:1273)
+11-06 17:45:35.636  1281  1281 D StateManager: 	at com.android.launcher3.util.DisplayController.notifyChange(DisplayController.java:359)
+11-06 17:45:35.636   863   863 I NoBackGesture: NavbarController: newConfig={1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.266 fontWeightAdjustment=0} mTaskbarDelegate initialized=true willApplyConfigToNavbars=false navBarCount=0
+11-06 17:45:35.645  2260  2863 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-06 17:45:35.651  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.651  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- onTaskbarOrBubblebarWindowHeightOrInsetsChanged(TaskbarInsetsController.kt:186) <- run(D8$$SyntheticClass:0) <- runAfterInit(TaskbarControllers.java:263) <- setTaskbarWindowSize(TaskbarActivityContext.java:956) <- lambda$createIconAlignmentController$5(TaskbarViewController.java:691) <- $r8$lambda$cue6G-gz46I4X8Lq2EhRxZ1WDwU(null:0) <- onAnimationUpdate(D8$$SyntheticClass:0) <- lambda$static$4(Animator.java:855) <- call(D8$$SyntheticClass:0) <- callOnList(Animator.java:666) <- animateValue(ValueAnimator.java:1645) <- setCurrentFraction(ValueAnimator.java:771) <- setProgress(AnimatorPlaybackController.java:386) <- 
+11-06 17:45:35.651  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.651  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- setTaskbarWindowSize(TaskbarActivityContext.java:959) <- lambda$createIconAlignmentController$5(TaskbarViewController.java:691) <- $r8$lambda$cue6G-gz46I4X8Lq2EhRxZ1WDwU(null:0) <- onAnimationUpdate(D8$$SyntheticClass:0) <- lambda$static$4(Animator.java:855) <- call(D8$$SyntheticClass:0) <- callOnList(Animator.java:666) <- animateValue(ValueAnimator.java:1645) <- setCurrentFraction(ValueAnimator.java:771) <- setProgress(AnimatorPlaybackController.java:386) <- setPlayFraction(AnimatorPlaybackController.java:247) <- lambda$createIconAlignmentController$7(TaskbarViewController.java:819) <- run(D8$$SyntheticClass:0) <- 
+11-06 17:45:35.652  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.652  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- onTaskbarOrBubblebarWindowHeightOrInsetsChanged(TaskbarInsetsController.kt:186) <- run(D8$$SyntheticClass:0) <- runAfterInit(TaskbarControllers.java:263) <- setTaskbarWindowSize(TaskbarActivityContext.java:956) <- lambda$createIconAlignmentController$5(TaskbarViewController.java:691) <- $r8$lambda$cue6G-gz46I4X8Lq2EhRxZ1WDwU(null:0) <- onAnimationUpdate(D8$$SyntheticClass:0) <- lambda$static$4(Animator.java:855) <- call(D8$$SyntheticClass:0) <- callOnList(Animator.java:666) <- animateValue(ValueAnimator.java:1645) <- setCurrentFraction(ValueAnimator.java:771) <- setProgress(AnimatorPlaybackController.java:386) <- 
+11-06 17:45:35.652  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.652  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- setTaskbarWindowSize(TaskbarActivityContext.java:959) <- lambda$createIconAlignmentController$5(TaskbarViewController.java:691) <- $r8$lambda$cue6G-gz46I4X8Lq2EhRxZ1WDwU(null:0) <- onAnimationUpdate(D8$$SyntheticClass:0) <- lambda$static$4(Animator.java:855) <- call(D8$$SyntheticClass:0) <- callOnList(Animator.java:666) <- animateValue(ValueAnimator.java:1645) <- setCurrentFraction(ValueAnimator.java:771) <- setProgress(AnimatorPlaybackController.java:386) <- setPlayFraction(AnimatorPlaybackController.java:247) <- setLauncherIconAlignment(TaskbarViewController.java:650) <- onIconAlignmentRatioChanged(TaskbarLauncherStateController.java:736) <- 
+11-06 17:45:35.653  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.653  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- excludeFromMagnificationRegion(TaskbarActivityContext.java:1522) <- updateInsetsTouchability(TaskbarInsetsController.kt:446) <- updateInsetsTouchability(TaskbarDragLayerController.java:269) <- onComputeTaskbarInsets(TaskbarDragLayer.java:140) <- $r8$lambda$A8jkhOr-Udsa6VIIsWK5fVFvNhI(null:0) <- onComputeInternalInsets(D8$$SyntheticClass:0) <- dispatchOnComputeInternalInsets(ViewTreeObserver.java:1307) <- performTraversals(ViewRootImpl.java:4121) <- doTraversal(ViewRootImpl.java:2917) <- run(ViewRootImpl.java:10324) <- run(Choreographer.java:1406) <- run(Choreographer.java:1415) <- doCallbacks(Choreographer.java:1015) <- 
+11-06 17:45:35.660  1281  1300 I GridSizeMigrationUtil: Migration is needed. destDeviceState: DeviceGridState{mGridSizeString='5,5', mNumHotseat=5, mDeviceType=0, mDbFile=launcher.db}, srcDeviceState: DeviceGridState{mGridSizeString='6,5', mNumHotseat=6, mDeviceType=2, mDbFile=launcher_6_by_5.db}
+11-06 17:45:35.660  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:35.661   537  1842 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@7f1b3e6, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-06 17:45:35.663  1281  1300 I GridSizeMigrationUtil: Migration is needed. destDeviceState: DeviceGridState{mGridSizeString='5,5', mNumHotseat=5, mDeviceType=0, mDbFile=launcher.db}, srcDeviceState: DeviceGridState{mGridSizeString='6,5', mNumHotseat=6, mDeviceType=2, mDbFile=launcher_6_by_5.db}
+11-06 17:45:35.674   863   955 D SplashScreenView: Build android.window.SplashScreenView{80cb00a V.E...... ......ID 0,0-0,0}
+11-06 17:45:35.674   863   955 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-06 17:45:35.674   863   955 D SplashScreenView: Branding: view: android.view.View{cc6307b G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-06 17:45:35.699  1281  1281 D b/254119092: TaskbarManager#mComponentCallbacks.onConfigurationChanged: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.223 fontWeightAdjustment=0}
+11-06 17:45:35.699  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.699  1281  1281 D b/254119092: ComponentCallbacks#onConfigurationChanged() configDiff={CONFIG_DENSITY}
+11-06 17:45:35.699  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.699  1281  1281 D b/254119092: destroyExistingTaskbar: com.android.launcher3.taskbar.TaskbarActivityContext@7434cfb
+11-06 17:45:35.699  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.700  1281  1281 D b/254119092: recreateTaskbar: isTaskbarEnabled=true [dp != null (i.e. mUserUnlocked)]=true FLAG_HIDE_NAVBAR_WINDOW=true dp.isTaskbarPresent=false
+11-06 17:45:35.700  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil: Start migration:
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil:  Source Device:[ItemInfo(id=5 type=APP container=# com.android.launcher3.logger.LauncherAtom$ContainerInfo@7bc6f targetComponent=null screen=0 cell(0,1) span(1,1) minSpan(1,1) rank=0 user=UserHandle{0} title=null)]
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil:  Target Device:[ItemInfo(id=5 type=APP container=# com.android.launcher3.logger.LauncherAtom$ContainerInfo@7bc6f targetComponent=null screen=0 cell(1,4) span(1,1) minSpan(1,1) rank=0 user=UserHandle{0} title=null)]
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil:  Removing Items:[]
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil:  Adding Workspace Items:[]
+11-06 17:45:35.745  1281  1300 D GridSizeMigrationUtil:  Adding Hotseat Items:[]
+11-06 17:45:35.753  1281  1300 V GridSizeMigrationUtil: Workspace migration completed in 10
+11-06 17:45:35.754  1281  1300 D LoaderTask: loadWorkspace: loading default favorites
+11-06 17:45:35.756  1281  1300 D LoaderTask: loadWorkspace: Packages with active install sessions: []
+11-06 17:45:35.770   863   863 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-06 17:45:35.774  1281  1300 D LoaderTask: No pinned shortcuts found for user UserHandle{0}
+11-06 17:45:35.777  1281  1281 E Overrides: Bad overriden class
+11-06 17:45:35.777  1281  1281 E Overrides: java.lang.NoSuchMethodException: com.android.launcher3.taskbar.TaskbarModelCallbacksFactory.<init> [class android.content.Context]
+11-06 17:45:35.777  1281  1281 E Overrides: 	at java.lang.Class.getConstructor0(Class.java:3395)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at java.lang.Class.getDeclaredConstructor(Class.java:3077)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.util.ResourceBasedOverride$Overrides.getObject(ResourceBasedOverride.java:42)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarModelCallbacksFactory$Companion.newInstance(TaskbarModelCallbacksFactory.kt:35)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarModelCallbacksFactory.newInstance(Unknown Source:2)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewController.<init>(TaskbarViewController.java:163)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarActivityContext.<init>(TaskbarActivityContext.java:271)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager.recreateTaskbar(TaskbarManager.java:468)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager$4.onConfigurationChanged(TaskbarManager.java:273)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController$$ExternalSyntheticLambda2.accept(D8$$SyntheticClass:0)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.forAllComponentCallbacks(ComponentCallbacksController.java:124)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.dispatchConfigurationChanged(ComponentCallbacksController.java:91)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.window.WindowContext.dispatchConfigurationChanged(WindowContext.java:142)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChangedInner(WindowTokenClient.java:205)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:155)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:112)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.window.WindowTokenClientController.onWindowContextInfoChanged(WindowTokenClientController.java:207)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.ActivityThread.handleWindowContextInfoChanged(ActivityThread.java:6595)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.servertransaction.WindowContextInfoChangeItem.execute(WindowContextInfoChangeItem.java:45)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:35.777  1281  1281 E Overrides: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:35.780  1281  1281 E Overrides: Bad overriden class
+11-06 17:45:35.780  1281  1281 E Overrides: java.lang.NoSuchMethodException: com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.<init> [class android.content.Context]
+11-06 17:45:35.780  1281  1281 E Overrides: 	at java.lang.Class.getConstructor0(Class.java:3395)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at java.lang.Class.getDeclaredConstructor(Class.java:3077)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.util.ResourceBasedOverride$Overrides.getObject(ResourceBasedOverride.java:42)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory$Companion.newInstance(TaskbarViewCallbacksFactory.kt:36)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.newInstance(Unknown Source:2)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewController.init(TaskbarViewController.java:177)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarControllers.init(TaskbarControllers.java:156)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarActivityContext.init(TaskbarActivityContext.java:367)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager.recreateTaskbar(TaskbarManager.java:477)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager$4.onConfigurationChanged(TaskbarManager.java:273)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController$$ExternalSyntheticLambda2.accept(D8$$SyntheticClass:0)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.forAllComponentCallbacks(ComponentCallbacksController.java:124)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.dispatchConfigurationChanged(ComponentCallbacksController.java:91)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.window.WindowContext.dispatchConfigurationChanged(WindowContext.java:142)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChangedInner(WindowTokenClient.java:205)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:155)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:112)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.window.WindowTokenClientController.onWindowContextInfoChanged(WindowTokenClientController.java:207)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.ActivityThread.handleWindowContextInfoChanged(ActivityThread.java:6595)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.servertransaction.WindowContextInfoChangeItem.execute(WindowContextInfoChangeItem.java:45)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:35.780  1281  1281 E Overrides: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:35.781  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.781  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- removeAllViews(ViewGroup.java:5740) <- recreateTaskbar(TaskbarManager.java:486) <- onConfigurationChanged(TaskbarManager.java:273) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- executeNonLifecycleItem(TransactionExecutor.java:174) <- executeTransactionItems(TransactionExecutor.java:109) <- execute(TransactionExecutor.java:81) <- 
+11-06 17:45:35.781  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.781  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- addView(ViewGroup.java:5083) <- addView(ViewGroup.java:5025) <- addView(ViewGroup.java:4997) <- recreateTaskbar(TaskbarManager.java:487) <- onConfigurationChanged(TaskbarManager.java:273) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- executeNonLifecycleItem(TransactionExecutor.java:174) <- 
+11-06 17:45:35.781  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.781  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- recreateTaskbar(TaskbarManager.java:488) <- onConfigurationChanged(TaskbarManager.java:273) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- onConfigurationChanged(WindowTokenClient.java:112) <- onWindowContextInfoChanged(WindowTokenClientController.java:207) <- handleWindowContextInfoChanged(ActivityThread.java:6595) <- execute(WindowContextInfoChangeItem.java:45) <- 
+11-06 17:45:35.783  1281  1281 D b/254119092: DisplayController#onConfigurationChanged: {1.0 310mcc260mnc [en_US] ldltr sw411dp w411dp h914dp 420dpi nrml long port finger qwerty/v/v -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} as.2 s.223 fontWeightAdjustment=0}
+11-06 17:45:35.788  1281  1300 D LoaderTask: loadWorkspace
+11-06 17:45:35.789  1281  1300 D LoaderTask: Cancelled
+11-06 17:45:35.789  1281  1300 D LauncherProvider: migrateGridIfNeeded: no grid migration needed
+11-06 17:45:35.789  1281  1300 D LoaderTask: loadWorkspace: loading default favorites
+11-06 17:45:35.790  1281  1300 D LoaderTask: loadWorkspace: Packages with active install sessions: []
+11-06 17:45:35.792  1281  1281 W DisplayController: (CHANGE_SUPPORTED_BOUNDS) perDisplayBounds: {CachedDisplayInfo{size=Point(1080, 2400), cutout=DisplayCutout{insets=Rect(0, 0 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=0 displayHeight=0 physicalDisplayWidth=0 physicalDisplayHeight=0 density={0.0} cutoutSpec={} rotation={0} scale={0.0} physicalPixelDisplaySizeRatio={0.0}}} sideOverrides=null}, rotation=0}=[WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 63 - 0, 126), availableSize=Point(1080, 2211), rotationHint=0}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(0, 63 - 126, 0), availableSize=Point(2274, 1017), rotationHint=1}, WindowBounds{bounds=Rect(0, 0 - 1080, 2400), insets=Rect(0, 63 - 0, 126), availableSize=Point(1080, 2211), rotationHint=2}, WindowBounds{bounds=Rect(0, 0 - 2400, 1080), insets=Rect(126, 63 - 0, 0), availableSize=Point(2274, 1017), rotationHint=3}]}
+11-06 17:45:35.793   863   863 D ZenModeController: Removed callback class com.android.keyguard.ClockEventController$zenModeCallback$1
+11-06 17:45:35.793   863   863 E KeyguardClockSwitch: No clock being shown
+11-06 17:45:35.799  1281  1300 D LoaderTask: No pinned shortcuts found for user UserHandle{0}
+11-06 17:45:35.801   863   863 I ClockEventController: Region isDark: true
+11-06 17:45:35.801   863   863 D ZenModeController: Added callback class com.android.keyguard.ClockEventController$zenModeCallback$1
+11-06 17:45:35.804   863   863 W ConstraintSet: Unknown attribute 0x39   0
+11-06 17:45:35.805   863   863 W ConstraintSet: Unknown attribute 0x39   0
+11-06 17:45:35.805   863   863 W ConstraintSet: Unknown attribute 0x39   0
+11-06 17:45:35.806  1281  1281 D b/254119092: mActivity onDeviceProfileChanged
+11-06 17:45:35.806  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.811  1281  1281 D b/254119092: QuickstepLauncher#onDeviceProfileChanged
+11-06 17:45:35.811  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.811  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:35.811  1281  1281 D b/254119092: destroyExistingTaskbar: com.android.launcher3.taskbar.TaskbarActivityContext@1027b3
+11-06 17:45:35.811  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.812  1281  1281 D b/254119092: recreateTaskbar: isTaskbarEnabled=true [dp != null (i.e. mUserUnlocked)]=true FLAG_HIDE_NAVBAR_WINDOW=true dp.isTaskbarPresent=false
+11-06 17:45:35.812  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.820  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.messaging/com.android.messaging.ui.conversationlist.ConversationListActivity}
+11-06 17:45:35.824  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.dialer/com.android.dialer.main.impl.MainActivity}
+11-06 17:45:35.830  1281  1300 D LoaderTask: loadWorkspace
+11-06 17:45:35.832  1281  1300 D LoaderTask: Cancelled
+11-06 17:45:35.839  1281  1281 E Overrides: Bad overriden class
+11-06 17:45:35.839  1281  1281 E Overrides: java.lang.NoSuchMethodException: com.android.launcher3.taskbar.TaskbarModelCallbacksFactory.<init> [class android.content.Context]
+11-06 17:45:35.839  1281  1281 E Overrides: 	at java.lang.Class.getConstructor0(Class.java:3395)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at java.lang.Class.getDeclaredConstructor(Class.java:3077)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.ResourceBasedOverride$Overrides.getObject(ResourceBasedOverride.java:42)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarModelCallbacksFactory$Companion.newInstance(TaskbarModelCallbacksFactory.kt:35)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarModelCallbacksFactory.newInstance(Unknown Source:2)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewController.<init>(TaskbarViewController.java:163)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarActivityContext.<init>(TaskbarActivityContext.java:271)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager.recreateTaskbar(TaskbarManager.java:468)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager$RecreationListener.onDisplayInfoChanged(TaskbarManager.java:149)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.notifyChange(DisplayController.java:359)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.lambda$handleInfoChange$1(DisplayController.java:348)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.$r8$lambda$4AZl6xeZZDHYM1BXQm-fsw_rSZs(Unknown Source:0)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController$$ExternalSyntheticLambda3.run(D8$$SyntheticClass:0)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.LooperExecutor.execute(LooperExecutor.java:45)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.handleInfoChange(DisplayController.java:348)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.onConfigurationChanged(DisplayController.java:270)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController$$ExternalSyntheticLambda2.accept(D8$$SyntheticClass:0)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.forAllComponentCallbacks(ComponentCallbacksController.java:124)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.dispatchConfigurationChanged(ComponentCallbacksController.java:91)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.window.WindowContext.dispatchConfigurationChanged(WindowContext.java:142)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChangedInner(WindowTokenClient.java:205)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:155)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:112)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.window.WindowTokenClientController.onWindowContextInfoChanged(WindowTokenClientController.java:207)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.ActivityThread.handleWindowContextInfoChanged(ActivityThread.java:6595)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.servertransaction.WindowContextInfoChangeItem.execute(WindowContextInfoChangeItem.java:45)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:35.839  1281  1281 E Overrides: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:35.843  1281  1281 E Overrides: Bad overriden class
+11-06 17:45:35.843  1281  1281 E Overrides: java.lang.NoSuchMethodException: com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.<init> [class android.content.Context]
+11-06 17:45:35.843  1281  1281 E Overrides: 	at java.lang.Class.getConstructor0(Class.java:3395)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at java.lang.Class.getDeclaredConstructor(Class.java:3077)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.ResourceBasedOverride$Overrides.getObject(ResourceBasedOverride.java:42)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory$Companion.newInstance(TaskbarViewCallbacksFactory.kt:36)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewCallbacksFactory.newInstance(Unknown Source:2)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarViewController.init(TaskbarViewController.java:177)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarControllers.init(TaskbarControllers.java:156)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarActivityContext.init(TaskbarActivityContext.java:367)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager.recreateTaskbar(TaskbarManager.java:477)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.taskbar.TaskbarManager$RecreationListener.onDisplayInfoChanged(TaskbarManager.java:149)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.notifyChange(DisplayController.java:359)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.lambda$handleInfoChange$1(DisplayController.java:348)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.$r8$lambda$4AZl6xeZZDHYM1BXQm-fsw_rSZs(Unknown Source:0)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController$$ExternalSyntheticLambda3.run(D8$$SyntheticClass:0)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.LooperExecutor.execute(LooperExecutor.java:45)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.handleInfoChange(DisplayController.java:348)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.launcher3.util.DisplayController.onConfigurationChanged(DisplayController.java:270)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController$$ExternalSyntheticLambda2.accept(D8$$SyntheticClass:0)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.forAllComponentCallbacks(ComponentCallbacksController.java:124)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.content.ComponentCallbacksController.dispatchConfigurationChanged(ComponentCallbacksController.java:91)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.window.WindowContext.dispatchConfigurationChanged(WindowContext.java:142)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChangedInner(WindowTokenClient.java:205)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:155)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.window.WindowTokenClient.onConfigurationChanged(WindowTokenClient.java:112)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.window.WindowTokenClientController.onWindowContextInfoChanged(WindowTokenClientController.java:207)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.ActivityThread.handleWindowContextInfoChanged(ActivityThread.java:6595)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.servertransaction.WindowContextInfoChangeItem.execute(WindowContextInfoChangeItem.java:45)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:35.843  1281  1281 E Overrides: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:35.844  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.844  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- removeAllViews(ViewGroup.java:5740) <- recreateTaskbar(TaskbarManager.java:486) <- onDisplayInfoChanged(TaskbarManager.java:149) <- notifyChange(DisplayController.java:359) <- lambda$handleInfoChange$1(DisplayController.java:348) <- $r8$lambda$4AZl6xeZZDHYM1BXQm-fsw_rSZs(null:0) <- run(D8$$SyntheticClass:0) <- execute(LooperExecutor.java:45) <- handleInfoChange(DisplayController.java:348) <- onConfigurationChanged(DisplayController.java:270) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- onConfigurationChangedInner(WindowTokenClient.java:205) <- onConfigurationChanged(WindowTokenClient.java:155) <- 
+11-06 17:45:35.844  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.844  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- addView(ViewGroup.java:5083) <- addView(ViewGroup.java:5025) <- addView(ViewGroup.java:4997) <- recreateTaskbar(TaskbarManager.java:487) <- onDisplayInfoChanged(TaskbarManager.java:149) <- notifyChange(DisplayController.java:359) <- lambda$handleInfoChange$1(DisplayController.java:348) <- $r8$lambda$4AZl6xeZZDHYM1BXQm-fsw_rSZs(null:0) <- run(D8$$SyntheticClass:0) <- execute(LooperExecutor.java:45) <- handleInfoChange(DisplayController.java:348) <- onConfigurationChanged(DisplayController.java:270) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- dispatchConfigurationChanged(WindowContext.java:142) <- 
+11-06 17:45:35.844  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:35.845  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- setLayoutParams(View.java:20530) <- updateViewLayout(WindowManagerGlobal.java:464) <- updateViewLayout(WindowManagerImpl.java:165) <- notifyUpdateLayoutParams(TaskbarActivityContext.java:1528) <- recreateTaskbar(TaskbarManager.java:488) <- onDisplayInfoChanged(TaskbarManager.java:149) <- notifyChange(DisplayController.java:359) <- lambda$handleInfoChange$1(DisplayController.java:348) <- $r8$lambda$4AZl6xeZZDHYM1BXQm-fsw_rSZs(null:0) <- run(D8$$SyntheticClass:0) <- execute(LooperExecutor.java:45) <- handleInfoChange(DisplayController.java:348) <- onConfigurationChanged(DisplayController.java:270) <- lambda$dispatchConfigurationChanged$0(ComponentCallbacksController.java:91) <- accept(D8$$SyntheticClass:0) <- forAllComponentCallbacks(ComponentCallbacksController.java:124) <- dispatchConfigurationChanged(ComponentCallbacksController.java:91) <- 
+11-06 17:45:35.845  1281  1281 W SplitSelectStateCtor: Missing session instanceIds
+11-06 17:45:35.845  1281  1281 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-06 17:45:35.845  1281  1281 D BaseDepthController: setSurface:
+11-06 17:45:35.845  1281  1281 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-06 17:45:35.845  1281  1281 D BaseDepthController: 	mSurface: null
+11-06 17:45:35.845  1281  1281 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-06 17:45:35.845  1281  1281 D StatsLog: LAUNCHER_ONSTOP
+11-06 17:45:35.847  1281  1281 D b/254119092: unregistering activity lifecycle callbacks from onActivityDestroyed.
+11-06 17:45:35.847  1281  1281 D b/254119092: clearActivity
+11-06 17:45:35.847  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:35.849  1281  1281 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=com.android.launcher3.uioverrides.QuickstepLauncher$2@3dba8ee
+11-06 17:45:35.851  1281  1281 D RecentsView: reset - mEnableDrawingLiveTile: false, mRecentsAnimationController: null
+11-06 17:45:35.852   863   863 D DisplayRepository: combining enabled=[0], connectedExternalDisplayIds=[], ignored=[]
+11-06 17:45:35.855   863   866 W ndroid.systemui: Missing inline cache for void com.android.systemui.statusbar.policy.Clock$2$$ExternalSyntheticLambda0.run()
+11-06 17:45:35.856   537  1842 W InputManager-JNI: Input channel object 'c6dc167 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher (client)' was disposed without first being removed with the input manager!
+11-06 17:45:35.859  1281  1300 D LauncherProvider: migrateGridIfNeeded: no grid migration needed
+11-06 17:45:35.859  1281  1300 D LoaderTask: loadWorkspace: loading default favorites
+11-06 17:45:35.859  1281  1300 D LoaderTask: loadWorkspace: Packages with active install sessions: []
+11-06 17:45:35.860  1281  1300 D LoaderTask: No pinned shortcuts found for user UserHandle{0}
+11-06 17:45:35.886  1281  1281 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-06 17:45:35.891   863   863 D DefaultDeviceEntrySection: isUdfpsSupported=false
+11-06 17:45:35.892   537   778 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 0]
+11-06 17:45:35.896  1281  1281 D b/267448330: provider: ComponentInfo{com.android.quicksearchbox/com.android.quicksearchbox.SearchWidgetProvider}, paddedSizes: [382.09525x136.38095, 382.09525x136.38095, 732.5714x62.095238, 732.5714x62.095238], getMinMaxSizes: Rect(382, 62 - 732, 136)
+11-06 17:45:35.923   863   863 D DefaultDeviceEntrySection: isUdfpsSupported=false
+11-06 17:45:35.923  1281  1281 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+11-06 17:45:35.923  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:35.925   863   863 I ThemeOverlayController: Wallpaper changed from background app, keep deferring color events. Accepting: true
+11-06 17:45:35.941  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.messaging/com.android.messaging.ui.conversationlist.ConversationListActivity}
+11-06 17:45:35.944  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{org.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity}
+11-06 17:45:35.948  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.dialer/com.android.dialer.main.impl.MainActivity}
+11-06 17:45:35.950   863  1305 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-06 17:45:35.951  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}
+11-06 17:45:35.952  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:35.956   863  1305 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-06 17:45:35.960   863  1305 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-06 17:45:35.964   863  1305 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-06 17:45:35.964  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.gallery3d/com.android.gallery3d.app.GalleryActivity}
+11-06 17:45:35.973  1281  1300 D LoaderTask: loadWorkspace
+11-06 17:45:35.973  1281  1300 D LoaderTask: Cancelled
+11-06 17:45:35.973  1281  1300 D LauncherProvider: migrateGridIfNeeded: no grid migration needed
+11-06 17:45:35.973  1281  1300 D LoaderTask: loadWorkspace: loading default favorites
+11-06 17:45:35.979  1281  1300 D LoaderTask: loadWorkspace: Packages with active install sessions: []
+11-06 17:45:35.980  1281  1300 D LoaderTask: No pinned shortcuts found for user UserHandle{0}
+11-06 17:45:35.996  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.messaging/com.android.messaging.ui.conversationlist.ConversationListActivity}
+11-06 17:45:35.998  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{org.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity}
+11-06 17:45:35.999  1281  1281 D OverviewActionsView: updateActionButtonsVisibility() called: showSingleTaskActions = [true], showGroupActions = [false]
+11-06 17:45:36.002  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.dialer/com.android.dialer.main.impl.MainActivity}
+11-06 17:45:36.005  1281  1281 W SplitSelectStateCtor: Missing session instanceIds
+11-06 17:45:36.006  1281  1281 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-06 17:45:36.011  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}
+11-06 17:45:36.020  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.gallery3d/com.android.gallery3d.app.GalleryActivity}
+11-06 17:45:36.024  1281  1281 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=28, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }
+11-06 17:45:36.029  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 74, 57463, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.036  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: PRE_ON_CREATE
+11-06 17:45:36.036  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-06 17:45:36.048  2260  2260 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missed SF frame:UNKNOWN: 74, 57463, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missing HWUI jank callback for vsyncId: 57463, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 74, 57523, 435156304, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missed SF frame:UNKNOWN: 74, 57523, 435156304, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 72, 57561, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.050  1281  1281 W FrameTracker: Missing HWUI jank callback for vsyncId: 57561, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:36.051  1281  1281 D TISBindHelper: TIS service connected
+11-06 17:45:36.051  1281  1281 D b/254119092: Set mActivity=com.android.launcher3.uioverrides.QuickstepLauncher@d978fb1
+11-06 17:45:36.051  1281  1281 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-06 17:45:36.051  1281  1281 D b/254119092: registering activity lifecycle callbacks from setActivity().
+11-06 17:45:36.052  1281  1295 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-78 - not enough time since last trigger
+11-06 17:45:36.110  1281  1300 D LoaderTask: loadWorkspace
+11-06 17:45:36.121  1281  1286 I droid.launcher3: Background concurrent mark compact GC freed 5326KB AllocSpace bytes, 10(324KB) LOS objects, 49% free, 6581KB/12MB, paused 10.107ms,1.014ms total 135.475ms
+11-06 17:45:36.128  1281  1300 D LoaderTask: sanitizeData
+11-06 17:45:36.128  1281  1300 D LoaderTask: bindWorkspace
+11-06 17:45:36.129  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/messaging/messaging.apk' with 1 weak references
+11-06 17:45:36.129  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Dialer/Dialer.apk' with 1 weak references
+11-06 17:45:36.129  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Browser2/Browser2.apk' with 1 weak references
+11-06 17:45:36.130  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Camera2/Camera2.apk' with 1 weak references
+11-06 17:45:36.130  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Gallery2/Gallery2.apk' with 1 weak references
+11-06 17:45:36.131  1281  1300 D LoaderTask: sendFirstScreenBroadcast
+11-06 17:45:36.147  1281  1281 D View    : ---- ST:requestLayout 
+11-06 17:45:36.152  1281  1281 D View    : requestLayout : getStackTrace(Thread.java:1841) <- printStackStrace(View.java:27969) <- requestLayout(View.java:27999) <- requestLayout(View.java:28020) <- requestLayout(View.java:28020) <- addView(ViewGroup.java:5083) <- updateHotseatItems(TaskbarView.java:387) <- commitHotseatItemUpdates(TaskbarModelCallbacks.java:252) <- commitItemsToUI(TaskbarModelCallbacks.java:246) <- finishBindingItems(TaskbarModelCallbacks.java:127) <- lambda$setupPendingBind$7(BaseLauncherBinder.java:392) <- execute(D8$$SyntheticClass:0) <- lambda$executeCallbacksTask$12(BaseLauncherBinder.java:438) <- $r8$lambda$umQLNsNI7i4lWsibkNEoPx-Ldyo(null:0) <- run(D8$$SyntheticClass:0) <- executeAllAndClear(RunnableList.java:68) <- executeAllAndDestroy(RunnableList.java:56) <- onInitialBindComplete(BgDataModel.java:548) <- lambda$bind$5(BaseLauncherBinder.java:381) <- execute(D8$$SyntheticClass:0) <- 
+11-06 17:45:36.155  1281  1281 D ModelCallbacks: startBinding: hotseat layout was vertical: false and is setting to false
+11-06 17:45:36.159  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: CREATED
+11-06 17:45:36.159  2260  2260 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:36.160  2260  2260 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-06 17:45:36.161  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: STARTED
+11-06 17:45:36.161  2260  2260 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:36.162  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: RESUMED
+11-06 17:45:36.162  2260  2260 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:36.168  1281  1281 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 0 and y = 0
+11-06 17:45:36.168  1281  1281 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 1 and y = 0
+11-06 17:45:36.168  1281  1281 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 3 and y = 0
+11-06 17:45:36.168  1281  1281 D Launcher.Workspace: addInScreenFromBind: hotseat inflation with x = 4 and y = 0
+11-06 17:45:36.171  2260  2260 D StrictMode: StrictMode policy violation; ~duration=9 ms: android.os.strictmode.DiskReadViolation
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:128)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda4.onChanged(D8$$SyntheticClass:0)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:36.171  2260  2260 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:36.174  2260  2260 D StrictMode: StrictMode policy violation; ~duration=9 ms: android.os.strictmode.DiskReadViolation
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:128)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda4.onChanged(D8$$SyntheticClass:0)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-06 17:45:36.174  2260  2260 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-06 17:45:36.175  1281  1281 D BaseDepthController: setSurface:
+11-06 17:45:36.175  1281  1281 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-06 17:45:36.175  1281  1281 D BaseDepthController: 	mSurface: Surface(name=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher)/@0x9912963
+11-06 17:45:36.177  2260  2260 D TrackRecordingService: Create
+11-06 17:45:36.178  2260  2260 I TrackRecordingService: new status null -> RecordingStatus[trackId=null]
+11-06 17:45:36.244  2260  2260 D AutofillManager: notifyViewReadyInner:1073741825
+11-06 17:45:36.254  2260  2260 D AutofillManager: notifyViewReadyInner:1073741826
+11-06 17:45:36.255  2260  2260 D AutofillManager: notifyViewReadyInner:1073741824
+11-06 17:45:36.582  2260  2260 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@1569c6a
+11-06 17:45:36.623   537   563 W ziparchive: Unable to open '/data/app/~~uMU1j_W7DESCBktn4hAimg==/com.fox.runner.debug-wkt2L_CF3e2JG6WJF1rNnA==/base.dm': No such file or directory
+11-06 17:45:36.623   537   563 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity for user 0: +961ms
+11-06 17:45:36.860   537   648 I ImeTracker: com.fox.runner.debug:ee9ba3ed: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-06 17:45:36.867   537   648 I ImeTracker: com.fox.runner.debug:ee9ba3ed: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-06 17:45:37.020   342   342 I netd    : tetherGetStats() -> {[]} <0.32ms>
+11-06 17:45:37.039   537   550 I system_server: NativeAlloc concurrent mark compact GC freed 6135KB AllocSpace bytes, 6(120KB) LOS objects, 50% free, 18MB/37MB, paused 521us,1.472ms total 496.482ms
+11-06 17:45:37.048   537   551 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-06 17:45:37.055   537   555 W InputManager-JNI: Input channel object '536d4ef Splash Screen com.fox.runner.debug (client)' was disposed without first being removed with the input manager!
+11-06 17:45:37.073   537   552 W system_server: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~E2igAUEbdEdfU7CcyNL6og==/com.fox.runner.debug.test-McfHSIfoj5b2xkaTFMKFPw==/base.apk' with 1 weak references
+11-06 17:45:37.131  1281  1742 E SurfaceSyncGroup: Failed to receive transaction ready in 1000ms. Marking SurfaceSyncGroup(SysUIAnimation#52) as ready
+11-06 17:45:37.132   863   954 W FrameTracker: Missed App frame:UNKNOWN: 10, 58538, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 10, 58538, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 58538, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missed App frame:UNKNOWN: 88, 58560, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 88, 58560, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 58560, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.132   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 58575, 166847108, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 58575, 166847108, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 58582, 215938287, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 58582, 215938287, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 58605, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 58605, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 58605, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   954 W FrameTracker: Missing SF jank callback for vsyncId: 58621, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:37.139   863   922 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-39 - not enough time since last trigger
+11-06 17:45:37.176  2260  2863 W ox.runner.debug: Accessing hidden method Landroid/view/ViewConfiguration;->getDoubleTapMinTime()I (unsupported, reflection, allowed)
+11-06 17:45:37.188  2341  2341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@f858cc
+11-06 17:45:37.194  2260  2260 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296871/com.fox.runner.debug:id/p0_all_history>
+11-06 17:45:37.198   537  1043 W InputManager-JNI: Input channel object 'dad0e29 com.fox.runner.debug.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+11-06 17:45:37.257  1281  2436 I HWUI    : Davey! duration=1034ms; Flags=1, FrameTimelineVsyncId=58264, IntendedVsync=170534207127, Vsync=170534207127, InputEventId=0, HandleInputStart=170547051864, AnimationStart=170547052094, PerformTraversalsStart=170549714032, DrawStart=170553050516, FrameDeadline=170550873793, FrameInterval=170547050241, FrameStartTime=16666666, SyncQueued=170553566215, SyncStart=170555522742, IssueDrawCommandsStart=170566261731, SwapBuffers=170567698954, FrameCompleted=171570787166, DequeueBufferDuration=3055, QueueBufferDuration=149783, GpuCompleted=171570787166, SwapBuffersCompleted=170577014050, DisplayPresentTime=72904454231359566, CommandSubmissionCompleted=170567698954, 
+11-06 17:45:37.289  1281  1281 I Choreographer: Skipped 62 frames!  The application may be doing too much work on its main thread.
+11-06 17:45:37.322  2260  2882 W ox.runner.debug: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+11-06 17:45:37.342  1281  1281 D VRI[QuickstepLauncher]: visibilityChanged oldVisibility=true newVisibility=false
+11-06 17:45:37.344  1281  1491 D EGL_emulation: app_time_stats: avg=99.64ms min=76.97ms max=126.08ms count=3
+11-06 17:45:37.346  1281  1281 D BaseDepthController: setSurface:
+11-06 17:45:37.346  1281  1281 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-06 17:45:37.346  1281  1281 D BaseDepthController: 	mSurface: null
+11-06 17:45:37.346  1281  1281 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-06 17:45:37.347  1281  1281 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-06 17:45:37.347  1281  1281 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:453)
+11-06 17:45:37.347  1281  1281 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:444)
+11-06 17:45:37.347  1281  1281 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(StatefulActivity.java:119)
+11-06 17:45:37.347  1281  1281 D StatsLog: LAUNCHER_ONSTOP
+11-06 17:45:37.352  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=27
+11-06 17:45:37.352  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=27
+11-06 17:45:37.355  1281  1300 D LoaderTask: step 1 complete
+11-06 17:45:37.366  1281  1548 I HWUI    : Davey! duration=1055ms; Flags=0, FrameTimelineVsyncId=58360, IntendedVsync=170617540457, Vsync=171650873749, InputEventId=0, HandleInputStart=171667433573, AnimationStart=171667433884, PerformTraversalsStart=171668060768, DrawStart=171668131704, FrameDeadline=170634207123, FrameInterval=171667028079, FrameStartTime=16666666, SyncQueued=171668241808, SyncStart=171717009049, IssueDrawCommandsStart=171717089899, SwapBuffers=171717520641, FrameCompleted=171722087910, DequeueBufferDuration=6339, QueueBufferDuration=1196594, GpuCompleted=171721466994, SwapBuffersCompleted=171722087910, DisplayPresentTime=0, CommandSubmissionCompleted=171717520641, 
+11-06 17:45:37.377   409   424 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-06 17:45:37.378   537   555 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-06 17:45:37.384   409   510 D AudioFlinger: mixer(0x76e14e26d8e0) throttle end: throttle time(7)
+11-06 17:45:37.388   537  1043 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@7f1b3e6, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-06 17:45:37.400  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.messaging/com.android.messaging.ui.conversationlist.ConversationListActivity}
+11-06 17:45:37.407   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-06 17:45:37.408  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.fox.runner.debug/de.dennisguse.opentracks.introduction.IntroductionActivity}
+11-06 17:45:37.409  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{org.chromium.webview_shell/org.chromium.webview_shell.WebViewBrowserActivity}
+11-06 17:45:37.416  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.documentsui/com.android.documentsui.LauncherActivity}
+11-06 17:45:37.425  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.deskclock/com.android.deskclock.DeskClock}
+11-06 17:45:37.430  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.calendar/com.android.calendar.AllInOneActivity}
+11-06 17:45:37.435  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.dialer/com.android.dialer.main.impl.MainActivity}
+11-06 17:45:37.437  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.camera2/com.android.camera.CameraLauncher}
+11-06 17:45:37.451  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.contacts/com.android.contacts.activities.PeopleActivity}
+11-06 17:45:37.453  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.stk/com.android.stk.StkMain}
+11-06 17:45:37.459  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.settings/com.android.settings.Settings}
+11-06 17:45:37.463  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.gallery3d/com.android.gallery3d.app.GalleryActivity}
+11-06 17:45:37.467  1281  1300 I Launcher.IconCache: Database bulk icon loading failed, using fallback bulk icon loading for: ComponentInfo{com.android.quicksearchbox/com.android.quicksearchbox.SearchActivity}
+11-06 17:45:37.469  1281  1300 D LoaderTask: loadAllApps
+11-06 17:45:37.470  1281  1300 D LoaderTask: bindAllApps
+11-06 17:45:37.470  1281  1281 D StatsLog: LAUNCHER_ALLAPPS_COUNT
+11-06 17:45:37.477  1281  1300 D LoaderTask: update icon cache
+11-06 17:45:37.477  1281  1300 D LoaderTask: save shortcuts in icon cache
+11-06 17:45:37.477  1281  1300 D LoaderTask: step 2 complete
+11-06 17:45:37.477  1281  1300 D LoaderTask: loadDeepShortcuts
+11-06 17:45:37.477  1281  1300 D LoaderTask: bindDeepShortcuts
+11-06 17:45:37.477  1281  1300 D LoaderTask: save deep shortcuts in icon cache
+11-06 17:45:37.478  1281  1300 D LoaderTask: step 3 complete
+11-06 17:45:37.479  1281  1300 W PackageManager: Failure retrieving text 0x7f130725 in package com.android.systemui
+11-06 17:45:37.479  1281  1300 W PackageManager: android.content.res.Resources$NotFoundException: String resource ID #0x7f130725
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.content.res.Resources.getText(Resources.java:466)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.app.ApplicationPackageManager.getText(ApplicationPackageManager.java:2405)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.appwidget.AppWidgetProviderInfo.loadDescription(AppWidgetProviderInfo.java:484)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at com.android.launcher3.model.WidgetItem.<init>(WidgetItem.java:51)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at com.android.launcher3.model.WidgetsModel.update(WidgetsModel.java:175)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at com.android.launcher3.model.LoaderTask.run(LoaderTask.java:332)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.os.Looper.loop(Looper.java:317)
+11-06 17:45:37.479  1281  1300 W PackageManager: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+11-06 17:45:37.525  1281  1300 D LoaderTask: load widgets
+11-06 17:45:37.527  1281  1300 D LoaderTask: bindWidgets
+11-06 17:45:37.527  1281  1300 D LoaderTask: save widgets in icon cache
+11-06 17:45:37.527  1281  1300 D LoaderTask: finish icon update
+11-06 17:45:37.528   537  2824 W Binder  : Caught a RuntimeException from the binder stub implementation.
+11-06 17:45:37.528   537  2824 W Binder  : java.lang.SecurityException: Need REGISTER_STATS_PULL_ATOM permission.: Neither user 10121 nor current process has android.permission.REGISTER_STATS_PULL_ATOM.
+11-06 17:45:37.528   537  2824 W Binder  : 	at android.app.ContextImpl.enforce(ContextImpl.java:2389)
+11-06 17:45:37.528   537  2824 W Binder  : 	at android.app.ContextImpl.enforceCallingOrSelfPermission(ContextImpl.java:2417)
+11-06 17:45:37.528   537  2824 W Binder  : 	at com.android.server.stats.StatsManagerService.enforceRegisterStatsPullAtomPermission(StatsManagerService.java:678)
+11-06 17:45:37.528   537  2824 W Binder  : 	at com.android.server.stats.StatsManagerService.registerPullAtomCallback(StatsManagerService.java:219)
+11-06 17:45:37.528   537  2824 W Binder  : 	at android.os.IStatsManagerService$Stub.onTransact(IStatsManagerService.java:430)
+11-06 17:45:37.528   537  2824 W Binder  : 	at android.os.Binder.execTransactInternal(Binder.java:1505)
+11-06 17:45:37.528   537  2824 W Binder  : 	at android.os.Binder.execTransact(Binder.java:1444)
+11-06 17:45:37.528  1281  1300 D QuickstepModelDelegate: Successfully registered for launcher snapshot logging!
+11-06 17:45:37.543   409   510 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-06 17:45:37.621  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: PAUSED
+11-06 17:45:37.621  2260  2260 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:37.681  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: PRE_ON_CREATE
+11-06 17:45:37.681  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:37.690  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: CREATED
+11-06 17:45:37.690  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:37.691  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: STARTED
+11-06 17:45:37.691  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:37.692  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: RESUMED
+11-06 17:45:37.692  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:37.757  2260  2294 D EGL_emulation: app_time_stats: avg=70.40ms min=7.19ms max=368.53ms count=15
+11-06 17:45:37.842  1281  1300 W PackageManager: Failure retrieving resources for com.android.systemui: Drawable com.android.systemui:drawable/ic_bubbles_shortcut_widget with resource ID #0x7f0806c9
+11-06 17:45:37.842  1281  1300 W PackageManager: Failure retrieving resources for com.android.systemui: Drawable com.android.systemui:drawable/android15_patch_adaptive with resource ID #0x7f0805e2
+11-06 17:45:37.866   537   563 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity for user 0: +449ms
+11-06 17:45:38.274  1281  1286 I droid.launcher3: Background concurrent mark compact GC freed 2410KB AllocSpace bytes, 38(3208KB) LOS objects, 49% free, 7406KB/14MB, paused 186us,1.335ms total 110.245ms
+11-06 17:45:38.330  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/messaging/messaging.apk' with 1 weak references
+11-06 17:45:38.334  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~uMU1j_W7DESCBktn4hAimg==/com.fox.runner.debug-wkt2L_CF3e2JG6WJF1rNnA==/base.apk' with 1 weak references
+11-06 17:45:38.334  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Browser2/Browser2.apk' with 1 weak references
+11-06 17:45:38.334  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/DocumentsUI/DocumentsUI.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/DeskClock/DeskClock.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Calendar/Calendar.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Dialer/Dialer.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Camera2/Camera2.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/priv-app/Contacts/Contacts.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/Stk/Stk.apk' with 1 weak references
+11-06 17:45:38.335  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/Settings/Settings.apk' with 1 weak references
+11-06 17:45:38.336  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/Gallery2/Gallery2.apk' with 1 weak references
+11-06 17:45:38.336  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '<empty> and /system_ext/priv-app/SystemUI/SystemUI.apk' with 1 weak references
+11-06 17:45:38.337  1281  1288 W droid.launcher3: ApkAssets: Deleting an ApkAssets object '/vendor/overlay/SystemUI__sdk_phone64_x86_64__auto_generated_rro_vendor.apk' with 1 weak references
+11-06 17:45:38.350   537   648 I ImeTracker: com.fox.runner.debug:85817803: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-06 17:45:38.351   537   648 I ImeTracker: com.fox.runner.debug:85817803: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-06 17:45:38.620  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: PAUSED
+11-06 17:45:38.621  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:38.627  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: RESUMED
+11-06 17:45:38.627  2260  2260 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:38.632  2260  2260 D RootViewPicker: Root not ready - waiting: 10ms for one to appear.
+11-06 17:45:38.643  2260  2260 D RootViewPicker: Root not ready - waiting: 25ms for one to appear.
+11-06 17:45:38.674  2260  2260 D RootViewPicker: Root not ready - waiting: 50ms for one to appear.
+11-06 17:45:38.762   537   648 I ImeTracker: com.fox.runner.debug:a432a660: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-06 17:45:38.763   537   648 I ImeTracker: com.fox.runner.debug:a432a660: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-06 17:45:38.789  2260  2294 D EGL_emulation: app_time_stats: avg=61.07ms min=19.75ms max=403.15ms count=16
+11-06 17:45:38.920  2260  2260 I ViewInteraction: Performing 'scroll to' action on view view.getId() is <2131296876/com.fox.runner.debug:id/p0_devices>
+11-06 17:45:38.924  2260  2260 I ScrollToAction: View is already displayed. Returning.
+11-06 17:45:38.928  2260  2260 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296876/com.fox.runner.debug:id/p0_devices>
+11-06 17:45:38.930   537   641 D InputDispatcher: No new touched window at (948.5, 1038.5) in display 0
+11-06 17:45:38.930   537   641 I InputDispatcher: Dropping event because there is no touchable window at (948.5, 1038.5) on display 0.
+11-06 17:45:38.971   537  2824 I InputDispatcher:   DispatchEnabled: true
+11-06 17:45:38.972   537  2824 I InputDispatcher:   DispatchFrozen: false
+11-06 17:45:38.972   537  2824 I InputDispatcher:   InputFilterEnabled: false
+11-06 17:45:38.972   537  2824 I InputDispatcher:   FocusedDisplayId: 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:   FocusedApplications:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     displayId=0, name='ActivityRecord{c75bb82 u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity t28}', dispatchingTimeout=60000ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:   FocusedWindows:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     displayId=0, name='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity'
+11-06 17:45:38.972   537  2824 I InputDispatcher:   FocusRequests:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     displayId=0, name='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity' result='OK'
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Pointer Capture Requested: false
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Current Window with Pointer Capture: None
+11-06 17:45:38.972   537  2824 I InputDispatcher:   TouchStates: <no displays touched>
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Display: 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:     logicalSize=1080x2400
+11-06 17:45:38.972   537  2824 I InputDispatcher:         transform (ROT_0) (IDENTITY)
+11-06 17:45:38.972   537  2824 I InputDispatcher:     Windows:
+11-06 17:45:38.972   537  2824 I InputDispatcher:       0: name=75bf98f Taskbar, id=92, displayId=0, inputConfig=NOT_FOCUSABLE | TRUSTED_OVERLAY | SLIPPERY, alpha=1, frame=[0,2274][1080,2400], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[0,2274][1080,2400], ownerPid=1281, ownerUid=10121, dispatchingTimeout=5000ms, token=0x70876b7daa50, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         1.0000  0.0000  -0.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  1.0000  -2274.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:       1: name=e9809be StatusBar, id=82, displayId=0, inputConfig=NOT_FOCUSABLE | TRUSTED_OVERLAY, alpha=1, frame=[0,0][1080,63], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[0,0][1080,63], ownerPid=863, ownerUid=10120, dispatchingTimeout=5000ms, token=0x70876b7d8a10, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (IDENTITY)
+11-06 17:45:38.972   537  2824 I InputDispatcher:       2: name=4c0672a com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity, id=751, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE | PREVENT_SPLITTING, alpha=0.819336, frame=[30,0][1110,2400], globalScale=1, applicationInfo.name=ActivityRecord{989f38c u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity t28}, applicationInfo.token=0x70862b803870, touchableRegion=<empty>, ownerPid=2260, ownerUid=10148, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=USE_OPACITY, canOccludePresentation
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         1.0000  0.0000  -30.4085
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:       3: name=aa240bf ActivityRecordInputSink com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity, id=757, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=0.819336, frame=[30,0][30,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-221,0][1110,2400], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         1.0000  0.0000  -30.4085
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:       4: name=5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity, id=740, displayId=0, inputConfig=0x0, alpha=1, frame=[-221,0][858,2400], globalScale=1, applicationInfo.name=ActivityRecord{c75bb82 u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity t28}, applicationInfo.token=0x70862b815a50, touchableRegion=[-221,0][859,2400], ownerPid=2260, ownerUid=10148, dispatchingTimeout=60000ms, token=0x70876b7cf5d0, touchOcclusionMode=USE_OPACITY, canOccludePresentation
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         1.0000  0.0000  221.5915
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:       5: name=6fcf6cd ActivityRecordInputSink com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity, id=736, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=1, frame=[-221,0][-221,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-221,0][1110,2400], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         1.0000  0.0000  221.5915
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:       6: name=b140aca ActivityRecordInputSink com.android.launcher3/.uioverrides.QuickstepLauncher, id=97, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_VISIBLE | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=1, frame=[0,0][0,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-15999,-25599][16000,25600], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (IDENTITY)
+11-06 17:45:38.972   537  2824 I InputDispatcher:       7: name=daa33fc com.android.systemui.wallpapers.ImageWallpaper, id=63, displayId=0, inputConfig=NOT_VISIBLE | NOT_FOCUSABLE | NOT_TOUCHABLE | PREVENT_SPLITTING | IS_WALLPAPER, alpha=1, frame=[-53,-119][-53,-119], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=<empty>, ownerPid=863, ownerUid=10120, dispatchingTimeout=5000ms, token=0x70876b7d6150, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:38.972   537  2824 I InputDispatcher:     transform (ROT_0) (SCALE TRANSLATE)
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.3879  -0.0000  20.9449
+11-06 17:45:38.972   537  2824 I InputDispatcher:         -0.0000  0.3879  46.5455
+11-06 17:45:38.972   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Global monitors on display 0:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     0: 'PointerEventDispatcher0 (server)', 
+11-06 17:45:38.972   537  2824 I InputDispatcher:   RecentQueue: length=10
+11-06 17:45:38.972   537  2824 I InputDispatcher:     DeviceResetEvent(deviceId=12), policyFlags=0x00000000, age=3544ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=3096ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=2283ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=171573000000, source=TOUCHSCREEN, displayId=0, action=DOWN, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (974.5, 146.5)]), policyFlags=0x6b000000, age=1776ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=171723000000, source=TOUCHSCREEN, displayId=0, action=UP, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (974.5, 146.5)]), policyFlags=0x6b000000, age=1626ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=1275ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=643ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=296ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=244ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=173306000000, source=TOUCHSCREEN, displayId=0, action=DOWN, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (948.5, 1038.5)]), policyFlags=0x6b000000, age=43ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:   PendingEvent: <none>
+11-06 17:45:38.972   537  2824 I InputDispatcher:   InboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:   CommandQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Connections:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     334: channelName='4c0672a com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     339: channelName='5e269a3 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     485: channelName='9f3548a ScreenDecorOverlay (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     546: channelName='75bf98f Taskbar (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     467: channelName='f831e94 InputMethod (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     142: channelName='daa33fc com.android.systemui.wallpapers.ImageWallpaper (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     522: channelName='recents_animation_input_consumer (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     478: channelName='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     328: channelName='192da40 ShellDropTarget (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     496: channelName='e9809be StatusBar (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     493: channelName='b10cd27 NotificationShade (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     487: channelName='5d59bf ScreenDecorOverlayBottom (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:     422: channelName='PointerEventDispatcher0 (server)', status=NORMAL, monitor=true, responsive=true
+11-06 17:45:38.972   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:38.972   537  2824 I InputDispatcher:   TouchModePerDisplay:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     Display: 0 TouchMode: 1
+11-06 17:45:38.972   537  2824 I InputDispatcher:   Configuration:
+11-06 17:45:38.972   537  2824 I InputDispatcher:     KeyRepeatDelay: 50ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     KeyRepeatTimeout: 400ms
+11-06 17:45:38.972   537  2824 I InputDispatcher:     LatencyTracker:
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mTimelines.size() = 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mEventTimes.size() = 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:     LatencyAggregator:
+11-06 17:45:38.972   537  2824 I InputDispatcher:       Sketches:
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[0]->num_values = 0 size = 0.0KB mMoveSketches[0]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[1]->num_values = 0 size = 0.0KB mMoveSketches[1]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[2]->num_values = 0 size = 0.0KB mMoveSketches[2]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[3]->num_values = 0 size = 0.0KB mMoveSketches[3]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[4]->num_values = 0 size = 0.0KB mMoveSketches[4]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[5]->num_values = 0 size = 0.0KB mMoveSketches[5]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:         mDownSketches[6]->num_values = 0 size = 0.0KB mMoveSketches[6]->num_values = 0 size = 0.0KB
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mNumSketchEventsProcessed=0
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mLastSlowEventTime=0
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mNumEventsSinceLastSlowEventReport = 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:       mNumSkippedSlowEvents = 0
+11-06 17:45:38.972   537  2824 I InputDispatcher:   InputTracer: Enabled
+11-06 17:45:38.972   537  2824 E InputDispatcher: Inconsistent event: MotionEvent { action=DOWN, id[0]=0, x[0]=948.5, y[0]=1038.5, toolType[0]=UNKNOWN, buttonState=1, eventTime=173348000000, downTime=173348000000, deviceId=0, source=TOUCHSCREEN, displayId=0, eventId=0xef428a97}, reason: Injection on 0: Invalid DOWN event - pointers already down for device DeviceId(-1): {DeviceId(-1): {0}}
+11-06 17:45:38.973   537   641 D InputDispatcher: No new touched window at (948.5, 1038.5) in display 0
+11-06 17:45:38.973   537   641 I InputDispatcher: Dropping event because there is no touchable window at (948.5, 1038.5) on display 0.
+11-06 17:45:39.012   537  2824 I InputDispatcher:   DispatchEnabled: true
+11-06 17:45:39.013   537  2824 I InputDispatcher:   DispatchFrozen: false
+11-06 17:45:39.013   537  2824 I InputDispatcher:   InputFilterEnabled: false
+11-06 17:45:39.013   537  2824 I InputDispatcher:   FocusedDisplayId: 0
+11-06 17:45:39.013   537  2824 I InputDispatcher:   FocusedApplications:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     displayId=0, name='ActivityRecord{c75bb82 u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity t28}', dispatchingTimeout=60000ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:   FocusedWindows:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     displayId=0, name='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity'
+11-06 17:45:39.013   537  2824 I InputDispatcher:   FocusRequests:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     displayId=0, name='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity' result='OK'
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Pointer Capture Requested: false
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Current Window with Pointer Capture: None
+11-06 17:45:39.013   537  2824 I InputDispatcher:   TouchStates: <no displays touched>
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Display: 0
+11-06 17:45:39.013   537  2824 I InputDispatcher:     logicalSize=1080x2400
+11-06 17:45:39.013   537  2824 I InputDispatcher:         transform (ROT_0) (IDENTITY)
+11-06 17:45:39.013   537  2824 I InputDispatcher:     Windows:
+11-06 17:45:39.013   537  2824 I InputDispatcher:       0: name=75bf98f Taskbar, id=92, displayId=0, inputConfig=NOT_FOCUSABLE | TRUSTED_OVERLAY | SLIPPERY, alpha=1, frame=[0,2274][1080,2400], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[0,2274][1080,2400], ownerPid=1281, ownerUid=10121, dispatchingTimeout=5000ms, token=0x70876b7daa50, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         1.0000  0.0000  -0.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  1.0000  -2274.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:       1: name=e9809be StatusBar, id=82, displayId=0, inputConfig=NOT_FOCUSABLE | TRUSTED_OVERLAY, alpha=1, frame=[0,0][1080,63], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[0,0][1080,63], ownerPid=863, ownerUid=10120, dispatchingTimeout=5000ms, token=0x70876b7d8a10, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (IDENTITY)
+11-06 17:45:39.013   537  2824 I InputDispatcher:       2: name=4c0672a com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity, id=751, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE | PREVENT_SPLITTING, alpha=0.216919, frame=[179,0][1259,2400], globalScale=1, applicationInfo.name=ActivityRecord{989f38c u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity t28}, applicationInfo.token=0x70862b803870, touchableRegion=<empty>, ownerPid=2260, ownerUid=10148, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=USE_OPACITY, canOccludePresentation
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         1.0000  0.0000  -178.9475
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:       3: name=aa240bf ActivityRecordInputSink com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity, id=757, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=0.216919, frame=[179,0][179,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-72,0][1259,2400], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         1.0000  0.0000  -178.9475
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:       4: name=5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity, id=740, displayId=0, inputConfig=0x0, alpha=1, frame=[-72,0][1007,2400], globalScale=1, applicationInfo.name=ActivityRecord{c75bb82 u0 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity t28}, applicationInfo.token=0x70862b815a50, touchableRegion=[-72,0][1008,2400], ownerPid=2260, ownerUid=10148, dispatchingTimeout=60000ms, token=0x70876b7cf5d0, touchOcclusionMode=USE_OPACITY, canOccludePresentation
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         1.0000  0.0000  73.0525
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:       5: name=6fcf6cd ActivityRecordInputSink com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity, id=736, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=1, frame=[-72,0][-72,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-72,0][1259,2400], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         1.0000  0.0000  73.0525
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  1.0000  -0.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:       6: name=b140aca ActivityRecordInputSink com.android.launcher3/.uioverrides.QuickstepLauncher, id=97, displayId=0, inputConfig=NO_INPUT_CHANNEL | NOT_VISIBLE | NOT_FOCUSABLE | NOT_TOUCHABLE, alpha=1, frame=[0,0][0,0], globalScale=0, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=[-15999,-25599][16000,25600], ownerPid=537, ownerUid=1000, dispatchingTimeout=0ms, token=0x0, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (IDENTITY)
+11-06 17:45:39.013   537  2824 I InputDispatcher:       7: name=daa33fc com.android.systemui.wallpapers.ImageWallpaper, id=63, displayId=0, inputConfig=NOT_VISIBLE | NOT_FOCUSABLE | NOT_TOUCHABLE | PREVENT_SPLITTING | IS_WALLPAPER, alpha=1, frame=[-53,-119][-53,-119], globalScale=1, applicationInfo.name=, applicationInfo.token=<null>, touchableRegion=<empty>, ownerPid=863, ownerUid=10120, dispatchingTimeout=5000ms, token=0x70876b7d6150, touchOcclusionMode=BLOCK_UNTRUSTED
+11-06 17:45:39.013   537  2824 I InputDispatcher:     transform (ROT_0) (SCALE TRANSLATE)
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.3879  -0.0000  20.9449
+11-06 17:45:39.013   537  2824 I InputDispatcher:         -0.0000  0.3879  46.5455
+11-06 17:45:39.013   537  2824 I InputDispatcher:         0.0000  0.0000  1.0000
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Global monitors on display 0:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     0: 'PointerEventDispatcher0 (server)', 
+11-06 17:45:39.013   537  2824 I InputDispatcher:   RecentQueue: length=10
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=3137ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=2324ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=171573000000, source=TOUCHSCREEN, displayId=0, action=DOWN, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (974.5, 146.5)]), policyFlags=0x6b000000, age=1817ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=171723000000, source=TOUCHSCREEN, displayId=0, action=UP, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (974.5, 146.5)]), policyFlags=0x6b000000, age=1667ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=1316ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=684ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=false), age=337ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     FocusEvent(hasFocus=true), age=285ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=173306000000, source=TOUCHSCREEN, displayId=0, action=DOWN, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (948.5, 1038.5)]), policyFlags=0x6b000000, age=84ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     MotionEvent(deviceId=-1, eventTime=173348000000, source=TOUCHSCREEN, displayId=0, action=DOWN, actionButton=0x00000000, flags=0x00000000, metaState=0x00000000, buttonState=0x00000001, classification=NONE, edgeFlags=0x00000000, xPrecision=16.0, yPrecision=16.0, xCursorPosition=nan, yCursorPosition=nan, pointers=[0: (948.5, 1038.5)]), policyFlags=0x6b000000, age=42ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:   PendingEvent: <none>
+11-06 17:45:39.013   537  2824 I InputDispatcher:   InboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:   CommandQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Connections:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     334: channelName='4c0672a com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     339: channelName='5e269a3 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     485: channelName='9f3548a ScreenDecorOverlay (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     546: channelName='75bf98f Taskbar (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     467: channelName='f831e94 InputMethod (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     142: channelName='daa33fc com.android.systemui.wallpapers.ImageWallpaper (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     522: channelName='recents_animation_input_consumer (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     478: channelName='5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     328: channelName='192da40 ShellDropTarget (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     496: channelName='e9809be StatusBar (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     493: channelName='b10cd27 NotificationShade (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     487: channelName='5d59bf ScreenDecorOverlayBottom (server)', status=NORMAL, monitor=false, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:     422: channelName='PointerEventDispatcher0 (server)', status=NORMAL, monitor=true, responsive=true
+11-06 17:45:39.013   537  2824 I InputDispatcher:       OutboundQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:       WaitQueue: <empty>
+11-06 17:45:39.013   537  2824 I InputDispatcher:   TouchModePerDisplay:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     Display: 0 TouchMode: 1
+11-06 17:45:39.013   537  2824 I InputDispatcher:   Configuration:
+11-06 17:45:39.013   537  2824 I InputDispatcher:     KeyRepeatDelay: 50ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     KeyRepeatTimeout: 400ms
+11-06 17:45:39.013   537  2824 I InputDispatcher:     LatencyTracker:
+11-06 17:45:39.013   537  2824 I InputDispatcher:       mTimelines.size() = 0
+11-06 17:45:39.013   537  2824 I InputDispatcher:       mEventTimes.size() = 0
+11-06 17:45:39.013   537  2824 I InputDispatcher:     LatencyAggregator:
+11-06 17:45:39.013   537  2824 I InputDispatcher:       Sketches:
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[0]->num_values = 0 size = 0.0KB mMoveSketches[0]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[1]->num_values = 0 size = 0.0KB mMoveSketches[1]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[2]->num_values = 0 size = 0.0KB mMoveSketches[2]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[3]->num_values = 0 size = 0.0KB mMoveSketches[3]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[4]->num_values = 0 size = 0.0KB mMoveSketches[4]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[5]->num_values = 0 size = 0.0KB mMoveSketches[5]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:         mDownSketches[6]->num_values = 0 size = 0.0KB mMoveSketches[6]->num_values = 0 size = 0.0KB
+11-06 17:45:39.013   537  2824 I InputDispatcher:       mNumSketchEventsProcessed=0
+11-06 17:45:39.013   537  2824 I InputDispatcher:       mLastSlowEventTime=0
+11-06 17:45:39.013   537  2824 I InputDispatcher:       mNumEventsSinceLastSlowEventReport = 0
+11-06 17:45:39.014   537  2824 I InputDispatcher:       mNumSkippedSlowEvents = 0
+11-06 17:45:39.014   537  2824 I InputDispatcher:   InputTracer: Enabled
+11-06 17:45:39.014   537  2824 E InputDispatcher: Inconsistent event: MotionEvent { action=DOWN, id[0]=0, x[0]=948.5, y[0]=1038.5, toolType[0]=UNKNOWN, buttonState=1, eventTime=173389000000, downTime=173389000000, deviceId=0, source=TOUCHSCREEN, displayId=0, eventId=0xc7d014c0}, reason: Injection on 0: Invalid DOWN event - pointers already down for device DeviceId(-1): {DeviceId(-1): {0}}
+11-06 17:45:39.313  2260  2294 D EGL_emulation: app_time_stats: avg=97.23ms min=11.47ms max=435.67ms count=15
+11-06 17:45:39.373  2260  2260 D VRI[P0HistoryActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-06 17:45:39.384  2260  2260 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@2650406
+11-06 17:45:39.387  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: STOPPED
+11-06 17:45:39.387  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:39.388  2260  2260 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@559bee1
+11-06 17:45:39.388  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3 in: DESTROYED
+11-06 17:45:39.388  2260  2260 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@c8f38b3
+11-06 17:45:39.391   537  1043 W InputManager-JNI: Input channel object '4c0672a com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity (client)' was disposed without first being removed with the input manager!
+11-06 17:45:40.264  2260  2294 D EGL_emulation: app_time_stats: avg=293.85ms min=31.60ms max=995.11ms count=5
+11-06 17:45:40.433   351  2316 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 1660288
+11-06 17:45:40.920   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-06 17:45:40.920   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-06 17:45:40.920   537   778 D InetDiagMessage: Destroyed live tcp sockets for uids={10104} in 1ms
+11-06 17:45:40.921   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-06 17:45:40.921   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-06 17:45:40.921   537   778 D InetDiagMessage: Destroyed live tcp sockets for uids={20104} in 0ms
+11-06 17:45:41.839   342   342 I netd    : tetherGetStats() -> {[]} <0.25ms>
+11-06 17:45:42.279  2260  2294 D EGL_emulation: app_time_stats: avg=1007.37ms min=998.94ms max=1015.81ms count=2
+11-06 17:45:44.279  2260  2294 D EGL_emulation: app_time_stats: avg=999.75ms min=999.40ms max=1000.09ms count=2
+11-06 17:45:45.279  2260  2294 D EGL_emulation: app_time_stats: avg=1000.01ms min=1000.01ms max=1000.01ms count=1
+11-06 17:45:45.963   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-06 17:45:45.964   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-06 17:45:45.964   537   778 D InetDiagMessage: Destroyed live tcp sockets for uids={10104} in 1ms
+11-06 17:45:47.122   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-06 17:45:47.122   537   778 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-06 17:45:47.122   537   778 D InetDiagMessage: Destroyed live tcp sockets for uids={10149} in 0ms
+11-06 17:45:47.279  2260  2294 D EGL_emulation: app_time_stats: avg=999.95ms min=999.78ms max=1000.13ms count=2
+11-06 17:45:48.279  2260  2294 D EGL_emulation: app_time_stats: avg=999.95ms min=999.95ms max=999.95ms count=1
+11-06 17:45:49.272   537   844 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10149, packageName = null, attributionTag = null, token = android.os.Binder@7f1b3e6, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-06 17:45:49.280   863   955 D SplashScreenView: Build android.window.SplashScreenView{a732262 V.E...... ......ID 0,0-0,0}
+11-06 17:45:49.280   863   955 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-06 17:45:49.280   863   955 D SplashScreenView: Branding: view: android.view.View{14baff3 G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-06 17:45:49.281  2260  2294 D EGL_emulation: app_time_stats: avg=1002.31ms min=1002.31ms max=1002.31ms count=1
+11-06 17:45:49.287  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: PAUSED
+11-06 17:45:49.287  2260  2260 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:49.288  1281  1281 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=29, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.fox.runner.debug.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }
+11-06 17:45:49.289   537  1043 W IPCThreadState: Sending oneway calls to frozen process.
+11-06 17:45:49.290   414   414 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-06 17:45:49.303   342   342 I netd    : tetherGetStats() -> {[]} <0.34ms>
+11-06 17:45:49.519  2341  2356 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-06 17:45:49.520  2341  2356 I EGL_emulation: Opening libGLESv2_emulation.so
+11-06 17:45:49.537  2341  2356 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-06 17:45:49.600   863   867 I ndroid.systemui: NativeAlloc concurrent mark compact GC freed 13MB AllocSpace bytes, 3(60KB) LOS objects, 50% free, 18MB/36MB, paused 328us,2.528ms total 158.642ms
+11-06 17:45:49.736   537   563 W ziparchive: Unable to open '/data/app/~~E2igAUEbdEdfU7CcyNL6og==/com.fox.runner.debug.test-McfHSIfoj5b2xkaTFMKFPw==/base.dm': No such file or directory
+11-06 17:45:49.740   537   563 I ActivityTaskManager: Displayed com.fox.runner.debug.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +463ms
+11-06 17:45:49.758  1281  1281 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=7, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.uioverrides.QuickstepLauncher }
+11-06 17:45:49.767  1281  1281 D StatsLog: LAUNCHER_ONRESUME
+11-06 17:45:49.798  1281  1281 D BaseDepthController: setSurface:
+11-06 17:45:49.798  1281  1281 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-06 17:45:49.798  1281  1281 D BaseDepthController: 	mSurface: Surface(name=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher)/@0x9912963
+11-06 17:45:49.906  2260  2260 D VRI[P0Activity]: visibilityChanged oldVisibility=true newVisibility=false
+11-06 17:45:50.029  1281  1281 D StateManager: createAtomicAnimation - fromState: Background, toState: Normal, partial trace:
+11-06 17:45:50.029  1281  1281 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(WorkspaceRevealAnim.java:130)
+11-06 17:45:50.029  1281  1281 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(WorkspaceRevealAnim.java:66)
+11-06 17:45:50.029  1281  1281 D StateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(QuickstepTransitionManager.java:1716)
+11-06 17:45:50.138   537   566 W system_server: Long monitor contention with owner android.anim (567) at void com.android.server.wm.WindowSurfacePlacer$Traverser.run()(WindowSurfacePlacer.java:58) waiters=0 in void com.android.server.wm.WindowManagerService$H.handleMessage(android.os.Message) for 150ms
+11-06 17:45:50.149  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: STOPPED
+11-06 17:45:50.149  2260  2260 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@d9321e6
+11-06 17:45:50.151  2260  2260 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@7caf111
+11-06 17:45:50.152   863   954 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@b5cd4e5
+11-06 17:45:50.154   537   555 W InputManager-JNI: Input channel object '9331651 Splash Screen com.fox.runner.debug.test (client)' was disposed without first being removed with the input manager!
+11-06 17:45:50.158  1281  1491 D EGL_emulation: app_time_stats: avg=12813.68ms min=12813.68ms max=12813.68ms count=1
+11-06 17:45:50.163  2260  2260 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@d9321e6 in: DESTROYED
+11-06 17:45:50.163  2260  2260 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-06 17:45:50.183  2260  2287 W CustomContentProvider: Deleting from table tracks
+11-06 17:45:50.184  2260  2287 I CustomContentProvider: Deleted 0 rows of table tracks
+11-06 17:45:50.200  2260  2287 I CustomContentProvider: Deleted 0 total rows from database
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 10, 60354, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 10, 60354, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 60354, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 60376, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60376, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 60376, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 60398, 88726850, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60398, 88726850, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 60427, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60427, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 60427, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 60449, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60449, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missing HWUI jank callback for vsyncId: 60449, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed App frame:UNKNOWN: 74, 60492, 189091301, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.202   863   954 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60492, 189091301, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-06 17:45:50.249   863   922 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-39 - not enough time since last trigger
+11-06 17:45:50.253   863   975 D EGL_emulation: app_time_stats: avg=751.58ms min=4.52ms max=13613.50ms count=19
+11-06 17:45:50.267   537   555 W InputManager-JNI: Input channel object '5869985 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity (client)' was disposed without first being removed with the input manager!
+11-06 17:45:50.279  2260  2260 D TrackRecordingService: Destroying
+11-06 17:45:50.279  2260  2260 D TrackRecordingService: Destroyed
+11-06 17:45:50.531   537   648 I ImeTracker: com.android.launcher3:4355da6: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-06 17:45:50.531   537   648 I ImeTracker: com.android.launcher3:4355da6: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-06 17:45:50.602  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=28
+11-06 17:45:50.603  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=28
+11-06 17:45:50.616  2341  2341 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@b82e1a6
+11-06 17:45:50.647   537   555 W InputManager-JNI: Input channel object 'ba706a8 com.fox.runner.debug.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+11-06 17:45:50.690  2260  2290 D SharedPreferencesImpl: Time required to fsync /data/user/0/com.fox.runner.debug/shared_prefs/com.fox.runner.debug_preferences.xml: [<1: 3, <2: 6, <4: 5, <8: 1, <16: 4, <32: 6, <64: 4, <128: 8, <256: 2, <512: 2, <1024: 0, <2048: 0, <4096: 0, <8192: 0, <16384: 0, >=16384: 0]
+11-06 17:45:50.691  2260  2260 W ox.runner.debug: Long monitor contention with owner queued-work-looper (2290) at void android.app.QueuedWork.processPendingWork()(QueuedWork.java:300) waiters=0 in void android.app.QueuedWork.processPendingWork() for 412ms
+11-06 17:45:50.695  2260  2260 I Choreographer: Skipped 32 frames!  The application may be doing too much work on its main thread.
+11-06 17:45:50.716  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=29
+11-06 17:45:50.716  1281  1281 I TopTaskTracker: onTaskRemoved: taskId=29
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 74, 60576, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60576, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missing HWUI jank callback for vsyncId: 60576, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 74, 60591, 431940255, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60591, 431940255, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed App frame:UNKNOWN: 74, 60664, 505522279, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1281 W FrameTracker: Missed SF frame:UNKNOWN: 74, 60664, 505522279, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-06 17:45:50.795  1281  1295 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-78 - not enough time since last trigger
+11-06 17:45:50.822  2260  2287 E TestRunner: failed: homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout(de.dennisguse.opentracks.p0.P02HomeUiTest)
+11-06 17:45:50.822  2260  2287 E TestRunner: ----- begin exception -----
+11-06 17:45:50.822  2260  2287 E TestRunner: java.lang.AssertionError: Timed out waiting for resumed activity P0SensorsActivity
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.Assert.fail(Assert.java:89)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at de.dennisguse.opentracks.util.ActivityTestUtils.waitForResumedActivity(ActivityTestUtils.java:81)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at de.dennisguse.opentracks.p0.P02HomeUiTest.homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout(P02HomeUiTest.java:191)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:299)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:293)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-06 17:45:50.822  2260  2287 E TestRunner: 	at java.lang.Thread.run(Thread.java:1012)
+11-06 17:45:50.823  2260  2287 E TestRunner: ----- end exception -----
+11-06 17:45:50.835  2260  2287 I TestRunner: finished: homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout(de.dennisguse.opentracks.p0.P02HomeUiTest)

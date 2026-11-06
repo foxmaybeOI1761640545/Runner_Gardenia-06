@@ -1,0 +1,37 @@
+{
+  "sourceCommit": "9b8642ac4886bc366809e9d7d116f551dda45601",
+  "runId": "42194157975",
+  "automated": "PASSED",
+  "visual": "FAILED",
+  "findings": [
+    "Small idle/acquisition reconnect row outside initial viewport",
+    "Large home excessive content/action separation"
+  ],
+  "files": [
+    {
+      "path": "p02-home-small-light-idle.png",
+      "bytes": 72815,
+      "sha256": "1223785e6ee811b622fbcc4df32a79ac9695e47689ad588a508f5c2b8d72f068"
+    },
+    {
+      "path": "p02-home-small-light-acquiring.png",
+      "bytes": 83053,
+      "sha256": "9d91017aa36a5eea0ca8fa40b0a36406cff03d586a1802bfb5630f85951f7626"
+    },
+    {
+      "path": "p02-home-small-dark-recording.png",
+      "bytes": 83597,
+      "sha256": "f4b69d904fce318f8e1ca4fd9f0ea5cf4ba2264a65eef5b67296ca7d25b02280"
+    },
+    {
+      "path": "p02-home-large-dark-heart-connected.png",
+      "bytes": 106057,
+      "sha256": "88f9fd6eee9c484c86bba435c5829ad67316ded6752e9b5b89f681368ac56713"
+    },
+    {
+      "path": "p02-home-matrix.json",
+      "bytes": 10734,
+      "sha256": "3a00a9fd2bed24a1a0b361a969d41786e2ae3350d1a6751f8f668b83f6c11a4f"
+    }
+  ]
+}

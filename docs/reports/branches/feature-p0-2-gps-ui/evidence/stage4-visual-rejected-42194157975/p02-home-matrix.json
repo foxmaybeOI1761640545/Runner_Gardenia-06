@@ -1,0 +1,333 @@
+{
+  "physicalBleTested": false,
+  "syntheticGps": true,
+  "sourceCommit": "9b8642ac4886bc366809e9d7d116f551dda45601",
+  "fixtureClockStartUtc": "2026-11-06T02:00:00Z",
+  "timezone": "Asia\/Singapore",
+  "screenshots": [
+    {
+      "file": "p02-home-small-light-idle.png",
+      "state": "idle",
+      "captureEpochMillis": 1793957006190,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "IDLE",
+      "sha256": "1223785e6ee811b622fbcc4df32a79ac9695e47689ad588a508f5c2b8d72f068"
+    },
+    {
+      "file": "p02-home-small-light-acquiring.png",
+      "state": "acquiring",
+      "captureEpochMillis": 1793957007604,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "ACQUIRING_GPS",
+      "sha256": "9d91017aa36a5eea0ca8fa40b0a36406cff03d586a1802bfb5630f85951f7626"
+    },
+    {
+      "file": "p02-home-small-light-gps-ready.png",
+      "state": "gps-ready",
+      "captureEpochMillis": 1793957009896,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "637fa22b11fcd62fa9f10faf7d744dde4c034d862c3b024a355aa97735507491"
+    },
+    {
+      "file": "p02-home-small-light-recording.png",
+      "state": "recording",
+      "captureEpochMillis": 1793957011608,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "454cfbc06a6a7cca62a300c983fb8d26d0e9ce668cabf0ab0045823e43674a7e"
+    },
+    {
+      "file": "p02-home-small-light-gps-lost.png",
+      "state": "gps-lost",
+      "captureEpochMillis": 1793957012778,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "87fc625bd141d159a122178ae03d27b37a4b3808893c413f133683260f3a9def"
+    },
+    {
+      "file": "p02-home-small-light-paused.png",
+      "state": "paused",
+      "captureEpochMillis": 1793957013983,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "PAUSED",
+      "sha256": "96c8598ec5df7f57d2c78878c7709a064a70e656c24e680defc2b7deaa08f47b"
+    },
+    {
+      "file": "p02-home-small-light-resumed.png",
+      "state": "resumed",
+      "captureEpochMillis": 1793957015214,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "6479db8d2b2073639573bdf4a495c766e4fb22a3b4b997ebb38319c8e1e0c02f"
+    },
+    {
+      "file": "p02-home-small-light-heart-connected.png",
+      "state": "heart-connected",
+      "captureEpochMillis": 1793957016627,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "30501d12ac7ce37ad6ce8032328a26c90999910a9846881bee70f7b3af3afc06"
+    },
+    {
+      "file": "p02-home-small-light-heart-disconnected.png",
+      "state": "heart-disconnected",
+      "captureEpochMillis": 1793957018199,
+      "nightMode": 16,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "4a27791dd6d0b3ceaa78df9349e22ab5383eb61d5c6efbe4b1b2edc318d924c2"
+    },
+    {
+      "file": "p02-home-small-dark-idle.png",
+      "state": "idle",
+      "captureEpochMillis": 1793957021589,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "IDLE",
+      "sha256": "2864d913092d9c2089e7aa30709fddea453d4cf5299e3267072c5d535231fc5a"
+    },
+    {
+      "file": "p02-home-small-dark-acquiring.png",
+      "state": "acquiring",
+      "captureEpochMillis": 1793957022865,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "ACQUIRING_GPS",
+      "sha256": "d9461df22f247c8f0f01a88dffde72205f8f88b63aeea8c41bed4229c343f487"
+    },
+    {
+      "file": "p02-home-small-dark-gps-ready.png",
+      "state": "gps-ready",
+      "captureEpochMillis": 1793957025173,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "6d4099741f7ba0f166dfc39e738ad88c13f4aff51e3083be33966be7f9b54c55"
+    },
+    {
+      "file": "p02-home-small-dark-recording.png",
+      "state": "recording",
+      "captureEpochMillis": 1793957026933,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "f4b69d904fce318f8e1ca4fd9f0ea5cf4ba2264a65eef5b67296ca7d25b02280"
+    },
+    {
+      "file": "p02-home-small-dark-gps-lost.png",
+      "state": "gps-lost",
+      "captureEpochMillis": 1793957028113,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "54a65cb919ca697d4c2ceefb9a4283e72adf4cb659298b0522a1656096cd3ff5"
+    },
+    {
+      "file": "p02-home-small-dark-paused.png",
+      "state": "paused",
+      "captureEpochMillis": 1793957029332,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "PAUSED",
+      "sha256": "59bb01d745d68d7a1978d28517ef8e4641ee9b3a851ffb9c177f30c080831828"
+    },
+    {
+      "file": "p02-home-small-dark-resumed.png",
+      "state": "resumed",
+      "captureEpochMillis": 1793957030535,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "97ed5d68740b1a7799690462ea660214f57385575814b3d14dee814968f5cc2e"
+    },
+    {
+      "file": "p02-home-small-dark-heart-connected.png",
+      "state": "heart-connected",
+      "captureEpochMillis": 1793957031947,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "b68bf0bcb4f521734a606a32e135756a2bc4cfd273edb4333566d043637b328c"
+    },
+    {
+      "file": "p02-home-small-dark-heart-disconnected.png",
+      "state": "heart-disconnected",
+      "captureEpochMillis": 1793957033553,
+      "nightMode": 32,
+      "widthDp": 360,
+      "phase": "RECORDING",
+      "sha256": "68e9e22454ee674f74aff1ca312ec68c689df4c287763e309ddd38323e3901c8"
+    },
+    {
+      "file": "p02-home-large-light-idle.png",
+      "state": "idle",
+      "captureEpochMillis": 1793957037493,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "IDLE",
+      "sha256": "4ca210c24a32fa3a5a58fc195efa0ac9e17f1bd881ebfed2c2b83c9e9fdcc7ad"
+    },
+    {
+      "file": "p02-home-large-light-acquiring.png",
+      "state": "acquiring",
+      "captureEpochMillis": 1793957038903,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "ACQUIRING_GPS",
+      "sha256": "03f09cb38e661d81589adeaaa44352184a9fa8d905033b1125c172f0664cafd1"
+    },
+    {
+      "file": "p02-home-large-light-gps-ready.png",
+      "state": "gps-ready",
+      "captureEpochMillis": 1793957041306,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "ec9c4a30eda2ee5b6200711de4f45a59c6b2fb1e30033b6cec25448814500b91"
+    },
+    {
+      "file": "p02-home-large-light-recording.png",
+      "state": "recording",
+      "captureEpochMillis": 1793957042759,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "e18b3bdefebf63a948f6b941b73ffe1142d72318c866b6bca7301265366f2d20"
+    },
+    {
+      "file": "p02-home-large-light-gps-lost.png",
+      "state": "gps-lost",
+      "captureEpochMillis": 1793957044043,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "60cf407de09474fe3452c913a490243776395922e5c690fd4a61d0caa43dbe5f"
+    },
+    {
+      "file": "p02-home-large-light-paused.png",
+      "state": "paused",
+      "captureEpochMillis": 1793957045385,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "PAUSED",
+      "sha256": "55a8bc860daa08d2c21abc942aef97ac2d4abbc497b5f97eaa89f4688aa03bd9"
+    },
+    {
+      "file": "p02-home-large-light-resumed.png",
+      "state": "resumed",
+      "captureEpochMillis": 1793957046676,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "6ca8f8fcf00cd0d395cd069d494ff0b88ecd28cfe3f9a3995b379954ebde6078"
+    },
+    {
+      "file": "p02-home-large-light-heart-connected.png",
+      "state": "heart-connected",
+      "captureEpochMillis": 1793957048695,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "de6709c310f8929ec53297314f0da3bbbff2aaad77e9f07f3d6114885ce9ecef"
+    },
+    {
+      "file": "p02-home-large-light-heart-disconnected.png",
+      "state": "heart-disconnected",
+      "captureEpochMillis": 1793957050664,
+      "nightMode": 16,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "630181494eb126fff2c5d4cd5baf4aba80154c78597608e91161a28a8688c549"
+    },
+    {
+      "file": "p02-home-large-dark-idle.png",
+      "state": "idle",
+      "captureEpochMillis": 1793957054468,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "IDLE",
+      "sha256": "5d2c5061b4b4490bbbf69d7d5d538cd554eac09f9c374531676bc59733e0d8b0"
+    },
+    {
+      "file": "p02-home-large-dark-acquiring.png",
+      "state": "acquiring",
+      "captureEpochMillis": 1793957055972,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "ACQUIRING_GPS",
+      "sha256": "c3f79418c7f7b35491233dca4022b5d7477d7b2f3cf1943898c05d6a5ac2a390"
+    },
+    {
+      "file": "p02-home-large-dark-gps-ready.png",
+      "state": "gps-ready",
+      "captureEpochMillis": 1793957058379,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "06c0253957e90ca3da41d68036cef2e2060ab85b0ec176cbeffb08cda08e03d6"
+    },
+    {
+      "file": "p02-home-large-dark-recording.png",
+      "state": "recording",
+      "captureEpochMillis": 1793957059791,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "d553093e7b9af222e8e038cfb6091c6457df2418a2393367d6b5e45081f9e053"
+    },
+    {
+      "file": "p02-home-large-dark-gps-lost.png",
+      "state": "gps-lost",
+      "captureEpochMillis": 1793957061069,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "2b326af9f69b08712d01d60a393276d9865cd2f1b531e7b0f5bc9ad13cab901d"
+    },
+    {
+      "file": "p02-home-large-dark-paused.png",
+      "state": "paused",
+      "captureEpochMillis": 1793957062372,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "PAUSED",
+      "sha256": "b2cd26cda1b72ce4115e7921de34aeea0c43ded776b3c4bca65fdc7c53c3db6c"
+    },
+    {
+      "file": "p02-home-large-dark-resumed.png",
+      "state": "resumed",
+      "captureEpochMillis": 1793957063659,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "f3fb8df8bafdd7de6434fbd9b9b593b7a483440baa4e477b18a8db86fa2856b3"
+    },
+    {
+      "file": "p02-home-large-dark-heart-connected.png",
+      "state": "heart-connected",
+      "captureEpochMillis": 1793957065659,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "88f9fd6eee9c484c86bba435c5829ad67316ded6752e9b5b89f681368ac56713"
+    },
+    {
+      "file": "p02-home-large-dark-heart-disconnected.png",
+      "state": "heart-disconnected",
+      "captureEpochMillis": 1793957067658,
+      "nightMode": 32,
+      "widthDp": 800,
+      "phase": "RECORDING",
+      "sha256": "1dae9129f76ad90f9ca0f0a330805b06bcac645147fbbaa135e47fd2659f71e2"
+    }
+  ]
+}

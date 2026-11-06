@@ -182,14 +182,23 @@ public class P02HomeUiTest {
                 .put("sourceCommit",InstrumentationRegistry.getArguments().getString("buildCommit","local")).put("fixtureClockStartUtc",base.toString())
                 .put("timezone",TimeZone.getDefault().getID()).put("screenshots",captures).toString(2).getBytes(StandardCharsets.UTF_8));}
     }
+    private void waitForHomeInput(ActivityScenario<P0Activity> screen,android.app.Activity outgoing) {
+        long deadline=SystemClock.uptimeMillis()+10000;AtomicBoolean ready=new AtomicBoolean();
+        do {
+            screen.onActivity(a->ready.set(outgoing.isDestroyed()&&a.hasWindowFocus()));
+            if(ready.get()) {InstrumentationRegistry.getInstrumentation().waitForIdleSync();return;}
+            SystemClock.sleep(50);
+        } while(SystemClock.uptimeMillis()<deadline);
+        fail("Outgoing page must finish and home must own input before navigation");
+    }
     @Test public void homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout()throws Exception {
         try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
             onView(withId(R.id.p0_all_history)).perform(click());
             var history=ActivityTestUtils.waitForResumedActivity(P0HistoryActivity.class,Duration.ofSeconds(10));assertNotNull(history);main(history::finish);
-            ActivityTestUtils.waitForResumedActivity(P0Activity.class,Duration.ofSeconds(10));
+            ActivityTestUtils.waitForResumedActivity(P0Activity.class,Duration.ofSeconds(10));waitForHomeInput(screen,history);
             onView(withId(R.id.p0_devices)).perform(scrollTo(),click());
             var sensors=ActivityTestUtils.waitForResumedActivity(P0SensorsActivity.class,Duration.ofSeconds(10));assertNotNull(sensors);main(sensors::finish);
-            ActivityTestUtils.waitForResumedActivity(P0Activity.class,Duration.ofSeconds(10));assertNull(TrackRecordingService.activeTrackId(context));
+            ActivityTestUtils.waitForResumedActivity(P0Activity.class,Duration.ofSeconds(10));waitForHomeInput(screen,sensors);assertNull(TrackRecordingService.activeTrackId(context));
         }
     }
 }
