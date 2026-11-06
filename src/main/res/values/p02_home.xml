@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="p02_page_padding">16dp</dimen>
+    <style name="P02MetricLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+    <style name="P02MetricValue" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">20sp</item>
+        <item name="android:autoSizeMaxTextSize">32sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+    </style>
+    <style name="P02PrimaryAction" parent="Widget.Material3.Button">
+        <item name="backgroundTint">?attr/colorPrimaryContainer</item>
+        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="P02SecondaryAction" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="strokeColor">?attr/colorOutline</item>
+    </style>
+    <string name="p02_idle">Not recording</string>
+    <string name="p02_idle_detail">Choose your activity and start when you are ready.</string>
+    <string name="p02_acquiring_detail">Move to an open area. Recording starts after a reliable GPS fix; waiting time is excluded.</string>
+    <string name="p02_gps_waiting">GPS not ready</string>
+    <string name="p02_gps_ready">GPS ready</string>
+    <string name="p02_gps_weak">GPS signal weak · recording continues</string>
+    <string name="p02_paused_detail">Your recording is paused. Resume when you are ready.</string>
+    <string name="p02_finished_detail">Recording saved on this device.</string>
+    <string name="p02_distance">Distance</string>
+    <string name="p02_time">Active time</string>
+    <string name="p02_speed">Speed</string>
+    <string name="p02_pace">Pace</string>
+    <string name="p02_heart_heading">Heart rate</string>
+    <string name="p02_no_strap">No strap selected</string>
+    <string name="p02_last_heart">Last: %1$s</string>
+    <string name="p02_reconnect_on">Auto reconnect on</string>
+    <string name="p02_reconnect_off">Auto reconnect off</string>
+    <string name="p02_reconnect_stopped">Auto reconnect stopped</string>
+    <string name="p02_gps_details">%1$.6f, %2$.6f · %3$s\n%4$s</string>
+    <string name="p02_cancel_short">Cancel GPS</string>
+</resources>

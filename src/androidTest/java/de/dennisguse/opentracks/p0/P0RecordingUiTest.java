@@ -56,14 +56,14 @@ public class P0RecordingUiTest {
     }
     @Test public void cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes() throws Exception {
         try(ActivityScenario<P0Activity> scenario=ActivityScenario.launch(P0Activity.class)) {
-            onView(withId(R.id.p0_cycling)).perform(click());onView(withId(R.id.p0_start)).perform(scrollTo(),click());prepare(scenario);phase(scenario,R.string.p0_recording);
+            onView(withId(R.id.p0_cycling)).perform(click());onView(withId(R.id.p0_start)).perform(click());prepare(scenario);phase(scenario,R.string.p0_recording);
             AtomicReference<Long> id=new AtomicReference<>();scenario.onActivity(a->id.set(new ViewModelProvider(a).get(P0RecordingViewModel.class).snapshot().getValue().session().trackId()));assertNotNull(id.get());
             scenario.recreate();phase(scenario,R.string.p0_recording);
             scenario.moveToState(Lifecycle.State.CREATED);SystemClock.sleep(300);scenario.moveToState(Lifecycle.State.RESUMED);phase(scenario,R.string.p0_recording);
             scenario.onActivity(a->assertEquals(id.get(),new ViewModelProvider(a).get(P0RecordingViewModel.class).snapshot().getValue().session().trackId()));
-            onView(withId(R.id.p0_pause)).perform(scrollTo(),click());phase(scenario,R.string.p0_paused);
-            onView(withId(R.id.p0_resume)).perform(scrollTo(),click());phase(scenario,R.string.p0_recording);
-            onView(withId(R.id.p0_finish)).perform(scrollTo(),click());phase(scenario,R.string.p0_finished);
+            onView(withId(R.id.p0_pause)).perform(click());phase(scenario,R.string.p0_paused);
+            onView(withId(R.id.p0_resume)).perform(click());phase(scenario,R.string.p0_recording);
+            onView(withId(R.id.p0_finish)).perform(click());phase(scenario,R.string.p0_finished);
             assertEquals(ActivityType.CYCLING,new ContentProviderUtils(context).getTrack(new Track.Id(id.get())).activityType());
         }
     }
@@ -78,23 +78,27 @@ public class P0RecordingUiTest {
     }
     @Test public void waitingUiHasNoCoordinatesAndCancelLeavesNoWorkout() throws Exception {
         try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
-            onView(withId(R.id.p0_start)).perform(scrollTo(),click());phase(screen,R.string.p02_acquiring_gps);
+            onView(withId(R.id.p0_start)).perform(click());phase(screen,R.string.p02_acquiring_gps);
             TrackRecordingService core=service();
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->P0GpsPreparationTest.fixture(core));
             assertNull(TrackRecordingService.activeTrackId(context));assertFalse(metrics(screen).contains("1.300000"));
             assertTrue(new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().isEmpty());
-            onView(withId(R.id.p0_cancel_gps)).perform(scrollTo(),click());phase(screen,R.string.p0_ready);
+            onView(withId(R.id.p0_cancel_gps)).perform(click());phase(screen,R.string.p02_idle);
             assertFalse(core.isAcquiringGps());assertFalse(core.areSensorsStarted());assertNull(TrackRecordingService.activeTrackId(context));
         }
     }
     private String metrics(ActivityScenario<P0Activity> screen) {
         AtomicReference<String> value=new AtomicReference<>();
-        screen.onActivity(a->value.set(((TextView)a.findViewById(R.id.p0_metrics)).getText().toString()));
+        screen.onActivity(a->{
+            StringBuilder text=new StringBuilder();
+            for(int id:new int[]{R.id.p0_metrics,R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_speed_value,R.id.p02_pace_value,R.id.p02_status_detail})text.append(((TextView)a.findViewById(id)).getText()).append("\n");
+            value.set(text.toString());
+        });
         return value.get();
     }
     @Test public void realGpsPreviewSurvivesConsumedRecordingSnapshotsAndClearsOnDisabledProvider() throws Exception {
         try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
-            onView(withId(R.id.p0_start)).perform(scrollTo(),click());prepare(screen);phase(screen,R.string.p0_recording);
+            onView(withId(R.id.p0_start)).perform(click());prepare(screen);phase(screen,R.string.p0_recording);
             TrackRecordingService core=service();
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
                 var gps=core.getTrackPointCreator().getSensorManager().getGpsHandler();
@@ -120,7 +124,7 @@ public class P0RecordingUiTest {
             deadline=SystemClock.uptimeMillis()+5000;
             while(metrics(screen).contains("1.300000")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(50);
             assertFalse(metrics(screen).contains("1.300000"));assertFalse(metrics(screen).contains("10.8 km/h"));
-            onView(withId(R.id.p0_finish)).perform(scrollTo(),click());phase(screen,R.string.p0_finished);
+            onView(withId(R.id.p0_finish)).perform(click());phase(screen,R.string.p0_finished);
         }
     }
 

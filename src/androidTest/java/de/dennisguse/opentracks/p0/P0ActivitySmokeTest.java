@@ -22,7 +22,8 @@ public class P0ActivitySmokeTest {
                 assertNotNull(home.findViewById(R.id.p0_title));
                 assertNotNull(home.findViewById(R.id.p0_location_permission));
                 assertNotNull(home.findViewById(R.id.p0_start));
-                assertNotNull(home.findViewById(R.id.p0_history_list));
+                assertNotNull(home.findViewById(R.id.p0_all_history));
+                for(int id:new int[]{R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_speed_value,R.id.p02_pace_value})assertNotNull(home.findViewById(id));
             });
             InstrumentationRegistry.getInstrumentation().waitForIdleSync();
             android.os.SystemClock.sleep(300);

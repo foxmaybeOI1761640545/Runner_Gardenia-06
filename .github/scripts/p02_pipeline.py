@@ -4,6 +4,16 @@ import os
 from pathlib import Path
 import subprocess
 import p0_pipeline as p0
+import collect_p02_home_ui
+
+ORIGINAL_COLLECT=p0.collect_p0_ui
+
+def collect_p0_ui(matrix=False):
+    count=ORIGINAL_COLLECT(matrix)
+    if configuration()['phase']>=4:
+        collect_p02_home_ui.collect(json.loads(Path('release-plan.json').read_text())['commit'])
+    return count
+
 
 
 def protected_refs():
@@ -48,6 +58,7 @@ if __name__=='__main__':
     import sys
     p0.configuration=configuration
     p0.protected_refs=protected_refs
+    p0.collect_p0_ui=collect_p0_ui
     if sys.argv[1]=='prepare':prepare()
     elif sys.argv[1]=='gate':p0.gate()
     elif sys.argv[1]=='refs':protected_refs();print('All original branches/tags unchanged')

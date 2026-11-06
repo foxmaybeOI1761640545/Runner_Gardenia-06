@@ -5,6 +5,10 @@ import java.util.Locale;
 
 public final class MotionFormat {
     private MotionFormat() {}
+    public static String distance(double meters) {
+        if(!Double.isFinite(meters)||meters<0)return "—";
+        return meters<1000?String.format(Locale.ROOT,"%.1f m",meters):String.format(Locale.ROOT,"%.2f km",meters/1000);
+    }
     public static String duration(Duration duration) {
         long seconds=Math.max(0,duration.getSeconds());
         return seconds>=3600?String.format(Locale.ROOT,"%02d:%02d:%02d",seconds/3600,seconds/60%60,seconds%60)

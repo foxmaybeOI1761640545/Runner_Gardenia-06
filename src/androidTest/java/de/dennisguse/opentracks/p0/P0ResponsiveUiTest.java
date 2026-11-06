@@ -100,14 +100,14 @@ public class P0ResponsiveUiTest {
                 TestEnvironmentUtils.deleteAllTracks();new SessionStore(context).save(RecordingSession.ready());Track.Id id=history();
                 String profile="p0-matrix-"+(large?"large":"small")+(dark?"-dark-":"-light-");
                 try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {
-                    waitText(screen,R.id.p0_recording_state,context.getString(R.string.p0_ready));capture(screen,profile+"home");
+                    waitText(screen,R.id.p0_recording_state,context.getString(R.string.p02_idle));capture(screen,profile+"home");
                     InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
                         core.getTrackPointCreator().setClock(base.toString());core.startNewTrack();core.getTrackPointCreator().setClock(base.plusSeconds(2).toString());
                         var heart=core.getTrackPointCreator().getSensorManager().getHeartRateHandler();heart.onConnectionStateChanged(BleConnectionSession.State.CONNECTED);heart.onConnected("AA:BB:CC:DD:EE:FF","Synthetic UI strap");
                         var characteristic=new android.bluetooth.BluetoothGattCharacteristic(HeartRateBluetooth.HEARTRATE.measurementUUID(),0,0);
                         heart.onDataReceived(new HeartRateBluetooth().parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic UI strap",characteristic,new byte[]{6,76}));
                     });
-                    waitText(screen,R.id.p0_recording_state,context.getString(R.string.p0_recording));waitText(screen,R.id.p0_heart_rate,"Synthetic UI strap");capture(screen,profile+"recording");
+                    waitText(screen,R.id.p0_recording_state,context.getString(R.string.p0_recording));waitText(screen,R.id.p02_heart_device,"Synthetic UI strap");capture(screen,profile+"recording");
                     InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{core.getTrackPointCreator().setClock(base.plusSeconds(5).toString());core.endCurrentTrack();core.stopIdleSensors();});
                 }
                 new SessionStore(context).save(RecordingSession.ready());

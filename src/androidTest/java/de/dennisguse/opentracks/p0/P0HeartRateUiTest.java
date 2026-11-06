@@ -47,7 +47,11 @@ public class P0HeartRateUiTest {
     }
     private void text(ActivityScenario<P0Activity> screen,String expected) {
         long end=SystemClock.uptimeMillis()+10000;AtomicReference<String> actual=new AtomicReference<>();
-        do {screen.onActivity(activity->actual.set(((TextView)activity.findViewById(R.id.p0_heart_rate)).getText().toString()));
+        do {screen.onActivity(activity->{
+                StringBuilder text=new StringBuilder();
+                for(int id:new int[]{R.id.p0_heart_rate,R.id.p02_heart_device,R.id.p02_heart_state,R.id.p02_heart_updated,R.id.p02_heart_reconnect})text.append(((TextView)activity.findViewById(id)).getText()).append("\n");
+                actual.set(text.toString());
+            });
             if(actual.get().contains(expected))return;SystemClock.sleep(50);
         }while(SystemClock.uptimeMillis()<end);
         assertTrue("Expected "+expected+" in "+actual.get(),actual.get().contains(expected));

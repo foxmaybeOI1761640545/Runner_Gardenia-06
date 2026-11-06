@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
@@ -12,16 +11,17 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Locale;
 
 import de.dennisguse.opentracks.AbstractActivity;
 import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.databinding.P0HomeBinding;
 import de.dennisguse.opentracks.data.models.*;
-import de.dennisguse.opentracks.p0.data.WorkoutSummary;
 import de.dennisguse.opentracks.p0.gps.MotionFormat;
 import de.dennisguse.opentracks.p0.recording.*;
+import de.dennisguse.opentracks.p0.ble.HeartRateCommands;
+import de.dennisguse.opentracks.p0.gps.GpsPreparation;
+import de.dennisguse.opentracks.sensors.HeartRateStatus;
 import de.dennisguse.opentracks.sensors.GpsStatusValue;
 import de.dennisguse.opentracks.ui.HeartRatePanel;
 
@@ -58,7 +58,6 @@ public class P0Activity extends AbstractActivity {
         binding.p0Devices.setOnClickListener(view->startActivity(new android.content.Intent(this,P0SensorsActivity.class)));
         binding.p0AllHistory.setOnClickListener(view->startActivity(new android.content.Intent(this,P0HistoryActivity.class)));
         model.snapshot().observe(this,this::render);
-        model.history().observe(this,this::renderHistory);
         updateLocationPermission();
     }
     @Override protected void onStart() {super.onStart();model.attach();}
@@ -66,51 +65,70 @@ public class P0Activity extends AbstractActivity {
     private boolean hasLocation() {return ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED;}
     private void updateLocationPermission() {
         binding.p0LocationStatus.setText(hasLocation()?R.string.p0_location_granted:R.string.p0_location_needed);
+        binding.p0LocationStatus.setVisibility(hasLocation()?View.GONE:View.VISIBLE);
         binding.p0LocationPermission.setVisibility(hasLocation()?View.GONE:View.VISIBLE);
         boolean notification=android.os.Build.VERSION.SDK_INT<33||ContextCompat.checkSelfPermission(this,Manifest.permission.POST_NOTIFICATIONS)==PackageManager.PERMISSION_GRANTED;
         binding.p0NotificationPermission.setVisibility(notification?View.GONE:View.VISIBLE);
     }
     private void render(P0RecordingViewModel.Snapshot value) {
         RecordingSession.Phase phase=value.session().phase();
-        int title=switch(phase) {case IDLE->R.string.p0_ready;case ACQUIRING_GPS->R.string.p02_acquiring_gps;case RECORDING->R.string.p0_recording;case PAUSED->R.string.p0_paused;case FINISHED->R.string.p0_finished;};
-        boolean acquiring=phase==RecordingSession.Phase.ACQUIRING_GPS;
-        if(acquiring&&value.preparation().state()==de.dennisguse.opentracks.p0.gps.GpsPreparation.State.TIMED_OUT)title=R.string.p02_gps_timeout;
-        binding.p0RecordingState.setText(title);
-        binding.p0CancelGps.setVisibility(acquiring?View.VISIBLE:View.GONE);
-        binding.p0CancelGps.setEnabled(!value.busy());
-        binding.p0ContinueGps.setVisibility(acquiring&&value.preparation().state()==de.dennisguse.opentracks.p0.gps.GpsPreparation.State.TIMED_OUT?View.VISIBLE:View.GONE);
-        binding.p0LocationSettings.setVisibility(acquiring?View.VISIBLE:View.GONE);
         boolean idle=phase==RecordingSession.Phase.IDLE||phase==RecordingSession.Phase.FINISHED;
-        binding.p0Start.setEnabled(idle&&!value.busy());binding.p0Pause.setEnabled(phase==RecordingSession.Phase.RECORDING&&!value.busy());
-        binding.p0Resume.setEnabled(phase==RecordingSession.Phase.PAUSED&&!value.busy());binding.p0Finish.setEnabled(!idle&&!acquiring&&!value.busy());
+        boolean acquiring=phase==RecordingSession.Phase.ACQUIRING_GPS;
+        boolean recording=phase==RecordingSession.Phase.RECORDING;
+        boolean paused=phase==RecordingSession.Phase.PAUSED;
+        boolean timedOut=acquiring&&value.preparation().state()==GpsPreparation.State.TIMED_OUT;
+        int title=switch(phase) {
+            case IDLE->R.string.p02_idle;
+            case ACQUIRING_GPS->timedOut?R.string.p02_gps_waiting:R.string.p02_acquiring_gps;
+            case RECORDING->R.string.p0_recording;
+            case PAUSED->R.string.p0_paused;
+            case FINISHED->R.string.p0_finished;
+        };
+        binding.p0RecordingState.setText(title);
+        show(binding.p0Start,idle);show(binding.p0Pause,recording);show(binding.p0Resume,paused);
+        show(binding.p0Finish,recording||paused);show(binding.p0CancelGps,acquiring);show(binding.p0ContinueGps,timedOut);
+        show(binding.p0LocationSettings,acquiring);show(binding.p0Sport,idle);
+        for(View action:new View[]{binding.p0Start,binding.p0Pause,binding.p0Resume,binding.p0Finish,binding.p0CancelGps,binding.p0ContinueGps})
+            action.setEnabled(!value.busy());
         binding.p0Running.setEnabled(idle&&!value.busy());binding.p0Cycling.setEnabled(idle&&!value.busy());binding.p0Devices.setEnabled(!value.busy());
-        Statistics stats=!acquiring&&value.data().track()!=null?value.data().trackStatistics():Statistics.DEFAULT;
-        // SensorDataSet is consumable by the recorder. Render the last real GPS
-        // measurement instead, preserving its capture time and accuracy between ticks.
+
+        // Idle/preparation never reuse a finished or synthetic earlier workout's snapshot.
+        boolean hasWorkout=recording||paused||phase==RecordingSession.Phase.FINISHED;
+        Statistics stats=hasWorkout&&value.data().track()!=null&&value.session().trackId()!=null
+                &&value.data().track().id().id()==value.session().trackId()?value.data().trackStatistics():Statistics.DEFAULT;
         Position position=value.position();
-        boolean fix=!acquiring&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX;
-        double speed=fix&&position!=null&&position.hasValidLocation()&&position.hasSpeed()?position.speed().toMPS():Double.NaN;
+        boolean fix=recording&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&position!=null&&position.hasValidLocation();
+        double speed=fix&&position.hasSpeed()?position.speed().toMPS():Double.NaN;
+        binding.p02DistanceValue.setText(MotionFormat.distance(stats.totalDistance().toM()));
+        binding.p02TimeValue.setText(MotionFormat.duration(stats.totalDuration()));
+        binding.p02SpeedValue.setText(MotionFormat.speed(speed));binding.p02PaceValue.setText(MotionFormat.pace(speed));
+        int detail=switch(phase) {
+            case IDLE->R.string.p02_idle_detail;
+            case ACQUIRING_GPS->timedOut?R.string.p02_gps_timeout:R.string.p02_acquiring_detail;
+            case RECORDING->fix?R.string.p02_gps_ready:R.string.p02_gps_weak;
+            case PAUSED->R.string.p02_paused_detail;
+            case FINISHED->R.string.p02_finished_detail;
+        };
+        binding.p02StatusDetail.setText(detail);
         String location="—";
-        if(fix&&position!=null&&position.hasValidLocation()) {
+        if(fix) {
             String accuracy=position.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",position.horizontalAccuracy().toM()):"—";
-            location=String.format(Locale.ROOT,"%.6f, %.6f · %s",position.latitude(),position.longitude(),accuracy);
-            if(position.time()!=null)location+="\n"+DateTimeFormatter.ISO_LOCAL_TIME.withZone(ZoneId.systemDefault()).format(position.time());
+            String captured=position.time()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(position.time());
+            location=getString(R.string.p02_gps_details,position.latitude(),position.longitude(),accuracy,captured);
         }
-        binding.p0Metrics.setText(getString(R.string.p0_metrics_format,MotionFormat.duration(stats.totalDuration()),MotionFormat.duration(stats.movingDuration()),stats.totalDistance().toM(),MotionFormat.speed(speed),MotionFormat.pace(speed),getString(phase==RecordingSession.Phase.RECORDING&&!value.freshGps()?GpsStatusValue.GPS_SIGNAL_LOST.message:value.gps().message),location));
-        var heart=HeartRatePanel.describe(this,value.preview().value(),value.preview().status());
-        binding.p0HeartRate.setText(heart.bpm()+"\n"+heart.state()+"\n"+heart.age());
-        binding.p0Error.setText(value.error());binding.p0Error.setVisibility(value.error()==null?View.GONE:View.VISIBLE);
+        binding.p0Metrics.setText(location);show(binding.p0Metrics,fix);
+
+        HeartRateStatus status=value.preview().status();
+        HeartRateStatus withoutDevice=new HeartRateStatus(status.state(),status.lastReceived(),status.observedAt(),null,status.contactLost());
+        var heart=HeartRatePanel.describe(this,value.preview().value(),withoutDevice);
+        binding.p0HeartRate.setText(heart.bpm());binding.p02HeartState.setText(heart.state());
+        binding.p02HeartDevice.setText(status.device()!=null?status.device():HeartRateCommands.hasSelection()?HeartRateCommands.selected():getString(R.string.p02_no_strap));
+        String last=status.lastReceived()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(status.lastReceived());
+        binding.p02HeartUpdated.setText(getString(R.string.p02_last_heart,last));
+        binding.p02HeartReconnect.setText(!HeartRateCommands.connectionEnabled(this)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(this)?R.string.p02_reconnect_on:R.string.p02_reconnect_off);
+        binding.p0Error.setText(value.error());show(binding.p0Error,value.error()!=null);
         updateLocationPermission();
     }
-    private void renderHistory(List<WorkoutSummary> rows) {
-        binding.p0HistoryList.removeAllViews();
-        for(WorkoutSummary row:rows.subList(0,Math.min(rows.size(),5))) {
-            TextView text=new TextView(this);text.setPadding(0,12,0,12);
-            String hr=row.heartRate().count()==0?"—":String.format(Locale.ROOT,"%.0f / %.0f / %.0f bpm",row.heartRate().minimum(),row.heartRate().average(),row.heartRate().maximum());
-            text.setText(row.track().name()+"\n"+String.format(Locale.ROOT,"%.0f m · %s · HR %s",row.track().statistics().totalDistance().toM(),MotionFormat.duration(row.track().statistics().totalDuration()),hr));
-            binding.p0HistoryList.addView(text);
-            text.setOnClickListener(view->startActivity(P0HistoryActivity.intent(this,row.track().id().id())));
-        }
-    }
+    private static void show(View view,boolean visible) {view.setVisibility(visible?View.VISIBLE:View.GONE);}
     @NonNull @Override protected View createRootView() {binding=P0HomeBinding.inflate(getLayoutInflater());return binding.getRoot();}
 }
