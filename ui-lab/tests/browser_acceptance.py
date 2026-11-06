@@ -204,6 +204,7 @@ def exercise_theme(page, index, width, height):
     click(page, '[aria-label="关闭导出弹窗"]')
     click(page, '[aria-label="返回历史记录"]')
     nav(page, 'settings')
+    page.locator('[data-setting="unit"]').focus()
     page.locator('[data-setting="unit"]').select_option('mi')
     expect(page.locator('[data-setting="unit"]')).to_be_focused()
     page.locator('[data-setting="rate"]').select_option('speed')

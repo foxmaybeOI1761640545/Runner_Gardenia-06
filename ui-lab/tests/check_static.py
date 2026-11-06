@@ -35,7 +35,7 @@ assert not re.search(r'\b(fetch|XMLHttpRequest|WebSocket|geolocation|requestDevi
 assert len(re.findall(r"\{id:'(?:precision|quiet|explorer|neon|swiss|industrial|wellness|aurora|racing|brutal)'", js)) == 10
 # The CI font is not a web dependency. Its local subset must cover every Chinese
 # codepoint in the rendered source, preventing tofu in retained screenshots.
-required = {ord(c) for c in js + css + (ROOT / 'index.html').read_text() if 0x3400 <= ord(c) <= 0x9fff}
+required = {ord(c) for c in js + css + (ROOT / 'index.html').read_text() if 0x3400 <= ord(c) <= 0x9fff or 0x3000 <= ord(c) <= 0x303f or 0xff00 <= ord(c) <= 0xffef}
 covered = {int(line.strip()[2:],16) for line in (ROOT / 'tests/fonts/codepoints.txt').read_text().splitlines() if line.strip()}
 assert required <= covered, f'CI CJK subset needs regeneration: {required - covered}'
 
