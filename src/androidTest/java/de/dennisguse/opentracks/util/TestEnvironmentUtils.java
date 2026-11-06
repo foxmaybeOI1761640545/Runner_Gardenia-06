@@ -31,6 +31,13 @@ public final class TestEnvironmentUtils {
     /** stopService is asynchronous, and a bound service may outlive it. Quiesce before deleting rows. */
     public static void resetTrackRecordingServiceAndDeleteTracks() {
         Context context = ApplicationProvider.getApplicationContext();
+        // A legacy Activity can have a non-auto-create binding waiting for a future service.
+        // Never manufacture and immediately destroy a service just to clean an empty fixture.
+        if (!hasRunningServiceInstance(context)) {
+            stopTrackRecordingService();
+            deleteAllTracks();
+            return;
+        }
         CountDownLatch quiescent = new CountDownLatch(1);
         TrackRecordingServiceConnection.execute(context, (service, connection) -> {
             try {
@@ -53,14 +60,19 @@ public final class TestEnvironmentUtils {
     @SuppressWarnings("deprecation")
     public static void awaitTrackRecordingServiceDestroyed() {
         Context context = ApplicationProvider.getApplicationContext();
-        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         long deadline = SystemClock.uptimeMillis() + 10000;
         do {
-            boolean running = manager.getRunningServices(Integer.MAX_VALUE).stream()
-                    .anyMatch(info -> info.service.getClassName().equals(TrackRecordingService.class.getName()));
+            boolean running = hasRunningServiceInstance(context);
             if (!running) return;
             SystemClock.sleep(25);
         } while (SystemClock.uptimeMillis() < deadline);
         throw new AssertionError("Recording service still bound/running after stop; recovery needs an actual destroyed instance");
     }
+    @SuppressWarnings("deprecation")
+    private static boolean hasRunningServiceInstance(Context context) {
+        ActivityManager manager=(ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
+        return manager.getRunningServices(Integer.MAX_VALUE).stream().anyMatch(info -> info.pid>0
+                && info.service.getClassName().equals(TrackRecordingService.class.getName()));
+    }
+
 }
