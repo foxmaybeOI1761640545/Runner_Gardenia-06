@@ -86,7 +86,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onDataReceived(Location location) {
-        if (!trackPointCreator.acceptGpsLocation(location)) return;
+        if (!trackPointCreator.acceptGpsLocation(location, thresholdHorizontalAccuracy)) return;
         latestElapsedNanos = location.getElapsedRealtimeNanos();
         // Send each update to the status; please note that this TrackPoint is not stored.
         Position position = Position.of(location, trackPointCreator.getNow());

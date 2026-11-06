@@ -142,10 +142,11 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
             startSensors(); // Turns GPS off while preserving an existing explicit HR preview.
         else stopIdleSensors();
     }
-    @Override public boolean acceptGpsLocation(Location location) {
+    @Override public boolean acceptGpsLocation(Location location, Distance requiredAccuracy) {
         if (!preferenceCallbacksEnabled) return false;
         GpsReadiness.Fix fix = new GpsReadiness.Fix(location.getLatitude(), location.getLongitude(),
-                location.hasAccuracy(), location.getAccuracy(), location.getElapsedRealtimeNanos());
+                location.hasAccuracy() && location.getAccuracy() < requiredAccuracy.toM(),
+                location.getAccuracy(), location.getElapsedRealtimeNanos());
         long now = SystemClock.elapsedRealtimeNanos();
         if (gpsReadiness != null) {
             if (!de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this)) {

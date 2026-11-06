@@ -33,9 +33,14 @@ public class P0GpsPreparationTest {
     private TrackRecordingService service;
     private String gps,heart;
     private long begin;
+    private boolean hadAccuracy;
+    private int accuracy;
     private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
     @Before public void before() throws Exception {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
+        var prefs=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+        String accuracyKey=context.getString(R.string.recording_gps_accuracy_key);
+        hadAccuracy=prefs.contains(accuracyKey);accuracy=prefs.getInt(accuracyKey,50);
         gps=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
         heart=PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,SensorType.NONE.getPreferenceValue());
@@ -47,6 +52,9 @@ public class P0GpsPreparationTest {
         if(service!=null)main(()->{service.cancelGpsAcquisition();service.endCurrentTrack();service.stopIdleSensors();});
         TestEnvironmentUtils.stopTrackRecordingService();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);
+        var editor=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).edit();
+        if(hadAccuracy)editor.putInt(context.getString(R.string.recording_gps_accuracy_key),accuracy);else editor.remove(context.getString(R.string.recording_gps_accuracy_key));
+        assertTrue(editor.commit());
     }
     public static void fixture(TrackRecordingService core) {
         var handler=core.getTrackPointCreator().getSensorManager().getGpsHandler();
@@ -133,6 +141,17 @@ public class P0GpsPreparationTest {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
         assertFalse(service.isAcquiringGps());assertFalse(service.isRecording());assertFalse(service.areSensorsStarted());
         SystemClock.sleep(1200);noWorkout();
+    }
+
+    @Test public void preparationAlsoHonorsTheActualRecordersStricterAccuracyFilter() {
+        main(service::cancelGpsAcquisition);
+        assertTrue(androidx.preference.PreferenceManager.getDefaultSharedPreferences(context).edit().putInt(context.getString(R.string.recording_gps_accuracy_key),1).commit());
+        main(()->{service.beginGpsAcquisition();fixture(service);});
+        ready(service);noWorkout(); // 2m would satisfy readiness's 30m ceiling, but not this recorder's 1m filter.
+        for(int i=0;i<3;i++){fix(1.3,0.5f,SystemClock.elapsedRealtimeNanos());if(i<2)SystemClock.sleep(550);}
+        assertTrue(service.isRecording());
+        ArrayList<TrackPoint> points=new ArrayList<>();new WorkoutRepository(context).forEachPoint(service.getRecordingStatus().trackId(),points::add);
+        assertEquals(1,points.stream().filter(point->point.position().hasLocation()).count());
     }
 
 }
