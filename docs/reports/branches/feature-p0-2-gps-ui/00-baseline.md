@@ -22,7 +22,7 @@ The isolated branch was created early solely to archive documents without writin
 | 4 | Home UI and actual screenshot matrix | PASSED |
 | 5 | Full regression | PASSED |
 | 6 | Fixed-key signed P0.2, upgrade and test Pre-release | PASSED |
-| 7 | Final reports/index/remote verification | IN_PROGRESS |
+| 7 | Final reports/index/remote verification | PASSED |
 
 No merge/main/P0 branch writes; no old Tag/Release replacement; no new signing key, identity, SDK/toolchain or cloud functionality. Hardware validation remains separate.
 
@@ -67,3 +67,7 @@ Signing remains gated by a new complete same-run regression with the updated ver
 ## Stage7 entry
 
 Stage6 evidence commitdb1af76e54aae5f853191577e8c381b7f46894f0 passed [archive42257474866](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42257474866). All2053 report/evidence paths matched remote blobs. Public APK/signature and all6 assets independently downloaded/hash-checked; final stage changes only reports/index/checklist and a remote-verification seal, never APK/Tag/build source.
+
+## Stage7 final report and seal
+
+Final report commit2b41fc34fb99b1b28115474146adda837cd28805 passed [archive42259245045](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42259245045), with all2056 report/evidence Git blobs independently matching remote. [Final delivery](05-delivery-report.md), [hardware checklist](06-device-checklist.md), [exact verification snapshot](final-verification.json). Source4454d71, publication code4444c0d and report2b41fc3 remain distinct. Root indices, original36+6 screenshots/checksums, all stage receipts, original protected refs, source/version tree identity and public Release assets verified. This seal-only commit is fetched and archive-checked separately before final delivery; it does not modify/rebuild/re-sign the accepted APK or move its Tag. Development stops pending physical device validation.

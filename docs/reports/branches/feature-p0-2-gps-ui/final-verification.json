@@ -1,7 +1,93 @@
 {
-  "status": "PENDING",
+  "status": "PASSED",
+  "verifiedAtUTC08": "2026-11-07T01:13:27.026886+08:00",
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branch": "feature/p0-2-gps-ui",
+  "p0_baseline_sha": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
   "release_source_sha": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
   "publication_code_sha": "4444c0d30925b146ac693ef0fcfa0cceabfa99ad",
-  "report_commit_sha": null,
-  "note": "Filled after the final report commit is pushed, fetched and remotely verified; no self-referential invented SHA."
+  "report_commit_sha": "2b41fc34fb99b1b28115474146adda837cd28805",
+  "remote_report_snapshot_commit": "2b41fc34fb99b1b28115474146adda837cd28805",
+  "remoteFilesVerified": 2056,
+  "reportArchiveRun": 42259245045,
+  "originalChecksRun": 42251766485,
+  "originalRunConclusion": "failure in publication only; checks and signed upgrade jobs success",
+  "publicationRun": 42255705842,
+  "publicationAttempt": 4,
+  "publicationResult": "success",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.2",
+  "releaseId": 436759328,
+  "tag": "test-p0-v0.1.0-p0.2",
+  "tagObject": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "apkBytes": 2753061,
+  "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "publicBrowserDownloadAndAllAssetsVerified": true,
+  "officialApksigApi26To37Verified": true,
+  "sameApplicationSourceTree": "c74abe6cda368aa9147fd4bcfd7c86f19aa33146",
+  "applicationSourceUnchangedSinceAcceptedApk": true,
+  "versionPropertiesUnchangedSinceAcceptedApk": true,
+  "originalBranchesAndTagsUnchanged": true,
+  "trackedApkJksKeystoreFiles": [],
+  "allLocalReportLinksVerified": true,
+  "allStageReceiptMembersTrackedAndHashCorrect": true,
+  "screenshotMatrix": "36 original PNGs plus producer/SHA256SUMS verified; six installed-release PNGs also reviewed",
+  "hardware": "NEEDS_DEVICE_VALIDATION",
+  "noRebuildResignOrTagMoveForReports": true,
+  "files": [
+    {
+      "path": "docs/reports/README.md",
+      "sha256": "72ae7ecf258cb34552bc70ea6315e9a1795e4e2eeb3375608543338f3567b94c",
+      "bytes": 5632
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-core-migration/README.md",
+      "sha256": "8d71ba02420ca777b1523e373125044a64c7d564e6b24b03446107d72248af16",
+      "bytes": 1884
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-core-migration/INVENTORY.md",
+      "sha256": "7d717747222ec148fa313a1fcbaffa44966b7a7080f338396781241b92f81aa4",
+      "bytes": 47099
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/01-ble-reconnect-audit.md",
+      "sha256": "6729721eb095c8e5d7de3f7caddc4cc300d78264349e0c176e0b11d5472467fd",
+      "bytes": 7650
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/02-gps-state-acceptance.md",
+      "sha256": "226cf92f7ebd55f128daec425f757363d49e452aad51b4f30a370e5b4ee4ec98",
+      "bytes": 15604
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/03-ui-acceptance.md",
+      "sha256": "7b879109e40dc897b21324a1aca5b168e484ae197d75e423ef5816ff30f60876",
+      "bytes": 11401
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/04-regression-report.md",
+      "sha256": "1cafa066de35b4144795661033fc5637a4a870d398e83c45ba1e8bf1340610be",
+      "bytes": 4299
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/05-delivery-report.md",
+      "sha256": "54666589ce724c295a0db5155f7498087d20db7448598d6c5c0851d5d2a433ba",
+      "bytes": 12807
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/06-device-checklist.md",
+      "sha256": "e75fb1edd13ccaea1b30225989fd4f87c92d8dc1e5e3b13772d7d7ce809220bf",
+      "bytes": 6148
+    },
+    {
+      "path": "docs/reports/branches/feature-p0-2-gps-ui/screenshots/SHA256SUMS",
+      "sha256": "4acc0f90d90a0075871a8b7115c426c49628c21505d8446453a013ecd2baf0ac",
+      "bytes": 3721
+    }
+  ],
+  "note": "This records the remotely verified report commit, not an invented self-referential hash of the subsequent seal commit. The final seal push is independently fetched/verified and its archive check is checked before delivery."
 }
