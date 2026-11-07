@@ -1,0 +1,118 @@
+{
+  "conclusion": "cancelled",
+  "headSha": "ffce3f24da163883a709b1352e7dd5cbe2e302cf",
+  "jobs": [
+    {
+      "completedAt": "2026-11-07T15:13:02Z",
+      "conclusion": "cancelled",
+      "databaseId": 128440837832,
+      "name": "Frontend and real-browser acceptance",
+      "startedAt": "2026-11-07T15:11:16Z",
+      "status": "completed",
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 2,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "number": 3,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Static source, runtime dependency and isolation checks",
+          "number": 4,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Install acceptance tooling only",
+          "number": 5,
+          "status": "completed"
+        },
+        {
+          "conclusion": "cancelled",
+          "name": "Actual Chromium acceptance - 10 themes at 3 viewports",
+          "number": 6,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Retain screenshots and diagnostic evidence even on failure",
+          "number": 7,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Keep a compact preview package for visual review",
+          "number": 8,
+          "status": "completed"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Stage only the static design lab",
+          "number": 9,
+          "status": "completed"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Prepare Pages artifact after all frontend checks pass",
+          "number": 10,
+          "status": "completed"
+        },
+        {
+          "conclusion": "skipped",
+          "name": "Post Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0",
+          "number": 19,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "number": 20,
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42385149501/job/128440837832"
+    },
+    {
+      "completedAt": "2026-11-07T15:13:02Z",
+      "conclusion": "cancelled",
+      "databaseId": 128441279355,
+      "name": "Verify published Pages in real Chrome",
+      "startedAt": "2026-11-07T15:13:02Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42385149501/job/128441279355"
+    },
+    {
+      "completedAt": "2026-11-07T15:13:02Z",
+      "conclusion": "cancelled",
+      "databaseId": 128441279689,
+      "name": "Deploy independent UI Lab to Pages",
+      "startedAt": "2026-11-07T15:13:02Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42385149501/job/128441279689"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42385149501",
+  "supersededReason": "Visual review identified three component ink/fill overrides; candidate canceled before deployment and replaced by corrected source with rendered-contrast assertions."
+}

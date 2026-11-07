@@ -72,3 +72,11 @@
 [data-appearance] .gps-fixed svg,[data-appearance] .ble-connected:not(.warning) svg { color:var(--success); }
 [data-appearance] .gps-lost,[data-appearance] .gps-lost svg { color:var(--danger); }
 [data-appearance] .record-state[data-session=paused] { color:var(--warning); }
+/* Explicit paired fills prevent family card overrides from separating ink from fill. */
+.phone-screen[data-appearance] .history-summary { background:var(--accent); color:var(--on-accent); }
+.phone-screen[data-theme=quiet][data-appearance] .history-summary { background:transparent; color:var(--fg); }
+.phone-screen[data-appearance] .heart-symbol svg { color:var(--accent-text); }
+[data-theme=brutal][data-appearance] .device-option.selected,
+[data-theme=brutal][data-appearance] .device-option.selected svg,
+[data-theme=brutal][data-appearance] .device-option.selected small,
+[data-theme=brutal][data-appearance] .device-option.selected>span { color:var(--on-accent); }

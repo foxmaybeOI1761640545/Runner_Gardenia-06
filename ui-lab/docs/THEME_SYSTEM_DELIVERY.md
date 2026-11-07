@@ -9,3 +9,5 @@ Viewports: 1440×1000, 1366×768, 390×844. The full original metric, GPS, BLE, 
 Local evidence: [regression](acceptance/theme-system/local-results.json), [palette matrix](acceptance/theme-system/local-appearance-browser.json), [local gate](acceptance/theme-system/local-phase1-gate.json), [source file hashes](acceptance/theme-system/source-files.json). The local Git SHA identifies the pre-commit base; source-files.json records exact tested working source bytes. Cloud acceptance will bind the committed source SHA.
 
 Online deployment and live acceptance are pending. Phase 2 remains blocked until the live gate passes. This report will be updated with the exact Actions run, deployed source SHA, online evidence, and the Phase 2 handoff.
+
+Visual review also corrected Quiet/Aurora history summaries and Brutal selected-device foregrounds. Browser acceptance now checks their final composited text contrast in every appearance and viewport. The superseded first cloud candidate was canceled before deployment; its raw run metadata is preserved in acceptance/theme-system/superseded-cloud-run.json.

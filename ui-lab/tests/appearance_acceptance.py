@@ -4,6 +4,22 @@ import json
 from pathlib import Path
 from playwright.sync_api import expect
 
+def rendered_contrast(page,selector,minimum=4.5):
+    pairs=page.locator(selector).evaluate_all(r'''els=>els.map(el=>{
+      const color=s=>{const v=s.match(/[\d.]+/g).map(Number);return [v[0]/255,v[1]/255,v[2]/255,v.length>3?v[3]:1]};
+      const over=(fg,bg)=>{const a=fg[3]+bg[3]*(1-fg[3]);return [0,1,2].map(i=>(fg[i]*fg[3]+bg[i]*bg[3]*(1-fg[3]))/a).concat(a)};
+      let bg=[1,1,1,1],nodes=[],node=el;
+      while(node){nodes.unshift(node);node=node.parentElement;}
+      nodes.forEach(n=>bg=over(color(getComputedStyle(n).backgroundColor),bg));
+      let opacity=1;for(const n of nodes)opacity*=Number(getComputedStyle(n).opacity);
+      let fg=color(getComputedStyle(el).color);fg[3]*=opacity;fg=over(fg,bg);
+      const lum=v=>v.slice(0,3).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);
+      const l=[lum(fg),lum(bg)].sort((a,b)=>a-b);return {text:el.textContent,ratio:(l[1]+.05)/(l[0]+.05),color:getComputedStyle(el).color,background:bg};
+    })''')
+    assert pairs,selector
+    for pair in pairs:assert pair['ratio']>=minimum,(selector,pair)
+
+
 def exercise_appearances(page, *, choose, nav, sim, reset, checked, assert_layout, results, report):
     root=Path(__file__).resolve().parents[1]
     tokens=json.loads((root/'assets/design-tokens.json').read_text())['themes']
@@ -27,6 +43,8 @@ def exercise_appearances(page, *, choose, nav, sim, reset, checked, assert_layou
                 assert actual==theme[appearance]['background'],(theme['id'],appearance,actual)
                 for target in ['run','heart','history','settings']:
                     nav(page,target);assert_layout(page,f'{theme["id"]} {appearance} {target} {width}x{height}')
+                    if target=='history':rendered_contrast(page,'#phone-content .history-summary .value')
+                    if target=='heart':rendered_contrast(page,'#phone-content .device-option.selected strong, #phone-content .device-option.selected small, #phone-content .device-option.selected>span')
                     snapshot(f'{i+1:02}-{appearance}-{target}-{width}.png')
                     # Changing palette and theme preserves current navigation and all simulator states.
                     before=page.locator('#app-nav [aria-current=page]').get_attribute('data-page')
