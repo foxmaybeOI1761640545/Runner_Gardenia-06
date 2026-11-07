@@ -1,0 +1,130 @@
+{
+  "sourceCommit": "6fd9c73a5b90109db757bfbe0299729ef8df6759",
+  "actionsRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42353043971",
+  "captureURL": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+  "browserVersion": "156.0.8078.79",
+  "artifactId": 13565999440,
+  "artifactSha256": "195ae6160ae59b58445d9e6e6409f6b9d90f030f1bf33fa3b827130eb063e320",
+  "files": [
+    {
+      "name": "metric-swap-01.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7"
+    },
+    {
+      "name": "metric-swap-02.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542"
+    },
+    {
+      "name": "metric-swap-03.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6"
+    },
+    {
+      "name": "metric-swap-04.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644"
+    },
+    {
+      "name": "metric-swap-05.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41"
+    },
+    {
+      "name": "metric-swap-06.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d"
+    },
+    {
+      "name": "metric-swap-07.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1"
+    },
+    {
+      "name": "metric-swap-08.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e"
+    },
+    {
+      "name": "metric-swap-09.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0"
+    },
+    {
+      "name": "metric-swap-10.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173"
+    },
+    {
+      "name": "metric-swap-long-01.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2"
+    },
+    {
+      "name": "metric-swap-long-02.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03"
+    },
+    {
+      "name": "metric-swap-long-03.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0"
+    },
+    {
+      "name": "metric-swap-long-04.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05"
+    },
+    {
+      "name": "metric-swap-long-05.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14"
+    },
+    {
+      "name": "metric-swap-long-06.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b"
+    },
+    {
+      "name": "metric-swap-long-07.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb"
+    },
+    {
+      "name": "metric-swap-long-08.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e"
+    },
+    {
+      "name": "metric-swap-long-09.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "e7016ea403f5cd882d2a5cd99c03aecc11cfc91357e427ac14bfd3c6882e249d"
+    },
+    {
+      "name": "metric-swap-long-10.png",
+      "width": 300,
+      "height": 646,
+      "sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4"
+    }
+  ]
+}

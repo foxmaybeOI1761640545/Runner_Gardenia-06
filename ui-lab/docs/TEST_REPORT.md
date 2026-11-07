@@ -2,18 +2,59 @@
 
 ## 本轮增强：主副指标双向位置交换
 
-- 同步起点：实际远端最新 HEAD `0de2481a85eeee192ea0f203429bf086865ba681`，工作区干净，使用 fast-forward 同步；未从旧 df900b1 重置。
-- 本轮实际修改：`app.js`、`styles.css`、`index.html`、`tests/browser_acceptance.py`、新增 `tests/metric_swap_acceptance.py` / `tests/build_ci_font.py`、测试专用字体子集与码点表、本报告、`METRIC_SWAP_SPEC.md`、原生指南及 `previews/`；专用 Pages 工作流仅为紧凑 Artifact 增加交换截图路径，保留原有发布前/发布后完整检查。
-- 默认主指标：01 distance、02 distance、03 distance、04 heartRate、05 distance、06 distance、07 distance、08 distance、09 distance、10 distance；与同步后的真实源码一致。Neon 的副指标重复心率已改为 GPS 精度。
-- 统一模型：`metricLayoutsByTheme` 独立保存每套主题的 primary 与有序 secondary；一次只解构交换主位置和被点击的副位置，其他槽位不变。GPS 固定辅助位置不参与，四种核心指标不会重复或丢失。
-- 统一数据：主、副均使用 `metricData(motion())` 的同一套 value/unit/label；每秒只更新现有文本节点。保留原有 GPS、BLE、暂停/恢复逻辑。
-- 可访问操作：三个核心副指标为原生 button；支持鼠标、真实 Chromium 触屏输入、Tab/Enter/Space 与可见焦点。交换后焦点保持在同一副位置。提示位于普通文档流，不遮挡数据。
-- 本地预检：10 主题 × 1440×1000 / 1366×768 / 390×844 的指标专项通过，共 122 组检查；实际触屏模拟另行全部 10 主题通过；控制台错误 0、外部运行时请求 0。超过一小时通过真实模拟 ticker 推进到 01:25:30 检查，不注入私有模型值。
-- GPS/BLE：搜星/丢失时距离和配速占位；精度未知为 --；未连接/过期心率为 -- BPM；暂停冻结距离与时间。主副位置交换前后的值和单位逐对验证。
-- 格式：km/mi 两位小数、mm:ss/HH:mm:ss、配速分钟秒和 /km /mi、速度一位小数 km/h/mph、整数 BPM。现有模拟速率对应 11.0 km/h，未改为虚构速率。
-- 原有回归：原始 GPS/BLE、记录生命周期、历史/详情、曲线、GPX、设置、轮播、导航、离线与零外部请求检查全部保留；本次候选实现的完整 CI 和正式站点验收结果将在成功后归档。
-- 提交与运行：当前候选尚未推送；最终部署提交 SHA、Actions 链接、逐主题/视口结果会由成功 CI 的 `BROWSER_ACCEPTANCE_RESULTS.json`（sourceCommit / actionsRun / assertions / metric_swap_defaults）及 `previews/PROVENANCE.json` 自动绑定。截图归档完成后更新此条。
-- 正式地址：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/ 。只有发布后的 `Verify published Pages in real Chrome` 对新交换功能通过才宣布上线完成。
+- 分支：`design/p0-ui-lab`，长期保留；同步起点为实际远端最新 HEAD `0de2481a85eeee192ea0f203429bf086865ba681`。工作区干净，以 fast-forward 同步，未从旧 df900b1 重置。
+- 功能源码提交：`6fd9c73a5b90109db757bfbe0299729ef8df6759`。完整发布与正式站点验收：[Actions 42353043971](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42353043971)，frontend / deploy / verify-live 全部 success。
+- 正式访问地址：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/ 。部署返回的该地址实际 HTTP 200，线上 Chrome 直接访问此地址并测试新交换按钮与全部原有功能。
+- 本报告与截图的归档提交同样触发原有三阶段工作流。为避免提交 SHA 自引用，最终 HEAD 的完整 SHA 与运行链接以正式站点自动生成的 [BROWSER_ACCEPTANCE_RESULTS.json](https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/docs/BROWSER_ACCEPTANCE_RESULTS.json) 的 `sourceCommit` / `actionsRun` 为准；最终交付消息也提供完整提交链接。本仓库 JSON 是上述已通过运行的固定归档。
+
+### 实际修改的文件
+
+`app.js`、`styles.css`、`index.html`、`tests/browser_acceptance.py`、新增 `tests/metric_swap_acceptance.py` / `tests/build_ci_font.py`、测试专用字体子集和码点表、`docs/METRIC_SWAP_SPEC.md`、`docs/NATIVE_UI_IMPLEMENTATION_GUIDE.md`、本报告及 `docs/BROWSER_ACCEPTANCE_RESULTS.json`；`previews/` 更新 13 张实际默认/整页截图，另归档 20 张交换/长时长截图及其来源清单。专用 `.github/workflows/p0-ui-lab-pages.yml` 仅为紧凑 Artifact 增加交换截图路径，原检查、权限和发布任务均保留。
+
+### 实现和逐主题验收
+
+统一的 `metricLayoutsByTheme` 保存每套主题的主指标和有序副指标。每次仅交换主位置与被点击的副位置，其他槽位不动；GPS 精度固定在第四副位置。模型独立于模拟运动状态，切换主题、页面或重置模拟记录均保留选择。三个核心副指标为原生 button，支持鼠标、触屏、Tab/Enter/Space 和可见焦点；交换后焦点保持原副位置。提示位于普通文档流，不遮挡指标。
+
+主副数据统一使用 `metricData(motion())`，每秒仅更新现有文本节点，不重建整页。保留十套原 hero 容器与地图、仪表、霓虹、编辑、玻璃等视觉。Neon 默认心率主显示，副区为距离、时长、配速和精度；辅助波形明确标注“心率曲线 · BPM”。
+
+| 主题 | 默认主指标（已核对源码） | 三视口交换、位置不变与唯一性 | 状态、格式、键盘和实时更新 |
+|---|---|---|---|
+| 01 Precision Pro | 运动距离 | 通过 | 通过 |
+| 02 Quiet Minimal | 运动距离 | 通过 | 通过 |
+| 03 Outdoor Explorer | 运动距离 | 通过 | 通过 |
+| 04 Neon Pulse | 实时心率 | 通过 | 通过 |
+| 05 Swiss Editorial | 运动距离 | 通过 | 通过 |
+| 06 Industrial Gauge | 运动距离 | 通过 | 通过 |
+| 07 Calm Wellness | 运动距离 | 通过 | 通过 |
+| 08 Aurora Glass | 运动距离 | 通过 | 通过 |
+| 09 Racing Performance | 运动距离 | 通过 | 通过 |
+| 10 Data Brutalism | 运动距离 | 通过 | 通过 |
+
+### 实际浏览器结果
+
+Chrome `156.0.8078.79` / Playwright `1.62.0`，发布前和正式 HTTPS 站点均通过 **1303 组检查**（每组可能包含多项断言）。控制台错误 **0**，外部网络请求 **0**。没有删除原检查、跳过失败项或放宽断言。本地另外完成指标专项 122 组与十主题真实 Chromium 触屏输入检查。
+
+| 验收内容 | 实测结果 |
+|---|---|
+| 1440×1000 / 1366×768 / 390×844 | 每种尺寸全部 10 主题通过，主数据、单位、副区、导航、手机比例与轮播无溢出或遮挡 |
+| 连续真实位置互换 | 四种核心指标均可成为主显示；旧主指标进入被点击槽位，其他槽位完全不变，无重复或丢失 |
+| 会话保留 | 主题 01 / 02 独立修改再返回、历史/心率/设置返回运动均通过 |
+| GPS 搜星 / 丢失 | 距离、配速/速度显示 --，精度 --；主副一致，无虚构有效数值；恢复与轨迹缺口回归通过 |
+| BLE 未连接 / 过期 / 已连接 | 无效时主副均 -- BPM，连接后有效值；保留扫描、手动重连等旧流程 |
+| 记录 / 暂停 / 恢复 / 结束 | 暂停距离、时长冻结，配速/速度 --，交换不改变记录逻辑；原生命周期通过 |
+| 公里 / 英里 | 距离两位小数，基准 5.24 km / 3.26 mi，移动位置后格式相同 |
+| 配速 / 速度 | 5′27″/km、8′46″/mi、11.0 km/h、6.8 mph；原模拟速率对应 11.0，未改造记录模型 |
+| 时长 | mm:ss 与超过一小时 01:25:30；用原模拟 ticker 实际推进，全部主题与尺寸完整显示 |
+| 键盘 / 触屏 | 三个副指标均为可访问按钮，Tab/Enter/Space 和焦点恢复通过；全部 10 主题实际 touchscreen tap 通过 |
+| 既有功能回归 | GPS、BLE、历史/详情、曲线、GPX 下载/失败/重试/分享回退、设置、轮播、导航和减少动态效果全部保留并通过 |
+| 完全离线 | 实际 Chromium file:// 且 networking disabled，原离线打开与导航检查通过 |
+| 线上新功能 | 使用正式 URL 运行同一套交换、状态、格式和回归检查，通过 |
+
+### 截图、来源与隔离
+
+[默认与整页截图](../previews/README.md)共 13 张，[交换和长时长截图](../previews/metric-swaps/README.md)共 20 张，全部来自上述正式 Pages 浏览器运行。已取回审查；来源提交、运行、图像尺寸和每张 SHA-256 见各自 PROVENANCE.json。下载包 Artifact `13565999440` 的 SHA-256 为 `195ae6160ae59b58445d9e6e6409f6b9d90f030f1bf33fa3b827130eb063e320`，已与 GitHub 返回 digest 核对一致。完整结果见 [BROWSER_ACCEPTANCE_RESULTS.json](BROWSER_ACCEPTANCE_RESULTS.json)，trace/下载 GPX 在该 Actions Artifact 保留 30 天，截图已长期归档于分支。
+
+Android 业务、GPS/BLE 原生逻辑、Gradle、Manifest、数据库、签名/Android 工作流、Release、main 和其他业务分支均未修改。不引入 WebView，Java + XML + ViewBinding 原生路线不变；原生指南补充了未来指标位置交换的 UI 状态约定。HTML 浏览器触屏模拟不等同于 Android 真机验收。
 
 实现与交互细节见 [METRIC_SWAP_SPEC.md](METRIC_SWAP_SPEC.md)。下文保留原 UI Lab 的历史验收与首次发布记录。
 

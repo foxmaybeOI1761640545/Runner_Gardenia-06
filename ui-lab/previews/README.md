@@ -1,6 +1,8 @@
 # 实际浏览器截图
 
-本站真实运行后的截图，已取回并人工审查，来源为 [GitHub Actions 42269278260](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42269278260)，源码 `6910416c2125fbdf8bf0719db00759062c7944a7`，Chrome `156.0.8078.79`。
+本站真实运行后的截图，已取回并审查，来源为正式 Pages 全量浏览器验收 [GitHub Actions 42353043971](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42353043971)，源码 `6fd9c73a5b90109db757bfbe0299729ef8df6759`，Chrome `156.0.8078.79`。
+
+新增 [十套主题交换与长时长截图](metric-swaps/README.md)，共 20 张，来源与哈希单独记录。
 
 - `theme-01.png` 至 `theme-10.png`：同一模拟记录状态的十套完整手机界面，截图时浏览器视口 1440×1000，手机按网站规则等比缩放。
 - `desktop-1440.png`、`desktop-1366.png`、`mobile-390.png`：1440×1000、1366×768、390×844 视口的整页截图；整页图片高度可以大于视口高度。
