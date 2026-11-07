@@ -39,7 +39,6 @@
         <item name="android:statusBarColor">@color/gardenia_precision_background</item>
         <item name="android:navigationBarColor">@color/gardenia_precision_background</item>
         <item name="android:windowLightStatusBar">@bool/gardenia_system_light</item>
-        <item name="android:windowLightNavigationBar">@bool/gardenia_system_light</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="gardeniaCornerRadius">12dp</item>
         <item name="gardeniaCardStroke">1dp</item>
@@ -57,6 +56,11 @@
         <item name="gardeniaChart">@color/gardenia_precision_chart</item>
         <item name="gardeniaChartGrid">@color/gardenia_precision_chartgrid</item>
         <item name="gardeniaSurfaceVariant">@color/gardenia_precision_surfacevariant</item>
+        <item name="colorSurfaceVariant">@color/gardenia_precision_surfacevariant</item>
+        <item name="android:colorBackgroundFloating">@color/gardenia_precision_surface</item>
+        <item name="colorControlNormal">@color/gardenia_precision_foregroundsecondary</item>
+        <item name="colorControlActivated">@color/gardenia_precision_accenttext</item>
+        <item name="colorControlHighlight">@color/gardenia_precision_tint</item>
     </style>
     <style name="GardeniaShapePrecision" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -101,7 +105,6 @@
         <item name="android:statusBarColor">@color/gardenia_quiet_background</item>
         <item name="android:navigationBarColor">@color/gardenia_quiet_background</item>
         <item name="android:windowLightStatusBar">@bool/gardenia_system_light</item>
-        <item name="android:windowLightNavigationBar">@bool/gardenia_system_light</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="gardeniaCornerRadius">16dp</item>
         <item name="gardeniaCardStroke">0dp</item>
@@ -119,6 +122,11 @@
         <item name="gardeniaChart">@color/gardenia_quiet_chart</item>
         <item name="gardeniaChartGrid">@color/gardenia_quiet_chartgrid</item>
         <item name="gardeniaSurfaceVariant">@color/gardenia_quiet_surfacevariant</item>
+        <item name="colorSurfaceVariant">@color/gardenia_quiet_surfacevariant</item>
+        <item name="android:colorBackgroundFloating">@color/gardenia_quiet_surface</item>
+        <item name="colorControlNormal">@color/gardenia_quiet_foregroundsecondary</item>
+        <item name="colorControlActivated">@color/gardenia_quiet_accenttext</item>
+        <item name="colorControlHighlight">@color/gardenia_quiet_tint</item>
     </style>
     <style name="GardeniaShapeQuiet" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -163,7 +171,6 @@
         <item name="android:statusBarColor">@color/gardenia_explorer_background</item>
         <item name="android:navigationBarColor">@color/gardenia_explorer_background</item>
         <item name="android:windowLightStatusBar">@bool/gardenia_system_light</item>
-        <item name="android:windowLightNavigationBar">@bool/gardenia_system_light</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="gardeniaCornerRadius">9dp</item>
         <item name="gardeniaCardStroke">1dp</item>
@@ -181,6 +188,11 @@
         <item name="gardeniaChart">@color/gardenia_explorer_chart</item>
         <item name="gardeniaChartGrid">@color/gardenia_explorer_chartgrid</item>
         <item name="gardeniaSurfaceVariant">@color/gardenia_explorer_surfacevariant</item>
+        <item name="colorSurfaceVariant">@color/gardenia_explorer_surfacevariant</item>
+        <item name="android:colorBackgroundFloating">@color/gardenia_explorer_surface</item>
+        <item name="colorControlNormal">@color/gardenia_explorer_foregroundsecondary</item>
+        <item name="colorControlActivated">@color/gardenia_explorer_accenttext</item>
+        <item name="colorControlHighlight">@color/gardenia_explorer_tint</item>
     </style>
     <style name="GardeniaShapeExplorer" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -225,7 +237,6 @@
         <item name="android:statusBarColor">@color/gardenia_neon_background</item>
         <item name="android:navigationBarColor">@color/gardenia_neon_background</item>
         <item name="android:windowLightStatusBar">@bool/gardenia_system_light</item>
-        <item name="android:windowLightNavigationBar">@bool/gardenia_system_light</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="gardeniaCornerRadius">18dp</item>
         <item name="gardeniaCardStroke">1dp</item>
@@ -243,6 +254,11 @@
         <item name="gardeniaChart">@color/gardenia_neon_chart</item>
         <item name="gardeniaChartGrid">@color/gardenia_neon_chartgrid</item>
         <item name="gardeniaSurfaceVariant">@color/gardenia_neon_surfacevariant</item>
+        <item name="colorSurfaceVariant">@color/gardenia_neon_surfacevariant</item>
+        <item name="android:colorBackgroundFloating">@color/gardenia_neon_surface</item>
+        <item name="colorControlNormal">@color/gardenia_neon_foregroundsecondary</item>
+        <item name="colorControlActivated">@color/gardenia_neon_accenttext</item>
+        <item name="colorControlHighlight">@color/gardenia_neon_tint</item>
     </style>
     <style name="GardeniaShapeNeon" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
