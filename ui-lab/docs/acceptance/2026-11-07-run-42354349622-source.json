@@ -450,7 +450,7 @@
       "historical_sha256": "ad8c3f1d6aea5499522fb20ff96eb51a416674fb1851b1540816e90a7e7c5edd",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/desktop-1440.png",
@@ -460,7 +460,7 @@
       "historical_sha256": "9677e6c45dcf46edd3b118409cc83e981abab331831a88694fee8bc87f674865",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-01.png",
@@ -470,7 +470,7 @@
       "historical_sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-02.png",
@@ -480,7 +480,7 @@
       "historical_sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-03.png",
@@ -490,7 +490,7 @@
       "historical_sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-04.png",
@@ -500,7 +500,7 @@
       "historical_sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-05.png",
@@ -510,7 +510,7 @@
       "historical_sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-06.png",
@@ -520,7 +520,7 @@
       "historical_sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-07.png",
@@ -530,7 +530,7 @@
       "historical_sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-08.png",
@@ -540,7 +540,7 @@
       "historical_sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-09.png",
@@ -550,7 +550,7 @@
       "historical_sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-10.png",
@@ -560,7 +560,7 @@
       "historical_sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-01.png",
@@ -570,7 +570,7 @@
       "historical_sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-02.png",
@@ -580,7 +580,7 @@
       "historical_sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-03.png",
@@ -590,7 +590,7 @@
       "historical_sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-04.png",
@@ -600,7 +600,7 @@
       "historical_sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-05.png",
@@ -610,7 +610,7 @@
       "historical_sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-06.png",
@@ -620,7 +620,7 @@
       "historical_sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-07.png",
@@ -630,7 +630,7 @@
       "historical_sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-08.png",
@@ -640,7 +640,7 @@
       "historical_sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-09.png",
@@ -650,7 +650,7 @@
       "historical_sha256": "e7016ea403f5cd882d2a5cd99c03aecc11cfc91357e427ac14bfd3c6882e249d",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/metric-swaps/metric-swap-long-10.png",
@@ -660,7 +660,7 @@
       "historical_sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/mobile-390.png",
@@ -670,7 +670,7 @@
       "historical_sha256": "2eeaf5425dac9ad582540127268b92a9a9df52b0ad458930c9f8210a00e5edd9",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-01.png",
@@ -680,7 +680,7 @@
       "historical_sha256": "8e781e9caef38f96bd94a9729d60302b1d4bdf3c2f2062d84aa5a37f504d0821",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-02.png",
@@ -690,7 +690,7 @@
       "historical_sha256": "04bf0ed05e427d316b496444d5716757e7663ed6a964ef7cad75c3557f9124bf",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-03.png",
@@ -700,7 +700,7 @@
       "historical_sha256": "446793c343f38662d6c60216b450069c6cb88aea85acae73faac98883c5649b0",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-04.png",
@@ -710,7 +710,7 @@
       "historical_sha256": "b1f4d09f88a8dd1afb7df0b486dd0732b45ad51b3345eb675e271aa95820d930",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-05.png",
@@ -720,7 +720,7 @@
       "historical_sha256": "d642eebe299d3cfe900faf4cc75824dcd6a85e65116eaa81393f28f93aeb9453",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-06.png",
@@ -730,7 +730,7 @@
       "historical_sha256": "7373282b9101595802852fc85a5c137a5db75ee274408b7af4d00ce7058f62b2",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-07.png",
@@ -740,7 +740,7 @@
       "historical_sha256": "20794dd4c8ccb0bdf06133dff63ac616b46451b65f198b87484804c443a594cd",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-08.png",
@@ -750,7 +750,7 @@
       "historical_sha256": "8e6f2c0c9ac1bc2f54fc5fc3579889348dc09c7792bf4abaf765e5ed18b32b3a",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-09.png",
@@ -760,7 +760,7 @@
       "historical_sha256": "de9be5d7f7dca1957b2f9006c193677795d20e3c3f710f373eb6bc1803d6768a",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     },
     {
       "original_path": "previews/theme-10.png",
@@ -770,7 +770,7 @@
       "historical_sha256": "1cd1dfa05a444efcd56647be43267776793d731c915c626eea94afe9a4b36228",
       "identical_to_historical": true,
       "retained_again": false,
-      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+      "decision": "EXACT_DUPLICATE: canonical bytes retained at historical_path; this source record adds the new run attribution without copying the PNG."
     }
   ],
   "original_result": {
@@ -780,5 +780,5 @@
     "sha256": "6718a26809872096a9e5e1df8c6e7039da8189f2e59b9d379b6098b77b5e9d28",
     "classification": "BROWSER_LAB_EVIDENCE / SIMULATED_DATA / NOT_ANDROID_OR_DEVICE_ACCEPTANCE"
   },
-  "retention_boundary": "Full traces and this run rerendered PNG bytes remain Artifact-only; 33 prior original PNGs/provenance remain in Git. Raw results and this complete ZIP member inventory persist in Git."
+  "retention_boundary": "All 33 PNG byte streams are exact duplicates of existing Git PNGs and remain permanently available at the recorded historical_path; no second copy. Per-run browser traces remain Artifact-only. Original raw results and full ZIP member inventory persist in Git."
 }
