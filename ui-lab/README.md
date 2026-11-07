@@ -55,3 +55,11 @@ GitHub Actions 使用托管 Ubuntu runner 已预装的 Google Chrome（记录实
 ## 隔离
 
 本分支相对基线只新增 `ui-lab/` 和指定 Pages 工作流。不修改 main、业务分支、project-records、Android 源码、Gradle、Manifest 或已有 Android 工作流。后续原生实现继续使用 Java/XML，禁止用 WebView 承载此原型。
+
+## 长期验收归档
+
+- [2026-11-07 原始运行42354349622：结果、来源与完整 Artifact 清单](docs/acceptance/2026-11-07-run-42354349622.md)。
+- [原始机器结果 JSON](docs/acceptance/2026-11-07-run-42354349622-results.json)、[来源/逐文件 SHA-256](docs/acceptance/2026-11-07-run-42354349622-source.json)、[校验文件](docs/acceptance/2026-11-07-run-42354349622-SHA256SUMS)。
+- [设计 Token](assets/design-tokens.json)、[原生实现指南](docs/NATIVE_UI_IMPLEMENTATION_GUIDE.md)、[历史截图](previews/README.md)。
+
+浏览器模拟数据及截图不代表 Android 原生实机验收，也不代表真实 BLE 或 GPS 验收。Git 长期保存与 Artifact 临时保留的范围在记录中分别列出。

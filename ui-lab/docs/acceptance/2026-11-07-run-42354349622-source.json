@@ -1,0 +1,784 @@
+{
+  "schema_version": 1,
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branch": "design/p0-ui-lab",
+  "archived_at_utc": "2026-11-07T09:32:59.238715Z",
+  "run": {
+    "id": 42354349622,
+    "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19",
+    "head_branch": "design/p0-ui-lab",
+    "html_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42354349622",
+    "created_at": "2026-11-07T08:10:39Z",
+    "run_started_at": "2026-11-07T08:10:39Z",
+    "updated_at": "2026-11-07T08:29:07Z",
+    "conclusion": "success",
+    "run_attempt": 1
+  },
+  "jobs": [
+    {
+      "id": 128349031127,
+      "name": "Frontend and real-browser acceptance",
+      "conclusion": "success",
+      "started_at": "2026-11-07T08:10:42Z",
+      "completed_at": "2026-11-07T08:19:37Z",
+      "html_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42354349622/job/128349031127"
+    },
+    {
+      "id": 128351039435,
+      "name": "Deploy independent UI Lab to Pages",
+      "conclusion": "success",
+      "started_at": "2026-11-07T08:19:40Z",
+      "completed_at": "2026-11-07T08:19:51Z",
+      "html_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42354349622/job/128351039435"
+    },
+    {
+      "id": 128351090417,
+      "name": "Verify published Pages in real Chrome",
+      "conclusion": "success",
+      "started_at": "2026-11-07T08:19:53Z",
+      "completed_at": "2026-11-07T08:29:07Z",
+      "html_url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42354349622/job/128351090417"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 13567361353,
+      "node_id": "MDg6QXJ0aWZhY3QxMzU2NzM2MTM1Mw==",
+      "name": "p0-ui-lab-live-previews-76e4086c46ca91b8817256806ffb933dde072b19",
+      "size_in_bytes": 3366672,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567361353",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567361353/zip",
+      "expired": false,
+      "digest": "sha256:1b60f8acfb4bc614d46e35276ffce30762d19ec10346489d98a4760e06dfc206",
+      "created_at": "2026-11-07T08:29:04Z",
+      "updated_at": "2026-11-07T08:29:04Z",
+      "expires_at": "2026-12-07T08:29:03Z",
+      "workflow_run": {
+        "id": 42354349622,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "design/p0-ui-lab",
+        "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19"
+      }
+    },
+    {
+      "id": 13567316869,
+      "node_id": "MDg6QXJ0aWZhY3QxMzU2NzMxNjg2OQ==",
+      "name": "github-pages",
+      "size_in_bytes": 2317701,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567316869",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567316869/zip",
+      "expired": false,
+      "digest": "sha256:5d3c59decb61f1e3943d319af39c702197cb0950030862b9faf7ce5efef59b48",
+      "created_at": "2026-11-07T08:19:34Z",
+      "updated_at": "2026-11-07T08:19:34Z",
+      "expires_at": "2026-11-08T08:19:33Z",
+      "workflow_run": {
+        "id": 42354349622,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "design/p0-ui-lab",
+        "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19"
+      }
+    },
+    {
+      "id": 13567232566,
+      "node_id": "MDg6QXJ0aWZhY3QxMzU2NzIzMjU2Ng==",
+      "name": "p0-ui-lab-previews-76e4086c46ca91b8817256806ffb933dde072b19",
+      "size_in_bytes": 3368069,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567232566",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13567232566/zip",
+      "expired": false,
+      "digest": "sha256:73170af2d8eb2e0b025959ae901ccb187462eb3ad60a86212215a4bf90769382",
+      "created_at": "2026-11-07T08:19:32Z",
+      "updated_at": "2026-11-07T08:19:32Z",
+      "expires_at": "2026-12-07T08:19:31Z",
+      "workflow_run": {
+        "id": 42354349622,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "design/p0-ui-lab",
+        "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19"
+      }
+    },
+    {
+      "id": 13566953656,
+      "node_id": "MDg6QXJ0aWZhY3QxMzU2Njk1MzY1Ng==",
+      "name": "p0-ui-lab-live-76e4086c46ca91b8817256806ffb933dde072b19",
+      "size_in_bytes": 769038122,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13566953656",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13566953656/zip",
+      "expired": false,
+      "digest": "sha256:ee1b3bfa7bc052d9dc10f51246baba296bdd0127168df066fcc35522d2b92e79",
+      "created_at": "2026-11-07T08:29:02Z",
+      "updated_at": "2026-11-07T08:29:02Z",
+      "expires_at": "2026-12-07T08:28:37Z",
+      "workflow_run": {
+        "id": 42354349622,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "design/p0-ui-lab",
+        "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19"
+      }
+    },
+    {
+      "id": 13566919463,
+      "node_id": "MDg6QXJ0aWZhY3QxMzU2NjkxOTQ2Mw==",
+      "name": "p0-ui-lab-acceptance-76e4086c46ca91b8817256806ffb933dde072b19",
+      "size_in_bytes": 748065762,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13566919463",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13566919463/zip",
+      "expired": false,
+      "digest": "sha256:4d8d84e64b41c4b30edd462300ba866ae58da7ba35e27c9c035d90bb7efc20e7",
+      "created_at": "2026-11-07T08:19:31Z",
+      "updated_at": "2026-11-07T08:19:31Z",
+      "expires_at": "2026-12-07T08:19:08Z",
+      "workflow_run": {
+        "id": 42354349622,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "design/p0-ui-lab",
+        "head_sha": "76e4086c46ca91b8817256806ffb933dde072b19"
+      }
+    }
+  ],
+  "downloaded_artifact_id": 13567361353,
+  "downloaded_archive_sha256": "1b60f8acfb4bc614d46e35276ffce30762d19ec10346489d98a4760e06dfc206",
+  "original_members": [
+    {
+      "original_path": "previews/PROVENANCE.json",
+      "bytes": 2585,
+      "sha256": "32ef496aef55984cdf69599286c46497a42787031916091b040a921c45593271"
+    },
+    {
+      "original_path": "previews/README.md",
+      "bytes": 1757,
+      "sha256": "3b19e111d576ee79cf3237ab83132f7dfd8fecd6fed5ee1a1d1bd74d8af668ab"
+    },
+    {
+      "original_path": "previews/desktop-1366.png",
+      "bytes": 241444,
+      "sha256": "ad8c3f1d6aea5499522fb20ff96eb51a416674fb1851b1540816e90a7e7c5edd"
+    },
+    {
+      "original_path": "previews/desktop-1440.png",
+      "bytes": 249972,
+      "sha256": "9677e6c45dcf46edd3b118409cc83e981abab331831a88694fee8bc87f674865"
+    },
+    {
+      "original_path": "previews/metric-swaps/PROVENANCE.json",
+      "bytes": 3927,
+      "sha256": "9af1a8ad21f37af56298a5c6db63c8dbc44211bad1e4e52b427f582f80445b56"
+    },
+    {
+      "original_path": "previews/index.html",
+      "bytes": 2911,
+      "sha256": "2044965b6e60f4a0cf5cd655391c2e374504456b90fa2921e235c8da33efcc91"
+    },
+    {
+      "original_path": "previews/metric-swaps/README.md",
+      "bytes": 1586,
+      "sha256": "3d71d717da8995d4064b750ad041f895539b49fb58a5e8b184ab3322a75f14de"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-01.png",
+      "bytes": 45837,
+      "sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-02.png",
+      "bytes": 41728,
+      "sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-03.png",
+      "bytes": 48705,
+      "sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-04.png",
+      "bytes": 67050,
+      "sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-05.png",
+      "bytes": 41070,
+      "sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-06.png",
+      "bytes": 42296,
+      "sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-07.png",
+      "bytes": 46247,
+      "sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-08.png",
+      "bytes": 139359,
+      "sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-09.png",
+      "bytes": 44613,
+      "sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-10.png",
+      "bytes": 40696,
+      "sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-01.png",
+      "bytes": 47914,
+      "sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-02.png",
+      "bytes": 43133,
+      "sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-03.png",
+      "bytes": 48690,
+      "sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-04.png",
+      "bytes": 65430,
+      "sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-05.png",
+      "bytes": 41703,
+      "sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-06.png",
+      "bytes": 41875,
+      "sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-07.png",
+      "bytes": 45336,
+      "sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-08.png",
+      "bytes": 138767,
+      "sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-09.png",
+      "bytes": 46399,
+      "sha256": "e7016ea403f5cd882d2a5cd99c03aecc11cfc91357e427ac14bfd3c6882e249d"
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-10.png",
+      "bytes": 42636,
+      "sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4"
+    },
+    {
+      "original_path": "previews/mobile-390.png",
+      "bytes": 134625,
+      "sha256": "2eeaf5425dac9ad582540127268b92a9a9df52b0ad458930c9f8210a00e5edd9"
+    },
+    {
+      "original_path": "previews/theme-01.png",
+      "bytes": 43334,
+      "sha256": "8e781e9caef38f96bd94a9729d60302b1d4bdf3c2f2062d84aa5a37f504d0821"
+    },
+    {
+      "original_path": "previews/theme-02.png",
+      "bytes": 38583,
+      "sha256": "04bf0ed05e427d316b496444d5716757e7663ed6a964ef7cad75c3557f9124bf"
+    },
+    {
+      "original_path": "previews/theme-03.png",
+      "bytes": 48579,
+      "sha256": "446793c343f38662d6c60216b450069c6cb88aea85acae73faac98883c5649b0"
+    },
+    {
+      "original_path": "previews/theme-04.png",
+      "bytes": 66866,
+      "sha256": "b1f4d09f88a8dd1afb7df0b486dd0732b45ad51b3345eb675e271aa95820d930"
+    },
+    {
+      "original_path": "previews/theme-05.png",
+      "bytes": 35923,
+      "sha256": "d642eebe299d3cfe900faf4cc75824dcd6a85e65116eaa81393f28f93aeb9453"
+    },
+    {
+      "original_path": "previews/theme-06.png",
+      "bytes": 42330,
+      "sha256": "7373282b9101595802852fc85a5c137a5db75ee274408b7af4d00ce7058f62b2"
+    },
+    {
+      "original_path": "previews/theme-07.png",
+      "bytes": 45286,
+      "sha256": "20794dd4c8ccb0bdf06133dff63ac616b46451b65f198b87484804c443a594cd"
+    },
+    {
+      "original_path": "previews/theme-08.png",
+      "bytes": 137181,
+      "sha256": "8e6f2c0c9ac1bc2f54fc5fc3579889348dc09c7792bf4abaf765e5ed18b32b3a"
+    },
+    {
+      "original_path": "previews/theme-09.png",
+      "bytes": 41771,
+      "sha256": "de9be5d7f7dca1957b2f9006c193677795d20e3c3f710f373eb6bc1803d6768a"
+    },
+    {
+      "original_path": "previews/theme-10.png",
+      "bytes": 37505,
+      "sha256": "1cd1dfa05a444efcd56647be43267776793d731c915c626eea94afe9a4b36228"
+    },
+    {
+      "original_path": "test-results/metric-swap-01.png",
+      "bytes": 45837,
+      "sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7"
+    },
+    {
+      "original_path": "test-results/metric-swap-02.png",
+      "bytes": 41728,
+      "sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542"
+    },
+    {
+      "original_path": "test-results/metric-swap-03.png",
+      "bytes": 48705,
+      "sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6"
+    },
+    {
+      "original_path": "test-results/metric-swap-04.png",
+      "bytes": 67050,
+      "sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644"
+    },
+    {
+      "original_path": "test-results/metric-swap-05.png",
+      "bytes": 41070,
+      "sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41"
+    },
+    {
+      "original_path": "test-results/metric-swap-06.png",
+      "bytes": 42296,
+      "sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d"
+    },
+    {
+      "original_path": "test-results/metric-swap-07.png",
+      "bytes": 46247,
+      "sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1"
+    },
+    {
+      "original_path": "test-results/metric-swap-08.png",
+      "bytes": 139359,
+      "sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e"
+    },
+    {
+      "original_path": "test-results/metric-swap-09.png",
+      "bytes": 44613,
+      "sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-01.png",
+      "bytes": 47914,
+      "sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2"
+    },
+    {
+      "original_path": "test-results/metric-swap-10.png",
+      "bytes": 40696,
+      "sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-02.png",
+      "bytes": 43133,
+      "sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-03.png",
+      "bytes": 48690,
+      "sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-04.png",
+      "bytes": 65430,
+      "sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-06.png",
+      "bytes": 41875,
+      "sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-05.png",
+      "bytes": 41703,
+      "sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-07.png",
+      "bytes": 45336,
+      "sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-08.png",
+      "bytes": 138767,
+      "sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-09.png",
+      "bytes": 45010,
+      "sha256": "dc67655b0c66cfcc56a5451b160dfe4408d950ea5d061a797c24ed30271901f3"
+    },
+    {
+      "original_path": "test-results/metric-swap-long-10.png",
+      "bytes": 42636,
+      "sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4"
+    },
+    {
+      "original_path": "test-results/results.json",
+      "bytes": 69537,
+      "sha256": "6718a26809872096a9e5e1df8c6e7039da8189f2e59b9d379b6098b77b5e9d28"
+    }
+  ],
+  "screenshots": [
+    {
+      "original_path": "previews/desktop-1366.png",
+      "sha256": "ad8c3f1d6aea5499522fb20ff96eb51a416674fb1851b1540816e90a7e7c5edd",
+      "bytes": 241444,
+      "historical_path": "ui-lab/previews/desktop-1366.png",
+      "historical_sha256": "ad8c3f1d6aea5499522fb20ff96eb51a416674fb1851b1540816e90a7e7c5edd",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/desktop-1440.png",
+      "sha256": "9677e6c45dcf46edd3b118409cc83e981abab331831a88694fee8bc87f674865",
+      "bytes": 249972,
+      "historical_path": "ui-lab/previews/desktop-1440.png",
+      "historical_sha256": "9677e6c45dcf46edd3b118409cc83e981abab331831a88694fee8bc87f674865",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-01.png",
+      "sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7",
+      "bytes": 45837,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-01.png",
+      "historical_sha256": "20223ff335de1d6b9c634ea83c4807de515a8af71f072d2d899f16b92cfb75f7",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-02.png",
+      "sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542",
+      "bytes": 41728,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-02.png",
+      "historical_sha256": "57618798e6cee27970aa47d5f5581aec9e265aa0789d4ec757348a581c637542",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-03.png",
+      "sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6",
+      "bytes": 48705,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-03.png",
+      "historical_sha256": "58c08f0bbda50251ecedbc28df31e41670ba99603364a5f67b929ab794cfafd6",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-04.png",
+      "sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644",
+      "bytes": 67050,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-04.png",
+      "historical_sha256": "b0a8649d77a39d399b3e82bcaab65724d1f8d928e3bcbf642e055d65d81de644",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-05.png",
+      "sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41",
+      "bytes": 41070,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-05.png",
+      "historical_sha256": "7ea407a33b7dd8c41bed6fbdf2ea871a0e54fc9db17471974eff8d4fd9c37d41",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-06.png",
+      "sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d",
+      "bytes": 42296,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-06.png",
+      "historical_sha256": "3febe7d65ef4ffcdbd75d649e593f224077746eabb981c14c6f2f90449eadc2d",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-07.png",
+      "sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1",
+      "bytes": 46247,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-07.png",
+      "historical_sha256": "d53d7e41dc81974a025210a65ccc1e2e3094af57dda5aba7df86c0bd0e3548a1",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-08.png",
+      "sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e",
+      "bytes": 139359,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-08.png",
+      "historical_sha256": "544058179571e39a177f9469d38142a86d1caf34f1d4e3a013c5c11ab55e628e",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-09.png",
+      "sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0",
+      "bytes": 44613,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-09.png",
+      "historical_sha256": "a16e8d0eac43da4b34b1ffa68ff4ee4ec89209dad05959487cbaa763340054b0",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-10.png",
+      "sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173",
+      "bytes": 40696,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-10.png",
+      "historical_sha256": "b62f0a4da650f190370e9c7a55cf2742dcaa1ecd2be73827a1dfbbee615cb173",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-01.png",
+      "sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2",
+      "bytes": 47914,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-01.png",
+      "historical_sha256": "7362d8c39e9bc4d1ea0f4d440c7debf5c53fba6650b2d6e60e0931306e97a9f2",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-02.png",
+      "sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03",
+      "bytes": 43133,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-02.png",
+      "historical_sha256": "935aa02945ffdd318eb4af929eeb19e51647e330382ba251764549c9c8eede03",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-03.png",
+      "sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0",
+      "bytes": 48690,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-03.png",
+      "historical_sha256": "760d3e4f06de6e35e895d5cec02c3c51cb6b2115a1cf66c7867f3c99a6bd96b0",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-04.png",
+      "sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05",
+      "bytes": 65430,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-04.png",
+      "historical_sha256": "dff1dce0b626f69dfeccc000398a09ee8dfdb5f9328705423b568b06cd9f9a05",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-05.png",
+      "sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14",
+      "bytes": 41703,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-05.png",
+      "historical_sha256": "40b717545ee83bf45c3d9d262e85fbdc2e6e3c73de04e142010c01d495d15d14",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-06.png",
+      "sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b",
+      "bytes": 41875,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-06.png",
+      "historical_sha256": "e7eeab9b1623b2395f8fb02e8f8f23473f84a4375144ad0e8bfd0e75e5378f1b",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-07.png",
+      "sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb",
+      "bytes": 45336,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-07.png",
+      "historical_sha256": "616b18aec14e0509665cc6f4842bc0d785db15f6ab1528121e359ae784ba83eb",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-08.png",
+      "sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e",
+      "bytes": 138767,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-08.png",
+      "historical_sha256": "fa69e0c4c07dc3b855d42c2492030253ff6ab22777b724e4d91a339e09c74a4e",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-09.png",
+      "sha256": "e7016ea403f5cd882d2a5cd99c03aecc11cfc91357e427ac14bfd3c6882e249d",
+      "bytes": 46399,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-09.png",
+      "historical_sha256": "e7016ea403f5cd882d2a5cd99c03aecc11cfc91357e427ac14bfd3c6882e249d",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/metric-swaps/metric-swap-long-10.png",
+      "sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4",
+      "bytes": 42636,
+      "historical_path": "ui-lab/previews/metric-swaps/metric-swap-long-10.png",
+      "historical_sha256": "12dca8ddc9430176877bc9ce6ed3ee5fbe4c92d833db5ff6e2a3c6ea28262fe4",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/mobile-390.png",
+      "sha256": "2eeaf5425dac9ad582540127268b92a9a9df52b0ad458930c9f8210a00e5edd9",
+      "bytes": 134625,
+      "historical_path": "ui-lab/previews/mobile-390.png",
+      "historical_sha256": "2eeaf5425dac9ad582540127268b92a9a9df52b0ad458930c9f8210a00e5edd9",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-01.png",
+      "sha256": "8e781e9caef38f96bd94a9729d60302b1d4bdf3c2f2062d84aa5a37f504d0821",
+      "bytes": 43334,
+      "historical_path": "ui-lab/previews/theme-01.png",
+      "historical_sha256": "8e781e9caef38f96bd94a9729d60302b1d4bdf3c2f2062d84aa5a37f504d0821",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-02.png",
+      "sha256": "04bf0ed05e427d316b496444d5716757e7663ed6a964ef7cad75c3557f9124bf",
+      "bytes": 38583,
+      "historical_path": "ui-lab/previews/theme-02.png",
+      "historical_sha256": "04bf0ed05e427d316b496444d5716757e7663ed6a964ef7cad75c3557f9124bf",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-03.png",
+      "sha256": "446793c343f38662d6c60216b450069c6cb88aea85acae73faac98883c5649b0",
+      "bytes": 48579,
+      "historical_path": "ui-lab/previews/theme-03.png",
+      "historical_sha256": "446793c343f38662d6c60216b450069c6cb88aea85acae73faac98883c5649b0",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-04.png",
+      "sha256": "b1f4d09f88a8dd1afb7df0b486dd0732b45ad51b3345eb675e271aa95820d930",
+      "bytes": 66866,
+      "historical_path": "ui-lab/previews/theme-04.png",
+      "historical_sha256": "b1f4d09f88a8dd1afb7df0b486dd0732b45ad51b3345eb675e271aa95820d930",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-05.png",
+      "sha256": "d642eebe299d3cfe900faf4cc75824dcd6a85e65116eaa81393f28f93aeb9453",
+      "bytes": 35923,
+      "historical_path": "ui-lab/previews/theme-05.png",
+      "historical_sha256": "d642eebe299d3cfe900faf4cc75824dcd6a85e65116eaa81393f28f93aeb9453",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-06.png",
+      "sha256": "7373282b9101595802852fc85a5c137a5db75ee274408b7af4d00ce7058f62b2",
+      "bytes": 42330,
+      "historical_path": "ui-lab/previews/theme-06.png",
+      "historical_sha256": "7373282b9101595802852fc85a5c137a5db75ee274408b7af4d00ce7058f62b2",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-07.png",
+      "sha256": "20794dd4c8ccb0bdf06133dff63ac616b46451b65f198b87484804c443a594cd",
+      "bytes": 45286,
+      "historical_path": "ui-lab/previews/theme-07.png",
+      "historical_sha256": "20794dd4c8ccb0bdf06133dff63ac616b46451b65f198b87484804c443a594cd",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-08.png",
+      "sha256": "8e6f2c0c9ac1bc2f54fc5fc3579889348dc09c7792bf4abaf765e5ed18b32b3a",
+      "bytes": 137181,
+      "historical_path": "ui-lab/previews/theme-08.png",
+      "historical_sha256": "8e6f2c0c9ac1bc2f54fc5fc3579889348dc09c7792bf4abaf765e5ed18b32b3a",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-09.png",
+      "sha256": "de9be5d7f7dca1957b2f9006c193677795d20e3c3f710f373eb6bc1803d6768a",
+      "bytes": 41771,
+      "historical_path": "ui-lab/previews/theme-09.png",
+      "historical_sha256": "de9be5d7f7dca1957b2f9006c193677795d20e3c3f710f373eb6bc1803d6768a",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    },
+    {
+      "original_path": "previews/theme-10.png",
+      "sha256": "1cd1dfa05a444efcd56647be43267776793d731c915c626eea94afe9a4b36228",
+      "bytes": 37505,
+      "historical_path": "ui-lab/previews/theme-10.png",
+      "historical_sha256": "1cd1dfa05a444efcd56647be43267776793d731c915c626eea94afe9a4b36228",
+      "identical_to_historical": true,
+      "retained_again": false,
+      "decision": "Existing 33 captures cover the same unchanged product and state matrix. Keep original provenance; do not duplicate cosmetic/timing-only rerenders."
+    }
+  ],
+  "original_result": {
+    "original_path": "test-results/results.json",
+    "archived_path": "ui-lab/docs/acceptance/2026-11-07-run-42354349622-results.json",
+    "bytes": 69537,
+    "sha256": "6718a26809872096a9e5e1df8c6e7039da8189f2e59b9d379b6098b77b5e9d28",
+    "classification": "BROWSER_LAB_EVIDENCE / SIMULATED_DATA / NOT_ANDROID_OR_DEVICE_ACCEPTANCE"
+  },
+  "retention_boundary": "Full traces and this run rerendered PNG bytes remain Artifact-only; 33 prior original PNGs/provenance remain in Git. Raw results and this complete ZIP member inventory persist in Git."
+}
