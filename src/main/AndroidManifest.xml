@@ -133,6 +133,7 @@ limitations under the License.
 
         <activity android:name=".p0.app.P0Activity" />
         <activity android:name=".p0.app.P0SensorsActivity" android:parentActivityName=".p0.app.P0Activity" />
+        <activity android:name=".p0.app.P0SettingsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <activity android:name=".p0.app.P0HistoryActivity" android:parentActivityName=".p0.app.P0Activity" />
 
         <activity android:name=".AboutActivity" />

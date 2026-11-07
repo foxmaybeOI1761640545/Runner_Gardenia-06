@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "codeHighWater": 6773,
+  "codeHighWater": 6774,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
-    "v0.1.0-p0.": 2
+    "v0.1.0-p0.": 3
   },
   "allocations": [
     {
@@ -78,6 +78,15 @@
       "classification": "reserved-p02-test",
       "tag": "test-p0-v0.1.0-p0.2",
       "sourceEvidence": "Actual release source will be the immutable annotated test tag and signed build-info; allocation basis is the accepted stage5 source, not a claimed future build SHA."
+    },
+    {
+      "versionName": "v0.1.0-p0.3",
+      "versionCode": 6774,
+      "commit": null,
+      "allocationBasisCommit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "classification": "reserved-p03-test",
+      "tag": "test-p0-v0.1.0-p0.3",
+      "sourceEvidence": "Only the accepted immutable tag and signed build-info will bind the actual source; this is the P0.2 allocation basis."
     }
   ]
 }

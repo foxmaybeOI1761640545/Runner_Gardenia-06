@@ -30,7 +30,6 @@ import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
-import com.google.android.material.color.DynamicColors;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -724,59 +723,20 @@ public class PreferencesUtils {
     record ThemeConfig(int themeResourceId, int dayNight, boolean dynamicColor) {
     }
 
+    public static de.dennisguse.opentracks.ui.util.ThemeUtils.Family getGardeniaTheme() {
+        return de.dennisguse.opentracks.ui.util.ThemeUtils.Family.fromId(sharedPreferences.getString("gardenia_theme_family","precision"));
+    }
+    public static void setGardeniaTheme(de.dennisguse.opentracks.ui.util.ThemeUtils.Family family) {
+        sharedPreferences.edit().putString("gardenia_theme_family",family.id).apply();
+    }
     private static ThemeConfig getThemeMode() {
-        final String defaultValue = getKey(R.string.theme_default);
-        final String value = getString(R.string.theme_key, defaultValue);
-
-        switch (value) {
-            case "0" -> {
-                return new ThemeConfig(R.style.DayNightColorTheme, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, false);
-            }
-            case "1" -> {
-                return new ThemeConfig(R.style.DayNightDynamicTheme, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, true);
-            }
-            case "2" -> {
-                return new ThemeConfig(R.style.DayNightColorTheme, AppCompatDelegate.MODE_NIGHT_NO, false);
-            }
-            case "3" -> {
-                return new ThemeConfig(R.style.DayNightDynamicTheme, AppCompatDelegate.MODE_NIGHT_NO, true);
-            }
-            case "4" -> {
-                return new ThemeConfig(R.style.DayNightColorTheme, AppCompatDelegate.MODE_NIGHT_YES, false);
-            }
-            case "5" -> {
-                return new ThemeConfig(R.style.DayNightDynamicTheme, AppCompatDelegate.MODE_NIGHT_YES, true);
-            }
-            case "6" -> {
-                return new ThemeConfig(R.style.NightOledColorTheme, AppCompatDelegate.MODE_NIGHT_YES, false);
-            }
-            case "7" -> {
-                return new ThemeConfig(R.style.NightOledDynamicTheme, AppCompatDelegate.MODE_NIGHT_YES, true);
-            }
-
-            default -> {
-                return new ThemeConfig(R.style.DayNightColorTheme, AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM, false);
-            }
-        }
+        return new ThemeConfig(getGardeniaTheme().style,AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM,false);
     }
-
-    public static void applyTheme(Context context) {
-        context.setTheme(getThemeMode().themeResourceId());
-    }
-
-    public static void applyNightMode() {
-        ThemeConfig themeConfig = getThemeMode();
-
-        AppCompatDelegate.setDefaultNightMode(themeConfig.dayNight);
-    }
-
+    public static void applyTheme(Context context) { context.setTheme(getThemeMode().themeResourceId()); }
+    public static void applyNightMode() { AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM); }
     public static void applyNightModeAndDynamicColors(Application application) {
-        ThemeConfig themeConfig = getThemeMode();
-
+        // Authored semantic colors are deterministic. Legacy forced/dynamic choices no longer override Android.
         applyNightMode();
-
-        if (application != null && themeConfig.dynamicColor)
-            DynamicColors.applyToActivitiesIfAvailable(application);
     }
 
     public static void resetPreferences(Context context, boolean readAgain) {

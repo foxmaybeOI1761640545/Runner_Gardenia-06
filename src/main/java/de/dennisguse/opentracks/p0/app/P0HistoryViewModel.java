@@ -23,6 +23,9 @@ public class P0HistoryViewModel extends AndroidViewModel {
     private final WorkoutRepository repository;
     private final ExecutorService worker=Executors.newSingleThreadExecutor();
     private final Handler main=new Handler(Looper.getMainLooper());
+    private final de.dennisguse.opentracks.chart.HeartRateChartHistory chartHistory=new de.dennisguse.opentracks.chart.HeartRateChartHistory();
+    private final MutableLiveData<List<de.dennisguse.opentracks.chart.HeartRatePlot.Point>> chartPoints=new MutableLiveData<>(List.of());
+    public LiveData<List<de.dennisguse.opentracks.chart.HeartRatePlot.Point>> chartPoints(){return chartPoints;}
     private Long selectedId;
     private int limit=50,generation;
     private volatile boolean closed;
@@ -41,9 +44,10 @@ public class P0HistoryViewModel extends AndroidViewModel {
             try {
                 List<WorkoutSummary> rows=id==null?repository.listNewest(window):List.of();
                 WorkoutSummary selected=id==null?null:repository.find(new Track.Id(id));
+                var points=selected==null?List.<de.dennisguse.opentracks.chart.HeartRatePlot.Point>of():chartHistory.load(getApplication(),selected.track().id()).points();
                 boolean locked=selected!=null&&repository.isProtected(selected.track().id());
                 String error=id!=null&&selected==null?getApplication().getString(R.string.p0_workout_missing):null;
-                main.post(()->{if(!closed&&token==generation)state.setValue(new State(rows,selected,locked,false,error,id==null&&rows.size()==window));});
+                main.post(()->{if(!closed&&token==generation){chartPoints.setValue(points);state.setValue(new State(rows,selected,locked,false,error,id==null&&rows.size()==window));}});
             }catch(RuntimeException failure){main.post(()->{if(!closed&&token==generation)state.setValue(new State(List.of(),null,false,false,getApplication().getString(R.string.p0_operation_failed),false));});}
         });
     }

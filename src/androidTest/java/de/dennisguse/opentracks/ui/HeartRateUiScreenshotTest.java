@@ -81,7 +81,7 @@ public class HeartRateUiScreenshotTest {
             for (boolean narrow : new boolean[]{false,true}) for (boolean dark : new boolean[]{false,true}) {
                 shell(narrow ? "wm size 720x1280" : "wm size reset");
                 shell(narrow ? "wm density 320" : "wm density reset");
-                PreferencesUtils.setString(R.string.theme_key,dark ? R.string.theme_night_value : R.string.theme_day_value);
+                shell("cmd uimode night "+(dark?"yes":"no"));
                 InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);
                 String profile = (narrow ? "narrow" : "phone") + (dark ? "-dark" : "-light");
                 TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();

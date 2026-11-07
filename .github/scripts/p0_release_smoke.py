@@ -30,15 +30,15 @@ def validate_live_metrics(metric):
             and speed>0 and 0<=seconds<60 and minutes*60+seconds>0):
         raise ValueError('Actual Release GPS metrics outside the controlled route: '+metric)
 
-def run(p02=False):
+def run(p02=False,p03=False,post_verify=None):
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
     output=Path('build/reports/p0-release-smoke');output.mkdir(parents=True,exist_ok=True)
     info=json.loads(Path('dist/build-info.json').read_text());apk=Path('dist/RunnerGardenia-P0-Release.apk').resolve()
     if hashlib.sha256(apk.read_bytes()).hexdigest()!=info['apkSha256']:raise ValueError('Signed APK changed before installation')
     baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/('RunnerGardenia-P0-Release.apk' if p02 else 'runner-gardenia-v0.1.0-rc1.6-6771.apk')
     oldInfo=json.loads((baseline/'build-info.json').read_text())
-    baseline_commit='3116e5fa7a56ce6f299ea45d5a45745f1aed4466' if p02 else '9b5d7b06afc1eb8e3315ba73874ac088fa4d5169'
-    if oldInfo['commit']!=baseline_commit or (p02 and (oldInfo['versionCode']!=6772 or oldInfo['apkSha256']!='94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0')) or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=oldInfo['apkSha256']:raise ValueError('Baseline APK differs from preserved main release')
+    baseline_commit=('4454d716a5ae010b92d3eefa1ac1c0ebedde0063' if p03 else '3116e5fa7a56ce6f299ea45d5a45745f1aed4466') if p02 else '9b5d7b06afc1eb8e3315ba73874ac088fa4d5169'
+    if oldInfo['commit']!=baseline_commit or (p02 and (oldInfo['versionCode']!=(6773 if p03 else 6772) or oldInfo['apkSha256']!=('48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046' if p03 else '94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0'))) or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=oldInfo['apkSha256']:raise ValueError('Baseline APK differs from preserved main release')
     certificate=subprocess.check_output([str(sdk/'build-tools/36.0.0/apksigner'),'verify','--print-certs',str(old)],text=True)
     fingerprints=re.findall(r'^Signer #\d+ certificate SHA-256 digest:\s*([0-9a-fA-F]+)\s*$',certificate,re.M)
     if len(fingerprints)!=1 or fingerprints[0].upper()!=info['certificateSha256']:raise ValueError('Baseline and new fixed signing certificate differ')
@@ -198,6 +198,7 @@ def run(p02=False):
             if selected!='AA:BB:CC:DD:EE:FF' or enabled!='true':raise ValueError('Upgrade lost device configuration')
             permissions=device('shell','dumpsys','package',PACKAGE)
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
+            if post_verify is not None:post_verify(device,dump,screenshot,tap,start,output)
             proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:

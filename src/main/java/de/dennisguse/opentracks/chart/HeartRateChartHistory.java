@@ -11,16 +11,16 @@ import de.dennisguse.opentracks.data.models.HeartRate;
 import de.dennisguse.opentracks.data.models.Track;
 
 /** Per-fragment incremental reader; SQLite stays on TrackDataHub's background thread. */
-final class HeartRateChartHistory {
+public final class HeartRateChartHistory {
     private Track.Id track;
     private long lastId;
     private HeartRate previous;
     private List<HeartRatePlot.Point> points = new ArrayList<>();
     private double sum, min = Double.POSITIVE_INFINITY, max;
     private long count;
-    record Result(List<HeartRatePlot.Point> points, long count, double min, double average, double max) {}
+    public record Result(List<HeartRatePlot.Point> points, long count, double min, double average, double max) {}
 
-    Result load(Context context, Track.Id selected) {
+    public Result load(Context context, Track.Id selected) {
         if (!selected.equals(track)) {
             track = selected; lastId = 0; previous = null; points = new ArrayList<>();
             sum = 0; min = Double.POSITIVE_INFINITY; max = 0; count = 0;

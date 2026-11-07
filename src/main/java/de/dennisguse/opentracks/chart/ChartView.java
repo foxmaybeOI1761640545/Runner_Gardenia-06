@@ -321,7 +321,7 @@ public class ChartView extends View {
 
         gridPaint = new Paint();
         gridPaint.setStyle(Style.STROKE);
-        gridPaint.setColor(ThemeUtils.getTextColorSecondary(context));
+        gridPaint.setColor(ThemeUtils.colorOr(context, R.attr.gardeniaChartGrid, ThemeUtils.getTextColorSecondary(context)));
         gridPaint.setAntiAlias(false);
         gridPaint.setPathEffect(new DashPathEffect(new float[]{3, 2}, 0));
 

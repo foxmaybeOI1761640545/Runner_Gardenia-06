@@ -14,6 +14,7 @@ public class MainSettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.settings);
+        findPreference(getString(R.string.gardenia_appearance_key)).setOnPreferenceClickListener(preference->{((SettingsActivity)requireActivity()).openScreen(getString(R.string.gardenia_appearance_key));return true;});
 
         findPreference(getString(R.string.settings_defaults_key)).setOnPreferenceClickListener(preference -> {
             ((SettingsActivity) getActivity()).openScreen(getString(R.string.settings_defaults_key));

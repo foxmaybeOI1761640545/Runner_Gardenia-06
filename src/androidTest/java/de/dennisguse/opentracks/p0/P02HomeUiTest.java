@@ -141,7 +141,7 @@ public class P02HomeUiTest {
         core=((TrackRecordingService.Binder)rule.bindService(new Intent(context,TrackRecordingService.class))).getService();
         for(boolean large:new boolean[]{false,true})for(boolean dark:new boolean[]{false,true}) {
             shell(large?"wm size 1600x2560":"wm size 720x1280");shell("wm density 320");
-            PreferencesUtils.setString(R.string.theme_key,dark?R.string.theme_night_value:R.string.theme_day_value);main(PreferencesUtils::applyNightMode);SystemClock.sleep(500);
+            shell("cmd uimode night "+(dark?"yes":"no"));main(PreferencesUtils::applyNightMode);SystemClock.sleep(500);
             main(()->{core.cancelGpsAcquisition();core.endCurrentTrack();core.stopIdleSensors();core.getTrackPointCreator().setClock(base.toString());});
             new SessionStore(context).save(RecordingSession.ready());String profile="p02-home-"+(large?"large":"small")+(dark?"-dark-":"-light-");
             try(ActivityScenario<P0Activity> screen=ActivityScenario.launch(P0Activity.class)) {

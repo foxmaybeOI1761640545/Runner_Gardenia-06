@@ -95,7 +95,7 @@ public class P0ResponsiveUiTest {
             final TrackRecordingService core=service;
             for(boolean large:new boolean[]{false,true})for(boolean dark:new boolean[]{false,true}) {
                 shell(large?"wm size 1600x2560":"wm size 720x1280");shell("wm density 320");
-                PreferencesUtils.setString(R.string.theme_key,dark?R.string.theme_night_value:R.string.theme_day_value);
+                shell("cmd uimode night "+(dark?"yes":"no"));
                 InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);SystemClock.sleep(500);
                 TestEnvironmentUtils.deleteAllTracks();new SessionStore(context).save(RecordingSession.ready());Track.Id id=history();
                 String profile="p0-matrix-"+(large?"large":"small")+(dark?"-dark-":"-light-");

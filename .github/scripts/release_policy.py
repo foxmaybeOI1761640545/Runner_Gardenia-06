@@ -68,11 +68,11 @@ def ledger_history():
             raise SystemExit('Invalid historical allocation.')
         # P0 test tags have their own prefix. A reservation is an allocation basis,
         # never a fabricated self-referential future source commit.
-        reserved = entry.get('classification') == 'reserved-p02-test'
+        reserved = entry.get('classification') in ('reserved-p02-test','reserved-p03-test')
         source = entry.get('allocationBasisCommit') if reserved else entry.get('commit')
         if not isinstance(source,str) or not re.fullmatch('[0-9a-f]{40}',source):
             raise SystemExit('Invalid history source/basis.')
-        if reserved and (name!='v0.1.0-p0.2' or entry.get('commit') is not None or entry.get('tag')!='test-p0-'+name):
+        if reserved and (name!={'reserved-p02-test':'v0.1.0-p0.2','reserved-p03-test':'v0.1.0-p0.3'}[entry['classification']] or entry.get('commit') is not None or entry.get('tag')!='test-p0-'+name):
             raise SystemExit('Invalid P0.2 reservation.')
         if name in versions or code in codes:
             raise SystemExit('Duplicate version or Code in release ledger.')

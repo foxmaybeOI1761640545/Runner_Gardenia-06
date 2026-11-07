@@ -10,13 +10,7 @@
         android:title="@string/settings_locale_title"
         app:useSimpleSummaryProvider="true" />
 
-    <ListPreference
-        android:defaultValue="@string/theme_default"
-        android:entries="@array/night_mode_options"
-        android:entryValues="@array/night_mode_values"
-        android:key="@string/theme_key"
-        android:title="@string/settings_night_mode_title"
-        app:useSimpleSummaryProvider="true" />
+    <Preference android:key="@string/gardenia_appearance_key" android:title="@string/gardenia_appearance_title" android:summary="@string/gardenia_follow_system" />
 
     <PreferenceCategory app:title="@string/settings_recording_title">
 

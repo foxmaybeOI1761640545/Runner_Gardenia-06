@@ -1,0 +1,38 @@
+{
+  "phase": 1,
+  "status": "PASSED",
+  "nextPhaseAuthorized": true,
+  "sourceCommit": "61b9c889772bb3a7b36760d58cecedbe8dc524f3",
+  "actionsRunId": 42385487073,
+  "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+  "httpStatus": 200,
+  "gates": {
+    "twentyCompletePalettes": true,
+    "allThemeBrowserTests": true,
+    "threeViewports": true,
+    "comparison": true,
+    "pagesDeployment": true,
+    "liveBrowserReacceptance": true,
+    "screenshotsAndReports": true
+  },
+  "originalRegressionAssertionsPerSuite": 1303,
+  "themeAppearanceViewportCombinationsPerMatrix": 60,
+  "screenshotsPerMatrix": 330,
+  "independentOnlineBrowserPassed": true,
+  "liveCompactArtifact": {
+    "id": 13580072558,
+    "sha256": "160233c35e33643f57fec141fba058d254294d7c0c3c999f8a0de92391e61354",
+    "bytes": 18841367
+  },
+  "frontendCompactArtifact": {
+    "id": 13579497590,
+    "sha256": "7ea0a8780c0441f24a89d8627afb34bfb1bf64829fc751f12480185c5b82eebb"
+  },
+  "nativeBaseCommit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "nativeFamilies": [
+    "precision",
+    "quiet",
+    "explorer",
+    "neon"
+  ]
+}

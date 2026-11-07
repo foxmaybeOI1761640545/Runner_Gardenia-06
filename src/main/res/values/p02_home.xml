@@ -19,8 +19,8 @@
         <item name="android:autoSizeStepGranularity">1sp</item>
     </style>
     <style name="P02PrimaryAction" parent="Widget.Material3.Button">
-        <item name="backgroundTint">?attr/colorPrimaryContainer</item>
-        <item name="android:textColor">?attr/colorOnPrimaryContainer</item>
+        <item name="backgroundTint">?attr/gardeniaAccent</item>
+        <item name="android:textColor">?attr/gardeniaOnAccent</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="P02SecondaryAction" parent="Widget.Material3.Button.OutlinedButton">

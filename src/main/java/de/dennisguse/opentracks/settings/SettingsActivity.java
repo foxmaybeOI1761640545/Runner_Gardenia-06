@@ -85,7 +85,9 @@ public class SettingsActivity extends AbstractActivity implements ChooseActivity
     private PreferenceFragmentCompat getPreferenceScreen(String key) {
         PreferenceFragmentCompat fragment = null;
 
-        if (key.equals(getString(R.string.settings_defaults_key))) {
+        if (key.equals(getString(R.string.gardenia_appearance_key))) {
+            fragment = new GardeniaThemeSettingsFragment();
+        } else if (key.equals(getString(R.string.settings_defaults_key))) {
             fragment = new DefaultsSettingsFragment();
         } else if (key.equals(getString(R.string.settings_ui_key))) {
             fragment = new UserInterfaceSettingsFragment();

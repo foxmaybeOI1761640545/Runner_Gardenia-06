@@ -53,7 +53,10 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0HistoryList.setAdapter(adapter);
         binding.p0HistoryList.setOnItemClickListener((parent,view,index,id)->model.open(rows.get(index).track().id().id()));
         binding.p0LoadMore.setOnClickListener(view->model.more());
-        binding.p0SaveGpx.setOnClickListener(view->document.launch("RunnerGardenia-"+model.selectedId()+".gpx"));
+        binding.p0SaveGpx.setOnClickListener(view->saveGpx());
+        binding.p03ExportOptions.setOnClickListener(view->new GpxExportDialog().show(getSupportFragmentManager(),"gardenia-gpx-export"));
+        getSupportFragmentManager().setFragmentResultListener("gardenia-gpx-action",this,(key,result)->{if(result.getInt("action")==0)saveGpx();else model.exportSelected(null);});
+        model.chartPoints().observe(this,points->{binding.p03HistoryChart.setChartByDistance(false);binding.p03HistoryChart.setRawHeartRatePoints(points);binding.p03HistoryChart.setContentDescription(getString(points.isEmpty()?R.string.gardenia_chart_empty:R.string.gardenia_chart_summary,points.size()));});
         binding.p0ShareGpx.setOnClickListener(view->model.exportSelected(null));
         binding.p0DeleteWorkout.setOnClickListener(view->new AlertDialog.Builder(this).setTitle(R.string.p0_delete_workout)
                 .setMessage(R.string.p0_delete_workout_confirm).setNegativeButton(android.R.string.cancel,null)
@@ -73,6 +76,7 @@ public class P0HistoryActivity extends AbstractActivity {
     }
     @Override protected void onStart(){super.onStart();model.refresh();}
     @Override protected void onSaveInstanceState(@NonNull Bundle out){out.putLong(WORKOUT_ID,model.selectedId()==null?0:model.selectedId());super.onSaveInstanceState(out);}
+    private void saveGpx(){document.launch("RunnerGardenia-"+model.selectedId()+".gpx");}
     private void render(P0HistoryViewModel.State state) {
         boolean detail=model.selectedId()!=null;
         if(getSupportActionBar()!=null)getSupportActionBar().setTitle(detail?R.string.p0_workout:R.string.p0_history);
@@ -82,6 +86,7 @@ public class P0HistoryActivity extends AbstractActivity {
         rows=state.rows();adapter.notifyDataSetChanged();binding.p0HistoryList.setEnabled(!state.loading());
         binding.p0LoadMore.setVisibility(!detail&&state.more()?View.VISIBLE:View.GONE);binding.p0LoadMore.setEnabled(!state.loading());
         WorkoutSummary selected=state.selected();
+        binding.p03ExportOptions.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
         binding.p0DeleteWorkout.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
         binding.p0SaveGpx.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());
         binding.p0ShareGpx.setEnabled(selected!=null&&!state.loading()&&!state.protectedWorkout());

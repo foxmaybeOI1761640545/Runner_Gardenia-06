@@ -34,9 +34,11 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
  * @author Jimmy Shih
  */
 public abstract class AbstractActivity extends AppCompatActivity {
+    private de.dennisguse.opentracks.ui.util.ThemeUtils.Family appliedFamily;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        appliedFamily=PreferencesUtils.getGardeniaTheme();
         PreferencesUtils.applyTheme(this);
 
         EdgeToEdge.enable(this);
@@ -54,6 +56,11 @@ public abstract class AbstractActivity extends AppCompatActivity {
         applySystemBarAppearance();
 
         edge2edgeApplyInsets(rootView);
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        if(appliedFamily!=PreferencesUtils.getGardeniaTheme())recreate();
     }
 
     private void applySystemBarAppearance() {

@@ -9,3 +9,8 @@
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P0SensorsFragment {
     public <init>();
 }
+
+# Native appearance fragments and preview ViewModel survive configuration restoration in Release.
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.settings.GardeniaThemeSettingsFragment { public <init>(); }
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.GpxExportDialog { public <init>(); }
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.PreviewChartModel { public <init>(); }

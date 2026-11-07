@@ -29,6 +29,7 @@ public class P0SensorsFragment extends PreferenceFragmentCompat {
     }
     @Override public void onCreatePreferences(Bundle state,String root) {
         setPreferencesFromResource(R.xml.p0_sensors,root);
+        findPreference("gardenia_appearance").setOnPreferenceClickListener(preference->{startActivity(new android.content.Intent(requireContext(),P0SettingsActivity.class));return true;});
         findPreference("p0_sensor_error").setVisible(false);
         model=new ViewModelProvider(requireActivity()).get(P0RecordingViewModel.class);
         findPreference("p0_connect").setOnPreferenceClickListener(preference->{

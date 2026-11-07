@@ -24,11 +24,13 @@ import de.dennisguse.opentracks.p0.gps.GpsPreparation;
 import de.dennisguse.opentracks.sensors.HeartRateStatus;
 import de.dennisguse.opentracks.sensors.GpsStatusValue;
 import de.dennisguse.opentracks.ui.HeartRatePanel;
+import de.dennisguse.opentracks.settings.PreferencesUtils;
 
 /** P0 rendering and permission prompts; service and database work live behind the ViewModel. */
 public class P0Activity extends AbstractActivity {
     private P0HomeBinding binding;
     private P0RecordingViewModel model;
+    private PreviewChartModel chartModel;
     private ActivityResultLauncher<String[]> locationRequest;
     private ActivityResultLauncher<String> notificationRequest;
 
@@ -57,6 +59,9 @@ public class P0Activity extends AbstractActivity {
         binding.p0Devices.setEnabled(true);
         binding.p0Devices.setOnClickListener(view->startActivity(new android.content.Intent(this,P0SensorsActivity.class)));
         binding.p0AllHistory.setOnClickListener(view->startActivity(new android.content.Intent(this,P0HistoryActivity.class)));
+        findViewById(R.id.p03_settings).setOnClickListener(view->startActivity(new android.content.Intent(this,P0SettingsActivity.class)));
+        binding.p03FamilyLabel.setText(PreferencesUtils.getGardeniaTheme()==de.dennisguse.opentracks.ui.util.ThemeUtils.Family.EXPLORER?getString(R.string.gardenia_outdoor_label):PreferencesUtils.getGardeniaTheme().title);
+        chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);
         model.snapshot().observe(this,this::render);
         updateLocationPermission();
     }
@@ -110,6 +115,7 @@ public class P0Activity extends AbstractActivity {
             case FINISHED->R.string.p02_finished_detail;
         };
         binding.p02StatusDetail.setText(detail);
+        binding.p02StatusDetail.setTextColor(de.dennisguse.opentracks.ui.util.ThemeUtils.color(this,acquiring||paused?R.attr.gardeniaWarning:recording&&!fix?R.attr.gardeniaDanger:com.google.android.material.R.attr.colorOnPrimaryContainer));
         String location="—";
         if(fix) {
             String accuracy=position.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",position.horizontalAccuracy().toM()):"—";
@@ -122,13 +128,15 @@ public class P0Activity extends AbstractActivity {
         HeartRateStatus withoutDevice=new HeartRateStatus(status.state(),status.lastReceived(),status.observedAt(),null,status.contactLost());
         var heart=HeartRatePanel.describe(this,value.preview().value(),withoutDevice);
         binding.p0HeartRate.setText(heart.bpm());binding.p02HeartState.setText(heart.state());
+        binding.p02HeartState.setTextColor(de.dennisguse.opentracks.ui.util.ThemeUtils.color(this,heart.bpm().equals(getString(R.string.hr_empty_value))?R.attr.gardeniaWarning:R.attr.gardeniaSuccess));
         binding.p02HeartDevice.setText(status.device()!=null?status.device():HeartRateCommands.hasSelection()?HeartRateCommands.selected():getString(R.string.p02_no_strap));
         String last=status.lastReceived()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(status.lastReceived());
         binding.p02HeartUpdated.setText(getString(R.string.p02_last_heart,last));
         binding.p02HeartReconnect.setText(!HeartRateCommands.connectionEnabled(this)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(this)?R.string.p02_reconnect_on:R.string.p02_reconnect_off);
         binding.p0Error.setText(value.error());show(binding.p0Error,value.error()!=null);
+        chartModel.bind(this,binding.p03HeartChart,value.preview());
         updateLocationPermission();
     }
     private static void show(View view,boolean visible) {view.setVisibility(visible?View.VISIBLE:View.GONE);}
-    @NonNull @Override protected View createRootView() {binding=P0HomeBinding.inflate(getLayoutInflater());return binding.getRoot();}
+    @NonNull @Override protected View createRootView() {binding=P0HomeBinding.bind(getLayoutInflater().inflate(PreferencesUtils.getGardeniaTheme().homeLayout,null,false));return binding.getRoot();}
 }

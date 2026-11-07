@@ -69,12 +69,12 @@ abstract class ChartValueSeries {
 
         fillPaint = new Paint();
         fillPaint.setStyle(Style.FILL);
-        fillPaint.setColor(ContextCompat.getColor(context, fillColor));
+        fillPaint.setColor(fillColor==de.dennisguse.opentracks.R.color.chart_heart_rate_fill ? (de.dennisguse.opentracks.ui.util.ThemeUtils.colorOr(context,de.dennisguse.opentracks.R.attr.gardeniaChart,ContextCompat.getColor(context, strokeColor))&0x00ffffff)|0x28000000 : ContextCompat.getColor(context, fillColor));
         fillPaint.setAntiAlias(true);
 
         strokePaint = new Paint();
         strokePaint.setStyle(Style.STROKE);
-        strokePaint.setColor(ContextCompat.getColor(context, strokeColor));
+        strokePaint.setColor(strokeColor==de.dennisguse.opentracks.R.color.chart_heart_rate_border ? de.dennisguse.opentracks.ui.util.ThemeUtils.colorOr(context,de.dennisguse.opentracks.R.attr.gardeniaChart,ContextCompat.getColor(context, strokeColor)) : ContextCompat.getColor(context, strokeColor));
         strokePaint.setAntiAlias(true);
 
         // Make copies of the stroke paint with the default thickness

@@ -3,6 +3,8 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/menu_settings">
 
+    <Preference android:key="@string/gardenia_appearance_key" android:title="@string/gardenia_appearance_title" android:summary="@string/gardenia_follow_system" android:icon="@drawable/ic_ui" />
+
     <Preference
         android:icon="@drawable/ic_units"
         android:key="@string/settings_defaults_key"

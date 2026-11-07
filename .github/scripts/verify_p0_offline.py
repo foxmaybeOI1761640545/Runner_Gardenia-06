@@ -10,7 +10,7 @@ A='{http://schemas.android.com/apk/res/android}'
 PREFIX='de.dennisguse.opentracks.'
 LAUNCHER=PREFIX+'introduction.IntroductionActivity'
 COMPONENTS={
-    'activity':{LAUNCHER,PREFIX+'p0.app.P0Activity',PREFIX+'p0.app.P0SensorsActivity',PREFIX+'p0.app.P0HistoryActivity'},
+    'activity':{LAUNCHER,PREFIX+'p0.app.P0Activity',PREFIX+'p0.app.P0SensorsActivity',PREFIX+'p0.app.P0HistoryActivity',PREFIX+'p0.app.P0SettingsActivity'},
     'service':{PREFIX+'services.TrackRecordingService','androidx.appcompat.app.AppLocalesMetadataHolderService'},
     'provider':{PREFIX+'data.ShareContentProvider','androidx.core.content.FileProvider'},
 }

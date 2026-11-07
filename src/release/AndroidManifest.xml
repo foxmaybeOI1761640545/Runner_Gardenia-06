@@ -21,6 +21,7 @@
         </activity>
         <activity android:name="de.dennisguse.opentracks.p0.app.P0Activity" android:exported="false" />
         <activity android:name="de.dennisguse.opentracks.p0.app.P0SensorsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+        <activity android:name="de.dennisguse.opentracks.p0.app.P0SettingsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <activity android:name="de.dennisguse.opentracks.p0.app.P0HistoryActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <provider android:name="de.dennisguse.opentracks.data.ShareContentProvider" android:authorities="${applicationId}.content" android:exported="false" android:grantUriPermissions="true" />
         <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">

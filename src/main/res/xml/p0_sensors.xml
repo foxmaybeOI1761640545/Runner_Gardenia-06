@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="gardenia_appearance" android:title="@string/gardenia_appearance_title" android:summary="@string/gardenia_follow_system" />
     <Preference android:title="@string/p0_ble_guide" android:selectable="false" />
     <de.dennisguse.opentracks.p0.ble.P0HeartRatePreference
         android:defaultValue="@string/sensor_type_value_none"
