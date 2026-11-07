@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branch": "feature/p0-2-gps-ui",
+  "updated_at_utc": "2026-11-07T09:29:39.751713Z",
+  "scope": "11 new exact-byte originals and 6 immutable stage-1 provenance files. Existing 2056-file archive remains covered by original manifests/verify_report_archive.py; no duplicate inventory. Mutable indexes, this self-referential inventory and future reports excluded.",
+  "files": [
+    {
+      "path": "docs/reports/evidence/p0-1-manifests/debug-manifest.xml",
+      "bytes": 29156,
+      "sha256": "28041227a94df05d7de5dad09d37b3f405f51e4afaf8bc0455b1f6a31c524461",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "ANDROID_MERGED_MANIFEST",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "debug-manifest.xml",
+        "original_path": "build/reports/p0-offline/debug-manifest.xml",
+        "branch": "feature/p0-core-migration",
+        "commit_sha": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+        "actions_run_id": 41974364095,
+        "artifact_id": 13391716581,
+        "origin": "GitHub Actions immutable Artifact; downloaded archive digest independently matched",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p0-1-manifests/release-manifest.xml",
+      "bytes": 5576,
+      "sha256": "c3b0fa84a4eb36aafc82dcf23b2b2be58cd84d82f0b5dbeda70d5443d0936d45",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "ANDROID_MERGED_MANIFEST",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "release-manifest.xml",
+        "original_path": "build/reports/p0-offline/release-manifest.xml",
+        "branch": "feature/p0-core-migration",
+        "commit_sha": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+        "actions_run_id": 41974364095,
+        "artifact_id": 13391716581,
+        "origin": "GitHub Actions immutable Artifact; downloaded archive digest independently matched",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-phase6-local-tests.txt",
+      "bytes": 396,
+      "sha256": "d58f5e9bd31ed51463125dc2cd240340cc7eca44a4cfb273636c47300c9d84ac",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-phase6-local-tests.txt",
+        "original_path": "p02-phase6-local-tests.txt",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": null,
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Codex Workspace /tmp; local receipt",
+        "commit_unavailable_reason": "Original receipt contains no source SHA or trusted capture timestamp; exact source commit cannot be established. Not a GitHub Actions result."
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-recovery-local-tests.txt",
+      "bytes": 401,
+      "sha256": "45a1f383b5b6410a6580c7ad4712dcecd5f04d4f58534456d9e48367221df375",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-recovery-local-tests.txt",
+        "original_path": "p02-recovery-local-tests.txt",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": null,
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Codex Workspace /tmp; local receipt",
+        "commit_unavailable_reason": "Original receipt contains no source SHA or trusted capture timestamp; exact source commit cannot be established. Not a GitHub Actions result."
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage3-host-tests.txt",
+      "bytes": 377,
+      "sha256": "1104f99e97bbb4c15f196fc3e1dfb6e3748177e7550657451b0fff0cbe4c8ba9",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-stage3-host-tests.log",
+        "original_path": "p02-stage3-host-tests.log",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": null,
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Codex Workspace /tmp; local receipt",
+        "commit_unavailable_reason": "Original receipt contains no source SHA or trusted capture timestamp; exact source commit cannot be established. Not a GitHub Actions result."
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage4-host-tests.txt",
+      "bytes": 381,
+      "sha256": "a6728fbf5126c8c9e624e8bc3edaff41b9baa5e7f0ba1da0f24be1d89a65a89d",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-stage4-host-tests.log",
+        "original_path": "p02-stage4-host-tests.log",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": null,
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Codex Workspace /tmp; local receipt",
+        "commit_unavailable_reason": "Original receipt contains no source SHA or trusted capture timestamp; exact source commit cannot be established. Not a GitHub Actions result."
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-archive-remote.json",
+      "bytes": 219,
+      "sha256": "e0ba81a0d0b190893a2188201ee74eb3d694ebde3c84b3db55b6261b856e37fe",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_REMOTE_VERIFICATION_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-archive-remote.json",
+        "original_path": "p02-archive-remote.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "eed6c6e239aa9be3e831c83f1bcd6b782fa68f8f",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local verification receipt; commit_sha identifies the remotely verified snapshot, not receipt creation time",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-archive-remote-final.json",
+      "bytes": 219,
+      "sha256": "545201940f85390cd7749dfcb65be53813cd041ec05572418a835511d8adb361",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_REMOTE_VERIFICATION_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-archive-remote-final.json",
+        "original_path": "p02-archive-remote-final.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "c7a6275bcbb2ba3d945d9d86570014fba8460814",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local verification receipt; commit_sha identifies the remotely verified snapshot, not receipt creation time",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage1-remote.json",
+      "bytes": 219,
+      "sha256": "9a7a0c6dde759e62ff2387c320786254b9dc6b7c1b30e242888222f9931de9e2",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_REMOTE_VERIFICATION_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-stage1-remote.json",
+        "original_path": "p02-stage1-remote.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "ffe8e83fe7945df86c8fd309087cc5bb57484e74",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local verification receipt; commit_sha identifies the remotely verified snapshot, not receipt creation time",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage2-remote.json",
+      "bytes": 219,
+      "sha256": "e5e157b26becf8e596a10af7e82c4803834a1a3bdf34c9c7a6a5857465043323",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_REMOTE_VERIFICATION_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-stage2-remote.json",
+        "original_path": "p02-stage2-remote.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "4567d084134373aead458a50dae440928a3e491d",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local verification receipt; commit_sha identifies the remotely verified snapshot, not receipt creation time",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage3-remote.json",
+      "bytes": 219,
+      "sha256": "c2f12ed71966de0a5518408d2fe156b26f74879b24058ed1cd4e123fe80ec2ac",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:25:39.918638Z",
+      "archive_type": "LOCAL_REMOTE_VERIFICATION_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "p02-stage3-remote.json",
+        "original_path": "p02-stage3-remote.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "2a0636f8dae78f76f8c505a6512ca3272dbacb06",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local verification receipt; commit_sha identifies the remotely verified snapshot, not receipt creation time",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p0-1-manifests/SOURCE.md",
+      "bytes": 743,
+      "sha256": "3daf98714553125d8de8662d1255019b942e37c1c1a9d61d1f0575e52c7f6418",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "SOURCE.md",
+        "original_path": "docs/reports/evidence/p0-1-manifests/SOURCE.md",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p0-1-manifests/SHA256SUMS",
+      "bytes": 172,
+      "sha256": "b6a70042f08d47511f37c28b1df1e5f086ff72b8210bd29db1b31cd074a6ea54",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "SHA256SUMS",
+        "original_path": "docs/reports/evidence/p0-1-manifests/SHA256SUMS",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/evidence/p02-local-receipts/README.md",
+      "bytes": 656,
+      "sha256": "97b39e8f68675a8a3e7dbd60c43b4e1d62a834e884f8adc72e8abb08b32c22bf",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "README.md",
+        "original_path": "docs/reports/evidence/p02-local-receipts/README.md",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/backup/IMPLEMENTATION_BASELINE.json",
+      "bytes": 7825,
+      "sha256": "d7c04c714239ed6e45f859edcedd3399eb45f735abd1be67cbec7dc2766ab338",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "IMPLEMENTATION_BASELINE.json",
+        "original_path": "docs/reports/backup/IMPLEMENTATION_BASELINE.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/backup/RECOVERED_SOURCES.json",
+      "bytes": 12052,
+      "sha256": "715f3ca2c6dd1ae09e687d70c8eb3ada7a175f405490ba55685c22dbfb1b224e",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "RECOVERED_SOURCES.json",
+        "original_path": "docs/reports/backup/RECOVERED_SOURCES.json",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/backup/STAGE_1_ACCEPTANCE.md",
+      "bytes": 1030,
+      "sha256": "aceac8d02c388a83da3afa360fe32347e52cd8eb83e14dea0d27db2cc7c67783",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:29:39.751713Z",
+      "archive_type": "PROVENANCE_RECORD",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "STAGE_1_ACCEPTANCE.md",
+        "original_path": "docs/reports/backup/STAGE_1_ACCEPTANCE.md",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    }
+  ]
+}
