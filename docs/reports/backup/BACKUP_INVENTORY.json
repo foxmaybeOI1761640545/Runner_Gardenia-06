@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
   "branch": "feature/p0-2-gps-ui",
-  "updated_at_utc": "2026-11-07T09:29:39.751713Z",
+  "updated_at_utc": "2026-11-07T09:56:39.437478Z",
   "scope": "11 new exact-byte originals and 6 immutable stage-1 provenance files. Existing 2056-file archive remains covered by original manifests/verify_report_archive.py; no duplicate inventory. Mutable indexes, this self-referential inventory and future reports excluded.",
   "files": [
     {
@@ -325,6 +325,25 @@
         "actions_run_id": null,
         "artifact_id": null,
         "origin": "Stage 1 provenance written in Codex and committed at the named source SHA; actual cloud gate recorded separately",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/backup/validation/local-helper-tests-111.txt",
+      "bytes": 15476,
+      "sha256": "6964a9f1117f27288bedb14fa6decea1e8a148242af35af7b468570070c260c1",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T09:56:39.437478Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "runner-backup-stage4-tests.txt",
+        "original_path": "runner-backup-stage4-tests.txt",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "836eea9522c5803c8ed619ffbb0d50b71cacbaab",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Full local helper regression executed on the clean committed stage4 code before archiving this stdout/stderr receipt. Isolated temporary Git fixtures do not modify project refs.",
         "commit_unavailable_reason": null
       }
     }
