@@ -1,5 +1,7 @@
 # Runner Gardenia P0 UI Lab
 
+在线体验：**https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/**
+
 长期保留的设计分支：`design/p0-ui-lab`。参考 Tag `test-p0-v0.1.0-p0.1`，提交 `3116e5fa7a56ce6f299ea45d5a45745f1aed4466`。
 
 独立、无框架的 HTML5 / CSS3 / JavaScript 网站：十套完整可交互设计，共享运动、GPS、历史/详情、心率设备/图表、GPX 与设置。此原型不是正式 Android UI，所有数据均为模拟。
@@ -44,11 +46,11 @@ GitHub Actions 使用托管 Ubuntu runner 已预装的 Google Chrome（记录实
 
 ## GitHub Pages
 
-新工作流 `.github/workflows/p0-ui-lab-pages.yml` 仅监听本设计分支 push（仅 UI Lab 和其工作流路径）及 workflow_dispatch，并在任务级拒绝其他分支。前端静态与真实 Chromium 检查通过后才进入独立 Pages 部署任务。仅使用 SHA 固定版本的官方 Actions，OIDC 与最小权限。不构建 Android、不签名、不建 Tag/Release、不合并、不删除分支。
+新工作流 `.github/workflows/p0-ui-lab-pages.yml` 仅监听本设计分支 push（仅 UI Lab 和其工作流路径）及 workflow_dispatch，并在任务级拒绝其他分支。前端静态与真实 Chromium 检查通过后才进入独立 Pages 部署任务；发布后使用 GitHub 返回的 `page_url` 再运行完整 Chrome 验收，确认正式站点 HTTP 200、十套主题与全部页面状态正常。仅使用 SHA 固定版本的官方 Actions，OIDC 与最小权限。不构建 Android、不签名、不建 Tag/Release、不合并、不删除分支。
 
 初次工作流仅存在非默认分支时，GitHub 可能不在默认分支的 Actions UI 展示手动运行入口；正常 push 自动部署不受影响。不要为获取入口修改 main；有新修改正常 push 即可运行。
 
-若 Pages 管理 API 被当前集成权限拒绝，管理员仅需在 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。不能因此声称已经发布成功。实际部署 URL 和运行结果以测试记录及 GitHub 返回值为准。
+本仓库已开启 **Pages → Source: GitHub Actions**，并在 **Environments → github-pages → Deployment branches and tags** 中为 `design/p0-ui-lab` 追加精确分支许可，保留原有 `main` 规则。首次成功部署与实际访问记录见 [验收报告](docs/TEST_REPORT.md)。线上浏览器验收 Artifact 名称为 `p0-ui-lab-live-*` / `p0-ui-lab-live-previews-*`。
 
 ## 隔离
 

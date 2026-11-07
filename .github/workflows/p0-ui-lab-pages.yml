@@ -86,6 +86,8 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -95,3 +97,62 @@ jobs:
       - name: Deploy via GitHub OIDC
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  verify-live:
+    if: github.ref == 'refs/heads/design/p0-ui-lab'
+    name: Verify published Pages in real Chrome
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Prepare the installed browser and local CJK glyphs
+        run: |
+          python -m pip install -r ui-lab/tests/requirements.txt
+          /usr/bin/google-chrome --version
+          sudo mkdir -p /usr/local/share/fonts/ui-lab
+          sudo cp ui-lab/tests/fonts/GardeniaLabCJK-Subset.otf /usr/local/share/fonts/ui-lab/
+          fc-cache -f
+      - name: Verify the actual deployment URL and all application states
+        env:
+          UI_LAB_URL: ${{ needs.deploy.outputs.page_url }}
+          CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
+        run: |
+          test -n "$UI_LAB_URL"
+          python - <<'PY'
+          import os, urllib.request
+          url = os.environ['UI_LAB_URL']
+          with urllib.request.urlopen(url, timeout=30) as response:
+              body = response.read()
+              assert response.status == 200
+              assert b'P0 UI Design Lab' in body and b'app.js' in body
+              print('Verified actual Pages URL:', response.url, 'HTTP', response.status)
+          PY
+          python ui-lab/tests/browser_acceptance.py
+      - name: Retain live screenshots, results, and failure traces
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: p0-ui-lab-live-${{ github.sha }}
+          path: |
+            ui-lab/previews/
+            ui-lab/test-results/
+          retention-days: 30
+          if-no-files-found: error
+      - name: Retain a compact live preview package
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: p0-ui-lab-live-previews-${{ github.sha }}
+          path: |
+            ui-lab/previews/
+            ui-lab/test-results/results.json
+          retention-days: 30
+          if-no-files-found: error

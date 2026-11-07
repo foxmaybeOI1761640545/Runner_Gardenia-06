@@ -2,6 +2,10 @@
 
 日期：2026-11-07，Asia/Shanghai。设计分支长期保留，不合并 main。
 
+**正式访问地址：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/**
+
+首次正式部署已成功，实际 HTTPS 请求返回 HTTP 200。GitHub 返回的 `environment_url` 与上述地址一致。发布权限阻塞已解除，后续发布增加独立的线上 Chrome 全量验收任务。
+
 ## 交付与基线
 
 - 分支：`design/p0-ui-lab`。
@@ -9,7 +13,7 @@
 - Tag 对象：`c3af195d4d99eb468dc09420bee43336b295bbd2`。
 - 基线提交：`3116e5fa7a56ce6f299ea45d5a45745f1aed4466`，与指定值一致。
 - 本次归档的 UI 实测提交：`6910416c2125fbdf8bf0719db00759062c7944a7`。
-- 实测运行：[42269278260](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42269278260)。该运行的 **Frontend and real-browser acceptance 成功**，部署任务因 Pages 未开启失败；不能把整个运行表述成部署成功。
+- 实测运行：[42269278260](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42269278260)。该历史运行的 **Frontend and real-browser acceptance 成功**，当时 Pages 尚未开启；正式部署的后续成功记录见下文。
 - 最后补齐截图资源与来源说明的提交可从 [分支 HEAD](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/tree/design/p0-ui-lab) 查看。每次 push 均重新进行完整检查，后续实测 JSON 以 [BROWSER_ACCEPTANCE_RESULTS.json](BROWSER_ACCEPTANCE_RESULTS.json) 与对应 Actions 为准。
 
 ## 十套方案
@@ -50,8 +54,8 @@ Chrome `156.0.8078.79`，Playwright `1.62.0`，GitHub 托管 Ubuntu runner。30 
 | 页面外部网络请求 | 0；无 CDN、在线字体、外部图片或地图 |
 | 断网直接打开 `index.html` | 实际 Chromium `file://` + networking disabled，页面、导航和主题操作通过 |
 | 原生迁移规范 | 完整组件映射、实际源码路径、10 套 Token、字体/间距/圆角/阴影/图表/状态/交互规范已交付 |
-| GitHub Actions | 前端真实验收通过；Pages 部署单独阻塞，见下文 |
-| GitHub Pages 实际访问 | **未完成：站点未开启，未取得 GitHub 返回的访问 URL，未宣称已上线** |
+| GitHub Actions | 前端验收与 Pages 部署已通过；后续增加 verify-live 正式站点全量验收 |
+| GitHub Pages 实际访问 | **已完成首次部署：GitHub deployment success，正式 URL 实际 HTTPS 请求为 HTTP 200，页面标题与 app.js 入口正确** |
 
 实际截图在 [previews](../previews/README.md)，来源、尺寸和哈希见 [PROVENANCE.json](../previews/PROVENANCE.json)。完整 trace、下载的示例 GPX、结果 JSON 在 Actions 验收 Artifact，保留 30 天。已下载的紧凑截图包 SHA-256：`01155efee3855f83059f5c7676ad77d7e2217abe4806efedfb565ee65d34a302`，与 GitHub 返回 digest 相同。
 
@@ -67,14 +71,23 @@ Chrome `156.0.8078.79`，Playwright `1.62.0`，GitHub 托管 Ubuntu runner。30 
 
 主要视觉均能原生实现。未来新增四栏导航、详情图表 UI 接入、离线轨迹概览和部分仪表绘制，继续使用现有原生栈。玻璃模糊/高频光晕应简化。禁止为复用 HTML 引入 WebView；不重写 GPS、BLE、数据库或记录逻辑。真实 BLE 自动重连不稳定仍需真机验证，原型定时连接成功不是修复证据。
 
-## 部署阻塞与唯一管理员设置
+## 正式部署与访问校验
 
-仓库初始 `has_pages=false`，GET Pages 为 404，没有覆盖既有站点。自动 POST Pages（`build_type=workflow`）两次返回 **403 Resource not accessible by integration**。仓库账号有管理权限，但当前 GitHub 集成没有这项 Pages 管理 API 权限。独立部署任务在 configure-pages 阶段因站点不存在失败；前端检查未被跳过。
+- 首次成功发布的源码：`df900b1c02bf4528b52c747c326ea804ad34397b`。
+- 成功运行：[42270460362 / attempt 4](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42270460362/attempts/4)，前端验收与 Pages 部署均 success。
+- GitHub deployment ID：`7617618200`，部署完成时间 `2026-11-07T06:25:47Z`（Asia/Shanghai 14:25:47）。
+- GitHub 返回的 `environment_url`：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/ 。实际网络请求 HTTP 200，响应包含本站标题 `P0 UI Design Lab` 和本地 `app.js` 入口。
+- Pages 来源：`build_type=workflow`；已启用 HTTPS。没有覆盖既有站点，仓库最初 `has_pages=false`。
+- 环境分支许可：`github-pages` 的精确 `branch` 规则同时包含 `main` 与 `design/p0-ui-lab`。管理员追加了设计分支，原有 main 规则保留。
 
-**唯一需要管理员变更的设置：仓库 Settings → Pages → Build and deployment → Source → GitHub Actions。** 开启后可重试本设计分支工作流；如果 Pages artifact 已过期，重新运行全流程生成即可，无需修改 main 或业务分支。当前没有实际成功 URL，不填猜测的地址。
+此前开启 Pages 与追加环境分支许可的 API 请求均返回 403；管理员已完成这两项设置。attempt 3 被环境 main-only 规则拦截，追加设计分支后 attempt 4 成功。没有删除保护环境、改名绕过环境规则或跳过前端检查。
+
+当前环境 Chrome 的代理 CA 信任检查失败（`ERR_CERT_AUTHORITY_INVALID`），Python HTTPS 客户端可在正常证书校验下取得 200；未禁用 TLS 验证。实际线上浏览器检查由 GitHub 托管 Chrome 执行。设计分支专用工作流现增加 **Verify published Pages in real Chrome** 任务，从 deploy job 的实际 `page_url` 获取 URL，先检查 HTTP 200 与页面身份，再对正式站点运行与发布前相同的完整验收（10 主题 × 3 视口、GPS/BLE、导航、详情、图表、GPX、设置、轮播、无外部依赖）。失败保留线上截图、JSON 和 trace，不更改已通过的检查。
+
+后续线上验收结果见 [本分支最新 Actions](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions?query=branch%3Adesign%2Fp0-ui-lab) 的 `Verify published Pages in real Chrome` 及 `p0-ui-lab-live-*` Artifact。截图来源记录中的 `actionsRun` / `sourceCommit` 绑定每次实际捕获，JSON 的 `url` 标明被测正式站点。
 
 ## 隔离确认与未完成项
 
 相对基线的文件改动仅为 `ui-lab/**` 与 `.github/workflows/p0-ui-lab-pages.yml`。未修改 main、feature/p0-core-migration、P0.2、project-records、Android 源码、Gradle、Manifest 或已有工作流；未构建/签名 Android，未创建 Tag、Release 或合并，设计分支保留。
 
-剩余唯一发布阻塞：管理员开启 GitHub Actions Pages 后完成部署和实际 URL 访问验证。最终方案选择与正式 Android UI 实现属于后续用户决策/开发任务。
+已无发布权限阻塞，正式站点可访问。最后一轮线上浏览器结果由上述发布后任务记录；最终方案选择与正式 Android UI 实现属于后续用户决策/开发任务。
