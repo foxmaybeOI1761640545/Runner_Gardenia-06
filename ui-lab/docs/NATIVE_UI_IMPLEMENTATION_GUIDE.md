@@ -102,3 +102,11 @@ Aurora 的强调色规范值为 `#BCCAFF`。渐变背景上使用不低于原型
 迁移可行性：十套主要页面均可用现有技术栈实现。新增四栏导航、详情图表接入与轨迹概览是后续 UI 适配工作；服务/数据层保持不变。正式 Android UI 是否采用某方案由用户最终选择。
 
 机器可读的同源参数：[assets/design-tokens.json](../assets/design-tokens.json)。所有颜色为 CSS 十六进制，Android 导入时将 RGBA 转成 ARGB；不要直接复制带 alpha 的 CSS 色值顺序。
+
+## 主副指标交换的后续原生实现合同
+
+HTML 新增的主副显示选择属于 UI 状态，不属于 GPS/BLE/记录服务状态。正式原生 UI 仍使用 Java + XML + ViewBinding：用原生可点击控件/MaterialButton 承载副指标，点击后在原生 UI 的有序位置模型中交换两个指标 ID，重新绑定两个位置；不调整运动数据、不重算采样、不重启记录或 BLE。GPS 精度保持辅助信息。
+
+每个选定设计保留自己的默认主指标（Neon 为心率，其余为距离）及副位置顺序。单位/配速偏好继续来自 PreferencesUtils，测量值和状态继续来自现有 ViewModel/Snapshot、MotionFormat 与 HeartRatePanel。未来 Native 页面重建需要 SavedState/Bundle 保留 UI 选择；HTML 本轮仅要求网站会话内保留。焦点留在被操作的原副位置，操作反馈使用原生无障碍公告，不覆盖核心数据。
+
+前端交互、格式、状态与验收合同见 [METRIC_SWAP_SPEC.md](METRIC_SWAP_SPEC.md)；本分支没有修改 Android UI 或业务源码。

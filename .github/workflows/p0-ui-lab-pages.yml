@@ -63,6 +63,7 @@ jobs:
           path: |
             ui-lab/previews/
             ui-lab/test-results/results.json
+            ui-lab/test-results/metric-swap-*.png
           retention-days: 30
           if-no-files-found: error
       - name: Stage only the static design lab
@@ -154,5 +155,6 @@ jobs:
           path: |
             ui-lab/previews/
             ui-lab/test-results/results.json
+            ui-lab/test-results/metric-swap-*.png
           retention-days: 30
           if-no-files-found: error

@@ -40,6 +40,14 @@
   ];
   const initial = () => ({gps:'fixed',gpsGap:false,heart:'connected',session:'recording',seconds:1714,distance:5.24,page:'run',detail:1,chartReturn:'heart',selectedDevice:0,autoReconnect:true,unit:'km',rate:'pace',contact:true,emptyHistory:false,exportFailure:false,modal:null,exportResult:null});
   let state = initial(), rows = defaultRows.map(x=>({...x})), themeIndex = 0, connectionGeneration = 0, scanGeneration = 0;
+  // Each theme owns an ordered set of positions, not just a preferred primary ID.
+  // Swapping never rebuilds or sorts the secondary array. Demo reset leaves it intact.
+  const metricLayoutsByTheme = Object.fromEntries(themes.map(theme => [theme.id,
+    theme.id === 'neon'
+      ? {primary:'heartRate', secondary:['distance','duration','paceSpeed','gpsAccuracy'], notice:''}
+      : {primary:'distance', secondary:['duration','paceSpeed','heartRate','gpsAccuracy'], notice:''}
+  ]));
+  const metricLayout = () => metricLayoutsByTheme[themes[themeIndex].id];
   let favoriteIds = [];
   try {favoriteIds = JSON.parse(localStorage.getItem('gardenia-favorites') || '[]');if(!Array.isArray(favoriteIds))favoriteIds=[];} catch {favoriteIds=[];}
   const devices = [{name:'Gardenia HR-01',id:'D0:11:22:33:44:01',rssi:-54},{name:'Runner Chest 02',id:'D0:11:22:33:44:02',rssi:-72}];
@@ -59,7 +67,49 @@
   const currentBpm = () => fresh() ? (state.session==='recording'?148:82) : '--';
   const canStart = () => state.gps==='fixed';
   const selectedRow = () => rows.find(x=>x.id===state.detail) || rows[0] || defaultRows[0];
-  const metric = (value,unit,label,name='') => `<div class="metric"><div class="value">${value}<small>${safe(unit)}</small></div><div class="label">${name?icon(name):''}${safe(label)}</div></div>`;
+  function metric(value,unit,label,name='',options={}) {
+    const interactive = options.id && options.id !== 'gpsAccuracy';
+    const tag = interactive ? 'button' : 'div';
+    const binding = options.id ? ` data-metric-role="secondary" data-metric-id="${options.id}" data-slot="${options.slot}"` : '';
+    const action = interactive ? ` type="button" data-action="swap-metric" aria-label="${safe(swapLabel(options.id))}"` : '';
+    return `<${tag} class="metric${interactive?' metric-swap':''}"${binding}${action}><span class="value"><span class="metric-value-text">${safe(value)}</span><small class="metric-unit">${safe(unit)}</small></span><span class="label">${name?icon(name):''}<span class="metric-label-text">${safe(label)}</span></span></${tag}>`;
+  }
+  function metricData(id,d=motion()) {
+    const metrics = {
+      distance:{value:d.distance,unit:state.unit,label:'运动距离',kicker:'DISTANCE',icon:'run'},
+      duration:{value:d.duration,unit:'',label:'运动时长',kicker:'DURATION',icon:'clock'},
+      paceSpeed:{value:d.rate,unit:rateUnit(),label:state.rate==='pace'?'当前配速':'当前速度',kicker:state.rate==='pace'?'PACE':'SPEED',icon:'speed'},
+      heartRate:{value:String(d.bpm),unit:'BPM',label:'实时心率',kicker:'HEART RATE',icon:'heart'},
+      gpsAccuracy:{value:state.gps==='fixed'?'±5':'--',unit:state.gps==='fixed'?'m':'',label:'定位精度',kicker:'GPS ACCURACY',icon:'gps'}
+    };
+    return {...metrics[id],id};
+  }
+  function swapLabel(id) {
+    return `将${metricData(id).label}设为主显示，与${metricData(metricLayout().primary).label}交换`;
+  }
+  function primaryMetric(d) {
+    const m=metricData(metricLayout().primary,d);
+    return `<div class="primary-readout" data-metric-role="primary" data-metric-id="${m.id}"><div class="hero-label"><span class="metric-kicker">${m.kicker}</span> / <span class="metric-label-text">${safe(m.label)}</span></div><div class="hero-number" data-metric-id="${m.id}" data-value-size="${String(m.value).length>=7?'long':'normal'}"><span class="metric-value-text">${safe(m.value)}</span><small class="metric-unit">${safe(m.unit)}</small></div></div>`;
+  }
+  function swapMetric(slot) {
+    const layout=metricLayout();
+    if(!Number.isInteger(slot)||slot<0||slot>=3||layout.secondary[slot]==='gpsAccuracy')return;
+    [layout.primary,layout.secondary[slot]]=[layout.secondary[slot],layout.primary];
+    layout.notice=`主显示已切换为${metricData(layout.primary).label}`;
+    render();
+    $('#metric-announcement').textContent=layout.notice;
+  }
+  function updateMotionMetrics() {
+    const d=motion();
+    $$('[data-metric-role]',content).forEach(element=>{
+      const m=metricData(element.dataset.metricId,d);
+      $('.metric-value-text',element).textContent=m.value;
+      $('.metric-unit',element).textContent=m.unit;
+      $('.metric-label-text',element).textContent=m.label;
+      const number=$('.hero-number',element);
+      if(number)number.dataset.valueSize=String(m.value).length>=7?'long':'normal';
+    });
+  }
   function motion() {
     const idle=state.session==='idle', valid=state.gps==='fixed';
     return {distance:valid?distance(idle?0:state.distance):'--',duration:duration(idle?0:state.seconds),rate:valid&&state.session==='recording'?rateValue(5.24,1714):'--',bpm:currentBpm()};
@@ -80,20 +130,27 @@
     const routeLine=hasGap?'M76 136 90 111 104 90 139 81 169 57 M206 65 226 96 254 117 246 143 218 151 187 136':'M76 136 90 111 104 90 139 81 169 57 206 65 226 96 254 117 246 143 218 151 187 136';
     return `<div class="route-map">${!visible?`<div class="route-empty">${icon('gps')}${state.gps==='lost'?'信号丢失，轨迹停止更新':state.gps==='searching'?'等待有效定位，不绘制轨迹':'开始后显示模拟轨迹'}</div>`:`<svg viewBox="0 0 350 190" role="img" aria-label="本地 SVG 模拟轨迹概览，不是真实地图"><g stroke="currentColor" opacity=".12" fill="none" stroke-width="1"><path d="M-10 25Q50 100 120 30T270 65T400 20M-20 45Q45 130 120 55T270 90T400 45M-25 65Q40 160 120 80T270 115T400 70M-20 85Q45 190 120 105T270 140T400 95M-20 105Q45 220 120 130T270 165T400 120M-20 125Q45 240 120 155T270 190T400 145"/><path d="M245-10Q185 65 235 115T210 220" stroke-width="18"/><path d="m-10 120 100-20 80 10 90-70 110-20" stroke-width="5"/></g><path data-route-line="true" d="${routeLine}" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="76" cy="136" r="6" fill="var(--surface)" stroke="currentColor" stroke-width="3"/><circle cx="187" cy="136" r="6" fill="currentColor"/><text x="304" y="22" fill="currentColor" font-size="10" font-family="Arial">N ↑</text></svg><span class="map-caption">${!historical&&state.gps==='lost'?'GPS 丢失 · 已记录轨迹冻结':hasGap?'模拟轨迹 · 缺失区间断开':'本地 SVG · 模拟轨迹概览'}</span>`}</div>`;
   }
-  function dataGrid(d,includeDistance=false){return `<div class="metric-grid">${includeDistance?metric(d.distance,state.unit,'运动距离','run'):''}${metric(d.duration,'','运动时长','clock')}${metric(d.rate,rateUnit(),state.rate==='pace'?'当前配速':'当前速度','speed')}${metric(d.bpm,'BPM','实时心率','heart')}${!includeDistance?metric(state.gps==='fixed'?'± 5':'--','m','定位精度','gps'):''}</div>`;}
+  function dataGrid(d) {
+    const layout=metricLayout();
+    const cards=layout.secondary.map((id,slot)=>{
+      const m=metricData(id,d);
+      return metric(m.value,m.unit,m.label,m.icon,{id,slot});
+    }).join('');
+    return `<div class="metric-grid motion-grid" aria-label="副显示指标，点击可与主显示交换">${cards}</div><p class="metric-swap-hint">${safe(layout.notice?`主显示已切换为${metricData(layout.primary,d).label}`:'点击副指标，与主显示交换')}</p>`;
+  }
   function hero(d){
-    const value=`${d.distance}<small>${state.unit}</small>`;
+    const readout=primaryMetric(d);
     switch(themes[themeIndex].id){
-      case 'quiet':return `<div class="hero">${recordLabel()}<div class="hero-label">这一步，属于你。</div><div class="hero-number">${value}</div></div>${dataGrid(d)}`;
-      case 'explorer':return `<div class="hero map-hero">${route()}<div class="map-overlay"><div class="hero-label">运动距离</div><div class="hero-number">${value}</div></div></div>${recordLabel()}${dataGrid(d)}`;
-      case 'neon':return `<div class="hero pulse-hero"><div class="hero-label">LIVE HEART RATE / 实时心率</div><div class="hero-number">${d.bpm}<small>BPM</small></div>${chart(false,true)}</div>${recordLabel()}${dataGrid(d,true)}`;
-      case 'swiss':return `<div class="hero editorial-hero"><div class="editorial-index">01 / MOVEMENT</div><div><div class="hero-label">跑过的每一米，都算数。</div><div class="hero-number">${d.distance}<small>运动距离 / ${state.unit.toUpperCase()}</small></div></div></div>${recordLabel()}${dataGrid(d)}`;
-      case 'industrial':return `<div class="hero gauge-hero"><div class="hero-label">DISTANCE / 运动距离</div><div class="hero-number">${value}</div></div>${recordLabel()}${dataGrid(d)}`;
-      case 'wellness':return `<div class="hero wellness-hero"><div class="hero-label">享受你的节奏</div><div class="hero-number">${value}</div></div>${recordLabel()}${dataGrid(d)}`;
-      case 'aurora':return `<div class="hero glass-hero">${recordLabel()}<div class="hero-label">运动距离 / DISTANCE</div><div class="hero-number">${value}</div></div>${dataGrid(d)}`;
-      case 'racing':return `<div class="hero race-hero">${recordLabel()}<div class="hero-label">DISTANCE / 运动距离</div><div class="hero-number">${value}</div></div>${dataGrid(d)}`;
-      case 'brutal':return `${recordLabel()}<div class="hero brutal-hero"><div class="hero-label">DISTANCE_运动距离</div><div class="hero-number">${value}</div></div>${dataGrid(d)}`;
-      default:return `${recordLabel()}<div class="hero"><div class="hero-label">TOTAL DISTANCE / 运动距离</div><div class="hero-number">${value}</div></div>${dataGrid(d)}`;
+      case 'quiet':return `<div class="hero metrics-hero">${recordLabel()}${readout}</div>${dataGrid(d)}`;
+      case 'explorer':return `<div class="hero map-hero metrics-hero">${route()}<div class="map-overlay">${readout}</div></div>${recordLabel()}${dataGrid(d)}`;
+      case 'neon':return `<div class="hero pulse-hero metrics-hero">${readout}<div class="pulse-chart-label">心率曲线 · BPM</div>${chart(false,true)}</div>${recordLabel()}${dataGrid(d)}`;
+      case 'swiss':return `<div class="hero editorial-hero metrics-hero"><div class="editorial-index">01 / ${metricData(metricLayout().primary,d).kicker}</div>${readout}</div>${recordLabel()}${dataGrid(d)}`;
+      case 'industrial':return `<div class="hero gauge-hero metrics-hero">${readout}</div>${recordLabel()}${dataGrid(d)}`;
+      case 'wellness':return `<div class="hero wellness-hero metrics-hero">${readout}</div>${recordLabel()}${dataGrid(d)}`;
+      case 'aurora':return `<div class="hero glass-hero metrics-hero">${recordLabel()}${readout}</div>${dataGrid(d)}`;
+      case 'racing':return `<div class="hero race-hero metrics-hero">${recordLabel()}${readout}</div>${dataGrid(d)}`;
+      case 'brutal':return `${recordLabel()}<div class="hero brutal-hero metrics-hero">${readout}</div>${dataGrid(d)}`;
+      default:return `${recordLabel()}<div class="hero metrics-hero">${readout}</div>${dataGrid(d)}`;
     }
   }
   function recordActions(){
@@ -114,7 +171,7 @@
     const scroll=content.scrollTop;
     const focus=document.activeElement;
     const restoreFocus=content.contains(focus);
-    const focusKey=focus?.dataset?.action?`[data-action="${focus.dataset.action}"]`:focus?.dataset?.setting?`[data-setting="${focus.dataset.setting}"]`:focus?.dataset?.device?`[data-device="${focus.dataset.device}"]`:null;
+    const focusKey=focus?.dataset?.action==='swap-metric'?`[data-action="swap-metric"][data-slot="${focus.dataset.slot}"]`:focus?.dataset?.action?`[data-action="${focus.dataset.action}"]`:focus?.dataset?.setting?`[data-setting="${focus.dataset.setting}"]`:focus?.dataset?.device?`[data-device="${focus.dataset.device}"]`:null;
     content.innerHTML=pageRenderers[state.page]();
     content.scrollTop=top?0:scroll;
     if(animate){content.classList.remove('screen-enter');void content.offsetWidth;content.classList.add('screen-enter');}
@@ -156,9 +213,10 @@
     if(kind==='gps'&&value!=='fixed'&&state.session==='recording')state.gpsGap=true;
     state[kind]=value;render();
   }
-  function handleAction(action){
+  function handleAction(action,button){
     stopForInteraction();
     switch(action){
+      case 'swap-metric':swapMetric(Number(button.dataset.slot));break;
       case 'gps-page':navigate('gps');break;
       case 'start':if(canStart()){state.session='recording';state.seconds=0;state.distance=0;state.gpsGap=false;render();}break;
       case 'pause':state.session='paused';render();break;
@@ -177,7 +235,7 @@
       case 'share-gpx':void exportGpx(true);break;
     }
   }
-  screen.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.page)navigate(b.dataset.page);else if(b.dataset.detail){state.detail=Number(b.dataset.detail);navigate('detail');}else if(b.dataset.device!==undefined){state.selectedDevice=Number(b.dataset.device);connectDevice();}else if(b.dataset.action)handleAction(b.dataset.action);});
+  screen.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.page)navigate(b.dataset.page);else if(b.dataset.detail){state.detail=Number(b.dataset.detail);navigate('detail');}else if(b.dataset.device!==undefined){state.selectedDevice=Number(b.dataset.device);connectDevice();}else if(b.dataset.action)handleAction(b.dataset.action,b);});
   screen.addEventListener('change',e=>{if(!e.target.dataset.setting)return;stopForInteraction();const key=e.target.dataset.setting;state[key]=e.target.type==='checkbox'?e.target.checked:e.target.value;render();});
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   let autoplay=!reducedMotion.matches, userPaused=false, hoverPaused=false, focusPaused=false, dragging=false;
@@ -207,7 +265,7 @@
   }
   $('#empty-history').addEventListener('change',e=>{state.emptyHistory=e.target.checked;stopForInteraction();render();});
   $('#export-failure').addEventListener('change',e=>{state.exportFailure=e.target.checked;stopForInteraction();});
-  $('#reset-demo').addEventListener('click',()=>{stopForInteraction();connectionGeneration++;scanGeneration++;state=initial();rows=defaultRows.map(x=>({...x}));render({top:true});toast('已恢复默认模拟记录。');});
+  $('#reset-demo').addEventListener('click',()=>{stopForInteraction();connectionGeneration++;scanGeneration++;state=initial();rows=defaultRows.map(x=>({...x}));Object.values(metricLayoutsByTheme).forEach(layout=>{layout.notice='';});$('#metric-announcement').textContent='';render({top:true});toast('已恢复默认模拟记录。');});
   $('#theme-track').innerHTML=themes.map((t,i)=>`<button type="button" class="theme-card" data-theme-index="${i}" aria-pressed="${i===0}" aria-label="方案 ${pad(i+1)} ${safe(t.name)} ${safe(t.cn)}"><div class="thumb" data-theme="${t.id}"><div class="thumb-fallback">${pad(i+1)}</div></div><span class="selected-check" aria-hidden="true">✓</span><span class="card-label"><span class="card-number">${pad(i+1)}</span>${safe(t.name)}</span><span class="card-cn">${safe(t.cn)}</span></button>`).join('');
   // Thumbnails are local screenshots captured from this exact running prototype.
   // File URLs can load PNGs without fetch; a missing preview keeps the CSS fallback.
@@ -237,13 +295,6 @@
   // Simulation advances only in foreground, with an active record and a valid GPS fix.
   // No catch-up integration occurs after missing GPS or a hidden tab.
   setInterval(()=>{if(document.hidden||state.modal||state.session!=='recording')return;state.seconds++;if(state.gps==='fixed')state.distance+=5.24/1714;if(state.page==='run'){
-    const d=motion();
-    const hero=$('.hero-number',content);
-    if(hero?.firstChild?.nodeType===Node.TEXT_NODE)hero.firstChild.textContent=themes[themeIndex].id==='neon'?d.bpm:d.distance;
-    $$('.metric-grid .metric',content).forEach(el=>{
-      const label=$('.label',el).textContent;
-      const value=label.includes('运动时长')?d.duration:label.includes('运动距离')?d.distance:label.includes('当前')?d.rate:label.includes('实时心率')?d.bpm:null;
-      const node=$('.value',el)?.firstChild;if(value!==null&&node?.nodeType===Node.TEXT_NODE)node.textContent=value;
-    });
+    updateMotionMetrics();
   }},1000);
 })();

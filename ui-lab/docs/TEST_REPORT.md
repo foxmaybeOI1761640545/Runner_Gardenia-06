@@ -1,5 +1,23 @@
 # 验收与部署记录
 
+## 本轮增强：主副指标双向位置交换
+
+- 同步起点：实际远端最新 HEAD `0de2481a85eeee192ea0f203429bf086865ba681`，工作区干净，使用 fast-forward 同步；未从旧 df900b1 重置。
+- 本轮实际修改：`app.js`、`styles.css`、`index.html`、`tests/browser_acceptance.py`、新增 `tests/metric_swap_acceptance.py` / `tests/build_ci_font.py`、测试专用字体子集与码点表、本报告、`METRIC_SWAP_SPEC.md`、原生指南及 `previews/`；专用 Pages 工作流仅为紧凑 Artifact 增加交换截图路径，保留原有发布前/发布后完整检查。
+- 默认主指标：01 distance、02 distance、03 distance、04 heartRate、05 distance、06 distance、07 distance、08 distance、09 distance、10 distance；与同步后的真实源码一致。Neon 的副指标重复心率已改为 GPS 精度。
+- 统一模型：`metricLayoutsByTheme` 独立保存每套主题的 primary 与有序 secondary；一次只解构交换主位置和被点击的副位置，其他槽位不变。GPS 固定辅助位置不参与，四种核心指标不会重复或丢失。
+- 统一数据：主、副均使用 `metricData(motion())` 的同一套 value/unit/label；每秒只更新现有文本节点。保留原有 GPS、BLE、暂停/恢复逻辑。
+- 可访问操作：三个核心副指标为原生 button；支持鼠标、真实 Chromium 触屏输入、Tab/Enter/Space 与可见焦点。交换后焦点保持在同一副位置。提示位于普通文档流，不遮挡数据。
+- 本地预检：10 主题 × 1440×1000 / 1366×768 / 390×844 的指标专项通过，共 122 组检查；实际触屏模拟另行全部 10 主题通过；控制台错误 0、外部运行时请求 0。超过一小时通过真实模拟 ticker 推进到 01:25:30 检查，不注入私有模型值。
+- GPS/BLE：搜星/丢失时距离和配速占位；精度未知为 --；未连接/过期心率为 -- BPM；暂停冻结距离与时间。主副位置交换前后的值和单位逐对验证。
+- 格式：km/mi 两位小数、mm:ss/HH:mm:ss、配速分钟秒和 /km /mi、速度一位小数 km/h/mph、整数 BPM。现有模拟速率对应 11.0 km/h，未改为虚构速率。
+- 原有回归：原始 GPS/BLE、记录生命周期、历史/详情、曲线、GPX、设置、轮播、导航、离线与零外部请求检查全部保留；本次候选实现的完整 CI 和正式站点验收结果将在成功后归档。
+- 提交与运行：当前候选尚未推送；最终部署提交 SHA、Actions 链接、逐主题/视口结果会由成功 CI 的 `BROWSER_ACCEPTANCE_RESULTS.json`（sourceCommit / actionsRun / assertions / metric_swap_defaults）及 `previews/PROVENANCE.json` 自动绑定。截图归档完成后更新此条。
+- 正式地址：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/ 。只有发布后的 `Verify published Pages in real Chrome` 对新交换功能通过才宣布上线完成。
+
+实现与交互细节见 [METRIC_SWAP_SPEC.md](METRIC_SWAP_SPEC.md)。下文保留原 UI Lab 的历史验收与首次发布记录。
+
+
 日期：2026-11-07，Asia/Shanghai。设计分支长期保留，不合并 main。
 
 **正式访问地址：https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/**

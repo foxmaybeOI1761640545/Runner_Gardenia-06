@@ -20,6 +20,7 @@ import threading
 import traceback
 from urllib.parse import urlparse
 from playwright.sync_api import sync_playwright, expect
+from metric_swap_acceptance import exercise_metric_swaps, exercise_metric_persistence, exercise_long_duration, exercise_metric_touch
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / 'test-results'
@@ -222,6 +223,8 @@ def exercise_theme(page, index, width, height):
     checked(f'{width}x{height} theme {index+1}: navigation/GPS/BLE/history/chart/export/settings/preserved state')
 
 with site_url() as url, sync_playwright() as p:
+    report['metric_swap_defaults'] = {theme:('heartRate' if theme=='neon' else 'distance') for theme in THEMES}
+    report['metric_swap_auxiliary'] = 'gpsAccuracy: fixed secondary slot 3'
     report['url'] = url
     report['font_check'] = 'Chrome CSS.getPlatformFontsForNode verifies CJK title glyphs for every theme and viewport'
     options = {'headless': True}
@@ -256,8 +259,11 @@ with site_url() as url, sync_playwright() as p:
             page.evaluate('scrollTo(0,0)')
             page.screenshot(path=str(PREVIEWS / f'desktop-{width}.png' if width>500 else PREVIEWS / 'mobile-390.png'), full_page=True, animations='disabled')
             for i in range(10):
+                exercise_metric_swaps(page,i,width,height,choose=choose,nav=nav,sim=sim,reset=reset,checked=checked,assert_layout=assert_layout,results=RESULTS)
                 exercise_theme(page,i,width,height)
             report['viewports'].append({'width':width,'height':height,'themes':10,'passed':True})
+        exercise_metric_persistence(page,choose=choose,nav=nav,reset=reset,checked=checked)
+        exercise_long_duration(page,choose=choose,nav=nav,reset=reset,sim=sim,checked=checked,assert_layout=assert_layout,results=RESULTS)
         reset(page)
         choose(page,9)
         page.mouse.move(0,0)
@@ -313,6 +319,7 @@ with site_url() as url, sync_playwright() as p:
         for i in range(10):
             choose(page,i)
             page.locator('#phone-frame').screenshot(path=str(PREVIEWS / f'theme-{i+1:02}.png'),animations='disabled')
+        exercise_metric_touch(browser,url,checked=checked,report=report,results=RESULTS)
         # Verify the buildless distribution with actual file URLs and networking off.
         offline_page = context.new_page()
         offline_page.on('pageerror', lambda error: report['console_errors'].append(str(error)))
@@ -336,6 +343,8 @@ with site_url() as url, sync_playwright() as p:
         run_url = None
         if os.getenv('GITHUB_RUN_ID'):
             run_url = f"{os.getenv('GITHUB_SERVER_URL','https://github.com')}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
+        report['sourceCommit']=source_sha
+        report['actionsRun']=run_url
         provenance = {'sourceCommit':source_sha, 'actionsRun':run_url, 'browserVersion':browser.version,
                       'phoneCaptureViewport':{'width':1440,'height':1000},
                       'pageScreenshots':'Full-page captures of the named viewport; image height may exceed viewport height',
