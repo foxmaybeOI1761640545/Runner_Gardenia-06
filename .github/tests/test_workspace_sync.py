@@ -73,6 +73,16 @@ class WorkspaceSyncTest(unittest.TestCase):
         result = sync.audit(self.root, [p])
         self.assertEqual(result["candidates"][0]["state"], "MISSING_OR_UNSAFE")
 
+    def test_git_credential_directory_candidate_not_read(self):
+        result = sync.audit(self.root, [self.root / ".git/config"])
+        self.assertEqual(result["candidates"][0]["state"], "SENSITIVE_NOT_READ")
+
+    def test_design_tokens_are_not_credentials(self):
+        p = Path(self.temp.name) / "design-tokens.json"
+        p.write_text('{"color":"#123456"}')
+        result = sync.audit(self.root, [p])
+        self.assertEqual(result["candidates"][0]["state"], "UNARCHIVED_CANDIDATE")
+
     def test_exact_archived_candidate(self):
         p = Path(self.temp.name) / "receipt.txt"
         p.write_text("original")

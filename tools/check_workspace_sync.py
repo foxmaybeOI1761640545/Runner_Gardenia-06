@@ -20,7 +20,9 @@ def git(root, *args):
 
 def candidate_metadata(root, filename):
     p = Path(filename).absolute()
-    if re.search(r"(?i)(^\.env|\.(jks|keystore|p12|pfx|db|sqlite|sqlite3)$|secret|token|password)", p.name):
+    credential_directory = any(part in {".git", ".aws", ".ssh", ".codex", ".agents", ".config", ".gnupg"} for part in p.parts)
+    sensitive_name = re.search(r"(?i)(^\.env|\.(jks|keystore|p12|pfx|db|sqlite|sqlite3)$|secret|token|password|credential)", p.name)
+    if credential_directory or (sensitive_name and p.name != "design-tokens.json"):
         return {"path": str(p), "state": "SENSITIVE_NOT_READ"}
     if p.is_symlink() or any(parent.is_symlink() for parent in p.parents):
         return {"path": str(p), "state": "MISSING_OR_UNSAFE"}
