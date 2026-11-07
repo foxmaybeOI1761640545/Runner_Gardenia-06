@@ -2,8 +2,8 @@
   "schema_version": 1,
   "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
   "branch": "feature/p0-2-gps-ui",
-  "updated_at_utc": "2026-11-07T10:00:41.151560Z",
-  "scope": "11 new exact-byte originals and 6 immutable stage-1 provenance files. Existing 2056-file archive remains covered by original manifests/verify_report_archive.py; no duplicate inventory. Mutable indexes, this self-referential inventory and future reports excluded.",
+  "updated_at_utc": "2026-11-07T10:03:30.979139Z",
+  "scope": "11 recovered originals, 6 immutable stage-1 provenance records and 2 current local helper regression receipts (111 and113). Existing 2056-file historical archive remains covered by its original manifests; no duplicate full inventory. Mutable indexes, this self-referential inventory and later reports are excluded.",
   "files": [
     {
       "path": "docs/reports/evidence/p0-1-manifests/debug-manifest.xml",

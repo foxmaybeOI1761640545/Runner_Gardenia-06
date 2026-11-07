@@ -57,3 +57,5 @@ Raw XML, screenshots and JSON are exact-byte content-addressed objects. [Each Ar
 - [Additional original local P0.2 receipts](evidence/p02-local-receipts/README.md)
 - [Recovery provenance and explicit exclusions](backup/RECOVERED_SOURCES.json)
 - [This implementation baseline](backup/IMPLEMENTATION_BASELINE.json) and [stage 0–1 checks](backup/STAGE_1_ACCEPTANCE.md).
+
+- [Final backup implementation report](backup/FINAL_BACKUP_IMPLEMENTATION_REPORT.md) · [final remote byte snapshot](backup/FINAL_REMOTE_SNAPSHOT.json) · [stage5 gate record](backup/STAGE_5_ACCEPTANCE.md).
