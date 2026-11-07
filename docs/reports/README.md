@@ -46,6 +46,13 @@ Raw XML, screenshots and JSON are exact-byte content-addressed objects. [Each Ar
 
 ## Project backup implementation
 
+- [Five-branch catalog and live-snapshot provenance](BRANCH_CATALOG.md)
+- [Branch and archival governance](BRANCH_GOVERNANCE.md)
+- [Machine-readable incremental backup inventory](backup/BACKUP_INVENTORY.json)
+- [Restore and verify](backup/RESTORE_AND_VERIFY.md), [offline integrity tool](../../tools/verify_backup_inventory.py), [Workspace sync checker](../../tools/check_workspace_sync.py)
+- [Mandatory Workspace closeout](backup/WORKSPACE_SYNC_CHECKLIST.md)
+- [UI Lab original latest-run archive](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/blob/335da1bbccb5216715e99d15175f34e5aa1dbfec/ui-lab/docs/acceptance/2026-11-07-run-42354349622.md) — design evidence stays on its own branch; browser simulations are not native/device acceptance.
+
 - [Original P0.1 merged manifests](evidence/p0-1-manifests/SOURCE.md)
 - [Additional original local P0.2 receipts](evidence/p02-local-receipts/README.md)
 - [Recovery provenance and explicit exclusions](backup/RECOVERED_SOURCES.json)

@@ -36,3 +36,5 @@ jobs:
         run: python3 -B -m unittest discover -s .github/tests -p 'test_backup_inventory.py' -v
       - name: Verify every inventoried original byte
         run: python3 -B tools/verify_backup_inventory.py
+      - name: Workspace end-of-task checker regressions in isolated local repositories
+        run: python3 -B -m unittest discover -s .github/tests -p 'test_workspace_sync.py' -v

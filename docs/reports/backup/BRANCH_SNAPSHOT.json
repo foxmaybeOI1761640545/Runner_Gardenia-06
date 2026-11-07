@@ -1,0 +1,89 @@
+{
+  "observed_at_utc": "2026-11-07T09:54:56.573566Z",
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branches": [
+    {
+      "branch": "design/p0-ui-lab",
+      "head_at_capture": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "declared_or_documented_base": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "first_reachable_difference_commit": "495cb12026584878cbda4239aee303890ba8797b",
+      "first_difference_commit_time_utc": "2026-11-06T17:49:36Z",
+      "branch_creation_time": "UNKNOWN: Git refs do not contain creation timestamps; the commit timestamp is evidence, not exact branch creation."
+    },
+    {
+      "branch": "feature/heart-rate-monitoring",
+      "head_at_capture": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+      "declared_or_documented_base": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "first_reachable_difference_commit": "a59a011510c1eaf6e6e2a6b276fdb8e72280706a",
+      "first_difference_commit_time_utc": "2026-11-03T18:12:37Z",
+      "branch_creation_time": "UNKNOWN: Git refs do not contain creation timestamps; the commit timestamp is evidence, not exact branch creation."
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "head_at_capture": "c787de60025a5cf435131babc062c1c17602e9db",
+      "declared_or_documented_base": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+      "first_reachable_difference_commit": "eed6c6e239aa9be3e831c83f1bcd6b782fa68f8f",
+      "first_difference_commit_time_utc": "2026-11-06T07:17:29Z",
+      "branch_creation_time": "UNKNOWN: Git refs do not contain creation timestamps; the commit timestamp is evidence, not exact branch creation."
+    },
+    {
+      "branch": "feature/p0-core-migration",
+      "head_at_capture": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+      "declared_or_documented_base": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "first_reachable_difference_commit": "26ae49620485962935946c036d716f057241f826",
+      "first_difference_commit_time_utc": "2026-11-04T16:34:44Z",
+      "branch_creation_time": "UNKNOWN: Git refs do not contain creation timestamps; the commit timestamp is evidence, not exact branch creation."
+    },
+    {
+      "branch": "main",
+      "head_at_capture": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "declared_or_documented_base": null,
+      "first_reachable_difference_commit": "f4efe3e0d37684ead48e4b127ea823ff19f1c96a",
+      "first_difference_commit_time_utc": "2026-11-03T12:20:19Z",
+      "branch_creation_time": "UNKNOWN: Git refs do not contain creation timestamps; the commit timestamp is evidence, not exact branch creation."
+    }
+  ],
+  "comparisons": [
+    {
+      "base": "main",
+      "head": "feature/heart-rate-monitoring",
+      "merge_base": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+      "status": "behind",
+      "ahead": 0,
+      "behind": 2
+    },
+    {
+      "base": "main",
+      "head": "feature/p0-core-migration",
+      "merge_base": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "status": "ahead",
+      "ahead": 48,
+      "behind": 0
+    },
+    {
+      "base": "feature/p0-core-migration",
+      "head": "feature/p0-2-gps-ui",
+      "merge_base": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+      "status": "ahead",
+      "ahead": 30,
+      "behind": 0
+    },
+    {
+      "base": "feature/p0-core-migration",
+      "head": "design/p0-ui-lab",
+      "merge_base": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "status": "diverged",
+      "ahead": 21,
+      "behind": 5
+    },
+    {
+      "base": "feature/p0-2-gps-ui",
+      "head": "design/p0-ui-lab",
+      "merge_base": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "status": "diverged",
+      "ahead": 21,
+      "behind": 35
+    }
+  ],
+  "note": "Snapshot of real remote HEADs before the catalog commit, never a fabricated self-referential final commit. Later documentation commits are identified in the final delivery report/message; query ls-remote for live values."
+}
