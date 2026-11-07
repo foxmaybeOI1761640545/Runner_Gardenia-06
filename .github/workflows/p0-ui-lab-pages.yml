@@ -5,6 +5,8 @@ on:
     branches: [design/p0-ui-lab]
     paths:
       - 'ui-lab/**'
+      - '!ui-lab/docs/acceptance/**'
+      - '!ui-lab/docs/THEME_SYSTEM_DELIVERY.md'
       - '.github/workflows/p0-ui-lab-pages.yml'
   workflow_dispatch:
 
@@ -32,7 +34,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Static source, runtime dependency and isolation checks
-        run: python ui-lab/tests/check_static.py
+        run: |
+          python ui-lab/tests/check_static.py
+          python ui-lab/tests/check_tokens.py
       - name: Install acceptance tooling only
         run: |
           python -m pip install -r ui-lab/tests/requirements.txt
@@ -44,7 +48,10 @@ jobs:
       - name: Actual Chromium acceptance - 10 themes at 3 viewports
         env:
           CHROMIUM_EXECUTABLE: /usr/bin/google-chrome
-        run: python ui-lab/tests/browser_acceptance.py
+        run: |
+          python ui-lab/tests/browser_acceptance.py
+          python ui-lab/tests/appearance_browser.py
+          python ui-lab/tests/phase1_gate.py
       - name: Retain screenshots and diagnostic evidence even on failure
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
@@ -137,6 +144,8 @@ jobs:
               print('Verified actual Pages URL:', response.url, 'HTTP', response.status)
           PY
           python ui-lab/tests/browser_acceptance.py
+          python ui-lab/tests/appearance_browser.py
+          python ui-lab/tests/phase1_gate.py
       - name: Retain live screenshots, results, and failure traces
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

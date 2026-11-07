@@ -1340,9 +1340,9 @@
     "brutal": "distance"
   },
   "metric_swap_auxiliary": "gpsAccuracy: fixed secondary slot 3",
-  "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+  "url": "http://127.0.0.1:41711/",
   "font_check": "Chrome CSS.getPlatformFontsForNode verifies CJK title glyphs for every theme and viewport",
-  "browser_version": "156.0.8078.79",
-  "sourceCommit": "6fd9c73a5b90109db757bfbe0299729ef8df6759",
-  "actionsRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42353043971"
+  "browser_version": "151.0.7922.34",
+  "sourceCommit": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+  "actionsRun": null
 }

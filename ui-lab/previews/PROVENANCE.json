@@ -1,7 +1,7 @@
 {
-  "sourceCommit": "6fd9c73a5b90109db757bfbe0299729ef8df6759",
-  "actionsRun": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42353043971",
-  "browserVersion": "156.0.8078.79",
+  "sourceCommit": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+  "actionsRun": null,
+  "browserVersion": "151.0.7922.34",
   "phoneCaptureViewport": {
     "width": 1440,
     "height": 1000
@@ -11,83 +11,80 @@
     {
       "name": "desktop-1366.png",
       "width": 1366,
-      "height": 1075,
-      "sha256": "ad8c3f1d6aea5499522fb20ff96eb51a416674fb1851b1540816e90a7e7c5edd"
+      "height": 1244,
+      "sha256": "9838fa13538d4208c854ce9ceff2dbec48ad527e0169ce83d28a1e5635933f2f"
     },
     {
       "name": "desktop-1440.png",
       "width": 1440,
-      "height": 1220,
-      "sha256": "9677e6c45dcf46edd3b118409cc83e981abab331831a88694fee8bc87f674865"
+      "height": 1298,
+      "sha256": "c5af30ecc0657c4395d0251663f5f6847355f81734ce92b98eedf96f41e69253"
     },
     {
       "name": "mobile-390.png",
       "width": 390,
-      "height": 1770,
-      "sha256": "2eeaf5425dac9ad582540127268b92a9a9df52b0ad458930c9f8210a00e5edd9"
+      "height": 1964,
+      "sha256": "204262b9e1c585915539b369a25a0bb0537358f9366f5fca9f73453be362ea8a"
     },
     {
       "name": "theme-01.png",
       "width": 300,
       "height": 646,
-      "sha256": "8e781e9caef38f96bd94a9729d60302b1d4bdf3c2f2062d84aa5a37f504d0821"
+      "sha256": "f53abe0235dd02d9cd54aaeff1e66e083a02ff99784af72d430a5fa309e69d0d"
     },
     {
       "name": "theme-02.png",
       "width": 300,
       "height": 646,
-      "sha256": "04bf0ed05e427d316b496444d5716757e7663ed6a964ef7cad75c3557f9124bf"
+      "sha256": "28551ff9c00c22913b222c678aa8b9f75a8a377891424b37c334c0e7993a2fd5"
     },
     {
       "name": "theme-03.png",
       "width": 300,
       "height": 646,
-      "sha256": "446793c343f38662d6c60216b450069c6cb88aea85acae73faac98883c5649b0"
+      "sha256": "5597375136e48104fff2c46a5a16f39f6ae7c3a0132454a30d75ff6b0ed2b8f6"
     },
     {
       "name": "theme-04.png",
       "width": 300,
       "height": 646,
-      "sha256": "b1f4d09f88a8dd1afb7df0b486dd0732b45ad51b3345eb675e271aa95820d930"
+      "sha256": "a3542a3429322900c700b04cc2b4dd58143d705f662a104992152235951736d3"
     },
     {
       "name": "theme-05.png",
       "width": 300,
       "height": 646,
-      "sha256": "d642eebe299d3cfe900faf4cc75824dcd6a85e65116eaa81393f28f93aeb9453"
+      "sha256": "7ee4933fbfb241b4c25a977cd5fc90d19d441abc19dc54c5b4d286e671ff2f77"
     },
     {
       "name": "theme-06.png",
       "width": 300,
       "height": 646,
-      "sha256": "7373282b9101595802852fc85a5c137a5db75ee274408b7af4d00ce7058f62b2"
+      "sha256": "71fb3de565d9037615b553e96ae5d1854c735a2cd816111bbba6cf1076525e73"
     },
     {
       "name": "theme-07.png",
       "width": 300,
       "height": 646,
-      "sha256": "20794dd4c8ccb0bdf06133dff63ac616b46451b65f198b87484804c443a594cd"
+      "sha256": "f34654854ee1001e049fe29332d872bc0423c8ad27e7d5b95dff9680e22395fd"
     },
     {
       "name": "theme-08.png",
       "width": 300,
       "height": 646,
-      "sha256": "8e6f2c0c9ac1bc2f54fc5fc3579889348dc09c7792bf4abaf765e5ed18b32b3a"
+      "sha256": "11b566654ee62e96530de7ffc64b624ea6e3ba2f62cc4b74983b41bb55fb5b3e"
     },
     {
       "name": "theme-09.png",
       "width": 300,
       "height": 646,
-      "sha256": "de9be5d7f7dca1957b2f9006c193677795d20e3c3f710f373eb6bc1803d6768a"
+      "sha256": "6ddf820c290cc6b3eb8de36d40c693e230b9f9002f311160c3a602be3b4fa183"
     },
     {
       "name": "theme-10.png",
       "width": 300,
       "height": 646,
-      "sha256": "1cd1dfa05a444efcd56647be43267776793d731c915c626eea94afe9a4b36228"
+      "sha256": "c3dfa31f7177422eca8579e1c372aa8986b8214c91463c59f0ced662c3d1a2a9"
     }
-  ],
-  "artifactId": 13565999440,
-  "artifactSha256": "195ae6160ae59b58445d9e6e6409f6b9d90f030f1bf33fa3b827130eb063e320",
-  "captureURL": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/"
+  ]
 }

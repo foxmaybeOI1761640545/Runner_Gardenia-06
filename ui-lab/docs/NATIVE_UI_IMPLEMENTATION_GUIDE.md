@@ -110,3 +110,7 @@ HTML 新增的主副显示选择属于 UI 状态，不属于 GPS/BLE/记录服�
 每个选定设计保留自己的默认主指标（Neon 为心率，其余为距离）及副位置顺序。单位/配速偏好继续来自 PreferencesUtils，测量值和状态继续来自现有 ViewModel/Snapshot、MotionFormat 与 HeartRatePanel。未来 Native 页面重建需要 SavedState/Bundle 保留 UI 选择；HTML 本轮仅要求网站会话内保留。焦点留在被操作的原副位置，操作反馈使用原生无障碍公告，不覆盖核心数据。
 
 前端交互、格式、状态与验收合同见 [METRIC_SWAP_SPEC.md](METRIC_SWAP_SPEC.md)；本分支没有修改 Android UI 或业务源码。
+
+## P0.3 paired-appearance contract
+
+The canonical paired palettes are now schema v2 in `assets/design-tokens.json`; see [Phase 1 theme-system specification](THEME_SYSTEM_PHASE1.md). Android preloads only Precision Pro, Quiet Minimal, Outdoor Explorer and Neon Pulse. Persist only the family ID. Resolve Light/Dark from Android UI mode, with `MODE_NIGHT_FOLLOW_SYSTEM` and a single mapping layer; no manual appearance setting is introduced. Preserve the original family-specific grids, terrain and heart-first visual hierarchy using native views, while keeping service/ViewModel recording, GPS and BLE state independent from UI reconfiguration. UI Lab comparison and System Preview controls are design tools and do not become app settings.

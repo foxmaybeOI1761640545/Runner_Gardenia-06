@@ -8,13 +8,16 @@
   <title>Runner Gardenia · P0 UI Design Lab</title>
   <link rel="icon" href="assets/gardenia.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/theme-palettes.css">
+  <link rel="stylesheet" href="appearances.css">
+  <script src="assets/theme-metadata.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#phone-content">跳到应用原型</a>
   <header class="lab-header">
     <a class="brand" href="./" aria-label="Runner Gardenia 设计实验室首页"><img src="assets/gardenia.svg" width="34" height="34" alt=""><span>RUNNER <b>GARDENIA</b><small>P0 UI DESIGN LAB</small></span></a>
-    <div class="header-center"><span class="live-dot"></span> 独立设计实验室 <span class="header-separator">/</span> 10 个设计方向</div>
+    <div class="header-center"><span class="live-dot"></span> 独立设计实验室 <span class="header-separator">/</span> 10 个设计方向 · 20 套配色</div>
     <a class="doc-link" href="docs/NATIVE_UI_IMPLEMENTATION_GUIDE.md" target="_blank" rel="noopener">原生迁移规范 <span aria-hidden="true">↗</span></a>
   </header>
   <main>
@@ -26,6 +29,8 @@
         <h2 id="concept-title">Precision<br>Pro</h2>
         <p class="concept-cn" id="concept-cn">专业运动仪表</p>
         <p id="concept-description" class="concept-description"></p>
+        <fieldset class="appearance-controls"><legend>Appearance</legend><div class="segmented" id="appearance-control"><button type="button" data-appearance-mode="light">Light</button><button type="button" data-appearance-mode="dark">Dark</button><button type="button" data-appearance-mode="system">System Preview</button></div><p id="appearance-status" role="status"></p></fieldset>
+        <button id="compare-toggle" class="favorite" type="button" aria-expanded="false" aria-controls="comparison">Light / Dark ↔</button>
         <div class="swatches" id="swatches" aria-label="当前方案色板"></div>
         <div class="design-spec"><span>设计语言</span><strong id="concept-language"></strong><span>原生实现</span><strong id="native-note"></strong></div>
         <div class="annotation"><span class="annotation-line"></span><p>同一套功能，十种表达。<br>切换方案会保留页面与演示状态。</p></div>
@@ -56,6 +61,7 @@
         <p class="debug-footnote">仅用于设计演示，不调用真实 GPS 或蓝牙。<br>此面板不属于 Android 应用界面。</p>
       </aside>
     </section>
+    <section id="comparison" class="comparison" aria-labelledby="comparison-title" hidden><h2 id="comparison-title">Light / Dark</h2><p>使用上方导航与状态模拟器；两个版本同步显示当前页面，可独立滚动。</p><div class="comparison-grid" id="comparison-grid"></div></section>
     <section class="carousel-section" id="carousel-section" aria-labelledby="carousel-title">
       <div class="carousel-heading"><div><span class="eyebrow">THE COLLECTION</span><h2 id="carousel-title">十种风格，同一种热爱。 <span id="collection-count">01 / 10</span></h2></div><div class="carousel-actions"><span id="playback-status" class="playback-status" aria-live="polite">自动轮播 · 8 秒</span><button id="autoplay" type="button" aria-label="暂停自动轮播" aria-pressed="true">Ⅱ</button><button id="previous" type="button" aria-label="上一套方案">←</button><button id="next" type="button" aria-label="下一套方案">→</button></div></div>
       <div class="theme-track" id="theme-track" role="group" aria-label="选择十套设计，支持滑动和方向键"></div>

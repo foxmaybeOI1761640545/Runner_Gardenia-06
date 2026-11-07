@@ -44,30 +44,254 @@
         "muted": "#a0ad9f",
         "accent": "#ccf96b",
         "on-accent": "#18240b",
-        "tint": "#c9f96b13",
+        "tint": "#26351b",
         "line": "#343e34",
         "radius": "12px",
-        "danger": "#ff9690",
+        "danger": "#ffa79f",
         "font": "Arial,\"Noto Sans CJK SC\",sans-serif"
       },
-      "nativeShapeRadiusDp": 12
+      "nativeShapeRadiusDp": 12,
+      "defaultAppearance": "dark",
+      "shapeTokens": {
+        "radiusDp": 12
+      },
+      "typographyTokens": {
+        "fontFamily": "Arial,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 700
+      },
+      "nativeImplementation": {
+        "preloaded": true,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "precision"
+      },
+      "light": {
+        "background": "#f3f6f2",
+        "surface": "#ffffff",
+        "surfaceVariant": "#e6ece3",
+        "foreground": "#1c281e",
+        "foregroundSecondary": "#4f6051",
+        "accent": "#ccf96b",
+        "accentForeground": "#18240b",
+        "tint": "#e6f4ca",
+        "divider": "#ccd7c8",
+        "outline": "#73856c",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#1c281e",
+          "secondary": "#70509a",
+          "grid": "#73856c",
+          "axis": "#4f6051",
+          "gap": "#4f6051"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#1c281e",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#1c281e",
+          "metricSurface": "#e6ece3",
+          "mapSurface": "#e6ece3",
+          "mapOverlay": "#ffffff",
+          "heroBackground": "#ffffff",
+          "heroForeground": "#1c281e",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#ccf96b",
+          "metricSurface": "#28312a",
+          "mapSurface": "#28312a",
+          "mapOverlay": "#1c221e",
+          "heroBackground": "#1c221e",
+          "heroForeground": "#f2f5ec",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#121614",
+        "surface": "#1c221e",
+        "surfaceVariant": "#28312a",
+        "foreground": "#f2f5ec",
+        "foregroundSecondary": "#a0ad9f",
+        "accent": "#ccf96b",
+        "accentForeground": "#18240b",
+        "tint": "#26351b",
+        "divider": "#343e34",
+        "outline": "#82917b",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#ccf96b",
+          "secondary": "#c6a5ed",
+          "grid": "#82917b",
+          "axis": "#a0ad9f",
+          "gap": "#a0ad9f"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#ccf96b",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "quiet",
       "name": "Quiet Minimal",
       "cssTokens": {
         "bg": "#fafbf9",
-        "surface": "#fff",
+        "surface": "#ffffff",
         "fg": "#24352e",
-        "muted": "#728178",
+        "muted": "#53675b",
         "accent": "#3c6a54",
-        "on-accent": "#fff",
+        "on-accent": "#ffffff",
         "tint": "#eaf1ec",
-        "line": "#e2e8e3",
+        "line": "#d3ddd5",
         "radius": "16px",
-        "danger": "#b64034"
+        "danger": "#a02a28"
       },
-      "nativeShapeRadiusDp": 16
+      "nativeShapeRadiusDp": 16,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 16
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 400
+      },
+      "nativeImplementation": {
+        "preloaded": true,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "quiet"
+      },
+      "light": {
+        "background": "#fafbf9",
+        "surface": "#ffffff",
+        "surfaceVariant": "#eef2ed",
+        "foreground": "#24352e",
+        "foregroundSecondary": "#53675b",
+        "accent": "#3c6a54",
+        "accentForeground": "#ffffff",
+        "tint": "#eaf1ec",
+        "divider": "#d3ddd5",
+        "outline": "#7a8c7f",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#3c6a54",
+          "secondary": "#70509a",
+          "grid": "#7a8c7f",
+          "axis": "#53675b",
+          "gap": "#53675b"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#3c6a54",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#3c6a54",
+          "metricSurface": "#eef2ed",
+          "mapSurface": "#eef2ed",
+          "mapOverlay": "#ffffff",
+          "heroBackground": "#ffffff",
+          "heroForeground": "#24352e",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#a0c9ad",
+          "metricSurface": "#27392e",
+          "mapSurface": "#27392e",
+          "mapOverlay": "#1b2a22",
+          "heroBackground": "#1b2a22",
+          "heroForeground": "#e8f0e8",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#111e18",
+        "surface": "#1b2a22",
+        "surfaceVariant": "#27392e",
+        "foreground": "#e8f0e8",
+        "foregroundSecondary": "#a9baad",
+        "accent": "#a0c9ad",
+        "accentForeground": "#132b1b",
+        "tint": "#293f30",
+        "divider": "#364d3e",
+        "outline": "#829a89",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#a0c9ad",
+          "secondary": "#c6a5ed",
+          "grid": "#829a89",
+          "axis": "#a9baad",
+          "gap": "#a9baad"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#a0c9ad",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "explorer",
@@ -76,15 +300,127 @@
         "bg": "#f0eee2",
         "surface": "#e5e7d7",
         "fg": "#233e30",
-        "muted": "#72816b",
+        "muted": "#52654b",
         "accent": "#345c3d",
         "on-accent": "#fff9e6",
-        "tint": "#cbd5b780",
-        "line": "#c9cfbb",
+        "tint": "#dbe2ca",
+        "line": "#bac6a9",
         "radius": "9px",
-        "danger": "#aa4f27"
+        "danger": "#a02a28"
       },
-      "nativeShapeRadiusDp": 9
+      "nativeShapeRadiusDp": 9,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 9
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 700
+      },
+      "nativeImplementation": {
+        "preloaded": true,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "explorer"
+      },
+      "light": {
+        "background": "#f0eee2",
+        "surface": "#e5e7d7",
+        "surfaceVariant": "#d6dec7",
+        "foreground": "#233e30",
+        "foregroundSecondary": "#52654b",
+        "accent": "#345c3d",
+        "accentForeground": "#fff9e6",
+        "tint": "#dbe2ca",
+        "divider": "#bac6a9",
+        "outline": "#748166",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#345c3d",
+          "secondary": "#70509a",
+          "grid": "#748166",
+          "axis": "#52654b",
+          "gap": "#52654b"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#345c3d",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#345c3d",
+          "metricSurface": "#d6dec7",
+          "mapSurface": "#d6dec7",
+          "mapOverlay": "#e5e7d7",
+          "heroBackground": "#e5e7d7",
+          "heroForeground": "#233e30",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#b2cc85",
+          "metricSurface": "#2b3e2e",
+          "mapSurface": "#2b3e2e",
+          "mapOverlay": "#1f3025",
+          "heroBackground": "#1f3025",
+          "heroForeground": "#e9eddb",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#121e18",
+        "surface": "#1f3025",
+        "surfaceVariant": "#2b3e2e",
+        "foreground": "#e9eddb",
+        "foregroundSecondary": "#b0bea2",
+        "accent": "#b2cc85",
+        "accentForeground": "#192711",
+        "tint": "#314528",
+        "divider": "#465a3c",
+        "outline": "#859875",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#b2cc85",
+          "secondary": "#c6a5ed",
+          "grid": "#859875",
+          "axis": "#b0bea2",
+          "gap": "#b0bea2"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#b2cc85",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "neon",
@@ -96,12 +432,124 @@
         "muted": "#aaa5c9",
         "accent": "#70f4ed",
         "on-accent": "#09202b",
-        "tint": "#62efeb10",
+        "tint": "#163336",
         "line": "#37304d",
         "radius": "18px",
-        "danger": "#ff92c4"
+        "danger": "#ffa79f"
       },
-      "nativeShapeRadiusDp": 18
+      "nativeShapeRadiusDp": 18,
+      "defaultAppearance": "dark",
+      "shapeTokens": {
+        "radiusDp": 18
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 700
+      },
+      "nativeImplementation": {
+        "preloaded": true,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "neon"
+      },
+      "light": {
+        "background": "#f4f0fc",
+        "surface": "#ffffff",
+        "surfaceVariant": "#e7dff4",
+        "foreground": "#29203e",
+        "foregroundSecondary": "#655576",
+        "accent": "#086d70",
+        "accentForeground": "#ffffff",
+        "tint": "#d7f1ee",
+        "divider": "#d1c3e2",
+        "outline": "#8a739f",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#086d70",
+          "secondary": "#70509a",
+          "grid": "#8a739f",
+          "axis": "#655576",
+          "gap": "#655576"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#086d70",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#086d70",
+          "metricSurface": "#e7dff4",
+          "mapSurface": "#e7dff4",
+          "mapOverlay": "#ffffff",
+          "heroBackground": "#ffffff",
+          "heroForeground": "#29203e",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#70f4ed",
+          "metricSurface": "#27213b",
+          "mapSurface": "#27213b",
+          "mapOverlay": "#17162a",
+          "heroBackground": "#17162a",
+          "heroForeground": "#f1ecff",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#0c0e1b",
+        "surface": "#17162a",
+        "surfaceVariant": "#27213b",
+        "foreground": "#f1ecff",
+        "foregroundSecondary": "#aaa5c9",
+        "accent": "#70f4ed",
+        "accentForeground": "#09202b",
+        "tint": "#163336",
+        "divider": "#37304d",
+        "outline": "#9582b5",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#70f4ed",
+          "secondary": "#c6a5ed",
+          "grid": "#9582b5",
+          "axis": "#aaa5c9",
+          "gap": "#aaa5c9"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#70f4ed",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "swiss",
@@ -110,15 +558,127 @@
         "bg": "#f6f2e9",
         "surface": "#f6f2e9",
         "fg": "#171816",
-        "muted": "#77766b",
-        "accent": "#d13627",
-        "on-accent": "#fff",
-        "tint": "#d1362710",
-        "line": "#c8c5b9",
+        "muted": "#625f53",
+        "accent": "#bc2c20",
+        "on-accent": "#ffffff",
+        "tint": "#f0dfd7",
+        "line": "#b7b2a4",
         "radius": "0px",
-        "danger": "#b1261b"
+        "danger": "#a02a28"
       },
-      "nativeShapeRadiusDp": 0
+      "nativeShapeRadiusDp": 0,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 0
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 900
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "swiss"
+      },
+      "light": {
+        "background": "#f6f2e9",
+        "surface": "#f6f2e9",
+        "surfaceVariant": "#e9e3d6",
+        "foreground": "#171816",
+        "foregroundSecondary": "#625f53",
+        "accent": "#bc2c20",
+        "accentForeground": "#ffffff",
+        "tint": "#f0dfd7",
+        "divider": "#b7b2a4",
+        "outline": "#777062",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#bc2c20",
+          "secondary": "#70509a",
+          "grid": "#777062",
+          "axis": "#625f53",
+          "gap": "#625f53"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#bc2c20",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#bc2c20",
+          "metricSurface": "#e9e3d6",
+          "mapSurface": "#e9e3d6",
+          "mapOverlay": "#f6f2e9",
+          "heroBackground": "#f6f2e9",
+          "heroForeground": "#171816",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#ff7f6e",
+          "metricSurface": "#39342d",
+          "mapSurface": "#39342d",
+          "mapOverlay": "#292621",
+          "heroBackground": "#292621",
+          "heroForeground": "#f5eee0",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#201e1b",
+        "surface": "#292621",
+        "surfaceVariant": "#39342d",
+        "foreground": "#f5eee0",
+        "foregroundSecondary": "#c4baaa",
+        "accent": "#ff7f6e",
+        "accentForeground": "#30110c",
+        "tint": "#4c2d26",
+        "divider": "#64594c",
+        "outline": "#9e907d",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#ff7f6e",
+          "secondary": "#c6a5ed",
+          "grid": "#9e907d",
+          "axis": "#c4baaa",
+          "gap": "#c4baaa"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#ff7f6e",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "industrial",
@@ -130,13 +690,125 @@
         "muted": "#b1b19e",
         "accent": "#efbd5d",
         "on-accent": "#292517",
-        "tint": "#efbd5d15",
+        "tint": "#443c27",
         "line": "#535548",
         "radius": "3px",
-        "danger": "#ffac87",
+        "danger": "#ffa79f",
         "font": "\"Courier New\",\"Noto Sans CJK SC\",monospace"
       },
-      "nativeShapeRadiusDp": 3
+      "nativeShapeRadiusDp": 3,
+      "defaultAppearance": "dark",
+      "shapeTokens": {
+        "radiusDp": 3
+      },
+      "typographyTokens": {
+        "fontFamily": "\"Courier New\",\"Noto Sans CJK SC\",monospace",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 700
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "industrial"
+      },
+      "light": {
+        "background": "#e9ebe4",
+        "surface": "#f5f5ed",
+        "surfaceVariant": "#d9ddd1",
+        "foreground": "#2c3025",
+        "foregroundSecondary": "#565e48",
+        "accent": "#f0bf59",
+        "accentForeground": "#30270f",
+        "tint": "#f3dfaf",
+        "divider": "#b9bfad",
+        "outline": "#717a61",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#2c3025",
+          "secondary": "#70509a",
+          "grid": "#717a61",
+          "axis": "#5f6651",
+          "gap": "#5f6651"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#2c3025",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#2c3025",
+          "metricSurface": "#d9ddd1",
+          "mapSurface": "#d9ddd1",
+          "mapOverlay": "#f5f5ed",
+          "heroBackground": "#f5f5ed",
+          "heroForeground": "#2c3025",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#efbd5d",
+          "metricSurface": "#1d211b",
+          "mapSurface": "#1d211b",
+          "mapOverlay": "#30332c",
+          "heroBackground": "#30332c",
+          "heroForeground": "#f5e9ca",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#262824",
+        "surface": "#30332c",
+        "surfaceVariant": "#1d211b",
+        "foreground": "#f5e9ca",
+        "foregroundSecondary": "#b1b19e",
+        "accent": "#efbd5d",
+        "accentForeground": "#292517",
+        "tint": "#443c27",
+        "divider": "#535548",
+        "outline": "#999a7c",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#efbd5d",
+          "secondary": "#c6a5ed",
+          "grid": "#999a7c",
+          "axis": "#b1b19e",
+          "gap": "#b1b19e"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#efbd5d",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "wellness",
@@ -145,15 +817,127 @@
         "bg": "#f7f5ec",
         "surface": "#fffdf7",
         "fg": "#354c42",
-        "muted": "#7e9084",
+        "muted": "#566b5b",
         "accent": "#4c8069",
-        "on-accent": "#fff",
+        "on-accent": "#ffffff",
         "tint": "#e0eee0",
-        "line": "#e1e7db",
+        "line": "#cad8c4",
         "radius": "25px",
-        "danger": "#ae5c4e"
+        "danger": "#a02a28"
       },
-      "nativeShapeRadiusDp": 25
+      "nativeShapeRadiusDp": 25,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 25
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 700
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "wellness"
+      },
+      "light": {
+        "background": "#f7f5ec",
+        "surface": "#fffdf7",
+        "surfaceVariant": "#e7eddf",
+        "foreground": "#354c42",
+        "foregroundSecondary": "#566b5b",
+        "accent": "#4c8069",
+        "accentForeground": "#ffffff",
+        "tint": "#e0eee0",
+        "divider": "#cad8c4",
+        "outline": "#7c947d",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#354c42",
+          "secondary": "#70509a",
+          "grid": "#7c947d",
+          "axis": "#5b7161",
+          "gap": "#5b7161"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#354c42",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#354c42",
+          "metricSurface": "#e7eddf",
+          "mapSurface": "#e7eddf",
+          "mapOverlay": "#fffdf7",
+          "heroBackground": "#fffdf7",
+          "heroForeground": "#354c42",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#acd9b9",
+          "metricSurface": "#2e4434",
+          "mapSurface": "#2e4434",
+          "mapOverlay": "#22352a",
+          "heroBackground": "#22352a",
+          "heroForeground": "#e7eee0",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#17251e",
+        "surface": "#22352a",
+        "surfaceVariant": "#2e4434",
+        "foreground": "#e7eee0",
+        "foregroundSecondary": "#b0c3ac",
+        "accent": "#acd9b9",
+        "accentForeground": "#193222",
+        "tint": "#324c38",
+        "divider": "#496249",
+        "outline": "#8aa58a",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#acd9b9",
+          "secondary": "#c6a5ed",
+          "grid": "#8aa58a",
+          "axis": "#b0c3ac",
+          "gap": "#b0c3ac"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#acd9b9",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "aurora",
@@ -165,29 +949,253 @@
         "muted": "#b7c4e1",
         "accent": "#bccaff",
         "on-accent": "#1c274d",
-        "tint": "#c4d3ff20",
-        "line": "#7f94cc55",
+        "tint": "#354565",
+        "line": "#56678c",
         "radius": "22px",
-        "danger": "#ffb2bc"
+        "danger": "#ffa79f"
       },
-      "nativeShapeRadiusDp": 22
+      "nativeShapeRadiusDp": 22,
+      "defaultAppearance": "dark",
+      "shapeTokens": {
+        "radiusDp": 22
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 400
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "aurora"
+      },
+      "light": {
+        "background": "#eef2fc",
+        "surface": "#ffffff",
+        "surfaceVariant": "#e1e9f8",
+        "foreground": "#263352",
+        "foregroundSecondary": "#526486",
+        "accent": "#4c5a9f",
+        "accentForeground": "#ffffff",
+        "tint": "#dfe6fb",
+        "divider": "#c0cde9",
+        "outline": "#7e8fba",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#4c5a9f",
+          "secondary": "#70509a",
+          "grid": "#7e8fba",
+          "axis": "#526486",
+          "gap": "#526486"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#4c5a9f",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#4c5a9f",
+          "metricSurface": "#e1e9f8",
+          "mapSurface": "#e1e9f8",
+          "mapOverlay": "#ffffff",
+          "heroBackground": "#ffffff",
+          "heroForeground": "#263352",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#bccaff",
+          "metricSurface": "#35446a",
+          "mapSurface": "#35446a",
+          "mapOverlay": "#2b3455",
+          "heroBackground": "#2b3455",
+          "heroForeground": "#f2f5ff",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#151b39",
+        "surface": "#2b3455",
+        "surfaceVariant": "#35446a",
+        "foreground": "#f2f5ff",
+        "foregroundSecondary": "#b7c4e1",
+        "accent": "#bccaff",
+        "accentForeground": "#1c274d",
+        "tint": "#354565",
+        "divider": "#56678c",
+        "outline": "#9babd1",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#bccaff",
+          "secondary": "#c6a5ed",
+          "grid": "#9babd1",
+          "axis": "#b7c4e1",
+          "gap": "#b7c4e1"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#bccaff",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "racing",
       "name": "Racing Performance",
       "cssTokens": {
         "bg": "#f3f3ef",
-        "surface": "#fff",
+        "surface": "#ffffff",
         "fg": "#161817",
-        "muted": "#7c807c",
-        "accent": "#cc302c",
-        "on-accent": "#fff",
-        "tint": "#cc302c0d",
-        "line": "#d5d7d2",
+        "muted": "#555c54",
+        "accent": "#bf2b27",
+        "on-accent": "#ffffff",
+        "tint": "#f7e4df",
+        "line": "#c7cbc0",
         "radius": "4px",
-        "danger": "#b12622"
+        "danger": "#a02a28"
       },
-      "nativeShapeRadiusDp": 4
+      "nativeShapeRadiusDp": 4,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 4
+      },
+      "typographyTokens": {
+        "fontFamily": "Inter,\"Noto Sans CJK SC\",sans-serif",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 900
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "racing"
+      },
+      "light": {
+        "background": "#f3f3ef",
+        "surface": "#ffffff",
+        "surfaceVariant": "#e5e6df",
+        "foreground": "#161817",
+        "foregroundSecondary": "#555c54",
+        "accent": "#bf2b27",
+        "accentForeground": "#ffffff",
+        "tint": "#f7e4df",
+        "divider": "#c7cbc0",
+        "outline": "#78816f",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#bf2b27",
+          "secondary": "#70509a",
+          "grid": "#78816f",
+          "axis": "#555c54",
+          "gap": "#555c54"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#bf2b27",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#bf2b27",
+          "metricSurface": "#e5e6df",
+          "mapSurface": "#e5e6df",
+          "mapOverlay": "#ffffff",
+          "heroBackground": "#1b1d1c",
+          "heroForeground": "#f3f4ed",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#ff7c70",
+          "metricSurface": "#303632",
+          "mapSurface": "#303632",
+          "mapOverlay": "#222624",
+          "heroBackground": "#080b09",
+          "heroForeground": "#f3f4ed",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#141615",
+        "surface": "#222624",
+        "surfaceVariant": "#303632",
+        "foreground": "#f3f4ed",
+        "foregroundSecondary": "#b1b8af",
+        "accent": "#ff7c70",
+        "accentForeground": "#310e0b",
+        "tint": "#422924",
+        "divider": "#475047",
+        "outline": "#8e9b89",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#ff7c70",
+          "secondary": "#c6a5ed",
+          "grid": "#8e9b89",
+          "axis": "#b1b8af",
+          "gap": "#b1b8af"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#ff7c70",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     },
     {
       "id": "brutal",
@@ -196,16 +1204,130 @@
         "bg": "#fafaf2",
         "surface": "#fafaf2",
         "fg": "#11120c",
-        "muted": "#666959",
+        "muted": "#555944",
         "accent": "#e9f34b",
         "on-accent": "#10120a",
         "tint": "#e9f34b",
         "line": "#11120c",
         "radius": "0px",
-        "danger": "#ab2721",
+        "danger": "#a02a28",
         "font": "\"Courier New\",\"Noto Sans CJK SC\",monospace"
       },
-      "nativeShapeRadiusDp": 0
+      "nativeShapeRadiusDp": 0,
+      "defaultAppearance": "light",
+      "shapeTokens": {
+        "radiusDp": 0
+      },
+      "typographyTokens": {
+        "fontFamily": "\"Courier New\",\"Noto Sans CJK SC\",monospace",
+        "numericVariant": "tabular-nums",
+        "primaryWeight": 900
+      },
+      "nativeImplementation": {
+        "preloaded": false,
+        "appearancePolicy": "FOLLOW_SYSTEM",
+        "stack": [
+          "Java",
+          "XML",
+          "ViewBinding",
+          "Drawable"
+        ],
+        "sourceThemeId": "brutal"
+      },
+      "light": {
+        "background": "#fafaf2",
+        "surface": "#fafaf2",
+        "surfaceVariant": "#e8e9dc",
+        "foreground": "#11120c",
+        "foregroundSecondary": "#555944",
+        "accent": "#e9f34b",
+        "accentForeground": "#10120a",
+        "tint": "#e9f34b",
+        "divider": "#11120c",
+        "outline": "#11120c",
+        "success": "#276044",
+        "warning": "#78500c",
+        "danger": "#a02a28",
+        "chartColors": {
+          "heartRate": "#11120c",
+          "secondary": "#70509a",
+          "grid": "#11120c",
+          "axis": "#555944",
+          "gap": "#555944"
+        },
+        "statusColors": {
+          "gpsFixed": "#276044",
+          "gpsSearching": "#78500c",
+          "gpsLost": "#a02a28",
+          "bleConnected": "#276044",
+          "bleStale": "#78500c",
+          "recording": "#11120c",
+          "paused": "#78500c",
+          "error": "#a02a28"
+        }
+      },
+      "componentTokens": {
+        "light": {
+          "accentText": "#11120c",
+          "metricSurface": "#e8e9dc",
+          "mapSurface": "#e8e9dc",
+          "mapOverlay": "#fafaf2",
+          "heroBackground": "#e9f34b",
+          "heroForeground": "#10120a",
+          "secondaryAccent": "#70509a",
+          "shadow": "#26352a12"
+        },
+        "dark": {
+          "accentText": "#e9f34b",
+          "metricSurface": "#303322",
+          "mapSurface": "#303322",
+          "mapOverlay": "#202218",
+          "heroBackground": "#e9f34b",
+          "heroForeground": "#10120a",
+          "secondaryAccent": "#c6a5ed",
+          "shadow": "#00000030"
+        }
+      },
+      "dark": {
+        "background": "#15160f",
+        "surface": "#202218",
+        "surfaceVariant": "#303322",
+        "foreground": "#f6f5e7",
+        "foregroundSecondary": "#c1c5a9",
+        "accent": "#e9f34b",
+        "accentForeground": "#10120a",
+        "tint": "#e9f34b",
+        "divider": "#f6f5e7",
+        "outline": "#f6f5e7",
+        "success": "#a0d7a3",
+        "warning": "#efc677",
+        "danger": "#ffa79f",
+        "chartColors": {
+          "heartRate": "#e9f34b",
+          "secondary": "#c6a5ed",
+          "grid": "#f6f5e7",
+          "axis": "#c1c5a9",
+          "gap": "#c1c5a9"
+        },
+        "statusColors": {
+          "gpsFixed": "#a0d7a3",
+          "gpsSearching": "#efc677",
+          "gpsLost": "#ffa79f",
+          "bleConnected": "#a0d7a3",
+          "bleStale": "#efc677",
+          "recording": "#e9f34b",
+          "paused": "#efc677",
+          "error": "#ffa79f"
+        }
+      },
+      "chartTokens": {
+        "lineWidth": 2.3,
+        "gapPolicy": "disconnected-segments",
+        "axisUnit": "BPM",
+        "gridStyle": "dashed"
+      }
     }
-  ]
+  ],
+  "schemaVersion": 2,
+  "nativeReferenceCommit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063"
 }

@@ -1,0 +1,74 @@
+/* Semantic appearance layer; existing theme-specific geometry remains in styles.css. */
+.appearance-controls { margin:16px 0 8px; border:0; padding:0; min-width:0; }
+.appearance-controls legend { font-size:11px; margin-bottom:8px; }
+#appearance-control { flex-wrap:wrap; }
+#appearance-control button { min-height:36px; }
+#appearance-status { font-size:11px; line-height:1.6; }
+.card-appearances { display:flex; gap:8px; margin:8px 12px; }
+.card-appearances button { border:1px solid var(--lab-line); padding:5px 10px; border-radius:4px; font-size:10px; }
+.card-appearances button:focus-visible { outline:3px solid #4a9076; }
+.comparison { border-top:1px solid var(--lab-line); padding:24px 0; }
+.comparison[hidden] { display:none; }
+.comparison h2 { font-size:20px; }.comparison p { font-size:12px; line-height:1.8; }
+.comparison-grid { display:grid; grid-template-columns:repeat(2,minmax(0,393px)); gap:32px; justify-content:center; }
+.comparison-grid article { min-width:0; }.comparison-grid h3 { font-size:14px; }
+.comparison-device { width:100%; height:calc(873px * var(--comparison-scale,1)); position:relative; }
+.comparison-device .phone-screen { position:absolute; top:0; left:0; width:393px; height:873px; transform:scale(var(--comparison-scale,1)); transform-origin:top left; border:1px solid var(--outline); }
+.comparison-device .app-toast { display:none; }
+[data-appearance] { background:var(--bg); color:var(--fg); }
+[data-appearance] .hero-number,[data-appearance] .text-button,[data-appearance] .connection-label,
+[data-appearance] .record-state,[data-appearance] .status-pill svg,[data-appearance] .recent-icon,
+[data-appearance] .app-nav button[aria-current=page],[data-appearance] .hero-heart,
+[data-appearance] .device-option svg,[data-appearance] .heart-symbol { color:var(--accent-text); }
+[data-appearance] .chart { color:var(--chart); }
+[data-appearance] .chart text { fill:var(--muted); }
+[data-appearance] .chart path:first-child { stroke:var(--chart-grid); opacity:.5; }
+[data-appearance] .status-pill.warning,[data-appearance] .status-pill.warning svg,[data-appearance] .state-note.warning { color:var(--warning); }
+[data-appearance] .route-map { background:var(--map-surface); color:var(--accent-text); }
+[data-theme=explorer][data-appearance] .hero .route-map { background:var(--map-surface); }
+[data-theme=explorer][data-appearance] .map-overlay { background:var(--map-overlay); }
+[data-theme=neon][data-appearance] .pulse-hero { background:radial-gradient(ellipse at top,var(--tint),transparent 70%); border-color:var(--outline); }
+[data-theme=neon][data-appearance] .pulse-hero .hero-number { color:var(--accent-text); text-shadow:0 0 25px var(--tint); }
+[data-theme=neon][data-appearance] .metric-grid .metric:first-child .value { color:var(--secondary-accent); }
+[data-theme=neon][data-appearance] .chart-card { background:linear-gradient(130deg,var(--tint),var(--surface)); }
+[data-theme=industrial][data-appearance] .metric { background:var(--metric-surface); }
+[data-theme=industrial][data-appearance] .metric .value,[data-theme=industrial][data-appearance] .gauge-hero .hero-number { color:var(--accent-text); }
+[data-theme=industrial][data-appearance] .gauge-hero { background:repeating-conic-gradient(from -120deg,transparent 0deg 9deg,var(--outline) 9deg 10deg,transparent 10deg 12deg); }
+[data-theme=wellness][data-appearance] .wellness-hero { border-color:var(--surface-variant); outline-color:var(--line); }
+[data-theme=wellness][data-appearance] .wellness-hero:before { border-top-color:var(--accent); border-right-color:var(--accent); }
+[data-theme=wellness][data-appearance] .metric,[data-theme=wellness][data-appearance] .status-pill { background:var(--surface-variant); }
+[data-theme=aurora][data-appearance] { background:radial-gradient(ellipse at 100% 5%,var(--tint),transparent 50%),radial-gradient(ellipse at 0 70%,var(--surface-variant),transparent 55%),var(--bg); }
+[data-theme=aurora][data-appearance] .glass-hero { background:linear-gradient(135deg,var(--surface),var(--surface-variant)); border-color:var(--outline); box-shadow:0 12px 30px var(--shadow); }
+[data-theme=aurora][data-appearance] .glass-hero .hero-label { color:var(--muted); }
+[data-theme=aurora][data-appearance] .glass-hero:after { border-color:var(--line); }
+[data-theme=aurora][data-appearance] .metric { background:var(--surface-variant); }
+[data-theme=aurora][data-appearance] .card,[data-theme=aurora][data-appearance] .status-pill,[data-theme=aurora][data-appearance] .history-row,[data-theme=aurora][data-appearance] .app-nav { background:var(--surface); }
+[data-theme=aurora][data-appearance] .primary { background:var(--accent); }
+[data-theme=racing][data-appearance] .race-hero { background:var(--hero-background); color:var(--hero-foreground); }
+[data-theme=racing][data-appearance] .race-hero .hero-number { color:var(--hero-foreground); }
+[data-theme=racing][data-appearance] .race-hero .hero-label { color:#c0c2bd; }
+[data-theme=racing][data-appearance] .race-hero .record-state { color:#ff8f82; }
+[data-theme=brutal][data-appearance] .brutal-hero { background:var(--hero-background); color:var(--hero-foreground); }
+[data-theme=brutal][data-appearance] .brutal-hero .hero-number,[data-theme=brutal][data-appearance] .brutal-hero .hero-label { color:var(--hero-foreground); }
+[data-theme=brutal][data-appearance] .app-nav button[aria-current=page] { color:var(--on-accent); background:var(--accent); }
+[data-appearance] select { color:var(--fg); background:var(--surface-variant); border-color:var(--outline); }
+@media(max-width:760px) { .comparison-grid { grid-template-columns:minmax(0,393px); gap:20px; } }
+
+.theme-choice { flex:0 0 auto; width:177px; }
+.theme-choice .theme-card { width:100%; }
+@media(max-width:1100px) { .theme-choice { width:155px; } }
+@media(max-width:760px) { .theme-choice { width:160px; } }
+[data-appearance] .route-map svg { color:var(--accent-text); }
+
+.comparison-device button:disabled,.comparison-device input:disabled,.comparison-device select:disabled { opacity:1; cursor:default; }
+@media(max-width:760px) {
+  .appearance-controls { grid-column:1 / -1; grid-row:3; width:100%; }
+  #appearance-control { display:flex; width:100%; }
+  #appearance-control button { flex:1; min-width:0; }
+  #appearance-status { margin:8px 0; }
+  #compare-toggle { grid-column:1 / -1; grid-row:4; justify-self:start; min-height:36px; }
+}
+.card-appearances button { color:#294b3d; background:#f9faf6; }
+[data-appearance] .gps-fixed svg,[data-appearance] .ble-connected:not(.warning) svg { color:var(--success); }
+[data-appearance] .gps-lost,[data-appearance] .gps-lost svg { color:var(--danger); }
+[data-appearance] .record-state[data-session=paused] { color:var(--warning); }

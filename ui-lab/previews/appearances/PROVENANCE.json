@@ -1,0 +1,2679 @@
+{
+  "browser": "155.0.8059.79",
+  "url": "http://127.0.0.1:37589/",
+  "matrix": [
+    {
+      "theme": "precision",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "precision",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "light",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "dark",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "precision",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "precision",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "light",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "dark",
+      "viewport": [
+        1366,
+        768
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "precision",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "precision",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "quiet",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "explorer",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "neon",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "swiss",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "industrial",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "wellness",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "aurora",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "racing",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "light",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    },
+    {
+      "theme": "brutal",
+      "appearance": "dark",
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        "run",
+        "heart",
+        "history",
+        "settings",
+        "detail",
+        "dialog"
+      ],
+      "passed": true
+    }
+  ],
+  "files": [
+    {
+      "name": "01-light-run-1440.png",
+      "sha256": "3068da96fa71e48576c31a22a8deb651172f2b1e6008d32f7b3fdc2393f80960",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-heart-1440.png",
+      "sha256": "3288c214a57b2674616a19edb59464b51de594584fba4c0d37210c2c0adbb5c7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-history-1440.png",
+      "sha256": "d2a28a2743083c9e0bb521abc98f98728583d4eb1c46e341e922f998f019b8ad",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-settings-1440.png",
+      "sha256": "677c484a2cfe68acd81a648a263a31c8739525041abac5a7cc73d22f333f17b2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-dialog-1440.png",
+      "sha256": "491f436aef67ac20071398e35e3aea3572bab0b2bcfb7e20d724921cd1849727",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-run-1440.png",
+      "sha256": "4cb4a861cefd050474ffc9f6a4651121f5a0a5d1c2e67e01141bbdae5dcb00b5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-heart-1440.png",
+      "sha256": "818db892eef0fa2e53c90726612c8a9237edb0a182086e9c253995472e78496a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-history-1440.png",
+      "sha256": "914881cf21d2352dc465b59500946a51528dc78b1f8805b8883216f4d2781412",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-settings-1440.png",
+      "sha256": "a41cd45539bfbfa6b69c58979b68d1fcd9ffb8e510f64fbe9d884e820fa3b8d9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-dialog-1440.png",
+      "sha256": "59df5d1ad6a359527ba32b9de4a67adb74fa45922b06005b06b166ff1ea1a87e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-comparison-1440.png",
+      "sha256": "2fceb6111c3fb0834843dab0198aec099fbc4ae82f0036b77d48dfa514fafec8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-run-1440.png",
+      "sha256": "ba2b5335c512ae208170de37ca51ce964dcfcfc31fe1bfb13468c628b9dd0c6d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-heart-1440.png",
+      "sha256": "07d22654b4ed8d409c4148914640a56ccc6a0e5c765483693f6efab90489ff5f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-history-1440.png",
+      "sha256": "b475a2c8445413f9d89c57835c7f579aec311fd6acdab8c122581e7aecbc7205",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-settings-1440.png",
+      "sha256": "fbfb86a5f8ba6bd3e22bc10768858efdcea415f43cebe2d84453a848717ab054",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-dialog-1440.png",
+      "sha256": "0423c5bad021846968169f92f520ea564afa08e8aa8b55649b507e4be10f96cc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-run-1440.png",
+      "sha256": "2bca18767a5c344e63ea23ae03d87ae7d7b865423c8e2e87dffc6f1fa81e20ca",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-heart-1440.png",
+      "sha256": "235d12be27e30d3f64ff683806ebeaa091e838cd6d8fdf73281961fe92acd2b5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-history-1440.png",
+      "sha256": "ae9aab4d477e992279722023d4cac951e587c3c43529403f3c833bbbca649a27",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-settings-1440.png",
+      "sha256": "adcee6576d6e9afaa664aeee5de947d3bae297e6b10a36460d79f919536aa620",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-dialog-1440.png",
+      "sha256": "f9ddd7bc01efde636ff36e6ecb52b92786ed9b2a372355119c474f08caf9c6de",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-comparison-1440.png",
+      "sha256": "af01ca7942da396181e3c3f0449d83a851c923bfa1b702376332b1ff1cebd956",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-run-1440.png",
+      "sha256": "b7d7fe0fed759ea6ec5d878c4cca64e8db31204585bed6a86933dc67a179f218",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-heart-1440.png",
+      "sha256": "d0b518afa34909921cb9a093dbb1cbe85437278463875e1d363e57182572eaa9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-history-1440.png",
+      "sha256": "6a55cfe9c2fb656148872dc0024f4a7f960e4dba6dfb3f008cb72c496b7a8f56",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-settings-1440.png",
+      "sha256": "a84236263276011ceebfcd24f558580fc1efa412dc32908b4f4c7d1fa46c377e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-dialog-1440.png",
+      "sha256": "6471b1910ae4919c05696d0227270fda8c75102a5e83b329ef3ee8b58650f793",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-run-1440.png",
+      "sha256": "163c4448b286ed76772c94706b9711e06ce1373b25033a41d97638089212afba",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-heart-1440.png",
+      "sha256": "db433e79427f73676787b98aa948053d0cc3f13929a831acc5a4be5af144d7a4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-history-1440.png",
+      "sha256": "f5fd0897767450fe0ebc9b66e7b42d8d68a2f4ae401d79ec0dc243a1537445f7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-settings-1440.png",
+      "sha256": "293b5c7b230d0ba3deb3f85bc87a45a9fb3ccf2c9f23fd3392677ebe841ec6cd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-dialog-1440.png",
+      "sha256": "3526d909673a277d5ccfbb287facd028f45756dae41a5bcffdb085ee3c68cb0d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-comparison-1440.png",
+      "sha256": "e5af45407708678aa573bac83dfe8de3223fc745c9788fc715f7c708ab519b9c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-run-1440.png",
+      "sha256": "668a0c3d5dbf5f9cee71d023177afb33778c8c89361d1912e39da18df09c69d3",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-heart-1440.png",
+      "sha256": "3c3ef69bfa3686a14b8411bb366ffca2c3a1c59bc54fa8c1189bdf935fdfe58a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-history-1440.png",
+      "sha256": "40c5c188364d118ab30b09e5e197b9d2f490bf640812776fa54b2b5a51634251",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-settings-1440.png",
+      "sha256": "55696b982a2b694cbdfdf544fe846bea6cf8dc14bec787c5f7508f6c22f326b6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-dialog-1440.png",
+      "sha256": "f0419cc3da55ecdb310c6b8e7a05d28d743119b3a053165350b544068a76f5de",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-run-1440.png",
+      "sha256": "a088e0b763fe0de6ecb501ba28497833a50048e75a2b49c4c17b3157d148eb1e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-heart-1440.png",
+      "sha256": "def2864e2c8d7c7f5f93c946cf38306f5e4d1372aee808b4e171ee1717f29da6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-history-1440.png",
+      "sha256": "beb0ad50e870bd220742a74a8f7ca8215c801e1b60dbbc9f7088761762b0f596",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-settings-1440.png",
+      "sha256": "85b44cfc1b912e83ee77ead7b4b8d65721504362db8a6192cecc00ce45f174f0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-dialog-1440.png",
+      "sha256": "82d78bebb1b82399a248d745ebd258197181f0411bd20547f89bad72643ea06b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-comparison-1440.png",
+      "sha256": "aa11dd207a1ef6c9af0914a1e372fc1fe2f682ff4508e1029851c2bc3541ee1f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-run-1440.png",
+      "sha256": "62a5aad9106e2ad8a5fb03f9d01e40c05a320fc4858032caa091f8150316af4c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-heart-1440.png",
+      "sha256": "e3017b7424a389f2db6f171b3f96f33b824100368f8c744e56ea642302228836",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-history-1440.png",
+      "sha256": "a307ac0d3dc14a0261d91172e3c5d088e293bde366c9af9c2e6d5ef35d311f1c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-settings-1440.png",
+      "sha256": "f70de8df18976aa6270355ee2d8ae194b63b7db08fbdf2aebac85e0c27c57c58",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-dialog-1440.png",
+      "sha256": "8068bc7af80861433093b5b01cee029c9abbbbf926f69ad7fd261efbbadfdbb8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-run-1440.png",
+      "sha256": "8ac9cacb238afb314d1712c2765b7d8dd44e3794f9600f813ba60e24555e8a39",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-heart-1440.png",
+      "sha256": "17370326f2447dabaee876dea2d29c4cc88fe13863b4574c305859efd70c0d81",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-history-1440.png",
+      "sha256": "c4afe1da09cb51913ea386bdf6e5a183ffe8edf0d41ee2d3e5b1cab67e22e092",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-settings-1440.png",
+      "sha256": "22c1c2c3da335e655d5da5e931a1c7f35baa1e3c7e68c6a46da77145e587e721",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-dialog-1440.png",
+      "sha256": "120ec30384d4a837d4ab48d7ff3e6d3eef7d224b5c5788d00fb0fa9eeacf1579",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-comparison-1440.png",
+      "sha256": "9a25a10e6bdf5b05be4f161664ef6aac1ca77841885d3ec01f3e3d31fc31009f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-run-1440.png",
+      "sha256": "4799b701f8d0a220b1ea0a4841d6c50fb874aa6c778c91e951dd44fcb174bbcd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-heart-1440.png",
+      "sha256": "f91767d6cfeca4883bd02c7336f9139d5508b58ce260e3bf7b9aa850f992acec",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-history-1440.png",
+      "sha256": "fb2603d32647eed107fdd2a63adc92a5370d3aaf9e9c97896dada8636f4413cd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-settings-1440.png",
+      "sha256": "e652275b2e383ddcd8f69a780a586cf114ca0a339ef0ba3c5ef032d113e1f080",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-dialog-1440.png",
+      "sha256": "4fb5de5b3c549f271903a5839f9e75ecc844926838cd286383b77c5900064b82",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-run-1440.png",
+      "sha256": "dc736e40a2a1880404231defdafc4c37ec3f1b834e29b23aa05d854e69c4331f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-heart-1440.png",
+      "sha256": "b0b9b26d99a5a88c5b7b589c509e708467aa69012b01dfdcedf07223b2e7f7e7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-history-1440.png",
+      "sha256": "1dbb69a3380582dffaf237abf8e4dbc564928d1f04791ef3c87c14e0f863d528",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-settings-1440.png",
+      "sha256": "88fea83bae3dde98d2779296bd815d3875320ba6f6551ed3efa5757569c8441b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-dialog-1440.png",
+      "sha256": "ae93d0180e4047bf4240662516db2d17b41d85e3e6b32d0adf26fcbe545916ae",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-comparison-1440.png",
+      "sha256": "84118e892b375da4b8b884e84c6c9baade0e54c1f5f743f57377102e1bcf4d17",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-run-1440.png",
+      "sha256": "7b6b9be7de33663ff93926def2a77fefd0e5b5cc24c47f2aa4186365526ae21f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-heart-1440.png",
+      "sha256": "b2b56ee5b696cb74a56b73172f1b3165940bbd08157275a8a3e47c8b45f32bc3",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-history-1440.png",
+      "sha256": "f9d929a4d33a78a3f47ec4b35af33b88d228fd52e761bd2b4b6be2de0622dabb",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-settings-1440.png",
+      "sha256": "0c4aa0e162eafc4deb3bc462262bd0d57872ce46ba6027b2f938bd96e279b5ad",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-dialog-1440.png",
+      "sha256": "f1a230c8b6fe9bd09fbc60ae85c6b255690b38e77ca6ea8e5aca87b69da769f0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-run-1440.png",
+      "sha256": "fb79b0eea289d8cda256c3bb66b4dcf35ea081143b54a564cfb9302882d3755e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-heart-1440.png",
+      "sha256": "fe5c92f6b5b53e741be5c4940685b9de93b023e513331e2c0750782b4d005b58",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-history-1440.png",
+      "sha256": "53ef14931b64184335f3b52d297babe5661e9e75a3686503786affd2e9cc4ecb",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-settings-1440.png",
+      "sha256": "9f77581ce1c380ae2f47bc0abb5b7e22883ea2d785e48669e90840795ab306a2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-dialog-1440.png",
+      "sha256": "1839a11a8657202f915ab4241e0729c05d3c096fbf6b92f4b4e8f5208e9190cb",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-comparison-1440.png",
+      "sha256": "def3816cc0d4daa30711d90e00032e8d973c8a3f44bac8b98f1e81902867d124",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-run-1440.png",
+      "sha256": "670d1846e5d159666d77770e8a75a9dd2becad5c8132cef0ac02562c9dc100e6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-heart-1440.png",
+      "sha256": "d45c83c99b1b9a4debfa355e815790ca751cf821bc1e3e8ecacec633bc23b183",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-history-1440.png",
+      "sha256": "9e8a048443654d5113f5896de15d6d4853b88c5f66f8779fb9cab2f133c32232",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-settings-1440.png",
+      "sha256": "e41514c148b3e06756f325a25a86aeb904963ebff1674ef23fb928aeda4b224b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-dialog-1440.png",
+      "sha256": "4cb7affafa4ad5560333616ba3d84c12e7d5e05a0c3f383917ec7ca188cc9fb2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-run-1440.png",
+      "sha256": "e10709714202381e522cb342048f5f22c104bff0f686413ba2f2272287a69a0a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-heart-1440.png",
+      "sha256": "4b99c8ad06e963e695dd3ef264dc814ed2417099d4449b923a07983cc059df75",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-history-1440.png",
+      "sha256": "556c1f5ef26c67e23a7b7a91dfd43ea94c4d964d45ec2d839118bf1e5c92f48f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-settings-1440.png",
+      "sha256": "cef8da312bd054b8210e55f3ec865e05162cf51519324e6a17dd01d86609d29b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-dialog-1440.png",
+      "sha256": "61c7517fdfbad7faa006d57eca9206b5cb9de92fde7c7cdd9cd4acfc5fd8ad90",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-comparison-1440.png",
+      "sha256": "21adf7313b05ec0a0a7d6f6b3b736c237e356e144b8a034712e54d9879c6a6a7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-run-1440.png",
+      "sha256": "dc1ce9ba867f43fa9af0e4ba5fdf3787881d1ac87e3e9d2af082e1ac83cc8ce5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-heart-1440.png",
+      "sha256": "ecb3e502c03a217af4e0838c8dbb631bf24fa8cab405b39f30b058acf05465d4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-history-1440.png",
+      "sha256": "66cc51e6ead8361c4806ead67b6da6b41dddbaca37c38846620b9bd743e2144c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-settings-1440.png",
+      "sha256": "2cb74835c026aabc30fcf9f022d68a3c363fe3464cd9842d6334aef1d360ff8e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-dialog-1440.png",
+      "sha256": "228cd1c704c099ea8cc9c66733940800a0dfa028eb2d4ce22858e3d57c337fd6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-run-1440.png",
+      "sha256": "fe9dda2198998e801a778634abb8a0e8e20f8cbc47c8b8b8b898a058116fd085",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-heart-1440.png",
+      "sha256": "d0919c653ea072a64978a893a920d5c8e4c7a5ead8f96ba71aeb204493d1f550",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-history-1440.png",
+      "sha256": "931a54deecba2bc8c4d5d992f346626f5a12bee737314b1685fd1085db5bf60a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-settings-1440.png",
+      "sha256": "fd913c83bfec4f0a4f80aa40a99ab19591ede4779469a03ca1eb43522c1c1614",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-dialog-1440.png",
+      "sha256": "c1fd57f962839d155c32bb29ad60e00cc5d77be4a4924981e096c19d9094f104",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-comparison-1440.png",
+      "sha256": "8b576ac5440bcd4e3c44ed34c9ef7a0df91951ced6e82efae729daabdaa5b21f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-run-1440.png",
+      "sha256": "180a40380bb54faab081137749a4424cc77327890edf18d18fae481254054b21",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-heart-1440.png",
+      "sha256": "30f5c691ae9b6bf8491c88dacb8fcee6b5b4c384d577fdf095bdae9d1fe9bfd3",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-history-1440.png",
+      "sha256": "5e7cbf3e3cc29dcc43b18c327f790dbf508a3f74074671ad4a35edcb647a3ded",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-settings-1440.png",
+      "sha256": "91221533932f42236815724a64da5f5578e6db87042bc174859f354e162d3b82",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-dialog-1440.png",
+      "sha256": "650c3ecd12a36ee1cf9fb64774aae8615027be63588f5304ce34440ef63d9e79",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-run-1440.png",
+      "sha256": "6068ba1af271b1f72ab38a5c7a54961ba1186582ba945efbcc3245119edbeb53",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-heart-1440.png",
+      "sha256": "5320f3eede41ff19cb53a549b7fe558d092204e722ede1e8cd12a2698a4cd44d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-history-1440.png",
+      "sha256": "694a9aebd93c4122ab3c57d3f98f6fe229c0083a8a2454de8899bd64869acdb4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-settings-1440.png",
+      "sha256": "251a4fade01642cbe0e9cea8aacb8182d9eeaa7933aacac189eb08ee99f101e2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-dialog-1440.png",
+      "sha256": "17ba5a4d1b4f22c32f0e92b76ab5ffbf8c3a9551f41dea168b38d9218bae6172",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-comparison-1440.png",
+      "sha256": "d630d84fc01117a10a080a4e8ecb0f3000e2fe806ec3d9bbc004deed2ee8ebd5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-run-1366.png",
+      "sha256": "cfce2dda50eaef2dedcb4e228591f517d44bb879d3ed568d8c755088528bc52c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-heart-1366.png",
+      "sha256": "ceb35d4866b23240b959220efb98e385031d4617bc9c274b89ed2c7e71819531",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-history-1366.png",
+      "sha256": "0a34c2c2dcd0f7ec228ce880650c7d06a44e9e1bbd0a06d75dfee809cd068f3d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-settings-1366.png",
+      "sha256": "72335ffeee1485b410a957109832b8327ccf4bfffd9010c7da9e459e089412f3",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-dialog-1366.png",
+      "sha256": "5a3dd4286c3c1970bd86dde8da94a2872c9ce10824cc312f6da7ba271e1b15e2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-run-1366.png",
+      "sha256": "c285242a21c6f3dc9458d6648293f05cf85212d7a396bdd686d852e074a4bd15",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-heart-1366.png",
+      "sha256": "41c1a051a79fe5543e6cf9f444777762c600fa313d7d4ab0c7e0eb922daafb1f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-history-1366.png",
+      "sha256": "10f82916837c03c62a2cbb49a2128ba40bfe088a714cc9bd5b0fadecdf858886",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-settings-1366.png",
+      "sha256": "96f2ecfff46e36013fa3b617168e264b9c30c74ceb3f06c0f7bec78cccfdc705",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-dialog-1366.png",
+      "sha256": "ac16bc96ed0b8d3664c8b4817461979b9a04601904c751bbdf8d8535494327f0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-comparison-1366.png",
+      "sha256": "503fed9e74ef02e0123e3fe1ff016df9f0180766f962b304ad2f22554fd81b3c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-run-1366.png",
+      "sha256": "0dcf9d0d3b937d6163a48f5537fdce8ffea4dceff7620844f3f67e34440efbc1",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-heart-1366.png",
+      "sha256": "0991fa43792772d05bbfa62677566aa60fe6c20441481045e4b29b66714292f8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-history-1366.png",
+      "sha256": "bfa82121ba2b686d388a6146e3cd3cc7fb68ac6c8cf5e9af8c2b6c8bab1de495",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-settings-1366.png",
+      "sha256": "b0a254c6719e0dcc7399ff914533c0db75bb772079257fcd77a937c0ca7f71cf",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-dialog-1366.png",
+      "sha256": "396b38ce6bd2dd2f2a5bb89e9dd6d1017b1d2254727c94f1fdf00536342f5da1",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-run-1366.png",
+      "sha256": "603a578bd9ed56efc2721eba5924f2a5cbae1e07a6e91a295bd709533c83bfb2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-heart-1366.png",
+      "sha256": "89c927cda551943ae95a691882f260919d1e57d611a4766b53611e57b2df53d6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-history-1366.png",
+      "sha256": "b717b46b525e0d8a8248e26d128654a68219ad11ec9f58d5f15db105c9b92b21",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-settings-1366.png",
+      "sha256": "78fc4c195c1b62b50ea19b60affb274ee7c4f982e63ba196e4ebbebf803bdc44",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-dialog-1366.png",
+      "sha256": "73d8fa9d59cdb0569e6632a3c2c6a32ce1061e52b5a0b11d0fc77f4e548a9761",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-comparison-1366.png",
+      "sha256": "837e4eb01c9ca16af01220a23097de85069e7850c1f1506baeda1bb9601b3d7a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-run-1366.png",
+      "sha256": "fb5846cc644d2685383567ad52e0350145917b5a6deb5e4b8dae9c55f370273d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-heart-1366.png",
+      "sha256": "38e61b1a3d16db96276844470d02d709d3201ac473c0198b10d16770e1026e4d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-history-1366.png",
+      "sha256": "fbdf5b11d4f1bbd5e38d7df006de22fc8eac38176d7e347d2567289972d37f49",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-settings-1366.png",
+      "sha256": "797f12156ec0be314906888509a241e263b2fd5f03b70414eaaf51da7334d644",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-dialog-1366.png",
+      "sha256": "4c6d7f396bc4e97bd8d0f9c52e7cb9a77cd79e24b07b8ab7201f511cc152cebd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-run-1366.png",
+      "sha256": "3242e206382d67a6bff32857c053ac923c76ee69d848d37b3c24b421e56a6852",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-heart-1366.png",
+      "sha256": "b1a70cce2b901b2f25e6fe1c833e093b80c856c944538fa7011637e96f1c3e76",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-history-1366.png",
+      "sha256": "b12bcb77ef518ca9ed2e2165a90bcdae40a0c593e63cd8858e502e8d672a0f72",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-settings-1366.png",
+      "sha256": "27ec6eb4a0017dbec9e9397e7405d2d858e4038fd9ef2838c2fb46cf4cfa0ef8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-dialog-1366.png",
+      "sha256": "a33e1d58a706807fae302105801a48db6d0ca15e4a19cd64c61532fc5f933939",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-comparison-1366.png",
+      "sha256": "c741519875d5e1c3729c982e075b8b92581d1dfef5039907e975fd5360e21b25",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-run-1366.png",
+      "sha256": "a221158dd2d6501f178b5f182ddc57c7364a5abf219fbc7b56bdbe6314cf3fcb",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-heart-1366.png",
+      "sha256": "f0c789ac48c55a8f352f2ebd5c63fbad5153f3eb18bb688d8ac2f5b724dde8fc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-history-1366.png",
+      "sha256": "fcb681c29e840b2717b831a6771d68471ebc89453f1399eda8f4aa9d1051d026",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-settings-1366.png",
+      "sha256": "9afb8e791141d42248c253fda286c84553b1f99017a3d7363c120c234c714711",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-dialog-1366.png",
+      "sha256": "173783eb8e9d6f1ea247d583e46c94a3f7396479cd2e76faaba11530585eccb3",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-run-1366.png",
+      "sha256": "acd1c1a71c7e65d28da366975d1c31d4908fef79cff2caadf397ede5c8197d2d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-heart-1366.png",
+      "sha256": "4645608c58989946d919b60eb81b31be0b5cf79f3533e58561d9ff02f971495b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-history-1366.png",
+      "sha256": "548f97b091ca7da0ebd72712af299942c7811b266f8bb98eaf2264336a6b59cc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-settings-1366.png",
+      "sha256": "056e8977850c7879c401fc554f6fe4b212fcce2f7a5417d415f62aa1959546d8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-dialog-1366.png",
+      "sha256": "bebcca6a84fa2d1286aa196ded511a7fa5f35b7fb2598bca5b24f91b87ba2c39",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-comparison-1366.png",
+      "sha256": "c383edad57a1ca47a62f8e3fde37481f4e9480f7230273555c41eb4faa97632c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-run-1366.png",
+      "sha256": "53f2494850a45d00e15a7b08c0b886b0311e56c732568c81b3d44a0d39d2116d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-heart-1366.png",
+      "sha256": "c36337cb13774dfb9593fce154319ffd655ae74e575bc3080453ea75645e364c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-history-1366.png",
+      "sha256": "0f94b17d237a0b8a631282071fc5bbf357d8d305410249856732daecab626c57",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-settings-1366.png",
+      "sha256": "aff0b93e62d0de81385c6e0030b44b01bce0aead30fdab32acfad425e5e97ce9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-dialog-1366.png",
+      "sha256": "c0d417b58ea3b4a6b0be1979d2339592fe2e7e35688b09e6a0a3d662e62c526b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-run-1366.png",
+      "sha256": "54c5cd642065a44d42436afa7ed2ec24af74452e078e47807644a0a489b09fd6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-heart-1366.png",
+      "sha256": "e4b65902a4aa667b326dc21d192a4905f0570924aa3dcdb6bef08a560712b828",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-history-1366.png",
+      "sha256": "c86f267b92c5e39884a840e80bd33f1e05d697ad1880b407d759673915896541",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-settings-1366.png",
+      "sha256": "4d1cfeb549180c23fbdf0d2e93846b99623933d94176d6cd40a96f508711875b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-dialog-1366.png",
+      "sha256": "b3c4fec095373bae810806aaa2cb25112596dc28d947f39eb03c8101e968577d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-comparison-1366.png",
+      "sha256": "8a9934256a9e26d9b5f94e1f95587595a8fdd25d498de49652a8db272879e3dd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-run-1366.png",
+      "sha256": "4d33b68c491e2883e9580c7dae2db1d27054c1d375b5eabead40e373ecd69db1",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-heart-1366.png",
+      "sha256": "d0ab312ae013bc44c4e425fdc01b8c4cf0da89f6b584792d65b09a3d98d822f1",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-history-1366.png",
+      "sha256": "59af739e4a6f45a90353d601826b9b515d455e6281a0e1eaff68fe185a6b5e95",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-settings-1366.png",
+      "sha256": "63feac2f5d7c998613d0c6e855c5f937bee83b1a19b93669a389feb767c20478",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-dialog-1366.png",
+      "sha256": "e4ef89e8406af464defa461e2458dc56cd750f08e78067cac99aaf6418ef5066",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-run-1366.png",
+      "sha256": "a6f39fda86c94ca6db7e11352c5392d9e9ec914b7d522acd3430986a7ded9dd6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-heart-1366.png",
+      "sha256": "cd3d4941a34e3e9d303d2d19c59d6ac0da31ecfddeed42a8b0aaec5c56a39c18",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-history-1366.png",
+      "sha256": "1f55214cfa4efa0fb2ad6bc3624c8f80660e10ec7f126c3af2bf0226bffacc8f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-settings-1366.png",
+      "sha256": "43f072ec929f8ba8d9e4c3a154741feb582004efa57952b83512699ce634ebab",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-dialog-1366.png",
+      "sha256": "b590260c178d37248f0517c144684e0570a1adb6193af93b08ea7066655535a9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-comparison-1366.png",
+      "sha256": "d571f68be4d01b36c420a988d9af6f50b8f3b5cb55a21907606f2d2ec6628939",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-run-1366.png",
+      "sha256": "c61ec64de9a45c1a944e892303c7795d206caaaa842e53235d9a6a8783cd4e68",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-heart-1366.png",
+      "sha256": "b3c67c2fe55af970c63da09813ff65f17b16db02991a6c00e30802b842e4b355",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-history-1366.png",
+      "sha256": "0b1e04ec4d6300f7548b206af8c5a03e93c6b6afe1f65edac41d1597aeab0b60",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-settings-1366.png",
+      "sha256": "ea25ba9e75c9ceb284ab889abc17d6aeb180e6fc52457e47603c7c2006b0c9ef",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-dialog-1366.png",
+      "sha256": "0f0285f1e8a8fc424ea45f280c0e67cad20017b1541999ef3534bccc236388fc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-run-1366.png",
+      "sha256": "fb966b0620dcee3dd6eedd8155ea447fcf3957a52f7f808b4224697aa78c9acf",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-heart-1366.png",
+      "sha256": "b3394e4d7d6915d1b4f1d2b2abc2ad88601e1fb8af85cb65137fbf1d97064952",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-history-1366.png",
+      "sha256": "d03ffa4fa5a5b703270dfc6b29d12b2f9f50f75751019a843cf7883f33c36e7a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-settings-1366.png",
+      "sha256": "a0f2ac0ae77370552705a523b6c32e607ce937eae398dbe287638c167af865ad",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-dialog-1366.png",
+      "sha256": "048a2ccde0de669fbcd944cc52009ec945c0bd33ebf6fb517745c756d42c2b38",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-comparison-1366.png",
+      "sha256": "d2ced1eedad6d6111905f09ffdc1fa020fa308bb2971c1ce4accb259fba4d470",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-run-1366.png",
+      "sha256": "969bee45b10d4c94f463bc7e266e85d156fb0517d31db6ab3b3d6ccb1ae9399f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-heart-1366.png",
+      "sha256": "4d109c6793e8d3478b94bd3202a405bf4d020fc6a962f3381a192c54b619a7e0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-history-1366.png",
+      "sha256": "a5441878fd0577be6340ca9a6511ca3445e7d71766e97277bfed5f192e224d24",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-settings-1366.png",
+      "sha256": "3fd4155a8f88e65fcb28e8eec9f3bded25eeb6fda92501924c0d501d773f1e4e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-dialog-1366.png",
+      "sha256": "713e8b002ce08d019553c381530f1341e32ee5979616144a1ea1efdf320598b9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-run-1366.png",
+      "sha256": "22fffd62751b51fb276e7ddf91e75be5bc39d445b37b806f33ef971dd020c13f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-heart-1366.png",
+      "sha256": "3e075362f7b6165022311a6f30a168b52fd54d02f6da24ac7fdd0e06b16f060e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-history-1366.png",
+      "sha256": "15a5427fa857d88d53912d364600bcd7269e3ff5d83385b2c378c39c004c1a3e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-settings-1366.png",
+      "sha256": "bc0f9877d19423c3dc18842628e562f4183f8b5f1a124cf9ad7e012a227e6a99",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-dialog-1366.png",
+      "sha256": "079851607e5ecea74d5ec719361adf741ac47219030baace27a3a948dc7e589a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-comparison-1366.png",
+      "sha256": "12292be5c916833f3fde6eeae16a3d8ed6aa0382f0a53176aeeecf948898db5d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-run-1366.png",
+      "sha256": "45a14d105253f5f6d8bd4d2b26580fd9e7e85a81a9d9935ddfb200dc2dbc97c6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-heart-1366.png",
+      "sha256": "3043bbe9a576c30a7807665043677953f047df61853c8badc024fe5c923f54e7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-history-1366.png",
+      "sha256": "18ceec663eb7328463d003e3274aba3df08a820eacd43d7d2a61efaa2ef15c3f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-settings-1366.png",
+      "sha256": "a2be41f282801d40efe56fd842b26d939df3e20e0e1670d172dabae7531e1fc6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-dialog-1366.png",
+      "sha256": "5bc63dac70483bec0237506a2cc8c95624d6d81a3b9b90d7475daee54c1372e5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-run-1366.png",
+      "sha256": "3da0589194a3dd1ba0b11690a2531c6c5ac5185df0819f97e366ff2b729ae5df",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-heart-1366.png",
+      "sha256": "b3087246b6d4a19acdc89a5451449659e0b26abbf194b4f551732aedf854f8a4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-history-1366.png",
+      "sha256": "5c1ed2ffdd1b0edab5d6da06e637f820a57f941f3df1b1510b62617a138570df",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-settings-1366.png",
+      "sha256": "54ec4bd5808d0c2ae2895c512f8af79ab9e8fc3f16fbe59dce3e6ed5f9cf4ea7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-dialog-1366.png",
+      "sha256": "5d46b4ffb91af36b071ca2904c6a2ba142277e2e3a3ddf360d4d7144e8f945ac",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-comparison-1366.png",
+      "sha256": "0a3bbb4df743a2ddb3232f33f79efe55e149d1090f5b4330fea9a16aa9c2f717",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-run-1366.png",
+      "sha256": "25c826e961dd1fa775dda0e47e1873b776b1dfe7c7ca7176155dced3a62ba4db",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-heart-1366.png",
+      "sha256": "a3efca71778aa5a5d920706f50611fdf8224073c32127ac23caf5aa160a0a723",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-history-1366.png",
+      "sha256": "67ff201a5b6a8439b5ab64d43777ec0e500c9298538ca569c0431e6393f45a3d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-settings-1366.png",
+      "sha256": "aa7452922ab49712d278a4856deb41d40adc4f0cefa32b8b714974f2caf28aae",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-dialog-1366.png",
+      "sha256": "0d95ddef92c705e41de37130fc1df68669cbb9cab1701e4464b711832b91e6f8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-run-1366.png",
+      "sha256": "e7751dae45a68162ad81ac9608acf24afe0af42ae68cac104eeece0835aa76fa",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-heart-1366.png",
+      "sha256": "a05c9c4de9463338067cf158e22b047117360876d7717db236f60d32ff94de91",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-history-1366.png",
+      "sha256": "073668c6e0852c82a19e3e409a5c5b8d2fe260f1da69f8d6087ae63922938a7d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-settings-1366.png",
+      "sha256": "1acfea8efbb1f2018f47823267e613a37064cb9f81ab8a552ed629d6178be786",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-dialog-1366.png",
+      "sha256": "ba8bf0bdf702658a98968588f31bca669ca50bc4c33a7b483075969f9fc62595",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-comparison-1366.png",
+      "sha256": "8024513772ade0726ac7546083cd13605f214a7f95eccd12fdbb7ab8c0aa9249",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-run-390.png",
+      "sha256": "263d1448cbfccad49936b0ff812880c75aba9241464d0d96ec8b690c8b9cc17a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-heart-390.png",
+      "sha256": "518d79054426f4edf394a44d8bdecb6a23640120d48a3a44a1b53f011001075e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-history-390.png",
+      "sha256": "cc680322fa4281ac28c7d685460a8ba73af0a1dd939f4fd220896b9fbe361776",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-settings-390.png",
+      "sha256": "52f0e74a499295445a5c2d60082d41d321792f97ab47a463ae9ed51e4ceb8ce0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-light-dialog-390.png",
+      "sha256": "f418d668a4616d1f567cc05d6bd457c3195d34bc2ba896bc26deaadc4e88f5fc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-run-390.png",
+      "sha256": "15808aaf26bbdfd0afbb97ab907cb89c46a2f3ff2a6ded22074a2f3d6b403f52",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-heart-390.png",
+      "sha256": "326b593bcdd1e38fc0298aa1d2e0f0a0da1c4c8fc7eaae56388ba990e2665c5b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-history-390.png",
+      "sha256": "1d8796a8175c32e371ec7332dfff6120b68fdc7be59f0570714a9c8f272f1cfd",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-settings-390.png",
+      "sha256": "581fd329f7b22de68b067024360e2f45502143ce752a7b7f6f353742a7772c74",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-dark-dialog-390.png",
+      "sha256": "75b48e80c4a8b9fd85a48aa06a874ffc92c8e7cf20cc8c793dfebb1c0863636a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "01-comparison-390.png",
+      "sha256": "028c8bf0f72514fd604b0c679cf96112930e765a07e00b4733cc964642957bbb",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-run-390.png",
+      "sha256": "6ed563a48566c0dc51e3b9d90d1f6b9c22507ef5e2679c4204047785c63d49f6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-heart-390.png",
+      "sha256": "fd1ded019515ab32d1f7520711123be73b06107bca3109793d4ece838df5ffc4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-history-390.png",
+      "sha256": "4fa6b1b58fed1e68b285eb0bf9a7c4e5c94ec8273c71bc90bfa0c3b5e1903336",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-settings-390.png",
+      "sha256": "776d1023883ac9993150cf47a8f68425527ba4109eb349c82999f7d6b696e0b7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-light-dialog-390.png",
+      "sha256": "87b9456e29c85d550b3c19cc86b5668612a0b3f2e77bd61fab392730f077eee7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-run-390.png",
+      "sha256": "86591fc1dbff8e9211f7f0b40d91909ad011936a384cc6da2c5746ec21eb6223",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-heart-390.png",
+      "sha256": "2bbe0025877f03f85b057e86c663a106e1fe5389c258f2afdbaf88fa66760533",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-history-390.png",
+      "sha256": "ddd443c6a90f6402960880abfefe7b9eb13a32fa635407beec1fed30f2cf5fa9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-settings-390.png",
+      "sha256": "8fc2b8eea9660531dab36d79fe98661af76f4212e2d4784e5fe5b43f8108c0e5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-dark-dialog-390.png",
+      "sha256": "bda5f11ef67e7ddd5c516a253c5a8ed34d909ac7ca5b22d615a9dc8d27c37eac",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "02-comparison-390.png",
+      "sha256": "63f6d17a93af7bff302acedabdb5d7a7a5f708ce12e7ae1af2ebbbf47e8e5e4f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-run-390.png",
+      "sha256": "f3b17da73a23e4a02adb0723cc90312679b34a2c84c502cbca26bdb546cb9d5e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-heart-390.png",
+      "sha256": "f43a31232050e4f3dda7eed48ae53bf9ef95f44e54c295d2f303ad8949ff1bc4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-history-390.png",
+      "sha256": "0a3987e07409d0cc04918e7679c949f90f123e0754a8da752467abfa022aff0f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-settings-390.png",
+      "sha256": "4f1bb2c11adbc8f55f8f888643aa4cb395b93dec22d6abfba546d674988b3c4f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-light-dialog-390.png",
+      "sha256": "ba63ccc1996a9f55234a2a59132211c0885d7a126e7739f4f5d8938010b18739",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-run-390.png",
+      "sha256": "d05f8efebc13f4504f537dd788fcdbac5ebe44a01e306a5c363ef1b8eace8742",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-heart-390.png",
+      "sha256": "a1fd17ae17318b65c5952557c212ffbd63d491d179313fc4459d32c324838ef5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-history-390.png",
+      "sha256": "069b1371b472c7a4c93f14e92aa192ac283686300ef32a11cbd9eb4827d4f235",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-settings-390.png",
+      "sha256": "8564aa0d1567899abdd72c0cf4c267f07c9e99e6a4d0bedae037623ecdd18e4a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-dark-dialog-390.png",
+      "sha256": "c59b096062c4ab4284b1bcfadcc2ab02078fee97ff629ec67a332c6ea131b0e9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "03-comparison-390.png",
+      "sha256": "8045939920f389e16e8061327a98d82a9203467c5cf93c1081a6dd15c489a262",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-run-390.png",
+      "sha256": "784373c077723f2145d3c769d0932316bf75703372d94b237c3de77583dcf794",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-heart-390.png",
+      "sha256": "bddc3d54d96950002d8b8941bee0480b9f643c34f69db4c7d2cdc408449c837e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-history-390.png",
+      "sha256": "3c533e1c288f17b16081ccce9ea2cf5e11692d4c3b2218d545400c04b9ae5ca9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-settings-390.png",
+      "sha256": "cc67dc4d7e28300bcd24ffb098726c5e471b4207bbae046ead59bda306fd0eae",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-light-dialog-390.png",
+      "sha256": "97fc4da4b30a0e64fca5063571f77823df32e0aa36e856f237e70d3088c56229",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-run-390.png",
+      "sha256": "56261a6b4ee59edb75b5e814a14d0d0f0a2c25c835f26d6d3f98068f9b64bc44",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-heart-390.png",
+      "sha256": "86dd297566ae08e3614b644872ab6a6de43a3e3672c17ad4997b3db34b2d97ba",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-history-390.png",
+      "sha256": "60808e0d10a8ddb057f6869ef48667350bdcc88ded2d5957358a2d40b99bcd32",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-settings-390.png",
+      "sha256": "c3a529e92e8fd414df98c1199f7acf0110d0a12bae179a76ed2857e83ddce902",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-dark-dialog-390.png",
+      "sha256": "1dd9139c20d8b6feda6f6e81e112e3e98f79e6f98edf4ca85cf15887446560ac",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "04-comparison-390.png",
+      "sha256": "511ee085c6e7882dc9e0023957396d2a20930699ba768c007d3a8f889759c454",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-run-390.png",
+      "sha256": "db84b0b556d85f19237f5de950f9fc9e13443ece8331fd611172de16710ac91d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-heart-390.png",
+      "sha256": "bcc53ae8e36d7ecd307bcd946338aff8ac60d0b0a4f53bce6cb8e3b7f66e7860",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-history-390.png",
+      "sha256": "f2daaf55ad3d842086f7400997a644fa2ff06cd4f2b4e91489b50ae8a684512b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-settings-390.png",
+      "sha256": "5601691a705ab6b6c872d2fb1fb8cc06d441542ced324b4350498a8526019351",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-light-dialog-390.png",
+      "sha256": "ddfb4b64752dd1ab9aa28eae99fbb3a2858babcf596343f435613305d0c59388",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-run-390.png",
+      "sha256": "05f65e8d4f6e9c8b18e74c24537e50aa3a5bb617be288ed966f47d99018e9ca7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-heart-390.png",
+      "sha256": "27b580372f7f9bd13d0c89162a4346c7f632d6214adc92d585da5b398d3c560e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-history-390.png",
+      "sha256": "3c858cf14f7b93e316af08ee7f9bd884593fe840894e9b183788d2f031e4cee6",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-settings-390.png",
+      "sha256": "1e0d04e8de069679c2dd7f4635661f0644c98f6a0a0d69ad0bf642e011338ba9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-dark-dialog-390.png",
+      "sha256": "44eebe6b17cde621cddf68109dd5c8152f6e06ab17462f066dd3d620bff0f545",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "05-comparison-390.png",
+      "sha256": "77432564734314b67f463529225b4484e4b76071626108795674822b7ed44728",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-run-390.png",
+      "sha256": "8c0493cdaab00a50019bc21b5248cec0f1f5d6d82ab7a52df676a71879390e07",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-heart-390.png",
+      "sha256": "92ea007f7f3535efb57c8ebe9c17b4f729c46081bca09ea9d2af75d10e85c34b",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-history-390.png",
+      "sha256": "2aff6d1b2f551c17dedf9adcb6db02ca38deda28b0cd584d123805aa0c5ab855",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-settings-390.png",
+      "sha256": "3cb842336119d640c9ec3d069de60041ea78a9963585f24d33fabc8580e58b9e",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-light-dialog-390.png",
+      "sha256": "bd47ecea2af2661d5d38bf3100dbbe9a05fe891d40fa0d070c3eabc426404c1d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-run-390.png",
+      "sha256": "ce615963d06156c918968014ba01a7a15ea4419babee3eb8af73cdc6fcb500da",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-heart-390.png",
+      "sha256": "00ec437b0f89c9763229449ffb8f13b5ba07df2700f524bfae35ba3ea4684a93",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-history-390.png",
+      "sha256": "9998a3db9ed019bf642c2b919af38650a047c892430e6cc15db0f28197dd6a10",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-settings-390.png",
+      "sha256": "bad66e37932a2f8ea9902064462f376b8a5653c6d6460de764656e6d7fd6242d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-dark-dialog-390.png",
+      "sha256": "c92075a0a42be685fd1f9984ca903bd64aa53de2bf580effabf73996b91ead64",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "06-comparison-390.png",
+      "sha256": "63418a4c10a8617278aaa7fc343eaf63bbc1e0e650012ad10821983cc7c3741f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-run-390.png",
+      "sha256": "0a7d53401a176294f51d97bc02828e0764f876edae218cd352d09597a16b2767",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-heart-390.png",
+      "sha256": "5ceeaefec08d61f58946d19bfbb844b33d464678aa47ba8adcff2e56d2abfb4d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-history-390.png",
+      "sha256": "cbdc2827e7a8f5bf9a5677327565ac5fe355f4382302350f315ae887141058f9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-settings-390.png",
+      "sha256": "47bb1c8c6885f240714cc5671ae1ff7f438e150b81b7975daea89cb345008825",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-light-dialog-390.png",
+      "sha256": "fb123bfba11af3a11bc981f5ba1c4a98bc8f6f70213de175a5ef885e7bcbc343",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-run-390.png",
+      "sha256": "d5212847bba91b5c1f922e475412d1a5a45947208b923b18b8f726087d8323d0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-heart-390.png",
+      "sha256": "a7d0f63d8479080c1f9e5c87df1bd0ce034b49644d70dc45f5b5e320c80c83b9",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-history-390.png",
+      "sha256": "a85190e8ba437759d6cf013f4bdbf5fa6907f77323255aa313e193d8c574312c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-settings-390.png",
+      "sha256": "a8fc1ebdea6deeb2ebc59eabf709d4e046609a8e455fbd17c56d2567f05f5236",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-dark-dialog-390.png",
+      "sha256": "e6e959ad3f1201f05a2a015991cc015131f40344d3efaebc82aedc615b9fb6da",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "07-comparison-390.png",
+      "sha256": "837cfe39b1fe3aed0278cdf2ea02563610f66e183b28966e484c8e87176be691",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-run-390.png",
+      "sha256": "ff087bf0ac1be9b7275fef1c365f9fd8d5d63809c9ef88a85e24c103df59d887",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-heart-390.png",
+      "sha256": "97d5654ac28fc7166ce01228d5203538614024c305c3b92263cfc7c02ab0cb09",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-history-390.png",
+      "sha256": "82b1306503dfcfd4a9a746c856f1cb9bb9f62e5ce3c84fbdee4fb7fd4949b56a",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-settings-390.png",
+      "sha256": "416b330ab8f50a29817e1bf3cd6365948168dbf07923caebe3ee1888c8dc8f07",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-light-dialog-390.png",
+      "sha256": "335e038a758eeb5888b089469f04870fa1d8597737554c5af009a2972f91b7cc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-run-390.png",
+      "sha256": "f8765f107b7cfff3d24159409bc9a0b21c23b7282066cb94db8d88d0035b2226",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-heart-390.png",
+      "sha256": "3e9a93cb9b0e320ca2224fdb29b79a572a90c3b4e668f813ed066050d9f3815f",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-history-390.png",
+      "sha256": "313b34136641f81cb7cf1b297b0364d33bdb7c4b6bcf99facc5adc267fe1beed",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-settings-390.png",
+      "sha256": "808087562ee0306b877f6a94023c08809df8c8f6107e2193b82b1d8566785b96",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-dark-dialog-390.png",
+      "sha256": "46ff6f17cb065fa66796fc1d7e8dba27cebb9be965f02a91ec48a5c646a124cc",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "08-comparison-390.png",
+      "sha256": "241f64d6faba160bcbb1b7875b8e8b72bd155d9823d1cdc991fb1e7bf8b95a0c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-run-390.png",
+      "sha256": "a208d043c0ef8d0c2625a0bb8d9ce8c9d70ccf872dacf102d5d4e5c954c7c216",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-heart-390.png",
+      "sha256": "cc3961c5763d2a2bcc58f0298b0f7beba196843c2be1e4b2c1da3be0dfc03ce8",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-history-390.png",
+      "sha256": "96c166173cecfa0fd03e7cfd72a8459206670584c770c734c0c14a50a3848b07",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-settings-390.png",
+      "sha256": "3d2701ea60b95826fc120991d45838e3b1203774c1f78af440f6e35e2e825599",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-light-dialog-390.png",
+      "sha256": "0aec22275e92a848b0a346588fa417fbaf1a6b98be2fb261db8ad550e705bad7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-run-390.png",
+      "sha256": "13408417a73b2956b00fdb8f7341d110eddb63a8e9ba2538dcdea1742287612d",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-heart-390.png",
+      "sha256": "322e21f3a4044f7910cc7ab94bada79b565a61f2f5e217f4437e154f4edb7810",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-history-390.png",
+      "sha256": "61696d5b89862642623bb29bbda960b6fbe4cab7d47ef90b09c787940a8abb24",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-settings-390.png",
+      "sha256": "006bebae9be7d5abbd30402fc544443f1c1cd0d144802d8e8009a8a3ab958e25",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-dark-dialog-390.png",
+      "sha256": "48d2305ee6010ef74212cb68a331b73374f8b274bc14d79b087a1b7cf5cdfc4c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "09-comparison-390.png",
+      "sha256": "4ee03fc1c8407e823189450dbbeff3dd78ecd3b70fe782046b13f19e0d14fef0",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-run-390.png",
+      "sha256": "7b4117535b1b8e255679383e6325a123cae6c97b29dba739e823c4f17f0d4d83",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-heart-390.png",
+      "sha256": "633ee3d10dc963a776de126b629d3b5aeb3238485770f86e61127776a1d3f554",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-history-390.png",
+      "sha256": "abc7690a31d0ad50aad85f53aaab2dbeae1ecd2d6c728d5d676d98b5e4af9232",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-settings-390.png",
+      "sha256": "49df18206f21454fa10701f3a7960ca359ad2598da797c9a109a74c606916cfa",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-light-dialog-390.png",
+      "sha256": "d5db1780c4cb2e04812b1ecf3330d1696fba9f26bc7c06fcd7fac23d0adb89b4",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-run-390.png",
+      "sha256": "0d7792e1ebb5b0ffb0537969fa38cedc24ff186f7fa8f34c6df3837da3d25ec2",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-heart-390.png",
+      "sha256": "c03db01edc7b63bf15116bfa1da029c6dcd185f668ba9b17cf9391c3b24b984c",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-history-390.png",
+      "sha256": "b88a519db364791aa17ced790e6f11e7e8501d524e3f62778aca51b254bfe6f5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-settings-390.png",
+      "sha256": "1c210df08545a3a8a8df0e1c508f8084ce284a0d00149a9404190f32336e56a7",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-dark-dialog-390.png",
+      "sha256": "d086281b6754558aa1e884a4868143e34fd6b425e95d590b351cdf7abbf8a7a5",
+      "source": "Playwright Chromium screenshot"
+    },
+    {
+      "name": "10-comparison-390.png",
+      "sha256": "44d99c98f8ef1a15ef774ee923b8116587da6b9606a0fa20fd292390f909914e",
+      "source": "Playwright Chromium screenshot"
+    }
+  ],
+  "passed": true
+}

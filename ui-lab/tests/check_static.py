@@ -67,3 +67,5 @@ changed += subprocess.check_output(['git','diff','--name-only'], cwd=REPO, text=
 for path in changed:
     assert path.startswith('ui-lab/') or path == '.github/workflows/p0-ui-lab-pages.yml', f'Isolation violation: {path}'
 print('PASS: HTML resources, ten themes, no runtime network/device API, documents, JS syntax, branch isolation')
+
+from check_tokens import data

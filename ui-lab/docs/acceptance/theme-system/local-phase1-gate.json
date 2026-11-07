@@ -1,0 +1,15 @@
+{
+  "phase": 1,
+  "status": "PASSED",
+  "scope": "local",
+  "sourceCommit": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+  "actionsRunId": null,
+  "url": "http://127.0.0.1:37589/",
+  "httpStatus": 200,
+  "regressionAssertions": 1303,
+  "appearanceAssertions": 31,
+  "themeAppearanceViewportCombinations": 60,
+  "screenshots": 330,
+  "browserVersion": "155.0.8059.79",
+  "nextPhaseAuthorized": false
+}
