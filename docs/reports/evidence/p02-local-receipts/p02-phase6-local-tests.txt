@@ -1,0 +1,11 @@
+......................................................From /tmp/tmpq8x23cqk/remote
+ * branch            main       -> FETCH_HEAD
+To /tmp/tmpq8x23cqk/remote.git
+ * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+From /tmp/tmpq8x23cqk/remote
+ * branch            main       -> FETCH_HEAD
+............
+----------------------------------------------------------------------
+Ran 66 tests in 0.667s
+
+OK

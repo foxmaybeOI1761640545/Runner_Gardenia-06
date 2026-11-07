@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "observed_at_utc": "2026-11-07T09:25:39.918638Z",
+  "heads": {
+    "design/p0-ui-lab": "76e4086c46ca91b8817256806ffb933dde072b19",
+    "feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+    "feature/p0-2-gps-ui": "1c575384530e80f028422875c60448c327b5ed9d",
+    "feature/p0-core-migration": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+    "main": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "workspace": {
+    "branch": "feature/p0-2-gps-ui",
+    "clean": true,
+    "untracked": 0,
+    "ignored_generated_files": 51,
+    "worktrees": 1,
+    "unpublished_unique_commits": 0
+  },
+  "root_gitignore_blob": "13408b12f92525c23c7722e3a69479a5cdc7c392",
+  "historical_archive": {
+    "commit": "1c575384530e80f028422875c60448c327b5ed9d",
+    "files": 2056,
+    "sorted_path_and_sha256_digest": "81ece4872ea7e558363d645ec96742de85bdc5e76c595499ff82b969c80912f2",
+    "mutable_index_exception": [
+      "docs/reports/README.md"
+    ]
+  },
+  "tags": {
+    "v0.1.0-rc1.6": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+    "v0.1.0-rc1.5": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+    "v0.1.0-rc1.4": "24aa0d7d36d244852e796cca6307936e34d989ed",
+    "test-p0-v0.1.0-p0.2": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "test-p0-v0.1.0-p0.1": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466"
+  },
+  "releases": [
+    {
+      "id": 436759328,
+      "tag": "test-p0-v0.1.0-p0.2",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 717852424,
+          "name": "build-info.json",
+          "size": 2817,
+          "digest": "sha256:c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7"
+        },
+        {
+          "id": 717852629,
+          "name": "RELEASE_NOTES.md",
+          "size": 1597,
+          "digest": "sha256:6430ac5451715730b270712e043a73b32e156c630be0ce0938b270ceef60304f"
+        },
+        {
+          "id": 717852464,
+          "name": "RunnerGardenia-P0-Release.apk",
+          "size": 2753061,
+          "digest": "sha256:48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046"
+        },
+        {
+          "id": 717852558,
+          "name": "runtime-smoke.json",
+          "size": 757,
+          "digest": "sha256:664c53004e272535e8a64f2bfccf3b2d02c0692ab8044328fe2320418538929d"
+        },
+        {
+          "id": 717852512,
+          "name": "SHA256SUMS",
+          "size": 96,
+          "digest": "sha256:fbb348dd055a64d936b7fac1ea221832c525519a38d2926b5b3039a03d80f34d"
+        },
+        {
+          "id": 717852593,
+          "name": "test-summary.json",
+          "size": 702,
+          "digest": "sha256:d7768a5f6ad8942498faebcf4330a7d92e6e44f7904811e7b8ba4c1edc8ceb1f"
+        }
+      ]
+    },
+    {
+      "id": 434907895,
+      "tag": "test-p0-v0.1.0-p0.1",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 712576218,
+          "name": "build-info.json",
+          "size": 2607,
+          "digest": "sha256:b0b7082ad2a9ea656c0e40fe2c0d1eee9996a2d666c4058be6f8ee7b89e1f2ee"
+        },
+        {
+          "id": 712576370,
+          "name": "P0_DELIVERY_REPORT.md",
+          "size": 7797,
+          "digest": "sha256:21fa47fb8cd7aa81dbb40f42a99f3dfaa0870db6d26b52c53e84d2f7aee936bf"
+        },
+        {
+          "id": 712576406,
+          "name": "P0_DEVICE_CHECKLIST.md",
+          "size": 6203,
+          "digest": "sha256:7cc3239bdf6601d5875089ea9e1e9962564a4ffbd26ecf2a01c86315b3e1e064"
+        },
+        {
+          "id": 712576255,
+          "name": "RunnerGardenia-P0-Release.apk",
+          "size": 2715993,
+          "digest": "sha256:94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0"
+        },
+        {
+          "id": 712576307,
+          "name": "runtime-smoke.json",
+          "size": 680,
+          "digest": "sha256:109bf34b7ff2c45598d796646848bda6c48b73567709092a3c283bc92f375fc0"
+        },
+        {
+          "id": 712576355,
+          "name": "SHA256SUMS.txt",
+          "size": 96,
+          "digest": "sha256:48ddcb76da5da22dc91b439700c2a01bc837ce81e5398a6b6536b2eb14421da8"
+        }
+      ]
+    },
+    {
+      "id": 434053067,
+      "tag": "v0.1.0-rc1.6",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 709849073,
+          "name": "build-info.json",
+          "size": 820,
+          "digest": "sha256:ca8747a9b0f63e7c23ffde00fce59997f1a149f2843181835bf52e70272e6958"
+        },
+        {
+          "id": 709849116,
+          "name": "runner-gardenia-v0.1.0-rc1.6-6771.apk",
+          "size": 11007368,
+          "digest": "sha256:102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f"
+        },
+        {
+          "id": 709849147,
+          "name": "SHA256SUMS",
+          "size": 104,
+          "digest": "sha256:8c75331935004be3d842c56f8961d8f4ef3c141f49dfb99b07be7f03c6327e3d"
+        }
+      ]
+    },
+    {
+      "id": 433333387,
+      "tag": "v0.1.0-rc1.5",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 707490316,
+          "name": "build-info.json",
+          "size": 820,
+          "digest": "sha256:4b657df8a9abfe690cbd73a09b7e4a7a97401c2836fbba924ff62ff54486e279"
+        },
+        {
+          "id": 707490369,
+          "name": "runner-gardenia-v0.1.0-rc1.5-6770.apk",
+          "size": 11007220,
+          "digest": "sha256:6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e"
+        },
+        {
+          "id": 707490440,
+          "name": "SHA256SUMS",
+          "size": 104,
+          "digest": "sha256:829b7e27c3561dc599bb6fd5144f477284673c10325d9dd747939ad2f6cd2ba8"
+        }
+      ]
+    },
+    {
+      "id": 433029650,
+      "tag": "v0.1.0-rc1.4",
+      "draft": false,
+      "prerelease": true,
+      "assets": [
+        {
+          "id": 706522328,
+          "name": "build-info.json",
+          "size": 768,
+          "digest": "sha256:bd82e2d6fbf1a53b0d40f832779d401a42994eeda19deac84e9f5fbec01acb5b"
+        },
+        {
+          "id": 706522369,
+          "name": "runner-gardenia-v0.1.0-rc1.4-6769.apk",
+          "size": 10967652,
+          "digest": "sha256:e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0"
+        },
+        {
+          "id": 706522455,
+          "name": "SHA256SUMS",
+          "size": 104,
+          "digest": "sha256:3a6db39cdcf4e4556d8ec89eaf212752ee59235b08958ec00cfcbf54fec46f9b"
+        }
+      ]
+    }
+  ],
+  "historical_artifacts_checked": [
+    13356596683,
+    13347802808,
+    13391757704,
+    13332512386,
+    13276545732,
+    13377528578,
+    13374664030,
+    13353517717,
+    13389102578,
+    13344694259,
+    13345348690,
+    13263821730,
+    13379308335,
+    13234423775,
+    13232583546,
+    13353865172,
+    13351591434,
+    13391716581,
+    13349999077,
+    13249960644,
+    13368934307,
+    13275534650,
+    13278496081,
+    13279853488,
+    13261638589,
+    13266100549,
+    13375050677,
+    13389688053,
+    13264093732,
+    13253724407,
+    13380137146,
+    13265581804,
+    13233572914,
+    13279900203,
+    13253852187,
+    13348414922,
+    13260959972,
+    13356585659,
+    13236455806,
+    13369718793,
+    13280235585,
+    13391120749,
+    13278305913,
+    13350217915,
+    13389073426,
+    13354960248,
+    13343253840,
+    13247299686,
+    13372128554,
+    13265179111,
+    13353005045,
+    13262668230,
+    13390005982,
+    13257594253,
+    13278193212,
+    13374111460,
+    13369139525,
+    13391017652,
+    13374943779,
+    13276120197,
+    13344567669,
+    13370489833,
+    13371489682,
+    13278943667,
+    13252923240,
+    13370790662
+  ],
+  "scope": "Only documentation, immutable evidence, standard-library tools and lightweight checks on P0.2/UI Lab. No APK build/sign/publication; no new branches/tags/releases."
+}

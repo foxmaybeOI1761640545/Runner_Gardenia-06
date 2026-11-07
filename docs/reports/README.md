@@ -43,3 +43,10 @@ Raw XML, screenshots and JSON are exact-byte content-addressed objects. [Each Ar
 - [Recovered rc1.5 final delivery report](evidence/codex-local/gardenia-final-delivery.md)
 - [Other Codex-only historical documents and provenance](evidence/codex-local/provenance.json)
 - [Verified public Release assets](evidence/releases/)
+
+## Project backup implementation
+
+- [Original P0.1 merged manifests](evidence/p0-1-manifests/SOURCE.md)
+- [Additional original local P0.2 receipts](evidence/p02-local-receipts/README.md)
+- [Recovery provenance and explicit exclusions](backup/RECOVERED_SOURCES.json)
+- [This implementation baseline](backup/IMPLEMENTATION_BASELINE.json) and [stage 0–1 checks](backup/STAGE_1_ACCEPTANCE.md).

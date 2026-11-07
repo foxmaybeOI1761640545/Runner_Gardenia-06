@@ -1,0 +1,11 @@
+............................................From /tmp/tmpr2liz26v/remote
+ * branch            main       -> FETCH_HEAD
+To /tmp/tmpr2liz26v/remote.git
+ * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+From /tmp/tmpr2liz26v/remote
+ * branch            main       -> FETCH_HEAD
+.......
+----------------------------------------------------------------------
+Ran 51 tests in 0.615s
+
+OK

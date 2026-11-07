@@ -1,0 +1,11 @@
+........................................From /tmp/tmpwkbdezl7/remote
+ * branch            main       -> FETCH_HEAD
+To /tmp/tmpwkbdezl7/remote.git
+ * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+From /tmp/tmpwkbdezl7/remote
+ * branch            main       -> FETCH_HEAD
+.......
+----------------------------------------------------------------------
+Ran 47 tests in 0.472s
+
+OK

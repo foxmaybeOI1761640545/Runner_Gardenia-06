@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="6772"
+    android:versionName="v0.1.0-p0.1"
+    android:installLocation="0"
+    android:compileSdkVersion="37"
+    android:compileSdkVersionCodename="17"
+    package="com.fox.runner.debug"
+    platformBuildVersionCode="37"
+    platformBuildVersionName="17">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="37" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_LOCATION"
+        android:minSdkVersion="34" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"
+        android:minSdkVersion="34" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:minSdkVersion="31"
+        android:usesPermissionFlags="0x10000" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        android:minSdkVersion="31" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:minSdkVersion="33" />
+
+    <uses-permission
+        android:name="android.permission.health.WRITE_EXERCISE" />
+
+    <uses-permission
+        android:name="android.permission.health.WRITE_EXERCISE_ROUTE" />
+
+    <uses-permission
+        android:name="android.permission.health.WRITE_DISTANCE" />
+
+    <uses-permission
+        android:name="android.permission.health.WRITE_ELEVATION_GAINED" />
+
+    <uses-permission
+        android:name="android.permission.health.WRITE_SPEED" />
+
+    <queries>
+
+        <intent>
+
+            <action
+                android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+
+        <package
+            android:name="com.google.android.apps.healthdata" />
+
+        <intent>
+
+            <action
+                android:name="android.media.browse.MediaBrowserService" />
+        </intent>
+    </queries>
+
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission
+        android:name="com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="0x2" />
+
+    <uses-permission
+        android:name="com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:theme="@ref/0x7f12013a"
+        android:label="@ref/0x7f110246"
+        android:icon="@ref/0x7f0800f6"
+        android:name="de.dennisguse.opentracks.Startup"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@ref/0x7f140009"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:hasFragileUserData="true"
+        android:dataExtractionRules="@ref/0x7f14000a"
+        android:localeConfig="@ref/0x7f140000"
+        android:enableOnBackInvokedCallback="true">
+
+        <activity
+            android:theme="@ref/0x7f120231"
+            android:name="de.dennisguse.opentracks.publicapi.StartRecording"
+            android:exported="true">
+
+            <intent-filter>
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@ref/0x7f120231"
+            android:name="de.dennisguse.opentracks.publicapi.StopRecording"
+            android:exported="true">
+
+            <intent-filter>
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@ref/0x7f120231"
+            android:name="de.dennisguse.opentracks.publicapi.CreateMarker"
+            android:exported="true">
+
+            <intent-filter>
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@ref/0x7f120231"
+            android:name="de.dennisguse.opentracks.introduction.IntroductionActivity"
+            android:exported="true"
+            android:launchMode="1">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@ref/0x7f140015" />
+        </activity>
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+            android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0HistoryActivity"
+            android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.AboutActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.HealthConnectPermissionsRationaleActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="de.dennisguse.opentracks.ViewPermissionUsageActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE"
+            android:exported="true"
+            android:targetActivity="de.dennisguse.opentracks.HealthConnectPermissionsRationaleActivity">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+
+                <category
+                    android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.HealthConnect$Settings" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.HealthConnect$ConfigurePermissions" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.HealthConnect$ExportAll" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.HelpActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.importer.DirectoryChooserActivity$ImportDirectoryChooserActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.importer.ImportActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <action
+                    android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="application/gpx+xml" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <action
+                    android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="application/gpx" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:mimeType="*/*" />
+
+                <data
+                    android:pathPattern=".*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:pathPattern=".*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.gpx" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <action
+                    android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="application/vnd.google-earth.kmz" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:mimeType="*/*" />
+
+                <data
+                    android:pathPattern=".*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:pathPattern=".*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kmz" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <action
+                    android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="application/vnd.google-earth.kml+xml" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:mimeType="*/*" />
+
+                <data
+                    android:pathPattern=".*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+            </intent-filter>
+
+            <intent-filter
+                android:label="@ref/0x7f110070"
+                android:priority="50">
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <action
+                    android:name="android.intent.action.SEND" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="data" />
+
+                <data
+                    android:host="*" />
+
+                <data
+                    android:pathPattern=".*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+
+                <data
+                    android:pathPattern=".*\..*\..*\..*\..*\..*\..*\..*\..*\..*\.kml" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="de.dennisguse.opentracks.publicapi.ShowMarkerActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="com.fox.runner.debug.MarkerDetails" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="de.dennisguse.opentracks.publicapi.CreateMarkerActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="com.fox.runner.debug.CreateMarker" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="de.dennisguse.opentracks.ui.markers.MarkerDetailActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.ui.markers.MarkerEditActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.ui.markers.MarkerListActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.TrackListActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.TrackRecordedActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.TrackStoppedActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.TrackRecordingActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.TrackEditActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.importer.DirectoryChooserActivity$ExportDirectoryChooserActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.importer.DirectoryChooserActivity$ExportDirectoryChooserOneFileActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.importer.DirectoryChooserActivity$DefaultTrackExportDirectoryChooserActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.io.file.exporter.ExportActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.SettingsActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.SettingsCustomLayoutListActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.settings.SettingsCustomLayoutEditActivity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.ShowErrorActivity"
+            android:exported="false"
+            android:process=":crash"
+            android:finishOnTaskLaunch="true"
+            android:excludeFromRecents="true"
+            android:launchMode="3" />
+
+        <provider
+            android:name="de.dennisguse.opentracks.data.ShareContentProvider"
+            android:exported="false"
+            android:authorities="com.fox.runner.debug.content"
+            android:grantUriPermissions="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.fox.runner.debug.fileprovider"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@ref/0x7f140003" />
+        </provider>
+
+        <service
+            android:label="@ref/0x7f110266"
+            android:icon="@ref/0x7f0800fa"
+            android:name="de.dennisguse.opentracks.services.TrackRecordingService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="0x18" />
+
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.fox.runner.debug.androidx-startup">
+
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@ref/0x7f050008"
+            android:exported="true"
+            android:directBootAware="false" />
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@ref/0x7f050007"
+            android:exported="false"
+            android:directBootAware="false" />
+
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false" />
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
