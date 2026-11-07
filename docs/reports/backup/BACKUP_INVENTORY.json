@@ -2,7 +2,7 @@
   "schema_version": 1,
   "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
   "branch": "feature/p0-2-gps-ui",
-  "updated_at_utc": "2026-11-07T09:56:39.437478Z",
+  "updated_at_utc": "2026-11-07T10:00:41.151560Z",
   "scope": "11 new exact-byte originals and 6 immutable stage-1 provenance files. Existing 2056-file archive remains covered by original manifests/verify_report_archive.py; no duplicate inventory. Mutable indexes, this self-referential inventory and future reports excluded.",
   "files": [
     {
@@ -344,6 +344,25 @@
         "actions_run_id": null,
         "artifact_id": null,
         "origin": "Full local helper regression executed on the clean committed stage4 code before archiving this stdout/stderr receipt. Isolated temporary Git fixtures do not modify project refs.",
+        "commit_unavailable_reason": null
+      }
+    },
+    {
+      "path": "docs/reports/backup/validation/local-helper-tests-113.txt",
+      "bytes": 15746,
+      "sha256": "48bab4cea37c136bacfa22ac72af0150b4056204a181ce3a667d84b6adab5b80",
+      "branch": "feature/p0-2-gps-ui",
+      "archived_at_utc": "2026-11-07T10:00:41.151560Z",
+      "archive_type": "LOCAL_HELPER_TEST_RECEIPT",
+      "verification": "VERIFIED",
+      "source": {
+        "original_name": "runner-backup-final-tests.txt",
+        "original_path": "runner-backup-final-tests.txt",
+        "branch": "feature/p0-2-gps-ui",
+        "commit_sha": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+        "actions_run_id": null,
+        "artifact_id": null,
+        "origin": "Local full 113-test final regression on committed tooling; only untracked verification documentation was pending. Separate from the prior stage4 111-test receipt.",
         "commit_unavailable_reason": null
       }
     }

@@ -1,0 +1,451 @@
+{
+  "status": "PASSED",
+  "observed_at_utc": "2026-11-07T09:59:48.819405Z",
+  "heads_at_verification": {
+    "design/p0-ui-lab": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+    "feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+    "feature/p0-2-gps-ui": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+    "feature/p0-core-migration": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+    "main": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "scope": "Actual GitHub Blob bytes for every changed file through stage4; final report commit follows and will be independently checked after push. Not a self-referential final-commit claim.",
+  "files": [
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": ".github/tests/test_backup_inventory.py",
+      "blob": "750a4eec0074674fb15fb5104816521c93715040",
+      "git_change": "A",
+      "bytes": 6627,
+      "sha256": "ded864cca72b2f837f403699ac2780a2e49ea2661213626db78a91908d9c60b0",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": ".github/tests/test_workspace_sync.py",
+      "blob": "7786618d5120cc2fd63f9c7a4cddf22ada4acaab",
+      "git_change": "A",
+      "bytes": 4695,
+      "sha256": "f6bd576d233ce3ba7ce049168606ffb95bfd6738132069f1028cbeda20455662",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": ".github/workflows/backup-integrity.yml",
+      "blob": "64d693d4dc050d1be009d690a5ecc2d7fb3d1484",
+      "git_change": "A",
+      "bytes": 1625,
+      "sha256": "eadef25db280c0e9436bb6fe6f312b534a1ed307ecda41b415c6480ba6ea1b68",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/BRANCH_CATALOG.md",
+      "blob": "0bdcd45011bc126014336eb975cc3765f7504e27",
+      "git_change": "A",
+      "bytes": 8518,
+      "sha256": "2babd7b6a74ecb04338556b005220d7d083726481214e36f5bd950f24e6e2535",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/BRANCH_GOVERNANCE.md",
+      "blob": "d7f78d80e5c640b665f2024aadae14e3e0b0bbba",
+      "git_change": "A",
+      "bytes": 4829,
+      "sha256": "9117da999ac4fdd963f0d460779c9c4ce2b21697c4d2bc46db1d4ef648c9534a",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/README.md",
+      "blob": "239c59eabdaed516bd58ee738d379c3a533d7f53",
+      "git_change": "M",
+      "bytes": 6783,
+      "sha256": "cb609c1a4e4634499e8a6c16ddca407ace90d2060c011d8114d19d2bafa7fead",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/BACKUP_INVENTORY.json",
+      "blob": "110d0c788766df54ca1e70adc7a04446f7ec485b",
+      "git_change": "A",
+      "bytes": 15989,
+      "sha256": "2c595e6f8f7489232b2d9a01b80bd9a72f75fd4a45227e9581b181fe2e3df89c",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/BRANCH_SNAPSHOT.json",
+      "blob": "df5b6b47d83c4a98a7614f3871dafd518da9b2e3",
+      "git_change": "A",
+      "bytes": 3925,
+      "sha256": "d3ca7d62113334d93d224b0ddcd7648a9716afa6678313e4599e869b74de97c6",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/IMPLEMENTATION_BASELINE.json",
+      "blob": "f1b50024e77fb2a4b1ea9f57942580bdb365b538",
+      "git_change": "A",
+      "bytes": 7825,
+      "sha256": "d7c04c714239ed6e45f859edcedd3399eb45f735abd1be67cbec7dc2766ab338",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/RECOVERED_SOURCES.json",
+      "blob": "1df822d7a7115223b28ac9771bed02730b2f05e8",
+      "git_change": "A",
+      "bytes": 12052,
+      "sha256": "715f3ca2c6dd1ae09e687d70c8eb3ada7a175f405490ba55685c22dbfb1b224e",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/RESTORE_AND_VERIFY.md",
+      "blob": "3701272047a9ac4e858815bc88ecddd9ba268193",
+      "git_change": "A",
+      "bytes": 6655,
+      "sha256": "e9ee7dd08f31e5b43fd34e52f3554f8847fd36913fdd5ec522a43a7e38c35f82",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/STAGE_1_ACCEPTANCE.md",
+      "blob": "ddd957311e6bc6762524cf4cf5c83a153ed2d20a",
+      "git_change": "A",
+      "bytes": 1030,
+      "sha256": "aceac8d02c388a83da3afa360fe32347e52cd8eb83e14dea0d27db2cc7c67783",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/STAGE_2_ACCEPTANCE.md",
+      "blob": "c87d9814f49c53f09b1273dd128ac82b35e9ae81",
+      "git_change": "A",
+      "bytes": 1312,
+      "sha256": "1cf948dd60144794df13d3d1540e7ecc6e0e96ab2c1e705fc823ca782046616a",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/STAGE_4_ACCEPTANCE.md",
+      "blob": "1cfa90efc93c3f82b8791aa5cf208855557430cf",
+      "git_change": "A",
+      "bytes": 2287,
+      "sha256": "3497ad96e7ea75a9fa1ef0ea66a3ce52b2f5def38c92a1232cdc91e6d0340a4c",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/WORKSPACE_SYNC_CHECKLIST.md",
+      "blob": "41247d08e5cd44e358993e980ffacb0dc8325301",
+      "git_change": "A",
+      "bytes": 4020,
+      "sha256": "8f6fe89b6ef1b32896deefdd2195d5954478003f6ee276b7db47324fa5aa1fba",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/backup/validation/local-helper-tests-111.txt",
+      "blob": "b45ab89879b080a132ec9008252acd6f7dc939a6",
+      "git_change": "A",
+      "bytes": 15476,
+      "sha256": "6964a9f1117f27288bedb14fa6decea1e8a148242af35af7b468570070c260c1",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p0-1-manifests/SHA256SUMS",
+      "blob": "1a8d0d139368017a000392151fb8913349844f59",
+      "git_change": "A",
+      "bytes": 172,
+      "sha256": "b6a70042f08d47511f37c28b1df1e5f086ff72b8210bd29db1b31cd074a6ea54",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p0-1-manifests/SOURCE.md",
+      "blob": "7ecdc2c284da1a6e226ace2d9b56b80de7547c60",
+      "git_change": "A",
+      "bytes": 743,
+      "sha256": "3daf98714553125d8de8662d1255019b942e37c1c1a9d61d1f0575e52c7f6418",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p0-1-manifests/debug-manifest.xml",
+      "blob": "3623b859d96ff5faa63601ad81b44350509890cc",
+      "git_change": "A",
+      "bytes": 29156,
+      "sha256": "28041227a94df05d7de5dad09d37b3f405f51e4afaf8bc0455b1f6a31c524461",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p0-1-manifests/release-manifest.xml",
+      "blob": "ded1f4d75d958aced7dc8fcc66934a3bb838828d",
+      "git_change": "A",
+      "bytes": 5576,
+      "sha256": "c3b0fa84a4eb36aafc82dcf23b2b2be58cd84d82f0b5dbeda70d5443d0936d45",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/README.md",
+      "blob": "85be5f10aea6f682ca17ead01625c5d1de316baa",
+      "git_change": "A",
+      "bytes": 656,
+      "sha256": "97b39e8f68675a8a3e7dbd60c43b4e1d62a834e884f8adc72e8abb08b32c22bf",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-archive-remote-final.json",
+      "blob": "629013e76575842e3b060096c175ab21c22884b8",
+      "git_change": "A",
+      "bytes": 219,
+      "sha256": "545201940f85390cd7749dfcb65be53813cd041ec05572418a835511d8adb361",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-archive-remote.json",
+      "blob": "dbc9cf44d0c6812f1bb3f076daef3bb3e358f9eb",
+      "git_change": "A",
+      "bytes": 219,
+      "sha256": "e0ba81a0d0b190893a2188201ee74eb3d694ebde3c84b3db55b6261b856e37fe",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-phase6-local-tests.txt",
+      "blob": "dfdf06cf37eafd20aac5e4e22deb5aca5aa698c2",
+      "git_change": "A",
+      "bytes": 396,
+      "sha256": "d58f5e9bd31ed51463125dc2cd240340cc7eca44a4cfb273636c47300c9d84ac",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-recovery-local-tests.txt",
+      "blob": "8ad4bad4892db7bd78a6fdb5e4f607b2333cdd0d",
+      "git_change": "A",
+      "bytes": 401,
+      "sha256": "45a1f383b5b6410a6580c7ad4712dcecd5f04d4f58534456d9e48367221df375",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage1-remote.json",
+      "blob": "c7240ea1fe1290505f9dd7d43d823d0725cbc741",
+      "git_change": "A",
+      "bytes": 219,
+      "sha256": "9a7a0c6dde759e62ff2387c320786254b9dc6b7c1b30e242888222f9931de9e2",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage2-remote.json",
+      "blob": "938b07ef73efb3a3c9daa3fe995f2b967b7e6ab9",
+      "git_change": "A",
+      "bytes": 219,
+      "sha256": "e5e157b26becf8e596a10af7e82c4803834a1a3bdf34c9c7a6a5857465043323",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage3-host-tests.txt",
+      "blob": "7349194b3b9c37a25039f98c628c2b5d24903f17",
+      "git_change": "A",
+      "bytes": 377,
+      "sha256": "1104f99e97bbb4c15f196fc3e1dfb6e3748177e7550657451b0fff0cbe4c8ba9",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage3-remote.json",
+      "blob": "4c3d12ae2475105e1c37266c34dcb756da868e3f",
+      "git_change": "A",
+      "bytes": 219,
+      "sha256": "c2f12ed71966de0a5518408d2fe156b26f74879b24058ed1cd4e123fe80ec2ac",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "docs/reports/evidence/p02-local-receipts/p02-stage4-host-tests.txt",
+      "blob": "0435f5b20ee43ef8cd23e8c2271ae846fb462762",
+      "git_change": "A",
+      "bytes": 381,
+      "sha256": "a6728fbf5126c8c9e624e8bc3edaff41b9baa5e7f0ba1da0f24be1d89a65a89d",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "tools/check_workspace_sync.py",
+      "blob": "8dc6fd181a60dfe0f7ce65cd7d5dc27c82fe10d7",
+      "git_change": "A",
+      "bytes": 5361,
+      "sha256": "029e6897a216e8b4b05c6f5e7be4d2bb6f4d13134dcb3afbcb393ca5388ff418",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "feature/p0-2-gps-ui",
+      "snapshot": "9529021d7c0794d63546f3b57fa2d4911d1804c7",
+      "path": "tools/verify_backup_inventory.py",
+      "blob": "ea5d97edba6ef00a973ba72bbfd6a4a0d0724326",
+      "git_change": "A",
+      "bytes": 7564,
+      "sha256": "2d53c8001b56523a4d70ab26878fc044bfa0a927ea1fb3891b05b094948093b1",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "design/p0-ui-lab",
+      "snapshot": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "path": "ui-lab/README.md",
+      "blob": "529b5fb72eca22ca394885013a249496bc5d4139",
+      "git_change": "M",
+      "bytes": 5474,
+      "sha256": "849535a1c69f04bdc5195d7c5e4d2b89b87695ef2df220f0f704472b399b1757",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "design/p0-ui-lab",
+      "snapshot": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "path": "ui-lab/docs/acceptance/2026-11-07-run-42354349622-SHA256SUMS",
+      "blob": "8fc7ad8e38365390e1029bcf347e46af418b1228",
+      "git_change": "A",
+      "bytes": 211,
+      "sha256": "2d0239d35f04fba8a85e867090dd8fc2d1da1f0d9029c3e1400a4704de753210",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "design/p0-ui-lab",
+      "snapshot": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "path": "ui-lab/docs/acceptance/2026-11-07-run-42354349622-results.json",
+      "blob": "bee291f1174e355ff55eb8655b30e647b5c72a84",
+      "git_change": "A",
+      "bytes": 69537,
+      "sha256": "6718a26809872096a9e5e1df8c6e7039da8189f2e59b9d379b6098b77b5e9d28",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "design/p0-ui-lab",
+      "snapshot": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "path": "ui-lab/docs/acceptance/2026-11-07-run-42354349622-source.json",
+      "blob": "d77e375cc5764dcb61d139864459963593645e06",
+      "git_change": "A",
+      "bytes": 36496,
+      "sha256": "81726225dec190dbb32927b3acd631597e471af4473bce7ef1e5d0f85b955404",
+      "remote_bytes_match": true
+    },
+    {
+      "branch": "design/p0-ui-lab",
+      "snapshot": "335da1bbccb5216715e99d15175f34e5aa1dbfec",
+      "path": "ui-lab/docs/acceptance/2026-11-07-run-42354349622.md",
+      "blob": "3ef3e999f5e99cad9562a9f015b29c50fbf16336",
+      "git_change": "A",
+      "bytes": 3147,
+      "sha256": "a12386a4400326ef0c7f1bbc64bf4a1a003f85689f5d6abceb6256c8e0b8b9f4",
+      "remote_bytes_match": true
+    }
+  ],
+  "change_counts_before_final_report": {
+    "feature/p0-2-gps-ui": {
+      "new_files": 31,
+      "modified_files": 1
+    },
+    "design/p0-ui-lab": {
+      "new_files": 4,
+      "modified_files": 1
+    }
+  },
+  "inventory_entries": 18,
+  "inventory_remote_hashes_verified": true,
+  "historical_archive_files": 2056,
+  "historical_payloads_and_reports_unchanged": 2055,
+  "historical_mutable_index_only": "docs/reports/README.md",
+  "original_ui_png_count": 33,
+  "original_ui_png_and_provenance_unchanged": true,
+  "protected_branches_unchanged": true,
+  "tag_objects_and_targets_unchanged": true,
+  "release_asset_metadata_unchanged": true,
+  "branch_count": 5,
+  "tag_count": 5,
+  "release_count": 5,
+  "only_backup_archive_pages_runs_since_baseline": true,
+  "new_runs": [
+    {
+      "id": 42361833567,
+      "name": "Project backup integrity",
+      "sha": "dd65eeb387b018d27f9cf9b4f705d6e30cad98c2",
+      "conclusion": "success"
+    },
+    {
+      "id": 42361833544,
+      "name": "P0.2 historical archive verification",
+      "sha": "dd65eeb387b018d27f9cf9b4f705d6e30cad98c2",
+      "conclusion": "success"
+    },
+    {
+      "id": 42360254448,
+      "name": "P0 UI Lab Pages",
+      "sha": "a20f0afe764ca71f9bf269ed25789081bf1c9f70",
+      "conclusion": "success"
+    },
+    {
+      "id": 42360049929,
+      "name": "Project backup integrity",
+      "sha": "c787de60025a5cf435131babc062c1c17602e9db",
+      "conclusion": "success"
+    },
+    {
+      "id": 42360049863,
+      "name": "P0.2 historical archive verification",
+      "sha": "c787de60025a5cf435131babc062c1c17602e9db",
+      "conclusion": "success"
+    },
+    {
+      "id": 42359725754,
+      "name": "P0.2 historical archive verification",
+      "sha": "31bdff76d90722cf59142fff95fd7349f3235897",
+      "conclusion": "success"
+    }
+  ],
+  "unrecoverable_selected_files": 0,
+  "originals_recovered": 12,
+  "originals_newly_generated": 1,
+  "notes_intentionally_not_archived": 2,
+  "independent_offsite_backup": false
+}
