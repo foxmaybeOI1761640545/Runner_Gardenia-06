@@ -1,0 +1,20 @@
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: FATAL EXCEPTION: UiAutomation
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: PID: 2336
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: java.lang.NullPointerException: Attempt to read from field 'android.os.MessageQueue android.os.Looper.mQueue' on a null object reference in method 'void android.os.Handler.<init>(android.os.Looper, android.os.Handler$Callback, boolean, boolean)'
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Handler.<init>(Handler.java:265)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Handler.<init>(Handler.java:258)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Handler.<init>(Handler.java:163)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.view.accessibility.AccessibilityInteractionClient.<init>(AccessibilityInteractionClient.java:171)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.view.accessibility.AccessibilityInteractionClient.getInstanceForThread(AccessibilityInteractionClient.java:194)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.view.accessibility.AccessibilityInteractionClient.getInstance(AccessibilityInteractionClient.java:209)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.lambda$init$0(AccessibilityService.java:2944)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper.$r8$lambda$IXKYfPr3TMC6dAUB0YeaTFDCleg(Unknown Source:0)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.accessibilityservice.AccessibilityService$IAccessibilityServiceClientWrapper$$ExternalSyntheticLambda12.run(D8$$SyntheticClass:0)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+11-08 10:53:34.024  2336  2347 E AndroidRuntime: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+11-08 10:53:34.025   540   540 W IPCThreadState: Sending oneway calls to frozen process.
+11-08 10:53:34.027   540   540 D BatterySaverPolicy: accessibility changed to true, updating policy.
+11-08 10:53:34.032   540  1440 I DropBoxManagerService: add tag=system_server_crash isTagEnabled=true flags=0x2

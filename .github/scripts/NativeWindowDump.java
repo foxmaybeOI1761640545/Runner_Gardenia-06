@@ -44,6 +44,8 @@ public final class NativeWindowDump {
     }
     public static void main(String[] args) throws Exception {
         if(args.length!=1)throw new IllegalArgumentException("Expected output XML path");
+        // Android 15 AccessibilityInteractionClient also creates a main-looper Handler.
+        Looper.prepareMainLooper();
         HandlerThread callbacks=new HandlerThread("gardenia-native-window");callbacks.start();
         UiAutomation automation=null;
         try {
