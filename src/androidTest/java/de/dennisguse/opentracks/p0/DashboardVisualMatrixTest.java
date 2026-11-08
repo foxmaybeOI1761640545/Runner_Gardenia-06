@@ -27,11 +27,11 @@ public class DashboardVisualMatrixTest {
  private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
  @Before public void before()throws Exception{
   if(Build.VERSION.SDK_INT<35)throw new AssertionError("API35 native visual matrix required");
-  family=PreferencesUtils.getGardeniaTheme();night=SystemThemeTestUtils.savedMode();size=SystemThemeTestUtils.shell("wm size");density=SystemThemeTestUtils.shell("wm density");font=SystemThemeTestUtils.shell("settings get system font_scale");localeTags=context.getSystemService(android.app.LocaleManager.class).getApplicationLocales().toLanguageTags();
-  for(int i=0;i<scales.length;i++){scaleValues[i]=SystemThemeTestUtils.shell("settings get global "+scales[i]);SystemThemeTestUtils.shell("settings put global "+scales[i]+" 0");}SystemThemeTestUtils.shell("settings put system font_scale 1.0");context.getSystemService(android.app.LocaleManager.class).setApplicationLocales(android.os.LocaleList.forLanguageTags("zh-CN"));
+  family=PreferencesUtils.getGardeniaTheme();night=SystemThemeTestUtils.savedMode();size=SystemThemeTestUtils.shell("wm size");density=SystemThemeTestUtils.shell("wm density");font=SystemThemeTestUtils.shell("settings get system font_scale");
+  for(int i=0;i<scales.length;i++){scaleValues[i]=SystemThemeTestUtils.shell("settings get global "+scales[i]);SystemThemeTestUtils.shell("settings put global "+scales[i]+" 0");}SystemThemeTestUtils.shell("settings put system font_scale 1.0");
  }
  @After public void after()throws Exception{
-  PreferencesUtils.setGardeniaTheme(family);SystemThemeTestUtils.restore(night);context.getSystemService(android.app.LocaleManager.class).setApplicationLocales(android.os.LocaleList.forLanguageTags(localeTags));SystemThemeTestUtils.shell("settings put system font_scale "+(font.equals("null")?"1.0":font));
+  PreferencesUtils.setGardeniaTheme(family);SystemThemeTestUtils.restore(night);SystemThemeTestUtils.shell("settings put system font_scale "+(font.equals("null")?"1.0":font));
   for(String[] r:new String[][]{{"size",size},{"density",density}}){var match=java.util.regex.Pattern.compile("Override (?:size|density): ([^\\r\\n]+)").matcher(r[1]);SystemThemeTestUtils.shell("wm "+r[0]+" "+(match.find()?match.group(1).trim():"reset"));}
   for(int i=0;i<scales.length;i++)SystemThemeTestUtils.shell(scaleValues[i].equals("null")?"settings delete global "+scales[i]:"settings put global "+scales[i]+" "+scaleValues[i]);
  }
