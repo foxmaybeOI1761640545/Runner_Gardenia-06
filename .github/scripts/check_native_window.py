@@ -30,12 +30,20 @@ try:
         device('shell','input','keyevent','3');time.sleep(2)
         # Two separate shell processes must each produce a new, nonempty actual tree.
         for i in range(2):
-            path=f'/sdcard/gardenia-window-{i}.xml';device('shell','rm','-f',path)
-            status=device('shell','CLASSPATH=/data/local/tmp/gardenia-native-window.jar','app_process','/system/bin','NativeWindowDump',path,timeout=20)
-            if 'FRESH_NATIVE_WINDOW '+path not in status:raise ValueError('Fresh marker missing')
-            raw=device('shell','cat',path);root=ET.fromstring(raw)
-            nodes=list(root.iter('node'))
-            if len(nodes)<3 or not any(n.get('package')=='com.android.launcher3' for n in nodes):raise ValueError('Actual visible Launcher tree missing')
+            path=f'/sdcard/gardenia-window-{i}.xml';deadline=time.monotonic()+30;attempt=0
+            while True:
+                attempt+=1;device('shell','rm','-f',path)
+                status=device('shell','CLASSPATH=/data/local/tmp/gardenia-native-window.jar','app_process','/system/bin','NativeWindowDump',path,timeout=20)
+                if 'FRESH_NATIVE_WINDOW '+path not in status:raise ValueError('Fresh marker missing')
+                raw=device('shell','cat',path);root=ET.fromstring(raw);nodes=list(root.iter('node'))
+                # Boot completion precedes Launcher layout/first-run readiness on a fresh AVD.
+                # Keep every actual attempt, including failures; never reuse an older window.
+                (out/f'window-{i}-attempt-{attempt}.xml').write_text(raw)
+                focused=device('shell','dumpsys','window');(out/f'focus-{i}.txt').write_text(focused)
+                launcher=len(nodes)>=3 and any(n.get('package')=='com.android.launcher3' for n in nodes) and any('com.android.launcher3' in line for line in focused.splitlines() if 'mCurrentFocus=' in line)
+                if launcher:break
+                if time.monotonic()>=deadline:raise ValueError('Actual visible focused Launcher tree missing after boot readiness wait')
+                device('shell','input','keyevent','3');time.sleep(1)
             if not any(n.get('resource-id') for n in nodes):raise ValueError('Native view IDs missing')
             (out/f'window-{i}.xml').write_text(raw)
         queries=[]
