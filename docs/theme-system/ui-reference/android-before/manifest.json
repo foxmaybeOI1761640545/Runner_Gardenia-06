@@ -1,0 +1,144 @@
+{
+  "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "evaluationRunId": "42466614968",
+  "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+  "screenshots": [
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{da084f4 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-precision-light-home.xml",
+      "nativeWindowSha256": "1fc00fe39b918e8896b642bef7e586527c8e09dbacac6a04efbeae154cc3f3ec",
+      "file": "p03-release-precision-light-home.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "home",
+      "sha256": "3c9a79a2bceafb1a2f6c9bdf352ccf0c6414804d66e863b41d27b51e8b9e356e",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        243,
+        246,
+        242
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{4942dba u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-precision-dark-home.xml",
+      "nativeWindowSha256": "1fc00fe39b918e8896b642bef7e586527c8e09dbacac6a04efbeae154cc3f3ec",
+      "file": "p03-release-precision-dark-home.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "home",
+      "sha256": "b5ee8b5e947e841a65ee6e9bef96f473c8a9cac79f30699465c3ba916ce847e6",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{5dea21a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-quiet-light-home.xml",
+      "nativeWindowSha256": "56cb6e9365a07c007970c304a2849def23c4a4a0a152f8005cbf868eef4e2373",
+      "file": "p03-release-quiet-light-home.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "home",
+      "sha256": "32b1b4fb5022c55fa76380a40d19dccd3b808bf1f30ca91bc8e04fe4f391d5f7",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        250,
+        251,
+        249
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f476138 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-quiet-dark-home.xml",
+      "nativeWindowSha256": "56cb6e9365a07c007970c304a2849def23c4a4a0a152f8005cbf868eef4e2373",
+      "file": "p03-release-quiet-dark-home.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "home",
+      "sha256": "8f54a149464498eba78fd89d6d014919ce463ce447554fc42946d8d743a5f6a1",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        17,
+        30,
+        24
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{508a6e5 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-explorer-light-home.xml",
+      "nativeWindowSha256": "31aac7d1b00fe909e349a0ea3d39a1bc3c52b314f3766fed608ad8abfd3c97bf",
+      "file": "p03-release-explorer-light-home.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "home",
+      "sha256": "ce6721330230694ce89868a911fe69aee1e085bc9253880adad0d9c4aae01894",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        240,
+        238,
+        226
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{4a0d027 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-explorer-dark-home.xml",
+      "nativeWindowSha256": "31aac7d1b00fe909e349a0ea3d39a1bc3c52b314f3766fed608ad8abfd3c97bf",
+      "file": "p03-release-explorer-dark-home.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "home",
+      "sha256": "53a14518beedb0ab189baaa9829b01ed10c16c253276e17a671cdd261df085b1",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        30,
+        24
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{227790f u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-neon-light-home.xml",
+      "nativeWindowSha256": "85229306880bd40bcc2acc74db90b48c3c46627eeb06dc60c7e66980944ec031",
+      "file": "p03-release-neon-light-home.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "home",
+      "sha256": "b6ff4918b05fc89c9682437af2bc174e4a9efecff6c426c14c31158625cfb823",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        244,
+        240,
+        252
+      ]
+    },
+    {
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b03c77b u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "nativeWindowFile": "p03-release-neon-dark-home.xml",
+      "nativeWindowSha256": "85229306880bd40bcc2acc74db90b48c3c46627eeb06dc60c7e66980944ec031",
+      "file": "p03-release-neon-dark-home.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "home",
+      "sha256": "e6b44fc6ce5cceaa0f386d387cb1ccb278458428413d1f4ba9579c7cbc42582a",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        12,
+        14,
+        27
+      ]
+    }
+  ],
+  "fixture": "Previous signed APK real API35 idle screenshot. User supplied phone screenshots additionally show FINISHED state; numbers differ, do not score value differences."
+}

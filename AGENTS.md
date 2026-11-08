@@ -1,3 +1,7 @@
+# Current P0.3 native UI refinement task
+
+User explicitly supersedes the historical branch/archive restrictions below. Work only on feature/theme-system-p0-3-ui-refinement, based on completed P0.3 development HEAD cebf4682cec672fbde022c54bda3b442ff0663ab. Preserve all existing refs including feature/theme-system-p0-3 and design/p0-ui-lab. No website modification or historical archival work. Java/XML/ViewBinding/native Canvas only. Keep one business state path and four genuinely distinct UI hierarchies. No production preview data; fixtures belong to androidTest only. No online map dependency. Preserve existing service/GPS/BLE/database/GPX algorithms. Native screenshots at three requested dp sizes and both OS modes must undergo actual visual review before signing/publication. Use GitHub Actions for SDK/emulator/build, existing fixed signing Secrets and a unique new version/tag. No new key, credentials, forced history or asset replacement. Keep real-device limitations explicit.
+
 # Runner Gardenia P0.2 branch instructions
 
 The current user task supersedes the old P0-only branch restriction below. Work only on feature/p0-2-gps-ui based on remote P0 60daeb21aa50bdbceec6e6ad354a431b8c1be434. Never change main, feature/p0-core-migration or other existing branches. Do not merge main or force-push. Archive all historical evidence and verify its remote bytes before GPS/UI development. Keep original report paths; only extract documents from other branches, never merge their product code.

@@ -1,0 +1,177 @@
+{
+  "source": "61b9c889772bb3a7b36760d58cecedbe8dc524f3",
+  "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+  "http": 200,
+  "browser": "155.0.8059.79",
+  "websiteModified": false,
+  "captures": [
+    {
+      "theme": "precision",
+      "appearance": "light",
+      "file": "precision-light-reference.png",
+      "sha256": "c058dd6e838c45114005f70350a900ebf04a44f8a7c52afafb90b2e110a140ce",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\n正在记录\n/ 模拟\nDISTANCE / 运动距离\n5.25km\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "precision",
+      "appearance": "dark",
+      "file": "precision-dark-reference.png",
+      "sha256": "94add1069bbfae4abdc6a5f0f94151231c2a5d0dc95b2974857c960b5d0650c7",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\n正在记录\n/ 模拟\nDISTANCE / 运动距离\n5.25km\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "quiet",
+      "appearance": "light",
+      "file": "quiet-light-reference.png",
+      "sha256": "7639cfcfe70a27e9fd851cdfc4c6dcdc619bbb51c9bf732677f155a7249f1b08",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\n正在记录\n/ 模拟\nDISTANCE / 运动距离\n5.25km\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "quiet",
+      "appearance": "dark",
+      "file": "quiet-dark-reference.png",
+      "sha256": "009acdf05633d04e7a71dcb3341a7420ea5d21581195f7ea9cab7f471ad44d84",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\n正在记录\n/ 模拟\nDISTANCE / 运动距离\n5.25km\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "explorer",
+      "appearance": "light",
+      "file": "explorer-light-reference.png",
+      "sha256": "e15f7c7c09c6d56832237e8c3e8fddbfe5d25781671bfbc37971a714aba4d6ec",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\nN ↑\n本地 SVG · 模拟轨迹概览\nDISTANCE / 运动距离\n5.25km\n正在记录\n/ 模拟\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "explorer",
+      "appearance": "dark",
+      "file": "explorer-dark-reference.png",
+      "sha256": "72dfa7420adacaaf97b45e92b22f1de05aabe1b3b60236bb9e1cb3887d48fb15",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\nN ↑\n本地 SVG · 模拟轨迹概览\nDISTANCE / 运动距离\n5.25km\n正在记录\n/ 模拟\n28:36\n运动时长\n5′27″/km\n当前配速\n148BPM\n实时心率\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "neon",
+      "appearance": "light",
+      "file": "neon-light-reference.png",
+      "sha256": "0d2522d6462b94956cc4f1cf7e7c72d3739471b1933f36f48712ed39ec273346",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\nHEART RATE / 实时心率\n148BPM\n心率曲线 · BPM\n180\n140\n100\n-60s\n-30s\n现在\n正在记录\n/ 模拟\n5.25km\n运动距离\n28:36\n运动时长\n5′27″/km\n当前配速\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    },
+    {
+      "theme": "neon",
+      "appearance": "dark",
+      "file": "neon-dark-reference.png",
+      "sha256": "9e692ba873633bc5249d05f1a9f00a4c75960a206121fc4d9cce6c5c1053cc44",
+      "url": "https://foxmaybeoi1761640545.github.io/Runner_Gardenia-06/",
+      "innerPhoneOnly": true,
+      "phoneCssSize": [
+        393,
+        873
+      ],
+      "visibleText": "RUNNER GARDENIA / P0\n运动\n模拟数据\n定位成功\n已连接\nHEART RATE / 实时心率\n148BPM\n心率曲线 · BPM\n180\n140\n100\n-60s\n-30s\n现在\n正在记录\n/ 模拟\n5.25km\n运动距离\n28:36\n运动时长\n5′27″/km\n当前配速\n±5m\n定位精度\n\n点击副指标，与主显示交换\n\n暂停记录\n结束\n\n模拟定位精度 ± 5 m · 有效定位；所有位置与记录仅作设计演示。\n\nN ↑\n本地 SVG · 模拟轨迹概览\n最近一次运动\n本地 · 模拟\n清晨 · 河畔跑\n\n5.24 km · 28:34 · 148 BPM\n\n↗",
+      "fixture": {
+        "distanceKm": 5.25,
+        "duration": "28:36",
+        "bpm": 148,
+        "gps": "fixed",
+        "ble": "connected",
+        "session": "recording"
+      }
+    }
+  ]
+}
