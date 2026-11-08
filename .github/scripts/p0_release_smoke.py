@@ -84,6 +84,7 @@ def run(p02=False,p03=False,post_verify=None,baseline_spec=None):
             denied.append(message);time.sleep(1)
         raise ValueError('Baseline optional permission dialog did not finish')
     def wait_text(text,seconds=30):
+        if baseline_spec is not None and text in {"Not recording","Acquiring GPS","Recording","Paused","Finished"}:reveal("p0_recording_state")
         deadline=time.monotonic()+seconds
         while time.monotonic()<deadline:
             root=dump()
@@ -103,7 +104,8 @@ def run(p02=False,p03=False,post_verify=None,baseline_spec=None):
             if len(screen)!=4:raise ValueError('Actual viewport bounds missing')
             x=(screen[0]+screen[2])//2;h=screen[3]-screen[1]
             top=screen[1]+int(h*.25);bottom=screen[1]+int(h*.72)
-            device('shell','input','swipe',str(x),str(bottom if attempt<6 else top),str(x),str(top if attempt<6 else bottom),'200');time.sleep(.15)
+            downward=(identity=='p0_metrics')==(attempt<6)
+            device('shell','input','swipe',str(x),str(bottom if downward else top),str(x),str(top if downward else bottom),'200');time.sleep(.15)
         raise ValueError('Scrollable Release control/data unavailable: '+identity)
     def tap(identity):
         reveal(identity)
