@@ -31,7 +31,7 @@ def validate_live_metrics(metric):
             and speed>0 and 0<=seconds<60 and minutes*60+seconds>0):
         raise ValueError('Actual Release GPS metrics outside the controlled route: '+metric)
 
-def run(p02=False,p03=False,post_verify=None):
+def run(p02=False,p03=False,post_verify=None,baseline_spec=None):
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
     output=Path('build/reports/p0-release-smoke');output.mkdir(parents=True,exist_ok=True)
     info=json.loads(Path('dist/build-info.json').read_text());apk=Path('dist/RunnerGardenia-P0-Release.apk').resolve()
@@ -39,7 +39,10 @@ def run(p02=False,p03=False,post_verify=None):
     baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/('RunnerGardenia-P0-Release.apk' if p02 else 'runner-gardenia-v0.1.0-rc1.6-6771.apk')
     oldInfo=json.loads((baseline/'build-info.json').read_text())
     baseline_commit=('4454d716a5ae010b92d3eefa1ac1c0ebedde0063' if p03 else '3116e5fa7a56ce6f299ea45d5a45745f1aed4466') if p02 else '9b5d7b06afc1eb8e3315ba73874ac088fa4d5169'
-    if oldInfo['commit']!=baseline_commit or (p02 and (oldInfo['versionCode']!=(6773 if p03 else 6772) or oldInfo['apkSha256']!=('48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046' if p03 else '94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0'))) or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=oldInfo['apkSha256']:raise ValueError('Baseline APK differs from preserved main release')
+    expected_code=(6773 if p03 else 6772) if p02 else 6771
+    expected_hash=('48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046' if p03 else '94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0') if p02 else oldInfo['apkSha256']
+    if baseline_spec is not None:baseline_commit,expected_code,expected_hash=baseline_spec
+    if oldInfo['commit']!=baseline_commit or oldInfo['versionCode']!=expected_code or oldInfo['apkSha256']!=expected_hash or oldInfo['versionCode']>=info['versionCode'] or hashlib.sha256(old.read_bytes()).hexdigest()!=expected_hash:raise ValueError('Baseline APK differs from preserved release')
     certificate=subprocess.check_output([str(sdk/'build-tools/36.0.0/apksigner'),'verify','--print-certs',str(old)],text=True)
     fingerprints=re.findall(r'^Signer #\d+ certificate SHA-256 digest:\s*([0-9a-fA-F]+)\s*$',certificate,re.M)
     if len(fingerprints)!=1 or fingerprints[0].upper()!=info['certificateSha256']:raise ValueError('Baseline and new fixed signing certificate differ')
