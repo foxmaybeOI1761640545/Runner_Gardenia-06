@@ -50,8 +50,8 @@ def helper_counts(api,run):
     return {'tests':int(matches[0][1]),'executed':int(matches[0][1]),'failures':0,'errors':0,'skipped':0,'jobId':selected[0]['id']}
 
 
-def publish(api,folder=Path('dist')):
-    info=bundle(folder);remote_history(api,info['commit'],info['versionCode'])
+def publish(api,folder=Path('dist'),verify_bundle=None):
+    info=(verify_bundle or bundle)(folder);remote_history(api,info['commit'],info['versionCode'])
     helpers=helper_counts(api,info['plan']['runId'])
     if verify_tag(api,info,True) is None:
         record={k:info[k] for k in ('commit','versionName','versionCode','apkSha256','certificateSha256')}
