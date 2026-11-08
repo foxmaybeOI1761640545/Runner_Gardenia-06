@@ -21,7 +21,15 @@ def capture(device,dump,screenshot,tap,start,output):
         if raw[:8]!=b'\x89PNG\r\n\x1a\n':raise ValueError('Actual native screen missing')
         rows.append({'file':name+'.png','family':family,'appearance':mode,'page':page,'sha256':hashlib.sha256(raw).hexdigest()})
     def launch_home():
-        device('shell','am','force-stop',PACKAGE);start();time.sleep(0.7)
+        device('shell','am','force-stop',PACKAGE)
+        # A preceding system share chooser can leave a finishing singleTop launcher task.
+        # A process-restart check needs a fresh task, without clearing any application data.
+        device('shell','am','start','-W','-f','0x10008000','-n',PACKAGE+'/de.dennisguse.opentracks.introduction.IntroductionActivity')
+        deadline=time.monotonic()+10
+        while time.monotonic()<deadline:
+            if any(n.get('resource-id')==PACKAGE+':id/p0_title' for n in dump().iter('node')):return
+            time.sleep(0.2)
+        raise ValueError('Fresh process did not reach the actual native home')
     original_mode=device('shell','settings','get','secure','ui_night_mode')
     try:
         for family,title in FAMILIES:
