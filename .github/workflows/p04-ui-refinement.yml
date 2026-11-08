@@ -220,8 +220,6 @@ jobs:
       actions: read
     runs-on: ubuntu-24.04
     timeout-minutes: 45
-    env:
-      P04_CONTEXT: ${{ runner.temp }}/p04-context.json
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -342,8 +340,6 @@ jobs:
       actions: read
     runs-on: ubuntu-24.04
     timeout-minutes: 25
-    env:
-      P04_CONTEXT: ${{ runner.temp }}/p04-context.json
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:

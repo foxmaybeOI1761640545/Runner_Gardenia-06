@@ -11,10 +11,10 @@ def context():
  if values['mode'] not in ('sign','publish'):raise ValueError('Explicit visual approval activation required')
  record={'mode':values['mode'],'workflowCommit':os.environ['GITHUB_SHA'],'approval':pipeline.approval_record()}
  if values['mode']=='publish':record['publication']=json.loads(pipeline.PUBLICATION.read_text())
- Path(os.environ['P04_CONTEXT']).write_text(json.dumps(record,indent=2)+'\n')
+ (Path(os.environ['RUNNER_TEMP'])/'p04-context.json').write_text(json.dumps(record,indent=2)+'\n')
 
 def load():
- pipeline.trusted();c=json.loads(Path(os.environ['P04_CONTEXT']).read_text());a=c['approval'];api=GitHub()
+ pipeline.trusted();c=json.loads((Path(os.environ['RUNNER_TEMP'])/'p04-context.json').read_text());a=c['approval'];api=GitHub()
  if c['workflowCommit']!=os.environ['GITHUB_SHA'] or pipeline.git('rev-parse','HEAD')!=a['source']:raise ValueError('Build checkout differs from actual visually reviewed source')
  if pipeline.git('rev-parse','HEAD:src/main')!=a['mainTree']:raise ValueError('Reviewed native app tree differs')
  pipeline.accepted_jobs(api,a);pipeline.protected_refs()
