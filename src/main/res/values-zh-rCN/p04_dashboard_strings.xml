@@ -1,0 +1,31 @@
+<resources>
+  <string name="p04_run">运动</string>
+  <string name="p04_brand">RUNNER GARDENIA / P0</string>
+  <string name="p04_heart_tab">心率</string>
+  <string name="p04_settings_tab">设置</string>
+  <string name="p04_gps_fixed">定位成功</string>
+  <string name="p04_gps_searching">正在定位</string>
+  <string name="p04_gps_unavailable">尚无定位</string>
+  <string name="p04_connected">已连接</string>
+  <string name="p04_connect">连接心率带</string>
+  <string name="p04_heart_device">心率带</string>
+  <string name="p04_heart_none">未连接心率带</string>
+  <string name="p04_heart_wait">已连接 · 等待有效采样</string>
+  <string name="p04_chart_wait">等待有效心率采样</string>
+  <string name="p04_chart_gap">断连区间不连线</string>
+  <string name="p04_chart_live">HEART RATE / 实时心率</string>
+  <string name="p04_chart_recent">最近有效采样 · BPM</string>
+  <string name="p04_route_local">本地矢量 · 已记录轨迹</string>
+  <string name="p04_route_empty">轨迹从这里开始</string>
+  <string name="p04_route_wait">等待有效 GPS 定位</string>
+  <string name="p04_route_note">地形仅作装饰 · 无地图瓦片</string>
+  <string name="p04_route_summary">%1$d 个实际轨迹点，%2$d 个独立分段</string>
+  <string name="p04_route_current">当前 GPS 位置</string>
+  <string name="p04_route_partial">最近已记录轨迹 · 局部概览</string>
+  <string name="p04_accuracy">定位精度</string>
+  <string name="p04_heart_caption">FOLLOW YOUR PULSE</string>
+  <string name="p04_field_notes">户外 / 地形手记</string>
+  <string name="p04_route_title">运动轨迹</string>
+  <string name="p04_live">实时</string>
+  <string name="p04_north">N ↑</string>
+</resources>

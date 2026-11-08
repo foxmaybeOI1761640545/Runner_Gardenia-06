@@ -15,7 +15,7 @@ public class P0SensorsActivity extends AbstractActivity {
     private P0RecordingViewModel model;
     private PreviewChartModel chartModel;
     @Override protected void onCreate(Bundle state) {
-        super.onCreate(state);
+        super.onCreate(state);P0Navigation.bind(this);
         model=new ViewModelProvider(this).get(P0RecordingViewModel.class);
         chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);
         model.snapshot().observe(this,value->chartModel.bind(this,binding.p03SensorChart,value.preview()));

@@ -1,0 +1,54 @@
+name: P0.3 native visual refinement
+on:
+  push:
+    branches: [feature/theme-system-p0-3-ui-refinement]
+    paths-ignore: ['docs/**','AGENTS.md']
+permissions:
+  contents: read
+concurrency:
+  group: p04-native-refinement
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  compile:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/theme-system-p0-3-ui-refinement'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - run: python3 -m unittest discover -s .github/tests -v -b
+      - run: python3 .github/scripts/check_p03_theme_source.py
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'platforms;android-37.0' 'build-tools;36.0.0'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-read-only: true
+      - name: Compile-only development gate; no visual acceptance or signing
+        run: ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P04-development-compile-${{ github.run_id }}
+          path: |
+            build/reports/
+            build/test-results/
+          if-no-files-found: warn
+          retention-days: 90

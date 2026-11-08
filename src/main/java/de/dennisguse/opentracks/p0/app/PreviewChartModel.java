@@ -17,7 +17,7 @@ public final class PreviewChartModel extends ViewModel {
     private long origin=-1,last=-1;
     private String connection;
     private boolean gap=true;
-    public void bind(Context context,ChartView chart,HeartRatePreview preview) {
+    private void update(Context context,HeartRatePreview preview) {
         var status=preview.status();var value=preview.value();
         boolean fresh=!HeartRatePanel.describe(context,value,status).bpm().equals(context.getString(R.string.hr_empty_value));
         if(!fresh)gap=true;
@@ -31,6 +31,10 @@ public final class PreviewChartModel extends ViewModel {
                 if(points.size()>300)points.remove(0);
             }
         }
+    }
+    public void bind(Context context,PulseChartView chart,HeartRatePreview preview){update(context,preview);chart.setPoints(List.copyOf(points));}
+    public void bind(Context context,ChartView chart,HeartRatePreview preview) {
+        update(context,preview);
         chart.setHeartRateOnly();
         chart.setChartByDistance(false);
         chart.setRawHeartRatePoints(List.copyOf(points));

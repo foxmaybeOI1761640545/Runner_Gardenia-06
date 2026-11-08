@@ -36,7 +36,7 @@ public class P0HistoryActivity extends AbstractActivity {
     public static Intent intent(Context context,long id){return new Intent(context,P0HistoryActivity.class).putExtra(WORKOUT_ID,id);}
     private String date(java.time.Instant time){return DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withZone(ZoneId.systemDefault()).format(time);}
     @Override protected void onCreate(Bundle saved) {
-        super.onCreate(saved);model=new ViewModelProvider(this).get(P0HistoryViewModel.class);
+        super.onCreate(saved);P0Navigation.bind(this);model=new ViewModelProvider(this).get(P0HistoryViewModel.class);
         setSupportActionBar(binding.p0HistoryToolbar);
         if(getSupportActionBar()!=null)getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         adapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_2) {

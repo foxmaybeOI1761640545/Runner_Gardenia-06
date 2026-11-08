@@ -1,0 +1,31 @@
+<resources>
+  <string name="p04_run">Workout</string>
+  <string name="p04_brand">RUNNER GARDENIA / P0</string>
+  <string name="p04_heart_tab">Heart</string>
+  <string name="p04_settings_tab">Settings</string>
+  <string name="p04_gps_fixed">GPS ready</string>
+  <string name="p04_gps_searching">Finding GPS</string>
+  <string name="p04_gps_unavailable">GPS unavailable</string>
+  <string name="p04_connected">Connected</string>
+  <string name="p04_connect">Connect strap</string>
+  <string name="p04_heart_device">Heart-rate strap</string>
+  <string name="p04_heart_none">No heart-rate strap connected</string>
+  <string name="p04_heart_wait">Connected · waiting for samples</string>
+  <string name="p04_chart_wait">Waiting for valid samples</string>
+  <string name="p04_chart_gap">Missing samples stay disconnected</string>
+  <string name="p04_chart_live">HEART RATE / BPM</string>
+  <string name="p04_chart_recent">Recent samples · BPM</string>
+  <string name="p04_route_local">LOCAL VECTOR · RECORDED ROUTE</string>
+  <string name="p04_route_empty">Your route starts here</string>
+  <string name="p04_route_wait">Waiting for a valid GPS position</string>
+  <string name="p04_route_note">Terrain is illustrative · no map tiles</string>
+  <string name="p04_route_summary">%1$d recorded positions; %2$d separate segments</string>
+  <string name="p04_route_current">Current GPS position</string>
+  <string name="p04_route_partial">Recent recorded route · partial view</string>
+  <string name="p04_accuracy">GPS accuracy</string>
+  <string name="p04_heart_caption">FOLLOW YOUR PULSE</string>
+  <string name="p04_field_notes">OUTDOOR / FIELD NOTES</string>
+  <string name="p04_route_title">Recorded route</string>
+  <string name="p04_live">LIVE</string>
+  <string name="p04_north">N ↑</string>
+</resources>

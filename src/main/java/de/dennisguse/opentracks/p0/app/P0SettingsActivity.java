@@ -11,7 +11,7 @@ import de.dennisguse.opentracks.settings.GardeniaThemeSettingsFragment;
 public class P0SettingsActivity extends AbstractActivity {
     private GardeniaSettingsBinding binding;
     @Override protected void onCreate(Bundle saved) {
-        super.onCreate(saved);setSupportActionBar(binding.gardeniaSettingsToolbar);
+        super.onCreate(saved);P0Navigation.bind(this);setSupportActionBar(binding.gardeniaSettingsToolbar);
         if(getSupportActionBar()!=null){getSupportActionBar().setTitle(R.string.gardenia_appearance_title);getSupportActionBar().setDisplayHomeAsUpEnabled(true);}
         if(saved==null)getSupportFragmentManager().beginTransaction().replace(R.id.gardenia_settings_container,new GardeniaThemeSettingsFragment()).commit();
     }
