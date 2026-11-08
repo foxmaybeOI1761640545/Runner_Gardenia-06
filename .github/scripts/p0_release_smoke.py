@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 import time
 import uuid
+import zipfile
 import xml.etree.ElementTree as ET
 
 PACKAGE='com.fox.runner'
@@ -50,7 +51,14 @@ def run(p02=False,p03=False,post_verify=None):
     def screenshot(name):
         with (output/(name+'.png')).open('wb') as file:subprocess.run([str(adb),'-s',serial,'exec-out','screencap','-p'],stdout=file,check=True,timeout=30)
     def dump():
-        device('shell','uiautomator','dump','--compressed','/sdcard/p0-window.xml',timeout=45)
+        # Never accept an old XML file when Android's dump command cannot become idle.
+        device('shell','rm','-f','/sdcard/p0-window.xml')
+        if p03:
+            status=device('shell','CLASSPATH=/data/local/tmp/gardenia-native-window.jar','app_process','/system/bin','NativeWindowDump','/sdcard/p0-window.xml',timeout=20)
+            if 'FRESH_NATIVE_WINDOW /sdcard/p0-window.xml' not in status:raise ValueError('Native window snapshot was not freshly produced: '+status)
+        else:
+            status=device('shell','uiautomator','dump','--compressed','/sdcard/p0-window.xml',timeout=45)
+        (output/'last-dump-command.txt').write_text(status+'\n')
         text=device('shell','cat','/sdcard/p0-window.xml');(output/'last-window.xml').write_text(text);return ET.fromstring(text)
     def deny_baseline_optional_permissions():
         # The preserved upstream APK requests nearby-device/notification access on
@@ -119,6 +127,16 @@ def run(p02=False,p03=False,post_verify=None):
             else:raise TimeoutError('Release validation emulator boot timed out')
             # Root is only for synthetic fixture inspection on this disposable AOSP test device.
             print(device('root'));device('wait-for-device');device('shell','id')
+            if p03:
+                # Compile only a shell test utility with the SDK already installed in Actions.
+                # This does not build/install another app or create/use a signing key.
+                classes=temporary/'native-window-classes';classes.mkdir();dex=temporary/'native-window-dex';dex.mkdir()
+                android=sdk/'platforms/android-37.0/android.jar'
+                subprocess.run(['javac','--release','8','-cp',str(android),'-d',str(classes),'.github/scripts/NativeWindowDump.java'],check=True)
+                subprocess.run([str(sdk/'build-tools/36.0.0/d8'),'--lib',str(android),'--min-api','35','--output',str(dex),str(classes/'NativeWindowDump.class')],check=True)
+                helper=temporary/'native-window.jar'
+                with zipfile.ZipFile(helper,'w') as archive:archive.write(dex/'classes.dex','classes.dex')
+                device('push',helper,'/data/local/tmp/gardenia-native-window.jar')
             device('shell','cmd','alarm','set-timezone','Asia/Singapore')
             if device('shell','getprop','persist.sys.timezone')!='Asia/Singapore':raise ValueError('Wrong Release device timezone')
             device('install','-r',old,timeout=120)
@@ -202,6 +220,8 @@ def run(p02=False,p03=False,post_verify=None):
             proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
+        try:screenshot('last-native-screen')
+        except (OSError,subprocess.SubprocessError):pass
         try:(output/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15))
         except (OSError,subprocess.TimeoutExpired):pass
         if process is not None and process.poll() is None:
