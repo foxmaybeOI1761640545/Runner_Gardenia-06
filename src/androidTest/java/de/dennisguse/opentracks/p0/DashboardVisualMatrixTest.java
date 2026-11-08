@@ -20,7 +20,7 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 import de.dennisguse.opentracks.ui.util.ThemeUtils;
 
 /** Actual native pixel matrix, not an HTML rendering. Business regressions run separately in the full suite. */
-@androidx.annotation.RequiresApi(35)
+@androidx.test.filters.SdkSuppress(minSdkVersion=35)
 public class DashboardVisualMatrixTest {
  private final Context context=ApplicationProvider.getApplicationContext();private final JSONArray captures=new JSONArray();
  private ThemeUtils.Family family;private String night,size,density,font;private String localeTags;private final String[] scales={"window_animation_scale","transition_animation_scale","animator_duration_scale"};private final String[] scaleValues=new String[3];
