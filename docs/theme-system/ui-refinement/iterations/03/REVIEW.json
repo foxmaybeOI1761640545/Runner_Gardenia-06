@@ -1,0 +1,282 @@
+{
+  "source": "907fc7fca935fa952ee181770e4cfc5afb7d06dc",
+  "testRunId": "42502144258",
+  "automaticFullGatePassed": true,
+  "visualAccepted": false,
+  "signingAuthorized": false,
+  "reportsArtifactId": 13626975109,
+  "reportsArtifactSha256": "ad0c691c71c6e77fbdd7a4dd92de243f94310b8ea861e2052128dd5fcdbe8922",
+  "visualArtifactId": 13626970134,
+  "visualArtifactSha256": "74b81724b507c15c98ee78763a4ab93bc1eef94aba168e4c27d94f7732bfd934",
+  "findings": [
+    "All recording controls fit after previous corrections.",
+    "Outdoor 360dp idle/searching has an extra mode/settings row; start/cancel remain partially clipped in the initial viewport. Compact low-priority accuracy from a full padded metric row into one native horizontal information line.",
+    "Keep238dp primaryMap and56dp touch targets; require full first-viewport bounds for all visible controls in all8states, not onlyrecording."
+  ],
+  "screenshots": [
+    {
+      "file": "p04-precision-light-360x800-idle.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "80d52b7f23a310897db807920d54273f8d3c91b5b0eae8286bd1fd3a11dc9209",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/light/360x800/idle.png"
+    },
+    {
+      "file": "p04-precision-light-360x800-gps-searching.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "a9c81060f89f29254213de15b81c0b8cc8a41277a4170438df050bec43cef460",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/light/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-precision-light-360x800-recording.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "2507af13b0b3aec359bf4e5c709bdd2d11dd0b22731b4db5a7f116eea311ca0e",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/light/360x800/recording.png"
+    },
+    {
+      "file": "p04-precision-dark-360x800-idle.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "128129b70202c17508abda1819ffaef29a2c1f798d68670e696b14d545180504",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/dark/360x800/idle.png"
+    },
+    {
+      "file": "p04-precision-dark-360x800-gps-searching.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "aa0b74dd6a7ef452b39262d88d0f26bf7f5808174a0fa95e57458353a8df58a0",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/dark/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-precision-dark-360x800-recording.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "8e7f4c2879b39713dc460969a9c332dba98c8ff49c202ac54960499bc494352f",
+      "syntheticUiFixture": true,
+      "path": "screenshots/precision-pro/dark/360x800/recording.png"
+    },
+    {
+      "file": "p04-quiet-light-360x800-idle.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "f9deed8f9917dac22326ff3ff7f5986642c380ae8fd0f7d653f29a0f17cf2836",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/light/360x800/idle.png"
+    },
+    {
+      "file": "p04-quiet-light-360x800-gps-searching.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "b4625b1d6c0e10d492b3bf0958d5fdbb0bad6361f7fdea533127657c77925a31",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/light/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-quiet-light-360x800-recording.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "40dfefbf629f6c460744841e13fd594c990213d915db5951b3b657fce92dd14d",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/light/360x800/recording.png"
+    },
+    {
+      "file": "p04-quiet-dark-360x800-idle.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "760bca2672301a8e47ff4237442df6b54e4ba7186e7459b2bca6f77f94d410d7",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/dark/360x800/idle.png"
+    },
+    {
+      "file": "p04-quiet-dark-360x800-gps-searching.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "66c076818035986aa5e767f65524077f6dac2984c3558b7145a55c4584d7ec6d",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/dark/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-quiet-dark-360x800-recording.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "ffbdd0f5bb1f81c815c1a4c36b465e912fffc8a96b19f5db047709ea67ba4ccd",
+      "syntheticUiFixture": true,
+      "path": "screenshots/quiet-minimal/dark/360x800/recording.png"
+    },
+    {
+      "file": "p04-explorer-light-360x800-idle.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "56519352a50c99f0e7b8fa9b8f9703e6c1ff6a2e1956082f5c290ed6f5568c82",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/light/360x800/idle.png"
+    },
+    {
+      "file": "p04-explorer-light-360x800-gps-searching.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "d160134c0cd29a680339416e0a0620de084706e2e4ea2978e81ef5fd1241045a",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/light/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-explorer-light-360x800-recording.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "82c3bf703255a124883fcb84d97312c0bf947173289d9410b412bc871afac5c3",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/light/360x800/recording.png"
+    },
+    {
+      "file": "p04-explorer-dark-360x800-idle.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "b82b05b5192b8e781a009c11ad08b3ff9e78d8ef17a09b4e135627de01d78412",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/dark/360x800/idle.png"
+    },
+    {
+      "file": "p04-explorer-dark-360x800-gps-searching.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "c7f6b65f642f21916cc6b04da44781bbebb615ec13941e762a550be1f864469c",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/dark/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-explorer-dark-360x800-recording.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "2f9dab2f0c698649224a74bbe437b8bd18beb6ae13980cd58f2228a8a4b3a3e1",
+      "syntheticUiFixture": true,
+      "path": "screenshots/outdoor-explorer/dark/360x800/recording.png"
+    },
+    {
+      "file": "p04-neon-light-360x800-idle.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "a3b4906b74ad60faf63ea1e31eefe31267ebea0f42ba397ac509e75b9caf3af5",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/light/360x800/idle.png"
+    },
+    {
+      "file": "p04-neon-light-360x800-gps-searching.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "a4aa862771bee29176741fcacf33e529a8b8e430410691c27ca9c5a2b2f0de91",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/light/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-neon-light-360x800-recording.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "5e085b64514c1874caf2b99ae63ad124a7a3df6967cac409e388fcd57c5b74c7",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/light/360x800/recording.png"
+    },
+    {
+      "file": "p04-neon-dark-360x800-idle.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "05c34a3383d873647acbfd5002ed067742fdfa76725dad5d8df46e6404290647",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/dark/360x800/idle.png"
+    },
+    {
+      "file": "p04-neon-dark-360x800-gps-searching.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "40f23daec7728aa6bbb4c15500970045f5212068c4c6b6577f26b98c8b669646",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/dark/360x800/gps-searching.png"
+    },
+    {
+      "file": "p04-neon-dark-360x800-recording.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "0387a5be56408f61c9bb7cee588a81dafa60ec1f8e120ef80153fc55da0676e0",
+      "syntheticUiFixture": true,
+      "path": "screenshots/neon-pulse/dark/360x800/recording.png"
+    }
+  ]
+}
