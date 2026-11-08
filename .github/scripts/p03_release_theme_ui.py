@@ -54,7 +54,8 @@ def capture(device,dump,screenshot,tap,start,output):
     def await_page(page):
         deadline=time.monotonic()+15
         while time.monotonic()<deadline:
-            tree=dump();windows=device('shell','dumpsys','window','windows')
+            tree=dump();windows=device('shell','dumpsys','window')
+            (output/'last-focus-window.txt').write_text(windows)
             focus=next((line.strip() for line in windows.splitlines() if 'mCurrentFocus=' in line),'')
             if page_matches(tree,page) and PAGE_ACTIVITIES[page] in focus:
                 time.sleep(0.4)
