@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "buildSource": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "evaluationSource": "49ae83b855fe43a3b50d6086280ec684a3dbe5b4",
+  "runId": "42466614968",
+  "attempt": 2,
+  "artifactId": 13612521139,
+  "zipSha256": "4a4ad1087fc551e33e9207ab0cbf3d63194bd6a283047b23e9b404c11a4f6d6c",
+  "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+  "sameApkBytesAsOriginalBuild": true,
+  "originalApkArtifactId": 13603541459,
+  "pages": [
+    "home",
+    "heart",
+    "history",
+    "settings"
+  ],
+  "schemes": 8,
+  "pngHashesVerified": 32,
+  "nativeXmlHashesAndPageIdsVerified": 32,
+  "focusedActivitiesVerified": 32,
+  "actualPalettePixelsVerified": 16,
+  "contactSheetsReviewed": [
+    "signed-final-home.jpg",
+    "signed-final-heart.jpg",
+    "signed-final-history.jpg",
+    "signed-final-settings.jpg"
+  ],
+  "noTransitionOrStalePages": true,
+  "physicalBleTested": false
+}

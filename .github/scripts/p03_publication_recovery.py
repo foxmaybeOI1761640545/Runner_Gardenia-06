@@ -11,7 +11,8 @@ SOURCE='77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471'
 BUILD_RUN='42443873771'
 APK_SHA='24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff'
 MARKER='[p03-existing-apk]'
-RECOVERY_OPERATION='capture'
+RECOVERY_OPERATION='publish'
+RECAPTURE=(13612521139,'4a4ad1087fc551e33e9207ab0cbf3d63194bd6a283047b23e9b404c11a4f6d6c','49ae83b855fe43a3b50d6086280ec684a3dbe5b4','42466614968','2')
 ALLOWED={'.github/scripts/p03_release_theme_ui.py','.github/workflows/p03-theme-system.yml','.github/scripts/p03_publication_recovery.py',
          '.github/scripts/p03_publish.py','.github/scripts/publish_release.py',
          '.github/tests/test_p03_publication_recovery.py'}
@@ -63,6 +64,22 @@ def download(api):
             if any(Path(n).is_absolute() or '..' in Path(n).parts for n in archive.namelist()):raise ValueError('Unsafe artifact path')
             archive.extractall(folder)
         receipts.append({'artifactId':identifier,'name':name,'sha256':expected,'bytes':len(raw)})
+    if RECOVERY_OPERATION=='publish':
+        identifier,expected,evaluation_commit,evaluation_run,attempt=RECAPTURE
+        run=api.request(api.base+'/actions/runs/'+evaluation_run)
+        jobs=api.request(api.base+'/actions/runs/'+evaluation_run+'/jobs?per_page=100&filter=all')['jobs']
+        name='Revalidate existing signed APK native pages without rebuilding or signing'
+        if run['head_sha']!=evaluation_commit or run['conclusion']!='success' or not any(j['name']==name and j['conclusion']=='success' for j in jobs):raise ValueError('Actual same-APK API35 recapture job did not pass')
+        meta=api.request(api.base+'/actions/artifacts/'+str(identifier))
+        if meta['expired'] or meta['name']!='P03-recaptured-proof-'+evaluation_run+'-'+attempt or meta['workflow_run']['head_sha']!=evaluation_commit or meta['workflow_run']['id']!=int(evaluation_run) or meta.get('digest')!='sha256:'+expected:raise ValueError('Reviewed recapture artifact identity differs')
+        raw=api.request(meta['archive_download_url'],binary=True)
+        if hashlib.sha256(raw).hexdigest()!=expected:raise ValueError('Reviewed recapture archive changed')
+        with zipfile.ZipFile(io.BytesIO(raw)) as z:
+            if any(Path(n).is_absolute() or '..' in Path(n).parts for n in z.namelist()):raise ValueError('Unsafe recapture path')
+            original_info=json.loads(Path('dist/build-info.json').read_text())
+            if json.loads(z.read('dist/build-info.json'))!=original_info or z.read('dist/RunnerGardenia-P0-Release.apk')!=Path('dist/RunnerGardenia-P0-Release.apk').read_bytes() or z.read('dist/SHA256SUMS')!=Path('dist/SHA256SUMS').read_bytes():raise ValueError('Recapture changed original signed APK/build identity')
+            for name in ['runtime-smoke.json','native-theme-smoke.json','theme-screenshots.zip']:Path('dist',name).write_bytes(z.read('dist/'+name))
+        receipts.append({'artifactId':identifier,'sha256':expected,'bytes':len(raw),'evaluationCommit':evaluation_commit,'evaluationRunId':evaluation_run,'sameApkVisuallyReviewed':True})
     Path('recovery-inputs.json').write_text(json.dumps({'buildSource':SOURCE,'buildRunId':BUILD_RUN,'recoverySource':os.environ['GITHUB_SHA'],'recoveryRunId':os.environ['GITHUB_RUN_ID'],'changedPaths':paths,'artifacts':receipts,'rebuilt':False,'resigned':False},indent=2)+'\n')
 
 def accepted_bundle(folder=Path('dist')):
@@ -84,10 +101,18 @@ def accepted_bundle(folder=Path('dist')):
     if runtime.get('passed') is not True or runtime['commit']!=SOURCE or runtime['apkSha256']!=APK_SHA or runtime['upgradeFromVersionCode']!=6773 or any(runtime.get(k) is not True for k in ['deviceConfigurationRetained','preparationCreatesNoWorkout','liveGpsFieldsVerified','releaseGpxSchemaVerified','forceStopRecovery']):raise ValueError('Original actual P0.2 upgrade/GPS/GPX evidence absent')
     if native.get('passed') is not True or native['commit']!=SOURCE or native['apkSha256']!=APK_SHA or native['api']!=35 or native['policy']!='FOLLOW_SYSTEM' or native['processRestartPersistence'] is not True or len(native['schemes'])!=8 or len(native['screenshots'])!=32:raise ValueError('Original signed native matrix absent')
     if any(s.get('renderedPaletteVerified') is not True for s in native['schemes']) or sum(r.get('renderedBackgroundVerified') is True for r in native['screenshots'])!=16:raise ValueError('Original rendered native palette evidence absent')
+    if RECOVERY_OPERATION=='publish':
+        if native.get('evaluationCommit')!=RECAPTURE[2] or native.get('evaluationRunId')!=RECAPTURE[3] or native.get('animationsDisabledForCapture') is not True or native.get('nativePageChecks')!=32:raise ValueError('Reviewed focused native page/animation proof absent')
+        from p03_release_theme_ui import PAGE_IDS,PAGE_ACTIVITIES,page_matches
+        if {(r['family'],r['appearance'],r['page']) for r in native['screenshots']}!={(f,m,p) for f in ['precision','quiet','explorer','neon'] for m in ['light','dark'] for p in PAGE_IDS}:raise ValueError('Actual native page matrix incomplete')
     screenshot_zip=(folder/'theme-screenshots.zip').read_bytes()
     if hashlib.sha256(screenshot_zip).hexdigest()!=native['screenshotsZipSha256']:raise ValueError('Original native screenshots changed')
     with zipfile.ZipFile(io.BytesIO(screenshot_zip)) as archive:
         for row in native['screenshots']:
+            if RECOVERY_OPERATION=='publish':
+                import xml.etree.ElementTree as ET
+                xml=archive.read(row['nativeWindowFile'])
+                if row.get('nativePageVerified') is not True or hashlib.sha256(xml).hexdigest()!=row['nativeWindowSha256'] or not page_matches(ET.fromstring(xml),row['page']) or PAGE_ACTIVITIES[row['page']] not in row['focusedWindow']:raise ValueError('Actual page XML/focus differs from reviewed capture')
             raw=archive.read(row['file'])
             if raw[:8]!=b'\x89PNG\r\n\x1a\n' or hashlib.sha256(raw).hexdigest()!=row['sha256']:raise ValueError('Original native PNG changed')
     raw=(folder/APK).read_bytes()

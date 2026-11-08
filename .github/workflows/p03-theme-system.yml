@@ -373,11 +373,11 @@ jobs:
 
 
   publish-existing:
-    name: Revalidate existing signed APK native pages without rebuilding or signing
+    name: Recover reviewed P0.3 publication without rebuilding or signing
     needs: publication_scope
     if: needs.publication_scope.outputs.publication == 'true'
     permissions:
-      contents: read
+      contents: write
       actions: read
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -397,29 +397,19 @@ jobs:
         with:
           cmdline-tools-version: '16111833'
           packages: platform-tools
-      - name: API35 test tools only; no app build or signing keys
-        run: |
-          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
-          test -c /dev/kvm
-          sudo chmod a+rw /dev/kvm
-      - name: Preserved P0.2 public upgrade baseline
+      - run: sdkmanager 'build-tools;36.0.0'
+      - name: Verify original gates, reviewed native XML/PNG and immutable APK; publish then verify public download
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          mkdir -p "$RUNNER_TEMP/p0-baseline"
-          gh release download test-p0-v0.1.0-p0.2 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p0-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
-      - name: Recheck original accepted APK then verify every actual page and capture fresh screenshots
-        env:
-          GH_TOKEN: ${{ github.token }}
-          P0_BASELINE_DIR: ${{ runner.temp }}/p0-baseline
         run: python3 .github/scripts/p03_publication_recovery.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: P03-recaptured-proof-${{ github.run_id }}-${{ github.run_attempt }}
+          name: P03-recovery-proof-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             recovery-inputs.json
-            dist/
-            build/reports/p0-release-smoke/
+            dist/publication.json
+            dist/test-summary.json
+            dist/RELEASE_NOTES.md
           if-no-files-found: warn
           retention-days: 90
