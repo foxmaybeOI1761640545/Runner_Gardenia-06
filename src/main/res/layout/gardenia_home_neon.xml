@@ -41,7 +41,7 @@
                                 <TextView android:id="@+id/p02_heart_reconnect" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="?attr/textAppearanceBodySmall" android:textColor="?attr/colorOnSurfaceVariant" />
                             </LinearLayout>
                         </LinearLayout>
-                        <de.dennisguse.opentracks.chart.ChartView android:id="@+id/p03_heart_chart" android:layout_width="match_parent" android:layout_height="140dp" android:contentDescription="@string/gardenia_chart_empty" android:layout_marginTop="8dp" />
+                        <de.dennisguse.opentracks.chart.ChartView android:id="@+id/p03_heart_chart" android:layout_width="match_parent" android:layout_height="220dp" android:contentDescription="@string/gardenia_chart_empty" android:layout_marginTop="8dp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <TextView android:id="@+id/p0_error" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="?attr/colorError" android:accessibilityLiveRegion="polite" android:visibility="gone" />

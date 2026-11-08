@@ -91,6 +91,11 @@ public class GardeniaThemeSystemTest {
             SystemThemeTestUtils.night(dark);awaitMode(home,dark);P0GpsPreparationTest.ready(core);
             assertTrue(core.isRecording());id=core.getRecordingStatus().trackId().id();
             main(()->{var handler=core.getTrackPointCreator().getSensorManager().getHeartRateHandler();handler.onConnected("AA:BB:CC:DD:EE:FF","Synthetic theme strap");handler.onConnectionStateChanged(BleConnectionSession.State.CONNECTED);var measurement=new android.bluetooth.BluetoothGattCharacteristic(HeartRateBluetooth.HEARTRATE.measurementUUID(),0,0);handler.onDataReceived(new HeartRateBluetooth().parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic theme strap",measurement,new byte[]{6,76}));});
+            // Real notification/UI ticks produce a visible multi-point curve, not just an empty chart.
+            for(int bpm:new int[]{82,94,88,106,98}) {
+                SystemClock.sleep(1100);
+                main(()->{var handler=core.getTrackPointCreator().getSensorManager().getHeartRateHandler();var measurement=new android.bluetooth.BluetoothGattCharacteristic(HeartRateBluetooth.HEARTRATE.measurementUUID(),0,0);handler.onDataReceived(new HeartRateBluetooth().parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic theme strap",measurement,new byte[]{6,(byte)bpm}));});
+            }
             String connection=core.getHeartRatePreview().value().sample().connectionId();
             var gpsBefore=retained.get().snapshot().getValue().gps();
             SystemThemeTestUtils.night(!dark);awaitMode(home,!dark);
@@ -113,7 +118,10 @@ public class GardeniaThemeSystemTest {
         try(ActivityScenario<P0SensorsActivity> sensors=ActivityScenario.launch(P0SensorsActivity.class)){capture(sensors,family,dark,"heart");}
         try(ActivityScenario<P0HistoryActivity> history=ActivityScenario.launch(P0HistoryActivity.class)){SystemClock.sleep(300);capture(history,family,dark,"history");}
         try(ActivityScenario<P0HistoryActivity> detail=ActivityScenario.launch(P0HistoryActivity.intent(context,id))) {
-            SystemClock.sleep(500);capture(detail,family,dark,"detail");
+            long chartDeadline=SystemClock.uptimeMillis()+10000;AtomicBoolean chartReady=new AtomicBoolean();
+            do{detail.onActivity(a->{var values=new ViewModelProvider(a).get(P0HistoryViewModel.class).chartPoints().getValue();chartReady.set(values!=null&&values.size()>=6);});if(chartReady.get())break;SystemClock.sleep(50);}while(SystemClock.uptimeMillis()<chartDeadline);
+            assertTrue("History must load all real synthetic HR notifications",chartReady.get());
+            InstrumentationRegistry.getInstrumentation().waitForIdleSync();capture(detail,family,dark,"detail");
             detail.onActivity(a->new GpxExportDialog().show(a.getSupportFragmentManager(),"gardenia-gpx-export"));
             SystemClock.sleep(100);SystemThemeTestUtils.night(!dark);awaitMode(detail,!dark);
             detail.onActivity(a->{assertNotNull(a.getSupportFragmentManager().findFragmentByTag("gardenia-gpx-export"));assertEquals(Long.valueOf(id),new ViewModelProvider(a).get(P0HistoryViewModel.class).selectedId());});

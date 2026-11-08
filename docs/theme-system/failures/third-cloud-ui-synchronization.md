@@ -11,3 +11,6 @@ The recreation/background recording test's Espresso pause tap invoked the finish
 The scan test selected the unfocused base window while its real dialog owned focus. Wait for the laid-out dialog window, and explicitly use `RootMatchers.isDialog()` for both rescan and device selection, following the existing upstream screenshot helper. Keep the selected-device and no-unrequested-connection assertions.
 
 All screenshot regressions now restore the real system night preference in cleanup, matching their switch from legacy app overrides to FOLLOW_SYSTEM. No recording, GPS, BLE or storage production code changed for these fixes. Full suite must pass before signing.
+
+
+Follow-up visual review: superseding run 42437197437 was canceled before signing. The eight-scheme screenshot review found that the raw-HR setter did not invalidate the chart after worker results, and 140dp home charts compressed six labels into too little vertical space. Add the redraw, reserve 220dp, clamp the single-point time extent away from zero, and capture six real synthetic notifications through the existing handler. These are presentation changes only; service/data/gap algorithms remain unchanged.

@@ -457,6 +457,8 @@ public class ChartView extends View {
             }
             updateDimensions();updateSeries();
         }
+        // Worker-backed history/preview projections must paint without waiting for a configuration redraw.
+        invalidate();
     }
 
     /**
@@ -955,7 +957,7 @@ public class ChartView extends View {
      * Updates the chart dimensions.
      */
     private void updateDimensions() {
-        maxX = xExtremityMonitor.hasData() ? xExtremityMonitor.getMax() : 1.0;
+        maxX = xExtremityMonitor.hasData() ? Math.max(1.0,xExtremityMonitor.getMax()) : 1.0;
         for (ChartValueSeries chartValueSeries : seriesList) {
             chartValueSeries.updateDimension();
         }
