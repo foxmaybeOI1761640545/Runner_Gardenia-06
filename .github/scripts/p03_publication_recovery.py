@@ -11,7 +11,8 @@ SOURCE='77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471'
 BUILD_RUN='42443873771'
 APK_SHA='24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff'
 MARKER='[p03-existing-apk]'
-ALLOWED={'.github/workflows/p03-theme-system.yml','.github/scripts/p03_publication_recovery.py',
+RECOVERY_OPERATION='capture'
+ALLOWED={'.github/scripts/p03_release_theme_ui.py','.github/workflows/p03-theme-system.yml','.github/scripts/p03_publication_recovery.py',
          '.github/scripts/p03_publish.py','.github/scripts/publish_release.py',
          '.github/tests/test_p03_publication_recovery.py'}
 ARTIFACTS={
@@ -97,6 +98,13 @@ def accepted_bundle(folder=Path('dist')):
 
 def publish():
     api=GitHub();download(api)
+    if RECOVERY_OPERATION=='capture':
+        accepted_bundle()
+        from p03_release_smoke import run,capture
+        run(p02=True,p03=True,post_verify=capture)
+        if hashlib.sha256(Path('dist/RunnerGardenia-P0-Release.apk').read_bytes()).hexdigest()!=APK_SHA:raise ValueError('APK changed during recapture')
+        print('PASS: same signed APK recaptured; publication intentionally waits for visual review')
+        return
     from p03_publish import publish as publish_original
     publish_original(api,verify_bundle=accepted_bundle)
     original=json.loads(Path('dist/publication.json').read_text());original.update(publicationRecovery=json.loads(Path('recovery-inputs.json').read_text()))

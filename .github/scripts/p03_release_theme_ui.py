@@ -30,6 +30,13 @@ def png_pixel(raw,x,y):
         previous=row
     return tuple(previous[x*channels:x*channels+3])
 
+PAGE_IDS={'home':'p0_title','heart':'p0_sensor_toolbar','history':'p0_history_list','settings':'gardenia_settings_toolbar'}
+PAGE_ACTIVITIES={'home':'P0Activity','heart':'P0SensorsActivity','history':'P0HistoryActivity','settings':'P0SettingsActivity'}
+
+def page_matches(tree,page):
+    ids={n.get('resource-id') for n in tree.iter('node')}
+    return PACKAGE+':id/'+PAGE_IDS[page] in ids and all(PACKAGE+':id/'+identity not in ids for other,identity in PAGE_IDS.items() if other!=page)
+
 def capture(device,dump,screenshot,tap,start,output):
     info=json.loads(Path('dist/build-info.json').read_text());rows=[];schemes=[]
     palettes={f['id']:f for f in json.loads(Path('src/main/assets/gardenia-theme-tokens.json').read_text())['themes']}
@@ -44,16 +51,30 @@ def capture(device,dump,screenshot,tap,start,output):
         raise ValueError('Native family row unavailable: '+title)
     def saved():
         return next((n.text for n in ET.fromstring(device('shell','cat',pref)) if n.get('name')=='gardenia_theme_family'),'precision')
+    def await_page(page):
+        deadline=time.monotonic()+15
+        while time.monotonic()<deadline:
+            tree=dump();windows=device('shell','dumpsys','window','windows')
+            focus=next((line.strip() for line in windows.splitlines() if 'mCurrentFocus=' in line),'')
+            if page_matches(tree,page) and PAGE_ACTIVITIES[page] in focus:
+                time.sleep(0.4)
+                # Re-sample after the ready interval; every capture retains this exact native tree.
+                final=dump()
+                if page_matches(final,page):return final,focus
+            time.sleep(0.2)
+        raise ValueError('Actual focused native page never became ready: '+page)
     def photo(family,mode,page):
         name=f'p03-release-{family}-{mode}-{page}';expected=tuple(bytes.fromhex(palettes[family][mode]['background'][1:]));deadline=time.monotonic()+5
         while True:
+            tree,focus=await_page(page)
             screenshot(name);raw=(output/(name+'.png')).read_bytes()
             if raw[:8]!=b'\x89PNG\r\n\x1a\n':raise ValueError('Actual native screen missing')
             actual=png_pixel(raw,2,300) if page in ('home','settings') else None
             if actual is None or actual==expected:break
             if time.monotonic()>=deadline:raise ValueError(f'Actual {family}/{mode}/{page} background {actual} differs from native token {expected}')
             time.sleep(0.2)
-        rows.append({'file':name+'.png','family':family,'appearance':mode,'page':page,'sha256':hashlib.sha256(raw).hexdigest(),'renderedBackgroundVerified':actual is not None,'renderedBackgroundRgb':actual})
+        xml=ET.tostring(tree,encoding='utf-8');(output/(name+'.xml')).write_bytes(xml)
+        rows.append({'nativePageVerified':True,'focusedWindow':focus,'nativeWindowFile':name+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'file':name+'.png','family':family,'appearance':mode,'page':page,'sha256':hashlib.sha256(raw).hexdigest(),'renderedBackgroundVerified':actual is not None,'renderedBackgroundRgb':actual})
     def launch_home():
         device('shell','am','force-stop',PACKAGE)
         # A preceding system share chooser can leave a finishing singleTop launcher task.
@@ -64,10 +85,13 @@ def capture(device,dump,screenshot,tap,start,output):
             if any(n.get('resource-id')==PACKAGE+':id/p0_title' for n in dump().iter('node')):return
             time.sleep(0.2)
         raise ValueError('Fresh process did not reach the actual native home')
+    animation_keys=['window_animation_scale','transition_animation_scale','animator_duration_scale']
+    original_animations={key:device('shell','settings','get','global',key) for key in animation_keys}
     original_mode=device('shell','cmd','uimode','night').split(':')[-1].strip()
     try:
+        for key in animation_keys:device('shell','settings','put','global',key,'0')
         for family,title in FAMILIES:
-            launch_home();tap('p03_settings');select(title)
+            launch_home();await_page('home');tap('p03_settings');await_page('settings');select(title);await_page('settings')
             if saved()!=family:raise ValueError('Theme family was not persisted')
             for mode in ['light','dark']:
                 # Changes while the settings page is alive; no restart is required for appearance.
@@ -80,22 +104,25 @@ def capture(device,dump,screenshot,tap,start,output):
                 currentNight='1' if mode=='light' else '2'
                 persisted=device('shell','settings','get','secure','ui_night_mode')
                 photo(family,mode,'settings')
-                device('shell','input','keyevent','4');time.sleep(0.5);photo(family,mode,'home')
-                tap('p0_devices');time.sleep(0.5);photo(family,mode,'heart');device('shell','input','keyevent','4');time.sleep(0.5)
-                tap('p0_all_history');time.sleep(0.5);photo(family,mode,'history')
-                device('shell','input','keyevent','4');time.sleep(0.5);tap('p03_settings')
+                device('shell','input','keyevent','4');await_page('home');photo(family,mode,'home')
+                tap('p0_devices');await_page('heart');photo(family,mode,'heart');device('shell','input','keyevent','4');await_page('home')
+                tap('p0_all_history');await_page('history');photo(family,mode,'history')
+                device('shell','input','keyevent','4');await_page('home');tap('p03_settings');await_page('settings')
                 schemes.append({'family':family,'appearance':mode,'systemNightMode':currentNight,'effectiveSystemModeQuery':effective,'persistedNightSettingDiagnostic':persisted,'renderedPaletteVerified':True,'passed':True,'settingsPagePreserved':True})
             launch_home()
             if saved()!=family:raise ValueError('Process restart lost the family preference')
         archive=Path('dist/theme-screenshots.zip')
-        proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'versionCode':info['versionCode'],'api':int(device('shell','getprop','ro.build.version.sdk')),'policy':'FOLLOW_SYSTEM','processRestartPersistence':True,'schemes':schemes,'screenshots':rows,'physicalBleTested':False}
+        proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'versionCode':info['versionCode'],'api':int(device('shell','getprop','ro.build.version.sdk')),'policy':'FOLLOW_SYSTEM','processRestartPersistence':True,'schemes':schemes,'screenshots':rows,'physicalBleTested':False,'evaluationCommit':__import__('os').environ['GITHUB_SHA'],'evaluationRunId':__import__('os').environ['GITHUB_RUN_ID'],'animationsDisabledForCapture':True,'nativePageChecks':32}
         if proof['api']<35 or len(schemes)!=8 or len(rows)!=32:raise ValueError('Incomplete actual signed native matrix')
         with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
-            for row in rows:z.write(output/row['file'],row['file'])
+            for row in rows:
+                z.write(output/row['file'],row['file']);z.write(output/row['nativeWindowFile'],row['nativeWindowFile'])
             z.writestr('native-theme-matrix.json',json.dumps(proof,indent=2)+'\n')
         proof['screenshotsZipSha256']=hashlib.sha256(archive.read_bytes()).hexdigest()
         Path('dist/native-theme-smoke.json').write_text(json.dumps(proof,indent=2)+'\n')
         (output/'native-theme-smoke.json').write_text(json.dumps(proof,indent=2)+'\n')
         print('PASS: actual fixed-key signed APK, eight OS-following schemes, 32 native captures and process-restart family persistence')
     finally:
+        for key,value in original_animations.items():
+            device('shell','settings','delete','global',key) if value=='null' else device('shell','settings','put','global',key,value)
         device('shell','cmd','uimode','night',original_mode if original_mode in ('yes','no','auto','custom') else 'auto')

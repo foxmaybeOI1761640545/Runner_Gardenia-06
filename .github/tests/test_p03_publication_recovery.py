@@ -33,3 +33,18 @@ class GitHubMediaTypeTests(unittest.TestCase):
             self.assertEqual(expected,api.opener.accept)
 
 if __name__=='__main__':unittest.main()
+
+class NativePageEvidenceTests(unittest.TestCase):
+    def test_capture_rejects_stale_home_for_other_pages_and_transition_mixed_tree(self):
+        import xml.etree.ElementTree as ET
+        from p03_release_theme_ui import PAGE_IDS,page_matches
+        def tree(*ids):
+            root=ET.Element('hierarchy')
+            for identity in ids:ET.SubElement(root,'node',{'resource-id':'com.fox.runner:id/'+identity})
+            return root
+        for page,identity in PAGE_IDS.items():
+            self.assertTrue(page_matches(tree(identity),page))
+            for other,other_id in PAGE_IDS.items():
+                if other!=page:
+                    self.assertFalse(page_matches(tree(other_id),page))
+                    self.assertFalse(page_matches(tree(identity,other_id),page))
