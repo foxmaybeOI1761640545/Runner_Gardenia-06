@@ -1,0 +1,16 @@
+{
+  "file": "/workspace/work/ui-refinement/formal-B/RunnerGardenia-P0-Release.apk",
+  "bytes": 2803864,
+  "sha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+  "package": "com.fox.runner",
+  "versionName": "v0.1.0-p0.4",
+  "versionCode": 6775,
+  "signers": [
+    {
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "algorithm": "0x104",
+      "signatureVerified": true,
+      "contentDigestVerified": true
+    }
+  ]
+}

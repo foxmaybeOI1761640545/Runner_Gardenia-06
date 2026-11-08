@@ -1,0 +1,12 @@
+{
+  "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+  "buildRunId": "42506398467",
+  "buildWorkflowCommit": "8f4576090864d30f6a9152d74e750bb06646e87f",
+  "signedNativeVisualReviewPassed": true,
+  "signedPngsReviewed": 32,
+  "formalArtifactId": 13627733964,
+  "formalArtifactSha256": "da74a70965548499b565e56289598abccd533df83ac66faa00d52c9ce94fdb4f",
+  "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+  "review": "docs/theme-system/ui-refinement/VISUAL_REVIEW.md",
+  "reviewedAtUtc": "2026-11-08T17:58:05.886056+00:00"
+}
