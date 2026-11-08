@@ -29,6 +29,8 @@ public final class DashboardRenderer {
         var phase=value.phase();boolean idle=phase==RecordingSession.Phase.IDLE||phase==RecordingSession.Phase.FINISHED,acquiring=phase==RecordingSession.Phase.ACQUIRING_GPS,recording=phase==RecordingSession.Phase.RECORDING,paused=phase==RecordingSession.Phase.PAUSED;
         int title=switch(phase){case IDLE->R.string.p02_idle;case ACQUIRING_GPS->value.timedOut()?R.string.p02_gps_waiting:R.string.p02_acquiring_gps;case RECORDING->R.string.p0_recording;case PAUSED->R.string.p0_paused;case FINISHED->R.string.p0_finished;};
         b.p0RecordingState.setText(title);b.p02StatusDetail.setText(value.detail());
+        // A fixed GPS chip already states readiness; retain all warnings and preparation detail.
+        show(b.p02StatusDetail,!(family==ThemeUtils.Family.NEON&&recording&&value.currentGps()!=null));
         show(b.p0Start,idle);show(b.p0Pause,recording);show(b.p0Resume,paused);show(b.p0Finish,recording||paused);show(b.p0Sport,idle);show(b.p0CancelGps,acquiring);show(b.p0ContinueGps,value.timedOut());show(b.p0LocationSettings,acquiring);
         for(View v:new View[]{b.p0Start,b.p0Pause,b.p0Resume,b.p0Finish,b.p0CancelGps,b.p0ContinueGps,b.p0Running,b.p0Cycling})v.setEnabled(!value.busy());
         readout(b.p02DistanceValue,value.distance(),.22f);b.p02TimeValue.setText(value.duration());readout(b.p02SpeedValue,value.speed(),.7f);readout(b.p02PaceValue,value.pace(),.45f);

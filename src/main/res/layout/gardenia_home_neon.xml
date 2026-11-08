@@ -5,7 +5,7 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="12dp" android:paddingBottom="6dp">
           <TextView android:id="@+id/p0_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p04_brand" android:textSize="9sp" android:textAllCaps="true" android:letterSpacing="0.15" />
           <TextView android:id="@+id/p04_page_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:text="@string/p04_run" android:textSize="22sp" android:layout_marginTop="4dp" />
-          <TextView android:id="@+id/p03_family_label" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textSize="10sp" android:layout_marginTop="2dp" />
+          <TextView android:id="@+id/p03_family_label" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textSize="10sp" android:layout_marginTop="2dp" />
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
           <com.google.android.material.button.MaterialButton android:id="@+id/p04_gps_status" style="@style/P04Status" android:text="@string/p04_gps_unavailable" app:icon="@drawable/p04_gps" android:layout_marginEnd="4dp" />
@@ -42,23 +42,23 @@
           <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
             <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="8dp" android:background="@drawable/p04_metric_surface" android:layout_marginEnd="5dp">
               <TextView android:id="@+id/p02_distance_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:layout_marginTop="5dp" />
+              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:layout_marginTop="3dp" />
             </LinearLayout>
             <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="8dp" android:background="@drawable/p04_metric_surface" android:layout_marginStart="5dp">
               <TextView android:id="@+id/p02_time_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_time" android:layout_marginTop="5dp" />
+              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_time" android:layout_marginTop="3dp" />
             </LinearLayout>
           </LinearLayout>
           <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="10dp">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
               <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="8dp" android:background="@drawable/p04_metric_surface" android:layout_marginEnd="5dp">
                 <TextView android:id="@+id/p02_pace_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_pace" android:layout_marginTop="5dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_pace" android:layout_marginTop="3dp" />
                 <TextView android:id="@+id/p02_speed_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:layout_marginTop="4dp" android:textSize="11sp" />
               </LinearLayout>
               <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="8dp" android:background="@drawable/p04_metric_surface" android:layout_marginStart="5dp">
                 <TextView android:id="@+id/p04_accuracy" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p04_accuracy" android:layout_marginTop="5dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p04_accuracy" android:layout_marginTop="3dp" />
               </LinearLayout>
             </LinearLayout>
           </LinearLayout>
