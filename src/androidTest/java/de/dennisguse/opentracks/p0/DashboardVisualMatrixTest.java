@@ -20,16 +20,18 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 import de.dennisguse.opentracks.ui.util.ThemeUtils;
 
 /** Actual native pixel matrix, not an HTML rendering. Business regressions run separately in the full suite. */
+@androidx.annotation.RequiresApi(35)
 public class DashboardVisualMatrixTest {
  private final Context context=ApplicationProvider.getApplicationContext();private final JSONArray captures=new JSONArray();
- private ThemeUtils.Family family;private String night,size,density,font;private LocaleListCompat locales;private final String[] scales={"window_animation_scale","transition_animation_scale","animator_duration_scale"};private final String[] scaleValues=new String[3];
+ private ThemeUtils.Family family;private String night,size,density,font;private String localeTags;private final String[] scales={"window_animation_scale","transition_animation_scale","animator_duration_scale"};private final String[] scaleValues=new String[3];
  private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
  @Before public void before()throws Exception{
-  family=PreferencesUtils.getGardeniaTheme();night=SystemThemeTestUtils.savedMode();size=SystemThemeTestUtils.shell("wm size");density=SystemThemeTestUtils.shell("wm density");font=SystemThemeTestUtils.shell("settings get system font_scale");locales=AppCompatDelegate.getApplicationLocales();
-  for(int i=0;i<scales.length;i++){scaleValues[i]=SystemThemeTestUtils.shell("settings get global "+scales[i]);SystemThemeTestUtils.shell("settings put global "+scales[i]+" 0");}SystemThemeTestUtils.shell("settings put system font_scale 1.0");main(()->AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("zh-CN")));
+  if(Build.VERSION.SDK_INT<35)throw new AssertionError("API35 native visual matrix required");
+  family=PreferencesUtils.getGardeniaTheme();night=SystemThemeTestUtils.savedMode();size=SystemThemeTestUtils.shell("wm size");density=SystemThemeTestUtils.shell("wm density");font=SystemThemeTestUtils.shell("settings get system font_scale");localeTags=context.getSystemService(android.app.LocaleManager.class).getApplicationLocales().toLanguageTags();
+  for(int i=0;i<scales.length;i++){scaleValues[i]=SystemThemeTestUtils.shell("settings get global "+scales[i]);SystemThemeTestUtils.shell("settings put global "+scales[i]+" 0");}SystemThemeTestUtils.shell("settings put system font_scale 1.0");context.getSystemService(android.app.LocaleManager.class).setApplicationLocales(android.os.LocaleList.forLanguageTags("zh-CN"));
  }
  @After public void after()throws Exception{
-  PreferencesUtils.setGardeniaTheme(family);SystemThemeTestUtils.restore(night);main(()->AppCompatDelegate.setApplicationLocales(locales));SystemThemeTestUtils.shell("settings put system font_scale "+(font.equals("null")?"1.0":font));
+  PreferencesUtils.setGardeniaTheme(family);SystemThemeTestUtils.restore(night);context.getSystemService(android.app.LocaleManager.class).setApplicationLocales(android.os.LocaleList.forLanguageTags(localeTags));SystemThemeTestUtils.shell("settings put system font_scale "+(font.equals("null")?"1.0":font));
   for(String[] r:new String[][]{{"size",size},{"density",density}}){var match=java.util.regex.Pattern.compile("Override (?:size|density): ([^\\r\\n]+)").matcher(r[1]);SystemThemeTestUtils.shell("wm "+r[0]+" "+(match.find()?match.group(1).trim():"reset"));}
   for(int i=0;i<scales.length;i++)SystemThemeTestUtils.shell(scaleValues[i].equals("null")?"settings delete global "+scales[i]:"settings put global "+scales[i]+" "+scaleValues[i]);
  }
@@ -44,7 +46,7 @@ public class DashboardVisualMatrixTest {
      long modeDeadline=SystemClock.uptimeMillis()+10000;java.util.concurrent.atomic.AtomicBoolean modeReady=new java.util.concurrent.atomic.AtomicBoolean();
      do{screen.onActivity(a->modeReady.set(ThemeUtils.isNight(a)==dark&&a.hasWindowFocus()));if(modeReady.get())break;SystemClock.sleep(50);}while(SystemClock.uptimeMillis()<modeDeadline);assertTrue("Actual system mode/focus never propagated",modeReady.get());
      for(String state:DashboardFixture.STATES){
-      screen.onActivity(a->{assertEquals(viewport[0],a.getResources().getConfiguration().screenWidthDp);assertEquals(dark,ThemeUtils.isNight(a));((ScrollView)a.findViewById(R.id.p02_home_scroll)).scrollTo(0,0);DashboardFixture.present(a,state);});
+      screen.onActivity(a->{assertEquals("zh",a.getResources().getConfiguration().getLocales().get(0).getLanguage());assertEquals(viewport[0],a.getResources().getConfiguration().screenWidthDp);assertEquals(dark,ThemeUtils.isNight(a));((ScrollView)a.findViewById(R.id.p02_home_scroll)).scrollTo(0,0);DashboardFixture.present(a,state);});
       SystemClock.sleep(180);InstrumentationRegistry.getInstrumentation().waitForIdleSync();
       String name="p04-"+f.id+(dark?"-dark-":"-light-")+viewport[0]+"x"+viewport[1]+"-"+state;
       screen.onActivity(a->{assertTrue(a.hasWindowFocus());View content=a.findViewById(R.id.p03_content);assertTrue(content.getWidth()<=a.findViewById(android.R.id.content).getWidth());checkHorizontal(content);

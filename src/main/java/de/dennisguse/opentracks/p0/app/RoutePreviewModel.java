@@ -25,7 +25,9 @@ public final class RoutePreviewModel extends AndroidViewModel {
     public RoutePreviewModel(Application app){super(app);}
     public LiveData<Result> route(){return route;}
     public void refresh(Long track){
-        selected=track;if(busy||closed)return;
+        boolean changed=!Objects.equals(selected,track);selected=track;
+        if(changed&&!closed)route.setValue(new Result(List.of(),false,false));
+        if(busy||closed)return;
         if(track==null){route.setValue(new Result(List.of(),false,false));return;}
         busy=true;worker.execute(()->{
             Result result;

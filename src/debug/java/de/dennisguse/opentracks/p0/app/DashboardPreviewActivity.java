@@ -12,6 +12,6 @@ import de.dennisguse.opentracks.settings.PreferencesUtils;
 public final class DashboardPreviewActivity extends AbstractActivity {
  private P0HomeBinding binding;private DashboardRenderer renderer;
  @Override protected void onCreate(Bundle saved){super.onCreate(saved);renderer=new DashboardRenderer(this,binding);P0Navigation.bind(this,P0Activity.class);}
- public void present(DashboardState state,List<RouteGeometry.Point> route,List<HeartRatePlot.Point> heart){renderer.bind(state);binding.p04Route.bind(new RoutePreviewModel.Result(route,false,false),state.currentGps());binding.p03HeartChart.setPoints(heart);binding.p03FamilyLabel.append(" · UI fixture");}
+ public void present(DashboardState state,List<RouteGeometry.Point> route,List<HeartRatePlot.Point> heart){renderer.bind(state);binding.p04Route.bind(new RoutePreviewModel.Result(route,false,false),state.currentGps());binding.p03HeartChart.setPoints(heart);binding.p03FamilyLabel.setText(PreferencesUtils.getGardeniaTheme().title+" · UI fixture");}
  @NonNull @Override protected View createRootView(){binding=P0HomeBinding.bind(getLayoutInflater().inflate(PreferencesUtils.getGardeniaTheme().homeLayout,null,false));return binding.getRoot();}
 }

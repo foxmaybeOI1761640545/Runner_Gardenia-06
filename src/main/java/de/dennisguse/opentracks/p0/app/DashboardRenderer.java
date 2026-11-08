@@ -18,6 +18,11 @@ public final class DashboardRenderer {
     private final Activity activity;private final P0HomeBinding b;private final ThemeUtils.Family family;
     public DashboardRenderer(Activity activity,P0HomeBinding binding){this.activity=activity;b=binding;family=PreferencesUtils.getGardeniaTheme();
         if(family==ThemeUtils.Family.EXPLORER)b.p03FamilyLabel.setText(R.string.p04_field_notes);else b.p03FamilyLabel.setText(family.title);
+        float density=activity.getResources().getDisplayMetrics().density;
+        int corner=(int)(density*switch(family){case PRECISION->10;case QUIET->16;case EXPLORER->5;case NEON->18;});
+        for(var button:new com.google.android.material.button.MaterialButton[]{b.p0Start,b.p0Pause,b.p0Resume,b.p0Finish,b.p0CancelGps,b.p0ContinueGps})button.setCornerRadius(corner);
+        b.p04GpsStatus.setCornerRadius((int)(density*(family==ThemeUtils.Family.EXPLORER?4:20)));b.p0Devices.setCornerRadius((int)(density*(family==ThemeUtils.Family.EXPLORER?4:20)));
+        if(family==ThemeUtils.Family.NEON)((TextView)b.getRoot().findViewById(R.id.p04_page_title)).setTypeface(Typeface.create("sans-serif-light",Typeface.NORMAL));
         if(family==ThemeUtils.Family.QUIET){b.p02DistanceValue.setTypeface(Typeface.create("sans-serif-light",Typeface.NORMAL));for(int id:new int[]{R.id.p02_time_value,R.id.p02_pace_value,R.id.p0_heart_rate,R.id.p04_accuracy})((TextView)b.getRoot().findViewById(id)).setGravity(android.view.Gravity.CENTER);}
     }
     public void bind(DashboardState value){

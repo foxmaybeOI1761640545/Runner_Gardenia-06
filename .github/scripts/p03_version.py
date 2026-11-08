@@ -18,8 +18,8 @@ def allocated_code(data):
     entries=ledger_history()
     chosen=[e for e in entries if e['versionName']==VERSION]
     if len(chosen)!=1 or chosen[0].get('classification')!='reserved-p03-test':raise ValueError('Missing unique P0.3 reservation')
-    row=chosen[0];others=[e['versionCode'] for e in entries if e['versionName']!=VERSION]
-    if row['versionCode']!=max(others)+1 or data['codeHighWater']!=row['versionCode']:raise ValueError('P0.3 must use the next available code')
+    row=chosen[0];others=[e['versionCode'] for e in entries[:entries.index(row)]]
+    if row['versionCode']!=max(others)+1 or data['codeHighWater']<row['versionCode']:raise ValueError('P0.3 allocation must follow its historical predecessors')
     return row['versionCode']
 
 

@@ -1,0 +1,17 @@
+{
+  "status": "REJECTED_FOR_REFINEMENT",
+  "source": "1fad18f60732948abea12594897dc704aff3c69a",
+  "runId": "42479231505",
+  "artifactId": 13616664152,
+  "artifactSha256": "e1dce12f8cead435ed1f34e755bf764c1e67b11dced46d70a232ea7c56d7dacb",
+  "nativePngHashesVerified": 192,
+  "problems": [
+    "Neon recording action partially below first viewport",
+    "Quiet header incorrectly centered",
+    "Outdoor distance overlay too tall",
+    "Action shape insufficiently differentiated",
+    "Fixture watermark accumulated across states",
+    "Requested Chinese app locale was not actually applied"
+  ],
+  "releaseAuthorized": false
+}

@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "codeHighWater": 6774,
+  "codeHighWater": 6775,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
-    "v0.1.0-p0.": 3
+    "v0.1.0-p0.": 4
   },
   "allocations": [
     {
@@ -87,6 +87,15 @@
       "classification": "reserved-p03-test",
       "tag": "test-p0-v0.1.0-p0.3",
       "sourceEvidence": "Only the accepted immutable tag and signed build-info will bind the actual source; this is the P0.2 allocation basis."
+    },
+    {
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775,
+      "commit": null,
+      "allocationBasisCommit": "cebf4682cec672fbde022c54bda3b442ff0663ab",
+      "classification": "reserved-p04-refinement",
+      "tag": "test-p0-v0.1.0-p0.4",
+      "sourceEvidence": "UI refinement allocation from completed P0.3 development HEAD; only the future accepted signed APK/tag bind the actual source."
     }
   ]
 }

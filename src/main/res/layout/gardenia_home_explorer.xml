@@ -18,7 +18,7 @@
         <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="6dp">
           <de.dennisguse.opentracks.p0.app.RouteMapView android:id="@+id/p04_route" android:layout_width="match_parent" android:layout_height="238dp" android:contentDescription="@string/p04_route_empty" />
           <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="bottom|start" android:layout_margin="14dp" android:paddingHorizontal="12dp" android:background="@drawable/p04_map_readout">
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="18dp" android:paddingBottom="18dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="6dp" android:paddingBottom="6dp">
               <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:letterSpacing="0.10" android:gravity="start" />
               <TextView android:id="@+id/p02_distance_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:textSize="46sp" android:gravity="start" android:textColor="?attr/gardeniaAccentText" android:layout_marginTop="6dp" android:fontFamily="sans-serif-condensed" />
             </LinearLayout>

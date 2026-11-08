@@ -28,4 +28,5 @@
   <string name="p04_route_title">运动轨迹</string>
   <string name="p04_live">实时</string>
   <string name="p04_north">N ↑</string>
+  <string name="p04_history_tab">历史</string>
 </resources>
