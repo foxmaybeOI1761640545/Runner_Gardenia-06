@@ -90,7 +90,23 @@ def run(p02=False,p03=False,post_verify=None,baseline_spec=None):
             if any(text in node.get('text','') for node in root.iter('node')):return root
             time.sleep(0.5)
         raise ValueError('Real Release UI did not display: '+text)
+    def reveal(identity):
+        # Refined pages intentionally scroll; discover actual native bounds without
+        # assuming GPS details, actions and device entry all occupy one viewport.
+        if baseline_spec is None:return
+        for attempt in range(12):
+            root=dump();nodes=list(root.iter('node'));screen=list(map(int,re.findall(r'\d+',root.find('node').get('bounds',''))))
+            for node in nodes:
+                if node.get('resource-id')==PACKAGE+':id/'+identity:
+                    bounds=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
+                    if len(bounds)==4 and bounds[2]>bounds[0] and bounds[3]-bounds[1]>=16:return
+            if len(screen)!=4:raise ValueError('Actual viewport bounds missing')
+            x=(screen[0]+screen[2])//2;h=screen[3]-screen[1]
+            top=screen[1]+int(h*.25);bottom=screen[1]+int(h*.72)
+            device('shell','input','swipe',str(x),str(bottom if attempt<6 else top),str(x),str(top if attempt<6 else bottom),'200');time.sleep(.15)
+        raise ValueError('Scrollable Release control/data unavailable: '+identity)
     def tap(identity):
+        reveal(identity)
         for attempt in range(5):
             root=dump()
             for node in root.iter('node'):
@@ -177,7 +193,7 @@ def run(p02=False,p03=False,post_verify=None,baseline_spec=None):
                 for index in range(3):device('emu','geo','fix','103.8',str(1.3+index*0.000001),'12','8','4');time.sleep(1)
             wait_text('Recording')
             for index in range(8):device('emu','geo','fix','103.8',str(1.3+index*0.00002),'12','8','4');time.sleep(1)
-            wait_text('1.300');metrics=dump();metric=next(node.get('text','') for node in metrics.iter('node') if node.get('resource-id')==PACKAGE+':id/p0_metrics');
+            reveal('p0_metrics');wait_text('1.300');metrics=dump();metric=next(node.get('text','') for node in metrics.iter('node') if node.get('resource-id')==PACKAGE+':id/p0_metrics');
             if p02:
                 fields={n.get('resource-id'):n.get('text','') for n in metrics.iter('node')}
                 metric+='\nSpeed '+fields.get(PACKAGE+':id/p02_speed_value','')+' · Pace '+fields.get(PACKAGE+':id/p02_pace_value','')
