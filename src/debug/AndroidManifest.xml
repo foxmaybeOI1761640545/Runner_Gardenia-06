@@ -3,5 +3,7 @@
 
     <application
         android:hasFragileUserData="true"
-        tools:replace="android:hasFragileUserData" />
+        tools:replace="android:hasFragileUserData">
+        <activity android:name="de.dennisguse.opentracks.p0.app.DashboardPreviewActivity" android:exported="false" />
+    </application>
 </manifest>

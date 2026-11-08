@@ -18,7 +18,7 @@ public class P0SensorsActivity extends AbstractActivity {
         super.onCreate(state);P0Navigation.bind(this);
         model=new ViewModelProvider(this).get(P0RecordingViewModel.class);
         chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);
-        model.snapshot().observe(this,value->chartModel.bind(this,binding.p03SensorChart,value.preview()));
+        model.snapshot().observe(this,value->{var stateValue=DashboardState.from(this,value);binding.p04SensorBpm.setTextSize(stateValue.heartFresh()?48:28);DashboardRenderer.readout(binding.p04SensorBpm,stateValue.bpm(),.28f);binding.p04SensorState.setText(stateValue.heartState());chartModel.bind(this,binding.p03SensorChart,value.preview());});
         setSupportActionBar(binding.p0SensorToolbar);
         if(getSupportActionBar()!=null){getSupportActionBar().setTitle(R.string.p0_devices);getSupportActionBar().setDisplayHomeAsUpEnabled(true);}
         if(state==null)getSupportFragmentManager().beginTransaction()

@@ -39,7 +39,7 @@ public final class DashboardRenderer {
         b.p0Metrics.setText(value.gpsDetails());show(b.p0Metrics,value.currentGps()!=null);
         b.p0Error.setText(value.error());show(b.p0Error,value.error()!=null);
     }
-    private static void readout(TextView v,String text,float unitScale){
+    public static void readout(TextView v,String text,float unitScale){
         SpannableString value=new SpannableString(text);int split=0;while(split<text.length()&&"0123456789.,:—–-+±′″".indexOf(text.charAt(split))>=0)split++;
         if(split>0&&split<text.length())value.setSpan(new RelativeSizeSpan(Math.min(1f,Math.max(unitScale,11f/(v.getTextSize()/v.getResources().getDisplayMetrics().scaledDensity)))),split,text.length(),Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);v.setText(value);v.setContentDescription(text);
     }

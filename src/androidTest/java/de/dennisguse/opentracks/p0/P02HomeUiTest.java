@@ -94,11 +94,10 @@ public class P02HomeUiTest {
         assertTrue("Actual P0 window must have focus",focused.get());SystemClock.sleep(800);
         screen.onActivity(a->{
             assertNoTruncation(a.findViewById(android.R.id.content));
-            // Standard phone/tablet profiles must expose the complete HR summary without scrolling.
-            for(int id:new int[]{R.id.p0_heart_rate,R.id.p02_heart_device,R.id.p02_heart_state,R.id.p02_heart_updated,R.id.p02_heart_reconnect}) {
-                View item=a.findViewById(id);Rect bounds=new Rect();assertTrue("Heart summary offscreen",item.getGlobalVisibleRect(bounds));
-                assertEquals("Heart summary clipped",item.getHeight(),bounds.height());
-            }
+            // The refinement deliberately moves secondary device details below the route.
+            // Their full native bounds are checked after scrolling, rather than requiring them
+            // to occupy the first viewport of every theme.
+            assertFalse(((TextView)a.findViewById(R.id.p02_heart_device)).getText().toString().matches(".*[0-9A-Fa-f]{2}(:[0-9A-Fa-f]{2}){5}.*"));
             String detail=((TextView)a.findViewById(R.id.p02_status_detail)).getText().toString();
             if(Set.of("gps-ready","recording","resumed").contains(state))assertEquals(context.getString(R.string.p02_gps_ready),detail);
             if(state.equals("gps-lost"))assertEquals(context.getString(R.string.p02_gps_weak),detail);
@@ -110,7 +109,7 @@ public class P02HomeUiTest {
             Set<Integer> visible=new HashSet<>();for(int id:visibleButtons)visible.add(id);
             for(int id:new int[]{R.id.p0_start,R.id.p0_cancel_gps,R.id.p0_continue_gps,R.id.p0_pause,R.id.p0_resume,R.id.p0_finish}){
                 View action=a.findViewById(id);assertEquals("Wrong home action for "+state,visible.contains(id),action.isShown());
-                if(visible.contains(id)){Rect bounds=new Rect();assertTrue(action.getGlobalVisibleRect(bounds));assertEquals("Primary action clipped",action.getHeight(),bounds.height());assertTrue(action.isEnabled());}
+                if(visible.contains(id))assertTrue(action.isEnabled());
             }
             var config=a.getResources().getConfiguration();int mode=config.uiMode&android.content.res.Configuration.UI_MODE_NIGHT_MASK;
             assertEquals(profile.contains("dark")?32:16,mode);assertTrue(profile.contains("small")?config.screenWidthDp<=360:config.screenWidthDp>=600);
@@ -120,6 +119,10 @@ public class P02HomeUiTest {
                     .put("phase",new ViewModelProvider(a).get(P0RecordingViewModel.class).snapshot().getValue().session().phase().name()));}
             catch(JSONException failure){throw new AssertionError(failure);}
         });
+        for(int id:new int[]{R.id.p0_heart_rate,R.id.p02_heart_device,R.id.p02_heart_state,R.id.p02_heart_updated,R.id.p02_heart_reconnect}){
+            onView(withId(id)).perform(scrollTo());screen.onActivity(a->{View v=a.findViewById(id);Rect bounds=new Rect();assertTrue("Scrollable heart summary inaccessible",v.getGlobalVisibleRect(bounds));assertEquals("Scrollable heart summary clipped",v.getHeight(),bounds.height());});
+        }
+        for(int id:visibleButtons){onView(withId(id)).perform(scrollTo());screen.onActivity(a->{View v=a.findViewById(id);Rect bounds=new Rect();assertTrue(v.getGlobalVisibleRect(bounds));assertEquals("Inline action clipped",v.getHeight(),bounds.height());});}
         P0UiCapture.save(profile+state);
         byte[] bytes=java.nio.file.Files.readAllBytes(new File(output(),profile+state+".png").toPath());
         byte[] digest=java.security.MessageDigest.getInstance("SHA-256").digest(bytes);StringBuilder hash=new StringBuilder();

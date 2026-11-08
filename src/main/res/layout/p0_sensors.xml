@@ -1,6 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?android:attr/colorBackground">
   <androidx.appcompat.widget.Toolbar android:id="@+id/p0_sensor_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
-  <de.dennisguse.opentracks.chart.ChartView android:id="@+id/p03_sensor_chart" android:layout_width="match_parent" android:layout_height="220dp" android:contentDescription="@string/gardenia_chart_empty" />
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingTop="12dp" android:paddingBottom="8dp">
+    <TextView android:id="@+id/p04_sensor_bpm" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:textSize="48sp" android:gravity="center" android:textColor="?attr/gardeniaAccentText" />
+    <TextView android:id="@+id/p04_sensor_state" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:gravity="center" />
+    <de.dennisguse.opentracks.p0.app.PulseChartView android:id="@+id/p03_sensor_chart" android:layout_width="match_parent" android:layout_height="100dp" android:layout_marginTop="8dp" android:contentDescription="@string/gardenia_chart_empty" />
+  </LinearLayout>
   <androidx.fragment.app.FragmentContainerView android:id="@+id/p0_sensor_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
   <include layout="@layout/p04_navigation" />
 </LinearLayout>

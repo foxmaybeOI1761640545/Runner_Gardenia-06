@@ -28,11 +28,12 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
         var described=HeartRatePanel.describe(context,hr,withoutAddress);boolean fresh=!described.bpm().equals(context.getString(R.string.hr_empty_value));
         boolean connected=status.state()==BleConnectionSession.State.CONNECTED;
         String device=hr!=null&&hr.sample()!=null?hr.sample().deviceName():null;
+        if(device==null||device.isBlank())device=status.device();
         // An identifier is never used as a display name on the dashboard.
         if(device==null||device.isBlank()||device.matches("(?i)[0-9a-f]{2}(:[0-9a-f]{2}){5}"))device=context.getString(connected?R.string.p04_heart_device:R.string.p04_heart_none);
         String last=status.lastReceived()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(status.lastReceived());
         String accuracy=fix&&p.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",p.horizontalAccuracy().toM()):"—";
         String location=fix?context.getString(R.string.p02_gps_details,p.latitude(),p.longitude(),accuracy,p.time()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(p.time())):"—";
-        return new DashboardState(phase,value.busy(),timeout,MotionFormat.distance(stats.totalDistance().toM()),MotionFormat.duration(stats.totalDuration()),MotionFormat.speed(speed),MotionFormat.pace(speed),described.bpm(),connected&&status.lastReceived()==null?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,fix?p:null,connected,fresh,value.error());
+        return new DashboardState(phase,value.busy(),timeout,MotionFormat.distance(stats.totalDistance().toM()),MotionFormat.duration(stats.totalDuration()),MotionFormat.speed(speed),MotionFormat.pace(speed),described.bpm(),connected&&status.lastReceived()==null&&!status.contactLost()?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,fix?p:null,connected,fresh,value.error());
     }
 }
