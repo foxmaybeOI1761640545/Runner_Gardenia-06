@@ -6,6 +6,7 @@ import os
 import re
 from pathlib import Path
 import urllib.parse
+import urllib.request
 from publish_release import GitHub,digest
 from p03_signing import bundle
 from p03_version import TAG,VERSION,APK,CERT,remote_history
@@ -108,7 +109,6 @@ def publish(api,folder=Path('dist'),verify_bundle=None):
     latest=api.request(api.base+'/releases/latest',optional=True)
     if latest and latest['id']==final['id']:raise ValueError('Test release must never be Latest')
     # Re-download publicly, without an Authorization header, and re-run APK identity/signature verification.
-    import urllib.request
     public_url=assets[APK]['browser_download_url']
     expected_prefix=f"https://github.com/{api.repo}/releases/download/{TAG}/"
     if not public_url.startswith(expected_prefix):raise ValueError('Unexpected public APK URL')
