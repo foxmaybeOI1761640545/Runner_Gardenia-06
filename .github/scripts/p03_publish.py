@@ -112,15 +112,19 @@ def publish(api,folder=Path('dist'),verify_bundle=None):
     public_url=assets[APK]['browser_download_url']
     expected_prefix=f"https://github.com/{api.repo}/releases/download/{TAG}/"
     if not public_url.startswith(expected_prefix):raise ValueError('Unexpected public APK URL')
-    with urllib.request.urlopen(urllib.request.Request(public_url,headers={'User-Agent':'Runner-Gardenia-public-verification'}),timeout=120) as response:
+    # Download the PUBLIC asset without any authorization. The browser route
+    # can return a cached gateway error in this execution network.
+    download_url=assets[APK]['url']
+    if not download_url.startswith(api.base+'/releases/assets/'):raise ValueError('Unexpected public asset API URL')
+    with urllib.request.urlopen(urllib.request.Request(download_url,headers={'User-Agent':'Runner-Gardenia-public-verification','Accept':'application/octet-stream'}),timeout=120) as response:
         public_apk=response.read()
         if response.status!=200:raise ValueError('Public APK is not downloadable')
     if digest(public_apk)!=info['apkSha256'] or public_apk!=payloads[APK]:raise ValueError('Public APK differs from accepted immutable artifact')
     from publish_release import verify_apk
     verify_apk(public_apk,info)
-    receipt={'publicDownloadVerified':True,'publicSignatureVerified':True,'tag':TAG,'release':final['html_url'],'commit':info['commit'],'versionCode':info['versionCode'],'apk':assets[APK]['browser_download_url'],
+    receipt={'publicDownloadVerified':True,'publicSignatureVerified':True,'tag':TAG,'release':final['html_url'],'commit':info['commit'],'versionCode':info['versionCode'],'apk':public_url,'publicDownloadUrl':download_url,'publicDownloadChannel':'anonymous-public-asset-api','publicDownloadHttp':200,'publicDownloadAuthenticated':False,
         'apkSha256':info['apkSha256'],'apkBytes':info['apkBytes'],'certificateSha256':CERT,'draft':False,'prerelease':True,'latest':False,
-        'assets':{n:{'bytes':len(raw),'sha256':digest(raw),'url':assets[n]['browser_download_url']} for n,raw in payloads.items()}}
+        'assets':{n:{'bytes':len(raw),'sha256':digest(raw),'url':assets[n]['browser_download_url'],'apiUrl':assets[n]['url']} for n,raw in payloads.items()}}
     (folder/'publication.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt,indent=2))
 
 

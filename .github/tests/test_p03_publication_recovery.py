@@ -87,10 +87,11 @@ class PublicationFlowTests(unittest.TestCase):
             root=Path(folder)
             for name in ['build-info.json',p03_publish.APK,'SHA256SUMS','runtime-smoke.json','native-theme-smoke.json','theme-screenshots.zip']:(root/name).write_bytes(raw_apk if name==p03_publish.APK else name.encode())
             api=API()
-            with patch.object(p03_publish,'remote_history'),patch.object(p03_publish,'helper_counts',return_value={'tests':68}),patch.object(p03_publish,'verify_tag',return_value={'valid':True}),patch('publish_release.verify_apk') as verify,patch('urllib.request.urlopen',return_value=PublicResponse()),contextlib.redirect_stdout(io.StringIO()):
+            with patch.object(p03_publish,'remote_history'),patch.object(p03_publish,'helper_counts',return_value={'tests':68}),patch.object(p03_publish,'verify_tag',return_value={'valid':True}),patch('publish_release.verify_apk') as verify,patch('urllib.request.urlopen',return_value=PublicResponse()) as public_get,contextlib.redirect_stdout(io.StringIO()):
                 p03_publish.publish(api,root,verify_bundle=lambda _:info)
             proof=json.loads((root/'publication.json').read_text())
             self.assertTrue(api.published);self.assertEqual(8,len(api.uploaded));self.assertTrue(all(v>=2 for v in api.downloads.values()))
             self.assertTrue(proof['publicDownloadVerified']);self.assertEqual(info['apkSha256'],proof['apkSha256']);verify.assert_called_once_with(raw_apk,info)
+            request=public_get.call_args.args[0];self.assertTrue(request.full_url.startswith(api.base+'/releases/assets/'));self.assertEqual('application/octet-stream',request.get_header('Accept'));self.assertIsNone(request.get_header('Authorization'));self.assertFalse(proof['publicDownloadAuthenticated'])
 
 if __name__=='__main__':unittest.main()
