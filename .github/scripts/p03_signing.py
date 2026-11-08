@@ -44,6 +44,7 @@ def bundle(folder=Path('dist')):
     if len(list(folder.glob('*.apk')))!=1 or (folder/APK).stat().st_size!=info['apkBytes']:raise ValueError('Ambiguous APK/size')
     native=json.loads((folder/'native-theme-smoke.json').read_text())
     if native.get('passed') is not True or native.get('commit')!=info['commit'] or native.get('apkSha256')!=info['apkSha256'] or len(native.get('schemes',[]))!=8:raise ValueError('Missing actual signed native appearance matrix')
+    if any(s.get('renderedPaletteVerified') is not True for s in native['schemes']) or sum(r.get('renderedBackgroundVerified') is True for r in native.get('screenshots',[]))!=16:raise ValueError('Missing actual signed Light/Dark rendered pixel verification')
     if hashlib.sha256((folder/'theme-screenshots.zip').read_bytes()).hexdigest()!=native['screenshotsZipSha256']:raise ValueError('Native screenshot package changed')
     raw=(folder/APK).read_bytes()
     if hashlib.sha256(raw).hexdigest()!=info['apkSha256'] or (folder/'SHA256SUMS').read_text()!=f"{info['apkSha256']}  {APK}\n":raise ValueError('APK/checksum changed')

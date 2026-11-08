@@ -1,5 +1,5 @@
 """Exercise the real shell window helper on API35 before signed acceptance."""
-import hashlib,json,os,shutil,subprocess,tempfile,time,zipfile
+import hashlib,json,os,re,shutil,subprocess,tempfile,time,zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -38,7 +38,13 @@ try:
             if len(nodes)<3 or not any(n.get('package')=='com.android.launcher3' for n in nodes):raise ValueError('Actual visible Launcher tree missing')
             if not any(n.get('resource-id') for n in nodes):raise ValueError('Native view IDs missing')
             (out/f'window-{i}.xml').write_text(raw)
-        proof={'passed':True,'commit':os.environ['GITHUB_SHA'],'api':int(device('shell','getprop','ro.build.version.sdk')),'freshProcesses':2,'helperSha256':hashlib.sha256(Path('.github/scripts/NativeWindowDump.java').read_bytes()).hexdigest(),'appInstalled':False,'signingKeyUsed':False}
+        queries=[]
+        for mode in ['no','yes']:
+            device('shell','cmd','uimode','night',mode)
+            actual=device('shell','cmd','uimode','night')
+            if not re.search(r'Night mode:\s*'+mode+r'\b',actual):raise ValueError('Effective mode query failed: '+actual)
+            queries.append(actual)
+        proof={'effectiveNightQueries':queries,'passed':True,'commit':os.environ['GITHUB_SHA'],'api':int(device('shell','getprop','ro.build.version.sdk')),'freshProcesses':2,'helperSha256':hashlib.sha256(Path('.github/scripts/NativeWindowDump.java').read_bytes()).hexdigest(),'appInstalled':False,'signingKeyUsed':False}
         if proof['api']!=35:raise ValueError('Helper must execute on API35')
         (out/'result.json').write_text(json.dumps(proof,indent=2)+'\n');print('PASS: fresh real native window snapshots in two API35 shell processes')
 finally:
