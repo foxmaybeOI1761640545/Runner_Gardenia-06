@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "kind": "ACTUAL_NATIVE_VISUAL_REVIEW",
+  "schemes": 8,
+  "viewports": [
+    [
+      360,
+      800
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      412,
+      915
+    ]
+  ],
+  "fixturePngs": 192,
+  "businessRegressionPassed": true,
+  "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+  "mainTree": "4568dcbd52b73a88f575aedc15b7a499e19a8802",
+  "testRunId": "42504187574",
+  "reportsArtifactId": 13626853039,
+  "reportsArtifactSha256": "9b0686f11a9fe0d24e70738a8732ea460b9380af5ce50cb4fde6f7befd077cba",
+  "review": "docs/theme-system/ui-refinement/VISUAL_REVIEW.md",
+  "reviewedStates": [
+    "idle",
+    "gps-searching",
+    "gps-fixed",
+    "recording",
+    "paused",
+    "finished",
+    "disconnected",
+    "connected-no-sample"
+  ],
+  "referenceComparisons": 16,
+  "reviewedAtUtc": "2026-11-08T17:43:34.682682+00:00"
+}
