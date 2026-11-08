@@ -24,7 +24,7 @@
             </LinearLayout>
           </LinearLayout>
         </FrameLayout>
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_state_card" android:paddingTop="10dp" android:paddingBottom="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_state_card" android:paddingTop="6dp" android:paddingBottom="6dp">
           <TextView android:id="@+id/p0_recording_state" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle" android:textColor="?attr/gardeniaAccentText" android:textSize="12sp" android:textStyle="bold" android:accessibilityLiveRegion="polite" />
           <TextView android:id="@+id/p02_status_detail" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle_detail" android:textSize="11sp" android:layout_marginTop="3dp" />
           <TextView android:id="@+id/p0_location_status" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:visibility="gone" />
@@ -32,7 +32,7 @@
           <com.google.android.material.button.MaterialButton android:id="@+id/p0_location_settings" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p02_location_settings" android:visibility="gone" />
         </LinearLayout>
         <TextView android:id="@+id/p0_error" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textColor="?attr/colorError" android:accessibilityLiveRegion="polite" android:visibility="gone" />
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_metric_card" android:layout_marginBottom="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_metric_card" android:layout_marginBottom="8dp">
           <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
             <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">
               <TextView android:id="@+id/p02_time_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
