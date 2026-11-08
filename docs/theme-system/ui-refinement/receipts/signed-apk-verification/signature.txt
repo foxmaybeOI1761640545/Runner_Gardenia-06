@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=Runner Gardenia Release, OU=Android Application Signing, O=Runner Gardenia, C=CN
+Signer #1 certificate SHA-256 digest: e3e7d46bfcb869f5a521a7fba6fd1ba5790d7dbcaf37f722ddc69d7bb1439a22
+Signer #1 certificate SHA-1 digest: 7f59944d0b7305a467c0a6790a75d50bc0e79fac
+Signer #1 certificate MD5 digest: d86fd5954071897ea48c6d5482a0e641
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 4096
+Signer #1 public key SHA-256 digest: 5b41b4bd14eae5faf17f371a5a9ba38237a43ab12aacb71728866758019880fc
+Signer #1 public key SHA-1 digest: 7a1e617d6dd4d6a0ac52c5c6f632a6a1ed81ce9a
+Signer #1 public key MD5 digest: 850bf0cc153436e133e3dc9525f4236e

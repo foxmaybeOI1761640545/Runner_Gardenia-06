@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.fox.runner",
+  "variantName": "reproducibleRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 6775,
+      "versionName": "v0.1.0-p0.4",
+      "outputFile": "runner-gardenia_v0.1.0-p0.4_6775-reproducible-release.apk"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/runner-gardenia_v0.1.0-p0.4_6775-reproducible-release.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/runner-gardenia_v0.1.0-p0.4_6775-reproducible-release.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 26
+}

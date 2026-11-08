@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-11-08T18:02:45.902Z",
+  "channel": "existing-connected-github-account",
+  "heads": [
+    {
+      "ref": "refs/heads/design/p0-ui-lab",
+      "sha": "45ce47d9eec81dd2f0cdfcf2bfd7055e23378e02"
+    },
+    {
+      "ref": "refs/heads/feature/heart-rate-monitoring",
+      "sha": "121ea381fd11111427073fe291dfb5ddabf8b03e"
+    },
+    {
+      "ref": "refs/heads/feature/p0-2-gps-ui",
+      "sha": "e27fbfd6f7f082d6f604eecb1cfeaaad8d3fb14a"
+    },
+    {
+      "ref": "refs/heads/feature/p0-core-migration",
+      "sha": "60daeb21aa50bdbceec6e6ad354a431b8c1be434"
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3",
+      "sha": "cebf4682cec672fbde022c54bda3b442ff0663ab"
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3-ui-refinement",
+      "sha": "e091508f6b2247a25bf5f7faa3885dea290b2b29"
+    },
+    {
+      "ref": "refs/heads/main",
+      "sha": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+    }
+  ],
+  "tags": [
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.1",
+      "sha": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+      "source": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "message": "Runner Gardenia P0 test release\nAPK version: v0.1.0-p0.1 (Version Code 6772)\nBuild commit: 3116e5fa7a56ce6f299ea45d5a45745f1aed4466\nGitHub Actions Run: 41974364095\nOriginal Artifact: 13391972069\nAPK SHA-256: 94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0\nExisting accepted APK reused without rebuild, modification or re-signing.\nHardware acceptance: NEEDS_DEVICE_VALIDATION\n"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.2",
+      "sha": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+      "source": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "message": "P0.2 test release; accepted fixed-key APK\nActions Run: 42251766485\nFormal Artifact: 13522176163\nRunner-Gardenia-P02: {\"apkSha256\": \"48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046\", \"certificateSha256\": \"E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22\", \"commit\": \"4454d716a5ae010b92d3eefa1ac1c0ebedde0063\", \"versionCode\": 6773, \"versionName\": \"v0.1.0-p0.2\"}\n"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.3",
+      "sha": "3839bd2e288de3dc47219cbb8c036f8919d6bed7",
+      "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "message": "P0.3 test release; accepted fixed-key APK\nRunner-Gardenia-P03: {\"apkSha256\": \"24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff\", \"certificateSha256\": \"E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22\", \"commit\": \"77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471\", \"versionCode\": 6774, \"versionName\": \"v0.1.0-p0.3\"}\n"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.4",
+      "sha": "f3900d5dadd09d3b8132bd2951d674692b2a6011",
+      "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "message": "P0.4 native visual refinement test release; accepted fixed-key APK\nRunner-Gardenia-P04: {\"apkSha256\": \"aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc\", \"certificateSha256\": \"E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22\", \"commit\": \"ccc59b546b5087a2038d32087cc675a3096852c3\", \"versionCode\": 6775, \"versionName\": \"v0.1.0-p0.4\"}"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.4",
+      "sha": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "source": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "message": "Runner Gardenia v0.1.0-rc1.4\n\nRunner-Gardenia-Plan: {\"commit\": \"24aa0d7d36d244852e796cca6307936e34d989ed\", \"publishing\": true, \"runId\": \"41685585228\", \"versionCode\": 6769, \"versionName\": \"v0.1.0-rc1.4\"}\n"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.5",
+      "sha": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+      "source": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "message": "Runner Gardenia v0.1.0-rc1.5\n\nRunner-Gardenia-Plan: {\"commit\": \"270cfa49a1c94d658d16dfc1e84563765aee832f\", \"publishing\": true, \"runId\": \"41738430305\", \"versionCode\": 6770, \"versionName\": \"v0.1.0-rc1.5\"}\nRunner-Gardenia-APK-SHA256: 6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e\n"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.6",
+      "sha": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+      "source": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "message": "Runner Gardenia v0.1.0-rc1.6\n\nRunner-Gardenia-Plan: {\"commit\": \"9b5d7b06afc1eb8e3315ba73874ac088fa4d5169\", \"publishing\": true, \"runId\": \"41848524070\", \"versionCode\": 6771, \"versionName\": \"v0.1.0-rc1.6\"}\nRunner-Gardenia-APK-SHA256: 102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f\n"
+    }
+  ],
+  "release": {
+    "id": 438419806,
+    "tag": "test-p0-v0.1.0-p0.4",
+    "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+    "draft": false,
+    "prerelease": true,
+    "assets": [
+      {
+        "name": "build-info.json",
+        "sha256": "sha256:2db139350aefb03457edbb7ac9068bf9a4f7a2c4e34dfff875643bf0145ae75d",
+        "size": 4146
+      },
+      {
+        "name": "native-theme-smoke.json",
+        "sha256": "sha256:2843cf736b5cb9e1268e2b49472d987befe9795b62fe5677cc46d2abdda7fa3e",
+        "size": 23674
+      },
+      {
+        "name": "RELEASE_NOTES.md",
+        "sha256": "sha256:36da9acb2431f1968c4c6c7db5c0a81b53d1d6285be6b5ef20dd3a531f832613",
+        "size": 1466
+      },
+      {
+        "name": "RunnerGardenia-P0-Release.apk",
+        "sha256": "sha256:aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+        "size": 2803864
+      },
+      {
+        "name": "runtime-smoke.json",
+        "sha256": "sha256:080a49b77a19838c65427b4a4b024610c129bdca1f5f2f929d23388d4d08e9c6",
+        "size": 757
+      },
+      {
+        "name": "SHA256SUMS",
+        "sha256": "sha256:b11f5aff8c9ff12989a253165a85442cd90579f78f402b18f722256b7cce3c69",
+        "size": 96
+      },
+      {
+        "name": "test-summary.json",
+        "sha256": "sha256:99c13e421bd62d274c9c5c0d901314a11ab7a68a1671f8088b253046bb41c31c",
+        "size": 702
+      },
+      {
+        "name": "theme-screenshots.zip",
+        "sha256": "sha256:4b5ff16a1c27aa712be44da24df57ec82a548f0c66d14abea8e0ba4fd3f15dfe",
+        "size": 4592498
+      }
+    ]
+  }
+}

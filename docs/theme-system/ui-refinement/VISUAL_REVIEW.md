@@ -38,3 +38,5 @@
 实际从 code6774 覆盖升级保留1个历史 GPS 点与2个原始心率采样及设备配置；新增录制得到21个GPS点、2个手动分段，暂停/继续、强停恢复、GPS字段与实际GPX导出/1.1 schema均通过。重启主题持久化及运行中系统模式变化保持当前设置页通过。
 
 APK 为 `v0.1.0-p0.4 /6775`，2803864 bytes，SHA-256 `aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc`。固定证书与旧版一致；云端 apksigner/zipalign 与独立本地 APKv2 数字签名及内容摘要校验通过。候选与 Formal Artifact 的 APK 字节完全相同。批准发布这份不可变APK，发布任务不再编译/签名。公开下载校验结果将在 DELIVERY 和 publication 收据中补充。
+
+公开发布及独立八附件 HTTP200/签名/字节验收已完成，见 [DELIVERY](DELIVERY.md) 与 [独立收据](receipts/independent-public-download.json)。

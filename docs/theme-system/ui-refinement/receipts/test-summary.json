@@ -1,0 +1,32 @@
+{
+  "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42506398467",
+  "tests": {
+    "android": {
+      "tests": 407,
+      "executed": 406,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 118,
+      "executed": 118,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "helperTests": {
+    "tests": 77,
+    "executed": 77,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "jobId": 128803204567
+  },
+  "runtimeSmokeVerified": true,
+  "upgradeFromVersionCode": 6774,
+  "hardware": "NEEDS_DEVICE_VALIDATION",
+  "bleProductionChanged": false
+}

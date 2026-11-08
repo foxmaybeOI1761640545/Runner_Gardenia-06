@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="6775"
+    android:versionName="v0.1.0-p0.4"
+    android:installLocation="0"
+    android:compileSdkVersion="37"
+    android:compileSdkVersionCodename="17"
+    package="com.fox.runner"
+    platformBuildVersionCode="37"
+    platformBuildVersionName="17">
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="37" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_LOCATION"
+        android:minSdkVersion="34" />
+
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"
+        android:minSdkVersion="34" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:minSdkVersion="31"
+        android:usesPermissionFlags="0x10000" />
+
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        android:minSdkVersion="31" />
+
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        android:minSdkVersion="33" />
+
+    <permission
+        android:name="com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="0x2" />
+
+    <uses-permission
+        android:name="com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:theme="@ref/0x7f12013a"
+        android:label="@ref/0x7f11028a"
+        android:icon="@ref/0x7f0800f8"
+        android:name="de.dennisguse.opentracks.Startup"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:fullBackupContent="@ref/0x7f140009"
+        android:hasFragileUserData="false"
+        android:dataExtractionRules="@ref/0x7f14000a"
+        android:localeConfig="@ref/0x7f140000"
+        android:enableOnBackInvokedCallback="true">
+
+        <activity
+            android:theme="@ref/0x7f120244"
+            android:name="de.dennisguse.opentracks.introduction.IntroductionActivity"
+            android:exported="true"
+            android:launchMode="1">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0Activity"
+            android:exported="false" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0SensorsActivity"
+            android:exported="false"
+            android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0SettingsActivity"
+            android:exported="false"
+            android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <activity
+            android:name="de.dennisguse.opentracks.p0.app.P0HistoryActivity"
+            android:exported="false"
+            android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
+
+        <provider
+            android:name="de.dennisguse.opentracks.data.ShareContentProvider"
+            android:exported="false"
+            android:authorities="com.fox.runner.content"
+            android:grantUriPermissions="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.fox.runner.fileprovider"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@ref/0x7f140003" />
+        </provider>
+
+        <service
+            android:label="@ref/0x7f1102aa"
+            android:icon="@ref/0x7f0800fc"
+            android:name="de.dennisguse.opentracks.services.TrackRecordingService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="0x18" />
+
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+    </application>
+</manifest>

@@ -1,0 +1,69 @@
+{
+  "publicDownloadVerified": true,
+  "publicSignatureVerified": true,
+  "tag": "test-p0-v0.1.0-p0.4",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.4",
+  "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+  "versionCode": 6775,
+  "apk": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/RunnerGardenia-P0-Release.apk",
+  "publicDownloadUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746708",
+  "publicDownloadChannel": "anonymous-public-asset-api",
+  "publicDownloadHttp": 200,
+  "publicDownloadAuthenticated": false,
+  "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+  "apkBytes": 2803864,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 4146,
+      "sha256": "2db139350aefb03457edbb7ac9068bf9a4f7a2c4e34dfff875643bf0145ae75d",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/build-info.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746686"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 2803864,
+      "sha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/RunnerGardenia-P0-Release.apk",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746708"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "b11f5aff8c9ff12989a253165a85442cd90579f78f402b18f722256b7cce3c69",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/SHA256SUMS",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746738"
+    },
+    "runtime-smoke.json": {
+      "bytes": 757,
+      "sha256": "080a49b77a19838c65427b4a4b024610c129bdca1f5f2f929d23388d4d08e9c6",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/runtime-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746757"
+    },
+    "native-theme-smoke.json": {
+      "bytes": 23674,
+      "sha256": "2843cf736b5cb9e1268e2b49472d987befe9795b62fe5677cc46d2abdda7fa3e",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/native-theme-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746782"
+    },
+    "theme-screenshots.zip": {
+      "bytes": 4592498,
+      "sha256": "4b5ff16a1c27aa712be44da24df57ec82a548f0c66d14abea8e0ba4fd3f15dfe",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/theme-screenshots.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746802"
+    },
+    "test-summary.json": {
+      "bytes": 702,
+      "sha256": "99c13e421bd62d274c9c5c0d901314a11ab7a68a1671f8088b253046bb41c31c",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/test-summary.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746835"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1466,
+      "sha256": "36da9acb2431f1968c4c6c7db5c0a81b53d1d6285be6b5ef20dd3a531f832613",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/RELEASE_NOTES.md",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746867"
+    }
+  }
+}
