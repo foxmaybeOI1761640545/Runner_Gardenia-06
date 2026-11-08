@@ -41,6 +41,8 @@ public class DashboardVisualMatrixTest {
    for(ThemeUtils.Family f:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){
     PreferencesUtils.setGardeniaTheme(f);SystemThemeTestUtils.night(dark);
     try(ActivityScenario<DashboardPreviewActivity> screen=ActivityScenario.launch(DashboardPreviewActivity.class)){
+     long modeDeadline=SystemClock.uptimeMillis()+10000;java.util.concurrent.atomic.AtomicBoolean modeReady=new java.util.concurrent.atomic.AtomicBoolean();
+     do{screen.onActivity(a->modeReady.set(ThemeUtils.isNight(a)==dark&&a.hasWindowFocus()));if(modeReady.get())break;SystemClock.sleep(50);}while(SystemClock.uptimeMillis()<modeDeadline);assertTrue("Actual system mode/focus never propagated",modeReady.get());
      for(String state:DashboardFixture.STATES){
       screen.onActivity(a->{assertEquals(viewport[0],a.getResources().getConfiguration().screenWidthDp);assertEquals(dark,ThemeUtils.isNight(a));((ScrollView)a.findViewById(R.id.p02_home_scroll)).scrollTo(0,0);DashboardFixture.present(a,state);});
       SystemClock.sleep(180);InstrumentationRegistry.getInstrumentation().waitForIdleSync();

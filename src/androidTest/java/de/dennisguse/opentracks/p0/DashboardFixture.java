@@ -19,7 +19,7 @@ public final class DashboardFixture {
  public static void present(DashboardPreviewActivity activity,String name){
   boolean idle=name.equals("idle"),search=name.equals("gps-searching"),paused=name.equals("paused"),finished=name.equals("finished");boolean connected=!idle&&!search&&!finished&&!name.equals("disconnected");boolean fresh=connected&&!name.equals("connected-no-sample");
   var phase=idle?RecordingSession.Phase.IDLE:search?RecordingSession.Phase.ACQUIRING_GPS:paused?RecordingSession.Phase.PAUSED:finished?RecordingSession.Phase.FINISHED:RecordingSession.Phase.RECORDING;
-  boolean fix=!idle&&!search&&!paused&&!finished;boolean zero=idle||search||name.equals("gps-fixed");List<RouteGeometry.Point> route=idle||search?List.of():route();var last=route.isEmpty()?null:route.get(route.size()-1);
+  boolean fix=!idle&&!search&&!paused&&!finished;boolean zero=idle||search||name.equals("gps-fixed");List<RouteGeometry.Point> route=idle||search?List.of():route();if(name.equals("gps-fixed"))route=List.of(route.get(0));var last=route.isEmpty()?null:route.get(route.size()-1);
   Position gps=fix?new Position(Instant.parse("2026-11-08T01:41:00Z"),last.latitude(),last.longitude(),Distance.of(5),null,null,null,Speed.of(1000d/327)):null;
   int state=idle?R.string.p02_idle_detail:search?R.string.p02_acquiring_detail:paused?R.string.p02_paused_detail:finished?R.string.p02_finished_detail:R.string.p02_gps_ready;
   String heart=fresh?activity.getString(R.string.hr_value,148f):activity.getString(R.string.hr_empty_value);
