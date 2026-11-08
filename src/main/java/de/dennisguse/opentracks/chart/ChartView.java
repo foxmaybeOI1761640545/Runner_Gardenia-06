@@ -82,6 +82,7 @@ public class ChartView extends View {
     private final ChartValueSeries speedSeries;
     private final ChartValueSeries paceSeries;
     private final ChartValueSeries heartRateSeries;
+    private boolean heartRateOnly;
 
     private List<ChartPoint> rawHeartRatePoints;
 
@@ -375,6 +376,7 @@ public class ChartView extends View {
     }
 
     public boolean applyReportSpeed() {
+        if(heartRateOnly)return false;
         if (!showPaceOrSpeed) {
             paceSeries.setEnabled(false);
             speedSeries.setEnabled(false);
@@ -435,6 +437,12 @@ public class ChartView extends View {
 
     @androidx.annotation.VisibleForTesting
     Path heartRatePath() { synchronized (chartPoints) { return new Path(heartRateSeries.getPath()); } }
+
+    /** P0 heart-only panels reuse the same renderer without showing unrelated speed axes. */
+    public void setHeartRateOnly() {
+        heartRateOnly=true;showPaceOrSpeed=false;
+        seriesList.forEach(series->series.setEnabled(series==heartRateSeries));
+    }
 
     public void setRawHeartRatePoints(List<HeartRatePlot.Point> values) {
         synchronized (chartPoints) {
@@ -583,6 +591,11 @@ public class ChartView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         synchronized (chartPoints) {
+            if(heartRateOnly&&!heartRateSeries.hasData()){
+                canvas.drawColor(backgroundColor);
+                canvas.drawText(getContext().getString(R.string.gardenia_chart_empty),getPaddingLeft()+spacer,getHeight()/2f,axisPaint);
+                return;
+            }
             canvas.save();
 
             canvas.drawColor(backgroundColor);
@@ -1047,6 +1060,7 @@ public class ChartView extends View {
      * Returns true if the index is allowed when the chartData is empty.
      */
     private boolean allowIfEmpty(ChartValueSeries chartValueSeries) {
+        if(heartRateOnly)return chartValueSeries==heartRateSeries;
         if (!chartPoints.isEmpty()) {
             return false;
         }

@@ -31,6 +31,7 @@ public final class PreviewChartModel extends ViewModel {
                 if(points.size()>300)points.remove(0);
             }
         }
+        chart.setHeartRateOnly();
         chart.setChartByDistance(false);
         chart.setRawHeartRatePoints(List.copyOf(points));
         chart.setContentDescription(context.getString(points.isEmpty()?R.string.gardenia_chart_empty:R.string.gardenia_chart_summary,points.size()));

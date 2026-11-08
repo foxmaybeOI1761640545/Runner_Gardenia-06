@@ -56,7 +56,7 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0SaveGpx.setOnClickListener(view->saveGpx());
         binding.p03ExportOptions.setOnClickListener(view->new GpxExportDialog().show(getSupportFragmentManager(),"gardenia-gpx-export"));
         getSupportFragmentManager().setFragmentResultListener("gardenia-gpx-action",this,(key,result)->{if(result.getInt("action")==0)saveGpx();else model.exportSelected(null);});
-        model.chartPoints().observe(this,points->{binding.p03HistoryChart.setChartByDistance(false);binding.p03HistoryChart.setRawHeartRatePoints(points);binding.p03HistoryChart.setContentDescription(getString(points.isEmpty()?R.string.gardenia_chart_empty:R.string.gardenia_chart_summary,points.size()));});
+        model.chartPoints().observe(this,points->{binding.p03HistoryChart.setHeartRateOnly();binding.p03HistoryChart.setChartByDistance(false);binding.p03HistoryChart.setRawHeartRatePoints(points);binding.p03HistoryChart.setContentDescription(getString(points.isEmpty()?R.string.gardenia_chart_empty:R.string.gardenia_chart_summary,points.size()));});
         binding.p0ShareGpx.setOnClickListener(view->model.exportSelected(null));
         binding.p0DeleteWorkout.setOnClickListener(view->new AlertDialog.Builder(this).setTitle(R.string.p0_delete_workout)
                 .setMessage(R.string.p0_delete_workout_confirm).setNegativeButton(android.R.string.cancel,null)

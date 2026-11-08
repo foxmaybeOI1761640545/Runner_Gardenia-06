@@ -35,9 +35,12 @@ public class GardeniaThemeSystemTest {
     private TrackRecordingService core;
     private ThemeUtils.Family original;
     private String gps,heart,night;
+    private final String[] animationNames={"window_animation_scale","transition_animation_scale","animator_duration_scale"};
+    private final String[] animationValues=new String[3];
     private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
     @Before public void before()throws Exception {
         original=PreferencesUtils.getGardeniaTheme();night=SystemThemeTestUtils.savedMode();
+        for(int i=0;i<animationNames.length;i++){animationValues[i]=SystemThemeTestUtils.shell("settings get global "+animationNames[i]);SystemThemeTestUtils.shell("settings put global "+animationNames[i]+" 0");}
         gps=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());
         heart=PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
@@ -51,6 +54,7 @@ public class GardeniaThemeSystemTest {
         TestEnvironmentUtils.stopTrackRecordingService();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);
         PreferencesUtils.setGardeniaTheme(original);SystemThemeTestUtils.restore(night);
+        for(int i=0;i<animationNames.length;i++)SystemThemeTestUtils.shell(animationValues[i].equals("null")?"settings delete global "+animationNames[i]:"settings put global "+animationNames[i]+" "+animationValues[i]);
     }
     private <T extends android.app.Activity> void awaitMode(ActivityScenario<T> screen,boolean dark) {
         long end=SystemClock.uptimeMillis()+10000;AtomicBoolean ready=new AtomicBoolean();
@@ -94,6 +98,11 @@ public class GardeniaThemeSystemTest {
             home.onActivity(a->{assertSame(retained.get(),new ViewModelProvider(a).get(P0RecordingViewModel.class));assertNotNull(a.findViewById(R.id.p0_title));});
             assertTrue(core.isRecording());assertEquals(id,core.getRecordingStatus().trackId().id());assertEquals(connection,core.getHeartRatePreview().value().sample().connectionId());
             SystemThemeTestUtils.night(dark);awaitMode(home,dark);capture(home,family,dark,"recording");
+            var other=family==ThemeUtils.Family.NEON?ThemeUtils.Family.PRECISION:ThemeUtils.Family.NEON;
+            PreferencesUtils.setGardeniaTheme(other);home.recreate();assertTrue(core.isRecording());assertEquals(id,core.getRecordingStatus().trackId().id());assertEquals(connection,core.getHeartRatePreview().value().sample().connectionId());
+            home.onActivity(a->assertSame(retained.get(),new ViewModelProvider(a).get(P0RecordingViewModel.class)));
+            PreferencesUtils.setGardeniaTheme(family);home.recreate();assertTrue(core.isRecording());assertEquals(id,core.getRecordingStatus().trackId().id());
+
             home.onActivity(a->new ViewModelProvider(a).get(P0RecordingViewModel.class).pause());
             long end=SystemClock.uptimeMillis()+10000;while(core.isRecording()&&SystemClock.uptimeMillis()<end)SystemClock.sleep(50);
             assertEquals(Long.valueOf(id),new SessionStore(context).recover().trackId());assertEquals(RecordingSession.Phase.PAUSED,new SessionStore(context).recover().phase());home.recreate();assertEquals(Long.valueOf(id),new SessionStore(context).recover().trackId());assertEquals(RecordingSession.Phase.PAUSED,new SessionStore(context).recover().phase());
@@ -116,7 +125,7 @@ public class GardeniaThemeSystemTest {
             capture(settings,family,dark,"settings");settings.recreate();assertEquals(family,PreferencesUtils.getGardeniaTheme());
         }
         assertEquals(7,captures.length());
-        JSONObject evidence=new JSONObject().put("sourceCommit",InstrumentationRegistry.getArguments().getString("buildCommit","local")).put("api",Build.VERSION.SDK_INT).put("timezone",java.util.TimeZone.getDefault().getID()).put("family",family.id).put("appearance",dark?"dark":"light").put("passed",true).put("physicalBleTested",false).put("syntheticNotifications",true).put("systemSwitchPreservesRecording",true).put("systemSwitchPreservesGps",true).put("systemSwitchPreservesConnection",true).put("viewModelRetained",true).put("pausedStatePreserved",true).put("waitingCreatesNoWorkout",true).put("dialogRestored",true).put("screenshots",captures);
+        JSONObject evidence=new JSONObject().put("sourceCommit",InstrumentationRegistry.getArguments().getString("buildCommit","local")).put("api",Build.VERSION.SDK_INT).put("timezone",java.util.TimeZone.getDefault().getID()).put("family",family.id).put("appearance",dark?"dark":"light").put("passed",true).put("physicalBleTested",false).put("syntheticNotifications",true).put("systemSwitchPreservesRecording",true).put("systemSwitchPreservesGps",true).put("systemSwitchPreservesConnection",true).put("viewModelRetained",true).put("pausedStatePreserved",true).put("waitingCreatesNoWorkout",true).put("dialogRestored",true).put("familySwitchPreservesRecording",true).put("screenshots",captures);
         try(var out=new FileOutputStream(new File(output(),"p03-"+family.id+(dark?"-dark":"-light")+".json"))){out.write(evidence.toString(2).getBytes(StandardCharsets.UTF_8));}
     }
     @Test public void precisionLight()throws Exception{verify(ThemeUtils.Family.PRECISION,false);}
@@ -144,6 +153,7 @@ public class GardeniaThemeSystemTest {
             for(ThemeUtils.Family family:ThemeUtils.Family.values()) {
                 PreferencesUtils.setGardeniaTheme(family);
                 try(ActivityScenario<P0Activity> home=ActivityScenario.launch(P0Activity.class)) {
+                    SystemClock.sleep(300);InstrumentationRegistry.getInstrumentation().waitForIdleSync();
                     home.onActivity(a->{assertTrue(a.getResources().getConfiguration().fontScale>=1.25f);float dp=a.getResources().getDisplayMetrics().density;for(int id:new int[]{R.id.p0_start,R.id.p03_settings,R.id.p0_all_history}){var v=a.findViewById(id);assertTrue(v.getHeight()/dp>=47.5);assertTrue(v.getWidth()/dp>=47.5);}assertNoEllipsis(a.findViewById(android.R.id.content));assertNotNull(a.findViewById(R.id.p03_heart_chart).getContentDescription());});
                     P0UiCapture.save("p03-"+family.id+"-font130-narrow");
                 }

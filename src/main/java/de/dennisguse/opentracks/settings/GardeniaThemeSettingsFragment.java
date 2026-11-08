@@ -18,7 +18,10 @@ public class GardeniaThemeSettingsFragment extends PreferenceFragmentCompat {
             Preference choice=new Preference(requireContext()) {
                 @Override public void onBindViewHolder(PreferenceViewHolder holder) {
                     super.onBindViewHolder(holder);
-                    ((RadioButton)holder.findViewById(R.id.gardenia_choice_radio)).setChecked(PreferencesUtils.getGardeniaTheme()==family);
+                    boolean selected=PreferencesUtils.getGardeniaTheme()==family;
+                    ((RadioButton)holder.findViewById(R.id.gardenia_choice_radio)).setChecked(selected);
+                    holder.itemView.setSelected(selected);
+                    androidx.core.view.ViewCompat.setStateDescription(holder.itemView,selected?getString(R.string.gardenia_selected):null);
                     holder.itemView.setMinimumHeight(Math.round(80*getResources().getDisplayMetrics().density));
                 }
             };

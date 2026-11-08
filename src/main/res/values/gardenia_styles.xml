@@ -60,7 +60,7 @@
         <item name="android:colorBackgroundFloating">@color/gardenia_precision_surface</item>
         <item name="colorControlNormal">@color/gardenia_precision_foregroundsecondary</item>
         <item name="colorControlActivated">@color/gardenia_precision_accenttext</item>
-        <item name="colorControlHighlight">@color/gardenia_precision_tint</item>
+        <item name="colorControlHighlight">@color/gardenia_precision_ripple</item>
     </style>
     <style name="GardeniaShapePrecision" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -126,7 +126,7 @@
         <item name="android:colorBackgroundFloating">@color/gardenia_quiet_surface</item>
         <item name="colorControlNormal">@color/gardenia_quiet_foregroundsecondary</item>
         <item name="colorControlActivated">@color/gardenia_quiet_accenttext</item>
-        <item name="colorControlHighlight">@color/gardenia_quiet_tint</item>
+        <item name="colorControlHighlight">@color/gardenia_quiet_ripple</item>
     </style>
     <style name="GardeniaShapeQuiet" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -192,7 +192,7 @@
         <item name="android:colorBackgroundFloating">@color/gardenia_explorer_surface</item>
         <item name="colorControlNormal">@color/gardenia_explorer_foregroundsecondary</item>
         <item name="colorControlActivated">@color/gardenia_explorer_accenttext</item>
-        <item name="colorControlHighlight">@color/gardenia_explorer_tint</item>
+        <item name="colorControlHighlight">@color/gardenia_explorer_ripple</item>
     </style>
     <style name="GardeniaShapeExplorer" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>
@@ -258,7 +258,7 @@
         <item name="android:colorBackgroundFloating">@color/gardenia_neon_surface</item>
         <item name="colorControlNormal">@color/gardenia_neon_foregroundsecondary</item>
         <item name="colorControlActivated">@color/gardenia_neon_accenttext</item>
-        <item name="colorControlHighlight">@color/gardenia_neon_tint</item>
+        <item name="colorControlHighlight">@color/gardenia_neon_ripple</item>
     </style>
     <style name="GardeniaShapeNeon" parent="ShapeAppearance.Material3.Corner.Medium">
         <item name="cornerFamily">rounded</item>

@@ -12,7 +12,7 @@ def collect(commit):
         for mode in ['light','dark']:
             filename=f'p03-{family}-{mode}.json';proof=json.loads((root/filename).read_text())
             if proof.get('sourceCommit')!=commit or proof.get('api',0)<35 or proof.get('timezone')!='Asia/Singapore' or proof.get('passed') is not True:raise ValueError('Wrong native source/API/timezone or failed scheme')
-            for key in ['systemSwitchPreservesRecording','systemSwitchPreservesGps','systemSwitchPreservesConnection','viewModelRetained','pausedStatePreserved','waitingCreatesNoWorkout','dialogRestored']:
+            for key in ['systemSwitchPreservesRecording','systemSwitchPreservesGps','systemSwitchPreservesConnection','viewModelRetained','pausedStatePreserved','waitingCreatesNoWorkout','dialogRestored','familySwitchPreservesRecording']:
                 if proof.get(key) is not True:raise ValueError('Missing state assertion: '+key)
             rows=proof['screenshots'];expected={f'p03-{family}-{mode}-{page}.png' for page in PAGES}
             if len(rows)!=7 or {v['file'] for v in rows}!=expected:raise ValueError('Incomplete native page matrix')
