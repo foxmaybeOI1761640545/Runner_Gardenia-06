@@ -1,0 +1,175 @@
+{
+  "source": "41d51fb35623a6d68d8155543d7a4494215e1134",
+  "runId": "42499118275",
+  "artifactId": 13624323698,
+  "artifactSha256": "f503b7fc872d6c1d83ffb1e32dcde70f9401db90ba8316014761fddc37a3b88d",
+  "automaticMatrixPassed": true,
+  "visualAccepted": false,
+  "releaseAuthorized": false,
+  "findings": [
+    "中文已正确应用；Quiet 标题/按钮区分/Outdoor 浮层已改善",
+    "Neon recording 在390×844仍有部分按钮落在导航之下；继续压缩有实际内容的垂直间距和字体内补白，保留84dp图表、70sp有效BPM和48dp触摸"
+  ],
+  "screenshots": [
+    {
+      "file": "p04-precision-light-390x844-recording.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "12c21e449343612380bc2dd359d5a172ae6a15654f3bf8b23982df5c5592b4a8",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-disconnected.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "d84309c6b8deb0b4477f3bec6e2e35af3b0f620d65bb0ed429c692c82a3b7854",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-recording.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "10f65de5a69f5a4765021dd839dc02eb8dc4d61702a9fd229a7a82b6f02e756d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-disconnected.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "f0389bf1c0ae64a2c4620e2e9f2f0ce4e0c5b046de07454b1a4ec93ee2d91158",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-recording.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "0395b77e42f876a6b73f164771cfbb1c986ce54dd88d1fec847339e3c073770d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-disconnected.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "5c70cb9e0f686a2aca6bce5d5b2936254c97339bf297870d946b10940bf50bd0",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-recording.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "443a5dd1a69bb4b8a3d6fe42198f6612ae21898997d9abfccf2004fb65580a29",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-disconnected.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "04ca77747e0130ac3b2347c9bf0f47a3ffd2542ffe7bc5cbaf22a263dfec17cb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-recording.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "94eae7d017668e87fd71b79aa346870e0d758c0de02530b780c913b95ea11f0a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-disconnected.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "bfc68c562b898cb4975d9cc371565e48e1c9c9f0018832e3d71481cc6ebcb6b0",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-recording.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "81a0872dade31c21044ab4ba3d867d0547c2b9c422122752c04d3c6ef24217d9",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-disconnected.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "449410b08961ceaf2af926d3f8c15702bb3e614d4bc957c9e19da05acd0b5523",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-recording.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "ffa86fd2ca74f889b6dbb2f7b13dda3ac284b633c9561a03c37390cf1a6599f3",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-disconnected.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "94b934db0500a9b8541c6339f5ad2f6287160975770e85b1b4db4802fcbf3615",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-recording.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "17f1d685eff2e96ccad15be81c65994a91f8bb09fb8d41a8675d98f347f3e750",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-disconnected.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "6a8d20fbafb7cc870d0b8dd8dce9dad8687f55602920a7a43f3e12473a6fdaa1",
+      "syntheticUiFixture": true
+    }
+  ]
+}
