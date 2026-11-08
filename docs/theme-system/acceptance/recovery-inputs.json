@@ -1,0 +1,47 @@
+{
+  "buildSource": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "buildRunId": "42443873771",
+  "recoverySource": "6aaf3664b99dd361b16299c010044d6bcb2c1d8f",
+  "recoveryRunId": "42468308461",
+  "changedPaths": [
+    ".github/scripts/p03_publication_recovery.py",
+    ".github/scripts/p03_publish.py",
+    ".github/scripts/p03_release_theme_ui.py",
+    ".github/scripts/publish_release.py",
+    ".github/tests/test_p03_publication_recovery.py",
+    ".github/workflows/p03-theme-system.yml",
+    "docs/theme-system/acceptance/signed-visual-review.json",
+    "docs/theme-system/failures/cb43907-actual-home.xml",
+    "docs/theme-system/failures/eighth-cloud-publication-media.md",
+    "docs/theme-system/failures/eleventh-api35-adb-boot.md",
+    "docs/theme-system/failures/fourteenth-public-download-gateway.md",
+    "docs/theme-system/failures/ninth-signed-screenshot-visual-review.md",
+    "docs/theme-system/failures/tenth-native-focus-query.md",
+    "docs/theme-system/failures/thirteenth-publication-import-scope.md",
+    "docs/theme-system/failures/twelfth-release-create-permission.md"
+  ],
+  "artifacts": [
+    {
+      "artifactId": 13603541459,
+      "name": "RunnerGardenia-P03-Release-42443873771",
+      "sha256": "d11c2d2385ad915f1e6120f396c19d520d89fab9fae81d8d31ada9485f7b9cd8",
+      "bytes": 5246454
+    },
+    {
+      "artifactId": 13603117684,
+      "name": "P03-reports-42443873771",
+      "sha256": "d2b7f2f31f4b1e64c56a5cf5b35ebb5baad34f14d5a2dc4621f190a18e5e8854",
+      "bytes": 34560045
+    },
+    {
+      "artifactId": 13612521139,
+      "sha256": "4a4ad1087fc551e33e9207ab0cbf3d63194bd6a283047b23e9b404c11a4f6d6c",
+      "bytes": 9963203,
+      "evaluationCommit": "49ae83b855fe43a3b50d6086280ec684a3dbe5b4",
+      "evaluationRunId": "42466614968",
+      "sameApkVisuallyReviewed": true
+    }
+  ],
+  "rebuilt": false,
+  "resigned": false
+}

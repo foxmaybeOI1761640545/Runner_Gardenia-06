@@ -1,0 +1,13 @@
+{
+  "effectiveNightQueries": [
+    "Night mode: no",
+    "Night mode: yes"
+  ],
+  "passed": true,
+  "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "api": 35,
+  "freshProcesses": 2,
+  "helperSha256": "a41a79b541a0ba9fd2d08c896976d9f8dcb644d7d69b90a72a29009feb29262b",
+  "appInstalled": false,
+  "signingKeyUsed": false
+}

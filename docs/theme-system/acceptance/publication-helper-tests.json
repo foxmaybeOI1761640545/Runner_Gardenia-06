@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source": "6aaf3664b99dd361b16299c010044d6bcb2c1d8f",
+  "runId": "42468308461",
+  "jobId": 128692909617,
+  "tests": 74,
+  "executed": 74,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "actualLogSummary": "Ran 74 tests in 0.499s",
+  "actualLogTail": [
+    "2026-11-08T09:42:41.2879707Z ",
+    "2026-11-08T09:42:41.2879796Z OK",
+    "2026-11-08T09:42:41.3184473Z ##[group]Run actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3",
+    "2026-11-08T09:42:41.3184879Z with:"
+  ]
+}

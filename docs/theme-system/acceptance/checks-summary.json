@@ -1,0 +1,64 @@
+{
+  "runId": "42443873771",
+  "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "checksJobId": 128618608668,
+  "checksPassed": true,
+  "helper": {
+    "tests": 68,
+    "executed": 68,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 405,
+    "executed": 404,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "jvm": {
+    "tests": 113,
+    "executed": 113,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "nativeThemeCases": 10,
+  "nativeThemeSchemes": 8,
+  "nativeThemeScreenshots": 56,
+  "font130Screenshots": 4,
+  "gpxSchemaFiles": 9,
+  "processDurability": {
+    "passed": true,
+    "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+    "database": "p0-durability.db",
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1727
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2179
+      }
+    }
+  },
+  "existingSkip": {
+    "class": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "method": "recording_stopGPS_noop"
+  },
+  "offlinePassed": true,
+  "runtimeBoundary": "API35 emulator with synthetic GPS/heart-rate notifications; physical BLE/GNSS/TalkBack voice not claimed",
+  "nativeWindowHelperPassed": true
+}

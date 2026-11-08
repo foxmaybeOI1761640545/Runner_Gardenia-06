@@ -1,0 +1,74 @@
+{
+  "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "runId": "42443873771",
+  "tests": 113,
+  "failures": 0,
+  "errors": 0,
+  "files": [
+    {
+      "file": "TEST-de.dennisguse.opentracks.TimezoneEnvironmentUnitTest.xml",
+      "sha256": "f9b939ba74ecf9bd005fb01c1a64ec37bf8e5fae278c0b86f520f5d116a4e890",
+      "tests": 1
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.chart.HeartRatePlotTest.xml",
+      "sha256": "9f11b9817d8a49075900f2a11635dc0b722178dad79324ac08854c794134f425",
+      "tests": 10
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.ForegroundModeTest.xml",
+      "sha256": "4d25f831c0dfd6306906027b022fbea2549035cc88ad0197cf253e3d201b12be",
+      "tests": 4
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.GpsReadinessTest.xml",
+      "sha256": "24347488e94df9ef98e15f9f6b1f76d5758e92b795d033191042abcf50f2d8f2",
+      "tests": 19
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.HeartRateSummaryTest.xml",
+      "sha256": "318cae334b0f0d9cc7dc202218b24fc04525ddacb2f666a2504034c9c83a597d",
+      "tests": 4
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.MotionFormatTest.xml",
+      "sha256": "5fbad68c7cfce6acece78426e4b259cd5acdea3fa39c8bf95b10f11d1e3ef7ce",
+      "tests": 6
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.P0PermissionPolicyTest.xml",
+      "sha256": "e275aeb0a1d94d92230cef6d9d9d592a7711fd2379ebd6c89ecc16ef5c028881",
+      "tests": 5
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.RecordingSessionTest.xml",
+      "sha256": "1b292a310d69e4e09d3b326e6031bc91e3ede0ffd02c8f8a615fb85824ddc010",
+      "tests": 6
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest.xml",
+      "sha256": "827cdfaba6852b9ae757dffe64f08f444a502a5bca5955c3f6f36a51565d104d",
+      "tests": 6
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest.xml",
+      "sha256": "96dc4cdd66d94a3d9d4cda7a20b6e9d1e15352bd30aeced9a59a0034c1755416",
+      "tests": 23
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.sensors.driver.BleScanSessionTest.xml",
+      "sha256": "eddaf6fb3ce7401f76d7324116c2d17a2c84b1cf3b801c3e8f6ff66a2db82513",
+      "tests": 9
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest.xml",
+      "sha256": "575c4284108512fdc82ae6a49ecc554e19b65104f96997bc66c2fa6dd6ae8f3d",
+      "tests": 17
+    },
+    {
+      "file": "TEST-de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest.xml",
+      "sha256": "ceb6dd1f9f7b5c81328643cd56ee9135ac773c5771b4565e6378f61655a96d9c",
+      "tests": 3
+    }
+  ]
+}

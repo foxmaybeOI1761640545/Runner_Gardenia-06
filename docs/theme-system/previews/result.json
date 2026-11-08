@@ -1,0 +1,561 @@
+{
+  "passed": true,
+  "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "schemes": [
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "precision",
+      "appearance": "light",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-precision-light-home.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "home",
+          "sha256": "1ebd8ae5fc68bdc014152d76b1a64eb4bf216809a44857a58caf234a03e972d5"
+        },
+        {
+          "file": "p03-precision-light-recording.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "recording",
+          "sha256": "6fad897967102e4fd02b2c0ee121265938dbbc4f1bbc77917d57b016d4d4f04b"
+        },
+        {
+          "file": "p03-precision-light-heart.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "heart",
+          "sha256": "7e0b7cd10f86eccbb250e8ab6a1ab344778554549aae3274c602d15ab0447e0d"
+        },
+        {
+          "file": "p03-precision-light-history.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "history",
+          "sha256": "7492aa26972fd57da5f6373a3cc3272fc8c251f1d0ec5457f947fc73452bb025"
+        },
+        {
+          "file": "p03-precision-light-detail.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "detail",
+          "sha256": "79d59817d19369294f0652ffc733047c5969552af6088203134ad033235dc9a2"
+        },
+        {
+          "file": "p03-precision-light-dialog.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "dialog",
+          "sha256": "5eb0aa269820cf7a8bb0ea7c9a789280bb18817ed6681975aae2b5c0f966cb27"
+        },
+        {
+          "file": "p03-precision-light-settings.png",
+          "family": "precision",
+          "nightMode": 16,
+          "page": "settings",
+          "sha256": "8fbff6e7bfbe0feb8af5c2e6bf6e7b5de78dd85f1621e92a7a085b8865b16cd8"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "precision",
+      "appearance": "dark",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-precision-dark-home.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "home",
+          "sha256": "d27d1a526c0712140d52583fc15dd94a9dcb39977d0e6362d230daa01b7e7460"
+        },
+        {
+          "file": "p03-precision-dark-recording.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "recording",
+          "sha256": "686b75b6ad974f8413f8e55c915f0e0e20619c34949ac25a0047f89d53bbf475"
+        },
+        {
+          "file": "p03-precision-dark-heart.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "heart",
+          "sha256": "d4b5370eca8068411fb6b2771dde973a0f88376a26fbcb16172a1773aec575d7"
+        },
+        {
+          "file": "p03-precision-dark-history.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "history",
+          "sha256": "3f7cbbad07cef9d5026b52114b504761b374b6da6601b17ac929fb67073bebc7"
+        },
+        {
+          "file": "p03-precision-dark-detail.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "detail",
+          "sha256": "4ce5dfc44471feb2e381e08a16de154ac082f7ed8831bc43a55308ffab20cdbd"
+        },
+        {
+          "file": "p03-precision-dark-dialog.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "dialog",
+          "sha256": "4b865f76c3861676be9d39236b1684246159b87925e8899f24fe0ced8500f453"
+        },
+        {
+          "file": "p03-precision-dark-settings.png",
+          "family": "precision",
+          "nightMode": 32,
+          "page": "settings",
+          "sha256": "d64a9cdab6de5131c23593318cfa38fa4ae5c3f70f853862778320819d902fc6"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "quiet",
+      "appearance": "light",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-quiet-light-home.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "home",
+          "sha256": "14aa6dc820bf8fadeb3ab2e3c9a5165bd77cc645b08ef5efb8113dc3bfa09752"
+        },
+        {
+          "file": "p03-quiet-light-recording.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "recording",
+          "sha256": "2035f743958324f33f34654d1d647e1b4a5665c35fcb640970c925de47f0d56a"
+        },
+        {
+          "file": "p03-quiet-light-heart.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "heart",
+          "sha256": "a45621e558668aeb6179b08419fda144f99b18493a00559c2e6062f41710d45f"
+        },
+        {
+          "file": "p03-quiet-light-history.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "history",
+          "sha256": "8bf48d31cffbbd38b8dbcca97c818dff0f8ac36d6450fa3429a96d8fdbb39f94"
+        },
+        {
+          "file": "p03-quiet-light-detail.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "detail",
+          "sha256": "65043f35d0e4b921bc59cfc674a5b264f978c100c43dd88944929a24457bcd21"
+        },
+        {
+          "file": "p03-quiet-light-dialog.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "dialog",
+          "sha256": "739f39f826c8258f29a4d45c0849a35bb6af557226fe7faf94aab9ffa0b250a1"
+        },
+        {
+          "file": "p03-quiet-light-settings.png",
+          "family": "quiet",
+          "nightMode": 16,
+          "page": "settings",
+          "sha256": "d617d28eaf51cc11451a419ce60dc06f5c39767c29238a0541b7cc5192fded07"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "quiet",
+      "appearance": "dark",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-quiet-dark-home.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "home",
+          "sha256": "aeabd09154c51232eba37c321b2acac9245b3b1d93f29ad428545b7ece01577c"
+        },
+        {
+          "file": "p03-quiet-dark-recording.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "recording",
+          "sha256": "11561207fa72a2a2a6ba36c5aa01c6e980faa7d543517cc420d9fa53551922e5"
+        },
+        {
+          "file": "p03-quiet-dark-heart.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "heart",
+          "sha256": "808e0a90d0826b2a0ccdc2819a820063bde3cb37d37698c0e65ea82034c99b51"
+        },
+        {
+          "file": "p03-quiet-dark-history.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "history",
+          "sha256": "fe732987bcadb2924b468235d81a5e96e764b325348fc2c59ab54f03964158ba"
+        },
+        {
+          "file": "p03-quiet-dark-detail.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "detail",
+          "sha256": "25cd78fdee5d837c5abade40d830f73ebe69126cdfbafaa0167657e3f166e4b8"
+        },
+        {
+          "file": "p03-quiet-dark-dialog.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "dialog",
+          "sha256": "f38a413b7d0c05b36fbc10b3feb498053307e093441be4bb4b6e57edbf087c9f"
+        },
+        {
+          "file": "p03-quiet-dark-settings.png",
+          "family": "quiet",
+          "nightMode": 32,
+          "page": "settings",
+          "sha256": "e2f909d86fa30d266d9eb303235454c82f485e23ff6085707fd0d52acf00a688"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "explorer",
+      "appearance": "light",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-explorer-light-home.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "home",
+          "sha256": "a2a7c8d84b6c4cd994077ddb5dfd1de2f3b89691bf665bff110472c72e6b7665"
+        },
+        {
+          "file": "p03-explorer-light-recording.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "recording",
+          "sha256": "f57c9d8a053ffcb478181784eb3b9dc97317b4b0ffe5bbeb6b382f683244b8e1"
+        },
+        {
+          "file": "p03-explorer-light-heart.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "heart",
+          "sha256": "d353eba06c533bf2bf2b8a65dae2e5a0ed043a6f4fddd31a2ba0aa1a760bd7fd"
+        },
+        {
+          "file": "p03-explorer-light-history.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "history",
+          "sha256": "2f462633a53b3556aa2507d4408006774dcb0f38da134c50528c1379945e838f"
+        },
+        {
+          "file": "p03-explorer-light-detail.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "detail",
+          "sha256": "6ebf460bbb1b3e85aa283e816231a3348fa8c6516df9065421c9dbc9784555cd"
+        },
+        {
+          "file": "p03-explorer-light-dialog.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "dialog",
+          "sha256": "39202aa630e493d617d0afc4c54386234525c4c6a7c50c92c826a51418809d4a"
+        },
+        {
+          "file": "p03-explorer-light-settings.png",
+          "family": "explorer",
+          "nightMode": 16,
+          "page": "settings",
+          "sha256": "179e87f96025d0c08e38a4152ea431422a3fcd9c7e1897252d0418faf28207c7"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "explorer",
+      "appearance": "dark",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-explorer-dark-home.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "home",
+          "sha256": "fe57cb98860b1780a41ac49929dc3282cb2760a22ef1d314d0f3f97a8fbb8910"
+        },
+        {
+          "file": "p03-explorer-dark-recording.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "recording",
+          "sha256": "ce5252fcbb814988465918aea5644163c727488afdfc9d681b5a6b17b499db3f"
+        },
+        {
+          "file": "p03-explorer-dark-heart.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "heart",
+          "sha256": "56b4615264e4a84fef1a0e9b3f1e4d8b483ca21f7c74fd90b2530187e148267b"
+        },
+        {
+          "file": "p03-explorer-dark-history.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "history",
+          "sha256": "005bbbbc69f85e7178bfee442ccd4657f7e5e443664df21744cd0dcf20fc3241"
+        },
+        {
+          "file": "p03-explorer-dark-detail.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "detail",
+          "sha256": "44733cb046bc62beaeab54b723e49685fd91a18ced5fac9d4d9015b191db33b7"
+        },
+        {
+          "file": "p03-explorer-dark-dialog.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "dialog",
+          "sha256": "0d4817810c38b1bc2269967733cf5a3be4b648e4de6304e858f98ab533dfdf70"
+        },
+        {
+          "file": "p03-explorer-dark-settings.png",
+          "family": "explorer",
+          "nightMode": 32,
+          "page": "settings",
+          "sha256": "de18bf262e16a8cb1c7828626995f5196ee403fb24175835813041f0a7b9cd2d"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "neon",
+      "appearance": "light",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-neon-light-home.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "home",
+          "sha256": "e1876a00cedf50000697db7739647ced6b8460846616509dc6475f3172099578"
+        },
+        {
+          "file": "p03-neon-light-recording.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "recording",
+          "sha256": "c2a80ff08713cb4edcf1f33a6f4d41b4b67781b8721755649ff6b570a3c78e42"
+        },
+        {
+          "file": "p03-neon-light-heart.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "heart",
+          "sha256": "0d2a1e40145a66a3f9f15fd1d10604bc0536f80eb117d8a58bd0de97685f8804"
+        },
+        {
+          "file": "p03-neon-light-history.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "history",
+          "sha256": "ee2c7d046514260614f533130501f86efadefa9b577cd564973b45dee232b08b"
+        },
+        {
+          "file": "p03-neon-light-detail.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "detail",
+          "sha256": "beefd5cd0142fc85cceff5d12d7c2f47c2ad245c0d02af669d78cd69581a2c1b"
+        },
+        {
+          "file": "p03-neon-light-dialog.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "dialog",
+          "sha256": "cf5b4672ae305b2786eaf12ee4cb48fe904840b9708b44f003d23d15379775cb"
+        },
+        {
+          "file": "p03-neon-light-settings.png",
+          "family": "neon",
+          "nightMode": 16,
+          "page": "settings",
+          "sha256": "3b532e0d4d4fc3496d5f9ab3515e60f28f30c479730c8a42f902bc8df65f71f9"
+        }
+      ]
+    },
+    {
+      "sourceCommit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "api": 35,
+      "timezone": "Asia/Singapore",
+      "family": "neon",
+      "appearance": "dark",
+      "passed": true,
+      "physicalBleTested": false,
+      "syntheticNotifications": true,
+      "systemSwitchPreservesRecording": true,
+      "systemSwitchPreservesGps": true,
+      "systemSwitchPreservesConnection": true,
+      "viewModelRetained": true,
+      "pausedStatePreserved": true,
+      "waitingCreatesNoWorkout": true,
+      "dialogRestored": true,
+      "familySwitchPreservesRecording": true,
+      "screenshots": [
+        {
+          "file": "p03-neon-dark-home.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "home",
+          "sha256": "60b36faff907bf859dee1cbb83b150a288df3d6ede6b5bb4c8f625a6aa2f060d"
+        },
+        {
+          "file": "p03-neon-dark-recording.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "recording",
+          "sha256": "851a5f42f479f99d6626c24a0bc14ec5c6b037b3a64d52a3877fac4e5078cf8c"
+        },
+        {
+          "file": "p03-neon-dark-heart.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "heart",
+          "sha256": "0be798d742c4dd342e8ed07334d0f3947911c2a51ee03308bd444c8e59231a6b"
+        },
+        {
+          "file": "p03-neon-dark-history.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "history",
+          "sha256": "882f8a0295b629efea165b432e7733e6754de6de32842132228c3710b97d1287"
+        },
+        {
+          "file": "p03-neon-dark-detail.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "detail",
+          "sha256": "9585767f00619d28384d355578cef810b5416a02e515f2315b5429f33f822cdd"
+        },
+        {
+          "file": "p03-neon-dark-dialog.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "dialog",
+          "sha256": "c7b0aea2c4024eb5401e5c4c8457e20d8c595ce8cd3ebeb9df4490088523f1a1"
+        },
+        {
+          "file": "p03-neon-dark-settings.png",
+          "family": "neon",
+          "nightMode": 32,
+          "page": "settings",
+          "sha256": "f983a7bf65a56d233e39178a3e9187089b465cc47b2cd36221f0ca7eac952325"
+        }
+      ]
+    }
+  ],
+  "screenshots": 56,
+  "policy": "FOLLOW_SYSTEM",
+  "physicalBleTested": false
+}

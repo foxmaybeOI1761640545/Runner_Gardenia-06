@@ -25,4 +25,4 @@ New API35 tests require eight native scheme matrices (56 PNGs across home, activ
 
 The fixed-key signed Release must additionally pass the original P0.2 upgrade/retained-data/actual-GPX suite, eight native OS-mode schemes and 32 screenshots of the signed APK itself. The public APK must match the immutable signed artifact SHA, package, version and fixed certificate. Publication is a distinct same-run gate, never an overwrite of P0.2. CI uses Asia/Singapore; production keeps the user's device timezone.
 
-Current implementation and local helper/source checks are ready for cloud compilation; Android results, signature/hash, Release and final receipts will be appended only after actual execution.
+Actual full cloud, fixed-key signed APK, upgrade, native scheme and public download acceptance completed at source `77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471` / run `42443873771`. See [DELIVERY.md](DELIVERY.md) and the retained acceptance receipts for exact results and hardware/TalkBack boundaries.

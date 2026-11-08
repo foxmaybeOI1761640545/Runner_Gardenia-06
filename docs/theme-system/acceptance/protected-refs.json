@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "checkedAtUtc": "2026-11-08T09:43:17.465172+00:00",
+  "protected": {
+    "refs/heads/feature/heart-rate-monitoring": {
+      "expected": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+      "actual": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+      "unchanged": true
+    },
+    "refs/heads/feature/p0-2-gps-ui": {
+      "expected": "e27fbfd6f7f082d6f604eecb1cfeaaad8d3fb14a",
+      "actual": "e27fbfd6f7f082d6f604eecb1cfeaaad8d3fb14a",
+      "unchanged": true
+    },
+    "refs/heads/feature/p0-core-migration": {
+      "expected": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+      "actual": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+      "unchanged": true
+    },
+    "refs/heads/main": {
+      "expected": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "actual": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "unchanged": true
+    },
+    "refs/tags/test-p0-v0.1.0-p0.1": {
+      "expected": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+      "actual": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+      "unchanged": true
+    },
+    "refs/tags/test-p0-v0.1.0-p0.1^{}": {
+      "expected": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "actual": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "unchanged": true
+    },
+    "refs/tags/test-p0-v0.1.0-p0.2": {
+      "expected": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+      "actual": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+      "unchanged": true
+    },
+    "refs/tags/test-p0-v0.1.0-p0.2^{}": {
+      "expected": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "actual": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.4": {
+      "expected": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "actual": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.4^{}": {
+      "expected": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "actual": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.5": {
+      "expected": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+      "actual": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.5^{}": {
+      "expected": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "actual": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.6": {
+      "expected": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+      "actual": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+      "unchanged": true
+    },
+    "refs/tags/v0.1.0-rc1.6^{}": {
+      "expected": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "actual": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "unchanged": true
+    }
+  },
+  "designHead": "45ce47d9eec81dd2f0cdfcf2bfd7055e23378e02",
+  "originalDesignAncestorPreserved": true,
+  "newNativeBaseline": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+  "nativeBranch": "6aaf3664b99dd361b16299c010044d6bcb2c1d8f",
+  "newTag": {
+    "name": "test-p0-v0.1.0-p0.3",
+    "object": "3839bd2e288de3dc47219cbb8c036f8919d6bed7",
+    "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+    "annotated": true
+  },
+  "forcePushUsed": false,
+  "existingHistoryRewritten": false
+}

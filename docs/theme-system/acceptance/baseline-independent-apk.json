@@ -1,0 +1,16 @@
+{
+  "file": "/workspace/work/theme-system/baseline-p02.apk",
+  "bytes": 2753061,
+  "sha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+  "package": "com.fox.runner",
+  "versionName": "v0.1.0-p0.2",
+  "versionCode": 6773,
+  "signers": [
+    {
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "algorithm": "0x104",
+      "signatureVerified": true,
+      "contentDigestVerified": true
+    }
+  ]
+}

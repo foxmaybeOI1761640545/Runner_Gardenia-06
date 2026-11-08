@@ -1,0 +1,25 @@
+{
+  "file": "public-P03.apk",
+  "bytes": 2799792,
+  "sha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+  "package": "com.fox.runner",
+  "versionName": "v0.1.0-p0.3",
+  "versionCode": 6774,
+  "signers": [
+    {
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "algorithm": "0x104",
+      "signatureVerified": true,
+      "contentDigestVerified": true
+    }
+  ],
+  "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506637",
+  "canonicalUrl": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RunnerGardenia-P0-Release.apk",
+  "downloadChannel": "anonymous-public-asset-api",
+  "http": 200,
+  "authenticated": false,
+  "byteEqualAcceptedArtifact": true,
+  "acceptedArtifactId": 13603541459,
+  "buildSource": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "buildRunId": "42443873771"
+}

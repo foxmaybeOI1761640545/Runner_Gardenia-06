@@ -1,0 +1,116 @@
+{
+  "publicDownloadVerified": true,
+  "publicSignatureVerified": true,
+  "tag": "test-p0-v0.1.0-p0.3",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.3",
+  "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "versionCode": 6774,
+  "apk": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RunnerGardenia-P0-Release.apk",
+  "publicDownloadUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506637",
+  "publicDownloadChannel": "anonymous-public-asset-api",
+  "publicDownloadHttp": 200,
+  "publicDownloadAuthenticated": false,
+  "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+  "apkBytes": 2799792,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 3023,
+      "sha256": "b44e31a63f84bc5d3ca10edbb4373fe49425103c02be08fe70d19176cef1f38c",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/build-info.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506616"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 2799792,
+      "sha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RunnerGardenia-P0-Release.apk",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506637"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "d256499763274468f9cf0b275c84651a63529569a35571565d295ea04a230e7f",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/SHA256SUMS",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506658"
+    },
+    "runtime-smoke.json": {
+      "bytes": 759,
+      "sha256": "e8a863e30d731dad341fe925dba10f52ed4c5edd7a8d6ffe65657de70348b429",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/runtime-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506670"
+    },
+    "native-theme-smoke.json": {
+      "bytes": 23611,
+      "sha256": "9a2f67e7c4db0eac1436265024ad71aa6ed9f4479f3abca07ec15071ce56c9b1",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/native-theme-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506685"
+    },
+    "theme-screenshots.zip": {
+      "bytes": 3402808,
+      "sha256": "e4ac17c55a7999ce0c3e94e8dff7e8b74ea7bbc9a9bd1a786932041645392299",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/theme-screenshots.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506705"
+    },
+    "test-summary.json": {
+      "bytes": 702,
+      "sha256": "898a45468b7a8986e3994bd7bd57be06552eda2742555642b9ecd132204656c9",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/test-summary.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506726"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1342,
+      "sha256": "2a1845b34973416a048fea92ecb20394fb63f48557031a570bfac0d7056a1c7d",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RELEASE_NOTES.md",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/723506744"
+    }
+  },
+  "publicationRecovery": {
+    "buildSource": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+    "buildRunId": "42443873771",
+    "recoverySource": "6aaf3664b99dd361b16299c010044d6bcb2c1d8f",
+    "recoveryRunId": "42468308461",
+    "changedPaths": [
+      ".github/scripts/p03_publication_recovery.py",
+      ".github/scripts/p03_publish.py",
+      ".github/scripts/p03_release_theme_ui.py",
+      ".github/scripts/publish_release.py",
+      ".github/tests/test_p03_publication_recovery.py",
+      ".github/workflows/p03-theme-system.yml",
+      "docs/theme-system/acceptance/signed-visual-review.json",
+      "docs/theme-system/failures/cb43907-actual-home.xml",
+      "docs/theme-system/failures/eighth-cloud-publication-media.md",
+      "docs/theme-system/failures/eleventh-api35-adb-boot.md",
+      "docs/theme-system/failures/fourteenth-public-download-gateway.md",
+      "docs/theme-system/failures/ninth-signed-screenshot-visual-review.md",
+      "docs/theme-system/failures/tenth-native-focus-query.md",
+      "docs/theme-system/failures/thirteenth-publication-import-scope.md",
+      "docs/theme-system/failures/twelfth-release-create-permission.md"
+    ],
+    "artifacts": [
+      {
+        "artifactId": 13603541459,
+        "name": "RunnerGardenia-P03-Release-42443873771",
+        "sha256": "d11c2d2385ad915f1e6120f396c19d520d89fab9fae81d8d31ada9485f7b9cd8",
+        "bytes": 5246454
+      },
+      {
+        "artifactId": 13603117684,
+        "name": "P03-reports-42443873771",
+        "sha256": "d2b7f2f31f4b1e64c56a5cf5b35ebb5baad34f14d5a2dc4621f190a18e5e8854",
+        "bytes": 34560045
+      },
+      {
+        "artifactId": 13612521139,
+        "sha256": "4a4ad1087fc551e33e9207ab0cbf3d63194bd6a283047b23e9b404c11a4f6d6c",
+        "bytes": 9963203,
+        "evaluationCommit": "49ae83b855fe43a3b50d6086280ec684a3dbe5b4",
+        "evaluationRunId": "42466614968",
+        "sameApkVisuallyReviewed": true
+      }
+    ],
+    "rebuilt": false,
+    "resigned": false
+  }
+}

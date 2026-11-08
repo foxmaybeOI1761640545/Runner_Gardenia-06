@@ -1,0 +1,32 @@
+{
+  "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "runId": "42443873771",
+  "passed": true,
+  "source": "real API35 managed-device PNGs",
+  "themes": 4,
+  "schemes": 8,
+  "pagesPerScheme": 7,
+  "pngSha256Verified": 56,
+  "inspection": [
+    "all eight homes, settings, heart empty states, history, six-sample raw HR detail, GPX dialogs",
+    "light/dark text and button legibility",
+    "six-notification curves and chart/grid visibility",
+    "system bars and scroll areas"
+  ],
+  "evidenceArtifactId": 13602159665,
+  "evidenceZipSha256": "3b27dafd66852ae6236f1bb2b5966e6b4a956fc39a943bd0a7e31340374ad165",
+  "checksArtifactId": 13603117684,
+  "checksZipSha256": "d2b7f2f31f4b1e64c56a5cf5b35ebb5baad34f14d5a2dc4621f190a18e5e8854",
+  "syntheticGpsAndBleFixtures": true,
+  "physicalHardwareAcceptance": false,
+  "priorFullVisualReviewSource": "8731786c4f16e6c6d5708249cb0c8ec99cb902f5",
+  "nativeMainTreeUnchangedSinceFullReview": true,
+  "nativeMainTree": "518bf5103a5a2421dc0b903a5b0f922c1a265520",
+  "finalNativeHomepageBackgroundPixelsVerified": 8,
+  "finalNativeSampledVisualPages": [
+    "home",
+    "settings",
+    "detail"
+  ],
+  "finalNativeSettingsBackgroundPixelsVerified": 8
+}

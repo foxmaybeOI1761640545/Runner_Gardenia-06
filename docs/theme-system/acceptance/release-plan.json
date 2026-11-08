@@ -1,0 +1,12 @@
+{
+  "versionName": "v0.1.0-p0.3",
+  "versionCode": 6774,
+  "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+  "stage": 10,
+  "p03Phase": 6,
+  "branch": "feature/theme-system-p0-3",
+  "runId": "42443873771",
+  "publishing": false,
+  "testTag": "test-p0-v0.1.0-p0.3",
+  "publicationStrategy": "verified-p03-test-only; legacy-main-publication-disabled"
+}
