@@ -76,15 +76,33 @@ public class P0SensorsTest {
                 var dialog=(BluetoothLeSensorPreference.BluetoothLeSensorPreferenceDialog)activity.getSupportFragmentManager().findFragmentByTag("p0-heart-rate-scan");
                 assertNotNull(dialog);dialog.getDeviceAdapter().add(ADDRESS,"Synthetic SIG strap",-45,true);dialog.getDeviceAdapter().notifyDataSetChanged();
             });
-            onView(withText(R.string.sensor_scan_again)).check(androidx.test.espresso.assertion.ViewAssertions.matches(androidx.test.espresso.matcher.ViewMatchers.isDisplayed()));
+            awaitScanDialog(scenario);
+            onView(withText(R.string.sensor_scan_again)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).check(androidx.test.espresso.assertion.ViewAssertions.matches(androidx.test.espresso.matcher.ViewMatchers.isDisplayed()));
             P0UiCapture.save("p0-heart-rate-scan-synthetic");
-            onView(withText(containsString(ADDRESS))).perform(click());
+            onView(withText(containsString(ADDRESS))).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());
             assertEquals(ADDRESS,HeartRateCommands.selected());
             scenario.onActivity(activity->{
                 var model=new androidx.lifecycle.ViewModelProvider(activity).get(de.dennisguse.opentracks.p0.recording.P0RecordingViewModel.class);
                 assertEquals(BleConnectionSession.State.DISCONNECTED,model.snapshot().getValue().preview().status().state());
             });
         }
+    }
+    private void awaitScanDialog(ActivityScenario<P0SensorsActivity> scenario) {
+        long deadline=android.os.SystemClock.uptimeMillis()+10000;
+        java.util.concurrent.atomic.AtomicBoolean ready=new java.util.concurrent.atomic.AtomicBoolean();
+        do {
+            scenario.onActivity(activity->{
+                var fragment=(androidx.fragment.app.DialogFragment)activity.getSupportFragmentManager().findFragmentByTag("p0-heart-rate-scan");
+                var dialog=fragment==null?null:fragment.getDialog();
+                var window=dialog==null?null:dialog.getWindow();
+                var button=dialog==null?null:dialog.findViewById(android.R.id.button3);
+                ready.set(dialog!=null&&dialog.isShowing()&&window!=null&&window.getDecorView().hasWindowFocus()
+                        &&!window.getDecorView().isLayoutRequested()&&button!=null&&button.isShown()&&button.getWidth()>0);
+            });
+            if(ready.get())return;
+            android.os.SystemClock.sleep(50);
+        }while(android.os.SystemClock.uptimeMillis()<deadline);
+        fail("Real scan dialog must own a laid-out, focused window");
     }
     @Test public void heartRateCommandsArePackageAddressAndMeasurementScoped() {
         PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,ADDRESS);

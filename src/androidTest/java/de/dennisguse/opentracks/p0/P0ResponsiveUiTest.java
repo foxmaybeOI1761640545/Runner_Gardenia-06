@@ -87,6 +87,7 @@ public class P0ResponsiveUiTest {
     @Test public void actualP0PagesInBothThemesAndSmallAndLargeWindows() throws Exception {
         String theme=PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));
         String selected=PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
+        String systemNight=SystemThemeTestUtils.savedMode();
         String size=shell("wm size"),density=shell("wm density");TrackRecordingService service=null;
         try {
             PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
@@ -123,6 +124,7 @@ public class P0ResponsiveUiTest {
             if(service!=null){final TrackRecordingService core=service;InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{core.endCurrentTrack();core.stopIdleSensors();});}
             new SessionStore(context).save(RecordingSession.ready());PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,selected);PreferencesUtils.setString(R.string.theme_key,theme);
             TestEnvironmentUtils.deleteAllTracks();
+            SystemThemeTestUtils.restore(systemNight);
             InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);restore("size",size);restore("density",density);
         }
     }

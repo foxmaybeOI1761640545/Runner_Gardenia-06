@@ -35,19 +35,24 @@ public class P0RecordingUiTest {
     @Rule public final ServiceTestRule serviceRule=new ServiceTestRule();
     private final Context context=ApplicationProvider.getApplicationContext();
     private String sampling,distance,activityType;
+    private final String[] animationNames={"window_animation_scale","transition_animation_scale","animator_duration_scale"};
+    private final String[] animationValues=new String[3];
     private TrackRecordingService boundService;
     private TrackRecordingService service() throws Exception {
         if(boundService==null)boundService=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
         return boundService;
     }
-    @Before public void before() {
+    @Before public void before() throws Exception {
+        // Espresso coordinates must not race the platform window animation after recreate/background.
+        for(int i=0;i<animationNames.length;i++){animationValues[i]=SystemThemeTestUtils.shell("settings get global "+animationNames[i]);SystemThemeTestUtils.shell("settings put global "+animationNames[i]+" 0");}
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         sampling=PreferencesUtils.getString(R.string.min_sampling_interval_key,"0");distance=PreferencesUtils.getString(R.string.recording_distance_interval_key,"5");activityType=PreferencesUtils.getDefaultActivityTypeLocalized();
     }
-    @After public void after() {
+    @After public void after() throws Exception {
         if(boundService!=null)serviceRule.unbindService();
         TestEnvironmentUtils.stopTrackRecordingService();TestEnvironmentUtils.awaitTrackRecordingServiceDestroyed();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.min_sampling_interval_key,sampling);PreferencesUtils.setString(R.string.recording_distance_interval_key,distance);PreferencesUtils.setDefaultActivityLocalized(activityType);
+        for(int i=0;i<animationNames.length;i++)SystemThemeTestUtils.shell(animationValues[i].equals("null")?"settings delete global "+animationNames[i]:"settings put global "+animationNames[i]+" "+animationValues[i]);
     }
     private void phase(ActivityScenario<P0Activity> scenario,int expected) {
         long until=SystemClock.uptimeMillis()+10000;String label=context.getString(expected);AtomicReference<String> actual=new AtomicReference<>();

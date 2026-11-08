@@ -47,7 +47,7 @@ public class P02HomeUiTest {
     private final JSONArray captures=new JSONArray();
     private final Instant base=Instant.parse("2026-11-06T02:00:00Z");
     private TrackRecordingService core;
-    private String gps,heart,theme,size,density,activity;
+    private String gps,heart,theme,size,density,activity,systemNight;
     private boolean enabled,automatic;
     private void main(Runnable action){InstrumentationRegistry.getInstrumentation().runOnMainSync(action);}
     private String shell(String command)throws Exception {
@@ -62,6 +62,7 @@ public class P02HomeUiTest {
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         gps=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());heart=HeartRateCommands.selected();
         theme=PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));activity=PreferencesUtils.getDefaultActivityTypeLocalized();
+        systemNight=SystemThemeTestUtils.savedMode();
         size=shell("wm size");density=shell("wm density");enabled=HeartRateCommands.connectionEnabled(context);automatic=HeartRateCommands.autoReconnectEnabled(context);
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,SensorType.NONE.getPreferenceValue());
         PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,SensorType.NONE.getPreferenceValue());
@@ -75,7 +76,7 @@ public class P02HomeUiTest {
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);
         HeartRateCommands.setConnectionEnabled(context,enabled);HeartRateCommands.setAutoReconnect(context,automatic);
         PreferencesUtils.setDefaultActivityLocalized(activity);PreferencesUtils.setString(R.string.theme_key,theme);
-        main(PreferencesUtils::applyNightMode);restore("size",size);restore("density",density);
+        SystemThemeTestUtils.restore(systemNight);main(PreferencesUtils::applyNightMode);restore("size",size);restore("density",density);
     }
     private void waitText(ActivityScenario<P0Activity> screen,int id,String value) {
         long deadline=SystemClock.uptimeMillis()+10000;AtomicBoolean matched=new AtomicBoolean();

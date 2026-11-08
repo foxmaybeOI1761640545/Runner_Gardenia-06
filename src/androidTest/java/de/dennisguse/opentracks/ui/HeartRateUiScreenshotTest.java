@@ -58,6 +58,7 @@ public class HeartRateUiScreenshotTest {
     private TrackRecordingService boundService;
 
     @Test public void realPagesInLightDarkAndTwoWindowSizes() throws Exception {
+        String systemNight = de.dennisguse.opentracks.p0.SystemThemeTestUtils.savedMode();
         String originalTheme = PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));
         String overrideSize = shell("wm size");String overrideDensity = shell("wm density");
         String headsUp = shell("settings get global heads_up_notifications_enabled").trim();
@@ -99,6 +100,7 @@ public class HeartRateUiScreenshotTest {
         } finally {
             TestEnvironmentUtils.stopTrackRecordingService();
             PreferencesUtils.setString(R.string.theme_key,originalTheme);
+            de.dennisguse.opentracks.p0.SystemThemeTestUtils.restore(systemNight);
             InstrumentationRegistry.getInstrumentation().runOnMainSync(PreferencesUtils::applyNightMode);
             restoreOverride("size",overrideSize);restoreOverride("density",overrideDensity);
             if (radioWasEnabled) shell("svc bluetooth enable");
