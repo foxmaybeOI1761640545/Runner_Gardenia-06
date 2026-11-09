@@ -1,6 +1,6 @@
 # Phase 1：运动首页顶部布局
 
-状态：IN_PROGRESS。Phase 0 已由 Actions `42572215358` 验收，报告/原始收据已在 `facd752` 推送；本阶段仅实施功能 A。
+状态：PASSED。Phase 0 已由 Actions `42572215358` 验收，报告/原始收据已在 `facd752` 推送；本阶段仅实施功能 A。
 
 ## 修改范围与现状
 
@@ -26,3 +26,9 @@ Precision 分割数据网格、Quiet 中轴留白、Explorer 轨迹叠加卡片�
 ## 候选失败记录：098dbac / 42572848848
 
 Android 32 / Executed 32 / Failures 1 / Errors 0 / Skipped 0；JVM 118 / Executed 118 / Failures 0 / Errors 0 / Skipped 0。原 192 张状态矩阵生成，新增 48 张矩阵在首次单选测试即失败，不能宣布新矩阵通过。RadioButton 的 performClick 返回值只代表监听器处理结果，不代表框架选中状态；改用 Espresso 真实触摸并保留选中、互斥、可操作性断言。另发现 Gradle clean 删除先前的 helpers.json，需将精确执行收据保存在清理范围之外。原始失败 XML 与收据保留于 evidence/phase1-failed-42572848848；没有删除测试、降低业务断言或进入 Phase 2。
+
+## 最终验收：1e93950 / 42574249001
+
+[Actions](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42574249001) success。Android Tests=32 / Executed=32 / Failures=0 / Errors=0 / Skipped=0；JVM 118 / 118 / 0 / 0 / 0；辅助测试 87 / 87 / 0 / 0 / 0。Debug、Lint、原192张状态矩阵、新48张配置矩阵通过。已独立下载并核对两个Artifact摘要，原始XML及48张PNG归档于 evidence/phase1-passed-42574249001。
+
+已人工审查六张汇总图中的全部48个真实Android截图：标题主题名称与占位区域消失，紧凑控件没有溢出或重叠，48dp与完整文字断言通过；保留四主题个性。GPS入口验证发出的系统设置Intent（拦截外部启动），心率入口实际进入设备Activity。记录和暂停状态/记录ID/GPS对象/连接ID回归通过。截图中的运动数据为测试fixture，不能证明真实GNSS/BLE硬件。Phase 2可以进入。

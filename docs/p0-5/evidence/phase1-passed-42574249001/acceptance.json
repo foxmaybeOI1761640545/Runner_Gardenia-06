@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source": "1e93950be73a8d54952243b651ecfdd981eed99b",
+  "runId": 42574249001,
+  "reportsArtifactId": 13655445318,
+  "reportsSha256": "3867f975131848f833464df0e8fa8b2e28d1de219fdfbf4a221ec1cb572896f5",
+  "visualArtifactId": 13654798499,
+  "visualSha256": "71d0dec50d2b91309f1a0528a28fe62923ddb6b7474936aca84f273a794b3897",
+  "reviewedScreenshots": 48,
+  "reviewMethod": "All six contact sheets, actual API35 images at 360/393/412dp and1.0/1.3 font; four themes/light and dark; inspected title collapse, compact controls and distinct content.",
+  "nextPhaseAuthorized": true,
+  "physicalHardwareTested": false
+}
