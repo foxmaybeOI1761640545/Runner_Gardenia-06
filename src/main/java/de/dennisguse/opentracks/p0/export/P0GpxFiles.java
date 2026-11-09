@@ -86,8 +86,10 @@ public final class P0GpxFiles {
     }
     private void check(WorkoutRepository repository,Track.Id id)throws IOException{
         interrupted();
-        if(repository.find(id)==null)throw new BatchFailure(id.id(),context.getString(R.string.p0_workout_missing),null);
-        if(repository.isProtected(id))throw new BatchFailure(id.id(),context.getString(R.string.p0_workout_protected),null);
+        try{
+            if(repository.find(id)==null)throw new BatchFailure(id.id(),context.getString(R.string.p0_workout_missing),null);
+            if(repository.isProtected(id))throw new BatchFailure(id.id(),context.getString(R.string.p0_workout_protected),null);
+        }catch(RuntimeException failure){throw new BatchFailure(id.id(),failure.getMessage()==null?context.getString(R.string.p0_operation_failed):failure.getMessage(),failure);}
     }
     /** Every selected record is checked before any output, and again before publishing the complete set. */
     public Batch prepareBatch(List<Track.Id> ids,boolean zip,Progress progress)throws IOException{

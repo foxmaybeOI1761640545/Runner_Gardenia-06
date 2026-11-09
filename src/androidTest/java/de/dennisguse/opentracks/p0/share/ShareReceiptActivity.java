@@ -18,7 +18,7 @@ public class ShareReceiptActivity extends Activity {
  private static byte[] read(InputStream input)throws IOException{ByteArrayOutputStream out=new ByteArrayOutputStream();byte[] block=new byte[16384];int count;while((count=input.read(block))!=-1){if(out.size()+count>64*1024*1024)throw new IOException("Test receiver input exceeds bound");out.write(block,0,count);}return out.toByteArray();}
  private static String sha(byte[] bytes)throws Exception{StringBuilder out=new StringBuilder();for(byte b:MessageDigest.getInstance("SHA-256").digest(bytes))out.append(String.format(java.util.Locale.ROOT,"%02x",b&255));return out.toString();}
  private static JSONObject gpx(byte[] bytes)throws Exception{
-  var f=DocumentBuilderFactory.newInstance();f.setNamespaceAware(true);f.setFeature("http://apache.org/xml/features/disallow-doctype-decl",true);
+  var f=DocumentBuilderFactory.newInstance();f.setNamespaceAware(true);
   var doc=f.newDocumentBuilder().parse(new ByteArrayInputStream(bytes));var root=doc.getDocumentElement();
   if(!"http://www.topografix.com/GPX/1/1".equals(root.getNamespaceURI())||!"1.1".equals(root.getAttribute("version")))throw new IOException("Invalid GPX namespace/version");
   var records=doc.getElementsByTagNameNS("urn:runner-gardenia:gpx:1","workout");if(records.getLength()!=1)throw new IOException("Missing workout identity");

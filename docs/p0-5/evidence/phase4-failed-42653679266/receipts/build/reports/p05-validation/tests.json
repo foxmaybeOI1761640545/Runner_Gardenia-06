@@ -1,0 +1,330 @@
+{
+  "passed": false,
+  "plan": {
+    "commit": "7d127b7f2fe56cb76711279a3be4ea3417d5c9da",
+    "branch": "feature/p0-5-dashboard-settings-history",
+    "stage": 4,
+    "runId": "42653679266",
+    "fullRegression": false,
+    "versionName": "v0.1.0-p0.4",
+    "versionCode": 6775,
+    "classes": [
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+      "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+      "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+      "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+      "de.dennisguse.opentracks.p0.P02HomeUiTest",
+      "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+      "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+      "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+      "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+      "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+      "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+      "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+      "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+      "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+      "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+      "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+      "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+      "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+      "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest"
+    ],
+    "publishing": false,
+    "signed": false,
+    "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+  },
+  "helpers": {
+    "tests": 87,
+    "executed": 87,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "sourceCommit": "7d127b7f2fe56cb76711279a3be4ea3417d5c9da",
+    "runId": "42653679266"
+  },
+  "android": {
+    "tests": 78,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0,
+    "total": 78,
+    "executed": 78,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+        "tests": 3,
+        "failures": 2,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [
+      "de.dennisguse.opentracks.p0.P05BatchFilesTest.distinctUidReceivesSingleMultipleAndZipWithVerifiedGrantsAndEveryGpx\n\njava.lang.NoSuchMethodError: No static method writeString(Ljava/nio/file/Path;Ljava/lang/CharSequence;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path; in class Ljava/nio/file/Files; or its super classes (declaration of 'java.nio.file.Files' appears in /apex/com.android.art/javalib/core-oj.jar)\n\tat de.dennisguse.opentracks.p0.P05BatchFilesTest.receive(P05BatchFilesTest.java:54)\n\tat de.dennisguse.opentracks.p0.P05BatchFilesTest.distinctUidReceivesSingleMultipleAndZipWithVerifiedGrantsAndEveryGpx(P05BatchFilesTest.java:63)\n",
+      "de.dennisguse.opentracks.p0.P05BatchFilesTest.orphanAndTtlCleanupAndWorkerGuardAreReal\n\njava.lang.NoSuchMethodError: No static method writeString(Ljava/nio/file/Path;Ljava/lang/CharSequence;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path; in class Ljava/nio/file/Files; or its super classes (declaration of 'java.nio.file.Files' appears in /apex/com.android.art/javalib/core-oj.jar)\n\tat de.dennisguse.opentracks.p0.P05BatchFilesTest.orphanAndTtlCleanupAndWorkerGuardAreReal(P05BatchFilesTest.java:90)\n"
+    ],
+    "passed": false
+  },
+  "unit": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 124,
+    "executed": 124,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidExecuted": true,
+  "nativeVisualEvidence": {
+    "p05Layouts": 48,
+    "originalStates": 192,
+    "humanReview": "REQUIRED_AFTER_DOWNLOAD"
+  },
+  "diagnostic": "[Errno 2] No such file or directory: 'build/reports/p05-metrics/metric-matrix.json'"
+}

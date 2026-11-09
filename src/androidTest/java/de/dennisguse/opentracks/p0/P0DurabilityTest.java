@@ -77,13 +77,13 @@ public class P0DurabilityTest {
             if(phase.equals("write")){
                 var complete=files.prepareBatch(List.of(id()),false,(done,total,packing)->{});
                 assertTrue(prefs.edit().putString("p05_batch_probe_directory",complete.directory().getName()).commit());
-                assertTrue(pending.mkdirs());java.nio.file.Files.writeString(new java.io.File(pending,"incomplete.gpx").toPath(),"incomplete process interruption fixture");
+                assertTrue(pending.mkdirs());java.nio.file.Files.write(new java.io.File(pending,"incomplete.gpx").toPath(),"incomplete process interruption fixture".getBytes(java.nio.charset.StandardCharsets.UTF_8));
             }else{
                 java.io.File complete=new java.io.File(context.getCacheDir(),"p0_exports/"+prefs.getString("p05_batch_probe_directory","missing"));
                 assertTrue("Process death must retain staged and completed cache bytes before cleanup",pending.isDirectory());
                 assertTrue(complete.isDirectory());files.cleanStale();assertFalse(pending.exists());
                 java.io.File[] gpx=complete.listFiles(f->f.getName().endsWith(".gpx"));assertNotNull(gpx);assertEquals(1,gpx.length);
-                String xml=java.nio.file.Files.readString(gpx[0].toPath());assertTrue(xml.contains("urn:runner-gardenia:gpx:1"));assertTrue(xml.contains("durability-session"));
+                String xml=new String(java.nio.file.Files.readAllBytes(gpx[0].toPath()),java.nio.charset.StandardCharsets.UTF_8);assertTrue(xml.contains("urn:runner-gardenia:gpx:1"));assertTrue(xml.contains("durability-session"));
                 try(var input=context.getContentResolver().openInputStream(files.share(gpx[0]).getParcelableExtra(android.content.Intent.EXTRA_STREAM))){assertNotNull(input);assertTrue(input.readAllBytes().length>0);}
             }
             android.os.Bundle cache=new android.os.Bundle();cache.putString("p05BatchCacheState",phase.equals("write")?"staged":"cleaned-retained-completed");InstrumentationRegistry.getInstrumentation().sendStatus(0,cache);

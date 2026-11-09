@@ -88,7 +88,7 @@ public class P0HistoryActivity extends AbstractActivity {
         model.exported().observe(this,result->{
             if(result==null)return;model.consumeExport();
             android.widget.Toast.makeText(this,result.message(),android.widget.Toast.LENGTH_LONG).show();
-            if(result.share()!=null)try{startActivity(Intent.createChooser(result.share(),getString(R.string.p0_share_gpx)));}
+            if(result.share()!=null)try{startActivity(Intent.createChooser(result.share(),getString(R.string.p05_share)));}
             catch(android.content.ActivityNotFoundException unavailable){android.widget.Toast.makeText(this,R.string.p0_export_failed,android.widget.Toast.LENGTH_LONG).show();}
         });
         long selected=saved!=null?saved.getLong(WORKOUT_ID,0):getIntent().getLongExtra(WORKOUT_ID,0);

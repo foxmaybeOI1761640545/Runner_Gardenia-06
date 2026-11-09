@@ -102,11 +102,13 @@ jobs:
       - name: Verify original state matrix and new P0.5 large-font native matrix
         if: always() && steps.plan.outputs.stage != '0'
         run: |
-          python3 .github/scripts/collect_p04_ui.py
-          python3 .github/scripts/collect_p05_ui.py
-          if [[ '${{ steps.plan.outputs.stage }}' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py; fi
-          if [[ '${{ steps.plan.outputs.stage }}' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])'; fi
-          if [[ '${{ steps.plan.outputs.stage }}' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])'; fi
+          p05_collect_failed=0
+          python3 .github/scripts/collect_p04_ui.py || p05_collect_failed=1
+          python3 .github/scripts/collect_p05_ui.py || p05_collect_failed=1
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py || p05_collect_failed=1; fi
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])' || p05_collect_failed=1; fi
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])' || p05_collect_failed=1; fi
+          exit "$p05_collect_failed"
       - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
         if: always() && steps.plan.outcome == 'success'
         run: python3 .github/scripts/p05_pipeline.py gate
@@ -123,6 +125,8 @@ jobs:
             build/test-results/
             build/outputs/androidTest-results/
             build/outputs/**/p0-ui/
+            build/outputs/**/p05-share/
+            build/outputs/**/p0-gpx/
           if-no-files-found: error
           retention-days: 90
       - name: Preserve actual P0.5 Debug APK for review
