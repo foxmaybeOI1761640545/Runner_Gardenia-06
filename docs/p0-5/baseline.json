@@ -1,0 +1,198 @@
+{
+  "schema": 1,
+  "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
+  "branch": "feature/p0-5-dashboard-settings-history",
+  "baseline": "f994d1ecd0e19a840800b2f946df3656a6b312c6",
+  "protectedBranches": {
+    "design/p0-ui-lab": "45ce47d9eec81dd2f0cdfcf2bfd7055e23378e02",
+    "feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",
+    "feature/p0-2-gps-ui": "e27fbfd6f7f082d6f604eecb1cfeaaad8d3fb14a",
+    "feature/p0-core-migration": "60daeb21aa50bdbceec6e6ad354a431b8c1be434",
+    "feature/theme-system-p0-3": "cebf4682cec672fbde022c54bda3b442ff0663ab",
+    "feature/theme-system-p0-3-ui-refinement": "f994d1ecd0e19a840800b2f946df3656a6b312c6",
+    "main": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+  },
+  "protectedTags": {
+    "test-p0-v0.1.0-p0.1": {
+      "object": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+      "source": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466"
+    },
+    "test-p0-v0.1.0-p0.2": {
+      "object": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+      "source": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063"
+    },
+    "test-p0-v0.1.0-p0.3": {
+      "object": "3839bd2e288de3dc47219cbb8c036f8919d6bed7",
+      "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471"
+    },
+    "test-p0-v0.1.0-p0.4": {
+      "object": "f3900d5dadd09d3b8132bd2951d674692b2a6011",
+      "source": "ccc59b546b5087a2038d32087cc675a3096852c3"
+    },
+    "v0.1.0-rc1.4": {
+      "object": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "source": "24aa0d7d36d244852e796cca6307936e34d989ed"
+    },
+    "v0.1.0-rc1.5": {
+      "object": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+      "source": "270cfa49a1c94d658d16dfc1e84563765aee832f"
+    },
+    "v0.1.0-rc1.6": {
+      "object": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+      "source": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169"
+    }
+  },
+  "p04": {
+    "sha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+    "bytes": 2803864,
+    "v2CertificateSha256": [
+      "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    ],
+    "method": "APK v2 signing-block certificate extraction; full signature verification deferred to Actions apksigner",
+    "oldApkRebuilt": false
+  },
+  "versionHighWater": 6775,
+  "nextVersionCandidate": 6776,
+  "p04BuildInfo": {
+    "applicationId": "com.fox.runner",
+    "versionName": "v0.1.0-p0.4",
+    "versionCode": 6775,
+    "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+    "variant": "reproducibleRelease",
+    "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+    "signatureVerified": true,
+    "alignmentVerified": true,
+    "debuggable": false,
+    "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+    "apkBytes": 2803864,
+    "r8MappingSha256": "a45f7d5276f1c7531440c7fe0d817199bddde0b1d4ef92355d5a406221fa285e",
+    "offline": {
+      "applicationId": "com.fox.runner",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {
+        "activity": [
+          "de.dennisguse.opentracks.introduction.IntroductionActivity",
+          "de.dennisguse.opentracks.p0.app.P0Activity",
+          "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+          "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+          "de.dennisguse.opentracks.p0.app.P0SettingsActivity"
+        ],
+        "activity-alias": [],
+        "service": [
+          "androidx.appcompat.app.AppLocalesMetadataHolderService",
+          "de.dennisguse.opentracks.services.TrackRecordingService"
+        ],
+        "provider": [
+          "androidx.core.content.FileProvider",
+          "de.dennisguse.opentracks.data.ShareContentProvider"
+        ],
+        "receiver": []
+      }
+    },
+    "plan": {
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775,
+      "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "stage": 10,
+      "branch": "feature/theme-system-p0-3-ui-refinement",
+      "runId": "42504187574",
+      "publishing": false,
+      "testTag": "test-p0-v0.1.0-p0.4",
+      "refinement": true,
+      "visualApprovalRequiredBeforeSigning": true
+    },
+    "tests": {
+      "android": {
+        "tests": 407,
+        "executed": 406,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "unit": {
+        "tests": 118,
+        "executed": 118,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42506398467",
+    "r8TaskExecuted": true,
+    "resourceOptimizationTaskExecuted": true,
+    "themePolicy": "FOLLOW_SYSTEM",
+    "themeFamilies": [
+      "precision",
+      "quiet",
+      "explorer",
+      "neon"
+    ],
+    "themeSchemes": 8,
+    "testRunId": "42504187574",
+    "buildRunId": "42506398467",
+    "buildWorkflowCommit": "8f4576090864d30f6a9152d74e750bb06646e87f",
+    "mainTree": "4568dcbd52b73a88f575aedc15b7a499e19a8802",
+    "nativeVisualReview": {
+      "passed": true,
+      "kind": "ACTUAL_NATIVE_VISUAL_REVIEW",
+      "schemes": 8,
+      "viewports": [
+        [
+          360,
+          800
+        ],
+        [
+          390,
+          844
+        ],
+        [
+          412,
+          915
+        ]
+      ],
+      "fixturePngs": 192,
+      "businessRegressionPassed": true,
+      "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "mainTree": "4568dcbd52b73a88f575aedc15b7a499e19a8802",
+      "testRunId": "42504187574",
+      "reportsArtifactId": 13626853039,
+      "reportsArtifactSha256": "9b0686f11a9fe0d24e70738a8732ea460b9380af5ce50cb4fde6f7befd077cba",
+      "review": "docs/theme-system/ui-refinement/VISUAL_REVIEW.md",
+      "reviewedStates": [
+        "idle",
+        "gps-searching",
+        "gps-fixed",
+        "recording",
+        "paused",
+        "finished",
+        "disconnected",
+        "connected-no-sample"
+      ],
+      "referenceComparisons": 16,
+      "reviewedAtUtc": "2026-11-08T17:43:34.682682+00:00"
+    },
+    "runtimeSmokeVerified": true,
+    "upgradeFromVersionCode": 6774
+  },
+  "localOnlyTags": {
+    "v0.1.0-rc1.1": {
+      "object": "ab2ef93df4cf31476e8a3fc7fa05d9aa3e25a719",
+      "source": "ebc6549a6e228328b82a33995d2ebf2329a26579"
+    }
+  }
+}

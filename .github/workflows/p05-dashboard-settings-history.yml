@@ -1,0 +1,120 @@
+name: P0.5 dashboard settings and history
+on:
+  push:
+    branches: [feature/p0-5-dashboard-settings-history]
+permissions:
+  contents: read
+concurrency:
+  group: p05-dashboard-settings-history
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  checks:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-dashboard-settings-history'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
+      - name: Verify exact branch, phase, baseline and protected historical refs
+        id: plan
+        run: python3 .github/scripts/p05_pipeline.py prepare
+      - name: Execute complete pipeline helper regression and retain real counts
+        run: python3 .github/scripts/p05_pipeline.py helpers
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - name: Install only verification tools in Phase 0; never rebuild P0.4
+        if: steps.plan.outputs.stage == '0'
+        run: sdkmanager 'build-tools;36.0.0'
+      - name: Verify public P0.4 signature, checksum, manifest and immutable source
+        if: steps.plan.outputs.stage == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p05_baseline_apk.py
+      - name: Install actual development toolchain for activated phases only
+        if: steps.plan.outputs.stage != '0'
+        run: sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        if: steps.plan.outputs.stage != '0'
+        with:
+          cache-read-only: true
+      - name: Enable KVM for real API35 native tests
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - name: Debug build, lint, all JVM tests and instrumentation compilation
+        if: steps.plan.outputs.stage != '0'
+        run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+      - name: Final merged Release and packaged Debug offline audit
+        if: steps.plan.outputs.stage == '5'
+        run: |
+          ./gradlew --no-daemon --no-configuration-cache processReproducibleReleaseManifest
+          python3 .github/scripts/verify_p0_offline.py
+      - name: Actual API35 stage tests and original regressions
+        if: steps.plan.outputs.stage != '0'
+        env:
+          TEST_CLASSES: ${{ steps.plan.outputs.classes }}
+        run: |
+          args=()
+          if [[ -n "$TEST_CLASSES" ]]; then args+=("-Pandroid.testInstrumentationRunnerArguments.class=$TEST_CLASSES"); fi
+          timeout --signal=INT --kill-after=30s 45m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000 "${args[@]}"
+      - name: Final actual generated GPX 1.1 Schema verification
+        if: always() && steps.plan.outputs.stage == '5'
+        run: python3 .github/scripts/verify_p0_gpx.py
+      - name: Final database force-stop and genuinely new instrumentation process
+        if: steps.plan.outputs.stage == '5'
+        run: |
+          ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
+          python3 .github/scripts/p0_durability.py
+      - name: Verify Debug identity without accessing release keys
+        if: steps.plan.outputs.stage != '0'
+        run: python3 .github/scripts/verify_debug_apk.py
+      - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
+        if: always() && steps.plan.outcome == 'success'
+        run: python3 .github/scripts/p05_pipeline.py gate
+      - name: Recheck every original remote branch and tag
+        run: python3 .github/scripts/p05_pipeline.py refs
+      - name: Preserve exact phase test reports, screenshots and receipts on every outcome
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P05-reports-${{ github.run_id }}
+          path: |
+            release-plan.json
+            build/reports/
+            build/test-results/
+            build/outputs/androidTest-results/
+            build/outputs/**/p0-ui/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve actual P0.5 Debug APK for review
+        if: steps.plan.outputs.stage != '0' && success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P05-Debug-${{ github.run_id }}
+          path: build/outputs/apk/reproducible/debug/*.apk
+          if-no-files-found: error
+          retention-days: 30

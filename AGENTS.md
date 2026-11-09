@@ -1,4 +1,14 @@
-# Current P0.3 native UI refinement task
+# Current P0.5 dashboard, settings and history task
+
+The 2026-11-09 user handoff supersedes historical branch/task restrictions below. Work only on `feature/p0-5-dashboard-settings-history`, based on verified P0.4 development HEAD `f994d1ecd0e19a840800b2f946df3656a6b312c6`. Never push main or old development/design branches. Preserve every existing remote branch, tag, Release and asset. P0.4's actual APK source is `ccc59b546b5087a2038d32087cc675a3096852c3`, not the development HEAD. Never rebuild/re-sign/replace P0.4.
+
+Follow the sequential phase gates in `docs/p0-5/00-baseline.md` and the current phase plan. No next-phase product work before the current phase's exact-source tests, screenshot review where relevant, report commit/push and remote verification pass. Keep failed evidence and original test assertions. Distinguish Tests/Executed/Failures/Errors/Skipped and reject missing/zero reports. Report-only commits must not rebuild or re-sign accepted artifacts.
+
+Java/XML/ViewBinding/native Canvas only; exactly four theme families with FOLLOW_SYSTEM. Preserve the one GPS/BLE/recording/database/GPX business path; no WebView, online maps, account/cloud/ad dependencies, new keystore or new credentials. Metric positions are local UI preferences, never recording commands. Batch database/file/GPX/ZIP work belongs on existing background workers; active/paused workouts stay protected. Shares use FileProvider URIs, explicit ClipData and read grants, standard Sharesheet; real WeChat remains NEEDS_DEVICE_VALIDATION.
+
+Use Actions for Android SDK/emulator/build, JDK21/Java17, checked-in Wrapper/AGP, API35 and Asia/Singapore CI timezone. Do not install an Android SDK locally. Only the existing protected `android-release` signing job may access original signing Secrets, restore JKS under RUNNER_TEMP and clean it on all outcomes; no secret/JKS in logs, Git or artifacts. Final P0.5 Pre-release/non-Latest publication requires all gates and independently verified public APK bytes, identity and fixed certificate. Recheck version high water before assigning P0.5 code.
+
+# Historical P0.3 native UI refinement task
 
 User explicitly supersedes the historical branch/archive restrictions below. Work only on feature/theme-system-p0-3-ui-refinement, based on completed P0.3 development HEAD cebf4682cec672fbde022c54bda3b442ff0663ab. Preserve all existing refs including feature/theme-system-p0-3 and design/p0-ui-lab. No website modification or historical archival work. Java/XML/ViewBinding/native Canvas only. Keep one business state path and four genuinely distinct UI hierarchies. No production preview data; fixtures belong to androidTest only. No online map dependency. Preserve existing service/GPS/BLE/database/GPX algorithms. Native screenshots at three requested dp sizes and both OS modes must undergo actual visual review before signing/publication. Use GitHub Actions for SDK/emulator/build, existing fixed signing Secrets and a unique new version/tag. No new key, credentials, forced history or asset replacement. Keep real-device limitations explicit.
 
