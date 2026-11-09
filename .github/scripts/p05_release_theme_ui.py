@@ -137,11 +137,17 @@ def capture(device,dump,screenshot,tap,start,output):
                     time.sleep(.1)
                 home();tree,_=await_page('home');primary=next((n.get('text') for n in tree.iter('node') if n.get('resource-id')==PACKAGE+':id/p05_primary_label'),None)
                 if primary!=('Distance' if family=='neon' else 'Active time'):raise ValueError('New signed process did not restore primary metric')
-                settings('motion');select('Restore default metric layout');now=preferences()
-                if now.get('gardenia_metric_layout_'+family)!=','.join(defaults):raise ValueError('Current theme reset did not persist')
+                settings('motion');select('Restore default metric layout');until=time.monotonic()+5
+                while 'gardenia_metric_layout_'+family in preferences():
+                    if time.monotonic()>until:raise ValueError('Current theme reset did not remove its override')
+                    time.sleep(.1)
+                now=preferences()
                 for other,_ in FAMILIES:
                     if other!=family and now.get('gardenia_metric_layout_'+other)!=all_before.get('gardenia_metric_layout_'+other):raise ValueError('Reset changed another theme layout')
-                back('hub');back('home');settings('appearance')
+                back('hub');back('home');tree,_=await_page('home')
+                primary=next((n.get('text') for n in tree.iter('node') if n.get('resource-id')==PACKAGE+':id/p05_primary_label'),None)
+                if primary!=('Heart rate' if family=='neon' else 'Distance'):raise ValueError('Reset did not render the actual family default')
+                settings('appearance')
                 schemes.append({'family':family,'appearance':mode,'passed':True,'renderedPaletteVerified':True,'settingsPagePreserved':True,'metricProcessPersistence':True,'currentThemeResetOnly':True})
         after_signature,after_ids=snapshot()
         if after_signature!=before_signature or after_ids!=expected_ids:raise ValueError('Signed sharing/cancelled deletion changed original workout/GPS/heart data')
