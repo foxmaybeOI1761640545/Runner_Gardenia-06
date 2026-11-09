@@ -1,0 +1,757 @@
+checks	Debug build, lint, all JVM tests and instrumentation compilation	﻿2026-11-09T16:18:24.8709755Z ##[group]Run ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8710919Z [36;1m./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest[0m
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8728229Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8728709Z env:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8728906Z   TZ: Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8729155Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8729460Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8730354Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8730709Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8731318Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8731733Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8732022Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8732292Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8732567Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8732955Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8733573Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8733913Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8734251Z ##[endgroup]
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:24.8863461Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:25.5318858Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:26.4294554Z Daemon will be stopped at the end of the build 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:34.6323067Z > Task :clean
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:34.6323898Z > Task :preBuild UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:34.6324512Z > Task :preReproducibleDebugBuild UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:34.6364033Z > Task :mergeReproducibleDebugNativeDebugMetadata NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.0293771Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.0308671Z > Task :generateReproducibleDebugResValues
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.1280131Z > Task :extractReproducibleDebugSupportedLocales
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.1283946Z > Task :mapReproducibleDebugSourceSetPaths
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.9290256Z > Task :generateReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:35.9327383Z > Task :generateReproducibleDebugLocaleConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:36.0288289Z > Task :processReproducibleDebugNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:39.7304474Z > Task :packageReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.1278974Z > Task :mergeReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.2312904Z > Task :generateReproducibleDebugBuildConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.2346158Z > Task :generateReproducibleDebugAssets UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.2356552Z > Task :javaPreCompileReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.3283539Z > Task :mergeReproducibleDebugAssets
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.3287961Z > Task :compressReproducibleDebugAssets
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:40.3301191Z > Task :parseReproducibleDebugLocalResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:42.2295948Z > Task :generateReproducibleDebugGlobalSynthetics
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:42.7282298Z > Task :dataBindingGenBaseClassesReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:42.8287349Z > Task :generateReproducibleDebugRFile
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:43.2284623Z > Task :compileReproducibleDebugKotlin NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:44.5284824Z > Task :l8DexDesugarLibReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9291395Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9292394Z > Task :compileReproducibleDebugJavaWithJavac
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9293902Z Note: Some input files use or override a deprecated API.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9294530Z Note: Recompile with -Xlint:deprecation for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9297258Z Note: Some input files use unchecked or unsafe operations.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:47.9297858Z Note: Recompile with -Xlint:unchecked for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.3291682Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.3304290Z > Task :desugarReproducibleDebugFileDependencies
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.3305239Z > Task :checkReproducibleDebugDuplicateClasses
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.4334576Z > Task :checkReproducibleDebugAarMetadata
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.5334319Z > Task :createReproducibleDebugCompatibleScreenManifests
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.5363905Z > Task :mergeLibDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.5392317Z > Task :extractDeepLinksReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.5392906Z > Task :compileReproducibleDebugNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.9282045Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.9304390Z > Task :processReproducibleDebugMainManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.9334020Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/debug/AndroidManifest.xml Warning:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:48.9364494Z 	uses-permission#android.permission.INTERNET was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:49.3279707Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:49.3294290Z > Task :processReproducibleDebugManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:49.4282459Z > Task :compressReproducibleDebugJavaRes NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:49.8294937Z > Task :processReproducibleDebugManifestForPackage
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:49.9302472Z > Task :mergeReproducibleDebugJavaResource
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:50.1286919Z > Task :mergeReproducibleDebugJniLibFolders
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:50.2314481Z > Task :mergeReproducibleDebugNativeLibs NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:50.2333843Z > Task :stripReproducibleDebugDebugSymbols NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:51.8282515Z > Task :processReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:51.8293844Z > Task :validateSigningReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:54.4324522Z > Task :mergeExtDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.4284911Z > Task :dexBuilderReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.4293916Z > Task :writeReproducibleDebugAppMetadata
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.4323822Z > Task :writeReproducibleDebugSigningConfigVersions
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.4333972Z > Task :preReproducibleDebugAndroidTestBuild SKIPPED
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.5304392Z > Task :bundleReproducibleDebugClassesToCompileJar
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.8314873Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.8344053Z > Task :generateReproducibleDebugAndroidTestResValues
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.8354580Z > Task :generateReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.8386289Z > Task :mergeProjectDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:56.9338689Z > Task :mergeReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0299494Z > Task :mergeReproducibleDebugAndroidTestManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0319082Z > Task :dataBindingGenBaseClassesReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0346495Z > Task :processReproducibleDebugAndroidTestManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0364377Z > Task :generateReproducibleDebugAndroidTestBuildConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0374016Z > Task :packageReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0396038Z > Task :processReproducibleDebugAndroidTestNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0404039Z > Task :javaPreCompileReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.0437447Z > Task :parseReproducibleDebugAndroidTestLocalResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.2306908Z > Task :generateReproducibleDebugAndroidTestLintModel
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.3284815Z > Task :generateReproducibleDebugAndroidTestRFile
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.3306692Z > Task :extractProguardFiles
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:57.3354054Z > Task :compileReproducibleDebugAndroidTestKotlin NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.8285750Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.8324508Z Note: Some input files use or override a deprecated API.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.8325305Z > Task :compileReproducibleDebugAndroidTestJavaWithJavac
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.8349584Z Note: Recompile with -Xlint:deprecation for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.9278670Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.9309172Z > Task :generateReproducibleDebugLintReportModel
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.9311219Z > Task :preReproducibleDebugUnitTestBuild UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:58.9312529Z > Task :generateReproducibleDebugUnitTestLintModel
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.0284407Z > Task :packageReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.0285490Z > Task :createReproducibleDebugApkListingFileRedirect
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.0286324Z > Task :assembleReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.1284565Z > Task :compileReproducibleDebugUnitTestKotlin NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.1303970Z > Task :javaPreCompileReproducibleDebugUnitTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.1333859Z > Task :compressReproducibleDebugUnitTestJavaRes NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.1343805Z > Task :bundleReproducibleDebugClassesToRuntimeJar
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.4304821Z > Task :compileReproducibleDebugUnitTestJavaWithJavac
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:18:59.4313732Z > Task :extractReproducibleDebugUnitTestJavaRes
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:01.1278202Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:01.1279184Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:01.1279896Z > Task :testReproducibleDebugUnitTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:20.6278986Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:20.6280128Z > Task :lintAnalyzeReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:24.5281819Z > Task :lintAnalyzeReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:25.2288626Z > Task :lintAnalyzeReproducibleDebugUnitTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5291139Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5292107Z > Task :lintReportReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5293675Z Wrote HTML report to file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/lint-results-reproducibleDebug.html
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5295074Z Couldn't compute fix edits for Replace with ’
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5341677Z java.lang.IllegalArgumentException: Did not find "'" in "r" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5379946Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5403933Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5484168Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5495911Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5496862Z Wrote SARIF report to file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/lint-results-reproducibleDebug.sarif
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5554150Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5554938Z Lint found 2 errors, 963 warnings and 191 hints. First failure:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5586786Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5625282Z ##[error]/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/P0HistoryViewModel.java:94: Error: Suspicious argument type for formatting argument #1 in p05_record_error: conversion is s, received Long (argument #2 in method call) (Did you mean formatting character d, 'o' or x?) [StringFormatMatches]
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5628765Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5632288Z             }catch(RuntimeException failure){error=getApplication().getString(R.string.p05_record_error,current,reason(failure));}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5633921Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5635067Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5636143Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5637227Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5638287Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5639287Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5640216Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5641081Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5641947Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5643541Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5644499Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5645365Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5646197Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5647005Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5647869Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5648858Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5649851Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5651020Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5652382Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5654200Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5655394Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5656559Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5657780Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5659042Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5660326Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5661415Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5662317Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5664175Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5665899Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5667421Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5668788Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5670161Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5671525Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5672866Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5674367Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5675617Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5676871Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5677881Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5679156Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5680694Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5682261Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5683724Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5684389Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5685168Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5685891Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5686668Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5687529Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5688285Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5689271Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5690118Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5690981Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5691690Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5692274Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5692922Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5694178Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5695269Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5696314Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5696849Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5697395Z Couldn't compute fix edits for Replace with ’
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5697996Z java.lang.IllegalArgumentException: Did not find "'" in "S" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5698374Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5698614Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5699001Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5699185Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5699391Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5699831Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5700413Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5701044Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5701664Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5702317Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5702964Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5703799Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5704372Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5704909Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5705398Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5705895Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5706422Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5706968Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5707619Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5708093Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5708514Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5708873Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5709482Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5710226Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5710969Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5712202Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5713337Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5714033Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5714693Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5715370Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5716061Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5716895Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5717518Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5718024Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5718785Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5719762Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5720590Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5721331Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5722079Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5722834Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5723745Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5724469Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5725309Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5726496Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5727518Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5728760Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5730391Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5731814Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5732610Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5733426Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5734638Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5735868Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5737210Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5738496Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5740039Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5741383Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5742888Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5744649Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5745894Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5746798Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5747880Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5749104Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5750256Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5751361Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5752195Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5752885Z Couldn't compute fix edits for Replace with ’
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5754090Z java.lang.IllegalArgumentException: Did not find "'" in "i" in src/main/res/values-fr/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5754776Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5755187Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5755846Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5756138Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5756482Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5757252Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5758279Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5759406Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5760518Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5761622Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5762777Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5763974Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5764951Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5765890Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5766767Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5767604Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5768544Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5769551Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5770444Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5771507Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5772199Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5772716Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5773518Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5774112Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5774794Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5775740Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5776439Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5777085Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5777743Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5778423Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5779121Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5779840Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5780470Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5780981Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5781743Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5782689Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5783773Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5784530Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5785313Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5786066Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5786813Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5787537Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5788232Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5788929Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5789521Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5790233Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5791136Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5792013Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5792634Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5793411Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5794130Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5794970Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5795741Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5796461Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5797185Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5798090Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5798914Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5799826Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5800577Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5801091Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5801697Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5802384Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5803033Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5803765Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5804260Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5804764Z Couldn't compute fix edits for Replace with ’
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5805363Z java.lang.IllegalArgumentException: Did not find "'" in "n" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5805750Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5805989Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5806371Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5806548Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5806758Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5807204Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5807787Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5808430Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5809050Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5809670Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5810294Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5810902Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5811465Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5811990Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5812482Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5812964Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5813698Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5814252Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5814748Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5815219Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5815635Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5816118Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5816685Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5817248Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5817907Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5818676Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5819486Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5820131Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5820783Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5821454Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5822172Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5833710Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5834397Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5834927Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5835706Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5836661Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5837535Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5838294Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5839050Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5839819Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5840566Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5841298Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5842058Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5843268Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5844258Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5845473Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5847050Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5848163Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5848807Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5849446Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5850156Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5850871Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5851846Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5852569Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5853510Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5854263Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5855207Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5856071Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5856771Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5857311Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5857946Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5858652Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5859307Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5859924Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5860491Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5861119Z Couldn't compute fix edits for Replace with ’
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5861974Z java.lang.IllegalArgumentException: Did not find "'" in "e" in src/main/res/values-et/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5862361Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5862608Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5863010Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5863335Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5863546Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5863995Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5864581Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5865220Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5865855Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5866483Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5867124Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5867770Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5868338Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5868884Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5869389Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5869876Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5870403Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5870947Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5871453Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5871925Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5872355Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5872719Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5873477Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5874204Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5874873Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5875652Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5876350Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5877111Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5877769Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5878458Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5879149Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5879873Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5880491Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5880998Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5881761Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5882718Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5883721Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5884473Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5885257Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5886011Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5886756Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5887480Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5888184Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5888875Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5889458Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5890180Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5891099Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5891976Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5892602Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5893395Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5894112Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5894817Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5895577Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5896294Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5897140Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5897881Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5898701Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5899667Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5900372Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5901028Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5901894Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5902603Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5903475Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5904117Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5904594Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5905178Z Couldn't compute fix edits for Replace with “OpenTracks\”
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5906210Z java.lang.IllegalArgumentException: Did not find ""OpenTracks\"" in "\"Google Play\" parduotuvėje</a>,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5906898Z \n f) aukoti ir
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5907665Z \n g) darykite viską, kas, jūs" in src/main/res/values-lt/strings.xml as suggested in the quickfix.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5908184Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5908583Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5909225Z search than the default highlight range.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5909520Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5909856Z (This fix is associated with the issue id `TypographyQuotes`,
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5910587Z reported via com.android.tools.lint.checks.TypographyDetector.)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5911583Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5912680Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5913969Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5915074Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5916178Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5917247Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5918252Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5919205Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5920055Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5920907Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5921824Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5922765Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5923811Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5924652Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5925367Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5925958Z 	at com.android.tools.lint.Main.run(Main.java:287)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5926936Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5928170Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5929326Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5930731Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5931995Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5933525Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5934673Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5935850Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5937076Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5938365Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5939454Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5940357Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5941703Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5943390Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5944290Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5945053Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5945820Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5946579Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5947318Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5948045Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5948751Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5949589Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5950193Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5950927Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5952059Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5955918Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5957107Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5958229Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5959516Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5960795Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5962166Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5963617Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5965160Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5966516Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5968013Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5969759Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5970984Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5971884Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5972935Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5974318Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5975451Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5976554Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5977387Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5978229Z                                                                                                         ~~~~~~~
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5979503Z     /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/res/values-zh/p05_history_strings.xml:16: Conflicting argument declaration here
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5980287Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5980299Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5980534Z > Task :lintReproducibleDebug FAILED
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5981154Z Lint found 2 errors, 963 warnings, 191 hints. First failure:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5981523Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5984778Z ##[error]/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/P0HistoryViewModel.java:94: Error: Suspicious argument type for formatting argument #1 in p05_record_error: conversion is s, received Long (argument #2 in method call) (Did you mean formatting character d, 'o' or x?) [StringFormatMatches]
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5988056Z             }catch(RuntimeException failure){error=getApplication().getString(R.string.p05_record_error,current,reason(failure));}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5989079Z                                                                                                         ~~~~~~~
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5990281Z     /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/res/values-zh/p05_history_strings.xml:16: Conflicting argument declaration here
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5991040Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5991280Z The full lint text report is located at:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.5992686Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/intermediates/lint_intermediate_text_report/reproducibleDebug/lintReportReproducibleDebug/lint-results-reproducibleDebug.txt
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6294388Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6295490Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_8-1794241107940.json
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6318451Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6326303Z [Incubating] Problems report is available at: file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/problems/problems-report.html
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6343427Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6344812Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6358056Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6358961Z FAILURE: Build failed with an exception.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6383770Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6384572Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6385925Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6387052Z For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6388088Z 70 actionable tasks: 70 executed
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6427968Z * What went wrong:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6429078Z Execution failed for task ':lintReproducibleDebug' (registered by plugin 'com.android.internal.application').
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6430302Z > Lint found errors in the project; aborting build.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6431246Z   
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6432033Z   Fix the issues identified by lint, or create a baseline to see only new errors.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6433538Z   To create a baseline, run `gradlew updateLintBaseline` after adding the following to the module's build.gradle file:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6434543Z   ```
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6435022Z   android {
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6435492Z       lint {
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6436088Z           baseline = file("lint-baseline.xml")
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6436704Z       }
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6437163Z   }
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6437623Z   ```
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6438410Z   For more details, see https://developer.android.com/studio/write/lint#snapshot
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6439191Z   
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6439861Z   Lint found 2 errors, 963 warnings, 191 hints. First failure:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6440550Z   
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6444281Z ##[error]  /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/P0HistoryViewModel.java:94: Error: Suspicious argument type for formatting argument #1 in p05_record_error: conversion is s, received Long (argument #2 in method call) (Did you mean formatting character d, 'o' or x?) [StringFormatMatches]
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6447854Z               }catch(RuntimeException failure){error=getApplication().getString(R.string.p05_record_error,current,reason(failure));}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6449122Z                                                                                                           ~~~~~~~
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6450564Z       /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/res/values-zh/p05_history_strings.xml:16: Conflicting argument declaration here
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6451633Z   
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6452211Z   The full lint text report is located at:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6454011Z     /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/intermediates/lint_intermediate_text_report/reproducibleDebug/lintReportReproducibleDebug/lint-results-reproducibleDebug.txt
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6455246Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6455517Z * Try:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6456156Z > Run with --stacktrace option to get the stack trace.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6456989Z > Run with --info or --debug option to get more log output.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6457981Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6461701Z > Get more help at https://help.gradle.org.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6462244Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.6462618Z BUILD FAILED in 1m 1s
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:19:26.9777229Z ##[error]Process completed with exit code 1.
+checks	Final actual generated GPX 1.1 Schema verification	﻿2026-11-09T16:19:26.9821503Z ##[group]Run python3 .github/scripts/verify_p0_gpx.py
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9821882Z [36;1mpython3 .github/scripts/verify_p0_gpx.py[0m
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9839613Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9839930Z env:
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9840135Z   TZ: Asia/Singapore
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9840390Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9840705Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9840983Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9841334Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9841758Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9842119Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9842398Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9842663Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9842973Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9843601Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9844030Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9844319Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:26.9844565Z ##[endgroup]
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0680863Z Traceback (most recent call last):
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0682332Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/verify_p0_gpx.py", line 35, in <module>
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0683114Z     if __name__=='__main__':verify()
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0683735Z                             ^^^^^^^^
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0684562Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/verify_p0_gpx.py", line 15, in verify
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0685614Z     if len(sources)!=1:raise ValueError('Actual Android GPX output directory missing or ambiguous')
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0686438Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0687132Z ValueError: Actual Android GPX output directory missing or ambiguous
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:19:27.0807394Z ##[error]Process completed with exit code 1.
+checks	Verify original state matrix and new P0.5 large-font native matrix	﻿2026-11-09T16:19:27.0860817Z ##[group]Run python3 .github/scripts/collect_p04_ui.py
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0861208Z [36;1mpython3 .github/scripts/collect_p04_ui.py[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0861535Z [36;1mpython3 .github/scripts/collect_p05_ui.py[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0861895Z [36;1mif [[ '4' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0862579Z [36;1mif [[ '4' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])'; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0863736Z [36;1mif [[ '4' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])'; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0881508Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0881818Z env:
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0882013Z   TZ: Asia/Singapore
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0882267Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0882597Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0882876Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0883413Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0883855Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0884227Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0884519Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0884796Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0885078Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0885465Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0885874Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0886167Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.0886418Z ##[endgroup]
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1644759Z Traceback (most recent call last):
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1645770Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/collect_p04_ui.py", line 25, in <module>
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1646729Z     if __name__=='__main__':collect(os.environ['GITHUB_SHA'])
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1647299Z                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1648204Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/collect_p04_ui.py", line 9, in collect
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1649063Z     if len(roots)!=1:raise ValueError('Actual native screenshot output missing/ambiguous')
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1649541Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1649953Z ValueError: Actual native screenshot output missing/ambiguous
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:19:27.1763524Z ##[error]Process completed with exit code 1.
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	﻿2026-11-09T16:19:27.1802381Z ##[group]Run python3 .github/scripts/p05_pipeline.py gate
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1802771Z [36;1mpython3 .github/scripts/p05_pipeline.py gate[0m
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1820398Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1820715Z env:
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1821078Z   TZ: Asia/Singapore
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1821336Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1821637Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1821918Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1822274Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1822693Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1823064Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1823482Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1823764Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1824050Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1824490Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1824899Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1825187Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.1825449Z ##[endgroup]
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2323119Z P0.5 actual phase evidence gate failed
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2323764Z {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2324112Z   "passed": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2324436Z   "plan": {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2324855Z     "commit": "c85ef467c5a420adef92eec8b86e58201603c6ab",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2325431Z     "branch": "feature/p0-5-dashboard-settings-history",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2325881Z     "stage": 4,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2326226Z     "runId": "42653242697",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2326620Z     "fullRegression": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2327013Z     "versionName": "v0.1.0-p0.4",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2327408Z     "versionCode": 6775,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2327751Z     "classes": [
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2328264Z       "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2328933Z       "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2329636Z       "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2330317Z       "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2330939Z       "de.dennisguse.opentracks.p0.P02HomeUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2331519Z       "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2332195Z       "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2332975Z       "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2334102Z       "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2334776Z       "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2335423Z       "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2336070Z       "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2336752Z       "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2337365Z       "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2337969Z       "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2338580Z       "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2339177Z       "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2339717Z       "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2340315Z       "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2341207Z       "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2341847Z     ],
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2342202Z     "publishing": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2342603Z     "signed": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2343472Z     "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2344120Z   },
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2344730Z   "helpers": {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2345077Z     "tests": 87,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2345445Z     "executed": 87,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2345815Z     "failures": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2346170Z     "errors": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2346519Z     "skipped": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2347047Z     "passed": true,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2347547Z     "sourceCommit": "c85ef467c5a420adef92eec8b86e58201603c6ab",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2348083Z     "runId": "42653242697"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2348433Z   },
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2348893Z   "diagnostic": "Instrumentation reports are missing."
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2349357Z }
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:19:27.2398008Z ##[error]Process completed with exit code 1.
+checks	Preserve compact native visual evidence for actual review	﻿2026-11-09T16:19:28.8572128Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8572650Z with:
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8572863Z   name: P05-visual-42653242697
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8573742Z   path: build/reports/p05-visual/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-metrics/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-settings/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-history/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-share/
+checks	Preserve compact native visual evidence for actual review	build/reports/p04-visual/
+checks	Preserve compact native visual evidence for actual review	
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8574330Z   if-no-files-found: error
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8574574Z   retention-days: 90
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8574797Z   compression-level: 6
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8575013Z   overwrite: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8575232Z   include-hidden-files: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8575467Z env:
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8575659Z   TZ: Asia/Singapore
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8575906Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8576211Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8576500Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8576856Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8577304Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8577675Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8577950Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8578218Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8578499Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8578889Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8579301Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8579602Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.8579853Z ##[endgroup]
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.9980833Z (node:2923) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:28.9981564Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:29.0025389Z Multiple search paths detected. Calculating the least common ancestor of all paths
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:29.0028449Z The least common ancestor is /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports. This will be the root directory of the artifact
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:19:29.0033725Z ##[error]No files were found with the provided path: build/reports/p05-visual/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-metrics/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-settings/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-history/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-share/
+checks	Preserve compact native visual evidence for actual review	build/reports/p04-visual/. No artifacts will be uploaded.

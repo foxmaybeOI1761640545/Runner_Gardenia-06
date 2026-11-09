@@ -91,7 +91,7 @@ public class P0HistoryViewModel extends AndroidViewModel {
                     if(repository.find(new Track.Id(id))!=null)throw new IllegalStateException(getApplication().getString(R.string.p05_delete_failed));
                     deleted.add(id);int done=deleted.size();main.post(()->{if(!closed&&token==operationToken)operation.setValue(new Operation(true,done,ids.size(),false));});
                 }
-            }catch(RuntimeException failure){error=getApplication().getString(R.string.p05_record_error,current,reason(failure));}
+            }catch(RuntimeException failure){error=getApplication().getString(R.string.p05_record_error,String.valueOf(current),reason(failure));}
             boolean failed=error!=null;String message=error==null?getApplication().getString(R.string.p05_deleted,deleted.size()):getApplication().getString(R.string.p05_delete_partial,deleted.size(),ids.size(),error);
             main.post(()->{if(!closed&&token==operationToken){chosen.removeAll(deleted);if(selectedId!=null&&deleted.contains(selectedId))selectedId=null;publishSelection(selection.getValue().active()&&!chosen.isEmpty());operation.setValue(new Operation(false,deleted.size(),ids.size(),false));refresh();if(failed)operationError.setValue(message);exported.setValue(new ExportResult(null,message));}});
         });
@@ -108,7 +108,7 @@ public class P0HistoryViewModel extends AndroidViewModel {
                 else {files.save(zip?batch.zip():batch.gpx().get(0),destination);message=getApplication().getString(R.string.p05_saved,ids.size());}
                 finished=ids.size();
             }catch(java.io.InterruptedIOException failure){message=getApplication().getString(R.string.p05_interrupted);}
-            catch(P0GpxFiles.BatchFailure failure){message=getApplication().getString(R.string.p05_record_error,failure.workoutId==null?"—":failure.workoutId,reason(failure));}
+            catch(P0GpxFiles.BatchFailure failure){message=getApplication().getString(R.string.p05_record_error,failure.workoutId==null?"—":Long.toString(failure.workoutId),reason(failure));}
             catch(java.io.IOException|RuntimeException failure){message=destination==null?getApplication().getString(R.string.p0_export_failed):getApplication().getString(R.string.p05_document_failed);}
             finally{if(batch!=null&&(!keep||closed))batch.close();}
             ExportResult result=new ExportResult(share,message);int done=finished;

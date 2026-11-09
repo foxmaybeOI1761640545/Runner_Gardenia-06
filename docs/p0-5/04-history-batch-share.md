@@ -13,3 +13,7 @@ P0GpxFiles扩展批量暂存：先检查每条存在且不受保护，复用原P
 ## 首轮编译失败：5a7b99f / 42652881294
 
 Android测试APK编译失败，未执行原生验收，未产生可用截图；不能计作测试通过。11条Java错误均在新增P05HistoryBatchTest：Intent重载配合var推断为ActivityScenario<Activity>，以及通配lifecycle/atomic导入令AtomicReference歧义。修复为显式ActivityScenario<P0HistoryActivity>及明确lifecycle导入；保留全部测试及断言。原始编译错误存于evidence/phase4-failed-42652881294，修复后重新执行完整本阶段门禁。
+
+## 第二轮Lint失败：c85ef46 / 42653242697
+
+Java编译已通过，Lint发现新增错误提示中的记录ID以Long传给%s格式（中英文两处StringFormatMatches错误）。修复为显式转换String，保留可显示“—”的未知ID提示，不关闭Lint或降低检查。原生测试尚未执行，截图/GPX缺失门禁按预期失败，未计作通过。失败日志存于evidence/phase4-failed-42653242697，重新执行全部检查。
