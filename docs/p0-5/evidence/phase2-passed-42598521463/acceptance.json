@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source": "8faa6ce6c7a1ac9f5b21221b42ae49e24b59be14",
+  "runId": 42598521463,
+  "reportsArtifactId": 13665432727,
+  "reportsSha256": "e7412e1acc483092f7eac3e56639b3b19df12f37d333f1690cd5c3d613abdcf2",
+  "visualArtifactId": 13666141561,
+  "visualSha256": "5a9104bc6985b55b845eac7b514c522b79e61bd9c1533e0c831cbfe06a11c6f6",
+  "reviewedScreenshots": 56,
+  "reviewMethod": "All six layout contact sheets (48 profiles) and eight-palette long-duration sheet inspected: no home theme-name space, compact controls, readable complete metrics and intact action buttons; native API35 synthetic fixtures.",
+  "nextPhaseAuthorized": true,
+  "physicalHardwareTested": false
+}
