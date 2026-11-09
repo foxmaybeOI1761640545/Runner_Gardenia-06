@@ -1,0 +1,11 @@
+<resources>
+    <string name="p05_running_short">Run</string>
+    <string name="p05_cycling_short">Ride</string>
+    <string name="p05_gps_unavailable">GPS\nNo fix</string>
+    <string name="p05_gps_searching">GPS\nFinding</string>
+    <string name="p05_gps_fixed">GPS\nReady</string>
+    <string name="p05_heart_disconnected">HR\nOffline</string>
+    <string name="p05_heart_connected">HR\nLinked</string>
+    <string name="p05_gps_action">%1$s. Open system location settings.</string>
+    <string name="p05_heart_action">Heart-rate strap: %1$s. Manage devices.</string>
+</resources>

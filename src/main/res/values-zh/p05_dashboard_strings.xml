@@ -1,0 +1,11 @@
+<resources>
+    <string name="p05_running_short">跑步</string>
+    <string name="p05_cycling_short">骑行</string>
+    <string name="p05_gps_unavailable">GPS\n未定位</string>
+    <string name="p05_gps_searching">GPS\n定位中</string>
+    <string name="p05_gps_fixed">GPS\n已定位</string>
+    <string name="p05_heart_disconnected">心率\n未连接</string>
+    <string name="p05_heart_connected">心率\n已连接</string>
+    <string name="p05_gps_action">%1$s。打开系统定位设置。</string>
+    <string name="p05_heart_action">心率带：%1$s。打开设备管理。</string>
+</resources>

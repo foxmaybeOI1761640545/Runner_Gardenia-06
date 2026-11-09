@@ -1,6 +1,17 @@
 {
-  "stage": 0,
+  "stage": 1,
   "fullRegression": false,
-  "classes": [],
+  "classes": [
+    "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+    "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+    "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+    "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+    "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+    "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+    "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+    "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+    "de.dennisguse.opentracks.p0.P02HomeUiTest",
+    "de.dennisguse.opentracks.p0.P0ResponsiveUiTest"
+  ],
   "signed": false
 }

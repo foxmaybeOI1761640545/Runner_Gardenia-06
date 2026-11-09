@@ -183,6 +183,14 @@ def gate():
                            Path('src/test/java'), require_environment=False)
             proof.update(android=android, unit=unit, androidExecuted=android['executed'] > 0,
                          passed=android['passed'] and unit['passed'])
+            layout = json.loads(Path('build/reports/p05-visual/p05-layout-matrix.json').read_text())
+            original_matrix = json.loads(Path('build/reports/p04-visual/p04-visual-matrix.json').read_text())
+            for matrix, count in ((layout, 48), (original_matrix, 192)):
+                if (matrix.get('passed') is not True or matrix.get('sourceCommit') != plan['commit']
+                        or len(matrix.get('screenshots', [])) != count):
+                    raise ValueError('Matching complete native UI evidence is required')
+            proof['nativeVisualEvidence'] = {'p05Layouts': 48, 'originalStates': 192,
+                                           'humanReview': 'REQUIRED_AFTER_DOWNLOAD'}
             # Final process/GPX/offline gates remain mandatory even if Gradle itself is green.
             if config['stage'] == 5:
                 for key, location in [('processDurability', 'p0-durability'),

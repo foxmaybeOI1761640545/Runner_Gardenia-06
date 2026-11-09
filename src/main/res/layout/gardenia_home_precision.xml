@@ -5,16 +5,15 @@
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="12dp" android:paddingBottom="6dp">
           <TextView android:id="@+id/p0_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p04_brand" android:textSize="9sp" android:textAllCaps="true" android:letterSpacing="0.15" />
           <TextView android:id="@+id/p04_page_title" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:text="@string/p04_run" android:textSize="22sp" android:layout_marginTop="4dp" />
-          <TextView android:id="@+id/p03_family_label" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textSize="10sp" android:layout_marginTop="2dp" />
         </LinearLayout>
-        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
-          <com.google.android.material.button.MaterialButton android:id="@+id/p04_gps_status" style="@style/P04Status" android:text="@string/p04_gps_unavailable" app:icon="@drawable/p04_gps" android:layout_marginEnd="4dp" />
-          <com.google.android.material.button.MaterialButton android:id="@+id/p0_devices" style="@style/P04Status" android:text="@string/p04_connect" app:icon="@drawable/p04_bluetooth" android:layout_marginStart="4dp" />
+        <LinearLayout android:id="@+id/p05_compact_controls" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+          <RadioGroup android:id="@+id/p0_sport" android:layout_width="0dp" android:layout_weight="2" android:layout_height="wrap_content" android:minHeight="48dp" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+            <RadioButton android:id="@+id/p0_running" style="@style/P05SportChoice" android:text="@string/p05_running_short" android:contentDescription="@string/p0_running" android:checked="true" />
+            <RadioButton android:id="@+id/p0_cycling" style="@style/P05SportChoice" android:text="@string/p05_cycling_short" android:contentDescription="@string/p0_cycling" />
+          </RadioGroup>
+          <com.google.android.material.button.MaterialButton android:id="@+id/p04_gps_status" style="@style/P05CompactStatus" android:text="@string/p05_gps_unavailable" app:icon="@drawable/p04_gps" />
+          <com.google.android.material.button.MaterialButton android:id="@+id/p0_devices" style="@style/P05CompactStatus" android:text="@string/p05_heart_disconnected" app:icon="@drawable/p04_bluetooth" />
         </LinearLayout>
-        <RadioGroup android:id="@+id/p0_sport" android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
-          <RadioButton android:id="@+id/p0_running" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="@string/p0_running" android:checked="true" />
-          <RadioButton android:id="@+id/p0_cycling" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="@string/p0_cycling" />
-        </RadioGroup>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_state_card" android:paddingTop="10dp" android:paddingBottom="10dp">
           <TextView android:id="@+id/p0_recording_state" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle" android:textColor="?attr/gardeniaAccentText" android:textSize="12sp" android:textStyle="bold" android:accessibilityLiveRegion="polite" />
           <TextView android:id="@+id/p02_status_detail" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle_detail" android:textSize="11sp" android:layout_marginTop="3dp" />

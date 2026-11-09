@@ -17,7 +17,6 @@ import de.dennisguse.opentracks.ui.util.ThemeUtils;
 public final class DashboardRenderer {
     private final Activity activity;private final P0HomeBinding b;private final ThemeUtils.Family family;
     public DashboardRenderer(Activity activity,P0HomeBinding binding){this.activity=activity;b=binding;family=PreferencesUtils.getGardeniaTheme();
-        if(family==ThemeUtils.Family.EXPLORER)b.p03FamilyLabel.setText(R.string.p04_field_notes);else b.p03FamilyLabel.setText(family.title);
         float density=activity.getResources().getDisplayMetrics().density;
         int corner=(int)(density*switch(family){case PRECISION->10;case QUIET->16;case EXPLORER->5;case NEON->18;});
         for(var button:new com.google.android.material.button.MaterialButton[]{b.p0Start,b.p0Pause,b.p0Resume,b.p0Finish,b.p0CancelGps,b.p0ContinueGps})button.setCornerRadius(corner);
@@ -41,8 +40,11 @@ public final class DashboardRenderer {
         b.p02StatusDetail.setTextColor(ThemeUtils.color(activity,acquiring||paused?R.attr.gardeniaWarning:recording&&value.currentGps()==null?R.attr.gardeniaDanger:com.google.android.material.R.attr.colorOnSurfaceVariant));
         ((TextView)b.getRoot().findViewById(R.id.p04_accuracy)).setText(value.accuracy());
         var gps=(com.google.android.material.button.MaterialButton)b.getRoot().findViewById(R.id.p04_gps_status);
-        gps.setText(value.currentGps()!=null?R.string.p04_gps_fixed:acquiring?R.string.p04_gps_searching:R.string.p04_gps_unavailable);
-        b.p0Devices.setText(value.heartConnected()?R.string.p04_connected:R.string.p04_connect);
+        gps.setText(value.currentGps()!=null?R.string.p05_gps_fixed:acquiring?R.string.p05_gps_searching:R.string.p05_gps_unavailable);
+        int gpsDescription=value.currentGps()!=null?R.string.p04_gps_fixed:acquiring?R.string.p04_gps_searching:R.string.p04_gps_unavailable;
+        gps.setContentDescription(activity.getString(R.string.p05_gps_action,activity.getString(gpsDescription)));
+        b.p0Devices.setText(value.heartConnected()?R.string.p05_heart_connected:R.string.p05_heart_disconnected);
+        b.p0Devices.setContentDescription(activity.getString(R.string.p05_heart_action,value.heartState()));
         b.p0Metrics.setText(value.gpsDetails());show(b.p0Metrics,value.currentGps()!=null);
         b.p0Error.setText(value.error());show(b.p0Error,value.error()!=null);
     }

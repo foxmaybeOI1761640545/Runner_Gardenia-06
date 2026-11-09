@@ -2,6 +2,7 @@ name: P0.5 dashboard settings and history
 on:
   push:
     branches: [feature/p0-5-dashboard-settings-history]
+    paths-ignore: ['docs/**', 'AGENTS.md']
 permissions:
   contents: read
 concurrency:
@@ -37,6 +38,9 @@ jobs:
         run: python3 .github/scripts/p05_pipeline.py prepare
       - name: Execute complete pipeline helper regression and retain real counts
         run: python3 .github/scripts/p05_pipeline.py helpers
+      - name: Verify current native source scope and shared binding contracts
+        if: steps.plan.outputs.stage != '0'
+        run: python3 .github/scripts/check_p05_source.py
       - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
         with:
           distribution: temurin
@@ -92,6 +96,11 @@ jobs:
       - name: Verify Debug identity without accessing release keys
         if: steps.plan.outputs.stage != '0'
         run: python3 .github/scripts/verify_debug_apk.py
+      - name: Verify original state matrix and new P0.5 large-font native matrix
+        if: always() && steps.plan.outputs.stage != '0'
+        run: |
+          python3 .github/scripts/collect_p04_ui.py
+          python3 .github/scripts/collect_p05_ui.py
       - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
         if: always() && steps.plan.outcome == 'success'
         run: python3 .github/scripts/p05_pipeline.py gate
@@ -118,3 +127,13 @@ jobs:
           path: build/outputs/apk/reproducible/debug/*.apk
           if-no-files-found: error
           retention-days: 30
+      - name: Preserve compact native visual evidence for actual review
+        if: always() && steps.plan.outputs.stage != '0'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P05-visual-${{ github.run_id }}
+          path: |
+            build/reports/p05-visual/
+            build/reports/p04-visual/
+          if-no-files-found: error
+          retention-days: 90
