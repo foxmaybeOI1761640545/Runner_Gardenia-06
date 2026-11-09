@@ -138,6 +138,10 @@ public class P0RecordingUiTest {
             deadline=SystemClock.uptimeMillis()+5000;
             while(metrics(screen).contains("1.300000")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(50);
             assertFalse(metrics(screen).contains("1.300000"));assertFalse(metrics(screen).contains("10.8 km/h"));
+            Object lostGpsCreator=core.getTrackPointCreator();
+            screen.onActivity(a->{assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());});
+            assertSame(lostGpsCreator,core.getTrackPointCreator());assertTrue(core.isRecording());assertFalse(metrics(screen).contains("1.300000"));assertFalse(metrics(screen).contains("10.8 km/h"));
+
             onView(withId(R.id.p0_finish)).perform(click());phase(screen,R.string.p0_finished);
         }
     }

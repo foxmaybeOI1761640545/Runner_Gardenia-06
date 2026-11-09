@@ -221,6 +221,10 @@ public class P05DashboardStatusNavigationTest {
 
             onView(withId(R.id.p0_pause)).perform(click());
             await(P0Activity.class, activity -> snapshot(activity).session().phase() == RecordingSession.Phase.PAUSED);
+            Object pausedCreator=core.getTrackPointCreator();
+            var pausedBle=core.getHeartRatePreview().status().state();
+            screen.onActivity(a->{var before=de.dennisguse.opentracks.p0.app.DashboardState.from(a,snapshot(a));assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());var after=de.dennisguse.opentracks.p0.app.DashboardState.from(a,snapshot(a));assertEquals(before.duration(),after.duration());assertEquals(before.distance(),after.distance());assertEquals(before.phase(),after.phase());assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());});
+            assertSame(pausedCreator,core.getTrackPointCreator());assertEquals(pausedBle,core.getHeartRatePreview().status().state());
             assertFalse(core.isRecording());
             assertEquals(Long.valueOf(id), new SessionStore(context).recover().trackId());
             clickGpsWithoutLeavingApp();

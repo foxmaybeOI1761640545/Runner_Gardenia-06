@@ -74,6 +74,10 @@ public class P0HeartRateUiTest {
             text(screen,context.getString(R.string.hr_contact_lost));
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{handler.get().onConnectionLost();handler.get().onConnectionStateChanged(BleConnectionSession.State.RECONNECT_WAIT);});
             text(screen,context.getString(R.string.hr_retry));text(screen,"--");
+            var disconnectedState=service.getHeartRatePreview().status().state();
+            screen.onActivity(a->{assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());assertTrue(a.findViewById(R.id.p05_secondary_1).performClick());});
+            assertEquals(disconnectedState,service.getHeartRatePreview().status().state());text(screen,"--");
+
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
                 handler.get().onConnected("AA:BB:CC:DD:EE:FF","Synthetic SIG strap");handler.get().onConnectionStateChanged(BleConnectionSession.State.CONNECTED);
                 assertNull(handler.get().getStatus(base.plusSeconds(6)).lastReceived());assertFalse(handler.get().getStatus(base.plusSeconds(6)).contactLost());
