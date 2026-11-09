@@ -22,6 +22,6 @@
     <string name="p05_version">正式版本号</string>
     <string name="p05_build">构建版本</string>
     <string name="p05_reset_metrics">恢复默认指标布局</string>
-    <string name="p05_reset_metrics_summary">仅恢复 %1$s 的指标位置</string>
+    <string name="p05_reset_metrics_summary">仅恢复当前主题的指标位置</string>
     <string name="p05_metrics_reset">已恢复当前主题的默认指标布局</string>
 </resources>

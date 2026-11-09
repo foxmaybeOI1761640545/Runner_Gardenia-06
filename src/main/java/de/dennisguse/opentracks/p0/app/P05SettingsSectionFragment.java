@@ -33,7 +33,7 @@ public class P05SettingsSectionFragment extends PreferenceFragmentCompat {
         ListPreference rate=list(R.string.stats_rate_key,R.string.settings_stats_rate_title,rateEntries(units.getValue()),R.array.stats_rate_values,R.string.stats_rate_default);
         units.setOnPreferenceChangeListener((preference,value)->{rate.setEntries(rateEntries((String)value));return true;});
         Preference reset=P05SettingsHubFragment.row(requireContext());reset.setKey("p05_reset_metrics");reset.setTitle(R.string.p05_reset_metrics);
-        reset.setSummary(getString(R.string.p05_reset_metrics_summary,PreferencesUtils.getGardeniaTheme().title));
+        reset.setSummary(R.string.p05_reset_metrics_summary);
         reset.setOnPreferenceClickListener(p->{PreferencesUtils.resetDashboardMetricLayout(PreferencesUtils.getGardeniaTheme());Toast.makeText(requireContext(),R.string.p05_metrics_reset,Toast.LENGTH_SHORT).show();return true;});getPreferenceScreen().addPreference(reset);
     }
     private int rateEntries(String units){return "NAUTICAL".equals(units)?R.array.stats_rate_nautical_options:"METRIC".equals(units)?R.array.stats_rate_metric_options:R.array.stats_rate_imperial_options;}

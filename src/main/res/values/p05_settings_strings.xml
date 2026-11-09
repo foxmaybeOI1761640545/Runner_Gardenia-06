@@ -22,6 +22,6 @@
     <string name="p05_version">Release version</string>
     <string name="p05_build">Build number</string>
     <string name="p05_reset_metrics">Restore default metric layout</string>
-    <string name="p05_reset_metrics_summary">Reset metric positions for %1$s only</string>
+    <string name="p05_reset_metrics_summary">Reset metric positions for the current theme only</string>
     <string name="p05_metrics_reset">Current theme metric layout restored</string>
 </resources>
