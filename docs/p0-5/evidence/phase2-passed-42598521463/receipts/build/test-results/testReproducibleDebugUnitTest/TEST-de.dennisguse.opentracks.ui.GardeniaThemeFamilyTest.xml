@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-09T10:09:42.934Z" hostname="runnervm7aw5e" time="0.003">
+  <properties/>
+  <testcase name="exactlyFourDistinctNativeFamilies" classname="de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest" time="0.002"/>
+  <testcase name="persistedIdsRoundTrip" classname="de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest" time="0.001"/>
+  <testcase name="invalidAndLegacyFamilyIdsUsePrecision" classname="de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
