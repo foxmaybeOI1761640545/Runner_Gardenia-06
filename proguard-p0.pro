@@ -14,3 +14,7 @@
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.settings.GardeniaThemeSettingsFragment { public <init>(); }
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.GpxExportDialog { public <init>(); }
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.PreviewChartModel { public <init>(); }
+
+# P0.5 category fragments restored by FragmentManager in optimized builds.
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P05SettingsHubFragment { public <init>(); }
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P05SettingsSectionFragment { public <init>(); }

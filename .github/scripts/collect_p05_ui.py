@@ -66,3 +66,21 @@ def collect_metrics(source):
     proof={'passed':True,'sourceCommit':source,'api':35,'native':True,'screenshots':rows}
     (out/'metric-matrix.json').write_text(json.dumps(proof,indent=2)+'\n')
     return proof
+
+
+def collect_settings(source):
+    roots=list(Path('build/outputs').glob('**/p0-ui'))
+    if len(roots)!=1:raise ValueError('Native settings output missing/ambiguous')
+    root=roots[0];out=Path('build/reports/p05-settings');out.mkdir(parents=True,exist_ok=True)
+    rows=[]
+    for family in FAMILIES:
+        for mode in ('light','dark'):
+            for page in ('hub','motion'):
+                name=f'p05-settings-{page}-{family}-{mode}-360-font130-native.png'
+                raw=(root/name).read_bytes()
+                if raw[:8]!=b'\x89PNG\r\n\x1a\n' or struct.unpack('>II',raw[16:24])!=(720,1600):raise ValueError('Wrong native settings viewport')
+                shutil.copy2(root/name,out/name)
+                rows.append({'file':name,'family':family,'appearance':mode,'page':page,'widthDp':360,'fontScale':1.3,'sha256':hashlib.sha256(raw).hexdigest(),'native':True})
+    proof={'passed':True,'sourceCommit':source,'api':35,'native':True,'screenshots':rows}
+    (out/'settings-matrix.json').write_text(json.dumps(proof,indent=2)+'\n')
+    return proof

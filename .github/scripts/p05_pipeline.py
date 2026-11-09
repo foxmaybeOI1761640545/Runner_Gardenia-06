@@ -214,6 +214,10 @@ def gate():
                 metrics=json.loads(Path('build/reports/p05-metrics/metric-matrix.json').read_text())
                 if metrics.get('sourceCommit')!=plan['commit'] or metrics.get('passed') is not True or len(metrics.get('screenshots',[]))!=8:raise ValueError('Actual eight-palette metric screenshots missing')
                 proof['metricScreenshots']=8
+            if config['stage']>=3:
+                settings=json.loads(Path('build/reports/p05-settings/settings-matrix.json').read_text())
+                if settings.get('sourceCommit')!=plan['commit'] or settings.get('passed') is not True or len(settings.get('screenshots',[]))!=16:raise ValueError('Actual eight-palette settings screenshots missing')
+                proof['settingsScreenshots']=16
             if config['stage'] in (2,5):
                 process=json.loads(Path('build/reports/p0-durability/result.json').read_text())
                 if (not process.get('forceStopped') or process.get('timezone')!='Asia/Singapore' or not process.get('passed') or not process.get('p05MetricProbe') or process.get('commit')!=plan['commit'] or process['phases']['write']['pid']==process['phases']['read']['pid']):

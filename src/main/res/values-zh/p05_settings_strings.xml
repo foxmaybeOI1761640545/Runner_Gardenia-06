@@ -1,0 +1,27 @@
+<resources>
+    <string name="p05_settings_title">设置中心</string>
+    <string name="p05_appearance">主题与外观</string>
+    <string name="p05_appearance_summary">四套原生主题，跟随系统深浅色</string>
+    <string name="p05_motion">运动与显示</string>
+    <string name="p05_motion_summary">距离单位、配速或速度、指标布局</string>
+    <string name="p05_devices">心率与设备</string>
+    <string name="p05_devices_summary">选择心率带、连接、断开及自动重连</string>
+    <string name="p05_history_data">历史记录与数据</string>
+    <string name="p05_history_summary">管理运动记录、分享、导出与删除</string>
+    <string name="p05_privacy">隐私与离线</string>
+    <string name="p05_privacy_summary">本地保存，自主导出与分享</string>
+    <string name="p05_info">应用信息</string>
+    <string name="p05_info_summary">应用名称、正式版本与构建版本</string>
+    <string name="p05_manage_devices">管理心率设备</string>
+    <string name="p05_manage_history">管理历史记录</string>
+    <string name="p05_local_data">运动数据保存在本地</string>
+    <string name="p05_local_data_detail">无需账号或云同步，运动记录和历史查询可离线使用。</string>
+    <string name="p05_user_export">由你决定导出和分享</string>
+    <string name="p05_user_export_detail">GPX 仅由你主动导出；分享时由你在系统面板中选择目标应用。</string>
+    <string name="p05_app_name">应用名称</string>
+    <string name="p05_version">正式版本号</string>
+    <string name="p05_build">构建版本</string>
+    <string name="p05_reset_metrics">恢复默认指标布局</string>
+    <string name="p05_reset_metrics_summary">仅恢复 %1$s 的指标位置</string>
+    <string name="p05_metrics_reset">已恢复当前主题的默认指标布局</string>
+</resources>

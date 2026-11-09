@@ -1,0 +1,27 @@
+<resources>
+    <string name="p05_settings_title">Settings</string>
+    <string name="p05_appearance">Theme and appearance</string>
+    <string name="p05_appearance_summary">Four native themes; follows system light and dark mode</string>
+    <string name="p05_motion">Workout and display</string>
+    <string name="p05_motion_summary">Units, pace or speed, and dashboard layout</string>
+    <string name="p05_devices">Heart rate and devices</string>
+    <string name="p05_devices_summary">Choose a strap, connect, disconnect and manage reconnection</string>
+    <string name="p05_history_data">History and data</string>
+    <string name="p05_history_summary">Manage workouts, share, export and delete records</string>
+    <string name="p05_privacy">Privacy and offline</string>
+    <string name="p05_privacy_summary">Local storage and sharing under your control</string>
+    <string name="p05_info">App information</string>
+    <string name="p05_info_summary">App name, release version and build number</string>
+    <string name="p05_manage_devices">Manage heart rate devices</string>
+    <string name="p05_manage_history">Manage workout history</string>
+    <string name="p05_local_data">Your data stays on this device</string>
+    <string name="p05_local_data_detail">No account or cloud sync is required. Recording and history work offline.</string>
+    <string name="p05_user_export">You control exports and sharing</string>
+    <string name="p05_user_export_detail">GPX files are exported only when you request them. You choose the receiving app in the system share sheet.</string>
+    <string name="p05_app_name">Application</string>
+    <string name="p05_version">Release version</string>
+    <string name="p05_build">Build number</string>
+    <string name="p05_reset_metrics">Restore default metric layout</string>
+    <string name="p05_reset_metrics_summary">Reset metric positions for %1$s only</string>
+    <string name="p05_metrics_reset">Current theme metric layout restored</string>
+</resources>
