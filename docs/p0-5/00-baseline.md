@@ -1,6 +1,6 @@
 # P0.5 基线与实际验收计划
 
-日期：2026-11-09（Asia/Shanghai）。Phase 0 状态：候选，待本提交的远端检查收据；本阶段未修改产品代码。
+日期：2026-11-09（Asia/Shanghai）。Phase 0 状态：PASSED。候选源码 `b2d84376c7d021dd73ddf02945ffb20d32c208cf` 的远端检查通过；本阶段未修改产品代码。
 
 ## 仓库与不可变发布
 
@@ -58,3 +58,11 @@
 6. 微信真实客户端、户外 GNSS、实体心率带 RF/耗电及人工 TalkBack 语音仍为 `NEEDS_DEVICE_VALIDATION`。模拟接收应用/API35 模拟器不证明这些事项；不引入未经授权 AppID/SDK。
 
 Phase 0 后仅在真实远端基线检查通过后进入 Phase 1。其余阶段当前均未实施、未验收，P0.5 尚未完成。
+
+## Phase 0 实际验收收据
+
+- [Actions 42572215358](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42572215358)：completed / success，精确 HEAD 为 `b2d84376c7d021dd73ddf02945ffb20d32c208cf`。
+- Helpers：Tests=84，Executed=84，Failures=0，Errors=0，Skipped=0。Android 未运行（Phase 0 不构建旧版本），不计作 Android 通过。
+- 公开 P0.4 下载后的 apksigner 完整签名验证与 apkanalyzer 包名/正式版本/代码/非调试身份检查通过；源码 Tag、SHA-256、固定证书、大小全部匹配。未构建、签名或改写旧发布。
+- 已下载真实 Artifact `13653013638`，ZIP SHA-256=`773c603628bdcf6e56e7d929f2d8e787927ce464e612371c990989c6dbe2011e`，与 GitHub metadata digest 一致；原始收据归档 [evidence/phase0](evidence/phase0)。
+- 已重新确认原远端分支与 Tag 不变。Phase 1 可以进入；后续阶段仍待各自门禁。

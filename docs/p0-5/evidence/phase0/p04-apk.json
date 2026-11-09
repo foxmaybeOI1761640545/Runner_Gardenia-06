@@ -1,0 +1,18 @@
+{
+  "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+  "tag": "test-p0-v0.1.0-p0.4",
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-p0.4",
+  "versionCode": 6775,
+  "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "apkBytes": 2803864,
+  "passed": true,
+  "publicDownloadAuthenticated": false,
+  "publicDownloadUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/724746708",
+  "signatureVerifiedBy": "apksigner",
+  "identityVerifiedBy": "apkanalyzer",
+  "oldApkRebuilt": false,
+  "oldApkSignedAgain": false,
+  "releaseModified": false
+}
