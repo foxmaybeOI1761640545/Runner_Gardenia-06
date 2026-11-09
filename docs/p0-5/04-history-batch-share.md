@@ -1,0 +1,11 @@
+# Phase 4：历史多选与批量分享
+
+状态：IN_PROGRESS。Phase3源码f0d3080/Actions42601932032通过，72张真实原生截图人工审查及收据验收提交7ad403a已推送并核对远端。
+
+范围：原P0HistoryActivity/ListView增加稳定long ID多选、可见勾选、独立五操作栏、已选数量/全选当前加载/取消/返回；原详情、曲线和单文件入口保留。选择与SAF快照随Activity保存，确认/分享选项用DialogFragment固定ID列表跨重建。设置的历史分类明确进入管理模式。P0HistoryViewModel沿用单一后台worker，查询generation与操作token独立，旋转/刷新不丢导出结果；错误信息保留在页面，不仅显示短暂Toast。
+
+P0GpxFiles扩展批量暂存：先检查每条存在且不受保护，复用原P0GpxExporter逐记录写GPX，唯一目录/稳定ID文件名，按需ZIP，全部完成并再验证后才公开内容URI。任何失败清理不完整暂存，不会静默少一条。Share用标准SEND/SEND_MULTIPLE、ClipData和READ grant；多选默认ZIP且保留直接GPX选项。文件生成/ZIP/批量读取删除均后台；批量文件API拒绝主线程。临时pending目录进程中断后清理，已分享文件保留7天供接收方读取；同进程活跃暂存不会误清理。删除整组选中项预检，再逐条复检与验证结果；非事务性失败显示已删除/所选总数及失败记录，刷新后保留未删选择，不自动继续删除。
+
+实际门禁待执行：原生长按/切换/55条分页加载全选/重建/普通详情；单GPX、多GPX及ZIP实际Sharesheet Intent和取消；独立测试APK UID接收全部文件/原始心率/ZIP内容与权限负向对照；无效/缺失/受保护记录与文件中断、孤儿缓存及TTL；SAF快照不随随后选择变化、失败保留源记录；删除数量/二次确认取消/跨重建/删除级联；八配色360dp/1.3字体列表、多选、分享、删除32张截图与人工审查；原历史/数据库/GPX回归及所有之前选定回归；所有实际GPX经固定GPX1.1 XSD验证；真实write→force-stop→read新PID清理不完整缓存且保留已完成分享文件。未执行前不计作通过。
+
+模拟接收应用在测试APK的独立进程与UID，使用Binder调用身份核验，不把目标应用自行读取URI冒充跨应用权限。负向对照使用测试专用action避免Android自动把SEND的EXTRA_STREAM迁移为读权限；正向仍发送真实产品Intent。无微信AppID、不引入SDK/硬编码Activity。微信客户端兼容性始终NEEDS_DEVICE_VALIDATION。

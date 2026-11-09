@@ -1,0 +1,25 @@
+<resources>
+    <string name="p05_share">Share</string>
+    <string name="p05_export">Export</string>
+    <string name="p05_delete">Delete</string>
+    <string name="p05_select_all">Select all</string>
+    <string name="p05_cancel">Cancel</string>
+    <string name="p05_selected_count">%1$d selected</string>
+    <string name="p05_not_selected">Not selected</string>
+    <string name="p05_zip_recommended">ZIP archive (recommended)</string>
+    <string name="p05_direct_gpx">Separate GPX files</string>
+    <string name="p05_share_title">Share selected records (%1$d)</string>
+    <string name="p05_delete_confirm">Permanently delete selected records (%1$d)? Their GPS and heart-rate data will also be deleted.</string>
+    <string name="p05_cache_failed">Cannot create local export files.</string>
+    <string name="p05_interrupted">Export interrupted. No partial files were shared.</string>
+    <string name="p05_delete_failed">The record could not be deleted.</string>
+    <string name="p05_record_error">Record %1$s: %2$s</string>
+    <string name="p05_deleted">Deleted records: %1$d</string>
+    <string name="p05_delete_partial">Deleted %1$d of %2$d selected records. Remaining records were not deleted. %3$s</string>
+    <string name="p05_share_ready">Prepared %1$d records for sharing.</string>
+    <string name="p05_saved">Exported %1$d records.</string>
+    <string name="p05_document_failed">Cannot write to the selected document. Choose another location and retry. Original records are unchanged.</string>
+    <string name="p05_please_wait">Please wait for the selected operation to finish.</string>
+    <string name="p05_packing">Packing ZIP: %1$d / %2$d</string>
+    <string name="p05_processing">Processing records: %1$d / %2$d</string>
+</resources>

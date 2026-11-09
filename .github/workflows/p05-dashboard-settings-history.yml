@@ -86,12 +86,13 @@ jobs:
           if [[ -n "$TEST_CLASSES" ]]; then args+=("-Pandroid.testInstrumentationRunnerArguments.class=$TEST_CLASSES"); fi
           timeout --signal=INT --kill-after=30s 45m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000 "${args[@]}"
       - name: Final actual generated GPX 1.1 Schema verification
-        if: always() && steps.plan.outputs.stage == '5'
+        if: always() && (steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5')
         run: python3 .github/scripts/verify_p0_gpx.py
       - name: Database and metric preferences survive a genuinely new process
-        if: steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '5'
+        if: steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5'
         env:
           P05_METRIC_DURABILITY: 'true'
+          P05_BATCH_DURABILITY: ${{ steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5' }}
         run: |
           ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
           python3 .github/scripts/p0_durability.py
@@ -103,6 +104,7 @@ jobs:
         run: |
           python3 .github/scripts/collect_p04_ui.py
           python3 .github/scripts/collect_p05_ui.py
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py; fi
           if [[ '${{ steps.plan.outputs.stage }}' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])'; fi
           if [[ '${{ steps.plan.outputs.stage }}' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])'; fi
       - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
@@ -140,6 +142,8 @@ jobs:
             build/reports/p05-visual/
             build/reports/p05-metrics/
             build/reports/p05-settings/
+            build/reports/p05-history/
+            build/reports/p05-share/
             build/reports/p04-visual/
           if-no-files-found: error
           retention-days: 90

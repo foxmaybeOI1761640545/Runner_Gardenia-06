@@ -218,7 +218,7 @@ def gate():
                 settings=json.loads(Path('build/reports/p05-settings/settings-matrix.json').read_text())
                 if settings.get('sourceCommit')!=plan['commit'] or settings.get('passed') is not True or len(settings.get('screenshots',[]))!=16:raise ValueError('Actual eight-palette settings screenshots missing')
                 proof['settingsScreenshots']=16
-            if config['stage'] in (2,5):
+            if config['stage'] in (2,4,5):
                 process=json.loads(Path('build/reports/p0-durability/result.json').read_text())
                 if (not process.get('forceStopped') or process.get('timezone')!='Asia/Singapore' or not process.get('passed') or not process.get('p05MetricProbe') or process.get('commit')!=plan['commit'] or process['phases']['write']['pid']==process['phases']['read']['pid']):
                     raise ValueError('Actual separate-process metric persistence evidence missing')
@@ -226,6 +226,15 @@ def gate():
                     if any(process['phases'][phase].get(key)!=value for key,value in {'tests':1,'executed':1,'failures':0,'errors':0,'skipped':0}.items()):raise ValueError('Incomplete actual process probe execution')
                 proof['metricProcessDurability']=process
             # Final process/GPX/offline gates remain mandatory even if Gradle itself is green.
+            if config['stage']>=4:
+                history=json.loads(Path('build/reports/p05-history/history-matrix.json').read_text())
+                share=json.loads(Path('build/reports/p05-share/result.json').read_text())
+                schema=json.loads(Path('build/reports/p0-gpx/result.json').read_text())
+                if (not history.get('passed') or history.get('sourceCommit')!=plan['commit'] or len(history.get('screenshots',[]))!=32
+                    or not share.get('passed') or share.get('commit')!=plan['commit'] or len(share.get('receipts',[]))!=6
+                    or not schema.get('passed') or schema.get('commit')!=plan['commit']):raise ValueError('Actual history/share/schema evidence incomplete')
+                if not process.get('p05BatchProbe') or process['phases']['write'].get('batchCacheState')!='staged' or process['phases']['read'].get('batchCacheState')!='cleaned-retained-completed':raise ValueError('Actual force-stop cache recovery evidence missing')
+                proof.update(historyScreenshots=32,shareReceipts=6,gpxSchema=schema,batchProcessDurability=process)
             if config['stage'] == 5:
                 for key, location in [('processDurability', 'p0-durability'),
                                       ('gpxSchema', 'p0-gpx'), ('offline', 'p0-offline')]:

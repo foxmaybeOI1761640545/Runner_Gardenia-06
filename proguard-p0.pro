@@ -18,3 +18,5 @@
 # P0.5 category fragments restored by FragmentManager in optimized builds.
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P05SettingsHubFragment { public <init>(); }
 -keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P05SettingsSectionFragment { public <init>(); }
+
+-keepclassmembers,allowoptimization class de.dennisguse.opentracks.p0.app.P05BatchDialog { public <init>(); }

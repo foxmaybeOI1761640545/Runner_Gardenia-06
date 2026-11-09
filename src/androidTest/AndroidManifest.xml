@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <application android:name="android.app.Application">
+    <activity android:name="de.dennisguse.opentracks.p0.share.ShareReceiptActivity" android:exported="true" android:process=":share_receiver" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" /><action android:name="android.intent.action.SEND_MULTIPLE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data android:mimeType="application/gpx+xml" /><data android:mimeType="application/zip" />
+      </intent-filter>
+    </activity>
+  </application>
+</manifest>

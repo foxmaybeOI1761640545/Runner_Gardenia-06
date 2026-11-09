@@ -1,6 +1,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?android:attr/colorBackground">
   <androidx.appcompat.widget.Toolbar android:id="@+id/p0_history_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
-  <TextView android:id="@+id/p0_history_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" />
+  <TextView android:id="@+id/p0_history_status" android:accessibilityLiveRegion="polite" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" />
+  <LinearLayout android:id="@+id/p05_batch_toolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="12dp" android:visibility="gone">
+    <TextView android:id="@+id/p05_selected_count" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" android:accessibilityLiveRegion="polite" android:textAppearance="?attr/textAppearanceTitleMedium" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+      <com.google.android.material.button.MaterialButton android:id="@+id/p05_batch_share" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:paddingHorizontal="6dp" android:layout_marginHorizontal="2dp" android:textAllCaps="false" android:maxLines="2" android:text="@string/p05_share" />
+      <com.google.android.material.button.MaterialButton android:id="@+id/p05_batch_export" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:paddingHorizontal="6dp" android:layout_marginHorizontal="2dp" android:textAllCaps="false" android:maxLines="2" android:text="@string/p05_export" />
+      <com.google.android.material.button.MaterialButton android:id="@+id/p05_batch_delete" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:paddingHorizontal="6dp" android:layout_marginHorizontal="2dp" android:textAllCaps="false" android:maxLines="2" android:text="@string/p05_delete" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+      <com.google.android.material.button.MaterialButton android:id="@+id/p05_batch_select_all" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:paddingHorizontal="6dp" android:layout_marginHorizontal="2dp" android:textAllCaps="false" android:maxLines="2" android:text="@string/p05_select_all" />
+      <com.google.android.material.button.MaterialButton android:id="@+id/p05_batch_cancel" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="48dp" android:paddingHorizontal="6dp" android:layout_marginHorizontal="2dp" android:textAllCaps="false" android:maxLines="2" android:text="@string/p05_cancel" />
+    </LinearLayout>
+  </LinearLayout>
   <LinearLayout android:id="@+id/p0_history_rows" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical">
     <ListView android:id="@+id/p0_history_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
     <com.google.android.material.button.MaterialButton android:id="@+id/p0_load_more" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_load_more" />

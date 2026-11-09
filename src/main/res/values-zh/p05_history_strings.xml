@@ -1,0 +1,25 @@
+<resources>
+    <string name="p05_share">分享</string>
+    <string name="p05_export">导出</string>
+    <string name="p05_delete">删除</string>
+    <string name="p05_select_all">全选</string>
+    <string name="p05_cancel">取消</string>
+    <string name="p05_selected_count">已选 %1$d 条</string>
+    <string name="p05_not_selected">未选中</string>
+    <string name="p05_zip_recommended">ZIP 压缩包（推荐）</string>
+    <string name="p05_direct_gpx">多个 GPX 文件</string>
+    <string name="p05_share_title">分享所选记录（%1$d 条）</string>
+    <string name="p05_delete_confirm">永久删除所选的 %1$d 条记录？对应的轨迹和心率数据也将删除。</string>
+    <string name="p05_cache_failed">无法创建本地导出文件。</string>
+    <string name="p05_interrupted">导出已中断，未分享不完整文件。</string>
+    <string name="p05_delete_failed">记录删除失败。</string>
+    <string name="p05_record_error">记录 %1$s：%2$s</string>
+    <string name="p05_deleted">已删除 %1$d 条记录</string>
+    <string name="p05_delete_partial">已删除所选 %2$d 条中的 %1$d 条，其余记录未删除。%3$s</string>
+    <string name="p05_share_ready">已准备好 %1$d 条记录的分享文件。</string>
+    <string name="p05_saved">已导出 %1$d 条记录。</string>
+    <string name="p05_document_failed">无法写入所选文档，请重新选择位置后重试。原始记录未改变。</string>
+    <string name="p05_please_wait">正在处理所选记录，请稍候。</string>
+    <string name="p05_packing">正在打包 ZIP：%1$d / %2$d</string>
+    <string name="p05_processing">正在处理记录：%1$d / %2$d</string>
+</resources>

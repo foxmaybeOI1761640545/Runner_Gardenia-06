@@ -1,5 +1,5 @@
 {
-  "stage": 3,
+  "stage": 4,
   "fullRegression": false,
   "classes": [
     "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
@@ -14,7 +14,12 @@
     "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
     "de.dennisguse.opentracks.p0.P05MetricSwapTest",
     "de.dennisguse.opentracks.p0.P05SettingsHubTest",
-    "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest"
+    "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+    "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+    "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+    "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+    "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+    "de.dennisguse.opentracks.p0.P0GpxExporterTest"
   ],
   "signed": false
 }

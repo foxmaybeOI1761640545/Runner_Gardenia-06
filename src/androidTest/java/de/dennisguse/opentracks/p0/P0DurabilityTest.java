@@ -44,7 +44,7 @@ public class P0DurabilityTest {
         int[] points={0};repository.forEachPoint(id,point->{assertTrue(point.position().hasLocation());assertEquals(Distance.of(2),point.position().horizontalAccuracy());points[0]++;});assertEquals(2,points[0]);
         assertEquals(76,repository.find(id).heartRate().average(),0);
     }
-    @Test public void committedGpsAndRawHeartRateRemainReadable() {
+    @Test public void committedGpsAndRawHeartRateRemainReadable() throws Exception {
         String phase=InstrumentationRegistry.getArguments().getString("p0DurabilityPhase","both");
         assertTrue(List.of("both","write","read").contains(phase));assertEquals("Asia/Singapore",java.util.TimeZone.getDefault().getID());
         if(!phase.equals("read"))write();
@@ -68,6 +68,25 @@ public class P0DurabilityTest {
             String source=InstrumentationRegistry.getArguments().getString("buildCommit");
             if(phase.equals("write"))assertTrue(prefs.edit().putString("p05_metric_probe_source",source).commit());
             else {assertEquals(source,prefs.getString("p05_metric_probe_source",null));for(var family:families)de.dennisguse.opentracks.settings.PreferencesUtils.resetDashboardMetricLayout(family);}
+        }
+
+        if("true".equals(InstrumentationRegistry.getArguments().getString("p05BatchProbe"))){
+            var files=new de.dennisguse.opentracks.p0.export.P0GpxFiles(context);
+            var prefs=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+            java.io.File pending=new java.io.File(context.getCacheDir(),"p0_exports/.pending-process-interruption-probe");
+            if(phase.equals("write")){
+                var complete=files.prepareBatch(List.of(id()),false,(done,total,packing)->{});
+                assertTrue(prefs.edit().putString("p05_batch_probe_directory",complete.directory().getName()).commit());
+                assertTrue(pending.mkdirs());java.nio.file.Files.writeString(new java.io.File(pending,"incomplete.gpx").toPath(),"incomplete process interruption fixture");
+            }else{
+                java.io.File complete=new java.io.File(context.getCacheDir(),"p0_exports/"+prefs.getString("p05_batch_probe_directory","missing"));
+                assertTrue("Process death must retain staged and completed cache bytes before cleanup",pending.isDirectory());
+                assertTrue(complete.isDirectory());files.cleanStale();assertFalse(pending.exists());
+                java.io.File[] gpx=complete.listFiles(f->f.getName().endsWith(".gpx"));assertNotNull(gpx);assertEquals(1,gpx.length);
+                String xml=java.nio.file.Files.readString(gpx[0].toPath());assertTrue(xml.contains("urn:runner-gardenia:gpx:1"));assertTrue(xml.contains("durability-session"));
+                try(var input=context.getContentResolver().openInputStream(files.share(gpx[0]).getParcelableExtra(android.content.Intent.EXTRA_STREAM))){assertNotNull(input);assertTrue(input.readAllBytes().length>0);}
+            }
+            android.os.Bundle cache=new android.os.Bundle();cache.putString("p05BatchCacheState",phase.equals("write")?"staged":"cleaned-retained-completed");InstrumentationRegistry.getInstrumentation().sendStatus(0,cache);
         }
 
         if(!phase.equals("both")) {
