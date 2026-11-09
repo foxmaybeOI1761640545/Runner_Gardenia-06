@@ -19,7 +19,7 @@ def allocated_code(data):
     chosen=[e for e in entries if e['versionName']==VERSION]
     if len(chosen)!=1 or chosen[0].get('classification')!='reserved-p04-refinement':raise ValueError('Missing unique P0.4 reservation')
     row=chosen[0];others=[e['versionCode'] for e in entries[:entries.index(row)]]
-    if row['versionCode']!=max(others)+1 or data['codeHighWater']!=row['versionCode']:raise ValueError('P0.4 allocation must follow its historical predecessors')
+    if row['versionCode']!=max(others)+1 or data['codeHighWater']<row['versionCode']:raise ValueError('P0.4 allocation must follow its historical predecessors')
     return row['versionCode']
 
 

@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "codeHighWater": 6775,
+  "codeHighWater": 6776,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
-    "v0.1.0-p0.": 4
+    "v0.1.0-p0.": 5
   },
   "allocations": [
     {
@@ -96,6 +96,15 @@
       "classification": "reserved-p04-refinement",
       "tag": "test-p0-v0.1.0-p0.4",
       "sourceEvidence": "UI refinement allocation from completed P0.3 development HEAD; only the future accepted signed APK/tag bind the actual source."
+    },
+    {
+      "versionName": "v0.1.0-p0.5",
+      "versionCode": 6776,
+      "commit": null,
+      "allocationBasisCommit": "5f700ba8f050e150980725ee8c4cc8782736c720",
+      "classification": "reserved-p05-test",
+      "tag": "test-p0-v0.1.0-p0.5",
+      "sourceEvidence": "P0.5 allocation after accepted Phase4 run42657847351. Only the final immutable signed APK, annotated tag and build-info bind the actual tested source."
     }
   ]
 }

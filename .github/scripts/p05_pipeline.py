@@ -112,6 +112,9 @@ def prepare():
         raise ValueError('Checkout differs from the exact triggering commit')
     if config['stage'] == 0:
         phase_zero_source()
+    if config['stage'] == 5:
+        from p05_version import check
+        check(source)
     classes = [] if config['fullRegression'] else sorted(set(MANDATORY + config['classes']))
     for name in classes if config['stage'] else []:
         if not Path('src/androidTest/java', *name.split('.')).with_suffix('.java').is_file():
@@ -236,6 +239,18 @@ def gate():
                 if not process.get('p05BatchProbe') or process['phases']['write'].get('batchCacheState')!='staged' or process['phases']['read'].get('batchCacheState')!='cleaned-retained-completed':raise ValueError('Actual force-stop cache recovery evidence missing')
                 proof.update(historyScreenshots=32,shareReceipts=6,gpxSchema=schema,batchProcessDurability=process)
             if config['stage'] == 5:
+                from p0_pipeline import collect_p0_ui
+                import collect_p02_home_ui,collect_p03_theme_ui
+                proof['originalP0Screenshots']=collect_p0_ui(True)
+                proof['originalP02']=collect_p02_home_ui.collect(plan['commit'])
+                proof['originalP03']=collect_p03_theme_ui.collect(plan['commit'])
+                legacy_skip=('de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest','recording_stopGPS_noop')
+                actual_skips=[]
+                for file in Path('build/outputs/androidTest-results').rglob('TEST-*.xml'):
+                    for case in ET.parse(file).getroot().iter('testcase'):
+                        if case.find('skipped') is not None:actual_skips.append((case.get('classname'),case.get('name')))
+                if actual_skips!=[legacy_skip]:raise ValueError('Any additional skip or missing original legacy Ignore fails the final gate')
+                proof['legacySkippedTest']={'class':legacy_skip[0],'method':legacy_skip[1],'unchangedFromP04':True,'countedAsPassed':False}
                 for key, location in [('processDurability', 'p0-durability'),
                                       ('gpxSchema', 'p0-gpx'), ('offline', 'p0-offline')]:
                     row = json.loads(Path('build/reports', location, 'result.json').read_text())

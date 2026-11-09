@@ -1,25 +1,6 @@
 {
-  "stage": 4,
-  "fullRegression": false,
-  "classes": [
-    "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
-    "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
-    "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
-    "de.dennisguse.opentracks.p0.DashboardNavigationTest",
-    "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
-    "de.dennisguse.opentracks.p0.P0RecordingUiTest",
-    "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
-    "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
-    "de.dennisguse.opentracks.p0.P02HomeUiTest",
-    "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
-    "de.dennisguse.opentracks.p0.P05MetricSwapTest",
-    "de.dennisguse.opentracks.p0.P05SettingsHubTest",
-    "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
-    "de.dennisguse.opentracks.p0.P05BatchFilesTest",
-    "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
-    "de.dennisguse.opentracks.p0.P0HistoryUiTest",
-    "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
-    "de.dennisguse.opentracks.p0.P0GpxExporterTest"
-  ],
+  "stage": 5,
+  "fullRegression": true,
+  "classes": [],
   "signed": false
 }

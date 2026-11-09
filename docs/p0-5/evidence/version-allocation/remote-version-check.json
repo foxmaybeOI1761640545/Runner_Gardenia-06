@@ -1,0 +1,57 @@
+{
+  "highestLedgerCode": 6775,
+  "highestPublishedCode": 6775,
+  "allocatedP05Code": 6776,
+  "allocationBasisCommit": "5f700ba8f050e150980725ee8c4cc8782736c720",
+  "releases": [
+    {
+      "tag": "test-p0-v0.1.0-p0.4",
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775,
+      "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.3",
+      "versionName": "v0.1.0-p0.3",
+      "versionCode": 6774,
+      "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.2",
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773,
+      "source": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.1",
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772,
+      "source": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0"
+    },
+    {
+      "tag": "v0.1.0-rc1.6",
+      "versionName": "v0.1.0-rc1.6",
+      "versionCode": 6771,
+      "source": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "apkSha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f"
+    },
+    {
+      "tag": "v0.1.0-rc1.5",
+      "versionName": "v0.1.0-rc1.5",
+      "versionCode": 6770,
+      "source": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "apkSha256": "6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e"
+    },
+    {
+      "tag": "v0.1.0-rc1.4",
+      "versionName": "v0.1.0-rc1.4",
+      "versionCode": 6769,
+      "source": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0"
+    }
+  ]
+}
