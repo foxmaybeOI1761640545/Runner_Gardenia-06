@@ -61,5 +61,7 @@ class FinalP05GateTests(unittest.TestCase):
   hub=tree(['gardenia_settings_toolbar'],['Theme and appearance','Workout and display'])
   motion=tree(['gardenia_settings_toolbar'],['Preferred units','Preferred rate','Restore default metric layout'])
   self.assertTrue(page_matches(hub,'hub'));self.assertFalse(page_matches(hub,'motion'));self.assertTrue(page_matches(motion,'motion'));self.assertFalse(page_matches(motion,'hub'))
+  scrolled=tree(['gardenia_settings_toolbar'],['History and data','Privacy and offline','App information']);self.assertTrue(page_matches(scrolled,'hub'))
+  category=tree(['gardenia_settings_toolbar'],['Workout and display','Preferred units','Preferred rate','Restore default metric layout']);self.assertFalse(page_matches(category,'hub'))
   share=tree(['alertTitle'],['Share selected records (2)','Separate GPX files']);delete=tree(['alertTitle'],['Permanently delete selected records (2)?'])
   self.assertTrue(page_matches(share,'share'));self.assertFalse(page_matches(share,'delete'));self.assertTrue(page_matches(delete,'delete'));self.assertFalse(page_matches(delete,'share'))

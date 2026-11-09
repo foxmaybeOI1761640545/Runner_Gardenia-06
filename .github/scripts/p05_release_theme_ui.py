@@ -12,7 +12,7 @@ def page_matches(tree,page):
     identity=PAGE_IDS[page];identity=identity if identity.startswith('android:') else PACKAGE+':id/'+identity
     if identity not in ids:return False
     if page=='history':return PACKAGE+':id/p05_selected_count' not in ids
-    if page=='hub':return {'Theme and appearance','Workout and display'}.issubset(texts)
+    if page=='hub':return len({'Theme and appearance','Workout and display','Heart rate and devices','History and data','Privacy and offline','App information'} & texts)>=2
     if page=='appearance':return {t for _,t in FAMILIES}.issubset(texts)
     if page=='motion':return {'Preferred units','Preferred rate','Restore default metric layout'}.issubset(texts)
     if page=='info':return {'Release version','Build number'}.issubset(texts)
