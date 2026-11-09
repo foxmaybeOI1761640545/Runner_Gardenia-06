@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "sourceCommit": "f0d308010b2c5e09ddc04702f164bc8f52746c17",
+  "api": 35,
+  "native": true,
+  "screenshots": [
+    {
+      "file": "p05-settings-hub-precision-light-360-font130-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "7a019bb647670d5d68586b450a3dae71578fd7f5e90e949dfe8be7af1b7cf4a8",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-precision-light-360-font130-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "781b199423b1d0197488319f65a66406e2bcea014643c86da0475f410b5d810d",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-precision-dark-360-font130-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "784ac55a6bfd3acb85dd113b663bedaef1457e75e95cac64c1d62157380cbf16",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-precision-dark-360-font130-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "58ed6a79a22a80fee2f126666a550dd6ec6c8c38c25a1adaa4da763a605add62",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-quiet-light-360-font130-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "19e5f2fca29bb64fcf0d6f5c8dbbe66d740c5d3cc9efd6682146b18c306a1b51",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-quiet-light-360-font130-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "bf106e606d2b5488d5c78eb94a0b4ada9f06c6ff0f917881b767dbc9457c7c36",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-quiet-dark-360-font130-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "d93f66c3b76fff1d8db7bb3449a0291031644d1e3935a9f7e475cd497f4687de",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-quiet-dark-360-font130-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "6a257edef6e63deb77d02d1520f5b5241953385f52607c540d1cecda78d31059",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-explorer-light-360-font130-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "166b5ead46a09c571ab57ca1f276c36d660accd56f9b064b4fb786e52d785362",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-explorer-light-360-font130-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "90c7327c53ebc8328a4ab3a689078e89738cc065b5a458fe3542baf64bf82609",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-explorer-dark-360-font130-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "ffe66f7ceb28aec96637b3fcf081157cea5e1604b5f8b0fb56a08230943f25af",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-explorer-dark-360-font130-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "72e672f4a08c1608ad0ff444d163c2f66de43c82e2b4ca30e02d73a5e174b416",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-neon-light-360-font130-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "b9cb27a498ebbe28fe2e18800b56f88964a644bd5fae04f981296fa59543be36",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-neon-light-360-font130-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "a450b7d6e1867920d6c05b59b8881d8ca300e84dbdc4a8bc9da7229310ed1244",
+      "native": true
+    },
+    {
+      "file": "p05-settings-hub-neon-dark-360-font130-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "hub",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "173c6af7b44d5b433d92adf256930662d27f00245efb8f788558bcea67243969",
+      "native": true
+    },
+    {
+      "file": "p05-settings-motion-neon-dark-360-font130-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "motion",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "3ab1a0a8fa741ce4a8753eca21be0aed22eff161e2bfebf0ae1071402ce41d57",
+      "native": true
+    }
+  ]
+}

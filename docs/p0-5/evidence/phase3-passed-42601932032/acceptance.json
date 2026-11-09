@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "source": "f0d308010b2c5e09ddc04702f164bc8f52746c17",
+  "runId": 42601932032,
+  "reportsArtifactId": 13666538671,
+  "reportsSha256": "0ab473d46f83cf813656b7e79ce7467977e4d4d3c16542c7168feb1bf286a508",
+  "visualArtifactId": 13667227373,
+  "visualSha256": "7da8579c0401c6e3d9fc51e910cd333c1ed253cbb12aed6f89e7453c9af70c63",
+  "reviewedScreenshots": 72,
+  "reviewMethod": "All nine contact sheets: new Hub/Motion16 narrow/large-font screenshots + original home/recording/heart/history/detail/dialog/appearance56 across eight palettes; source/hash/native provenance verified. Six category navigation and restoration assertions passed.",
+  "nextPhaseAuthorized": true,
+  "physicalHardwareTested": false
+}

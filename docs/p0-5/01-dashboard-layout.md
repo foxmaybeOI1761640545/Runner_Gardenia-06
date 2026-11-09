@@ -19,9 +19,9 @@ Precision 分割数据网格、Quiet 中轴留白、Explorer 轨迹叠加卡片�
 - 完整 JVM 测试、Debug/Lint、非零 Android/JVM XML；分别记录 Tests/Executed/Failures/Errors/Skipped，失败不推进。
 - 下载精确 SHA 的 Artifact，校验 ZIP/PNG 摘要、实际像素尺寸与来源；人工检查关键八配色及窄屏大字体截图，发现问题修复重测。
 
-## 当前结果
+## 初始候选状态（历史记录）
 
-静态 XML/绑定合同、四主题结构/八配色冻结和成熟业务源码范围检查通过。Android 运行、截图、人工视觉验收与本阶段正式 SHA/Actions 收据仍 PENDING；不能据此宣布 Phase 1 通过，Phase 2 尚未开始。
+首次提交时仅静态 XML/绑定合同、四主题结构/八配色冻结和成熟业务源码范围检查通过，Android及人工审查尚待执行。该状态已被下方最终验收取代，不作为当前阶段结论。
 
 ## 候选失败记录：098dbac / 42572848848
 

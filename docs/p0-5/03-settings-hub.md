@@ -1,7 +1,17 @@
 # Phase 3：设置中心
 
-状态：IN_PROGRESS。前置Phase2源码8faa6ce、Actions42598521463全部通过；验收a98dea9/a62390b已推送核对。
+状态：PASSED。前置Phase2源码8faa6ce、Actions42598521463全部通过；验收a98dea9/a62390b已推送核对。
 
 范围：P0SettingsActivity改为六分类原生Preference主页，P05SettingsHubFragment和P05SettingsSectionFragment承载独立分类、FragmentManager返回栈及重建恢复；主题分类原样复用GardeniaThemeSettingsFragment，并保留旧appearance明确深链。运动页复用默认SharedPreferences的statsUnits/statsRate原键和全部原选项/单位换算，恢复仅当前主题指标布局；心率入口进入原P0SensorsActivity；历史入口进入原P0HistoryActivity。隐私为真实信息，无虚假可调整存储设置。应用信息读取BuildConfig正式versionName/versionCode（当前尚未分配P0.5，显示基线v0.1.0-p0.4/6775，最终Phase5才分配新正式版本）。
 
 验收清单：六分类真实点击/返回/重建，真实设备与历史目的地，底部导航；单位公里/英里和速度/配速原生列表选择及重建持久化；重置当前主题、其余主题不变；原主题九项持久化/全页面/系统换色及窄屏回归；新增360dp/1.3字体八配色主页与运动分类16截图；继续执行Phase1的48布局、原192状态、Phase2的八配色长时长及服务隔离专项。需要实际API35/JVM/lint与Artifact下载和人工截图审查后才可接受。未新增运行依赖、WebView、BLE管理器或单位换算。
+
+## 实际验收：f0d3080 / 42601932032
+
+[Actions](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42601932032) SUCCESS。测试源码f0d308010b2c5e09ddc04702f164bc8f52746c17，Android Tests48 / Executed48 / Failures0 / Errors0 / Skipped0；JVM124 / 124 / 0 / 0 / 0；辅助测试87 / 87 / 0 / 0 / 0。包含新增设置3项、原主题系统10项及之前全部选定回归。构建、Lint及编译均通过。
+
+Artifact ZIP下载后独立校验摘要；48顶部/192原状态/8长时长/16新设置PNG逐一校验原始SHA与源码。对16张360dp/1.3字体Hub和Motion截图，以及原七页面56张截图（含主题选择、记录、设备、历史、详情、导出弹窗）共72张进行了实际人工审查，9张联系表/72原图/原始XML/收据归档于[evidence/phase3-passed-42601932032](evidence/phase3-passed-42601932032/acceptance.json)。六分类中第六项在大字体下需正常纵向滚动，已真实点击/返回验证；未发生横向溢出或裁字。底部导航、页面重建、仅当前主题重置、原单位/速率持久化和原BLE入口通过。
+
+实现提交bed94eb；复查后发现重置摘要不应出现主题名称，f0d3080改为“仅当前主题”。被替代的bed候选run42601803520在测试前取消，不计作通过。最终f0d完整重测成功。主关键文件P0SettingsActivity、P05SettingsHubFragment、P05SettingsSectionFragment、proguard-p0.pro与原生字符串/图标；旧导航测试保留所有服务隔离断言并适配新入口。
+
+本阶段为设置与相关回归验收，不代替Phase5全量测试。版本尚未分配，应用信息准确显示当前基线版本；最终正式P0.5版本将在Phase5分配后重新验证。真实GNSS/BLE RF、TalkBack语音、微信客户端均未据此宣称通过。允许进入Phase4；P0.4发布不变。

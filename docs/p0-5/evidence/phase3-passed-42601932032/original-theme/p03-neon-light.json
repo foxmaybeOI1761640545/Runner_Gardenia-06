@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "f0d308010b2c5e09ddc04702f164bc8f52746c17",
+  "api": 35,
+  "timezone": "Asia\/Singapore",
+  "family": "neon",
+  "appearance": "light",
+  "passed": true,
+  "physicalBleTested": false,
+  "syntheticNotifications": true,
+  "systemSwitchPreservesRecording": true,
+  "systemSwitchPreservesGps": true,
+  "systemSwitchPreservesConnection": true,
+  "viewModelRetained": true,
+  "pausedStatePreserved": true,
+  "waitingCreatesNoWorkout": true,
+  "dialogRestored": true,
+  "familySwitchPreservesRecording": true,
+  "screenshots": [
+    {
+      "file": "p03-neon-light-home.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "home",
+      "sha256": "075fe3708de8b9b3c54ba3a3ec7026fac9b5f5323885c1f065f928a2a20b05d7"
+    },
+    {
+      "file": "p03-neon-light-recording.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "recording",
+      "sha256": "e8519d6f027d08cc41ecf445007ec4031ee27fdf5d9b66e009d4b67f0dbe0f38"
+    },
+    {
+      "file": "p03-neon-light-heart.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "heart",
+      "sha256": "6dc9246eb659084e2aebf1d123a6ecbf502bc0453cca766c9e92fb392c3fd9a7"
+    },
+    {
+      "file": "p03-neon-light-history.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "history",
+      "sha256": "8a47e5bd8d86bdcbe1feebce53aca81c67d16dea715b7c2c877ae1b6b9917220"
+    },
+    {
+      "file": "p03-neon-light-detail.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "detail",
+      "sha256": "f20d873214e8f4f149afa3254acaa4c93cfec7844099c29d77ed1d3481b5e5e2"
+    },
+    {
+      "file": "p03-neon-light-dialog.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "dialog",
+      "sha256": "929f12c9b41afaa9b63b9ddc8504f50cb10c2d03baf9d09f20ea6e9a9cfc85be"
+    },
+    {
+      "file": "p03-neon-light-settings.png",
+      "family": "neon",
+      "nightMode": 16,
+      "page": "settings",
+      "sha256": "9819a78760473604938798478fdfb2da8dc0624d8532f057a9957513ecb65fb3"
+    }
+  ]
+}

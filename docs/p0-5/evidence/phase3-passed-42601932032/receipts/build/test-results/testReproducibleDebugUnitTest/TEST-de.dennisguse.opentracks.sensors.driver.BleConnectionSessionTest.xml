@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-11-09T10:38:02.180Z" hostname="runnervm7aw5e" time="0.017">
+  <properties/>
+  <testcase name="duplicateDisconnectAfterDisabledRetryIsIgnored" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.008"/>
+  <testcase name="disabledPolicyClosesTimedOutHandshakeWithoutRetry" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="retriesAreBoundedAndDelayed" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="onlyExplicitReconnectRestartsAfterManualDisconnect" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="failedDiscoveryRetries" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="staleTimeoutAfterReadyIsIgnored" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="disconnectDoesNotStopDesiredSession" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="staleCallbacksCannotCompleteNewConnection" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="bluetoothPowerCycleWaitsForPowerOn" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="rejectedSubscriptionRetries" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="disablingPolicyCancelsEvenADequeuedRetry" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="handshakeTimeoutClosesTransport" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="invalidDeviceDoesNotSpin" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="rejectedFrameworkOperationsRetry" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="manualStopCancelsEvenAlreadyQueuedRetry" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="disabledAutoReconnectStillAllowsOneExplicitConnection" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.001"/>
+  <testcase name="descriptorFailureNeverReportsReady" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="disabledPolicyWaitsForExplicitConnectionAfterBluetoothPowerCycle" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.001"/>
+  <testcase name="subscriptionAcknowledgementIsRequired" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="duplicateStartDoesNotOpenTwice" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="changingPolicyDoesNotCloseAHealthyConnection" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <testcase name="enablingPolicyNeverOverridesManualStop" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.001"/>
+  <testcase name="permissionDeniedDoesNotSpin" classname="de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
