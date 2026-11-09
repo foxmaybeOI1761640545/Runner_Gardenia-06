@@ -1,0 +1,379 @@
+checks	Debug build, lint, all JVM tests and instrumentation compilation	﻿2026-11-09T16:16:04.9535698Z ##[group]Run ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9536741Z [36;1m./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest[0m
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9553454Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9553670Z env:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9553800Z   TZ: Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9553970Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9554178Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9554373Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9554612Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9554904Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9555380Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9555658Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9555842Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9556028Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9556287Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9556575Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9556773Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9556944Z ##[endgroup]
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:04.9693324Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:06.6083401Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:07.8079048Z Daemon will be stopped at the end of the build 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.0123372Z > Task :clean
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.0126364Z > Task :preBuild UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.0126871Z > Task :preReproducibleDebugBuild UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.0127457Z > Task :mergeReproducibleDebugNativeDebugMetadata NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.4106895Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.5087049Z > Task :generateReproducibleDebugResValues
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.5087661Z > Task :extractReproducibleDebugSupportedLocales
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:17.6075787Z > Task :mapReproducibleDebugSourceSetPaths
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:19.8097368Z > Task :generateReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:19.8097755Z > Task :generateReproducibleDebugLocaleConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:19.8098040Z > Task :processReproducibleDebugNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.2096920Z > Task :packageReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.6079172Z > Task :mergeReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.6094000Z > Task :generateReproducibleDebugBuildConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.6114663Z > Task :generateReproducibleDebugAssets UP-TO-DATE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.7113235Z > Task :javaPreCompileReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.7126423Z > Task :mergeReproducibleDebugAssets
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.8076848Z > Task :parseReproducibleDebugLocalResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:23.8093846Z > Task :compressReproducibleDebugAssets
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:25.4077058Z > Task :generateReproducibleDebugGlobalSynthetics
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:25.8105036Z > Task :dataBindingGenBaseClassesReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:25.9075995Z > Task :generateReproducibleDebugRFile
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:26.3096876Z > Task :compileReproducibleDebugKotlin NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:27.4076218Z > Task :l8DexDesugarLibReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9083086Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9086627Z Note: Some input files use or override a deprecated API.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9087185Z > Task :compileReproducibleDebugJavaWithJavac
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9087877Z Note: Recompile with -Xlint:deprecation for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9088993Z Note: Some input files use unchecked or unsafe operations.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:30.9089564Z Note: Recompile with -Xlint:unchecked for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.3083970Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.3096820Z > Task :checkReproducibleDebugDuplicateClasses
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.3106580Z > Task :desugarReproducibleDebugFileDependencies
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.4106814Z > Task :mergeLibDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.4159560Z > Task :checkReproducibleDebugAarMetadata
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.4161173Z > Task :compileReproducibleDebugNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.4186410Z > Task :createReproducibleDebugCompatibleScreenManifests
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.4216163Z > Task :extractDeepLinksReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.9106253Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.9129836Z > Task :processReproducibleDebugMainManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.9176808Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/debug/AndroidManifest.xml Warning:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:31.9206797Z 	uses-permission#android.permission.INTERNET was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.2115960Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.2167081Z > Task :processReproducibleDebugManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.3080894Z > Task :compressReproducibleDebugJavaRes NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.5089102Z > Task :mergeReproducibleDebugJniLibFolders
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.6086818Z > Task :mergeReproducibleDebugJavaResource
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.6116402Z > Task :mergeReproducibleDebugNativeLibs NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.6142719Z > Task :processReproducibleDebugManifestForPackage
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:32.8111013Z > Task :stripReproducibleDebugDebugSymbols NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:34.2099133Z > Task :processReproducibleDebugResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:34.3076859Z > Task :validateSigningReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:37.2076351Z > Task :mergeExtDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.0105299Z > Task :dexBuilderReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.0127466Z > Task :writeReproducibleDebugAppMetadata
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.0139907Z > Task :writeReproducibleDebugSigningConfigVersions
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.0166289Z > Task :preReproducibleDebugAndroidTestBuild SKIPPED
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.3089534Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.3116516Z > Task :generateReproducibleDebugAndroidTestResValues
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.3146320Z > Task :generateReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.3173633Z > Task :bundleReproducibleDebugClassesToCompileJar
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.3196520Z > Task :mergeProjectDexReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.4077123Z > Task :mergeReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.5107213Z > Task :dataBindingGenBaseClassesReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6108235Z > Task :mergeReproducibleDebugAndroidTestManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6156111Z > Task :processReproducibleDebugAndroidTestManifest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6186898Z > Task :generateReproducibleDebugAndroidTestBuildConfig
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6187933Z > Task :packageReproducibleDebugAndroidTestResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6216253Z > Task :processReproducibleDebugAndroidTestNavigationResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.6266835Z > Task :javaPreCompileReproducibleDebugAndroidTest
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.7107562Z > Task :parseReproducibleDebugAndroidTestLocalResources
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.9077572Z > Task :generateReproducibleDebugAndroidTestLintModel
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:39.9096968Z > Task :generateReproducibleDebugAndroidTestRFile
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:40.0077260Z > Task :packageReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:40.0106832Z > Task :createReproducibleDebugApkListingFileRedirect
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:40.0108091Z > Task :assembleReproducibleDebug
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:40.0113149Z > Task :compileReproducibleDebugAndroidTestKotlin NO-SOURCE
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1078657Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1080049Z > Task :compileReproducibleDebugAndroidTestJavaWithJavac FAILED
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1107726Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:68: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1110228Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_8-1794240969474.json
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1124252Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1125236Z [Incubating] Problems report is available at: file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/problems/problems-report.html
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1127771Z    loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1136376Z           ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1138066Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:68: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1140939Z    loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1143446Z                                                                                                                                                                                                                                                                                                                                                                                                                                            ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1145282Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:69: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1146923Z    onView(withId(R.id.p05_batch_delete)).perform(click());onView(withId(android.R.id.button1)).perform(click());loaded(screen,0);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1147845Z                                                                                                                        ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1149049Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:74: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1151112Z   fixtures(3,true);var store=new ViewModelStore();AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();main(()->ref.set(new ViewModelProvider(store,ViewModelProvider.AndroidViewModelFactory.getInstance((Application)context)).get(P0HistoryViewModel.class)));var m=ref.get();
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1152524Z                                                   ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1153563Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1155067Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:74: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1158013Z   fixtures(3,true);var store=new ViewModelStore();AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();main(()->ref.set(new ViewModelProvider(store,ViewModelProvider.AndroidViewModelFactory.getInstance((Application)context)).get(P0HistoryViewModel.class)));var m=ref.get();
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1159985Z                                                                                               ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1161051Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1162578Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:76: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1165841Z    for(boolean paused:new boolean[]{false,true}){var session=RecordingSession.ready().begin(ids.get(1).id());new SessionStore(context).save(paused?session.pause():session);main(()->m.deleteSnapshot(ids.stream().map(Track.Id::id).toList()));idle(m);AtomicReference<String> message=new AtomicReference<>();main(()->message.set(m.exported().getValue().message()));assertTrue(message.get().contains(Long.toString(ids.get(1).id())));for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));new SessionStore(context).save(RecordingSession.ready());}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1168495Z                                                                                                                                                                                                                                                         ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1169717Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1171245Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:76: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1174303Z    for(boolean paused:new boolean[]{false,true}){var session=RecordingSession.ready().begin(ids.get(1).id());new SessionStore(context).save(paused?session.pause():session);main(()->m.deleteSnapshot(ids.stream().map(Track.Id::id).toList()));idle(m);AtomicReference<String> message=new AtomicReference<>();main(()->message.set(m.exported().getValue().message()));assertTrue(message.get().contains(Long.toString(ids.get(1).id())));for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));new SessionStore(context).save(RecordingSession.ready());}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1177204Z                                                                                                                                                                                                                                                                                             ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1178466Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1180004Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:85: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1183070Z    loaded(screen,3);AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();screen.onActivity(a->ref.set(model(a)));var field=P0HistoryViewModel.class.getDeclaredField("worker");field.setAccessible(true);ExecutorService executor=(ExecutorService)field.get(ref.get());CountDownLatch held=new CountDownLatch(1);executor.execute(()->{held.countDown();try{release.await(10,TimeUnit.SECONDS);}catch(InterruptedException stopped){Thread.currentThread().interrupt();}});assertTrue(held.await(3,TimeUnit.SECONDS));
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1185078Z                     ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1189456Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1221373Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:85: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1226067Z    loaded(screen,3);AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();screen.onActivity(a->ref.set(model(a)));var field=P0HistoryViewModel.class.getDeclaredField("worker");field.setAccessible(true);ExecutorService executor=(ExecutorService)field.get(ref.get());CountDownLatch held=new CountDownLatch(1);executor.execute(()->{held.countDown();try{release.await(10,TimeUnit.SECONDS);}catch(InterruptedException stopped){Thread.currentThread().interrupt();}});assertTrue(held.await(3,TimeUnit.SECONDS));
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1228496Z                                                                 ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1229533Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1231037Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:89: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1234733Z   AtomicReference<P0HistoryViewModel> current=new AtomicReference<>();var document=new android.app.Instrumentation.ActivityMonitor(){@Override public android.app.Instrumentation.ActivityResult onStartActivity(Intent i){if(!Intent.ACTION_CREATE_DOCUMENT.equals(i.getAction()))return null;assertEquals("application/zip",i.getType());assertTrue(i.hasCategory(Intent.CATEGORY_OPENABLE));current.get().exitSelection();current.get().toggle(ids.get(2).id());return new android.app.Instrumentation.ActivityResult(Activity.RESULT_OK,new Intent().setData(uri));}};
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1268154Z   ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1269225Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1270774Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:89: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1273936Z   AtomicReference<P0HistoryViewModel> current=new AtomicReference<>();var document=new android.app.Instrumentation.ActivityMonitor(){@Override public android.app.Instrumentation.ActivityResult onStartActivity(Intent i){if(!Intent.ACTION_CREATE_DOCUMENT.equals(i.getAction()))return null;assertEquals("application/zip",i.getType());assertTrue(i.hasCategory(Intent.CATEGORY_OPENABLE));current.get().exitSelection();current.get().toggle(ids.get(2).id());return new android.app.Instrumentation.ActivityResult(Activity.RESULT_OK,new Intent().setData(uri));}};
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1276422Z                                                   ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1277437Z   both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1278414Z Note: Some input files use or override a deprecated API.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1279031Z Note: Recompile with -Xlint:deprecation for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1279819Z Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1280417Z 11 errors
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1280688Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1281007Z FAILURE: Build failed with an exception.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1281363Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1281626Z * What went wrong:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1282519Z Execution failed for task ':compileReproducibleDebugAndroidTestJavaWithJavac' (registered by plugin 'com.android.internal.application').
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1283415Z > Compilation failed; see the compiler output below.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1284814Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:68: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1287758Z      loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1289748Z             ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1291065Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:68: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1293844Z      loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1296709Z                                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1298506Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:69: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1300152Z      onView(withId(R.id.p05_batch_delete)).perform(click());onView(withId(android.R.id.button1)).perform(click());loaded(screen,0);
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1301072Z                                                                                                                          ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1302283Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:74: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1304283Z     fixtures(3,true);var store=new ViewModelStore();AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();main(()->ref.set(new ViewModelProvider(store,ViewModelProvider.AndroidViewModelFactory.getInstance((Application)context)).get(P0HistoryViewModel.class)));var m=ref.get();
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1305740Z                                                     ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1306760Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1308285Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:74: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1310279Z     fixtures(3,true);var store=new ViewModelStore();AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();main(()->ref.set(new ViewModelProvider(store,ViewModelProvider.AndroidViewModelFactory.getInstance((Application)context)).get(P0HistoryViewModel.class)));var m=ref.get();
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1311685Z                                                                                                 ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1312758Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1314265Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:76: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1317563Z      for(boolean paused:new boolean[]{false,true}){var session=RecordingSession.ready().begin(ids.get(1).id());new SessionStore(context).save(paused?session.pause():session);main(()->m.deleteSnapshot(ids.stream().map(Track.Id::id).toList()));idle(m);AtomicReference<String> message=new AtomicReference<>();main(()->message.set(m.exported().getValue().message()));assertTrue(message.get().contains(Long.toString(ids.get(1).id())));for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));new SessionStore(context).save(RecordingSession.ready());}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1320507Z                                                                                                                                                                                                                                                           ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1321752Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1323426Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:76: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.1326532Z      for(boolean paused:new boolean[]{false,true}){var session=RecordingSession.ready().begin(ids.get(1).id());new SessionStore(context).save(paused?session.pause():session);main(()->m.deleteSnapshot(ids.stream().map(Track.Id::id).toList()));idle(m);AtomicReference<String> message=new AtomicReference<>();main(()->message.set(m.exported().getValue().message()));assertTrue(message.get().contains(Long.toString(ids.get(1).id())));for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));new SessionStore(context).save(RecordingSession.ready());}
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2097656Z                                                                                                                                                                                                                                                                                               ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2143132Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2143845Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2176974Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:85: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2178262Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2188751Z      loaded(screen,3);AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();screen.onActivity(a->ref.set(model(a)));var field=P0HistoryViewModel.class.getDeclaredField("worker");field.setAccessible(true);ExecutorService executor=(ExecutorService)field.get(ref.get());CountDownLatch held=new CountDownLatch(1);executor.execute(()->{held.countDown();try{release.await(10,TimeUnit.SECONDS);}catch(InterruptedException stopped){Thread.currentThread().interrupt();}});assertTrue(held.await(3,TimeUnit.SECONDS));
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2190589Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2191141Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2191633Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2192261Z For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2192953Z 57 actionable tasks: 57 executed
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2193469Z                       ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2194279Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2215954Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:85: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2219238Z      loaded(screen,3);AtomicReference<P0HistoryViewModel> ref=new AtomicReference<>();screen.onActivity(a->ref.set(model(a)));var field=P0HistoryViewModel.class.getDeclaredField("worker");field.setAccessible(true);ExecutorService executor=(ExecutorService)field.get(ref.get());CountDownLatch held=new CountDownLatch(1);executor.execute(()->{held.countDown();try{release.await(10,TimeUnit.SECONDS);}catch(InterruptedException stopped){Thread.currentThread().interrupt();}});assertTrue(held.await(3,TimeUnit.SECONDS));
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2221128Z                                                                   ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2222025Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2223404Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:89: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2226646Z     AtomicReference<P0HistoryViewModel> current=new AtomicReference<>();var document=new android.app.Instrumentation.ActivityMonitor(){@Override public android.app.Instrumentation.ActivityResult onStartActivity(Intent i){if(!Intent.ACTION_CREATE_DOCUMENT.equals(i.getAction()))return null;assertEquals("application/zip",i.getType());assertTrue(i.hasCategory(Intent.CATEGORY_OPENABLE));current.get().exitSelection();current.get().toggle(ids.get(2).id());return new android.app.Instrumentation.ActivityResult(Activity.RESULT_OK,new Intent().setData(uri));}};
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2228682Z     ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2229465Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2230811Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:89: error: reference to AtomicReference is ambiguous
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2233813Z     AtomicReference<P0HistoryViewModel> current=new AtomicReference<>();var document=new android.app.Instrumentation.ActivityMonitor(){@Override public android.app.Instrumentation.ActivityResult onStartActivity(Intent i){if(!Intent.ACTION_CREATE_DOCUMENT.equals(i.getAction()))return null;assertEquals("application/zip",i.getType());assertTrue(i.hasCategory(Intent.CATEGORY_OPENABLE));current.get().exitSelection();current.get().toggle(ids.get(2).id());return new android.app.Instrumentation.ActivityResult(Activity.RESULT_OK,new Intent().setData(uri));}};
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2242709Z                                                     ^
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2243616Z     both class java.util.concurrent.atomic.AtomicReference in java.util.concurrent.atomic and class androidx.lifecycle.AtomicReference in androidx.lifecycle match
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2244443Z   Note: Some input files use or override a deprecated API.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2244904Z   Note: Recompile with -Xlint:deprecation for details.
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2245465Z   Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2246082Z   11 errors
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2246204Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2246300Z * Try:
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2246673Z > Check your code and dependencies to fix the compilation error(s)
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2247238Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2247550Z 
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.2247678Z BUILD FAILED in 36s
+checks	Debug build, lint, all JVM tests and instrumentation compilation	2026-11-09T16:16:41.4743710Z ##[error]Process completed with exit code 1.
+checks	Final actual generated GPX 1.1 Schema verification	﻿2026-11-09T16:16:41.4779940Z ##[group]Run python3 .github/scripts/verify_p0_gpx.py
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4780209Z [36;1mpython3 .github/scripts/verify_p0_gpx.py[0m
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4796684Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4796891Z env:
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4797024Z   TZ: Asia/Singapore
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4797214Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4797423Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4797615Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4797855Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4798143Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4798397Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4798586Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4798767Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4798951Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4799227Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4799510Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4799707Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.4800016Z ##[endgroup]
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5548011Z Traceback (most recent call last):
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5548807Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/verify_p0_gpx.py", line 35, in <module>
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5549366Z     if __name__=='__main__':verify()
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5549668Z                             ^^^^^^^^
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5550239Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/verify_p0_gpx.py", line 15, in verify
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5550785Z     if len(sources)!=1:raise ValueError('Actual Android GPX output directory missing or ambiguous')
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5551149Z                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5551504Z ValueError: Actual Android GPX output directory missing or ambiguous
+checks	Final actual generated GPX 1.1 Schema verification	2026-11-09T16:16:41.5694898Z ##[error]Process completed with exit code 1.
+checks	Verify original state matrix and new P0.5 large-font native matrix	﻿2026-11-09T16:16:41.5749925Z ##[group]Run python3 .github/scripts/collect_p04_ui.py
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5750236Z [36;1mpython3 .github/scripts/collect_p04_ui.py[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5750452Z [36;1mpython3 .github/scripts/collect_p05_ui.py[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5750708Z [36;1mif [[ '4' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5751171Z [36;1mif [[ '4' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])'; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5751779Z [36;1mif [[ '4' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])'; fi[0m
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5768756Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5768966Z env:
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5769099Z   TZ: Asia/Singapore
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5769277Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5769504Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5769703Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5769948Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5770245Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5770501Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5770695Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5770879Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5771066Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5771334Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5771621Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5771823Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.5771997Z ##[endgroup]
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6423622Z Traceback (most recent call last):
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6424451Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/collect_p04_ui.py", line 25, in <module>
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6425140Z     if __name__=='__main__':collect(os.environ['GITHUB_SHA'])
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6425726Z                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6426336Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/collect_p04_ui.py", line 9, in collect
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6427037Z     if len(roots)!=1:raise ValueError('Actual native screenshot output missing/ambiguous')
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6427550Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6427992Z ValueError: Actual native screenshot output missing/ambiguous
+checks	Verify original state matrix and new P0.5 large-font native matrix	2026-11-09T16:16:41.6557718Z ##[error]Process completed with exit code 1.
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	﻿2026-11-09T16:16:41.6581903Z ##[group]Run python3 .github/scripts/p05_pipeline.py gate
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6582189Z [36;1mpython3 .github/scripts/p05_pipeline.py gate[0m
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6598861Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6599072Z env:
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6599204Z   TZ: Asia/Singapore
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6599383Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6599617Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6599813Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6600053Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6600345Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6600600Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6600794Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6600976Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6601163Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6601449Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6601737Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6601935Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.6602107Z ##[endgroup]
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7084089Z P0.5 actual phase evidence gate failed
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7084497Z {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7084797Z   "passed": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7085017Z   "plan": {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7085349Z     "commit": "5a7b99f4c418f5626e1f9b1e5035695b347836ef",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7085896Z     "branch": "feature/p0-5-dashboard-settings-history",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7086219Z     "stage": 4,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7086463Z     "runId": "42652881294",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7086742Z     "fullRegression": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7087034Z     "versionName": "v0.1.0-p0.4",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7087332Z     "versionCode": 6775,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7087573Z     "classes": [
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7087949Z       "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7088407Z       "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7088901Z       "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7089371Z       "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7089792Z       "de.dennisguse.opentracks.p0.P02HomeUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7090203Z       "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7090639Z       "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7091139Z       "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7091642Z       "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7092063Z       "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7092482Z       "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7092911Z       "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7093356Z       "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7093784Z       "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7094200Z       "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7094477Z       "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7094745Z       "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7095013Z       "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7095299Z       "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7095844Z       "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7096133Z     ],
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7096283Z     "publishing": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7096450Z     "signed": false,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7096747Z     "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7097013Z   },
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7097373Z   "helpers": {
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7097519Z     "tests": 87,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7097670Z     "executed": 87,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7097958Z     "failures": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7098100Z     "errors": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7098246Z     "skipped": 0,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7098399Z     "passed": true,
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7098621Z     "sourceCommit": "5a7b99f4c418f5626e1f9b1e5035695b347836ef",
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7098853Z     "runId": "42652881294"
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7099005Z   },
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7099196Z   "diagnostic": "Instrumentation reports are missing."
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7099385Z }
+checks	Require actual nonzero tests, separate failures/errors/skips and final evidence	2026-11-09T16:16:41.7181030Z ##[error]Process completed with exit code 1.
+checks	Preserve compact native visual evidence for actual review	﻿2026-11-09T16:16:42.8096393Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8096819Z with:
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8097042Z   name: P05-visual-42652881294
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8097671Z   path: build/reports/p05-visual/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-metrics/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-settings/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-history/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-share/
+checks	Preserve compact native visual evidence for actual review	build/reports/p04-visual/
+checks	Preserve compact native visual evidence for actual review	
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8098324Z   if-no-files-found: error
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8098577Z   retention-days: 90
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8098808Z   compression-level: 6
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8109154Z   overwrite: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8109429Z   include-hidden-files: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8109682Z env:
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8109884Z   TZ: Asia/Singapore
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8110160Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8110491Z   ANDROID_HOME: /usr/local/lib/android/sdk
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8110792Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8111185Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8111721Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8112137Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8112442Z   GRADLE_USER_HOME: /home/runner/.gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8112744Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8113051Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8113497Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8113979Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8114309Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.8114594Z ##[endgroup]
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.9323498Z (node:2869) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.9324032Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.9360316Z Multiple search paths detected. Calculating the least common ancestor of all paths
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.9365328Z The least common ancestor is /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports. This will be the root directory of the artifact
+checks	Preserve compact native visual evidence for actual review	2026-11-09T16:16:42.9370238Z ##[error]No files were found with the provided path: build/reports/p05-visual/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-metrics/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-settings/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-history/
+checks	Preserve compact native visual evidence for actual review	build/reports/p05-share/
+checks	Preserve compact native visual evidence for actual review	build/reports/p04-visual/. No artifacts will be uploaded.
