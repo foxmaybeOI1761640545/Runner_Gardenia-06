@@ -78,8 +78,9 @@ class P05PhaseRoutingTests(unittest.TestCase):
                 os.chdir(directory)
                 reports = Path('build/reports/p05-validation')
                 reports.mkdir(parents=True)
-                (reports / 'helpers.json').write_text(json.dumps({'passed': True, 'executed': 3}))
-                Path('release-plan.json').write_text(json.dumps({'commit': 'same', 'stage': 1}))
+                (reports / 'helpers.json').write_text(json.dumps({'passed': True, 'tests': 3, 'executed': 3,
+                    'failures': 0, 'errors': 0, 'skipped': 0, 'sourceCommit': 'same', 'runId': 'run'}))
+                Path('release-plan.json').write_text(json.dumps({'commit': 'same', 'stage': 1, 'runId': 'run'}))
                 with patch.object(pipeline, 'configuration', return_value=config), \
                         patch.dict(os.environ, {'GITHUB_SHA': 'same'}), \
                         contextlib.redirect_stdout(io.StringIO()):
@@ -90,6 +91,25 @@ class P05PhaseRoutingTests(unittest.TestCase):
                 self.assertIn('reports are missing', proof['diagnostic'])
             finally:
                 os.chdir(original)
+
+    def test_gradle_clean_cannot_erase_or_substitute_executed_helper_receipt(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            report = root / 'build/reports/p05-validation'
+            temporary = root / 'runner-temp'; temporary.mkdir()
+            proof = {'passed': True, 'tests': 5, 'executed': 5, 'failures': 0, 'errors': 0,
+                     'skipped': 0, 'sourceCommit': 'tested', 'runId': 'current-run'}
+            backup = temporary / 'p05-helper-results.json'
+            backup.write_text(json.dumps(proof))
+            plan = {'commit': 'tested', 'runId': 'current-run'}
+            with patch.object(pipeline, 'REPORTS', report), patch.dict(os.environ, {'RUNNER_TEMP': str(temporary)}):
+                self.assertEqual(proof, pipeline.helper_receipt(plan))
+                self.assertEqual(proof, json.loads((report / 'helpers.json').read_text()))
+                for changed in (dict(plan, commit='other'), dict(plan, runId='another-run')):
+                    with self.assertRaises(ValueError): pipeline.helper_receipt(changed)
+                (report / 'helpers.json').unlink()
+                backup.unlink()
+                with self.assertRaises(OSError): pipeline.helper_receipt(plan)
 
 
 class P04PublicBaselineTests(unittest.TestCase):

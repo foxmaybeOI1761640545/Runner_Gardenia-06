@@ -1,0 +1,30 @@
+{
+  "passed": false,
+  "plan": {
+    "commit": "098dbacd6a007fc6404df71aac963201dafa840d",
+    "branch": "feature/p0-5-dashboard-settings-history",
+    "stage": 1,
+    "runId": "42572848848",
+    "fullRegression": false,
+    "versionName": "v0.1.0-p0.4",
+    "versionCode": 6775,
+    "classes": [
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+      "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+      "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+      "de.dennisguse.opentracks.p0.P02HomeUiTest",
+      "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+      "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+      "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+      "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+      "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+      "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+      "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest"
+    ],
+    "publishing": false,
+    "signed": false,
+    "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+  },
+  "diagnostic": "[Errno 2] No such file or directory: 'build/reports/p05-validation/helpers.json'"
+}

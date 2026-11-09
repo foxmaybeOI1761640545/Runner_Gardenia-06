@@ -1,6 +1,9 @@
 package de.dennisguse.opentracks.p0;
 
 import static org.junit.Assert.*;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -123,14 +126,24 @@ public class P05DashboardLayoutTest {
                 ((ScrollView) activity.findViewById(R.id.p02_home_scroll)).scrollTo(0, 0);
                 RadioButton run = activity.findViewById(R.id.p0_running);
                 RadioButton cycle = activity.findViewById(R.id.p0_cycling);
-                assertTrue(run.isChecked());
-                assertFalse(cycle.isChecked());
-                assertTrue(cycle.performClick());
-                assertTrue(cycle.isChecked());
-                assertFalse(run.isChecked());
-                assertTrue(run.performClick());
-                assertTrue(run.isChecked());
-                assertFalse(cycle.isChecked());
+                assertTrue("Running must initially be selected", run.isChecked());
+                assertFalse("Cycling must initially be unselected", cycle.isChecked());
+                assertTrue("Running choice must accept touch input", run.isEnabled() && run.isClickable());
+                assertTrue("Cycling choice must accept touch input", cycle.isEnabled() && cycle.isClickable());
+            });
+            onView(withId(R.id.p0_cycling)).perform(click());
+            screen.onActivity(activity -> {
+                RadioButton run = activity.findViewById(R.id.p0_running);
+                RadioButton cycle = activity.findViewById(R.id.p0_cycling);
+                assertTrue("A real touch on cycling must select cycling", cycle.isChecked());
+                assertFalse("Selecting cycling must clear the running selection", run.isChecked());
+            });
+            onView(withId(R.id.p0_running)).perform(click());
+            screen.onActivity(activity -> {
+                RadioButton run = activity.findViewById(R.id.p0_running);
+                RadioButton cycle = activity.findViewById(R.id.p0_cycling);
+                assertTrue("A real touch on running must select running again", run.isChecked());
+                assertFalse("Selecting running must clear the cycling selection", cycle.isChecked());
             });
             InstrumentationRegistry.getInstrumentation().waitForIdleSync();
             AtomicReference<JSONObject> bounds = new AtomicReference<>();

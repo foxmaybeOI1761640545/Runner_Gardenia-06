@@ -140,10 +140,31 @@ def helpers():
     proof = {'tests': result.testsRun, 'executed': result.testsRun - len(result.skipped),
              'failures': len(result.failures), 'errors': len(result.errors),
              'skipped': len(result.skipped),
-             'passed': result.wasSuccessful() and result.testsRun > 0 and not result.skipped}
+             'passed': result.wasSuccessful() and result.testsRun > 0 and not result.skipped,
+             'sourceCommit': os.environ.get('GITHUB_SHA', git('rev-parse', 'HEAD')),
+             'runId': os.environ.get('GITHUB_RUN_ID', 'local')}
     write_report('helpers.json', proof)
+    # Gradle clean removes build/reports. Preserve the already executed receipt
+    # in this job's private temporary directory, then restore it at the gate.
+    backup = Path(os.environ.get('RUNNER_TEMP', 'work')) / 'p05-helper-results.json'
+    backup.parent.mkdir(parents=True, exist_ok=True)
+    backup.write_text(json.dumps(proof, indent=2) + '\n')
     if not proof['passed']:
         raise SystemExit('Actual pipeline helper regression failed')
+
+
+def helper_receipt(plan):
+    primary = REPORTS / 'helpers.json'
+    path = primary if primary.exists() else Path(os.environ.get('RUNNER_TEMP', 'work')) / 'p05-helper-results.json'
+    helper = json.loads(path.read_text())
+    if (helper.get('passed') is not True or helper.get('executed', 0) <= 0
+            or helper.get('sourceCommit') != plan['commit']
+            or helper.get('runId') != plan['runId']
+            or any(helper.get(key) != 0 for key in ('failures', 'errors', 'skipped'))
+            or helper.get('tests') != helper.get('executed')):
+        raise ValueError('Exact-source executed helper evidence missing or failed')
+    write_report('helpers.json', helper)
+    return helper
 
 
 def gate():
@@ -153,9 +174,7 @@ def gate():
     try:
         if plan['commit'] != os.environ['GITHUB_SHA'] or plan['stage'] != config['stage']:
             raise ValueError('Validation evidence differs from triggering phase/source')
-        helper = json.loads((REPORTS / 'helpers.json').read_text())
-        if helper.get('passed') is not True or helper.get('executed', 0) <= 0:
-            raise ValueError('Actual helper execution evidence missing')
+        helper = helper_receipt(plan)
         proof['helpers'] = helper
         if config['stage'] == 0:
             phase_zero_source()

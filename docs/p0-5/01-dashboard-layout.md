@@ -22,3 +22,7 @@ Precision 分割数据网格、Quiet 中轴留白、Explorer 轨迹叠加卡片�
 ## 当前结果
 
 静态 XML/绑定合同、四主题结构/八配色冻结和成熟业务源码范围检查通过。Android 运行、截图、人工视觉验收与本阶段正式 SHA/Actions 收据仍 PENDING；不能据此宣布 Phase 1 通过，Phase 2 尚未开始。
+
+## 候选失败记录：098dbac / 42572848848
+
+Android 32 / Executed 32 / Failures 1 / Errors 0 / Skipped 0；JVM 118 / Executed 118 / Failures 0 / Errors 0 / Skipped 0。原 192 张状态矩阵生成，新增 48 张矩阵在首次单选测试即失败，不能宣布新矩阵通过。RadioButton 的 performClick 返回值只代表监听器处理结果，不代表框架选中状态；改用 Espresso 真实触摸并保留选中、互斥、可操作性断言。另发现 Gradle clean 删除先前的 helpers.json，需将精确执行收据保存在清理范围之外。原始失败 XML 与收据保留于 evidence/phase1-failed-42572848848；没有删除测试、降低业务断言或进入 Phase 2。

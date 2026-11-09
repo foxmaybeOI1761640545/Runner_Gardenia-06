@@ -1,0 +1,26 @@
+{
+  "passed": false,
+  "source": "098dbacd6a007fc6404df71aac963201dafa840d",
+  "runId": 42572848848,
+  "artifactId": 13654546354,
+  "artifactSha256": "13fadb7fea9319a80770c608abae3515a35aaf59666000de5f3319f77d1d7126",
+  "android": {
+    "tests": 32,
+    "executed": 32,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "unit": {
+    "tests": 118,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "executed": 118
+  },
+  "failures": [
+    "New test assumed RadioButton.performClick return means toggle success; actual API returns listener-handled status. Replace with real Espresso touch and retain selected-state assertions.",
+    "Gradle clean removed helpers.json recorded before build; preserve exact executed helper receipt outside clean target."
+  ],
+  "nextPhaseAuthorized": false
+}
