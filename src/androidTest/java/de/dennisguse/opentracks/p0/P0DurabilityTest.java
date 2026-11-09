@@ -59,7 +59,7 @@ public class P0DurabilityTest {
                     assertEquals(expected,de.dennisguse.opentracks.settings.PreferencesUtils.getDashboardMetricLayout(family));
                     de.dennisguse.opentracks.settings.PreferencesUtils.setGardeniaTheme(family);
                     try(var screen=androidx.test.core.app.ActivityScenario.launch(de.dennisguse.opentracks.p0.app.P0Activity.class)){
-                        screen.onActivity(a->{assertEquals(expected,de.dennisguse.opentracks.settings.PreferencesUtils.getDashboardMetricLayout(family));assertNotNull(a.findViewById(de.dennisguse.opentracks.R.id.p05_primary_label));});
+                        screen.onActivity(a->{assertEquals(expected,de.dennisguse.opentracks.settings.PreferencesUtils.getDashboardMetricLayout(family));int label=switch(expected.primary()){case DISTANCE->de.dennisguse.opentracks.R.string.p02_distance;case DURATION->de.dennisguse.opentracks.R.string.p02_time;case HEART_RATE->de.dennisguse.opentracks.R.string.p02_heart_heading;case PACE_SPEED->de.dennisguse.opentracks.settings.PreferencesUtils.isReportSpeed(de.dennisguse.opentracks.settings.PreferencesUtils.getDefaultActivityTypeLocalized())?de.dennisguse.opentracks.R.string.p02_speed:de.dennisguse.opentracks.R.string.p02_pace;};assertEquals(a.getString(label),((android.widget.TextView)a.findViewById(de.dennisguse.opentracks.R.id.p05_primary_label)).getText().toString());});
                     }
                 }
             }

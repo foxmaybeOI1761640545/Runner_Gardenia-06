@@ -103,6 +103,7 @@ jobs:
         run: |
           python3 .github/scripts/collect_p04_ui.py
           python3 .github/scripts/collect_p05_ui.py
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])'; fi
       - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
         if: always() && steps.plan.outcome == 'success'
         run: python3 .github/scripts/p05_pipeline.py gate
@@ -136,6 +137,7 @@ jobs:
           name: P05-visual-${{ github.run_id }}
           path: |
             build/reports/p05-visual/
+            build/reports/p05-metrics/
             build/reports/p04-visual/
           if-no-files-found: error
           retention-days: 90

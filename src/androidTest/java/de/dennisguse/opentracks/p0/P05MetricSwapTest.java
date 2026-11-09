@@ -48,6 +48,35 @@ public class P05MetricSwapTest {
   assertEquals(DashboardMetric.DISTANCE,PreferencesUtils.getDashboardMetricLayout(ThemeUtils.Family.PRECISION).primary());
   for(var f:ThemeUtils.Family.values())if(f!=ThemeUtils.Family.PRECISION)assertEquals(DashboardMetric.HEART_RATE,PreferencesUtils.getDashboardMetricLayout(f).primary());
  }
+
+ @Test public void keyboardActivationKeepsFocusAndLongDurationsFitEveryPalette()throws Exception{
+  String oldNight=SystemThemeTestUtils.savedMode(),oldFont=SystemThemeTestUtils.shell("settings get system font_scale"),oldSize=SystemThemeTestUtils.shell("wm size"),oldDensity=SystemThemeTestUtils.shell("wm density");
+  try{
+   SystemThemeTestUtils.shell("wm size 720x1600");SystemThemeTestUtils.shell("wm density 320");SystemThemeTestUtils.shell("settings put system font_scale 1.3");
+   for(var f:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){
+    PreferencesUtils.setGardeniaTheme(f);PreferencesUtils.resetDashboardMetricLayout(f);SystemThemeTestUtils.night(dark);
+    try(var screen=ActivityScenario.launch(DashboardPreviewActivity.class)){
+     screen.onActivity(a->a.present(new DashboardState(de.dennisguse.opentracks.p0.recording.RecordingSession.Phase.FINISHED,false,false,"1234.56 km","125:25:30","—","—","--","Disconnected","Synthetic","—","Auto","Finished","—","—",null,false,false,null),List.of(),List.of()));
+     int slot=f==ThemeUtils.Family.NEON?1:0;
+     onView(withId(buttons[slot])).perform(scrollTo());
+     androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().sendKeyDownUpSync(android.view.KeyEvent.KEYCODE_TAB);
+     screen.onActivity(a->assertTrue(a.findViewById(buttons[slot]).requestFocus()));
+     onView(withId(buttons[slot])).perform(pressKey(android.view.KeyEvent.KEYCODE_ENTER));
+     screen.onActivity(a->{assertEquals(DashboardMetric.DURATION,PreferencesUtils.getDashboardMetricLayout(f).primary());assertTrue(a.findViewById(buttons[slot]).hasFocus());});
+     androidx.test.platform.app.InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+     screen.onActivity(a->{TextView value=a.findViewById(f==ThemeUtils.Family.NEON?R.id.p0_heart_rate:R.id.p02_distance_value);assertEquals("125:25:30",value.getText().toString());var text=value.getLayout();assertNotNull(text);assertEquals(value.getText().length(),text.getLineEnd(text.getLineCount()-1));for(int line=0;line<text.getLineCount();line++){assertEquals(0,text.getEllipsisCount(line));assertTrue(text.getLineWidth(line)<=text.getWidth()+1);}((android.widget.ScrollView)a.findViewById(R.id.p02_home_scroll)).scrollTo(0,0);});
+     P0UiCapture.save("p05-metric-duration-"+f.id+(dark?"-dark":"-light")+"-360-font130-synthetic");
+     var instrumentation=androidx.test.platform.app.InstrumentationRegistry.getInstrumentation();
+     var announced=instrumentation.getUiAutomation().executeAndWaitForEvent(()->screen.onActivity(a->assertTrue(a.findViewById(buttons[slot]).performClick())),event->event.getEventType()==android.view.accessibility.AccessibilityEvent.TYPE_ANNOUNCEMENT,5000);
+     try{assertFalse("Metric change must announce its new primary",announced.getText().isEmpty());}finally{announced.recycle();}
+
+    }
+   }
+  }finally{
+   SystemThemeTestUtils.restore(oldNight);SystemThemeTestUtils.shell("settings put system font_scale "+(oldFont.equals("null")?"1.0":oldFont));
+   for(String[] original:new String[][]{{"size",oldSize},{"density",oldDensity}}){var match=java.util.regex.Pattern.compile("Override (?:size|density): ([^\\r\\n]+)").matcher(original[1]);SystemThemeTestUtils.shell("wm "+original[0]+" "+(match.find()?match.group(1).trim():"reset"));}
+  }
+ }
  private static void assertRendered(DashboardPreviewActivity a,ThemeUtils.Family f,DashboardMetricLayout order){
   int[] ids=f==ThemeUtils.Family.NEON?new int[]{R.id.p0_heart_rate,R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_pace_value}:new int[]{R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_pace_value,R.id.p0_heart_rate};
   boolean speed=PreferencesUtils.isReportSpeed(PreferencesUtils.getDefaultActivityTypeLocalized());

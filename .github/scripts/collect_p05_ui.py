@@ -49,3 +49,20 @@ def collect(source, root=None, destination=Path('build/reports/p05-visual')):
 
 if __name__ == '__main__':
     collect(os.environ['GITHUB_SHA'])
+
+
+def collect_metrics(source):
+    roots=list(Path('build/outputs').glob('**/p0-ui'))
+    if len(roots)!=1:raise ValueError('Metric screenshot output missing/ambiguous')
+    root=roots[0];out=Path('build/reports/p05-metrics');out.mkdir(parents=True,exist_ok=True)
+    rows=[]
+    for family in FAMILIES:
+        for mode in ('light','dark'):
+            name=f'p05-metric-duration-{family}-{mode}-360-font130-synthetic.png'
+            raw=(root/name).read_bytes()
+            if raw[:8]!=b'\x89PNG\r\n\x1a\n' or struct.unpack('>II',raw[16:24])!=(720,1600):raise ValueError('Wrong actual long-duration native viewport')
+            shutil.copy2(root/name,out/name)
+            rows.append({'file':name,'family':family,'appearance':mode,'widthDp':360,'fontScale':1.3,'duration':'125:25:30','sha256':hashlib.sha256(raw).hexdigest(),'syntheticUiFixture':True})
+    proof={'passed':True,'sourceCommit':source,'api':35,'native':True,'screenshots':rows}
+    (out/'metric-matrix.json').write_text(json.dumps(proof,indent=2)+'\n')
+    return proof

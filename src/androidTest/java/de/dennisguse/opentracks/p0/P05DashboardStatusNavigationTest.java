@@ -195,6 +195,11 @@ public class P05DashboardStatusNavigationTest {
                         "Synthetic status-navigation strap", characteristic, new byte[]{6, (byte) 148}));
             });
             String connection = core.getHeartRatePreview().value().sample().connectionId();
+            var originalUnit=PreferencesUtils.getUnitSystem();
+            try {
+                PreferencesUtils.setUnit(de.dennisguse.opentracks.settings.UnitSystem.IMPERIAL_FEET);
+                screen.onActivity(a->{var actual=de.dennisguse.opentracks.p0.app.DashboardState.from(a,snapshot(a));assertNotNull(actual.currentGps());String expected=de.dennisguse.opentracks.data.models.SpeedFormatter.Builder().setUnit(de.dennisguse.opentracks.settings.UnitSystem.IMPERIAL_FEET).setReportSpeedOrPace(true).build(a).formatSpeed(actual.currentGps().speed());assertEquals(expected,actual.speed());assertTrue(actual.distance().contains(a.getString(R.string.unit_feet))||actual.distance().contains(a.getString(R.string.unit_mile)));});
+            } finally {PreferencesUtils.setUnit(originalUnit);}
             var metricBefore=PreferencesUtils.getDashboardMetricLayout(ThemeUtils.Family.PRECISION);
             screen.onActivity(a->{for(int button:new int[]{R.id.p05_secondary_1,R.id.p05_secondary_2,R.id.p05_secondary_3})assertTrue(a.findViewById(button).performClick());});
             assertEquals(id,core.getRecordingStatus().trackId().id());
