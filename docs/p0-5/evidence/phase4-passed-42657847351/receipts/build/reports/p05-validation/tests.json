@@ -1,0 +1,491 @@
+{
+  "passed": true,
+  "plan": {
+    "commit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+    "branch": "feature/p0-5-dashboard-settings-history",
+    "stage": 4,
+    "runId": "42657847351",
+    "fullRegression": false,
+    "versionName": "v0.1.0-p0.4",
+    "versionCode": 6775,
+    "classes": [
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+      "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+      "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+      "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+      "de.dennisguse.opentracks.p0.P02HomeUiTest",
+      "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+      "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+      "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+      "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+      "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+      "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+      "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+      "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+      "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+      "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+      "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+      "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+      "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+      "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest"
+    ],
+    "publishing": false,
+    "signed": false,
+    "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+  },
+  "helpers": {
+    "tests": 94,
+    "executed": 94,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "sourceCommit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+    "runId": "42657847351"
+  },
+  "android": {
+    "tests": 78,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 78,
+    "executed": 78,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "unit": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 124,
+    "executed": 124,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidExecuted": true,
+  "nativeVisualEvidence": {
+    "p05Layouts": 48,
+    "originalStates": 192,
+    "humanReview": "REQUIRED_AFTER_DOWNLOAD"
+  },
+  "metricScreenshots": 8,
+  "settingsScreenshots": 16,
+  "metricProcessDurability": {
+    "passed": true,
+    "commit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+    "database": "p0-durability.db",
+    "p05MetricProbe": true,
+    "p05BatchProbe": true,
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1730,
+        "batchCacheState": "staged"
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2196,
+        "batchCacheState": "cleaned-retained-completed"
+      }
+    }
+  },
+  "historyScreenshots": 32,
+  "shareReceipts": 6,
+  "gpxSchema": {
+    "passed": true,
+    "commit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+    "files": [
+      {
+        "file": "batch-multiple-Workout-18.gpx",
+        "sha256": "1ff38e8f0e0704ec0b53de2d1499108a86543fb23f5fd1b56f6406ecd07d32f6",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-multiple-Workout-19.gpx",
+        "sha256": "a9fdb30ba193437c23314b7bb027e4cad7d69938071c45a0aeabc59c134c5fee",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-multiple-Workout-20.gpx",
+        "sha256": "52cb1bf813ababadd549208ea91fc3363ca04d08d89a847772196d30a344bfc2",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-single-Workout-18.gpx",
+        "sha256": "1ff38e8f0e0704ec0b53de2d1499108a86543fb23f5fd1b56f6406ecd07d32f6",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-18.gpx",
+        "sha256": "1ff38e8f0e0704ec0b53de2d1499108a86543fb23f5fd1b56f6406ecd07d32f6",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-19.gpx",
+        "sha256": "a9fdb30ba193437c23314b7bb027e4cad7d69938071c45a0aeabc59c134c5fee",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-20.gpx",
+        "sha256": "52cb1bf813ababadd549208ea91fc3363ca04d08d89a847772196d30a344bfc2",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "5fb96c9913f77a674f68a3266962e4e7a245bb018df53ed71e5793682e946961",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "event-boundaries.gpx",
+        "sha256": "698ba9516608d2f2fbf1fb5b8747ba546c7163047543ff11199a9d9a2a46da20",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "3288302e9b216e22fe93b52a5ab41ba6495d7babcf54300caccad83f1b789d52",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "a0fecf57f9b94ed450f3ec4c33c430d33881c2ceb5d8375d0d2ed606d7cb7bdf",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "0e453b72c3dcebdfc38ae6cb229168b028cf9e5424dbced37f5932b4a0a2b145",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "b1fd6a2f85941f46246b920893f62a64ca07ca5737a0911cab3879fb18fb56b7",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "42373213f9eb337f94de15298fc6c4b5dfea9c6b39a04e6a00c76fe4ff8ff16f",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "2267c8c5d082a884a0f9ab81fb3ed9ff3555aa3c4811893b2140e9f7a31a2c17",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "9c7c7d012601a8d29b280f05fccae297e37cc3bf142dee606516b297e50410c4",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "batchProcessDurability": {
+    "passed": true,
+    "commit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+    "database": "p0-durability.db",
+    "p05MetricProbe": true,
+    "p05BatchProbe": true,
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1730,
+        "batchCacheState": "staged"
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2196,
+        "batchCacheState": "cleaned-retained-completed"
+      }
+    }
+  }
+}

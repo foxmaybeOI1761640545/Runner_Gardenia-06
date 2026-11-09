@@ -1,0 +1,1 @@
+instrumentation:com.fox.runner.debug.test/de.dennisguse.opentracks.p0.P0DurabilityRunner (target=com.fox.runner.debug)

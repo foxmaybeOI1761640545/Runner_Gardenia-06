@@ -1,0 +1,61 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5242,
+  "action": "android.intent.action.SEND",
+  "mime": "application\/zip",
+  "flags": 268435457,
+  "clip": [
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-b281adbc-37bd-4ed2-bf6c-1ecc830c7140\/RunnerGardenia-Export-20261110-005504-b281adbc-37bd-4ed2-bf6c-1ecc830c7140.zip"
+  ],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-b281adbc-37bd-4ed2-bf6c-1ecc830c7140\/RunnerGardenia-Export-20261110-005504-b281adbc-37bd-4ed2-bf6c-1ecc830c7140.zip",
+      "permission": 0,
+      "sha256": "39f9785320274450109221d6a0c22e2b841c31e8154c7e0f11e8f7c3e3c8e56e",
+      "bytes": 2714,
+      "read": true,
+      "entries": [
+        {
+          "workoutId": "18",
+          "rawSamples": 3,
+          "sha256": "1ff38e8f0e0704ec0b53de2d1499108a86543fb23f5fd1b56f6406ecd07d32f6",
+          "bytes": 2070,
+          "name": "Workout-18.gpx"
+        },
+        {
+          "workoutId": "19",
+          "rawSamples": 3,
+          "sha256": "a9fdb30ba193437c23314b7bb027e4cad7d69938071c45a0aeabc59c134c5fee",
+          "bytes": 2070,
+          "name": "Workout-19.gpx"
+        },
+        {
+          "workoutId": "20",
+          "rawSamples": 3,
+          "sha256": "52cb1bf813ababadd549208ea91fc3363ca04d08d89a847772196d30a344bfc2",
+          "bytes": 2070,
+          "name": "Workout-20.gpx"
+        }
+      ]
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2258,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": false,
+  "sourceCommit": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+  "contentContractPassed": true,
+  "expectedWorkoutIds": [
+    18,
+    19,
+    20
+  ],
+  "expectedGpxSha256": {
+    "18": "1ff38e8f0e0704ec0b53de2d1499108a86543fb23f5fd1b56f6406ecd07d32f6",
+    "19": "a9fdb30ba193437c23314b7bb027e4cad7d69938071c45a0aeabc59c134c5fee",
+    "20": "52cb1bf813ababadd549208ea91fc3363ca04d08d89a847772196d30a344bfc2"
+  }
+}

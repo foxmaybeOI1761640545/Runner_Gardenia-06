@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "source": "50bc63caf120866d8c8953a9ce7449ac30ffff98",
+  "runId": 42657847351,
+  "reportsArtifactId": 13694790936,
+  "reportsSha256": "1392e63a2d3e6eab407a3ec81d6a13bdb3f21857bf7c9dfa36133aaf1980a060",
+  "visualArtifactId": 13694900790,
+  "visualSha256": "63d1d98f86b900892ab567226fa01d2da877899faef7ec3b2f39af66ff29f295",
+  "reviewedScreenshots": 32,
+  "reviewMethod": "All four contact sheets: list, selection, ZIP/direct-GPX choice and delete confirmation across eight palettes at360dp/font1.3. Original PNG hashes and exact source verified.",
+  "receiverUid": 10149,
+  "senderUid": 10148,
+  "differentProcessPids": [
+    1730,
+    2196
+  ],
+  "gpxSchemaFiles": 16,
+  "wechat": "NEEDS_DEVICE_VALIDATION",
+  "nextPhaseAuthorized": true,
+  "physicalHardwareTested": false
+}

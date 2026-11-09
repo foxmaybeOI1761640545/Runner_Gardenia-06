@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="78" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-09T17:02:17" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.TimezoneEnvironmentTest" tests="3" failures="0" errors="0" skipped="0" time="0.013" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="emulatorSystemTimezoneIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.003" />
+    <testcase name="timezoneRuleRestoresPreviousDefaultOnFailure" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.000" />
+    <testcase name="instrumentationDefaultIsSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentTest" time="0.010" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.DashboardNavigationTest" tests="1" failures="0" errors="0" skipped="0" time="11.127" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="bottomNavigationAndSystemChangeKeepRecordingConnectionAndRealRoute" classname="de.dennisguse.opentracks.p0.DashboardNavigationTest" time="11.127" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.DashboardVisualMatrixTest" tests="1" failures="0" errors="0" skipped="0" time="137.881" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="allFamiliesSystemModesViewportsAndEightStates" classname="de.dennisguse.opentracks.p0.DashboardVisualMatrixTest" time="137.881" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" tests="10" failures="0" errors="0" skipped="0" time="176.940" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="explorerDark" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="20.965" />
+    <testcase name="precisionLight" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="19.850" />
+    <testcase name="quietLight" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="20.917" />
+    <testcase name="precisionDark" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="20.371" />
+    <testcase name="narrowScreenLargeFontKeepsNativeTouchAndReadingTargets" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="6.685" />
+    <testcase name="explorerLight" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="20.638" />
+    <testcase name="familyChoicesPersistAndRecreateTheCurrentSettingsPage" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="3.246" />
+    <testcase name="neonDark" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="20.423" />
+    <testcase name="quietDark" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="21.320" />
+    <testcase name="neonLight" classname="de.dennisguse.opentracks.p0.GardeniaThemeSystemTest" time="22.525" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P02HomeUiTest" tests="2" failures="0" errors="0" skipped="0" time="77.836" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="homeStateMatrixUsesRealRenderingInBothThemesAndScreenSizes" classname="de.dennisguse.opentracks.p0.P02HomeUiTest" time="71.626" />
+    <testcase name="homeHistoryAndSensorEntriesNavigateWithoutCreatingAWorkout" classname="de.dennisguse.opentracks.p0.P02HomeUiTest" time="6.210" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05BatchFilesTest" tests="3" failures="0" errors="0" skipped="0" time="7.755" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="missingProtectedInvalidAndInterruptedBatchesNeverExposePartialFiles" classname="de.dennisguse.opentracks.p0.P05BatchFilesTest" time="0.373" />
+    <testcase name="distinctUidReceivesSingleMultipleAndZipWithVerifiedGrantsAndEveryGpx" classname="de.dennisguse.opentracks.p0.P05BatchFilesTest" time="6.830" />
+    <testcase name="orphanAndTtlCleanupAndWorkerGuardAreReal" classname="de.dennisguse.opentracks.p0.P05BatchFilesTest" time="0.552" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05DashboardLayoutTest" tests="1" failures="0" errors="0" skipped="0" time="130.811" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="fourNativeFamiliesBothModesThreeWidthsAndTwoFontScales" classname="de.dennisguse.opentracks.p0.P05DashboardLayoutTest" time="130.811" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest" tests="2" failures="0" errors="0" skipped="0" time="14.480" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="statusNavigationPreservesRecordingConnectionAndPausedJournal" classname="de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest" time="10.506" />
+    <testcase name="compactStatusEntriesOpenRealDestinationsWithoutCreatingIdleWorkout" classname="de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest" time="3.974" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05HistoryBatchTest" tests="6" failures="0" errors="0" skipped="0" time="75.645" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="nativeDeleteConfirmationSurvivesRotationAndCancellationThenDeletesExactCount" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="5.179" />
+    <testcase name="nativeLongPressToggleLoadedOnlySelectAllRecreateAndNormalDetail" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="6.814" />
+    <testcase name="actualNativeHistorySelectionAndDialogsAcrossEightPalettesAt360LargeFont" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="50.725" />
+    <testcase name="actualChooserSupportsSingleZipDefaultAndDirectMultipleWithoutDeletingSources" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="7.058" />
+    <testcase name="protectedOrMissingMemberRejectsWholeDeleteAndDocumentFailureKeepsSources" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="0.268" />
+    <testcase name="exportResultSurvivesRefreshAndActivityRecreationAndSafUsesOriginalSnapshot" classname="de.dennisguse.opentracks.p0.P05HistoryBatchTest" time="5.601" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05MetricSwapTest" tests="3" failures="0" errors="0" skipped="0" time="49.459" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="actualTouchesSwapOnlyClickedPositionAndKeepViewsAcrossRecreation" classname="de.dennisguse.opentracks.p0.P05MetricSwapTest" time="19.310" />
+    <testcase name="unavailableHeartStillSwapsAndEachThemeKeepsItsOwnOrder" classname="de.dennisguse.opentracks.p0.P05MetricSwapTest" time="9.137" />
+    <testcase name="keyboardActivationKeepsFocusAndLongDurationsFitEveryPalette" classname="de.dennisguse.opentracks.p0.P05MetricSwapTest" time="21.012" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P05SettingsHubTest" tests="3" failures="0" errors="0" skipped="0" time="40.285" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="eightNativePalettesAtNarrowWidthAndLargeFont" classname="de.dennisguse.opentracks.p0.P05SettingsHubTest" time="22.263" />
+    <testcase name="nativeUnitRateChoicesPersistAndResetOnlyTheCurrentTheme" classname="de.dennisguse.opentracks.p0.P05SettingsHubTest" time="9.390" />
+    <testcase name="sixCategoriesRestoreAndReturnToHubWithRealDeviceAndHistoryDestinations" classname="de.dennisguse.opentracks.p0.P05SettingsHubTest" time="8.632" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" tests="2" failures="0" errors="0" skipped="0" time="7.805" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="activityRecreationRetainsCoreControls" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="1.914" />
+    <testcase name="launcherOpensP0HomeWithoutIntroduction" classname="de.dennisguse.opentracks.p0.P0ActivitySmokeTest" time="5.891" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0GpsPreparationTest" tests="13" failures="0" errors="0" skipped="0" time="18.441" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="lostGpsDoesNotPauseOrEndAndNewFixResumesWithoutInventedPoints" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="6.631" />
+    <testcase name="invalidCoordinatesAndSingleFixCannotStart" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="0.027" />
+    <testcase name="expiredPositionCannotStart" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="0.041" />
+    <testcase name="preparationAlsoHonorsTheActualRecordersStricterAccuracyFilter" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="2.251" />
+    <testcase name="timeoutNeverStartsAndContinueKeepsWaiting" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="1.145" />
+    <testcase name="validStableFixesStartAtConfirmationAndSeedOnlyLatestPoint" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="2.260" />
+    <testcase name="heartPreviewBeforeConfirmationIsNeverAssociatedWithWorkout" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="1.164" />
+    <testcase name="fixtureDatabaseCleanupCancelsPreparationBeforeDeletingRecords" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="1.268" />
+    <testcase name="waitingCreatesNoTrackTimerDistanceOrPoints" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="1.120" />
+    <testcase name="cancellationReleasesIdleResourcesWithoutEmptyWorkout" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="0.018" />
+    <testcase name="inaccuratePositionsCannotStart" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="0.017" />
+    <testcase name="cachedPositionCannotStart" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="0.041" />
+    <testcase name="foregroundRecordingKeepsSessionWhileEmulatedScreenIsOff" classname="de.dennisguse.opentracks.p0.P0GpsPreparationTest" time="2.458" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0GpxExporterTest" tests="11" failures="0" errors="0" skipped="0" time="0.309" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="heartRateOnlyWorkoutHasNoInventedGpsPoints" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.133" />
+    <testcase name="controlEventsWithCoordinatesNeverBecomeExtraGpsSamples" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.034" />
+    <testcase name="longGpsSilenceDoesNotDrawABridgeEvenWithoutAnOldSegmentMarker" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.017" />
+    <testcase name="invalidCoordinatesFailAndIncompletePrivateFileIsRemoved" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.011" />
+    <testcase name="outputFailureIsPropagatedAndProtectedWorkoutCannotExport" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.011" />
+    <testcase name="everyRawSampleAndExactMetadataSurviveWithOnlyRealGpsPoints" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.017" />
+    <testcase name="xmlEscapingDecimalCoordinatesAndLocaleRemainValid" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.017" />
+    <testcase name="gpsOnlyWorkoutExportsWithoutHeartRate" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.012" />
+    <testcase name="pausesAutomaticGapsAndIdleCreateSeparateSegments" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.017" />
+    <testcase name="legacyPointHeartRateIsExportedWithoutInventingRawNotifications" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.025" />
+    <testcase name="localDocumentStreamAndReadOnlyShareUriContainTheActualGpx" classname="de.dennisguse.opentracks.p0.P0GpxExporterTest" time="0.015" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0HeartRateUiTest" tests="1" failures="0" errors="0" skipped="0" time="4.965" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="realPanelClearsStaleContactLostAndDisconnectedDataThenAcceptsNewSession" classname="de.dennisguse.opentracks.p0.P0HeartRateUiTest" time="4.965" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0HistoryUiTest" tests="3" failures="0" errors="0" skipped="0" time="8.805" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="pausedWorkoutDetailCannotDeleteProtectedData" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="1.509" />
+    <testcase name="historyOpensExactRawStatisticsAndDeletesOnlyAfterConfirmation" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="4.021" />
+    <testcase name="exportActionsUseAndroidDocumentAndReadOnlyShareContracts" classname="de.dennisguse.opentracks.p0.P0HistoryUiTest" time="3.275" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0RecordingUiTest" tests="3" failures="0" errors="0" skipped="0" time="17.851" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="cyclingRecordingSurvivesRecreationAndBackgroundThenPausesResumesAndFinishes" classname="de.dennisguse.opentracks.p0.P0RecordingUiTest" time="8.016" />
+    <testcase name="realGpsPreviewSurvivesConsumedRecordingSnapshotsAndClearsOnDisabledProvider" classname="de.dennisguse.opentracks.p0.P0RecordingUiTest" time="7.627" />
+    <testcase name="waitingUiHasNoCoordinatesAndCancelLeavesNoWorkout" classname="de.dennisguse.opentracks.p0.P0RecordingUiTest" time="2.208" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0ResponsiveUiTest" tests="1" failures="0" errors="0" skipped="0" time="60.298" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="actualP0PagesInBothThemesAndSmallAndLargeWindows" classname="de.dennisguse.opentracks.p0.P0ResponsiveUiTest" time="60.298" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" tests="7" failures="0" errors="0" skipped="0" time="0.427" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="snapshotsPreserveRawDataAndStatisticsAcrossRepositoryReopen" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.095" />
+    <testcase name="noSensorWorkoutsRemainReadableWithoutSyntheticStatistics" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.071" />
+    <testcase name="legacyHeartRateRemainsReadableWithoutInventingRawNotifications" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.026" />
+    <testcase name="chronologicalStreamingRetainsEqualBpmAndIndependentCaptureTimes" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.029" />
+    <testcase name="deletionCascadesGpsAndHeartRateOnlyForSelectedWorkout" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.086" />
+    <testcase name="boundedHistoryAndPausedWorkoutDeletionProtection" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.102" />
+    <testcase name="failedRawBatchRollsBackEveryRow" classname="de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest" time="0.018" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" tests="2" failures="0" errors="0" skipped="0" time="0.012" timestamp="2026-11-09T17:02:17" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.007" />
+    <testcase name="callbackAfterDestroyDoesNotAccessReleasedManagers" classname="de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest" time="0.005" />
+  </testsuite>
+</testsuites>
