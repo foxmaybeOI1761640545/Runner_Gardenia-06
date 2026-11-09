@@ -1,0 +1,13 @@
+{
+  "commit": "45ff5820eeaf3b8289b5ef8ab760b62458f354b9",
+  "branch": "feature/p0-5-dashboard-settings-history",
+  "stage": 5,
+  "runId": "42664349449",
+  "fullRegression": true,
+  "versionName": "v0.1.0-p0.5",
+  "versionCode": 6776,
+  "classes": [],
+  "publishing": false,
+  "signed": false,
+  "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+}

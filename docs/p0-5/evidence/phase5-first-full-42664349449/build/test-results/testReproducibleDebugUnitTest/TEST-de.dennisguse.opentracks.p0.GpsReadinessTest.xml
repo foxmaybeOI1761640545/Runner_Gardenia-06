@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.GpsReadinessTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2026-11-09T17:26:29.681Z" hostname="runnervm7aw5e" time="0.006">
+  <properties/>
+  <testcase name="manyFixesWithinTooShortATimeCannotStart" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.001"/>
+  <testcase name="missingAccuracyNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.001"/>
+  <testcase name="fixAtStartIsNotNewAcquisition" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="invalidCoordinatesNeverStart" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="oneValidFixDoesNotStart" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="inaccurateFixNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="threeStableFreshFixesStartExactlyOnce" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.001"/>
+  <testcase name="longGapRestartsTheStableSequence" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="timeoutIsOnlyAWaitingSignalNeverAStartDecision" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="newGateAfterCancelDoesNotReuseOldReadiness" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="staleFixNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.001"/>
+  <testcase name="hugeJumpCannotStartAndRequiresANewStableSequence" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="cachedFixCapturedBeforeStartNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="nonFiniteOrNegativeAccuracyNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="invalidFixBreaksConsecutiveSequence" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="duplicateNotificationTimesCannotSatisfyStability" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="futureElapsedTimeNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="fiveSecondBoundaryIsAllowedButOlderIsNot" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.0"/>
+  <testcase name="missingMonotonicTimeNeverStarts" classname="de.dennisguse.opentracks.p0.GpsReadinessTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
