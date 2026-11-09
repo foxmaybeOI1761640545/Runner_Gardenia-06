@@ -9,3 +9,7 @@ P0GpxFiles扩展批量暂存：先检查每条存在且不受保护，复用原P
 实际门禁待执行：原生长按/切换/55条分页加载全选/重建/普通详情；单GPX、多GPX及ZIP实际Sharesheet Intent和取消；独立测试APK UID接收全部文件/原始心率/ZIP内容与权限负向对照；无效/缺失/受保护记录与文件中断、孤儿缓存及TTL；SAF快照不随随后选择变化、失败保留源记录；删除数量/二次确认取消/跨重建/删除级联；八配色360dp/1.3字体列表、多选、分享、删除32张截图与人工审查；原历史/数据库/GPX回归及所有之前选定回归；所有实际GPX经固定GPX1.1 XSD验证；真实write→force-stop→read新PID清理不完整缓存且保留已完成分享文件。未执行前不计作通过。
 
 模拟接收应用在测试APK的独立进程与UID，使用Binder调用身份核验，不把目标应用自行读取URI冒充跨应用权限。负向对照使用测试专用action避免Android自动把SEND的EXTRA_STREAM迁移为读权限；正向仍发送真实产品Intent。无微信AppID、不引入SDK/硬编码Activity。微信客户端兼容性始终NEEDS_DEVICE_VALIDATION。
+
+## 首轮编译失败：5a7b99f / 42652881294
+
+Android测试APK编译失败，未执行原生验收，未产生可用截图；不能计作测试通过。11条Java错误均在新增P05HistoryBatchTest：Intent重载配合var推断为ActivityScenario<Activity>，以及通配lifecycle/atomic导入令AtomicReference歧义。修复为显式ActivityScenario<P0HistoryActivity>及明确lifecycle导入；保留全部测试及断言。原始编译错误存于evidence/phase4-failed-42652881294，修复后重新执行完整本阶段门禁。

@@ -1,0 +1,6 @@
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:68: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:69: error: incompatible types: ActivityScenario<Activity> cannot be converted to ActivityScenario<P0HistoryActivity>
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:74: error: reference to AtomicReference is ambiguous
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:76: error: reference to AtomicReference is ambiguous
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:85: error: reference to AtomicReference is ambiguous
+src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java:89: error: reference to AtomicReference is ambiguous

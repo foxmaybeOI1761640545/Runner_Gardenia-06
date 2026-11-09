@@ -9,7 +9,8 @@ import android.content.*;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
-import androidx.lifecycle.*;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStore;
 import androidx.test.core.app.*;
 import androidx.test.platform.app.InstrumentationRegistry;
 import org.junit.*;
@@ -64,7 +65,7 @@ public class P05HistoryBatchTest {
   }finally{instrumentation.removeMonitor(monitor);}
  }
  @Test public void nativeDeleteConfirmationSurvivesRotationAndCancellationThenDeletesExactCount()throws Exception{
-  fixtures(3,true);try(var screen=ActivityScenario.launch(P0HistoryActivity.managementIntent(context))){
+  fixtures(3,true);try(ActivityScenario<P0HistoryActivity> screen=ActivityScenario.launch(P0HistoryActivity.managementIntent(context))){
    loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
    onView(withId(R.id.p05_batch_delete)).perform(click());onView(withId(android.R.id.button1)).perform(click());loaded(screen,0);
    for(var id:ids){assertNull(new WorkoutRepository(context).find(id));assertTrue(new HeartRateRepository(context).read(id).isEmpty());}
