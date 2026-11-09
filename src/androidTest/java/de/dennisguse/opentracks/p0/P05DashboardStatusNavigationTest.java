@@ -195,6 +195,14 @@ public class P05DashboardStatusNavigationTest {
                         "Synthetic status-navigation strap", characteristic, new byte[]{6, (byte) 148}));
             });
             String connection = core.getHeartRatePreview().value().sample().connectionId();
+            var metricBefore=PreferencesUtils.getDashboardMetricLayout(ThemeUtils.Family.PRECISION);
+            screen.onActivity(a->{for(int button:new int[]{R.id.p05_secondary_1,R.id.p05_secondary_2,R.id.p05_secondary_3})assertTrue(a.findViewById(button).performClick());});
+            assertEquals(id,core.getRecordingStatus().trackId().id());
+            assertSame(pointCreator,core.getTrackPointCreator());
+            assertSame(gpsHandler,core.getTrackPointCreator().getSensorManager().getGpsHandler());
+            assertEquals(connection,core.getHeartRatePreview().value().sample().connectionId());
+            PreferencesUtils.setDashboardMetricLayout(ThemeUtils.Family.PRECISION,metricBefore);
+
             clickGpsWithoutLeavingApp();
             visitDeviceManagementAndReturn();
             await(P0Activity.class, activity -> snapshot(activity).session().phase() == RecordingSession.Phase.RECORDING);

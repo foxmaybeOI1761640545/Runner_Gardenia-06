@@ -8,4 +8,6 @@
     <string name="p05_heart_connected">HR\nLinked</string>
     <string name="p05_gps_action">%1$s. Open system location settings.</string>
     <string name="p05_heart_action">Heart-rate strap: %1$s. Manage devices.</string>
+    <string name="p05_swap_action">%1$s, %2$s. Make primary.</string>
+    <string name="p05_primary_changed">Primary metric: %1$s</string>
 </resources>

@@ -69,11 +69,11 @@ public class P0HeartRateUiTest {
             });
             text(screen,context.getString(R.string.hr_value,76f));text(screen,"Synthetic SIG strap");P0UiCapture.save("p0-live-heart-rate-synthetic");
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.getTrackPointCreator().setClock(base.plusSeconds(6).toString()));
-            text(screen,context.getString(R.string.hr_stale));text(screen,context.getString(R.string.hr_empty_value));P0UiCapture.save("p0-stale-heart-rate-synthetic");
+            text(screen,context.getString(R.string.hr_stale));text(screen,"--");P0UiCapture.save("p0-stale-heart-rate-synthetic");
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->handler.get().onDataReceived(parser.parsePayload(HeartRateBluetooth.HEARTRATE,"Synthetic SIG strap",characteristic,new byte[]{4,76})));
             text(screen,context.getString(R.string.hr_contact_lost));
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{handler.get().onConnectionLost();handler.get().onConnectionStateChanged(BleConnectionSession.State.RECONNECT_WAIT);});
-            text(screen,context.getString(R.string.hr_retry));text(screen,context.getString(R.string.hr_empty_value));
+            text(screen,context.getString(R.string.hr_retry));text(screen,"--");
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->{
                 handler.get().onConnected("AA:BB:CC:DD:EE:FF","Synthetic SIG strap");handler.get().onConnectionStateChanged(BleConnectionSession.State.CONNECTED);
                 assertNull(handler.get().getStatus(base.plusSeconds(6)).lastReceived());assertFalse(handler.get().getStatus(base.plusSeconds(6)).contactLost());

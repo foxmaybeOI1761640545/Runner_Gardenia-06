@@ -68,6 +68,7 @@ public class P0Activity extends AbstractActivity {
         model.snapshot().observe(this,this::render);
         updateLocationPermission();
     }
+    @Override protected void onResume(){super.onResume();if(dashboard!=null&&model!=null&&model.snapshot().getValue()!=null)dashboard.bind(DashboardState.from(this,model.snapshot().getValue()));}
     @Override protected void onStart() {super.onStart();model.attach();}
     @Override protected void onStop() {model.detach();super.onStop();}
     private boolean hasLocation() {return ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED;}

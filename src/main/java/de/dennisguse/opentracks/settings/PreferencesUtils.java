@@ -726,6 +726,17 @@ public class PreferencesUtils {
     public static de.dennisguse.opentracks.ui.util.ThemeUtils.Family getGardeniaTheme() {
         return de.dennisguse.opentracks.ui.util.ThemeUtils.Family.fromId(sharedPreferences.getString("gardenia_theme_family","precision"));
     }
+    public static de.dennisguse.opentracks.p0.app.DashboardMetricLayout getDashboardMetricLayout(de.dennisguse.opentracks.ui.util.ThemeUtils.Family family) {
+        String stored=null;
+        try {stored=sharedPreferences.getString("gardenia_metric_layout_"+family.id,null);}catch(ClassCastException malformed) { /* Restore the family default. */ }
+        return de.dennisguse.opentracks.p0.app.DashboardMetricLayout.restoreOrDefault(stored,family==de.dennisguse.opentracks.ui.util.ThemeUtils.Family.NEON);
+    }
+    public static void setDashboardMetricLayout(de.dennisguse.opentracks.ui.util.ThemeUtils.Family family,de.dennisguse.opentracks.p0.app.DashboardMetricLayout layout) {
+        sharedPreferences.edit().putString("gardenia_metric_layout_"+family.id,layout.serialize()).apply();
+    }
+    public static void resetDashboardMetricLayout(de.dennisguse.opentracks.ui.util.ThemeUtils.Family family) {
+        sharedPreferences.edit().remove("gardenia_metric_layout_"+family.id).apply();
+    }
     public static void setGardeniaTheme(de.dennisguse.opentracks.ui.util.ThemeUtils.Family family) {
         sharedPreferences.edit().putString("gardenia_theme_family",family.id).apply();
     }

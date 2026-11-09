@@ -60,7 +60,7 @@ def run():
             if component not in registered:raise ValueError('Dedicated storage test runner is not registered in installed test APK')
             phases={}
             for phase in ('write','read'):
-                result=device('shell','am','instrument','-w','-r','-e','class','de.dennisguse.opentracks.p0.P0DurabilityTest','-e','p0DurabilityPhase',phase,'-e','timezone','Asia/Singapore',component,check=False,timeout=120)
+                result=device('shell','am','instrument','-w','-r','-e','class','de.dennisguse.opentracks.p0.P0DurabilityTest','-e','p0DurabilityPhase',phase,'-e','timezone','Asia/Singapore','-e','p05MetricProbe',os.environ.get('P05_METRIC_DURABILITY','false'),'-e','buildCommit',os.environ['GITHUB_SHA'],component,check=False,timeout=120)
                 (report/(phase+'.txt')).write_text(result.stdout)
                 if result.returncode:raise RuntimeError('Instrumentation '+phase+' failed: '+result.stdout)
                 phases[phase]=parse_result(result.stdout)
@@ -71,7 +71,7 @@ def run():
             if phases['write']['pid']==phases['read']['pid']:raise ValueError('Read phase did not run in a new process')
             timezone=device('shell','getprop','persist.sys.timezone').stdout.strip()
             if timezone!='Asia/Singapore':raise ValueError('Device default timezone was not Singapore')
-            proof={'passed':True,'commit':os.environ['GITHUB_SHA'],'database':'p0-durability.db','forceStopped':True,'timezone':timezone,'phases':phases}
+            proof={'passed':True,'commit':os.environ['GITHUB_SHA'],'database':'p0-durability.db','p05MetricProbe':os.environ.get('P05_METRIC_DURABILITY')=='true','forceStopped':True,'timezone':timezone,'phases':phases}
             (report/'result.json').write_text(json.dumps(proof,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:(report/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15).stdout)

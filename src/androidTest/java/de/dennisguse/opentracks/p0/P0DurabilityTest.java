@@ -49,6 +49,27 @@ public class P0DurabilityTest {
         assertTrue(List.of("both","write","read").contains(phase));assertEquals("Asia/Singapore",java.util.TimeZone.getDefault().getID());
         if(!phase.equals("read"))write();
         if(!phase.equals("write"))read();
+        if("true".equals(InstrumentationRegistry.getArguments().getString("p05MetricProbe"))){
+            var families=de.dennisguse.opentracks.ui.util.ThemeUtils.Family.values();
+            var originalFamily=de.dennisguse.opentracks.settings.PreferencesUtils.getGardeniaTheme();
+            for(var family:families){
+                var expected=de.dennisguse.opentracks.p0.app.DashboardMetricLayout.defaults(family==de.dennisguse.opentracks.ui.util.ThemeUtils.Family.NEON).swapSecondary(family.ordinal()%3);
+                if(phase.equals("write"))de.dennisguse.opentracks.settings.PreferencesUtils.setDashboardMetricLayout(family,expected);
+                else {
+                    assertEquals(expected,de.dennisguse.opentracks.settings.PreferencesUtils.getDashboardMetricLayout(family));
+                    de.dennisguse.opentracks.settings.PreferencesUtils.setGardeniaTheme(family);
+                    try(var screen=androidx.test.core.app.ActivityScenario.launch(de.dennisguse.opentracks.p0.app.P0Activity.class)){
+                        screen.onActivity(a->{assertEquals(expected,de.dennisguse.opentracks.settings.PreferencesUtils.getDashboardMetricLayout(family));assertNotNull(a.findViewById(de.dennisguse.opentracks.R.id.p05_primary_label));});
+                    }
+                }
+            }
+            de.dennisguse.opentracks.settings.PreferencesUtils.setGardeniaTheme(originalFamily);
+            var prefs=androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
+            String source=InstrumentationRegistry.getArguments().getString("buildCommit");
+            if(phase.equals("write"))assertTrue(prefs.edit().putString("p05_metric_probe_source",source).commit());
+            else {assertEquals(source,prefs.getString("p05_metric_probe_source",null));for(var family:families)de.dennisguse.opentracks.settings.PreferencesUtils.resetDashboardMetricLayout(family);}
+        }
+
         if(!phase.equals("both")) {
             assertEquals("p0-durability.db",((Startup)context.getApplicationContext()).getDatabaseName());
             try(android.database.sqlite.SQLiteDatabase independent=android.database.sqlite.SQLiteDatabase.openDatabase(context.getDatabasePath("p0-durability.db").getPath(),null,android.database.sqlite.SQLiteDatabase.OPEN_READONLY);

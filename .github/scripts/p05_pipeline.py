@@ -210,6 +210,11 @@ def gate():
                     raise ValueError('Matching complete native UI evidence is required')
             proof['nativeVisualEvidence'] = {'p05Layouts': 48, 'originalStates': 192,
                                            'humanReview': 'REQUIRED_AFTER_DOWNLOAD'}
+            if config['stage'] in (2,5):
+                process=json.loads(Path('build/reports/p0-durability/result.json').read_text())
+                if (not process.get('passed') or not process.get('p05MetricProbe') or process.get('commit')!=plan['commit'] or process['phases']['write']['pid']==process['phases']['read']['pid']):
+                    raise ValueError('Actual separate-process metric persistence evidence missing')
+                proof['metricProcessDurability']=process
             # Final process/GPX/offline gates remain mandatory even if Gradle itself is green.
             if config['stage'] == 5:
                 for key, location in [('processDurability', 'p0-durability'),

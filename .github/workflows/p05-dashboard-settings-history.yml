@@ -88,8 +88,10 @@ jobs:
       - name: Final actual generated GPX 1.1 Schema verification
         if: always() && steps.plan.outputs.stage == '5'
         run: python3 .github/scripts/verify_p0_gpx.py
-      - name: Final database force-stop and genuinely new instrumentation process
-        if: steps.plan.outputs.stage == '5'
+      - name: Database and metric preferences survive a genuinely new process
+        if: steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '5'
+        env:
+          P05_METRIC_DURABILITY: 'true'
         run: |
           ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
           python3 .github/scripts/p0_durability.py

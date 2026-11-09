@@ -42,13 +42,19 @@ public class P0RecordingUiTest {
         if(boundService==null)boundService=((TrackRecordingService.Binder)serviceRule.bindService(new Intent(context,TrackRecordingService.class))).getService();
         return boundService;
     }
+    private String savedRate;
+    private de.dennisguse.opentracks.settings.UnitSystem savedUnit;
     @Before public void before() throws Exception {
+        savedRate=PreferencesUtils.getString(R.string.stats_rate_key,context.getString(R.string.stats_rate_default));savedUnit=PreferencesUtils.getUnitSystem();PreferencesUtils.setUnit(de.dennisguse.opentracks.settings.UnitSystem.METRIC);PreferencesUtils.setString(R.string.stats_rate_key,R.string.stats_rate_speed);
+
         // Espresso coordinates must not race the platform window animation after recreate/background.
         for(int i=0;i<animationNames.length;i++){animationValues[i]=SystemThemeTestUtils.shell("settings get global "+animationNames[i]);SystemThemeTestUtils.shell("settings put global "+animationNames[i]+" 0");}
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         sampling=PreferencesUtils.getString(R.string.min_sampling_interval_key,"0");distance=PreferencesUtils.getString(R.string.recording_distance_interval_key,"5");activityType=PreferencesUtils.getDefaultActivityTypeLocalized();
     }
     @After public void after() throws Exception {
+        PreferencesUtils.setString(R.string.stats_rate_key,savedRate);PreferencesUtils.setUnit(savedUnit);
+
         if(boundService!=null)serviceRule.unbindService();
         TestEnvironmentUtils.stopTrackRecordingService();TestEnvironmentUtils.awaitTrackRecordingServiceDestroyed();new SessionStore(context).save(RecordingSession.ready());
         PreferencesUtils.setString(R.string.min_sampling_interval_key,sampling);PreferencesUtils.setString(R.string.recording_distance_interval_key,distance);PreferencesUtils.setDefaultActivityLocalized(activityType);
@@ -96,7 +102,7 @@ public class P0RecordingUiTest {
         AtomicReference<String> value=new AtomicReference<>();
         screen.onActivity(a->{
             StringBuilder text=new StringBuilder();
-            for(int id:new int[]{R.id.p0_metrics,R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_speed_value,R.id.p02_pace_value,R.id.p02_status_detail})text.append(((TextView)a.findViewById(id)).getText()).append("\n");
+            for(int id:new int[]{R.id.p0_metrics,R.id.p02_distance_value,R.id.p02_time_value,R.id.p02_pace_value,R.id.p02_status_detail})text.append(((TextView)a.findViewById(id)).getText()).append("\n");
             value.set(text.toString());
         });
         return value.get();
@@ -123,7 +129,10 @@ public class P0RecordingUiTest {
             while(!metrics(screen).contains("1.300000")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(50);
             SystemClock.sleep(2200); // Multiple UI ticks after the recorder has consumed the one GPS event.
             String displayed=metrics(screen);assertTrue(displayed,displayed.contains("1.300000, 103.800000"));
-            assertTrue(displayed,displayed.contains("±2.0 m"));assertTrue(displayed,displayed.contains("10.8 km/h"));assertTrue(displayed,displayed.contains("5:33 /km"));
+            assertTrue(displayed,displayed.contains("±2.0 m"));assertTrue(displayed,displayed.contains("10.8 km/h"));PreferencesUtils.setString(R.string.stats_rate_key,R.string.stats_rate_pace);
+            screen.onActivity(a->a.onWindowFocusChanged(true));
+            deadline=SystemClock.uptimeMillis()+1500;while(!metrics(screen).contains("5:33 /km")&&SystemClock.uptimeMillis()<deadline)SystemClock.sleep(25);
+            assertTrue(metrics(screen),metrics(screen).contains("5:33 /km"));
             assertNotNull(core.getGpsPreview());
             InstrumentationRegistry.getInstrumentation().runOnMainSync(()->core.getTrackPointCreator().getSensorManager().getGpsHandler().onSensorDeactivated());
             deadline=SystemClock.uptimeMillis()+5000;

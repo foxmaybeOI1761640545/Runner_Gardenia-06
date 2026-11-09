@@ -58,7 +58,11 @@ public class P02HomeUiTest {
         var match=java.util.regex.Pattern.compile("Override (?:size|density): ([^\\r\\n]+)").matcher(original);
         shell("wm "+kind+" "+(match.find()?match.group(1).trim():"reset"));
     }
+    private String savedRate;
+    private de.dennisguse.opentracks.settings.UnitSystem savedUnit;
     @Before public void before()throws Exception {
+        savedRate=PreferencesUtils.getString(R.string.stats_rate_key,context.getString(R.string.stats_rate_default));savedUnit=PreferencesUtils.getUnitSystem();PreferencesUtils.setUnit(de.dennisguse.opentracks.settings.UnitSystem.METRIC);PreferencesUtils.setString(R.string.stats_rate_key,R.string.stats_rate_speed);
+
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
         gps=PreferencesUtils.getString(R.string.settings_sensor_gps_key,SensorType.INTERNAL.getPreferenceValue());heart=HeartRateCommands.selected();
         theme=PreferencesUtils.getString(R.string.theme_key,context.getString(R.string.theme_default));activity=PreferencesUtils.getDefaultActivityTypeLocalized();
@@ -70,6 +74,8 @@ public class P02HomeUiTest {
         HeartRateCommands.setConnectionEnabled(context,true);HeartRateCommands.setAutoReconnect(context,true);
     }
     @After public void after()throws Exception {
+        PreferencesUtils.setString(R.string.stats_rate_key,savedRate);PreferencesUtils.setUnit(savedUnit);
+
         if(core!=null){main(()->{core.cancelGpsAcquisition();core.endCurrentTrack();core.stopIdleSensors();});rule.unbindService();}
         TestEnvironmentUtils.stopTrackRecordingService();TestEnvironmentUtils.awaitTrackRecordingServiceDestroyed();
         new SessionStore(context).save(RecordingSession.ready());TestEnvironmentUtils.deleteAllTracks();
@@ -102,7 +108,7 @@ public class P02HomeUiTest {
             if(Set.of("gps-ready","recording","resumed").contains(state))assertEquals(context.getString(R.string.p02_gps_ready),detail);
             if(state.equals("gps-lost"))assertEquals(context.getString(R.string.p02_gps_weak),detail);
             if(Set.of("idle","acquiring","paused","gps-lost").contains(state)) {
-                assertEquals("—",((TextView)a.findViewById(R.id.p02_speed_value)).getText().toString());
+                assertEquals("—",((TextView)a.findViewById(R.id.p02_pace_value)).getText().toString());
                 assertEquals("—",((TextView)a.findViewById(R.id.p02_pace_value)).getText().toString());
                 assertFalse(a.findViewById(R.id.p0_metrics).isShown());
             }
@@ -157,7 +163,7 @@ public class P02HomeUiTest {
                 assertNull(TrackRecordingService.activeTrackId(context));capture(screen,profile,"acquiring",R.id.p0_cancel_gps);
                 P0GpsPreparationTest.ready(core);waitText(screen,R.id.p02_status_detail,context.getString(R.string.p02_gps_ready));
                 capture(screen,profile,"gps-ready",R.id.p0_pause,R.id.p0_finish);
-                fix(12,1.300324);waitText(screen,R.id.p02_speed_value,"10.8 km/h");
+                fix(12,1.300324);waitText(screen,R.id.p02_pace_value,"10.8 km/h");
                 capture(screen,profile,"recording",R.id.p0_pause,R.id.p0_finish);
                 main(()->{core.getTrackPointCreator().setClock(base.plusSeconds(20).toString());core.newGpsStatus(GpsStatusValue.GPS_SIGNAL_LOST);});
                 waitText(screen,R.id.p02_status_detail,context.getString(R.string.p02_gps_weak));assertTrue(core.isRecording());
@@ -176,7 +182,7 @@ public class P02HomeUiTest {
                 waitText(screen,R.id.p0_heart_rate,context.getString(R.string.hr_value,76f));
                 capture(screen,profile,"heart-connected",R.id.p0_pause,R.id.p0_finish);
                 main(()->{var hr=core.getTrackPointCreator().getSensorManager().getHeartRateHandler();hr.onConnectionLost();hr.onConnectionStateChanged(BleConnectionSession.State.RECONNECT_WAIT);});
-                waitText(screen,R.id.p02_heart_state,context.getString(R.string.hr_retry));waitText(screen,R.id.p0_heart_rate,context.getString(R.string.hr_empty_value));
+                waitText(screen,R.id.p02_heart_state,context.getString(R.string.hr_retry));waitText(screen,R.id.p0_heart_rate,"--");
                 capture(screen,profile,"heart-disconnected",R.id.p0_pause,R.id.p0_finish);
                 screen.onActivity(a->new ViewModelProvider(a).get(P0RecordingViewModel.class).finish());waitText(screen,R.id.p0_recording_state,context.getString(R.string.p0_finished));
             }

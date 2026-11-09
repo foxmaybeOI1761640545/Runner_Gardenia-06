@@ -22,29 +22,28 @@
           <com.google.android.material.button.MaterialButton android:id="@+id/p0_location_settings" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p02_location_settings" android:visibility="gone" />
         </LinearLayout>
         <TextView android:id="@+id/p0_error" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textColor="?attr/colorError" android:accessibilityLiveRegion="polite" android:visibility="gone" />
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="18dp" android:paddingBottom="18dp">
-          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:letterSpacing="0.10" android:gravity="start" />
-          <TextView android:id="@+id/p02_distance_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:textSize="74sp" android:gravity="start" android:textColor="?attr/gardeniaAccentText" android:layout_marginTop="6dp" android:fontFamily="sans-serif-condensed" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="18dp" android:paddingBottom="18dp" android:id="@+id/p05_primary_metric">
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:letterSpacing="0.10" android:gravity="start" android:id="@+id/p05_primary_label" />
+          <TextView android:id="@+id/p02_distance_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:textSize="74sp" android:gravity="start" android:textColor="?attr/gardeniaAccentText" android:layout_marginTop="6dp" android:fontFamily="sans-serif-condensed" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="24sp" app:autoSizeMaxTextSize="74sp" app:autoSizeStepGranularity="1sp" android:maxLines="2" />
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_metric_card" android:layout_marginBottom="14dp">
           <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOutlineVariant" />
           <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">
-              <TextView android:id="@+id/p02_time_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_time" android:layout_marginTop="5dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp" android:id="@+id/p05_secondary_1" android:clickable="true" android:focusable="true" android:minHeight="48dp" android:foreground="?attr/selectableItemBackground">
+              <TextView android:id="@+id/p02_time_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:importantForAccessibility="no" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="16sp" app:autoSizeMaxTextSize="25sp" app:autoSizeStepGranularity="1sp" android:maxLines="2" />
+              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_time" android:layout_marginTop="5dp" android:id="@+id/p05_secondary_1_label" android:importantForAccessibility="no" />
             </LinearLayout>
             <View android:layout_width="1dp" android:layout_height="match_parent" android:background="?attr/colorOutlineVariant" />
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">
-              <TextView android:id="@+id/p02_pace_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_pace" android:layout_marginTop="5dp" />
-              <TextView android:id="@+id/p02_speed_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:layout_marginTop="4dp" android:textSize="11sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp" android:id="@+id/p05_secondary_2" android:clickable="true" android:focusable="true" android:minHeight="48dp" android:foreground="?attr/selectableItemBackground">
+              <TextView android:id="@+id/p02_pace_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:importantForAccessibility="no" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="16sp" app:autoSizeMaxTextSize="25sp" app:autoSizeStepGranularity="1sp" android:maxLines="2" />
+              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_pace" android:layout_marginTop="5dp" android:id="@+id/p05_secondary_2_label" android:importantForAccessibility="no" />
             </LinearLayout>
           </LinearLayout>
           <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?attr/colorOutlineVariant" />
           <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false">
-            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">
-              <TextView android:id="@+id/p0_heart_rate" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" />
-              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_heart_heading" android:layout_marginTop="5dp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp" android:id="@+id/p05_secondary_3" android:clickable="true" android:focusable="true" android:minHeight="48dp" android:foreground="?attr/selectableItemBackground">
+              <TextView android:id="@+id/p0_heart_rate" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:importantForAccessibility="no" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="16sp" app:autoSizeMaxTextSize="25sp" app:autoSizeStepGranularity="1sp" android:maxLines="2" />
+              <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_heart_heading" android:layout_marginTop="5dp" android:id="@+id/p05_secondary_3_label" android:importantForAccessibility="no" />
             </LinearLayout>
             <View android:layout_width="1dp" android:layout_height="match_parent" android:background="?attr/colorOutlineVariant" />
             <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:padding="10dp">

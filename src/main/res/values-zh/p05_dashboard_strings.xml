@@ -8,4 +8,6 @@
     <string name="p05_heart_connected">心率\n已连接</string>
     <string name="p05_gps_action">%1$s。打开系统定位设置。</string>
     <string name="p05_heart_action">心率带：%1$s。打开设备管理。</string>
+    <string name="p05_swap_action">%1$s，%2$s。设为主显示。</string>
+    <string name="p05_primary_changed">主显示已切换为：%1$s</string>
 </resources>
