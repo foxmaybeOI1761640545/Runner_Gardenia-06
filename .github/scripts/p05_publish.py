@@ -38,7 +38,8 @@ def publish(api,folder=Path('dist'),verify_bundle=None):
     verify_tag(api,info)
     title='[TEST][P0.5] '+VERSION;body=(folder/'RELEASE_NOTES.md').read_text()
     manifest=json.loads((folder/'ARTIFACT-MANIFEST.json').read_text())
-    names=sorted(manifest)+['ARTIFACT-MANIFEST.json']
+    # A partially uploaded draft must already expose version evidence on retry.
+    names=['build-info.json']+sorted(n for n in manifest if n!='build-info.json')+['ARTIFACT-MANIFEST.json']
     payloads={name:(folder/name).read_bytes() for name in names}
     def find():
         rows=[];page=1
