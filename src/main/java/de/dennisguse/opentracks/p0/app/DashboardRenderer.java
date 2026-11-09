@@ -59,8 +59,13 @@ public final class DashboardRenderer {
             String text=switch(metric){case DISTANCE->value.distance();case DURATION->value.duration();case PACE_SPEED->speed?value.speed():value.pace();case HEART_RATE->value.heartFresh()?value.bpm():"--";};
             String title=activity.getString(switch(metric){case DISTANCE->R.string.p02_distance;case DURATION->R.string.p02_time;case PACE_SPEED->speed?R.string.p02_speed:R.string.p02_pace;case HEART_RATE->R.string.p02_heart_heading;});
             ((TextView)b.getRoot().findViewById(labels[i])).setText(title);
+            if(i==0&&family==ThemeUtils.Family.NEON){
+                // A wrap-content TextView can reserve its original 72sp height
+                // while auto-sizing only the glyphs. Set its measured text size.
+                androidx.core.widget.TextViewCompat.setAutoSizeTextTypeWithDefaults(views[i],androidx.core.widget.TextViewCompat.AUTO_SIZE_TEXT_TYPE_NONE);
+                views[i].setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP,metric==DashboardMetric.HEART_RATE?(value.heartFresh()?70:30):40);
+            }
             readout(views[i],text,i==0?.25f:.5f);
-            if(i==0&&family==ThemeUtils.Family.NEON)androidx.core.widget.TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(views[i],24,metric==DashboardMetric.HEART_RATE&&!value.heartFresh()?30:70,1,android.util.TypedValue.COMPLEX_UNIT_SP);
             if(i>0){final int slot=i-1;View button=b.getRoot().findViewById(containers[slot]);button.setContentDescription(activity.getString(R.string.p05_swap_action,title,text));
                 if(!button.hasOnClickListeners())androidx.core.view.ViewCompat.setAccessibilityDelegate(button,new androidx.core.view.AccessibilityDelegateCompat(){@Override public void onInitializeAccessibilityNodeInfo(View host,androidx.core.view.accessibility.AccessibilityNodeInfoCompat info){super.onInitializeAccessibilityNodeInfo(host,info);info.setClassName(android.widget.Button.class.getName());}});
                 if(!button.hasOnClickListeners())button.setOnClickListener(clicked->{var next=PreferencesUtils.getDashboardMetricLayout(family).swapSecondary(slot);PreferencesUtils.setDashboardMetricLayout(family,next);bindMetrics(latest);clicked.requestFocus();clicked.announceForAccessibility(activity.getString(R.string.p05_primary_changed,((TextView)b.getRoot().findViewById(R.id.p05_primary_label)).getText()));});
