@@ -1,0 +1,16 @@
+{
+  "passed": false,
+  "source": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "signingWorkflowCommit": "7f586e6848f43922e6e26a1dc8bcb30c8e4f89e9",
+  "runId": "42754884300",
+  "jobId": 129626935069,
+  "artifactId": 13735122739,
+  "artifactSha256": "6e16c814863b1fc3725685e2bb0dce0f2e79cd23c56391e8fca33a54e9b23315",
+  "candidateArtifactId": 13734494648,
+  "candidateArtifactSha256": "ed55a93d986c7c54a0271427293e4b3859c5c48893f8cc0b6f88eef8dc57e7ce",
+  "apkSha256": "9603a836bdc51b15fb3e5390709e30a46c3496e6d4560e594426554ffe8af042",
+  "apkSignedAndVerified": true,
+  "runtimePassed": false,
+  "failure": "Navigation harness sent consecutive Back events before ListPreference dialog dismissal. Last actual native window and screenshot show Settings hub, not workout.",
+  "next": "Wait for Preferred units, then Hub category, then Recording after separate Back events. Reuse identical original candidate bytes; no build/sign/key step."
+}
