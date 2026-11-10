@@ -61,7 +61,7 @@ public class P05SettingsHubTest {
    for(String category:P05SettingsHubFragment.CATEGORIES){
     tap(settings,"p05_category_"+category);
     settings.recreate();settings.onActivity(a->{assertTrue(a.findViewById(R.id.p03_settings).isSelected());if(category.equals("appearance"))assertTrue(page(a) instanceof de.dennisguse.opentracks.settings.GardeniaThemeSettingsFragment);else assertEquals(category,((P05SettingsSectionFragment)page(a)).category());});
-    if(category.equals("info"))settings.onActivity(a->{assertEquals(BuildConfig.VERSION_NAME,page(a).findPreference("p05_version").getSummary());assertEquals(Integer.toString(BuildConfig.VERSION_CODE),page(a).findPreference("p05_build").getSummary());});
+    if(category.equals("info"))settings.onActivity(a->{String actualLabel=context.getApplicationInfo().loadLabel(context.getPackageManager()).toString();assertTrue(actualLabel.contains("Runner Gardenia"));assertEquals(actualLabel,page(a).findPreference("p05_app_name").getSummary());assertEquals(BuildConfig.VERSION_NAME,page(a).findPreference("p05_version").getSummary());assertEquals(Integer.toString(BuildConfig.VERSION_CODE),page(a).findPreference("p05_build").getSummary());});
     if(category.equals("devices")){tap(settings,"p05_manage_devices");finishDestination(P0SensorsActivity.class,R.id.p0_sensor_container);}
     if(category.equals("history")){tap(settings,"p05_manage_history");finishDestination(P0HistoryActivity.class,R.id.p0_history_list);}
     back(settings);settings.onActivity(a->{assertTrue(page(a) instanceof P05SettingsHubFragment);assertEquals(6,page(a).getPreferenceScreen().getPreferenceCount());});

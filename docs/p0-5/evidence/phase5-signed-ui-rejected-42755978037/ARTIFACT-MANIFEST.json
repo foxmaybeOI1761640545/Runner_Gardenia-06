@@ -1,0 +1,13 @@
+{
+  "DEVELOPMENT_COMMITS.txt": "0e1de5031c272021a7bb96454c3a397d15d116597ef30b21e6ca8bfbd0c9e417",
+  "RELEASE_NOTES.md": "b61350559b2ecfdc4c25e90c7baf83601b42ab5ffc7877bbc3701edf0ea691fd",
+  "RunnerGardenia-P0-Release.apk": "9603a836bdc51b15fb3e5390709e30a46c3496e6d4560e594426554ffe8af042",
+  "SHA256SUMS": "83cad1a7c3d35c163222c9f2eceb3a3acdbd8de3dc7ea1c078cfcc72849b96c7",
+  "build-info.json": "7d3e105d1b26dc23610876f2377838b298b0912c3d34b4e22c7ac19d51f120e9",
+  "key-test-receipts.zip": "c4652119c90c6036a42cdad1df556d2409eaca0928f9e1c816a2271275a90dbb",
+  "native-theme-smoke.json": "953e046d34c1db1aa1867a8d24c24ad5e3436ed79475fa827b9c1065598cc366",
+  "runtime-recovery.json": "7aaffafbaec78ca4482f53ffa63c82fb463b2d17061d9d3780be7077705c64b8",
+  "runtime-smoke.json": "5b1de08783fb4068689688e767d4ea206c77d7da4a8d3cd8e646b536a745f37b",
+  "test-summary.json": "960112abe5ad1a96750b076842d4f20769b7701bbea2e968924ee8b4c730d1da",
+  "theme-screenshots.zip": "a068af9598092a2ef79d060a8d2c5ca409e2d7e0e46e4f222d6053aa5537b38c"
+}

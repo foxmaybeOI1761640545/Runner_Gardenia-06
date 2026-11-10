@@ -1,0 +1,23 @@
+{
+  "source": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "apkSha256": "9603a836bdc51b15fb3e5390709e30a46c3496e6d4560e594426554ffe8af042",
+  "originalSigningRunId": "42754884300",
+  "originalSigningWorkflowCommit": "7f586e6848f43922e6e26a1dc8bcb30c8e4f89e9",
+  "candidateArtifactId": 13734494648,
+  "candidateArtifactSha256": "ed55a93d986c7c54a0271427293e4b3859c5c48893f8cc0b6f88eef8dc57e7ce",
+  "recoveryRunId": "42755978037",
+  "recoveryWorkflowCommit": "bfce33f771052d7613c06fad3c0d765acb4dd5ce",
+  "harnessSha256": "74a078ed9376631d785e3dc868e276bcd7424cf5be4c16f719981318a921167b",
+  "helpers": {
+    "tests": 104,
+    "executed": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "sourceCommit": "bfce33f771052d7613c06fad3c0d765acb4dd5ce",
+    "runId": "42755978037"
+  },
+  "rebuilt": false,
+  "signedAgain": false
+}

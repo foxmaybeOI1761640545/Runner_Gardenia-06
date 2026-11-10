@@ -35,3 +35,11 @@ GitHub attempt1在创建Job前因内部服务器错误停止（0 Job/未执行�
 但实际运行验收失败，不能宣称升级/运行通过：偏好对话框点击后连续两次Back与关闭动画竞争，最后截图/原生XML确认为Settings Hub，随后找不到运动状态控件。原报告Artifact13735122739摘要6e16c814863b1fc3725685e2bb0dce0f2e79cd23c56391e8fca33a54e9b23315已核验，失败截图、窗口、日志与签名优化证明归档[evidence/phase5-signed-failed-42754884300](evidence/phase5-signed-failed-42754884300)。
 
 修复仅在新运行验收脚本中逐页等待实际原生目的页：Preferred units→Back→Theme and appearance→Back→Recording；原业务/原测试/版本/签名/发布代码不变，原c509全量门禁仍有效。专用恢复工作流没有Gradle构建、签名Secrets或密钥步骤；严格校验原失败job仅运行步骤失败、原签名构建成功、固定candidate Artifact身份/摘要、原APK完整签名/哈希、原全测报告及冻结源码，并重新执行完整实际运行/升级/80图/分享门禁。恢复只能更改新运行脚本/工作流/宿主辅助测试及报告，任何产品/原测试/版本/旧门禁改动均拒绝。新增宿主测试加原回归104/104/0/0/0通过；与原APK全测辅助102项分别记录。尚未发布。
+
+## 签名包人工审图拒绝：42755978037
+
+恢复工作流42755978037整体SUCCESS，同一9603…APK逐字节与原签名候选一致，独立v2密码学签名/内容摘要/Manifest复核通过。实际P0.4覆盖升级保留设备/单位/速率/主题、原GPS1点及原始心率2样本；新增GPS34点/22.48m、暂停恢复2段、force-stop恢复/GPX1.1通过。80个实际原生页面、8组指标新进程持久化/当前主题恢复默认、4组ZIP及直接多GPX分享且数据库签名不变通过。正式Artifact13736925719 SHA=c0a7bc4334ea0ca55695086caeceb9847332c10a1b3041df793fd1bdfa191a14已下载核验。
+
+但人工查看前6类48张签名截图时发现应用信息仍显示OpenTracks（原R.string.app_name），与Manifest实际Runner Gardenia P0标签不同，因此人工UI门禁拒绝，不能发布。剩余历史等4类32图未继续审查，不宣称80图均人工通过。Quiet浅色设置Hub在关闭动画的稳定截图中标题/状态栏正确，原过渡帧问题已澄清。
+
+修复设置页使用ApplicationInfo.loadLabel实际应用标签，增强原Android测试对实际标签/Runner Gardenia品牌断言，并在正式签名截图检查应用标签。同步把已验证的逐页Back等待集成回正式运行验收脚本，保留所有原GPS/恢复/数据断言。产品源码发生这一实际修复，必须新的精确源码全量测试和原固定密钥构建/升级/截图审查；不能把旧候选作为最终发布。旧候选、成功运行收据与人工拒绝截图归档[evidence/phase5-signed-ui-rejected-42755978037](evidence/phase5-signed-ui-rejected-42755978037)。P0.5Tag/Release尚未创建，版本6776保留同一未发布分配；所有旧发布不变。

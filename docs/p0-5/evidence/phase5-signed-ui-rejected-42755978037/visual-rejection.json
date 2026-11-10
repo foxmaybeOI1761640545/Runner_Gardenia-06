@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "source": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "formalArtifactId": 13736925719,
+  "run": "42755978037",
+  "automaticNativePages": 80,
+  "humanReviewedPages": 48,
+  "humanReviewedCategories": [
+    "home",
+    "hub",
+    "appearance",
+    "motion",
+    "info",
+    "heart"
+  ],
+  "remainingUnreviewedPages": 32,
+  "rejection": "App information displays upstream OpenTracks rather than actual Runner Gardenia application label. Do not publish this APK.",
+  "apkSha256": "9603a836bdc51b15fb3e5390709e30a46c3496e6d4560e594426554ffe8af042",
+  "upgradeAndRuntimeGatePassed": true,
+  "quietLightTransitionResolvedInStableSignedCapture": true,
+  "next": "Fix native app label + actual label assertion, integrate waited navigation into standard smoke, run full exact-source regression then new original-key build/upgrade/native review. Old candidate remains archived; no Release/Tag created."
+}

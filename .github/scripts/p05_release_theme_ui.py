@@ -122,6 +122,8 @@ def capture(device,dump,screenshot,tap,start,output):
                 select('Workout and display');await_page('motion');photo(family,mode,'motion');back('hub');select('App information');tree,_=await_page('info')
                 texts={n.get('text') for n in tree.iter('node')}
                 if VERSION not in texts or str(info['versionCode']) not in texts:raise ValueError('Actual formal app info version differs')
+                expected_label=next(n.text for n in ET.parse('src/main/res/values/p0.xml').getroot() if n.get('name')=='p0_title')
+                if expected_label not in texts:raise ValueError('App information must display the actual Runner Gardenia application label')
                 photo(family,mode,'info');back('hub');back('home');photo(family,mode,'home');tap('p0_devices');await_page('heart');photo(family,mode,'heart');back('home');tap('p0_all_history');await_page('history');photo(family,mode,'history')
                 select('Synthetic retained P0 workout',long=True);await_page('selection');tap('p05_batch_select_all');photo(family,mode,'selection');tap('p05_batch_share');await_page('share');photo(family,mode,'share')
                 if mode=='light':actual_share(family,'zip')

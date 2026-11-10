@@ -206,7 +206,9 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             speed_value=fields.get(PACKAGE+':id/p02_pace_value','')
             # Use the actual native settings UI to switch the same PACE_SPEED slot.
             tap('p03_settings');wait_text('Workout and display');tap_text('Workout and display');wait_text('Preferred rate');tap_text('Preferred rate');tap_text('Pace (min/km)')
-            device('shell','input','keyevent','4');device('shell','input','keyevent','4');wait_text('Recording')
+            wait_text('Preferred units')
+            device('shell','input','keyevent','4');wait_text('Theme and appearance')
+            device('shell','input','keyevent','4');wait_text('Recording')
             for index in range(3):device('emu','geo','fix','103.8','1.30014','12','8','4');time.sleep(1)
             reveal('p0_metrics');metrics=dump();fields={n.get('resource-id'):n.get('text','') for n in metrics.iter('node')}
             pace_value=fields.get(PACKAGE+':id/p02_pace_value','')
