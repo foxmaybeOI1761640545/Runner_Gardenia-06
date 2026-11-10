@@ -1,0 +1,61 @@
+> Task :clean UP-TO-DATE
+> Task :preBuild UP-TO-DATE
+> Task :preReproducibleReleaseBuild UP-TO-DATE
+> Task :mergeReproducibleReleaseJniLibFolders
+> Task :mergeReproducibleReleaseNativeLibs NO-SOURCE
+> Task :stripReproducibleReleaseDebugSymbols NO-SOURCE
+> Task :extractReproducibleReleaseNativeSymbolTables NO-SOURCE
+> Task :mergeReproducibleReleaseNativeDebugMetadata NO-SOURCE
+> Task :mergeReproducibleReleaseArtProfile
+> Task :checkReproducibleReleaseDuplicateClasses
+> Task :expandReproducibleReleaseL8ArtProfileWildcards
+> Task :dataBindingMergeDependencyArtifactsReproducibleRelease
+> Task :generateReproducibleReleaseResValues
+> Task :extractReproducibleReleaseSupportedLocales
+> Task :mapReproducibleReleaseSourceSetPaths
+> Task :generateReproducibleReleaseResources
+> Task :generateReproducibleReleaseLocaleConfig
+> Task :processReproducibleReleaseNavigationResources
+> Task :packageReproducibleReleaseResources
+> Task :generateReproducibleReleaseBuildConfig
+> Task :checkReproducibleReleaseAarMetadata
+> Task :javaPreCompileReproducibleRelease
+> Task :parseReproducibleReleaseLocalResources
+> Task :compileReproducibleReleaseNavigationResources
+> Task :createReproducibleReleaseCompatibleScreenManifests
+> Task :extractDeepLinksReproducibleRelease
+> Task :mergeReproducibleReleaseResources
+> Task :generateReproducibleReleaseRFile
+> Task :processReproducibleReleaseMainManifest
+> Task :dataBindingGenBaseClassesReproducibleRelease
+> Task :compileReproducibleReleaseKotlin NO-SOURCE
+> Task :compileReproducibleReleaseJavaWithJavac
+> Task :processReproducibleReleaseManifest
+> Task :extractProguardFiles
+> Task :compressReproducibleReleaseJavaRes NO-SOURCE
+> Task :processReproducibleReleaseManifestForPackage
+> Task :mergeReproducibleReleaseJavaResource
+> Task :mergeReproducibleReleaseStartupProfile
+> Task :generateReproducibleReleaseAssets UP-TO-DATE
+> Task :mergeReproducibleReleaseAssets
+> Task :compressReproducibleReleaseAssets
+> Task :extractReproducibleReleaseVersionControlInfo
+> Task :processReproducibleReleaseResources
+> Task :generateReproducibleReleaseLintVitalReportModel
+> Task :mergeReproducibleReleaseGeneratedProguardFiles
+> Task :expandReproducibleReleaseArtProfileWildcards
+> Task :validateSigningReproducibleRelease
+> Task :writeReproducibleReleaseAppMetadata
+> Task :writeReproducibleReleaseSigningConfigVersions
+> Task :lintVitalAnalyzeReproducibleRelease
+> Task :lintVitalReportReproducibleRelease
+> Task :lintVitalReproducibleRelease
+> Task :minifyReproducibleReleaseWithR8
+> Task :convertShrunkResourcesToBinaryReproducibleRelease
+> Task :optimizeReproducibleReleaseResources
+> Task :l8DexDesugarLibReproducibleRelease
+> Task :compileReproducibleReleaseArtProfile
+> Task :packageReproducibleRelease
+> Task :createReproducibleReleaseApkListingFileRedirect
+> Task :assembleReproducibleRelease
+BUILD SUCCESSFUL in 1m 56s

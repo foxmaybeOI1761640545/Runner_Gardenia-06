@@ -1,0 +1,32 @@
+b2d84376c7d021dd73ddf02945ffb20d32c208cf docs(p05): verify P0.4 baseline and establish isolated phase gates
+facd7527613fd874dcca5e027b907f93eb577119 docs(p05): accept Phase 0 public APK and baseline receipts
+098dbacd6a007fc6404df71aac963201dafa840d feat(p05): compact native dashboard controls and remove theme heading
+1e93950be73a8d54952243b651ecfdd981eed99b test(p05): verify actual radio touches and retain receipts across clean
+ffc35b9cc1583ef82aff29692bd24a6cb25772af docs(p05): accept Phase 1 native layout and all 48 visual profiles
+a13b840d80fa6adf691d42685a5ceaac7071fdaf feat(p05): persist ordered metric swaps in four native dashboards
+5092cce5330301e8c081f588827dcf472ca419f3 test(p05): gate metric accessibility long durations and process rendering
+5d705921a355ab83b231c15d08deda2ec361065a fix(p05): measure Neon primary text without reserving empty height
+7355044ebc677dd0e530e1977ab3e6b182425467 test(p05): verify swaps preserve paused GPS-loss and BLE-loss states
+644b46d99cb610e3c81843e706890383c9d179b8 docs(p05): retain expanded metric acceptance failure evidence
+8faa6ce6c7a1ac9f5b21221b42ae49e24b59be14 test(p05): provide measured speed for imperial projection acceptance
+a98dea9cdc86dace87480380add8d7f9635f0a8e docs(p05): accept metric swap with exact-source tests and native evidence
+a62390b5859e79e65ca909dd971df7a44df08fc0 docs(p05): preserve raw accepted JUnit and process receipts
+bed94eb65e493563250ee300eedaaa1e916f7325 feat(p05): add native settings hub with isolated categories and acceptance gates
+f0d308010b2c5e09ddc04702f164bc8f52746c17 fix(p05): keep theme names confined to appearance choices
+7ad403a6dd027247251106d77525b7d51452c5d1 docs(p05): accept settings hub with API35 results and reviewed native pages
+5a7b99f4c418f5626e1f9b1e5035695b347836ef feat(p05): add native history batch management and cross-UID share acceptance
+c85ef467c5a420adef92eec8b86e58201603c6ab fix(p05): resolve explicit types in native history acceptance tests
+3e11b9376f448758a5afc4bc2707ffb6f1c81b1e docs(p05): retain original failed compile run artifact and receipts
+7d127b7f2fe56cb76711279a3be4ea3417d5c9da fix(p05): format batch error record identifiers explicitly
+06d7e35e8779034413d4e9200cbab8b16fbc82f2 docs(p05): retain original lint failure XML and gate receipts
+50bc63caf120866d8c8953a9ce7449ac30ffff98 fix(p05): use API35-compatible receipt IO and verify complete share evidence
+5f700ba8f050e150980725ee8c4cc8782736c720 docs(p05): accept history batches with cross-UID receipts and process recovery
+45ff5820eeaf3b8289b5ef8ab760b62458f354b9 P0.5 Phase 5: full regression and immutable fixed-key release gates
+7916056f3e92511de8d02337d3d592690d83e3f9 P0.5 final acceptance: verify reset by removing override and rendering defaults
+cfad27f2aa656bb40b94e86d9dca4b3a59315566 docs(p05): retain first full 425-test regression receipts and exact counts
+0ca42a5231949be1769f2e60c8b3f5c5830e0e54 fix(p05): retain version evidence first when resuming immutable release uploads
+c5093ed3ac9514b6655afb5ed022024d8776f6cb fix(p05): recognize settings hub after large-font category scrolling
+3a8d6005384734c15b148b87ae6a24557d2d1517 docs(p05): preserve GitHub pre-job internal server error receipt
+7f586e6848f43922e6e26a1dc8bcb30c8e4f89e9 [p05-release-accepted-ui] accept exact-source full regression and native visual review
+bfce33f771052d7613c06fad3c0d765acb4dd5ce [p05-recover-accepted-apk] wait for native back destinations and revalidate original signed bytes
+a8891f61122712b81bee357f40d688151a948e57 fix(p05): display actual Runner Gardenia application label and verify signed native branding

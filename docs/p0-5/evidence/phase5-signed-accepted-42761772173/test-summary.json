@@ -1,0 +1,42 @@
+{
+  "commit": "a8891f61122712b81bee357f40d688151a948e57",
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42761772173",
+  "tests": {
+    "android": {
+      "tests": 425,
+      "executed": 424,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 124,
+      "executed": 124,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "helpers": {
+    "tests": 104,
+    "executed": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+    "runId": "42758735766"
+  },
+  "legacySkippedTest": {
+    "class": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "method": "recording_stopGPS_noop",
+    "unchangedFromP04": true,
+    "countedAsPassed": false
+  },
+  "runtimeSmokeVerified": true,
+  "upgradeFromVersionCode": 6775,
+  "crossUidShareReceipts": 6,
+  "wechat": "NEEDS_DEVICE_VALIDATION",
+  "hardware": "NEEDS_DEVICE_VALIDATION",
+  "bleProductionChanged": false
+}

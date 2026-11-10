@@ -1,0 +1,13 @@
+{
+  "source": "a8891f61122712b81bee357f40d688151a948e57",
+  "buildRunId": "42761772173",
+  "buildWorkflowCommit": "cf1c8bf3795ffd8220e90fdb85facef818d39942",
+  "formalArtifactId": 13738852270,
+  "formalArtifactSha256": "b763f1134e55184ef8285668a0ae942ea69dffa0f02640942298a67276a07746",
+  "apkSha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+  "signedNativeVisualReviewPassed": true,
+  "signedPngsReviewed": 80,
+  "contactSheetsReviewed": 10,
+  "appLabelVerified": "Runner Gardenia P0",
+  "wechat": "NEEDS_DEVICE_VALIDATION"
+}

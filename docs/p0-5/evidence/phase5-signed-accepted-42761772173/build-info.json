@@ -1,0 +1,123 @@
+{
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-p0.5",
+  "versionCode": 6776,
+  "commit": "a8891f61122712b81bee357f40d688151a948e57",
+  "variant": "reproducibleRelease",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "debuggable": false,
+  "apkSha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+  "apkBytes": 2853444,
+  "r8MappingSha256": "defd5a6a3f325dfbcf563988dab9cb27bf65ce80e58db1423fc48f8450479b02",
+  "offline": {
+    "applicationId": "com.fox.runner",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "allowBackup": false,
+    "components": {
+      "activity": [
+        "de.dennisguse.opentracks.introduction.IntroductionActivity",
+        "de.dennisguse.opentracks.p0.app.P0Activity",
+        "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+        "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+        "de.dennisguse.opentracks.p0.app.P0SettingsActivity"
+      ],
+      "activity-alias": [],
+      "service": [
+        "androidx.appcompat.app.AppLocalesMetadataHolderService",
+        "de.dennisguse.opentracks.services.TrackRecordingService"
+      ],
+      "provider": [
+        "androidx.core.content.FileProvider",
+        "de.dennisguse.opentracks.data.ShareContentProvider"
+      ],
+      "receiver": []
+    }
+  },
+  "plan": {
+    "commit": "a8891f61122712b81bee357f40d688151a948e57",
+    "branch": "feature/p0-5-dashboard-settings-history",
+    "stage": 5,
+    "runId": "42758735766",
+    "fullRegression": true,
+    "versionName": "v0.1.0-p0.5",
+    "versionCode": 6776,
+    "classes": [],
+    "publishing": false,
+    "signed": false,
+    "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+  },
+  "tests": {
+    "android": {
+      "tests": 425,
+      "executed": 424,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 124,
+      "executed": 124,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42761772173",
+  "r8TaskExecuted": true,
+  "resourceOptimizationTaskExecuted": true,
+  "themePolicy": "FOLLOW_SYSTEM",
+  "themeFamilies": [
+    "precision",
+    "quiet",
+    "explorer",
+    "neon"
+  ],
+  "themeSchemes": 8,
+  "testRunId": "42758735766",
+  "buildRunId": "42761772173",
+  "buildWorkflowCommit": "cf1c8bf3795ffd8220e90fdb85facef818d39942",
+  "mainTree": "43b83b009bc36ee5f19b58cbb637c9417749a539",
+  "nativeVisualReview": {
+    "passed": true,
+    "kind": "ACTUAL_NATIVE_VISUAL_REVIEW",
+    "schemes": 8,
+    "layoutPngs": 48,
+    "statePngs": 192,
+    "metricPngs": 8,
+    "settingsPngs": 16,
+    "historyPngs": 32,
+    "fullRegressionPassed": true,
+    "rawJUnitVerified": true,
+    "source": "a8891f61122712b81bee357f40d688151a948e57",
+    "mainTree": "43b83b009bc36ee5f19b58cbb637c9417749a539",
+    "testRunId": "42758735766",
+    "runAttempt": 1,
+    "reportsArtifactId": 13737173196,
+    "reportsArtifactSha256": "214ae192442b3ec4f2a7f049f8bf7eba4a32051c60c6a2594b80b685d6102d63",
+    "visualArtifactId": 13737387227,
+    "visualArtifactSha256": "f1b1130e5030c2a26f918811e151fcb79e9ecccc5431d1c41490fd30dc4bf227",
+    "contactSheetsReviewed": 37,
+    "syntheticInputs": true,
+    "wechat": "NEEDS_DEVICE_VALIDATION",
+    "signedVisualReviewRequired": true,
+    "captureObservation": "All 37 contact sheets / 296 actual native screenshots reviewed. No clipping, overlap or appearance transition observed. Signed 80-page review still required, including actual application label."
+  },
+  "runtimeSmokeVerified": true,
+  "upgradeFromVersionCode": 6775
+}

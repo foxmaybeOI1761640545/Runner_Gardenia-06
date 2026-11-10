@@ -1,0 +1,16 @@
+{
+  "file": "work/phase5-formal-42761772173/dist/RunnerGardenia-P0-Release.apk",
+  "bytes": 2853444,
+  "sha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+  "package": "com.fox.runner",
+  "versionName": "v0.1.0-p0.5",
+  "versionCode": 6776,
+  "signers": [
+    {
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "algorithm": "0x104",
+      "signatureVerified": true,
+      "contentDigestVerified": true
+    }
+  ]
+}

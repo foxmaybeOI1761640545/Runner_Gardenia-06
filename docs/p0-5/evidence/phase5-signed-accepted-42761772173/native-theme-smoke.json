@@ -1,0 +1,1378 @@
+{
+  "passed": true,
+  "commit": "a8891f61122712b81bee357f40d688151a948e57",
+  "apkSha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+  "api": 35,
+  "policy": "FOLLOW_SYSTEM",
+  "schemes": [
+    {
+      "family": "precision",
+      "appearance": "light",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "precision",
+      "appearance": "dark",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "quiet",
+      "appearance": "light",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "quiet",
+      "appearance": "dark",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "explorer",
+      "appearance": "light",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "explorer",
+      "appearance": "dark",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "neon",
+      "appearance": "light",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    },
+    {
+      "family": "neon",
+      "appearance": "dark",
+      "passed": true,
+      "renderedPaletteVerified": true,
+      "settingsPagePreserved": true,
+      "metricProcessPersistence": true,
+      "currentThemeResetOnly": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "p05-release-precision-light-appearance.png",
+      "sha256": "421945c80a3a0eb262279233a893bc6d68d5c3fd3c0f50ef65847bcd2265c05a",
+      "nativeWindowFile": "p05-release-precision-light-appearance.xml",
+      "nativeWindowSha256": "e431b482ab329f095375177bb0a9bdbf8ec6f01279d98aa91d4b70ca4ebb9fa1",
+      "family": "precision",
+      "appearance": "light",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6017f58 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-hub.png",
+      "sha256": "37db6c71796b40fed4bfd254339db71dd01068b4441b3c96c6cbd65d73be369f",
+      "nativeWindowFile": "p05-release-precision-light-hub.xml",
+      "nativeWindowSha256": "d4fb8d989913e30d7e6ba82708e68dd5682868d711a4f599a764ebff7748b76f",
+      "family": "precision",
+      "appearance": "light",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6017f58 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        243,
+        246,
+        242
+      ]
+    },
+    {
+      "file": "p05-release-precision-light-motion.png",
+      "sha256": "ff959b9cce673c6f5de93452bd8c2e5b43049a27f09f5ac604605f4a9617dbb2",
+      "nativeWindowFile": "p05-release-precision-light-motion.xml",
+      "nativeWindowSha256": "5ea50648c1f63cd0e63d6816081e8d3ddc544c19812990b07f8b683a74e77646",
+      "family": "precision",
+      "appearance": "light",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6017f58 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-info.png",
+      "sha256": "592c96498001c5f8a345532548b4eac432bcdd7aa3b482dfae736ae6382b8243",
+      "nativeWindowFile": "p05-release-precision-light-info.xml",
+      "nativeWindowSha256": "07776880fa5f2d937a06c36c56af1020ff8a123ff6232c11acb487fd6101613f",
+      "family": "precision",
+      "appearance": "light",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6017f58 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-home.png",
+      "sha256": "28d955122e62cfcd9bac9dd4f202f357be2c4807638324ff5bda8a673601cc52",
+      "nativeWindowFile": "p05-release-precision-light-home.xml",
+      "nativeWindowSha256": "b2057ea25f3d9f3a27c027a99415269464839644074c0cbae44731d243cd1aa6",
+      "family": "precision",
+      "appearance": "light",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{1ecad13 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        243,
+        246,
+        242
+      ]
+    },
+    {
+      "file": "p05-release-precision-light-heart.png",
+      "sha256": "670fb2778ba66f45cf6e8d2e8b038354ce3ceeb725434c11424df43239dd15ce",
+      "nativeWindowFile": "p05-release-precision-light-heart.xml",
+      "nativeWindowSha256": "486786a803619983cba7de5c97aad453a50b25e34833b0049e74a1b22193d531",
+      "family": "precision",
+      "appearance": "light",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{65a6ef4 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-history.png",
+      "sha256": "01b593195f612d0ed11337372cebab74453fb6c464c6c22d19e769581fe03852",
+      "nativeWindowFile": "p05-release-precision-light-history.xml",
+      "nativeWindowSha256": "187888afcd10acef9f8884e1b45837bc7172cff7e1a740f9b19f54363fd6a633",
+      "family": "precision",
+      "appearance": "light",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{23001dc u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-selection.png",
+      "sha256": "2bd0addfdfe2f3fc3d93445b7432b5ca0bb0bdecd435888e430b6235c4c61b52",
+      "nativeWindowFile": "p05-release-precision-light-selection.xml",
+      "nativeWindowSha256": "b4ec4bdf415aa00213d9b07efa91ab428c2e2015dca97522f57f9a42e56ee4b8",
+      "family": "precision",
+      "appearance": "light",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{23001dc u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-share.png",
+      "sha256": "2b6f0e665e5825e28a5f18476cae6ec56e576a0217391f7eeebb8fdd60a759a4",
+      "nativeWindowFile": "p05-release-precision-light-share.xml",
+      "nativeWindowSha256": "c5689fd779fd43d4a7a74708c851fcdd9a4504f36b66de6c1124b8d512623e15",
+      "family": "precision",
+      "appearance": "light",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{84ddf3a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-light-delete.png",
+      "sha256": "9467888273b42a53135895b3f22fecf3529bb2bfca1f7bbedbdcdd7d15c4bf81",
+      "nativeWindowFile": "p05-release-precision-light-delete.xml",
+      "nativeWindowSha256": "9ebc7ef0102b0e9e06389b1ce885eb1464a93ccdf5d46f3a1d364117d666628f",
+      "family": "precision",
+      "appearance": "light",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{8da4caa u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-appearance.png",
+      "sha256": "d90528242a58a0be97f2a957040c6882df9039baa5770ff6808a566ea2ee7424",
+      "nativeWindowFile": "p05-release-precision-dark-appearance.xml",
+      "nativeWindowSha256": "e431b482ab329f095375177bb0a9bdbf8ec6f01279d98aa91d4b70ca4ebb9fa1",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f31a5b2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-hub.png",
+      "sha256": "d19e9b4a8b25829f003d666fa23611068573756a741561bd16e617af4c292bcb",
+      "nativeWindowFile": "p05-release-precision-dark-hub.xml",
+      "nativeWindowSha256": "d4fb8d989913e30d7e6ba82708e68dd5682868d711a4f599a764ebff7748b76f",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f31a5b2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "file": "p05-release-precision-dark-motion.png",
+      "sha256": "b5c6c6290e5d269c21948d98a0c1140b8c244376fb939ac0113addbd261f9aa7",
+      "nativeWindowFile": "p05-release-precision-dark-motion.xml",
+      "nativeWindowSha256": "5ea50648c1f63cd0e63d6816081e8d3ddc544c19812990b07f8b683a74e77646",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f31a5b2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-info.png",
+      "sha256": "9746c439813314ee1205e2296e68ff8bcfb27f622402e4882392229cc817f7e6",
+      "nativeWindowFile": "p05-release-precision-dark-info.xml",
+      "nativeWindowSha256": "07776880fa5f2d937a06c36c56af1020ff8a123ff6232c11acb487fd6101613f",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f31a5b2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-home.png",
+      "sha256": "d61bb89a8bbf2222113eb7ed9be15a89f4ed435dbe581fc7d97214b15b9cc2ac",
+      "nativeWindowFile": "p05-release-precision-dark-home.xml",
+      "nativeWindowSha256": "c9d9d5c9b4dbe94906956688c1e852d8faf190af6290058876a60ff06a621b0b",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{41ec520 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        22,
+        20
+      ]
+    },
+    {
+      "file": "p05-release-precision-dark-heart.png",
+      "sha256": "a024293881d84a2cd4c2097f8f1c732eef044dbc0a9971ee13a641b14ad4e947",
+      "nativeWindowFile": "p05-release-precision-dark-heart.xml",
+      "nativeWindowSha256": "486786a803619983cba7de5c97aad453a50b25e34833b0049e74a1b22193d531",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b455e0d u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-history.png",
+      "sha256": "f0acde2a7a2af9609265e6f7caa178b1bf48959f04b969732bcb61682048f52f",
+      "nativeWindowFile": "p05-release-precision-dark-history.xml",
+      "nativeWindowSha256": "187888afcd10acef9f8884e1b45837bc7172cff7e1a740f9b19f54363fd6a633",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6f8e6f3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-selection.png",
+      "sha256": "d3f0ceda0f80bd3984fefef8ea34afbdc0aade1deda06c522afed6878f8a9d37",
+      "nativeWindowFile": "p05-release-precision-dark-selection.xml",
+      "nativeWindowSha256": "b4ec4bdf415aa00213d9b07efa91ab428c2e2015dca97522f57f9a42e56ee4b8",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6f8e6f3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-share.png",
+      "sha256": "1ca5939cea250d88f0cccf83d3cbc994bff6dc3bb8b1c57cd5f60bc01e101573",
+      "nativeWindowFile": "p05-release-precision-dark-share.xml",
+      "nativeWindowSha256": "c5689fd779fd43d4a7a74708c851fcdd9a4504f36b66de6c1124b8d512623e15",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{87dbb2e u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-precision-dark-delete.png",
+      "sha256": "abefbf40c7aa6ce221c9409399bbe14f12963d78fe6945bd8f434c164637ca0b",
+      "nativeWindowFile": "p05-release-precision-dark-delete.xml",
+      "nativeWindowSha256": "9ebc7ef0102b0e9e06389b1ce885eb1464a93ccdf5d46f3a1d364117d666628f",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{fa5be11 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-appearance.png",
+      "sha256": "50c6787488a667bb76a5856b895c484daed3e9254d7983e8e12c68a57f24fad1",
+      "nativeWindowFile": "p05-release-quiet-light-appearance.xml",
+      "nativeWindowSha256": "8e9ca7a5ea39eb2a223acb892cd552f302dfb2974ee85b9471cc125d0e2435c5",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{5a256d3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-hub.png",
+      "sha256": "04e57a561b2e1f3671dd0d7f5ca618ccc11201b0ea1bbb28987d86a1732616cd",
+      "nativeWindowFile": "p05-release-quiet-light-hub.xml",
+      "nativeWindowSha256": "8e79284700e8565a48ba4e2e223c18b857e2abcc8b03e6eee0ae5ef5e2dd441d",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{5a256d3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        250,
+        251,
+        249
+      ]
+    },
+    {
+      "file": "p05-release-quiet-light-motion.png",
+      "sha256": "38538776197f8e790a9da2e2d17ac0f9fa3a450ea78824fb30791da4af984f8f",
+      "nativeWindowFile": "p05-release-quiet-light-motion.xml",
+      "nativeWindowSha256": "0ec0cedcef32040128e0a46de91736a3221cb74db81b4fd7a9d56801e6939116",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{5a256d3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-info.png",
+      "sha256": "e78ab96a80474c934cbc52a4c281bf4253f10610de6ce997ee644f5997f410f6",
+      "nativeWindowFile": "p05-release-quiet-light-info.xml",
+      "nativeWindowSha256": "fee99bc830ba0e1482a1f0997a1e1d29a6e0f753fad9850cd3f34944568f5882",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{5a256d3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-home.png",
+      "sha256": "9da3e4665a375d45c8a7ebbbdf19bef0bedd16db9e5cd969c0ed6645e5680bc1",
+      "nativeWindowFile": "p05-release-quiet-light-home.xml",
+      "nativeWindowSha256": "3ed40c9a96d9334068505a07bd511adbd1ab8e71111c69ca93a848ef3f3967f9",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{19a5dc u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        250,
+        251,
+        249
+      ]
+    },
+    {
+      "file": "p05-release-quiet-light-heart.png",
+      "sha256": "7e0832c3de6f63d4baea7da8883e6a720474bb3776b1d7342e49cff08d9adc12",
+      "nativeWindowFile": "p05-release-quiet-light-heart.xml",
+      "nativeWindowSha256": "a9486939907e6335de22715532542b24758cdb9cd974a931d062b6f08da72f69",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c730f5d u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-history.png",
+      "sha256": "5a7c0c16287854a9690febbf07d4e24ae232ea1a39878fc921092bf64ef74ddb",
+      "nativeWindowFile": "p05-release-quiet-light-history.xml",
+      "nativeWindowSha256": "fb8dba27fb36ba76cc83019b4dbe6dfe70cff35ab2a0d09fcf58fc0dc34f8a4b",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{1fa98a2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-selection.png",
+      "sha256": "4bc2b4c97617a1d425b42336c3608940ee95f6cdbbd1628b7bac5fdc2d8c86ab",
+      "nativeWindowFile": "p05-release-quiet-light-selection.xml",
+      "nativeWindowSha256": "da1b6d7ca9bb16b2d93ac7324a02c067ad21e750e4f385cf58e0bd4f660055d2",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{1fa98a2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-share.png",
+      "sha256": "dfcedcf3926c2ad1d8a3531ed37956907adc329cd7f29d71c18f9cbbb448ee03",
+      "nativeWindowFile": "p05-release-quiet-light-share.xml",
+      "nativeWindowSha256": "d3c62b54f99b001aefc1d0e83d532bed34ca82933053adb4edaa5cce16c9e968",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{a7d1e70 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-light-delete.png",
+      "sha256": "a959b1a371588170eb90f201f35a8629473f5618c56efd1265f662f7d0350405",
+      "nativeWindowFile": "p05-release-quiet-light-delete.xml",
+      "nativeWindowSha256": "6b6a93c875a7fb9ed75d8e85758f0bd2c0ef4f955f9f74fbffc1142822266368",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{db6b6a0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-appearance.png",
+      "sha256": "8657a10ba3c630eaa9248f61bf3615e7e6668dda9bb0dda4b84a9c219503ab04",
+      "nativeWindowFile": "p05-release-quiet-dark-appearance.xml",
+      "nativeWindowSha256": "8e9ca7a5ea39eb2a223acb892cd552f302dfb2974ee85b9471cc125d0e2435c5",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c5c8732 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-hub.png",
+      "sha256": "7fc6d1aa081318ee50ab8c29a32b16209799ad0a8752d39473e43c87bf748a06",
+      "nativeWindowFile": "p05-release-quiet-dark-hub.xml",
+      "nativeWindowSha256": "8e79284700e8565a48ba4e2e223c18b857e2abcc8b03e6eee0ae5ef5e2dd441d",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c5c8732 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        17,
+        30,
+        24
+      ]
+    },
+    {
+      "file": "p05-release-quiet-dark-motion.png",
+      "sha256": "fb3bfa63397d5698be77eef85e27e8770bc03bad9acd1fde326764f00b95b244",
+      "nativeWindowFile": "p05-release-quiet-dark-motion.xml",
+      "nativeWindowSha256": "0ec0cedcef32040128e0a46de91736a3221cb74db81b4fd7a9d56801e6939116",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c5c8732 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-info.png",
+      "sha256": "52b2310eb13cf8b513f3f4e7169da4135513cc3311a27769ec9ef2ce86616096",
+      "nativeWindowFile": "p05-release-quiet-dark-info.xml",
+      "nativeWindowSha256": "fee99bc830ba0e1482a1f0997a1e1d29a6e0f753fad9850cd3f34944568f5882",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c5c8732 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-home.png",
+      "sha256": "8b87e4a55267fa3140c42c4eca8cd00ee78ef9d225fd01ffcd8437edf9bd72ff",
+      "nativeWindowFile": "p05-release-quiet-dark-home.xml",
+      "nativeWindowSha256": "3ed40c9a96d9334068505a07bd511adbd1ab8e71111c69ca93a848ef3f3967f9",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{8968e7a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        17,
+        30,
+        24
+      ]
+    },
+    {
+      "file": "p05-release-quiet-dark-heart.png",
+      "sha256": "8d59aadb741bc3cff7d64ff4d7b57b9bc5295b1481958f8bce72978b91846318",
+      "nativeWindowFile": "p05-release-quiet-dark-heart.xml",
+      "nativeWindowSha256": "a9486939907e6335de22715532542b24758cdb9cd974a931d062b6f08da72f69",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{eb746bf u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-history.png",
+      "sha256": "ae7b901c1920b13210bfecd9051f05ec132839942bc0abf493d8407b1bb7e072",
+      "nativeWindowFile": "p05-release-quiet-dark-history.xml",
+      "nativeWindowSha256": "fb8dba27fb36ba76cc83019b4dbe6dfe70cff35ab2a0d09fcf58fc0dc34f8a4b",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{aa1a8e0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-selection.png",
+      "sha256": "f5145450f814e6806733cd418fbc733677dd536f1bfbc449a9af39c1bfc253d5",
+      "nativeWindowFile": "p05-release-quiet-dark-selection.xml",
+      "nativeWindowSha256": "da1b6d7ca9bb16b2d93ac7324a02c067ad21e750e4f385cf58e0bd4f660055d2",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{aa1a8e0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-share.png",
+      "sha256": "a0a836521abf27e5501244dc83e0bb01fbf2cd374a8a1f4b45fbd1af594496fb",
+      "nativeWindowFile": "p05-release-quiet-dark-share.xml",
+      "nativeWindowSha256": "d3c62b54f99b001aefc1d0e83d532bed34ca82933053adb4edaa5cce16c9e968",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{72c14eb u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-quiet-dark-delete.png",
+      "sha256": "aca32e2aa5a226832fb2d5776b5cd76c0436d219c8e0a9c8501907e27a8497fd",
+      "nativeWindowFile": "p05-release-quiet-dark-delete.xml",
+      "nativeWindowSha256": "6b6a93c875a7fb9ed75d8e85758f0bd2c0ef4f955f9f74fbffc1142822266368",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{bc0226 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-appearance.png",
+      "sha256": "eea708a97f4181bf4fbe4d3ccb6cddf91d826c46f0f52f78d45b33dd1df3f73a",
+      "nativeWindowFile": "p05-release-explorer-light-appearance.xml",
+      "nativeWindowSha256": "33f57c649da660dc1e4a44fdfb60ea57f2d63a8a5e4929c0e0a06b8c0896bc52",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b115ded u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-hub.png",
+      "sha256": "1931cdd21210ee3035c6c5dc81779402026eea7598b599361528f7b879036ab2",
+      "nativeWindowFile": "p05-release-explorer-light-hub.xml",
+      "nativeWindowSha256": "d4fb8d989913e30d7e6ba82708e68dd5682868d711a4f599a764ebff7748b76f",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b115ded u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        240,
+        238,
+        226
+      ]
+    },
+    {
+      "file": "p05-release-explorer-light-motion.png",
+      "sha256": "5bcfe23317863dbb7a1fd42ab1b52d6b90b1591589ad3453cb551fcd56ab279e",
+      "nativeWindowFile": "p05-release-explorer-light-motion.xml",
+      "nativeWindowSha256": "5ea50648c1f63cd0e63d6816081e8d3ddc544c19812990b07f8b683a74e77646",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b115ded u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-info.png",
+      "sha256": "587b7b619420cf042561beeec36629993b6ff63c7c0fd11b038299354269c3b8",
+      "nativeWindowFile": "p05-release-explorer-light-info.xml",
+      "nativeWindowSha256": "07776880fa5f2d937a06c36c56af1020ff8a123ff6232c11acb487fd6101613f",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{b115ded u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-home.png",
+      "sha256": "306563923b36cb728f24b2c3b6ec44ce9f12d67d51a64b8c320429ee95b72973",
+      "nativeWindowFile": "p05-release-explorer-light-home.xml",
+      "nativeWindowSha256": "fc0c521454eabf424a0a05a35ed2d7e4f396bb5bfe88344836dde81081cee7f0",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{75c315e u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        240,
+        238,
+        226
+      ]
+    },
+    {
+      "file": "p05-release-explorer-light-heart.png",
+      "sha256": "126ab29c783567d17338c1b744e8457d4ee2f67cc5ea36f61b1a315be7b93d82",
+      "nativeWindowFile": "p05-release-explorer-light-heart.xml",
+      "nativeWindowSha256": "486786a803619983cba7de5c97aad453a50b25e34833b0049e74a1b22193d531",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f37f3da u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-history.png",
+      "sha256": "a0c67a27bd1e7af71a292e15deb6f0ef7ae09ae7c01d3bb18847d723ae9438b6",
+      "nativeWindowFile": "p05-release-explorer-light-history.xml",
+      "nativeWindowSha256": "43d29e8d91201a5c9b1688b25ba664588e889ec8a6c2d8ac024f323c822c9312",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{d60d402 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-selection.png",
+      "sha256": "3fd55f36eb863ef6b2620aefb21b29824d162806caaf743656956faa7d4e7651",
+      "nativeWindowFile": "p05-release-explorer-light-selection.xml",
+      "nativeWindowSha256": "b4ec4bdf415aa00213d9b07efa91ab428c2e2015dca97522f57f9a42e56ee4b8",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{d60d402 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-share.png",
+      "sha256": "a52901efffcb0e544e31bb64029858a81f59ceed7b745e1ef0a74318fe0438f3",
+      "nativeWindowFile": "p05-release-explorer-light-share.xml",
+      "nativeWindowSha256": "c5689fd779fd43d4a7a74708c851fcdd9a4504f36b66de6c1124b8d512623e15",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{8179a64 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-light-delete.png",
+      "sha256": "044387761a0017a496bf2fe49e9b9f75d8695dc3c5988cc0d86165566b32a6f1",
+      "nativeWindowFile": "p05-release-explorer-light-delete.xml",
+      "nativeWindowSha256": "9ebc7ef0102b0e9e06389b1ce885eb1464a93ccdf5d46f3a1d364117d666628f",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{a6b9bf5 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-appearance.png",
+      "sha256": "c785d87245862295b99f0444c96575c13f9de10e73aa083ff3873fde7a419163",
+      "nativeWindowFile": "p05-release-explorer-dark-appearance.xml",
+      "nativeWindowSha256": "33f57c649da660dc1e4a44fdfb60ea57f2d63a8a5e4929c0e0a06b8c0896bc52",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{caa8060 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-hub.png",
+      "sha256": "e88150e8b2c25872938b9ba9d7a442f692829e9244ea594636a2f7cc5b6e1cfc",
+      "nativeWindowFile": "p05-release-explorer-dark-hub.xml",
+      "nativeWindowSha256": "d4fb8d989913e30d7e6ba82708e68dd5682868d711a4f599a764ebff7748b76f",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{caa8060 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        30,
+        24
+      ]
+    },
+    {
+      "file": "p05-release-explorer-dark-motion.png",
+      "sha256": "39be0bfb4f37d3322d559d1ba8601ba9758fec92cd0abd9de6306402ab3b3554",
+      "nativeWindowFile": "p05-release-explorer-dark-motion.xml",
+      "nativeWindowSha256": "5ea50648c1f63cd0e63d6816081e8d3ddc544c19812990b07f8b683a74e77646",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{caa8060 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-info.png",
+      "sha256": "ace5e257d74de8d6f05d089083647d783c53cea97dfae88fff01e0bede865b00",
+      "nativeWindowFile": "p05-release-explorer-dark-info.xml",
+      "nativeWindowSha256": "07776880fa5f2d937a06c36c56af1020ff8a123ff6232c11acb487fd6101613f",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{caa8060 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-home.png",
+      "sha256": "b6be5d68ed26d4d0db58cc14acd5ae937d8b18c325c994242a1a8174809ff383",
+      "nativeWindowFile": "p05-release-explorer-dark-home.xml",
+      "nativeWindowSha256": "fc0c521454eabf424a0a05a35ed2d7e4f396bb5bfe88344836dde81081cee7f0",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{298a12c u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        18,
+        30,
+        24
+      ]
+    },
+    {
+      "file": "p05-release-explorer-dark-heart.png",
+      "sha256": "709c2abb451c4452686c65aad0f0e05c8a236028fd31d27fceaad5aee2cc2314",
+      "nativeWindowFile": "p05-release-explorer-dark-heart.xml",
+      "nativeWindowSha256": "486786a803619983cba7de5c97aad453a50b25e34833b0049e74a1b22193d531",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{2cc3733 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-history.png",
+      "sha256": "b9bbf32e741291bf506714a6c220c51e8280a0a8bf5e74423b029d2fc2a69984",
+      "nativeWindowFile": "p05-release-explorer-dark-history.xml",
+      "nativeWindowSha256": "187888afcd10acef9f8884e1b45837bc7172cff7e1a740f9b19f54363fd6a633",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{7dde721 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-selection.png",
+      "sha256": "cf6139bcd1f1a15c0a4d12bae876d89c658418f682c97564c65f1191bb7f5dd0",
+      "nativeWindowFile": "p05-release-explorer-dark-selection.xml",
+      "nativeWindowSha256": "b4ec4bdf415aa00213d9b07efa91ab428c2e2015dca97522f57f9a42e56ee4b8",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{7dde721 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-share.png",
+      "sha256": "a850560c0b0bfd03952ad37c48e3f0ca2c802453e0b61c5b5d7cbecebd37762e",
+      "nativeWindowFile": "p05-release-explorer-dark-share.xml",
+      "nativeWindowSha256": "c5689fd779fd43d4a7a74708c851fcdd9a4504f36b66de6c1124b8d512623e15",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{6fbcec u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-explorer-dark-delete.png",
+      "sha256": "db95b98920a16b209601d080c00e1206330e94ebbfad594c853306e6523c37b8",
+      "nativeWindowFile": "p05-release-explorer-dark-delete.xml",
+      "nativeWindowSha256": "9ebc7ef0102b0e9e06389b1ce885eb1464a93ccdf5d46f3a1d364117d666628f",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{2cf4f55 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-appearance.png",
+      "sha256": "e158af86d426c429cf8dbb8ff266a4eba557bb0ef39d4dd020c35fa7dfadbae3",
+      "nativeWindowFile": "p05-release-neon-light-appearance.xml",
+      "nativeWindowSha256": "3bfe3a930d0237260672028311d7921ee7a4a56379415823bd99ff4cc43af722",
+      "family": "neon",
+      "appearance": "light",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c9e76d0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-hub.png",
+      "sha256": "d5ab986f5361afd602b688b4497b7726cd9c3f577569c7e375b92d93079631c9",
+      "nativeWindowFile": "p05-release-neon-light-hub.xml",
+      "nativeWindowSha256": "8e79284700e8565a48ba4e2e223c18b857e2abcc8b03e6eee0ae5ef5e2dd441d",
+      "family": "neon",
+      "appearance": "light",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c9e76d0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        244,
+        240,
+        252
+      ]
+    },
+    {
+      "file": "p05-release-neon-light-motion.png",
+      "sha256": "c2f3883173cfd23cd9c0fe3a48b79aafaaaae3a25c2d84d752e8493dae2fe47c",
+      "nativeWindowFile": "p05-release-neon-light-motion.xml",
+      "nativeWindowSha256": "0ec0cedcef32040128e0a46de91736a3221cb74db81b4fd7a9d56801e6939116",
+      "family": "neon",
+      "appearance": "light",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c9e76d0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-info.png",
+      "sha256": "1ae38bf0ab06982300b855a6f542f878ebe6f2401d4f6f0b5fe839dfde477b2a",
+      "nativeWindowFile": "p05-release-neon-light-info.xml",
+      "nativeWindowSha256": "fee99bc830ba0e1482a1f0997a1e1d29a6e0f753fad9850cd3f34944568f5882",
+      "family": "neon",
+      "appearance": "light",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{c9e76d0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-home.png",
+      "sha256": "541e63828086b9a7a49f76b817e2dd584b40ae3e24e7b1e9098939418a7645f8",
+      "nativeWindowFile": "p05-release-neon-light-home.xml",
+      "nativeWindowSha256": "e839f63ebb70ef899933048edbd261420c704d8acf00969a302938ad10aa8d92",
+      "family": "neon",
+      "appearance": "light",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{8def47a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        244,
+        240,
+        252
+      ]
+    },
+    {
+      "file": "p05-release-neon-light-heart.png",
+      "sha256": "f7a8d0d44c49dca39ae8d52436459c3f4c1b39417f744f91cf060198c6e194b0",
+      "nativeWindowFile": "p05-release-neon-light-heart.xml",
+      "nativeWindowSha256": "a9486939907e6335de22715532542b24758cdb9cd974a931d062b6f08da72f69",
+      "family": "neon",
+      "appearance": "light",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{1d08078 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-history.png",
+      "sha256": "25cb250c49c167d1914f7fe0da721b8c46bf7e7a1183f522dfe8dbd8b801e8c9",
+      "nativeWindowFile": "p05-release-neon-light-history.xml",
+      "nativeWindowSha256": "fb8dba27fb36ba76cc83019b4dbe6dfe70cff35ab2a0d09fcf58fc0dc34f8a4b",
+      "family": "neon",
+      "appearance": "light",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f663ee0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-selection.png",
+      "sha256": "02a72b335e2340020e59bfff51ba28bc9555f11497b9a7aff5820b13552d37cf",
+      "nativeWindowFile": "p05-release-neon-light-selection.xml",
+      "nativeWindowSha256": "da1b6d7ca9bb16b2d93ac7324a02c067ad21e750e4f385cf58e0bd4f660055d2",
+      "family": "neon",
+      "appearance": "light",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{f663ee0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-share.png",
+      "sha256": "130e8811daac7a3457d16050fc970b810fd4dab48f05ab8f1212dff3bf9fba95",
+      "nativeWindowFile": "p05-release-neon-light-share.xml",
+      "nativeWindowSha256": "d3c62b54f99b001aefc1d0e83d532bed34ca82933053adb4edaa5cce16c9e968",
+      "family": "neon",
+      "appearance": "light",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{cc14c06 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-light-delete.png",
+      "sha256": "f03f6f621233dab8d37f8ea15537fea335b632b8267bfd3ecc0ca3423a9eabe0",
+      "nativeWindowFile": "p05-release-neon-light-delete.xml",
+      "nativeWindowSha256": "6b6a93c875a7fb9ed75d8e85758f0bd2c0ef4f955f9f74fbffc1142822266368",
+      "family": "neon",
+      "appearance": "light",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{7e7cf42 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-appearance.png",
+      "sha256": "ce7cd185d0947d94b453e42458373ba35bc62fa4b299901a25578cd39d20ad41",
+      "nativeWindowFile": "p05-release-neon-dark-appearance.xml",
+      "nativeWindowSha256": "3bfe3a930d0237260672028311d7921ee7a4a56379415823bd99ff4cc43af722",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "appearance",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{de4e131 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-hub.png",
+      "sha256": "dae6f10f15492b77d9f9fc16639c8f7a18df96ed1c7ff11e1946a83444f23993",
+      "nativeWindowFile": "p05-release-neon-dark-hub.xml",
+      "nativeWindowSha256": "8e79284700e8565a48ba4e2e223c18b857e2abcc8b03e6eee0ae5ef5e2dd441d",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "hub",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{de4e131 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        12,
+        14,
+        27
+      ]
+    },
+    {
+      "file": "p05-release-neon-dark-motion.png",
+      "sha256": "2771329ca494629514603269f532b8756dcb5cdb267d1c1ead4c7a51d38995ec",
+      "nativeWindowFile": "p05-release-neon-dark-motion.xml",
+      "nativeWindowSha256": "0ec0cedcef32040128e0a46de91736a3221cb74db81b4fd7a9d56801e6939116",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "motion",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{de4e131 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-info.png",
+      "sha256": "a43873dece7f174cf84d2251e0af90974cd64955d2defdef93a1010699046dad",
+      "nativeWindowFile": "p05-release-neon-dark-info.xml",
+      "nativeWindowSha256": "fee99bc830ba0e1482a1f0997a1e1d29a6e0f753fad9850cd3f34944568f5882",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "info",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{de4e131 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-home.png",
+      "sha256": "11bebdf9ea803c742c4c9ec865c8ddea86d6b3a5c34a7e399347d864cf4bbe01",
+      "nativeWindowFile": "p05-release-neon-dark-home.xml",
+      "nativeWindowSha256": "e839f63ebb70ef899933048edbd261420c704d8acf00969a302938ad10aa8d92",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "home",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{8e4a8d5 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+      "renderedBackgroundVerified": true,
+      "renderedBackgroundRgb": [
+        12,
+        14,
+        27
+      ]
+    },
+    {
+      "file": "p05-release-neon-dark-heart.png",
+      "sha256": "cb82c82455ca52bd49f77ba9e2f21ce97f1300895983d1ca23172ffec8d1ab33",
+      "nativeWindowFile": "p05-release-neon-dark-heart.xml",
+      "nativeWindowSha256": "a9486939907e6335de22715532542b24758cdb9cd974a931d062b6f08da72f69",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "heart",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{ae17a02 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-history.png",
+      "sha256": "5a8e4ccde35a1791913f6c070f7d1b37a67671ceafb59af5a7aa8bdbb5446c04",
+      "nativeWindowFile": "p05-release-neon-dark-history.xml",
+      "nativeWindowSha256": "fb8dba27fb36ba76cc83019b4dbe6dfe70cff35ab2a0d09fcf58fc0dc34f8a4b",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "history",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{d622d2a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-selection.png",
+      "sha256": "40d41b92e8f2d8179ff96e8f88e437e050dbf75b6ac6e567bb1c959003ca5eba",
+      "nativeWindowFile": "p05-release-neon-dark-selection.xml",
+      "nativeWindowSha256": "da1b6d7ca9bb16b2d93ac7324a02c067ad21e750e4f385cf58e0bd4f660055d2",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "selection",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{d622d2a u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-share.png",
+      "sha256": "bae45aefb9fccad50f6782a3d1c2db836331c633914a01cf5df04e1a45d898eb",
+      "nativeWindowFile": "p05-release-neon-dark-share.xml",
+      "nativeWindowSha256": "d3c62b54f99b001aefc1d0e83d532bed34ca82933053adb4edaa5cce16c9e968",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "share",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{9b4ea38 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    },
+    {
+      "file": "p05-release-neon-dark-delete.png",
+      "sha256": "c924934f96daf2c5bfdaf7b37b0558b2361ae07850617a12a132de78df335d84",
+      "nativeWindowFile": "p05-release-neon-dark-delete.xml",
+      "nativeWindowSha256": "6b6a93c875a7fb9ed75d8e85758f0bd2c0ef4f955f9f74fbffc1142822266368",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "delete",
+      "nativePageVerified": true,
+      "focusedWindow": "mCurrentFocus=Window{918126c u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "renderedBackgroundVerified": false,
+      "renderedBackgroundRgb": null
+    }
+  ],
+  "nativePageChecks": 80,
+  "processRestartPersistence": true,
+  "metricProcessPersistence": true,
+  "historyBatchVerified": true,
+  "sharePreservesData": true,
+  "appVersionVerified": true,
+  "sourceDataSignature": "c309fd453713a7e490fc28ae4a2e6d3b6da3f1a5a5dc47e03f46a8d929934270",
+  "batchShares": [
+    {
+      "family": "precision",
+      "kind": "zip",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-precision-zip-0.zip",
+          "sha256": "8504c78faf08ebd8b9572c07832ce7bfef19f2f5ef010a741d7384e4a25f8002"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "precision",
+      "kind": "multiple",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-precision-multiple-0.gpx",
+          "sha256": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56"
+        },
+        {
+          "file": "p05-precision-multiple-1.gpx",
+          "sha256": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "quiet",
+      "kind": "zip",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-quiet-zip-0.zip",
+          "sha256": "e4ef367aae0011a7602f273a5c9c506e78d57426b661ff39f66534c02761f0f2"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "quiet",
+      "kind": "multiple",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-quiet-multiple-0.gpx",
+          "sha256": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56"
+        },
+        {
+          "file": "p05-quiet-multiple-1.gpx",
+          "sha256": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "explorer",
+      "kind": "zip",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-explorer-zip-0.zip",
+          "sha256": "a9d9c1283879121ea262973fd623f061a3450e7b783d17b50f10c823655040ba"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "explorer",
+      "kind": "multiple",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-explorer-multiple-0.gpx",
+          "sha256": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56"
+        },
+        {
+          "file": "p05-explorer-multiple-1.gpx",
+          "sha256": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "neon",
+      "kind": "zip",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-neon-zip-0.zip",
+          "sha256": "9b121d6204d2810dd893cdaa19ea749529b40a4fcf3e46561d32f59b9f842546"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    },
+    {
+      "family": "neon",
+      "kind": "multiple",
+      "workoutIds": [
+        "991001",
+        "991002"
+      ],
+      "gpxSha256": {
+        "991001": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56",
+        "991002": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+      },
+      "files": [
+        {
+          "file": "p05-neon-multiple-0.gpx",
+          "sha256": "0664fbd080fb9367718587c418013d4e7f5d10a915a58e0c9ef58543dfe14e56"
+        },
+        {
+          "file": "p05-neon-multiple-1.gpx",
+          "sha256": "c930d679cd3ad2e5e5607e4bb46bbb9f6515ddc73b26c171799117c001d000ad"
+        }
+      ],
+      "actualSystemSharesheet": true,
+      "schemaVerified": true
+    }
+  ],
+  "syntheticUpgradeAndGpsInputs": true,
+  "physicalBleTested": false,
+  "wechat": "NEEDS_DEVICE_VALIDATION",
+  "workflowCommit": "cf1c8bf3795ffd8220e90fdb85facef818d39942",
+  "evaluationRunId": "42761772173",
+  "screenshotsZipSha256": "9e9e6bffd9855d36066a893aca921d43297abcaff4344e2f9eec7181ec0b6852"
+}
