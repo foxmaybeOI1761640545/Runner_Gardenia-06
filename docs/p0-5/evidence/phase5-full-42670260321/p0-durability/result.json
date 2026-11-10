@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "database": "p0-durability.db",
+  "p05MetricProbe": true,
+  "p05BatchProbe": true,
+  "forceStopped": true,
+  "timezone": "Asia/Singapore",
+  "phases": {
+    "write": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1838,
+      "batchCacheState": "staged"
+    },
+    "read": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2295,
+      "batchCacheState": "cleaned-retained-completed"
+    }
+  }
+}

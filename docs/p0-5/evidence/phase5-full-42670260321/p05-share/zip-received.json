@@ -1,0 +1,61 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5610,
+  "action": "android.intent.action.SEND",
+  "mime": "application\/zip",
+  "flags": 268435457,
+  "clip": [
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-2f095f5d-db3e-4a84-8554-18d2280397ea\/RunnerGardenia-Export-20261110-111748-2f095f5d-db3e-4a84-8554-18d2280397ea.zip"
+  ],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-2f095f5d-db3e-4a84-8554-18d2280397ea\/RunnerGardenia-Export-20261110-111748-2f095f5d-db3e-4a84-8554-18d2280397ea.zip",
+      "permission": 0,
+      "sha256": "381fcd53d20f5e630db493239fbe4bcc868664f2657bf1fe67805ba7d5bca329",
+      "bytes": 2809,
+      "read": true,
+      "entries": [
+        {
+          "workoutId": "1794280217047",
+          "rawSamples": 3,
+          "sha256": "b53b02e3712f946d6886f46f4f2a1443b799872560938cdf134b4e8195e86ed7",
+          "bytes": 2093,
+          "name": "Workout-1794280217047.gpx"
+        },
+        {
+          "workoutId": "1794280217048",
+          "rawSamples": 3,
+          "sha256": "cd1d2a1ef3ec496df1f8f18a1236563572d67779cbdfc879d7016b55e7202ab2",
+          "bytes": 2093,
+          "name": "Workout-1794280217048.gpx"
+        },
+        {
+          "workoutId": "1794280217049",
+          "rawSamples": 3,
+          "sha256": "7c557b6bde2632b85656c3be1fd86ddc0e9cbf0f4d634efe42dad167e672f074",
+          "bytes": 2093,
+          "name": "Workout-1794280217049.gpx"
+        }
+      ]
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2318,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": false,
+  "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "contentContractPassed": true,
+  "expectedWorkoutIds": [
+    1794280217047,
+    1794280217048,
+    1794280217049
+  ],
+  "expectedGpxSha256": {
+    "1794280217047": "b53b02e3712f946d6886f46f4f2a1443b799872560938cdf134b4e8195e86ed7",
+    "1794280217048": "cd1d2a1ef3ec496df1f8f18a1236563572d67779cbdfc879d7016b55e7202ab2",
+    "1794280217049": "7c557b6bde2632b85656c3be1fd86ddc0e9cbf0f4d634efe42dad167e672f074"
+  }
+}

@@ -1,0 +1,1931 @@
+{
+  "passed": true,
+  "plan": {
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "branch": "feature/p0-5-dashboard-settings-history",
+    "stage": 5,
+    "runId": "42670260321",
+    "fullRegression": true,
+    "versionName": "v0.1.0-p0.5",
+    "versionCode": 6776,
+    "classes": [],
+    "publishing": false,
+    "signed": false,
+    "protectedRefsSha256": "4449c0a472d30a9e524d1165a8c27550de9d000056fe76231f3ef983efb65171"
+  },
+  "helpers": {
+    "tests": 102,
+    "executed": 102,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "runId": "42670260321"
+  },
+  "android": {
+    "tests": 425,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "total": 425,
+    "executed": 424,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.EspressoDeleteTrackTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.EspressoEditTrackRecordingTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.EspressoUITest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.ChartValueSeriesTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRateChartHistoryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePathTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.CustomContentProviderUtilsTest",
+        "tests": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.ShareContentProviderTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.TrackSelectionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.UUIDUtilsTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.model.TrackPointTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.ActivityTypeTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.DistanceFormatterTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.SpeedFormatterTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.StatisticsTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.ExportImportTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0DurabilityTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0OfflinePolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingDataTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0SensorsTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.publicapi.DataProviderTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.publicapi.PublicApiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.GpsStatusTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.PressureSensorUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.UintUtilsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceUITest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest",
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.PreferencesOpenHelperTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.PreferencesUtilsTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.share.ShareUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.FileUtilsTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.StringUtilsTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.TrackNameUtilsTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "unit": {
+    "tests": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 124,
+    "executed": 124,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidExecuted": true,
+  "nativeVisualEvidence": {
+    "p05Layouts": 48,
+    "originalStates": 192,
+    "humanReview": "REQUIRED_AFTER_DOWNLOAD"
+  },
+  "metricScreenshots": 8,
+  "settingsScreenshots": 16,
+  "metricProcessDurability": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "database": "p0-durability.db",
+    "p05MetricProbe": true,
+    "p05BatchProbe": true,
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1838,
+        "batchCacheState": "staged"
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2295,
+        "batchCacheState": "cleaned-retained-completed"
+      }
+    }
+  },
+  "historyScreenshots": 32,
+  "shareReceipts": 6,
+  "gpxSchema": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "files": [
+      {
+        "file": "batch-multiple-Workout-1794280217047.gpx",
+        "sha256": "b53b02e3712f946d6886f46f4f2a1443b799872560938cdf134b4e8195e86ed7",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-multiple-Workout-1794280217048.gpx",
+        "sha256": "cd1d2a1ef3ec496df1f8f18a1236563572d67779cbdfc879d7016b55e7202ab2",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-multiple-Workout-1794280217049.gpx",
+        "sha256": "7c557b6bde2632b85656c3be1fd86ddc0e9cbf0f4d634efe42dad167e672f074",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-single-Workout-1794280217047.gpx",
+        "sha256": "b53b02e3712f946d6886f46f4f2a1443b799872560938cdf134b4e8195e86ed7",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-1794280217047.gpx",
+        "sha256": "b53b02e3712f946d6886f46f4f2a1443b799872560938cdf134b4e8195e86ed7",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-1794280217048.gpx",
+        "sha256": "cd1d2a1ef3ec496df1f8f18a1236563572d67779cbdfc879d7016b55e7202ab2",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "batch-zip-Workout-1794280217049.gpx",
+        "sha256": "7c557b6bde2632b85656c3be1fd86ddc0e9cbf0f4d634efe42dad167e672f074",
+        "points": 2,
+        "samples": 3
+      },
+      {
+        "file": "decimal-escaping.gpx",
+        "sha256": "22acea2aaa76fb5e1e88f819c6f03617656e05f882a17d071534c9dd48d461d3",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "event-boundaries.gpx",
+        "sha256": "0e0d43d48d8b4da41ee4898c75f5715de9e0e1241e14a0feda4681c9a13f0aef",
+        "points": 2,
+        "samples": 0
+      },
+      {
+        "file": "gps-gap.gpx",
+        "sha256": "8895192f795e02d4b06ce5cd8821fc5fbb8afd3551896098f7b3d1646bdf86f3",
+        "points": 4,
+        "samples": 1
+      },
+      {
+        "file": "gps-only.gpx",
+        "sha256": "b19081482a6d37c49864b9ace6688732c80741dc805e01e76d4ee54a46c9bc68",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "heart-only.gpx",
+        "sha256": "101af57bb52bdcd5bbc7911a6391d174ec8e101fc70d3137d4cb3e04fe3062ff",
+        "points": 0,
+        "samples": 2
+      },
+      {
+        "file": "legacy.gpx",
+        "sha256": "082a10175e18446eae4355947e6563eb43dabfae5b4e8f55bdaedfd45cbec40e",
+        "points": 1,
+        "samples": 0
+      },
+      {
+        "file": "local-file.gpx",
+        "sha256": "da3cfee5c33d945bb140074bfad7ef91304d426e96fa7667c93f28b1f42c4cbd",
+        "points": 1,
+        "samples": 1
+      },
+      {
+        "file": "raw-complete.gpx",
+        "sha256": "8ee443d717c43d7b018aeb31696047e0d6eda41475bb61bd89cb7a4a34abcf76",
+        "points": 2,
+        "samples": 4
+      },
+      {
+        "file": "segments.gpx",
+        "sha256": "cfe2cc6be9e7094a4c29fac9f7de864423f593901bfc277a62bd241be72f116c",
+        "points": 6,
+        "samples": 2
+      }
+    ],
+    "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+  },
+  "batchProcessDurability": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "database": "p0-durability.db",
+    "p05MetricProbe": true,
+    "p05BatchProbe": true,
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1838,
+        "batchCacheState": "staged"
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2295,
+        "batchCacheState": "cleaned-retained-completed"
+      }
+    }
+  },
+  "originalP0Screenshots": 428,
+  "originalP02": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "timezone": "Asia/Singapore",
+    "physicalBleTested": false,
+    "syntheticGps": true,
+    "screenshots": [
+      {
+        "file": "p02-home-small-light-idle.png",
+        "state": "idle",
+        "captureEpochMillis": 1794280584958,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "IDLE",
+        "sha256": "2963b746b05cf37df1370e7582d131333500eb8f7c8366d7c84cf4bb69f83031"
+      },
+      {
+        "file": "p02-home-small-light-acquiring.png",
+        "state": "acquiring",
+        "captureEpochMillis": 1794280586556,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "ACQUIRING_GPS",
+        "sha256": "bf6fe3a672ce303ebfdb09f4b54b96178b27db056da443f6f24a3ccc898f134e"
+      },
+      {
+        "file": "p02-home-small-light-gps-ready.png",
+        "state": "gps-ready",
+        "captureEpochMillis": 1794280588902,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "f7fe4f6050397ba4990e0b0146401bd4034c77c1a1c758f5163bff7ab5066e79"
+      },
+      {
+        "file": "p02-home-small-light-recording.png",
+        "state": "recording",
+        "captureEpochMillis": 1794280590586,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "547d98a6ec0b56d9aa47728347a306296084df677738ff9b59eab4717807c1d2"
+      },
+      {
+        "file": "p02-home-small-light-gps-lost.png",
+        "state": "gps-lost",
+        "captureEpochMillis": 1794280592104,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "eb20526f9b5af8cabfc617ead7e37af63da1eb84cb36a96829a8561a961c97f7"
+      },
+      {
+        "file": "p02-home-small-light-paused.png",
+        "state": "paused",
+        "captureEpochMillis": 1794280593672,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "PAUSED",
+        "sha256": "07103033a3e679dfc30b84ee4bd2186759a0a01eab9ada56a6abd299460d29a9"
+      },
+      {
+        "file": "p02-home-small-light-resumed.png",
+        "state": "resumed",
+        "captureEpochMillis": 1794280595221,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "e70c267cfa31f1fce291233ad290a7b296fb92da42d13adb19958c0cefc862b3"
+      },
+      {
+        "file": "p02-home-small-light-heart-connected.png",
+        "state": "heart-connected",
+        "captureEpochMillis": 1794280596724,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "f47a66c82d0f716c7895e91964fce4c2915d51e442de3cbb8e6ca9ed66e9b327"
+      },
+      {
+        "file": "p02-home-small-light-heart-disconnected.png",
+        "state": "heart-disconnected",
+        "captureEpochMillis": 1794280598746,
+        "nightMode": 16,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "75d376b9a1054ec511d041f2dfb3118607588e8038c393942b3f626a0a19282d"
+      },
+      {
+        "file": "p02-home-small-dark-idle.png",
+        "state": "idle",
+        "captureEpochMillis": 1794280603160,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "IDLE",
+        "sha256": "869c748a4cec31e2d2951970c41049b8d81fee0fd9f6f5a3af3e09da90169624"
+      },
+      {
+        "file": "p02-home-small-dark-acquiring.png",
+        "state": "acquiring",
+        "captureEpochMillis": 1794280604729,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "ACQUIRING_GPS",
+        "sha256": "72e032b71ba512f297a5d4dfcea31752dad5557bb82a7159f3fbbcb93cf464c9"
+      },
+      {
+        "file": "p02-home-small-dark-gps-ready.png",
+        "state": "gps-ready",
+        "captureEpochMillis": 1794280607066,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "62efc3344ba501c92fd713826e85a51d16093a26bcdf20cc5ed43ae7802c0310"
+      },
+      {
+        "file": "p02-home-small-dark-recording.png",
+        "state": "recording",
+        "captureEpochMillis": 1794280608748,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "e9adb726bde3bb7b6c78401c59f8bf57944efa85b11c5d5cc2874737b2f2a3c6"
+      },
+      {
+        "file": "p02-home-small-dark-gps-lost.png",
+        "state": "gps-lost",
+        "captureEpochMillis": 1794280610297,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "bcb5d3d56bb2858aafd1ced76d88b4f6cf5c8ce3487d93be137ad73c28216fc6"
+      },
+      {
+        "file": "p02-home-small-dark-paused.png",
+        "state": "paused",
+        "captureEpochMillis": 1794280611850,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "PAUSED",
+        "sha256": "6c26528120fd2313e1430b8c59bb50ca849dc8790e3b36776ef0f143ecbd903d"
+      },
+      {
+        "file": "p02-home-small-dark-resumed.png",
+        "state": "resumed",
+        "captureEpochMillis": 1794280613380,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "b71007d3477453c1fc47500368638f040059b7c66d3f1518dee3997300e52fbc"
+      },
+      {
+        "file": "p02-home-small-dark-heart-connected.png",
+        "state": "heart-connected",
+        "captureEpochMillis": 1794280614881,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "66f0472418b28bcebd1a95ee60983fd3c703fc5d8831324e17cd1d488b0775ba"
+      },
+      {
+        "file": "p02-home-small-dark-heart-disconnected.png",
+        "state": "heart-disconnected",
+        "captureEpochMillis": 1794280616515,
+        "nightMode": 32,
+        "widthDp": 360,
+        "phase": "RECORDING",
+        "sha256": "3eb9610ac102e96b8d69a606dc6b13570a621579ced50a57f29909dff7a83d6f"
+      },
+      {
+        "file": "p02-home-large-light-idle.png",
+        "state": "idle",
+        "captureEpochMillis": 1794280621184,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "IDLE",
+        "sha256": "befb40bafa35230fe96516ca857a76877a6fa3160dd3eeb16ba09f4f0e67e8d2"
+      },
+      {
+        "file": "p02-home-large-light-acquiring.png",
+        "state": "acquiring",
+        "captureEpochMillis": 1794280622834,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "ACQUIRING_GPS",
+        "sha256": "c0de5ff0178b044f857f7ce2d5e3ad5d933e024c0f9853e393f58cea7c400c81"
+      },
+      {
+        "file": "p02-home-large-light-gps-ready.png",
+        "state": "gps-ready",
+        "captureEpochMillis": 1794280625370,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "f9ecaa14c1c9d2976b9944a997583f1ebeba479ea5bb0c5340233ca4ae9aca11"
+      },
+      {
+        "file": "p02-home-large-light-recording.png",
+        "state": "recording",
+        "captureEpochMillis": 1794280627318,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "8eb635135636ab03ee9da07fd7446f50cf801e94996bf49ca2aa3eb2cfeef705"
+      },
+      {
+        "file": "p02-home-large-light-gps-lost.png",
+        "state": "gps-lost",
+        "captureEpochMillis": 1794280628755,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "3794cfe799fbf6ae529b1f13412ee2d5c21a4e6e84bb7b6b63f00792bd30ee7d"
+      },
+      {
+        "file": "p02-home-large-light-paused.png",
+        "state": "paused",
+        "captureEpochMillis": 1794280630188,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "PAUSED",
+        "sha256": "1c48e386280a7698ed588d8f35370304468755a61063c44f623b1d4b487ea466"
+      },
+      {
+        "file": "p02-home-large-light-resumed.png",
+        "state": "resumed",
+        "captureEpochMillis": 1794280631765,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "e94c2206a8a54faf3bac7ba9bacd2567a3a751e22925e6b6d55574ebb3acb72f"
+      },
+      {
+        "file": "p02-home-large-light-heart-connected.png",
+        "state": "heart-connected",
+        "captureEpochMillis": 1794280633582,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "957a08bd95af849141361d9b81c05274f21b308690f39e4ef0e843a7b70d3970"
+      },
+      {
+        "file": "p02-home-large-light-heart-disconnected.png",
+        "state": "heart-disconnected",
+        "captureEpochMillis": 1794280635581,
+        "nightMode": 16,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "6ced31f0253f185c0c49f86edfdca5f20f339d658bdad835b3d27bb0bee3d8dd"
+      },
+      {
+        "file": "p02-home-large-dark-idle.png",
+        "state": "idle",
+        "captureEpochMillis": 1794280640015,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "IDLE",
+        "sha256": "d52f1308bea426ccd1b30165eddeebaf2c950357dde5de2ab1081edf828aa0e9"
+      },
+      {
+        "file": "p02-home-large-dark-acquiring.png",
+        "state": "acquiring",
+        "captureEpochMillis": 1794280641635,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "ACQUIRING_GPS",
+        "sha256": "88121d1f6dcaaf3cc360a9395701dc4543ded43a59ae0737d8b79d8124ef65bf"
+      },
+      {
+        "file": "p02-home-large-dark-gps-ready.png",
+        "state": "gps-ready",
+        "captureEpochMillis": 1794280644170,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "47163e4f592097cfe8ef6ca40fa0cc6fad43f9481c86a7d6f0da2ff56e778768"
+      },
+      {
+        "file": "p02-home-large-dark-recording.png",
+        "state": "recording",
+        "captureEpochMillis": 1794280646150,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "f450384c725aafe15d8ca1250e241947291f94e396250dd263f7de6f06328366"
+      },
+      {
+        "file": "p02-home-large-dark-gps-lost.png",
+        "state": "gps-lost",
+        "captureEpochMillis": 1794280647589,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "529b98fa6bd736732ee79afd698cbd020d6412a599272f17c20df4443a95c87a"
+      },
+      {
+        "file": "p02-home-large-dark-paused.png",
+        "state": "paused",
+        "captureEpochMillis": 1794280649121,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "PAUSED",
+        "sha256": "2ebf60e1be62701cd0f446a4a1585de1bece50f7b46f1f9b5f6cbe9ecdb21e4c"
+      },
+      {
+        "file": "p02-home-large-dark-resumed.png",
+        "state": "resumed",
+        "captureEpochMillis": 1794280650601,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "832de192e84ca457f460629d15dc9e3e28fa32f4080da9cc6ede35a908ab9060"
+      },
+      {
+        "file": "p02-home-large-dark-heart-connected.png",
+        "state": "heart-connected",
+        "captureEpochMillis": 1794280652515,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "ce936e74f8b03ca2107d0f3b78cb8fbf38c1e81caea1bbd6d448dde424897dea"
+      },
+      {
+        "file": "p02-home-large-dark-heart-disconnected.png",
+        "state": "heart-disconnected",
+        "captureEpochMillis": 1794280654520,
+        "nightMode": 32,
+        "widthDp": 800,
+        "phase": "RECORDING",
+        "sha256": "032b47c04dc302c03eb4dda4d676451f62abd77df9d21a28deedf21cf5c26561"
+      }
+    ]
+  },
+  "originalP03": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "schemes": [
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "precision",
+        "appearance": "light",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-precision-light-home.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "home",
+            "sha256": "b96181174881d4b7560f7062117c0637ce9cf72fc4c90d4ac3d2dcde84c904a3"
+          },
+          {
+            "file": "p03-precision-light-recording.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "recording",
+            "sha256": "c838e7dc44681d89eea3dfe25ae8f6e77033ed379234d849987e448a0f41ff00"
+          },
+          {
+            "file": "p03-precision-light-heart.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "heart",
+            "sha256": "c2f9c7df92ecb38c4376d369f6f8a6fc0969a3667a5573592f54136ad4e61dbe"
+          },
+          {
+            "file": "p03-precision-light-history.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "history",
+            "sha256": "f176d2bbcb0fd3a40ce7690ad22abf6746981594f01e4d35461be6c590c97563"
+          },
+          {
+            "file": "p03-precision-light-detail.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "detail",
+            "sha256": "b00f9d6f2e8829e393648f445ad39cedf7fe690c123346b2adee0dd170118396"
+          },
+          {
+            "file": "p03-precision-light-dialog.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "dialog",
+            "sha256": "3ae49582b92e11f5802828917ad91eb406c0308f0ed88c579e477c82f1049543"
+          },
+          {
+            "file": "p03-precision-light-settings.png",
+            "family": "precision",
+            "nightMode": 16,
+            "page": "settings",
+            "sha256": "3e2e01ab16ad501e50f4d5204ce8760cdd7d466288d0176d2ecc1e0530a0a1b5"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "precision",
+        "appearance": "dark",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-precision-dark-home.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "home",
+            "sha256": "0d4fd8fda1e673090464439cf4cae06722b361a8f46f11fd50b4f61a476cb276"
+          },
+          {
+            "file": "p03-precision-dark-recording.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "recording",
+            "sha256": "fcdf5e649fbfcfcc0dceb014e909fed1c246942f5cfb4c2d3aa0ace207df111e"
+          },
+          {
+            "file": "p03-precision-dark-heart.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "heart",
+            "sha256": "533efead6112ee4785b956838f43c300dbe86cf0eb491701a35180a63ab21504"
+          },
+          {
+            "file": "p03-precision-dark-history.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "history",
+            "sha256": "6174bf42ff9bade9bce47d30b0460b4e0bec7177c82a71178cc4879d5670e695"
+          },
+          {
+            "file": "p03-precision-dark-detail.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "detail",
+            "sha256": "6cfde842f883c2da98337a2f2acc2e898bc606ab1124c010da5f37671055338d"
+          },
+          {
+            "file": "p03-precision-dark-dialog.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "dialog",
+            "sha256": "21f4100aba475a24002cb319290422740fb7361bf4b122700e613e6752c19761"
+          },
+          {
+            "file": "p03-precision-dark-settings.png",
+            "family": "precision",
+            "nightMode": 32,
+            "page": "settings",
+            "sha256": "37577da056e96a839f6e8e7cafa9af88bbd08ee5525fc773762458051dbb61fc"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "quiet",
+        "appearance": "light",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-quiet-light-home.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "home",
+            "sha256": "c05f9fc49badbd220c952059cea7d2df6b6567ec0ba4721da32ebd756c6a890e"
+          },
+          {
+            "file": "p03-quiet-light-recording.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "recording",
+            "sha256": "b0e29c3824981d878af6cf735f7aa4711644dc138cd4ad4c893b103edb9e59da"
+          },
+          {
+            "file": "p03-quiet-light-heart.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "heart",
+            "sha256": "45fbd6330b7c26a2e4284ad2cb47f321513978f94c25c1d166572df59603aeaf"
+          },
+          {
+            "file": "p03-quiet-light-history.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "history",
+            "sha256": "cdd8cd442b150cb1aa8a72bb2996b7d801744014989704028faaa6c6218b7a7d"
+          },
+          {
+            "file": "p03-quiet-light-detail.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "detail",
+            "sha256": "404fc4436d12bf44e1a11f7077e8b17ce3b040e993508e58d05e70fe0fb04719"
+          },
+          {
+            "file": "p03-quiet-light-dialog.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "dialog",
+            "sha256": "37c0b6c094d381d3593245bf6342d09bcc47b7265fc66d9e48f71608edfe5330"
+          },
+          {
+            "file": "p03-quiet-light-settings.png",
+            "family": "quiet",
+            "nightMode": 16,
+            "page": "settings",
+            "sha256": "770f17ab8f412c6e00a5166fb4f98e56b32baa6e9f6a7c77db0bc5e8bb357edc"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "quiet",
+        "appearance": "dark",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-quiet-dark-home.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "home",
+            "sha256": "0ea922ee5609345c6d26bbf56ebea3c67712686f8dd9af68951e31d8962eef90"
+          },
+          {
+            "file": "p03-quiet-dark-recording.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "recording",
+            "sha256": "03fe3efcbaf0689368274fb36660aff181b3e1842b8fb8de8d99ceb2db77acf2"
+          },
+          {
+            "file": "p03-quiet-dark-heart.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "heart",
+            "sha256": "589185c1d51a33f240b6d93754b76566b607c7597c946a49f442e8d11b22749f"
+          },
+          {
+            "file": "p03-quiet-dark-history.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "history",
+            "sha256": "923d17c71d21202f179832949b274dff68fba03045f0d7bdb63768ff093b36d6"
+          },
+          {
+            "file": "p03-quiet-dark-detail.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "detail",
+            "sha256": "80a1e42ace7c6327f869eae42f770a9985928e0fbf23b58d5cdaa38837b4a2c8"
+          },
+          {
+            "file": "p03-quiet-dark-dialog.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "dialog",
+            "sha256": "bfbd572e64caaec2e51ac9c1590827889ae2ac6718c9e963626576a01e1c6865"
+          },
+          {
+            "file": "p03-quiet-dark-settings.png",
+            "family": "quiet",
+            "nightMode": 32,
+            "page": "settings",
+            "sha256": "0c855099a7383433386e1f536fddc66992c25f4d27f294dc660ce1cd2f2dbe96"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "explorer",
+        "appearance": "light",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-explorer-light-home.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "home",
+            "sha256": "bf3ee23a37bb33bcebae9eb18ca2f9b0589e1ef95f585e04a121ae7966fbde89"
+          },
+          {
+            "file": "p03-explorer-light-recording.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "recording",
+            "sha256": "2bda2ba1e2673c50c46df10e02dfec0696bd660f810536edd59a9e9cd90e8a3e"
+          },
+          {
+            "file": "p03-explorer-light-heart.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "heart",
+            "sha256": "e594956d65a6238f2861b7771097fcd3e368eedec3b186ed6e3eaaf2bbd4bf66"
+          },
+          {
+            "file": "p03-explorer-light-history.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "history",
+            "sha256": "d05effca0382b1a8feabd7d0d15225fe35677664db636277600d8adc4bf0a3a5"
+          },
+          {
+            "file": "p03-explorer-light-detail.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "detail",
+            "sha256": "87601c4e0a75ee939e4a9758ed9329c8d6fbeb17b527b4d59406db6371774609"
+          },
+          {
+            "file": "p03-explorer-light-dialog.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "dialog",
+            "sha256": "7ff847d6954efbaad3d22a8d6d2392989c870b586ae46d87d9571cb11e85d0da"
+          },
+          {
+            "file": "p03-explorer-light-settings.png",
+            "family": "explorer",
+            "nightMode": 16,
+            "page": "settings",
+            "sha256": "d9d6c16be6b3f01eb786646eeec1cf9bd1eb75ef432f2e1f352a52a2f2df814e"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "explorer",
+        "appearance": "dark",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-explorer-dark-home.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "home",
+            "sha256": "b53331c7c146fe6a3f1f266c56298e6c86ad7aa26e589063d95c28a4568e7f9c"
+          },
+          {
+            "file": "p03-explorer-dark-recording.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "recording",
+            "sha256": "a9d75e74e377a380ce04e082ba7843ec9b016cfd3c471e58ac91dbeb5b6e47ac"
+          },
+          {
+            "file": "p03-explorer-dark-heart.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "heart",
+            "sha256": "2ace49230f759ac70801109f7112d1589e4a0c45204c8b8fdc4d0ae5c6c58fd4"
+          },
+          {
+            "file": "p03-explorer-dark-history.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "history",
+            "sha256": "a7b645630c377bcb0406f7d61837ef4692b2bc4dad30004bd2970700524f4d0b"
+          },
+          {
+            "file": "p03-explorer-dark-detail.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "detail",
+            "sha256": "e4f1ed41365e77de5427bd70950656affad0a60d7ac93d09613e09373fdc0f2f"
+          },
+          {
+            "file": "p03-explorer-dark-dialog.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "dialog",
+            "sha256": "b71c64da0784e7d9e1838f032c5ba47cd51b96ec44b3f0f39fd8310b93612974"
+          },
+          {
+            "file": "p03-explorer-dark-settings.png",
+            "family": "explorer",
+            "nightMode": 32,
+            "page": "settings",
+            "sha256": "e25a36fe6c2d57a82fb14838c2ca9f8fa5743e4004bafd91e1161596bf874af5"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "neon",
+        "appearance": "light",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-neon-light-home.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "home",
+            "sha256": "fd08caf2ef0df515137d056f36e7c8ae373079c8ef5e28afc13b25cfaf4aa949"
+          },
+          {
+            "file": "p03-neon-light-recording.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "recording",
+            "sha256": "fcd82324328760598c3a23f8c3aac65f29c199ee36d9aaaffe392a26ba6171b3"
+          },
+          {
+            "file": "p03-neon-light-heart.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "heart",
+            "sha256": "87d08c635e6ac9dc53f9cf8feb3605ae4dde1c8393d32862402497870003f8b1"
+          },
+          {
+            "file": "p03-neon-light-history.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "history",
+            "sha256": "83aa1a97aa42814cd7a3f6cbc91ce3354976ff2ca2d1a16c0cefcbbe4db3f5f2"
+          },
+          {
+            "file": "p03-neon-light-detail.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "detail",
+            "sha256": "722bdc07894c9ac5bf3af52b7755855fdb5c45331bd807d95441c1a3e028eff0"
+          },
+          {
+            "file": "p03-neon-light-dialog.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "dialog",
+            "sha256": "2f440e9b9848b594e9bd7b5ddb23bdfc89322ce076beb33c674e4e0d4630a9b2"
+          },
+          {
+            "file": "p03-neon-light-settings.png",
+            "family": "neon",
+            "nightMode": 16,
+            "page": "settings",
+            "sha256": "8ce54dbb4239a1331a44c91d5fb0e0fcbd042cf404c809c1d3bf7a20d6e6b6be"
+          }
+        ]
+      },
+      {
+        "sourceCommit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+        "api": 35,
+        "timezone": "Asia/Singapore",
+        "family": "neon",
+        "appearance": "dark",
+        "passed": true,
+        "physicalBleTested": false,
+        "syntheticNotifications": true,
+        "systemSwitchPreservesRecording": true,
+        "systemSwitchPreservesGps": true,
+        "systemSwitchPreservesConnection": true,
+        "viewModelRetained": true,
+        "pausedStatePreserved": true,
+        "waitingCreatesNoWorkout": true,
+        "dialogRestored": true,
+        "familySwitchPreservesRecording": true,
+        "screenshots": [
+          {
+            "file": "p03-neon-dark-home.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "home",
+            "sha256": "0d508d01e0cc79f46dcb89396b30105df98971ee571ffedb37ae1b29e2d4ea90"
+          },
+          {
+            "file": "p03-neon-dark-recording.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "recording",
+            "sha256": "001057f5953bd24665431f3ca54603b088d9f772b4af0702700e60410b551041"
+          },
+          {
+            "file": "p03-neon-dark-heart.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "heart",
+            "sha256": "a1e4070859aae74488ccfd86c7b6837d12abbe41aa1099ae09066baaa5e53e3d"
+          },
+          {
+            "file": "p03-neon-dark-history.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "history",
+            "sha256": "282ee63d6800fece0ada84627e1a8f530ca716a7918706e40ef118d87127b0c7"
+          },
+          {
+            "file": "p03-neon-dark-detail.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "detail",
+            "sha256": "d83b7de3a4d906df8c49a22fceb73d456dcfda58f3408a56348f620e7323e164"
+          },
+          {
+            "file": "p03-neon-dark-dialog.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "dialog",
+            "sha256": "c10499d01454f3ad3bcc0180c7b7c19741b434b25493c20ecbabd9016a2774b0"
+          },
+          {
+            "file": "p03-neon-dark-settings.png",
+            "family": "neon",
+            "nightMode": 32,
+            "page": "settings",
+            "sha256": "82b2c457597119008a20db2e417a9a959a911f2e34c1d10e6ee13510be1e5ef6"
+          }
+        ]
+      }
+    ],
+    "screenshots": 56,
+    "policy": "FOLLOW_SYSTEM",
+    "physicalBleTested": false
+  },
+  "legacySkippedTest": {
+    "class": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+    "method": "recording_stopGPS_noop",
+    "unchangedFromP04": true,
+    "countedAsPassed": false
+  },
+  "processDurability": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "database": "p0-durability.db",
+    "p05MetricProbe": true,
+    "p05BatchProbe": true,
+    "forceStopped": true,
+    "timezone": "Asia/Singapore",
+    "phases": {
+      "write": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1838,
+        "batchCacheState": "staged"
+      },
+      "read": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2295,
+        "batchCacheState": "cleaned-retained-completed"
+      }
+    }
+  },
+  "offline": {
+    "passed": true,
+    "commit": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+    "debug": {
+      "applicationId": "com.fox.runner.debug",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "android.permission.health.WRITE_DISTANCE",
+        "android.permission.health.WRITE_ELEVATION_GAINED",
+        "android.permission.health.WRITE_EXERCISE",
+        "android.permission.health.WRITE_EXERCISE_ROUTE",
+        "android.permission.health.WRITE_SPEED",
+        "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {}
+    },
+    "release": {
+      "applicationId": "com.fox.runner",
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.VIBRATE",
+        "android.permission.WAKE_LOCK",
+        "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "allowBackup": false,
+      "components": {
+        "activity": [
+          "de.dennisguse.opentracks.introduction.IntroductionActivity",
+          "de.dennisguse.opentracks.p0.app.P0Activity",
+          "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+          "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+          "de.dennisguse.opentracks.p0.app.P0SettingsActivity"
+        ],
+        "activity-alias": [],
+        "service": [
+          "androidx.appcompat.app.AppLocalesMetadataHolderService",
+          "de.dennisguse.opentracks.services.TrackRecordingService"
+        ],
+        "provider": [
+          "androidx.core.content.FileProvider",
+          "de.dennisguse.opentracks.data.ShareContentProvider"
+        ],
+        "receiver": []
+      }
+    }
+  }
+}
