@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "commit": "a8891f61122712b81bee357f40d688151a948e57",
+  "files": [
+    {
+      "file": "batch-multiple-Workout-1794286712486.gpx",
+      "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-multiple-Workout-1794286712487.gpx",
+      "sha256": "53eb3007900a88d79381fc37d67060ef3f54982875d90772af61a35e0ed580c1",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-multiple-Workout-1794286712488.gpx",
+      "sha256": "8f7802d82bfbb12001ebe937fc6dcb4b9d667f242233c966d1cb6ebe6740df6c",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-single-Workout-1794286712486.gpx",
+      "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1794286712486.gpx",
+      "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1794286712487.gpx",
+      "sha256": "53eb3007900a88d79381fc37d67060ef3f54982875d90772af61a35e0ed580c1",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1794286712488.gpx",
+      "sha256": "8f7802d82bfbb12001ebe937fc6dcb4b9d667f242233c966d1cb6ebe6740df6c",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "decimal-escaping.gpx",
+      "sha256": "a7d6adfe0c47689103c8e9255c823b7d68252a1acbae3fbb67755a661884bb6a",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "event-boundaries.gpx",
+      "sha256": "142f4cc61155ec03356c3e9fdcdb3b7c43e69adfb0373d93282899ed9f661941",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "gps-gap.gpx",
+      "sha256": "70164bd976eaa9d941b6369eee094114dced5ccd2971dd13bd4020f889180022",
+      "points": 4,
+      "samples": 1
+    },
+    {
+      "file": "gps-only.gpx",
+      "sha256": "ca27bf6412473a29d88e460ee3326edb273681c358b37661a000dc20563f0373",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "heart-only.gpx",
+      "sha256": "2257525b1a211b76fe53fc27c9a3114949077f9dea58124d924bd5a0610ab6b6",
+      "points": 0,
+      "samples": 2
+    },
+    {
+      "file": "legacy.gpx",
+      "sha256": "c9577f277cb45d9e6ac456d7b74c09f8e11693cb57c7180c9ae534ff4d043898",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "local-file.gpx",
+      "sha256": "ed5003fbb400cb4b990ccfd3a1b4939d75145f584ade5baa9e8d2d1cf1d53ba5",
+      "points": 1,
+      "samples": 1
+    },
+    {
+      "file": "raw-complete.gpx",
+      "sha256": "fc7df670be92ef1d354ea727f8089d3b63cb20aeea619ff01b4b57ba9ad4abde",
+      "points": 2,
+      "samples": 4
+    },
+    {
+      "file": "segments.gpx",
+      "sha256": "d03f719acea3637db21ea13db60473f3b754c638f5ba8fe144ccdf93004100fa",
+      "points": 6,
+      "samples": 2
+    }
+  ],
+  "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+}

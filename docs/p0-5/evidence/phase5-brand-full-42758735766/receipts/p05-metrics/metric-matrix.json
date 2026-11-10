@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+  "api": 35,
+  "native": true,
+  "screenshots": [
+    {
+      "file": "p05-metric-duration-precision-light-360-font130-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "d9524e15a697c06772c6b5c0066ad12c16e6ca279b675c28b449c5583283aa78",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-precision-dark-360-font130-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "36633294b1f17fd7d720c57338f7aeebb96306ab8fa88d1b824da56d28f126bb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-quiet-light-360-font130-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "23205b73da9fbc45dbf94f88dc962bf86cbd426cf2dab79cd34528d39c5a75dc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-quiet-dark-360-font130-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "3a51af54738e5d6d33b32291693ee5d81f7ddcf97bf7a027d2c6cabe2cacecec",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-explorer-light-360-font130-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "e97178f057d68fc79a1a632fb07789352242e2e21e46feddb3ad7cd26cee1d0d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-explorer-dark-360-font130-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "d9cec36f8607b484019eb56e371a861114c009451b5cadcdbd9a6d02b7c5fa2d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-neon-light-360-font130-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "e64b74507c33d41f38a610bb3ce9bd7cee713a35264c9747745456736ca49221",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p05-metric-duration-neon-dark-360-font130-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "duration": "125:25:30",
+      "sha256": "e4fe677a0c1d33bbb3e1f1f921795464f6ca5675dd7f0e98f51afdcbffe2eda5",
+      "syntheticUiFixture": true
+    }
+  ]
+}

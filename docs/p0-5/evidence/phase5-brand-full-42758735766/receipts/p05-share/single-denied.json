@@ -1,0 +1,24 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5538,
+  "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+  "mime": "application\/gpx+xml",
+  "flags": 268435456,
+  "clip": [],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-2c933b29-b7de-4ea8-8d2f-d317dcb392cf\/Workout-1794286712486.gpx",
+      "permission": -1,
+      "read": false,
+      "errorClass": "java.lang.SecurityException"
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2253,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": true,
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57"
+}

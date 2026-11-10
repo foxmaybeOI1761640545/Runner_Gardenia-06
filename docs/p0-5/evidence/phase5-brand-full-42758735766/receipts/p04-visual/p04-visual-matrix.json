@@ -1,0 +1,1936 @@
+{
+  "passed": true,
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+  "api": 35,
+  "policy": "FOLLOW_SYSTEM",
+  "native": true,
+  "productionFixtureEntry": false,
+  "screenshots": [
+    {
+      "file": "p04-precision-light-360x800-idle.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "436ccb5ae1b0d690fbc464ae9a5af9af2002039c4f2a834676dbcfb61248bd48",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-gps-searching.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "efcc5f2ebcad53070f09e31ca8ad711ba1f60bb92dea2cbbc7edd119348fdf82",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-gps-fixed.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "240f005ffb08ac250cfb806dd6b896f18de5fff446eb0033141873ca1e4994f5",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-recording.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "1a9430a0fa1794b851f02e89b0e74dfda9f499cb91c676d2f1e4d0ce16788766",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-paused.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "dba70cfe82dd513bab4f932971bb2617d16b2310f17ab835f9482e5e16873b6f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-finished.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "8f6983e19410a86424ab70e9a201b1032e2ad958a95c388dd9388a33ec05f7ef",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-disconnected.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "07df8f6571c209e1f5d25ee666ce43980695f56dd37fe43f2bdad65b1352922d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-360x800-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "d5d8a038390a85d078e53ca013f7e35f4fd154ac52d846935ce22bd247e1f080",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-idle.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "e7c79872cce27c9eac002cf87101955010884692e401a5294ce14a6f696c703e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-gps-searching.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "d6d3d8b27d794fdc4a5bceef2c036ef878c185cf00c6dac74ffb5b2dd7955b30",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-gps-fixed.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "4a5dd3e5b2e336cb7726d130be1562628ec72ca36811f262e70fd3b1928dda20",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-recording.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "176b90ed76376facaf898cd333c82064052de746d935d094b5dfb82d725714a7",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-paused.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "d29da86b2663fe5605180f3cc43c16578a956ae9ede30bf8ae943bf4c06e0e28",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-finished.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "b5af28730749536ea78fc0b3a962e1744c28110d9400e710d953b75cc145c0b2",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-disconnected.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "6e048244a59f94b75e6f300a748b39743da675aac819df502bb21bf4098ed901",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-360x800-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "93f07b1ee374f2079367a5d177eb0a909d230b45bee6cbdacf86f5309506e5e1",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-idle.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "71fd69d868e362af47c9a55983172eec327229b6271189188e1b93a3366dbff6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-gps-searching.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "c51e8ff3736bc3dba2c3c1953d985a336bffe933b1e25205983f32c2c73f9701",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "ba71980ee127347650a3f00063822a592f9a1505287593ea63ef04346c8af826",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-recording.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "ebf729919bd6df16220dfdd0ef8bea3639ad480d7b0fc212f2abf9d07d265f7b",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-paused.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "4723936a19de7ff1daaa31f0e6a4449a596a76d313dc963065c48df72d7dc8bb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-finished.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "eec90559268d1c6b160a2e16952e3654d405acb77f39a793c608b99012aa8a36",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-disconnected.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "d0a3e65d8d7d66737a95a37de8f422ce8ae9bbaf07bede23fc5b974e1511891e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-360x800-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "f5a59f296db2d4ce21970904be12d406257c2a8b30073895502bce0c7ee5ed70",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-idle.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "e3e91eb3fbe8c3700d4a29f4afe0efa4e1a0068ddf0d07bb89d8fb8d3d0ac078",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-gps-searching.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "7a468bbc91d577f13edde78bb83a53532a2adf0d369203e639d5e0badae33d27",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "ba12812f6335e3fb5fa647824dcdf12d005340d1fc22e1c098fdade81ad93413",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-recording.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "83fbb4a8f5d680b82f908d6cf28ae1d7dddeae80481a772f374ef1f7c405ae3d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-paused.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "b05a3673709e5a837d799413c0f1e5fc752c1de1e3e4f41715029fea533ec974",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-finished.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "e740021fbbbf486b95896ec91474d1b69d85c897a300113a40e2d6846c086c9a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-disconnected.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "14c91e46350cb94fc86b9d41b600e65f7d3a80da4dc28e08c86392c1ce42109d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-360x800-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "8a3ce49f6a27303b765631df101791ba2e2ac28ebf9fc62a3aed3a0508a06383",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-idle.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "5fddee6258dfb8570a3b0ad800b046c9badd4598fdbacd89b24821bcc37d116d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-gps-searching.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "b7a0d78149e4077b25e4669f5b274631d620f58a66aa7e2dbff63935345a8455",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "cc353957b62525a17817b149263ef95438e9e8f6c214a404926167e3888262ae",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-recording.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "7527d0e832db727a4b7f8c612e7039a9c27ecdee6db2a0cba101746650e73d1a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-paused.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "32ffa107cda8f32100b571d648b198cd8f50fe45c3a1d13cf7233cd3149647b3",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-finished.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "38991e847fd54766b940ea3bad671d9b1457c9c980505d480f3e859892897161",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-disconnected.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "b0265ae6bac74e4c7c1e8d820af2acacd10f06c6a46dc02bd91f1918e971c987",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-360x800-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "3d344bdc778efbc10453f644e06231e80e87a163b54bd114dbf966c5d8c5aee7",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-idle.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "e79ba491ea6b9ad12609f6883c6c2ec80f7e31fc6e77aff53281f2bff09c0433",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-gps-searching.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "787cf008e44cbd6a3aa532e6f11d0efc2dcfadb75e629045d184ff96d3e3953e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "723428ef7d2ce49456740ebc2421cdb847243fd5a2517699bc6b8d38309d6f3a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-recording.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "8cd30f092a56cc22cfe2a6240998520864d2f0753afeffdd113db17e9ff92f86",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-paused.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "798b89700b466ca85fcd344fc716d61320835494025728f7391334f3ec53a994",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-finished.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "63e293d44f6f3dfb10830dbe155327dfa6383b0f8cb19619887a7a43bd78248c",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-disconnected.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "d5108e8eafca74b29e9b13f0c7290038d5805cdfb408572593f6f6c3aa79b819",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-360x800-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "5ca1b45726aa3b5bb820d6400ca9c14032e2e3d41bf245be9bdc77cd8ecd9534",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-idle.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "d6c9c63f1c8ca39bf1dd4d2fd61d37705a519bf88379ad93c66439312f7867cc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-gps-searching.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "4cad2c932a6ed77cfc491e3464ce9f54fef9be11935e006248cd2ec821713b18",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-gps-fixed.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "50fca7fa83479b3ff30bf3ffd4af1f69c52530bfc219285c4b9005d24f468831",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-recording.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "1b569e37137cf64085c8e980fcd62129ad35ed19050186f6d5572074b421b2b1",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-paused.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "35ab54bd00d4fac0dc845a7628e1dbf658875bc12bc4e960829fc0adb5f4cedc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-finished.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "d42f703c3dc5a3e2966dde43f481e78649119480f20481cb1d28175bf69d1577",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-disconnected.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "fddec054c6264741c6fc2b864b64ea59ae9c4c106a9a4bae8aea2475b0c1a059",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-360x800-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "1bbe75a2a4b1ea48db1d39822b49a21503794aac4f05c62bcfcb1e53bb7aae7b",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-idle.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "idle",
+      "sha256": "8250e58d45ba3fe97f4cc3606e1b49742b13f288990d81b29ba2337635171499",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-gps-searching.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-searching",
+      "sha256": "0b6eb340605b0b69944d9366d7d888b74ade887fc49472fb7698e6194e819141",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-gps-fixed.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "gps-fixed",
+      "sha256": "20c68edfdbcd118d796b0c760d9903cc51dd4aabd87aadc251925a1354e8f375",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-recording.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "recording",
+      "sha256": "5374f1b10c5be51f2af3b746bdcd5f6804a89cf16b225e995c9dce01e5da0186",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-paused.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "paused",
+      "sha256": "16e5a1e2bed9c36dad4ed76eda6319f582e0e1a050d4902fa47909385e71dc2a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-finished.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "finished",
+      "sha256": "5fe07d9cc62e7c915fafc5eebc28c44dc07e3bac126629dc9d962af9fa677e93",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-disconnected.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "disconnected",
+      "sha256": "2f74eea5c45926db0522e9b5150a62ad6b45965267a0e3923998bbeb31509be5",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-360x800-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "state": "connected-no-sample",
+      "sha256": "bb02d1cb0ab1e2b3ec295ce0e4115f6c5a583a9abc4ccfe49aafee9f4658428b",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-idle.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "0f6371320edc4b46a6c8547eb6827491ea7bf2f3928e510c0c0d97955e261efc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-gps-searching.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "7795d0c06bfd8f8fea065d2b12543e0f4f25b231363a6b84c46f204e537d75c7",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-gps-fixed.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "053a66a6c9a9f0249244638b3f8ecd6aeb1f3b431fa707c1c6b6a8930f445b74",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-recording.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "3814b52a9502f4fdf85501a1053ff14ee6dbbf0aa22caa71b98e2705935d218a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-paused.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "ac137971334109ef5341b9a493be64450bdbdc9eb8c8fe32df758e4416792708",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-finished.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "8957a2675af881d7b98dbc3280b025982efd56cb2c2eadf348d0b2f7f1096ebb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-disconnected.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "70839f282429513c69d4b8ed37d6ebf871df4ab2ea1bb00b680dfd4aa4864719",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-390x844-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "130067cb7dc68494b1672305f80884641c4c3930cc11931e7630def54a3dfa4a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-idle.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "70053dcb02196700eb6d0bd7e289ff4d1fbfc218e5d55647279c708351008b4e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-gps-searching.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "58c3b99d48d1d8876c6da7c7afda2152484b3a69dafebec7755ade564f835b5d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-gps-fixed.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "2bc7d3042cd37eea9591d4277f289780b1a9d0a08e108b74397e74f01cd096f3",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-recording.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "99b53c94a34634cbd5f3145364803fe085adf5ab8963dd7249bccae2e17bd4ca",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-paused.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "320bd5b12b0a9ca2ba82a671c36959fa231bc199b64c847fccd6a3fafd08f958",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-finished.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "2e9ecff973c126be5e976554675a65758899e4bc776f149c4f72f078a187f575",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-disconnected.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "0d43cbef18df6e8aaba28c9a6ee7f9d4bc41739d31d9b789d99c40be4019285c",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-390x844-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "4d6d4fb7ef4cd6837f837bb7900686d56cd7f18f9a96dd9b1859b2d82f74c350",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-idle.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "7cc8adb3de5c63f4433e006eca2bd7ce5db7ba0c34de833d1ac9e2e3b305562e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-gps-searching.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "8b1e8b82aaf7f8fc90e67283f867797eb3d833572ddecfb0c8d3df02bae6229a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "3f17bb2e1192271d97940d35d657e7aed50e650a92bc3f1d5cbb2d0a5e37f154",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-recording.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "82346fe9bd6cb09456c18614b7721cbe3c49470222cb821147f7004abb99a260",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-paused.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "8d4afb59cbdbafa3aea592c94a0c605b02be281da590827b087cc2d67c47c09f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-finished.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "62246ff10ff5bfa2478405f491b0d303b03771776193a1f158702a5dd796eac4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-disconnected.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "7992870303de17d7cdc771365eec4e3c2b5e671815bf12b920e981e8bc734317",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-390x844-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "22f65609b93c0c1bdb9b44e3651fdd8e45d9c0307f7b65bc20ac71f41ef06dc5",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-idle.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "8ed3395e013806fd874390e61e3a6cc3f36f017da3929f6f96794de915388df4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-gps-searching.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "1494f6160e112f784517034a0435b0984d001ced51d05527abbcbc221409a70a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "9e771575cb6481559a464be3ce4bcceaedb6fb7d7e99cfb0f523b2946b3c166f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-recording.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "4bb35a46b7fd104d8d18b0befc9c5437c95e21c76bb7d69ffabcedf471789ed6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-paused.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "e130b72c5740f2b11e748ca9c63d9bcfb78c54e6ae10fe9c00ed695a1db06155",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-finished.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "816432899164db53dbcb557130ce1fde1147c7f073f01f4bf60991d928d9dc69",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-disconnected.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "9eb134ea15a8fda3637e7e0393c6c79319b2b761ac140aac9878d41d704e7c80",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-390x844-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "5553a224b5164bb6cc8d8ababc802234790cb7a5621b8b012aa2f632d46328c6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-idle.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "85484d5e398f9f20cf78689fc1c516e19d3c14573d338c5d06067b3e39aa3e95",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-gps-searching.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "e5fb6158e23401a611cf8f08061bd0e81b1ded668bc96f80616247b977815396",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "968478594c13701668d302bc05475db5f68b17ceea9e141f32003f51004c4c29",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-recording.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "8cbf71fd509bdb61a960d53a207dd7825b3883cf9e3603d296a5a7b1b3adf28a",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-paused.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "d89eee0e27ebca4ccd8947dd866c4731dabe50bcf0215b8b4edcebf6215362b3",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-finished.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "dce36f75db650a4d2d60a98475388091902a5552758dc10880a6c2aa50e9b298",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-disconnected.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "d4f4854897a8d6789dc2fcc19c4957fbf4dc3d21114135412c66d263beddf562",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-390x844-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "e6c8ab1c0cbee508575be0e11a68b49c87baffe7be07935d993ffc001732706c",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-idle.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "c18e25401295ecc69c603a71755ebad0a34723ed9d768538e2cd2b112fbbf5cc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-gps-searching.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "cfe51c533d167c69b749473201dbbf955c4ab6bf2b21c92fff036bacc938fde4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "db408780a1702033c10c7de742e6c47f423e2a2bfb0feb2db07ba966af763940",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-recording.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "2a8e9da3c65b6852db188675922e7031862403912e0015ada5a0757cb6e28e7f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-paused.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "a7feed32110b7aafb1b96359ea9bf128aaf34a62f34c5c04da800333638f175f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-finished.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "cc766b708e744ce5b9467c3feee659bead022de4b2bc4335f9fdb1c069c24acc",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-disconnected.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "9e555fe32c802dfdb842a3c9bc43c2c1b1155eea6381e98f6f44f9c45857dbbd",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-390x844-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "6318ba9e6e338a61bc927e8633325ab4afbe30f75ab3fb9c55825e414b4812be",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-idle.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "6583d9921f99d99940d58e71c9d23e36a1542208c65221416d5187125adb6b02",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-gps-searching.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "e478fd0e645454c9352d025a89d164efbb65b690c7a422b39c6e6bb342521f40",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-gps-fixed.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "c8a52258d195ed70483363e4e603982a78154e96518a128833bc13a56a800195",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-recording.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "9809b3d6285c3ce1821fddd8bff1eb42c8fd4404ebcbc5ed94894b7d720f0723",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-paused.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "1b89f8443441ff6c6f4f64599e1c239a1eab1cbfbe9a038383a4eb8b7ea2e72f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-finished.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "2b855434d20abdea2d61d0a44dda782a8619df3983421800d586a3f96c2a50de",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-disconnected.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "de6c1c8a17cd15e2a70ed94c32db99b5e9a31f71750e0ca166ea75547d52ffc2",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-390x844-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "266220adf1485305ac44d18b7836c1740311269fe03770ed480b26e38190570f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-idle.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "idle",
+      "sha256": "337df1b3256422db8e4bee541ad4201431334e6262e8bec8c8f0360ee3267bb8",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-gps-searching.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-searching",
+      "sha256": "464f3eb408ec388faf8d934012a25b6ba6ebe92b16596f7b3d22adfe86667d9d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-gps-fixed.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "gps-fixed",
+      "sha256": "71a70b1d144a4d86a820b31d8605c1d67ab570fdb8c044578730ce121f2ff45d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-recording.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "recording",
+      "sha256": "7686368b01c8932d788b3b16bd4f0b980dea902ebd00f5dc6e55094fb6d7b034",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-paused.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "paused",
+      "sha256": "be5b4d062b0278739c5e29c441e8a0b8b856365060b9477f1d3090402d0fc93e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-finished.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "finished",
+      "sha256": "d932999fa8d66aada88d4c677d1f9ede6d6de534f83196ed5f8eed4f9490401d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-disconnected.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "disconnected",
+      "sha256": "541d7d4531c239c142a5e66d8147d5aac4a2872d31361a1665d43ee5211354c0",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-390x844-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 390,
+      "heightDp": 844,
+      "state": "connected-no-sample",
+      "sha256": "bb4a9e62b9f405b9001ee1dc89cd220cb7d71167e5ae663698dc688dbeac1c06",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-idle.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "0794b66c329b4528b75490ae78cb19b6981c0e02477018c39bc0278a039a3589",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-gps-searching.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "9c6790735614d399ff7c9449d6de80c9d410db2ba828fe1a755ec30bcd12fc1f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-gps-fixed.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "957d87ec86b5dd4d2be0642eb1f7f1271818035c701a89a75ca6968313c42a86",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-recording.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "54c19ec1e9a3ae75ce08a8f8fcef9aa400df65345134c1012efe9b0662706ffd",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-paused.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "75a8fb388bd01575c3263726c03443d49412815c35bcda9fdf10cd0b0c0aa8f5",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-finished.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "a6d3233040e48e0ba823023b390b682c3bd8e69844f894816630544bf1a546a9",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-disconnected.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "c8326dc179d48d4078af883e2c89cb41a98aef507c4e686377c3fced90be2370",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-light-412x915-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "6b88e318c30738bae744b4ab03dfd84f584f2d05c74845a3faad6ede91365cd6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-idle.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "269fb8efb1c576cb4b28af3a7d2a1438943f48ba2dffafad2a9dae0fde4dc526",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-gps-searching.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "ff977cf86b24c14a4d8a59a7ee2d0f340303c67e3f386544d05579e727ae7eb1",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-gps-fixed.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "576f17a1742de5b74e97fc526693c3a8049a8df5fa0f1a20022da1bb70cd0704",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-recording.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "ef77cdca8bccdd02acae4d596dc681523982407b1d1ae4c692485cb3e0a01fde",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-paused.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "caa339e181e925aec9995e8a432546eda73d208d67f4b1b9eef7c3e501c1cd13",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-finished.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "cc57d174249efa4f20bcae808f01e91bff5f2b724f0cdd95e328d57ee9898458",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-disconnected.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "0aa3f73ce1f096383a2558a99568e385c0b7d462be63d222088bc3ee57d85cf4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-precision-dark-412x915-connected-no-sample.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "23d9827244636f0e2755119ad7f7ac98a096aa12b5b9d6c8735c20c719d13e43",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-idle.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "64f0f1bbe104e883998b7b3a4a0ce71462937200bf84671dbdaa0e3de6a58471",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-gps-searching.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "d523a42e4f39cd17357bcc8abb1fdaa1ed74d3ff404ef2d0d4d05e5c3e0f1c56",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "b54f91add0970925507aebdeeae646d7ea0d1ba7b3e790719ac84cc383fd6c01",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-recording.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "806d86bcebcf22f81c9c9ae92e50b06d1f8a7e1ab9e9f12176f3b3e59406001f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-paused.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "9260e10cc7936e1cfc84f12c758d730bf9ffcd4933f4ad692f71d6ab1cc61fb6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-finished.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "9a497ccba4579f9cec810799d9c233a2f5b5f54764a6bfcce2df6e07419394a4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-disconnected.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "14d87c97fda213213e1b5643110dd1559e16ae6d0424b4bf21e5b5105d527352",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-light-412x915-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "ac3f81b8a00cfe85a35dd946ebc739c38407e259d30bc6393f07338ea34f7c5e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-idle.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "24b1dba437d1fed6b00653f5fba019516e6a52104bb4d6b955e136466b63d76f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-gps-searching.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "bbd04a5a955ac3a73beba192fc2dcf1bbc21bbf5a52be434379eceedc123fe4d",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-gps-fixed.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "2971b0fabdf8e6733fc59e82a9dc87d9d2af46e31c64dd5288b52ade4ed75e18",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-recording.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "2171f5bfebb2123150e3e0f585ac9b5e7bf50112f49f1b83ccb5fa7fc8046af8",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-paused.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "d10e6f685853e8d96f191a0cc1a350261c3062b7b4ce5d3491f08aa93b015322",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-finished.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "f7921a7c292c5c69ca7badeedda061eedb7352951eae3a4fb311c2836a0eb015",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-disconnected.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "ff10350336e6baf497bffee461379664c6fcc81148cc123dcd733995b49ecd52",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-quiet-dark-412x915-connected-no-sample.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "bb6cd5318541b3d1e5dca21f479ba829baed7bdb9f7328b30de22037a52577e6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-idle.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "47b8d6320076c02f689695b1c005a2f32b747d313d257f1f174c52a0511e3b53",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-gps-searching.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "70b6f784d8164078042992ce4b58cbc2581b70b3c7883aa767a86a1ff41a9910",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "54a30ee79171f16d4c4f12ae8d81e02876c9eec841f8e1e5c62e62936211970e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-recording.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "96c8370a369a9a88e57d02b6823937c4a8d464509e91137d68aeaafe18af15da",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-paused.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "44c39c79a73b8af59adb91322fbe9ff4ede12a99cdd2728909c6298cb1690adf",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-finished.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "b51a99d07304e557e57143f2e34907ff11a4c50aa2d75266a78cb3c4a6d3d4e1",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-disconnected.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "0b04952ea170e3661c0fbee5ddf71f8bd0b45d96435a2b2c45333eb3766f4e1b",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-light-412x915-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "13d1a2ba20dddecb09e71f7dcecae92a5e4cd9efd42e67f3bb73f4f2634552e8",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-idle.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "b4341d796b7ba1e7fda14c421f132e1b4e154d82e4801e9152bb3016a810c522",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-gps-searching.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "ee70bb74181fa03df57e631e62a29ab031fcdffe146edfb9c61fd3003781dc6c",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-gps-fixed.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "1efdcc315797595a2ab63ff2f7403fbd77e1c549f1ec75b079b632a97abf40df",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-recording.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "2cacdbde189218923bd7155d9fd86e7276a00ff4d1ce72403a547d9e4340abbe",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-paused.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "d3dcc41205039a1eec1010eba6f69cff36648747e1d137f176ebabc401c52a25",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-finished.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "3114ae5769f0dfa2db0a2081893b9dc29501435ceb5b37b967e69e264a935bd6",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-disconnected.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "933e117ebe0b78f7e4b0ae96d5b7974a8bbb10e90c087fdc56ffcf929f341f1e",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-explorer-dark-412x915-connected-no-sample.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "b09189e80a29d75e0a910e46181485a876f0f2a9d78744c04b1e189b58101252",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-idle.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "a35649fe44b777b0dae350b9f6697d6b83107476452a9ae4b637f15ece4b78e8",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-gps-searching.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "461a7f8b46da5a0d6d609cbf4b6ec1b64409824add1d22932a31bf8722168933",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-gps-fixed.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "585ea8b9a20ef226ad6a711ddb5864b5504350b95c49ce18464f6eb4d24ab374",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-recording.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "a75ee12cb0357cdb00ba9efd16a6d5f733a6486ca5c2599186995bb0bc385359",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-paused.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "26ea88d28fe13b6be67565829bb32122f9e7685df1ce505f5214cc3e27ec8bb7",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-finished.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "26bb7304babaea42dec7a501f8317d7bcea40ae53e09e72f41522a2e43da367f",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-disconnected.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "4a9c5970033dc3bf37036fc27fab9b53cbd1a55b79c6ddb46726595a93291abb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-light-412x915-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "4a9fb579297030cfdadefff380a026fb4583ce9c5747dcdffdbfdf781ea342c3",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-idle.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "idle",
+      "sha256": "ce4f4b836bf3401a76588eaf8d3631b1b1569134e2efb14fc58d021b1ee22357",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-gps-searching.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-searching",
+      "sha256": "96ea3f89721c77a7b22835e18d18b98ae7afb8a986a2c3112abb2da04cfb3dbf",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-gps-fixed.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "gps-fixed",
+      "sha256": "5365061c7de56c7ae7bc0feb214434bc6659b56a5e47dd98273d08d90ed00d78",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-recording.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "recording",
+      "sha256": "976921c6f4b47511c7437329b7a8b30f93b0ba01bcff7a9ba362d9bc30ddbaa4",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-paused.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "paused",
+      "sha256": "1340070af655399c5e7aa6e367a58e7196891f18ef2a27fa77332956c90cbadb",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-finished.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "finished",
+      "sha256": "4c597e7ff27cd5b3cdf9b3203e259583831c3462709357175a436c0a98fe7bb7",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-disconnected.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "disconnected",
+      "sha256": "84d4efd3ce543815456293d9081b6c4281153c054eb5b19b89fd54dd6a8f7540",
+      "syntheticUiFixture": true
+    },
+    {
+      "file": "p04-neon-dark-412x915-connected-no-sample.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "state": "connected-no-sample",
+      "sha256": "d1b71d40bbcf2271dc0221f5c5536a85c131cd2368e3f7e0d05463b6cbdf02b7",
+      "syntheticUiFixture": true
+    }
+  ],
+  "fixture": {
+    "distanceKm": 5.25,
+    "duration": "28:36",
+    "pace": "5:27 \/km",
+    "bpm": 148
+  }
+}

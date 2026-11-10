@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-10T04:55:51.282Z" hostname="runnervm7aw5e" time="0.018">
+  <properties/>
+  <testcase name="corruptionRestoresFamilyDefault" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.009"/>
+  <testcase name="invalidSlotsAndMutationRejected" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.0"/>
+  <testcase name="defaultsAndEveryExchangePreserveOtherPositions" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.0"/>
+  <testcase name="originalDurationFormatterPreservesHoursBeyondTwoDigits" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.0"/>
+  <testcase name="allPermutationsRoundTripAndRemainUnique" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.008"/>
+  <testcase name="exactOrderedExample" classname="de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

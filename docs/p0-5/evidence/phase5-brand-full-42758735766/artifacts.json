@@ -1,0 +1,80 @@
+{
+  "artifacts": [
+    {
+      "id": 13737387227,
+      "name": "P05-visual-42758735766",
+      "size_in_bytes": 32720798,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737387227",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737387227/zip",
+      "expired": false,
+      "created_at": "2026-11-10T05:14:49Z",
+      "expires_at": "2027-02-08T04:54:09Z",
+      "updated_at": "2026-11-10T05:14:49Z",
+      "digest": "sha256:f1b1130e5030c2a26f918811e151fcb79e9ecccc5431d1c41490fd30dc4bf227",
+      "workflow_run": {
+        "id": 42758735766,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "feature/p0-5-dashboard-settings-history",
+        "head_sha": "a8891f61122712b81bee357f40d688151a948e57"
+      }
+    },
+    {
+      "id": 13737173196,
+      "name": "P05-reports-42758735766",
+      "size_in_bytes": 156442934,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737173196",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737173196/zip",
+      "expired": false,
+      "created_at": "2026-11-10T05:14:44Z",
+      "expires_at": "2027-02-08T04:54:09Z",
+      "updated_at": "2026-11-10T05:14:44Z",
+      "digest": "sha256:214ae192442b3ec4f2a7f049f8bf7eba4a32051c60c6a2594b80b685d6102d63",
+      "workflow_run": {
+        "id": 42758735766,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "feature/p0-5-dashboard-settings-history",
+        "head_sha": "a8891f61122712b81bee357f40d688151a948e57"
+      }
+    },
+    {
+      "id": 13737143273,
+      "name": "P05-Debug-42758735766",
+      "size_in_bytes": 10910732,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737143273",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13737143273/zip",
+      "expired": false,
+      "created_at": "2026-11-10T05:14:46Z",
+      "expires_at": "2026-12-10T05:14:44Z",
+      "updated_at": "2026-11-10T05:14:46Z",
+      "digest": "sha256:69325ef378ac2bcbdb863c8c7582bf7c02f4c3358d3f32518ade9c89fb12439a",
+      "workflow_run": {
+        "id": 42758735766,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "feature/p0-5-dashboard-settings-history",
+        "head_sha": "a8891f61122712b81bee357f40d688151a948e57"
+      }
+    },
+    {
+      "id": 13735939576,
+      "name": "P05-native-window-helper-42758735766",
+      "size_in_bytes": 434139,
+      "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13735939576",
+      "archive_download_url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/actions/artifacts/13735939576/zip",
+      "expired": false,
+      "created_at": "2026-11-10T04:56:11Z",
+      "expires_at": "2027-02-08T04:54:09Z",
+      "updated_at": "2026-11-10T04:56:11Z",
+      "digest": "sha256:44838de420e08dbcf8cc5f7e2d37d53fc60f510dc9a2c6d478a811176f1bf20c",
+      "workflow_run": {
+        "id": 42758735766,
+        "repository_id": 1444212075,
+        "head_repository_id": 1444212075,
+        "head_branch": "feature/p0-5-dashboard-settings-history",
+        "head_sha": "a8891f61122712b81bee357f40d688151a948e57"
+      }
+    }
+  ]
+}

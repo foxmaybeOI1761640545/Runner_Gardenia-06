@@ -1,0 +1,40 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5538,
+  "action": "android.intent.action.SEND",
+  "mime": "application\/gpx+xml",
+  "flags": 268435457,
+  "clip": [
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-2c933b29-b7de-4ea8-8d2f-d317dcb392cf\/Workout-1794286712486.gpx"
+  ],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-2c933b29-b7de-4ea8-8d2f-d317dcb392cf\/Workout-1794286712486.gpx",
+      "permission": 0,
+      "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+      "bytes": 2093,
+      "read": true,
+      "gpx": {
+        "workoutId": "1794286712486",
+        "rawSamples": 3,
+        "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+        "bytes": 2093
+      }
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2253,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": false,
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+  "contentContractPassed": true,
+  "expectedWorkoutIds": [
+    1794286712486
+  ],
+  "expectedGpxSha256": {
+    "1794286712486": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515"
+  }
+}

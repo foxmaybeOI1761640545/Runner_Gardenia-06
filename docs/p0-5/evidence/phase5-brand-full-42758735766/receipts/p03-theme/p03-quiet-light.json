@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+  "api": 35,
+  "timezone": "Asia\/Singapore",
+  "family": "quiet",
+  "appearance": "light",
+  "passed": true,
+  "physicalBleTested": false,
+  "syntheticNotifications": true,
+  "systemSwitchPreservesRecording": true,
+  "systemSwitchPreservesGps": true,
+  "systemSwitchPreservesConnection": true,
+  "viewModelRetained": true,
+  "pausedStatePreserved": true,
+  "waitingCreatesNoWorkout": true,
+  "dialogRestored": true,
+  "familySwitchPreservesRecording": true,
+  "screenshots": [
+    {
+      "file": "p03-quiet-light-home.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "home",
+      "sha256": "d62e70852010825ee7b9995fafd6222a7d63ce11339e3e74c8f4e3dbc30eb9fa"
+    },
+    {
+      "file": "p03-quiet-light-recording.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "recording",
+      "sha256": "94f17e614fae994f54df176dbf6e96cf1062297bef59fbb75744b384b25263c4"
+    },
+    {
+      "file": "p03-quiet-light-heart.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "heart",
+      "sha256": "83208dc97dffc7fd49677df12313a24a1d6f48427b31a85ea4b0eb40e145e23e"
+    },
+    {
+      "file": "p03-quiet-light-history.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "history",
+      "sha256": "1b135d865ea7a460dcdf404c4086e45721dec638a23ac83a703884f6d7fd3c5d"
+    },
+    {
+      "file": "p03-quiet-light-detail.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "detail",
+      "sha256": "a3c75f62dd16e8200da612666e88c59b9f3cd7cca3ab11d693d09ef3d36a40bc"
+    },
+    {
+      "file": "p03-quiet-light-dialog.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "dialog",
+      "sha256": "9656e0976e7c2eba369026a2d8d29f206140dccee605c6b6c6ac190c4f855924"
+    },
+    {
+      "file": "p03-quiet-light-settings.png",
+      "family": "quiet",
+      "nightMode": 16,
+      "page": "settings",
+      "sha256": "6646c0874a6256403344ad4d8dbdb84c8fed42dd127b4c07f906956558f21bc6"
+    }
+  ]
+}

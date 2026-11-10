@@ -43,3 +43,11 @@ GitHub attempt1在创建Job前因内部服务器错误停止（0 Job/未执行�
 但人工查看前6类48张签名截图时发现应用信息仍显示OpenTracks（原R.string.app_name），与Manifest实际Runner Gardenia P0标签不同，因此人工UI门禁拒绝，不能发布。剩余历史等4类32图未继续审查，不宣称80图均人工通过。Quiet浅色设置Hub在关闭动画的稳定截图中标题/状态栏正确，原过渡帧问题已澄清。
 
 修复设置页使用ApplicationInfo.loadLabel实际应用标签，增强原Android测试对实际标签/Runner Gardenia品牌断言，并在正式签名截图检查应用标签。同步把已验证的逐页Back等待集成回正式运行验收脚本，保留所有原GPS/恢复/数据断言。产品源码发生这一实际修复，必须新的精确源码全量测试和原固定密钥构建/升级/截图审查；不能把旧候选作为最终发布。旧候选、成功运行收据与人工拒绝截图归档[evidence/phase5-signed-ui-rejected-42755978037](evidence/phase5-signed-ui-rejected-42755978037)。P0.5Tag/Release尚未创建，版本6776保留同一未发布分配；所有旧发布不变。
+
+## 品牌修复后完整门禁：a8891f6 / 42758735766
+
+精确源码a8891f61122712b81bee357f40d688151a948e57的[完整Actions](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42758735766)整体SUCCESS（checks及native-window-helper）。两份不可变Artifact实际下载/摘要核验：reports13737173196=214ae192442b3ec4f2a7f049f8bf7eba4a32051c60c6a2594b80b685d6102d63；visual13737387227=f1b1130e5030c2a26f918811e151fcb79e9ecccc5431d1c41490fd30dc4bf227。独立原始JUnit重计Android425/424/0/0/1（原有Ignore）、JVM124/124/0/0/0、辅助104/104/0/0/0。实际进程PID1828→2208、16份GPX1.1 schema、六份跨UID分享/权限、离线/Manifest和所有原有回归通过。新增实际应用标签断言通过。
+
+已实际查看全部37张联系表、296张原生截图（48顶部/192状态/16设置/8长时长/32历史），四主题八配色无横向溢出、文字重叠或标题换色过渡。原始XML/收据、矩阵摘要和联系表归档[evidence/phase5-brand-full-42758735766](evidence/phase5-brand-full-42758735766)。模拟输入仍不证明实体硬件或微信兼容性。
+
+本次仅激活新源码的固定密钥签名及实际覆盖升级/80张原生截图门禁，尚未开放发布。旧9603…候选因应用名称错误被拒绝，不作为最终APK。

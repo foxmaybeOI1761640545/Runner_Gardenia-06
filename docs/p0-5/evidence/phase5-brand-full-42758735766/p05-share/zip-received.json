@@ -1,0 +1,61 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5538,
+  "action": "android.intent.action.SEND",
+  "mime": "application\/zip",
+  "flags": 268435457,
+  "clip": [
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-35920c3d-aba7-428d-a690-a6b225881511\/RunnerGardenia-Export-20261110-130456-35920c3d-aba7-428d-a690-a6b225881511.zip"
+  ],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-35920c3d-aba7-428d-a690-a6b225881511\/RunnerGardenia-Export-20261110-130456-35920c3d-aba7-428d-a690-a6b225881511.zip",
+      "permission": 0,
+      "sha256": "398820ac7a0d0fca3f62e5c2257d77273903e88fb9611ca9cf61991769878f6b",
+      "bytes": 2811,
+      "read": true,
+      "entries": [
+        {
+          "workoutId": "1794286712486",
+          "rawSamples": 3,
+          "sha256": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+          "bytes": 2093,
+          "name": "Workout-1794286712486.gpx"
+        },
+        {
+          "workoutId": "1794286712487",
+          "rawSamples": 3,
+          "sha256": "53eb3007900a88d79381fc37d67060ef3f54982875d90772af61a35e0ed580c1",
+          "bytes": 2093,
+          "name": "Workout-1794286712487.gpx"
+        },
+        {
+          "workoutId": "1794286712488",
+          "rawSamples": 3,
+          "sha256": "8f7802d82bfbb12001ebe937fc6dcb4b9d667f242233c966d1cb6ebe6740df6c",
+          "bytes": 2093,
+          "name": "Workout-1794286712488.gpx"
+        }
+      ]
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2253,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": false,
+  "sourceCommit": "a8891f61122712b81bee357f40d688151a948e57",
+  "contentContractPassed": true,
+  "expectedWorkoutIds": [
+    1794286712486,
+    1794286712487,
+    1794286712488
+  ],
+  "expectedGpxSha256": {
+    "1794286712486": "7379a7dfed97d7ceabb98ac0ecd0a7401ef8facbd451ffc68534664cd0296515",
+    "1794286712487": "53eb3007900a88d79381fc37d67060ef3f54982875d90772af61a35e0ed580c1",
+    "1794286712488": "8f7802d82bfbb12001ebe937fc6dcb4b9d667f242233c966d1cb6ebe6740df6c"
+  }
+}

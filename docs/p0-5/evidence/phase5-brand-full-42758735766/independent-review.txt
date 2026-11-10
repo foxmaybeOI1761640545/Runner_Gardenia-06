@@ -1,0 +1,32 @@
+{
+  "android": {
+    "tests": 425,
+    "executed": 424,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unit": {
+    "tests": 124,
+    "executed": 124,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "helpers": {
+    "tests": 104,
+    "executed": 104,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}
+android raw XML {'tests': 425, 'failures': 0, 'errors': 0, 'skipped': 1} skips [('de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest', 'recording_stopGPS_noop')]
+unit raw XML {'tests': 124, 'failures': 0, 'errors': 0, 'skipped': 0} skips []
+p05-visual 48 PNG hashes verified
+p04-visual 192 PNG hashes verified
+p05-settings 16 PNG hashes verified
+p05-metrics 8 PNG hashes verified
+p05-history 32 PNG hashes verified
+actual process PIDs 1828 2208
+Contact sheets requiring human review: 37 work/phase5-42758735766
