@@ -1,0 +1,1 @@
+Independent verifier stopped before asset download: GET /releases/latest returned404 because no stable Latest exists. Handle404 as no Latest; still assert P05 is prerelease and not returned as Latest. No product/publisher changed.

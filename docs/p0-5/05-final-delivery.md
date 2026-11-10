@@ -1,6 +1,36 @@
 # P0.5 最终交付
 
-状态：IN_PROGRESS，不能宣布P0.5完成。
+状态：PASSED，P0.5 已完成开发、逐阶段验收、固定签名构建、P0.4 覆盖升级与公开 Pre-release 交付。最终核验日期：2026-11-10（Asia/Shanghai）。
+
+[下载 APK](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/RunnerGardenia-P0-Release.apk) · [完整 Release 与全部交付资产](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.5)
+
+| 最终身份 | 已核验结果 |
+|---|---|
+| applicationId / variant | com.fox.runner / reproducibleRelease，非 debuggable |
+| versionName / versionCode | v0.1.0-p0.5 / 6776 |
+| APK 源码 / Tag 解引用 | a8891f61122712b81bee357f40d688151a948e57 |
+| Tag 对象 | 84ca084c781aa4596dcfa09945d54c17fc89fc1f |
+| APK 大小 | 2,853,444 bytes |
+| APK SHA-256 | 7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598 |
+| 固定证书 SHA-256 | E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22 |
+| 全量测试 / 签名运行 / 发布 Actions | 42758735766 / 42761772173 / 42764487155，均 SUCCESS |
+| Release | [TEST][P0.5] v0.1.0-p0.5，ID439993653，Pre-release / 非 Latest |
+
+| 原始报告统计 | Tests | Executed | Failures | Errors | Skipped |
+|---|---:|---:|---:|---:|---:|
+| API35 全量 Android | 425 | 424 | 0 | 0 | 1 |
+| JVM 全量 | 124 | 124 | 0 | 0 | 0 |
+| 发布/收据辅助 | 104 | 104 | 0 | 0 | 0 |
+
+Android 唯一 Skipped 是原有 TrackRecordingServiceStateMachineTest.recording_stopGPS_noop；不计为通过，没有新增 Ignore/跳过或删减失败断言。NO-SOURCE 不作为执行证据。
+
+功能 A/B/C/D 全部完成：四主题标题区域删除并收缩、运动/GPS/心率紧凑布局；主副指标精确原位交换与分主题持久化；六分类设置及原单位/速率/BLE/历史入口；历史多选、后台逐记录 GPX/ZIP、标准多文件分享和二次确认批量删除。Phase0–4报告全部 PASSED。最终精确源码296张原生矩阵截图与实际签名80张页面截图均人工审查通过；固定XSD的16份GPX、跨UID正负权限收据、数据库/真实新PID恢复、离线Manifest、受保护记录与分享不改源数据均通过。
+
+实际使用原P0.4公版APK覆盖安装升级，历史GPS/原始心率/单位/速率/主题/设备配置保留，新增指标布局和历史批量功能可用。正式交付11个公开资产逐个重新下载并与不可变正式Artifact逐字节一致；APK再次独立完整验证v2密码学签名、内容摘要和二进制Manifest。原有全部远端分支/Tag及P0.4发布资产身份/哈希/大小/源码保持不变。
+
+真实微信客户端、实体GNSS/BLE RF/耗电、TalkBack语音保持 NEEDS_DEVICE_VALIDATION；模拟器、合成GPS/心率数据和独立模拟接收器不代替这些验证。
+
+下文按时间保留每轮失败、修复与验收记录；“尚未发布”等表述描述当轮状态。最终交付状态以本节及文末公开核验收据为准。
 
 前置：Phase0至Phase4均有精确源码、Actions、实际原生截图/原始JUnit/失败保留与最终验收。最新Phase4源码50bc63c、Actions42657847351成功；Android78/78/0/0/0、JVM124/124/0/0/0、辅助94/94/0/0/0；验收提交5f700ba已推送核对。
 
@@ -61,3 +91,15 @@ GitHub attempt1在创建Job前因内部服务器错误停止（0 Job/未执行�
 已逐组查看全部10张联系表对应80张实际签名页面（首页、Hub、外观、运动显示、设备、应用信息、历史、选择、分享、删除）；四主题八配色360dp/1.3字体无裁字重叠，Quiet浅色Hub标题/状态栏稳定，应用信息正确为Runner Gardenia P0、v0.1.0-p0.5、6776。80份原生窗口XML/焦点Activity/PNG与摘要一致。[构建身份、运行收据与人工审图证据](evidence/phase5-signed-accepted-42761772173)。模拟器/合成记录不能证明真实微信或实体GNSS/BLE/TalkBack语音通过。
 
 本次发布激活仅转移已验收的正式Artifact原字节，禁止重建/重签；P0.5整体仍待公开Release与全部公开资产独立下载核验后才能宣布完成。
+
+## 最终公开交付核验：42764487155
+
+发布激活提交584665f6f7aa393432a837b29fe9c0265aff7f00仅增加发布审批与验收报告，没有产品/测试/版本/构建/签名代码变化。[发布Actions](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/42764487155) SUCCESS，下载并核验publication Artifact13738937338，ZIP SHA256=72b92f56d3fdade62709f64f43613191623a3e952d6cb8721432064ae290316d。流程先核对全部Draft资产，发布后无Authorization公开下载APK并再次验签，HTTP200。
+
+随后独立从公开Release下载全部11个资产，与正式Artifact13738852270每个文件逐字节一致，APK完整v2密码学签名/内容摘要/Manifest再次验证通过。注释Tag对象84ca084c781aa4596dcfa09945d54c17fc89fc1f解引用a8891f61122712b81bee357f40d688151a948e57；不是签名流程提交cf1c8bf或发布审批提交584665f。Release ID439993653，draft=false、prerelease=true；仓库稳定Latest接口404（当前无稳定Latest），P0.5未设为Latest。独立脚本首轮因未处理此404停止，保留记录后按“无Latest”修正宿主脚本并重新完整执行；未改变产品、发布代码或已发布资产。
+
+全部原始远端refs在公开交付后再次逐项比对基线，保持不变；P0.4 APK资产ID724746708、2803864 bytes、aa5ebc21…b4224ebc与原注释Tag/实际源码不变。公开APK资产ID730286622，2853444 bytes，SHA7b0d0f48…b1767598。最终证据见[evidence/phase5-public-42764487155](evidence/phase5-public-42764487155/independent-public-verification.json)。
+
+交付资产均在上述Release：RunnerGardenia-P0-Release.apk、SHA256SUMS、build-info.json、test-summary.json、theme-screenshots.zip（80份实际签名截图及原生窗口）、key-test-receipts.zip、RELEASE_NOTES.md、DEVELOPMENT_COMMITS.txt、runtime-smoke.json、native-theme-smoke.json、ARTIFACT-MANIFEST.json。本地公开下载副本位于/workspace/output/RunnerGardenia-P05，并附independent-public-verification.json。完整阶段报告00–05、所有失败收据与审图联系表在新开发分支保留。所有开发仅推送feature/p0-5-dashboard-settings-history，未向main或旧开发分支提交。
+
+P0.5 最终门禁全部完成；真实设备/微信待验证事项如上，未虚报通过。文档归档提交不重建、不重签、不更改已验收Tag或任何Release资产。
