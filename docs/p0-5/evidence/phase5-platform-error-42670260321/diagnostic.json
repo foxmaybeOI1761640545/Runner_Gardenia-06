@@ -1,0 +1,11 @@
+{
+  "source": "c5093ed3ac9514b6655afb5ed022024d8776f6cb",
+  "run": 42670260321,
+  "attempt": 1,
+  "jobs": 0,
+  "testsExecuted": false,
+  "passed": false,
+  "error": "GitHub Internal server error",
+  "correlationId": "70845159-ac92-4104-aeb4-068ee16d3598",
+  "next": "Retry exact source without changing tests or gates"
+}
