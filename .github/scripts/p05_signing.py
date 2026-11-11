@@ -33,7 +33,7 @@ def unpack(api,identifier,name,run,workflow,digest,folder):
 def validate_gate(plan,report,source):
     if (plan.get('commit')!=source or plan.get('stage')!=5 or not plan.get('fullRegression') or plan.get('classes')!=[]
         or plan.get('signed') is not False or plan.get('publishing') is not False or report.get('plan')!=plan or report.get('passed') is not True
-        or plan.get('versionName')!=VERSION):raise ValueError('Signing requires the actual exact-source complete P0.5.1 gate')
+        or plan.get('versionName')!=VERSION):raise ValueError('Signing requires the actual exact-source complete P0.5 gate')
     for scope in ('android','unit','helpers'):
         r=report.get(scope,{})
         if r.get('passed') is not True or r.get('executed',0)<=0 or r.get('failures')!=0 or r.get('errors')!=0 or r.get('tests')!=r['executed']+r.get('skipped',-1):raise ValueError('Missing real complete execution: '+scope)
@@ -43,7 +43,7 @@ def validate_gate(plan,report,source):
     for scope in ('processDurability','metricProcessDurability','batchProcessDurability','gpxSchema','offline'):
         r=report.get(scope,{})
         if r.get('passed') is not True or r.get('commit')!=source:raise ValueError('Exact-source final evidence missing: '+scope)
-    if report.get('shareReceipts')!=6 or report.get('historyScreenshots')!=32 or report.get('settingsScreenshots')!=16 or report.get('metricScreenshots')!=8:raise ValueError('P0.5.1 GPS/native/share evidence incomplete')
+    if report.get('shareReceipts')!=6 or report.get('historyScreenshots')!=32 or report.get('settingsScreenshots')!=16 or report.get('metricScreenshots')!=8:raise ValueError('P0.5 native/share evidence incomplete')
 
 def inputs():
     c,api=load();a=c['approval']
@@ -102,7 +102,7 @@ def finalize():
     plan,report=gate();info=json.loads(Path('dist/build-info.json').read_text())
     summary={'commit':info['commit'],'run':info['run'],'tests':info['tests'],'helpers':report['helpers'],'legacySkippedTest':report['legacySkippedTest'],'runtimeSmokeVerified':True,'upgradeFromVersionCode':6775,'crossUidShareReceipts':6,'wechat':'NEEDS_DEVICE_VALIDATION','hardware':'NEEDS_DEVICE_VALIDATION','bleProductionChanged':False}
     Path('dist/test-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    notes=f"[TEST][P0.5.1] {VERSION}\n\nGPS 运动状态过滤、静止坐标锚定、跳点拒绝/断段；保留四主题仪表盘、设置中心、历史/批量分享回归。完全离线，复用原 BLE/数据库/GPX 路径。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
+    notes=f"[TEST][P0.5] {VERSION}\n\n四主题紧凑首页、主副指标准确交换并按主题保存；六分类设置中心；历史多选、标准多GPX/ZIP分享及二次确认批量删除。完全离线，复用原GPS/BLE/数据库/GPX路径。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
     Path('dist/RELEASE_NOTES.md').write_text(notes)
     Path('dist/DEVELOPMENT_COMMITS.txt').write_text(pipeline.git('log','--reverse','--format=%H %s',validation_base()+'..'+info['commit'])+'\n')
     with zipfile.ZipFile('dist/key-test-receipts.zip','w',zipfile.ZIP_DEFLATED) as z:

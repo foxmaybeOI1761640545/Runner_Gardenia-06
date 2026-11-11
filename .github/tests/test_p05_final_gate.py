@@ -49,7 +49,7 @@ class FinalP05GateTests(unittest.TestCase):
  def test_new_reservation_keeps_older_allocations_valid(self):
   from p04_version import allocated_code as p04
   from p03_version import allocated_code as p03
-  data=json.loads(Path('release-ledger.json').read_text());self.assertEqual(6777,allocated_code(data));self.assertEqual(6775,p04(data));self.assertEqual(6774,p03(data))
+  data=json.loads(Path('release-ledger.json').read_text());self.assertEqual(6776,allocated_code(data));self.assertEqual(6775,p04(data));self.assertEqual(6774,p03(data))
   bad=copy.deepcopy(data);bad['codeHighWater']+=1
   with self.assertRaises(ValueError):allocated_code(bad)
  def test_same_settings_activity_and_dialog_require_distinct_native_content(self):

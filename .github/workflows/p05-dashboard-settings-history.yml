@@ -1,7 +1,7 @@
-name: P0.5.1 GPS motion quality
+name: P0.5 dashboard settings and history
 on:
   push:
-    branches: [feature/p0-5-1-gps-motion-quality]
+    branches: [feature/p0-5-dashboard-settings-history]
     paths-ignore: ['docs/**', 'AGENTS.md']
 permissions:
   contents: read
@@ -18,7 +18,7 @@ env:
   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
 jobs:
   scope:
-    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality'
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-dashboard-settings-history'
     runs-on: ubuntu-24.04
     permissions:
       contents: read
@@ -41,7 +41,7 @@ jobs:
         run: python3 .github/scripts/p05_release.py
   checks:
     needs: scope
-    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality'
+    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-dashboard-settings-history'
     runs-on: ubuntu-24.04
     timeout-minutes: 90
     permissions:
@@ -183,7 +183,7 @@ jobs:
 
   native-window-helper:
     needs: scope
-    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality'
+    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-5-dashboard-settings-history'
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:

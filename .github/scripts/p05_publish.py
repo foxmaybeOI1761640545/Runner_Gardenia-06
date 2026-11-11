@@ -11,7 +11,7 @@ from publish_release import GitHub,digest
 from p05_signing import bundle
 from p05_version import TAG,VERSION,APK,CERT,remote_history
 
-MARKER='Runner-Gardenia-P051: '
+MARKER='Runner-Gardenia-P05: '
 
 
 def verify_tag(api,info,optional=False):
@@ -30,13 +30,13 @@ def publish(api,folder=Path('dist'),verify_bundle=None):
     if verify_tag(api,info,True) is None:
         record={k:info[k] for k in ('commit','versionName','versionCode','apkSha256','certificateSha256')}
         annotation=MARKER+json.dumps(record,sort_keys=True)
-        tag=api.request(api.base+'/git/tags','POST',{'tag':TAG,'message':'P0.5.1 GPS motion quality test release; accepted fixed-key APK\n'+annotation,
+        tag=api.request(api.base+'/git/tags','POST',{'tag':TAG,'message':'P0.5 native dashboard settings and history test release; accepted fixed-key APK\n'+annotation,
             'object':info['commit'],'type':'commit','tagger':{'name':'github-actions[bot]','email':'41898282+github-actions[bot]@users.noreply.github.com','date':datetime.datetime.now(datetime.timezone.utc).isoformat()}})
         try:api.request(api.base+'/git/refs','POST',{'ref':'refs/tags/'+TAG,'sha':tag['sha']})
         except RuntimeError:
             if verify_tag(api,info,True) is None:raise
     verify_tag(api,info)
-    title='[TEST][P0.5.1] '+VERSION;body=(folder/'RELEASE_NOTES.md').read_text()
+    title='[TEST][P0.5] '+VERSION;body=(folder/'RELEASE_NOTES.md').read_text()
     manifest=json.loads((folder/'ARTIFACT-MANIFEST.json').read_text())
     # A partially uploaded draft must already expose version evidence on retry.
     names=['build-info.json']+sorted(n for n in manifest if n!='build-info.json')+['ARTIFACT-MANIFEST.json']

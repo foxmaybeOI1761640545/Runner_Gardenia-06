@@ -15,7 +15,7 @@ from p0_pipeline import MANDATORY, scoped_sources
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = 'f994d1ecd0e19a840800b2f946df3656a6b312c6'
-BRANCH = 'feature/p0-5-1-gps-motion-quality'
+BRANCH = 'feature/p0-5-dashboard-settings-history'
 REPO = 'foxmaybeOI1761640545/Runner_Gardenia-06'
 CONFIG = Path('.github/p05/stage.json')
 SNAPSHOT = Path('.github/p05/protected-refs.json')
