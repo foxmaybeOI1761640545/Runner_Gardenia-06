@@ -184,11 +184,12 @@ def gps_evidence(source):
     receipt = json.loads((root / 'p051-gps-ui.json').read_text())
     rows = receipt.get('screenshots', [])
     if (receipt.get('passed') is not True or receipt.get('sourceCommit') != source
-            or receipt.get('api') != 35 or len(rows) != 6):
+            or receipt.get('api') != 35 or len(rows) != 12):
         raise ValueError('Exact-source metric/imperial GPS screenshots missing')
-    expected = {(unit, state) for unit in ('METRIC', 'IMPERIAL_FEET')
-                for state in ('stationary', 'slow-moving', 'stopped-again')}
-    if {r.get('file') for r in rows} != {'p051-' + u + '-' + state + '.png' for u, state in expected}:
+    expected = {(unit, state, mode) for unit in ('METRIC', 'IMPERIAL_FEET')
+                for state in ('stationary', 'slow-moving', 'stopped-again')
+                for mode in ('speed', 'pace')}
+    if {r.get('file') for r in rows} != {'p051-' + u + '-' + state + '-' + mode + '.png' for u, state, mode in expected}:
         raise ValueError('GPS native state/unit matrix incomplete')
     target = Path('build/reports/p051-gps-ui'); target.mkdir(parents=True, exist_ok=True)
     for row in rows:
@@ -196,6 +197,8 @@ def gps_evidence(source):
         if (path.parent != root or raw[:8] != b'\x89PNG\r\n\x1a\n'
                 or hashlib.sha256(raw).hexdigest() != row['sha256'] or row.get('native') is not True):
             raise ValueError('GPS native screenshot bytes/source differ')
+        if row.get('mode') not in ('speed', 'pace') or row.get('displayed') != row[row['mode']]:
+            raise ValueError('Actual native GPS speed/pace readout differs')
         if row['stationary'] and (row['pace'] != '—' or not row['speed'].startswith('0.0')):
             raise ValueError('Stationary dashboard speed/pace is wrong')
         if not row['stationary'] and row['pace'] == '—':

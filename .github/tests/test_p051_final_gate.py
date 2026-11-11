@@ -14,7 +14,7 @@ class FinalP05GateTests(unittest.TestCase):
   report=dict(plan=plan,passed=True,shareReceipts=6,historyScreenshots=32,settingsScreenshots=16,metricScreenshots=8,legacySkippedTest=dict(method='recording_stopGPS_noop',countedAsPassed=False,unchangedFromP04=True))
   for name in ('android','unit','helpers'):report[name]=dict(passed=True,tests=5,executed=4 if name=='android' else 5,failures=0,errors=0,skipped=1 if name=='android' else 0)
   for name in ('processDurability','metricProcessDurability','batchProcessDurability','gpxSchema','offline'):report[name]=dict(passed=True,commit=source)
-  report['gpsNativeEvidence']=dict(passed=True,sourceCommit=source,screenshots=[{}]*6)
+  report['gpsNativeEvidence']=dict(passed=True,sourceCommit=source,screenshots=[{}]*12)
   return plan,report,source
  def test_complete_actual_stage5_gate_has_own_identity(self):
   validate_gate(*self.valid())

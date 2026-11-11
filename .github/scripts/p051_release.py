@@ -21,7 +21,7 @@ def publication_paths(paths):
     if not paths or any(p!=str(PUBLICATION) and not p.startswith('docs/') for p in paths):raise ValueError('Publication cannot change accepted app/test/version/build/signing code')
 def approval_record():
     a=json.loads(APPROVAL.read_text())
-    required={'passed':True,'kind':'ACTUAL_NATIVE_VISUAL_REVIEW','schemes':8,'layoutPngs':48,'statePngs':192,'metricPngs':8,'settingsPngs':16,'historyPngs':32,'fullRegressionPassed':True,'rawJUnitVerified':True,'gpsPngs':6,'gpsVisualReviewPassed':True}
+    required={'passed':True,'kind':'ACTUAL_NATIVE_VISUAL_REVIEW','schemes':8,'layoutPngs':48,'statePngs':192,'metricPngs':8,'settingsPngs':16,'historyPngs':32,'fullRegressionPassed':True,'rawJUnitVerified':True,'gpsPngs':12,'gpsVisualReviewPassed':True}
     if any(a.get(k)!=v for k,v in required.items()):raise ValueError('Complete actual-source visual/full-test approval required')
     return a
 

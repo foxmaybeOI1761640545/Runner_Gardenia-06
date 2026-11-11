@@ -39,7 +39,7 @@ def validate_gate(plan,report,source):
         if r.get('passed') is not True or r.get('executed',0)<=0 or r.get('failures')!=0 or r.get('errors')!=0 or r.get('tests')!=r['executed']+r.get('skipped',-1):raise ValueError('Missing real complete execution: '+scope)
         if r.get('skipped')!=(1 if scope=='android' else 0):raise ValueError('Additional skips are not allowed')
     gps=report.get('gpsNativeEvidence',{})
-    if gps.get('passed') is not True or gps.get('sourceCommit')!=source or len(gps.get('screenshots',[]))!=6:raise ValueError('Actual GPS native/imperial evidence missing')
+    if gps.get('passed') is not True or gps.get('sourceCommit')!=source or len(gps.get('screenshots',[]))!=12:raise ValueError('Actual GPS native/imperial evidence missing')
     legacy=report.get('legacySkippedTest',{})
     if legacy.get('method')!='recording_stopGPS_noop' or legacy.get('countedAsPassed') is not False or legacy.get('unchangedFromP04') is not True:raise ValueError('Original legacy Ignore must be explicitly reported, never counted as passed')
     for scope in ('processDurability','metricProcessDurability','batchProcessDurability','gpxSchema','offline'):

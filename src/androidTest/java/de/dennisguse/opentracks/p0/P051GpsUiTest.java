@@ -85,19 +85,36 @@ public class P051GpsUiTest {
         fail("Dashboard did not render validated GPS motion state: " + state.get()); return null;
     }
     private void capture(ActivityScenario<P0Activity> screen, String name, boolean stationary) throws Exception {
-        DashboardState value = state(screen, stationary);
-        screen.onActivity(activity -> {
-            assertEquals(value.pace(), ((TextView) activity.findViewById(R.id.p02_pace_value)).getText().toString());
-            assertTrue(activity.hasWindowFocus());
-        });
-        P0UiCapture.save("p051-" + name);
-        String output = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
-        File directory = new File(output != null ? new File(output) : new File(context.getExternalMediaDirs()[0], "additional_test_output"), "p0-ui");
-        byte[] png = Files.readAllBytes(new File(directory, "p051-" + name + ".png").toPath());
-        String hash = java.util.HexFormat.of().formatHex(java.security.MessageDigest.getInstance("SHA-256").digest(png));
-        captures.put(new org.json.JSONObject().put("file", "p051-" + name + ".png").put("sha256", hash)
-                .put("stationary", stationary).put("unit", PreferencesUtils.getUnitSystem().name())
-                .put("speed", value.speed()).put("pace", value.pace()).put("native", true));
+        for (boolean showSpeed : new boolean[]{false, true}) {
+            main(() -> PreferencesUtils.setString(R.string.stats_rate_key,
+                    showSpeed ? R.string.stats_rate_speed : R.string.stats_rate_pace));
+            DashboardState previous = state(screen, stationary);
+            fix((previous.currentGps().latitude() - 1.3) * 111_320.0,
+                    (float) previous.currentGps().speed().toMPS());
+            DashboardState value = state(screen, stationary);
+            String expected = showSpeed ? value.speed() : value.pace();
+            AtomicReference<String> displayed = new AtomicReference<>();
+            long deadline = SystemClock.uptimeMillis() + 10000;
+            do {
+                screen.onActivity(activity -> displayed.set(((TextView) activity.findViewById(R.id.p02_pace_value)).getText().toString()));
+                if (expected.equals(displayed.get())) break;
+                SystemClock.sleep(50);
+            } while (SystemClock.uptimeMillis() < deadline);
+            assertEquals("Native GPS rate readout", expected, displayed.get());
+            screen.onActivity(activity -> assertTrue(activity.hasWindowFocus()));
+            String mode = showSpeed ? "speed" : "pace";
+            String filename = "p051-" + name + "-" + mode + ".png";
+            P0UiCapture.save(filename.substring(0, filename.length() - 4));
+            String output = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
+            File directory = new File(output != null ? new File(output) : new File(context.getExternalMediaDirs()[0], "additional_test_output"), "p0-ui");
+            byte[] png = Files.readAllBytes(new File(directory, filename).toPath());
+            String hash = java.util.HexFormat.of().formatHex(java.security.MessageDigest.getInstance("SHA-256").digest(png));
+            captures.put(new org.json.JSONObject().put("file", filename).put("sha256", hash)
+                    .put("stationary", stationary).put("unit", PreferencesUtils.getUnitSystem().name())
+                    .put("mode", mode).put("displayed", displayed.get())
+                    .put("speed", value.speed()).put("pace", value.pace()).put("native", true));
+        }
+        main(() -> PreferencesUtils.setString(R.string.stats_rate_key, R.string.stats_rate_pace));
     }
     @Test public void realGpsStationaryAndSlowMotionRenderConsistentlyInMetricAndImperial() throws Exception {
         for (UnitSystem selected : new UnitSystem[]{UnitSystem.METRIC, UnitSystem.IMPERIAL_FEET}) {
