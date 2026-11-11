@@ -221,4 +221,17 @@ public class GpsMotionFilterTest {
         assertFalse(filter.update(fix(3,3,4)).accepted());
         assertTrue(filter.update(fix(4,3,6)).accepted());
     }
+
+    @Test public void stoppingJitterAddsNoDistanceEvenDuringStopConfirmation() {
+        var filter = new GpsMotionFilter();
+        filter.update(fix(0,3,1));
+        var lastMoving = filter.update(fix(3,3,2));
+        for (int second = 3; second <= 65; second++) {
+            var point = filter.update(fix(3 + (second % 5 - 2) * 0.1, (second % 4) * 0.1, second));
+            assertTrue(point.accepted());
+            assertEquals(lastMoving.latitude(), point.latitude(), 0);
+            assertEquals(0, point.speedMetersPerSecond(), 0);
+            if (second >= 6) assertTrue(point.stationary());
+        }
+    }
 }

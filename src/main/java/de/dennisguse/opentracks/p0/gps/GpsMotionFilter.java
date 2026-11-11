@@ -130,7 +130,10 @@ public final class GpsMotionFilter {
 
         boolean slow = Double.isFinite(observedSpeed) && observedSpeed <= STOP_SPEED_MPS;
         if (slow) {
-            if (stopCandidateStart == null) stopCandidateStart = fix;
+            if (stopCandidateStart == null) stopCandidateStart = previous;
+            // Hold coordinates during stop confirmation as well. If motion
+            // resumes, the next trusted point recovers the short displacement;
+            // a stopped runner never accumulates the confirmation jitter.
             lowSpeedFixes++;
             if (distanceMeters(stopCandidateStart, fix) > STOP_RADIUS_METERS) {
                 stopCandidateStart = fix;
@@ -139,12 +142,13 @@ public final class GpsMotionFilter {
             previous = fix;
             if (lowSpeedFixes >= STOP_CONFIRMATION_FIXES) {
                 state = State.STATIONARY;
-                stationaryAnchor = fix;
+                stationaryAnchor = stopCandidateStart;
                 stopCandidateStart = null;
                 lowSpeedFixes = 0;
-                return stationary(fix, segmentStart);
+                return stationary(stationaryAnchor, segmentStart);
             }
-            return moving(fix, observedSpeed, segmentStart);
+            return new Result(true, false, stopCandidateStart.latitude(), stopCandidateStart.longitude(),
+                    true, 0, segmentStart);
         }
 
         lowSpeedFixes = 0;

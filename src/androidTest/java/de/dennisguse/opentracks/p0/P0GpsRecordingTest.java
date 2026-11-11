@@ -231,4 +231,16 @@ public class P0GpsRecordingTest {
         assertEquals(3, xml.getElementsByTagNameNS(de.dennisguse.opentracks.p0.export.P0GpxExporter.GPX, "trkseg").getLength());
         assertEquals(6, xml.getElementsByTagNameNS(de.dennisguse.opentracks.p0.export.P0GpxExporter.GPX, "trkpt").getLength());
     }
+
+    @Test public void stoppingDriftCannotIncreaseDistanceDuringHysteresisOrAfterward() {
+        time(0); Track.Id id = service.startNewTrack(); fixtureGps();
+        motionFix(1,0,3); motionFix(2,3,3);
+        double distance = new ContentProviderUtils(context).getTrack(id).statistics().totalDistance().toM();
+        for (int second = 3; second <= 65; second++) {
+            motionFix(second, 3 + (second % 5 - 2) * 0.1, (second % 4) * 0.1f);
+            assertEquals(distance, new ContentProviderUtils(context).getTrack(id).statistics().totalDistance().toM(), 0);
+        }
+        time(66); service.endCurrentTrack();
+        assertEquals(65, points(id).stream().filter(point -> point.position().hasLocation()).count());
+    }
 }
