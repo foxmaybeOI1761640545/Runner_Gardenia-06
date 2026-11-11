@@ -234,4 +234,12 @@ public class GpsMotionFilterTest {
             if (second >= 6) assertTrue(point.stationary());
         }
     }
+
+    @Test public void longRejectedStreamCannotLegitimizeAnUnrelatedJumpThroughAgeAlone() {
+        var filter = new GpsMotionFilter(); filter.update(fix(0,3,1));
+        for (int second = 2; second <= 80; second++)
+            assertFalse("Unrelated jump at " + second, filter.update(fix(1000 + second % 2 * 1000,3,second)).accepted());
+        var recovered = filter.update(fix(3,3,81));
+        assertTrue(recovered.accepted()); assertFalse(recovered.segmentStart());
+    }
 }

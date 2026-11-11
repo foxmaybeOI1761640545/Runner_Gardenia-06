@@ -66,8 +66,12 @@ public final class GpsMotionFilter {
                 distanceFromPrevious = distanceMeters(previous, fix);
                 double accuracyAllowance = Math.min(MAX_ACCURACY_ALLOWANCE_METERS,
                         previous.accuracyMeters() + fix.accuracyMeters());
+                // A run of rejected updates is not a period of GPS silence.
+                // Do not let its growing age eventually legitimize an arbitrary jump.
+                double plausibilitySeconds = jumpRejections > 0
+                        ? receivedGap / 1_000_000_000.0 : secondsFromPrevious;
                 double allowed = Math.max(BASE_JUMP_ALLOWANCE_METERS, accuracyAllowance)
-                        + MAX_SPEED_MPS * secondsFromPrevious;
+                        + MAX_SPEED_MPS * plausibilitySeconds;
                 boolean impossibleSpeed = fix.hasSpeed() && fix.speedMetersPerSecond() > MAX_SPEED_MPS;
                 if (distanceFromPrevious > allowed || impossibleSpeed) {
                     // Count a relocation only when the rejected fixes themselves form

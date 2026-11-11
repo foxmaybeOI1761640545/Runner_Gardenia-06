@@ -115,7 +115,7 @@ def finalize():
     folder=Path('dist');names=[p.name for p in sorted(folder.iterdir()) if p.is_file() and p.name!='ARTIFACT-MANIFEST.json']
     (folder/'ARTIFACT-MANIFEST.json').write_text(json.dumps({n:hashlib.sha256((folder/n).read_bytes()).hexdigest() for n in names},indent=2)+'\n')
 
-def validation_base():return 'f994d1ecd0e19a840800b2f946df3656a6b312c6'
+def validation_base():return pipeline.validation.BASE
 
 def bundle(folder=Path('dist')):
     plan,report=gate();c,_=load();info=json.loads((folder/'build-info.json').read_text());runtime=json.loads((folder/'runtime-smoke.json').read_text());native=json.loads((folder/'native-theme-smoke.json').read_text())
