@@ -238,9 +238,9 @@ def gate():
                     android = inspect(Path('build/outputs/androidTest-results'), selected)
             unit = inspect(Path('build/test-results/testReproducibleDebugUnitTest'),
                            Path('src/test/java'), require_environment=False)
-            proof['gpsNativeEvidence'] = gps_evidence(plan['commit'])
             proof.update(android=android, unit=unit, androidExecuted=android['executed'] > 0,
                          passed=android['passed'] and unit['passed'])
+            proof['gpsNativeEvidence'] = gps_evidence(plan['commit'])
             layout = json.loads(Path('build/reports/p05-visual/p05-layout-matrix.json').read_text())
             original_matrix = json.loads(Path('build/reports/p04-visual/p04-visual-matrix.json').read_text())
             for matrix, count in ((layout, 48), (original_matrix, 192)):
