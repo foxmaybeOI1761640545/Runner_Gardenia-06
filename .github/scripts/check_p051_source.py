@@ -28,7 +28,7 @@ ALLOWED_INFRA = {
     '.github/scripts/p05_version.py', 'release-ledger.json', 'version.properties',
     *('.github/scripts/p051_' + name + '.py' for name in (
         'pipeline', 'release', 'version', 'signing', 'publish', 'publication',
-        'release_smoke', 'release_theme_ui')),
+        'release_smoke', 'release_theme_ui', 'review_transfer')),
 }
 
 
