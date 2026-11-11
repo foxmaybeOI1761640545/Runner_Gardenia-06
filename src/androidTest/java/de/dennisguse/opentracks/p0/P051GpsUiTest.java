@@ -142,8 +142,11 @@ public class P051GpsUiTest {
         }
         String output = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
         File directory = new File(output != null ? new File(output) : new File(context.getExternalMediaDirs()[0], "additional_test_output"), "p0-ui");
-        Files.writeString(new File(directory, "p051-gps-ui.json").toPath(), new org.json.JSONObject()
+        String receipt = new org.json.JSONObject()
                 .put("sourceCommit", InstrumentationRegistry.getArguments().getString("buildCommit", "local"))
-                .put("api", android.os.Build.VERSION.SDK_INT).put("screenshots", captures).put("passed", true).toString(2));
+                .put("api", android.os.Build.VERSION.SDK_INT).put("screenshots", captures).put("passed", true).toString(2);
+        try (var outputStream = new java.io.FileOutputStream(new File(directory, "p051-gps-ui.json"))) {
+            outputStream.write(receipt.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        }
     }
 }
