@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.util.Locale;
 
 public final class MotionFormat {
-    public static final double MIN_DISPLAY_SPEED_MPS = 0.5;
+    public static final double MIN_DISPLAY_SPEED_MPS = 0.3;
     private MotionFormat() {}
     public static String distance(double meters) {
         if(!Double.isFinite(meters)||meters<0)return "—";

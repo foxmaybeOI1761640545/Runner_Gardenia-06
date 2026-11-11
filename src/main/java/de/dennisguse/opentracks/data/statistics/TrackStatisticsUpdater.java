@@ -147,7 +147,8 @@ public class TrackStatisticsUpdater {
             Distance movingDistance = null;
             if (trackPoint.sensorDistance() != null) {
                 movingDistance = trackPoint.sensorDistance();
-            } else if (lastTrackPoint != null
+            } else if (trackPoint.type() != TrackPoint.Type.SEGMENT_START_AUTOMATIC
+                    && lastTrackPoint != null
                     && lastTrackPoint.position().hasLocation()
                     && trackPoint.position().hasLocation()) {
                 // GPS-based distance/speed

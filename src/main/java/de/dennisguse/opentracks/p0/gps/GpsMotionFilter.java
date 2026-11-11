@@ -8,11 +8,11 @@ package de.dennisguse.opentracks.p0.gps;
  * jumps are rejected and a persistent relocation starts a new automatic track segment.
  */
 public final class GpsMotionFilter {
-    public static final double STOP_SPEED_MPS = 0.55;
+    public static final double STOP_SPEED_MPS = 0.4;
     public static final double START_SPEED_MPS = 0.9;
-    public static final double MIN_DISPLAY_SPEED_MPS = 0.5;
+    public static final double MIN_DISPLAY_SPEED_MPS = 0.3;
 
-    private static final double SLOW_START_SPEED_MPS = 0.3;
+    private static final double SLOW_START_SPEED_MPS = 0.45;
     private static final double STOP_RADIUS_METERS = 3.0;
     private static final double START_RADIUS_METERS = 4.0;
     private static final double START_WITHOUT_SPEED_METERS = 10.0;
@@ -44,9 +44,13 @@ public final class GpsMotionFilter {
     private int lowSpeedFixes;
     private int startFixes;
     private int jumpRejections;
+    private Fix relocationCandidate;
+    private long lastSeenNanos;
 
     public synchronized Result update(Fix fix) {
-        if (!valid(fix)) return Result.rejected();
+        if (!valid(fix) || fix.elapsedRealtimeNanos() <= lastSeenNanos) return Result.rejected();
+        long receivedGap = lastSeenNanos == 0 ? 0 : fix.elapsedRealtimeNanos() - lastSeenNanos;
+        lastSeenNanos = fix.elapsedRealtimeNanos();
 
         boolean segmentStart = false;
         double distanceFromPrevious = 0;
@@ -54,7 +58,7 @@ public final class GpsMotionFilter {
         if (previous != null) {
             long gapNanos = fix.elapsedRealtimeNanos() - previous.elapsedRealtimeNanos();
             if (gapNanos <= 0) return Result.rejected();
-            if (gapNanos > MAX_FIX_GAP_NANOS) {
+            if (receivedGap > MAX_FIX_GAP_NANOS) {
                 resetState();
                 segmentStart = true;
             } else {
@@ -66,7 +70,14 @@ public final class GpsMotionFilter {
                         + MAX_SPEED_MPS * secondsFromPrevious;
                 boolean impossibleSpeed = fix.hasSpeed() && fix.speedMetersPerSecond() > MAX_SPEED_MPS;
                 if (distanceFromPrevious > allowed || impossibleSpeed) {
-                    jumpRejections++;
+                    // Count a relocation only when the rejected fixes themselves form
+                    // a credible local sequence. Three unrelated jumps are not a new track.
+                    if (relocationCandidate == null || !consistent(relocationCandidate, fix)) {
+                        jumpRejections = 1;
+                    } else {
+                        jumpRejections++;
+                    }
+                    relocationCandidate = fix;
                     if (jumpRejections < MAX_JUMP_REJECTIONS) return Result.rejected();
                     // Three consecutive, spatially consistent fixes at a new location are
                     // treated as a real relocation. The recorder marks a segment boundary.
@@ -74,10 +85,12 @@ public final class GpsMotionFilter {
                     segmentStart = true;
                 } else {
                     jumpRejections = 0;
+                    relocationCandidate = null;
                 }
             }
         }
 
+        lastSeenNanos = fix.elapsedRealtimeNanos();
         double observedSpeed = fix.hasSpeed() ? fix.speedMetersPerSecond()
                 : previous != null && secondsFromPrevious > 0
                 ? distanceFromPrevious / secondsFromPrevious : Double.NaN;
@@ -96,7 +109,9 @@ public final class GpsMotionFilter {
             boolean movementEvidence;
             if (fix.hasSpeed()) {
                 movementEvidence = observedSpeed >= START_SPEED_MPS
-                        || (observedSpeed >= SLOW_START_SPEED_MPS && fromAnchor >= START_RADIUS_METERS);
+                        || (observedSpeed >= SLOW_START_SPEED_MPS
+                        && fromAnchor >= Math.max(START_RADIUS_METERS,
+                        Math.min(10, stationaryAnchor.accuracyMeters() + fix.accuracyMeters())));
             } else {
                 movementEvidence = fromAnchor >= START_WITHOUT_SPEED_METERS
                         && fix.elapsedRealtimeNanos() - stationaryAnchor.elapsedRealtimeNanos()
@@ -150,6 +165,16 @@ public final class GpsMotionFilter {
         lowSpeedFixes = 0;
         startFixes = 0;
         jumpRejections = 0;
+        relocationCandidate = null;
+        lastSeenNanos = 0;
+    }
+
+    private static boolean consistent(Fix first, Fix next) {
+        long gap = next.elapsedRealtimeNanos() - first.elapsedRealtimeNanos();
+        double allowance = Math.max(BASE_JUMP_ALLOWANCE_METERS,
+                Math.min(MAX_ACCURACY_ALLOWANCE_METERS, first.accuracyMeters() + next.accuracyMeters()));
+        return gap > 0 && gap <= MAX_FIX_GAP_NANOS
+                && distanceMeters(first, next) <= allowance + MAX_SPEED_MPS * gap / 1_000_000_000.0;
     }
 
     private static boolean valid(Fix fix) {
@@ -158,7 +183,7 @@ public final class GpsMotionFilter {
                 && fix.hasAccuracy() && Double.isFinite(fix.accuracyMeters())
                 && fix.accuracyMeters() >= 0
                 && (!fix.hasSpeed() || (Double.isFinite(fix.speedMetersPerSecond())
-                && fix.speedMetersPerSecond() >= 0))
+                && fix.speedMetersPerSecond() >= 0 && fix.speedMetersPerSecond() <= MAX_SPEED_MPS))
                 && fix.elapsedRealtimeNanos() > 0;
     }
 

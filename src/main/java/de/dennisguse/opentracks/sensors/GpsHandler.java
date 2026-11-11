@@ -31,6 +31,17 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     private volatile long latestElapsedNanos;
     private final GpsMotionFilter motionFilter = new GpsMotionFilter();
     private volatile Position latestRecordingPosition;
+    private boolean recordingFixSeen;
+    private boolean segmentAfterReconnect;
+
+    private void resetConnectionMotion() {
+        // Keep the discontinuity across reset; the first trusted new GPS point
+        // must carry it even when BLE notifications arrive in the meantime.
+        if (recordingFixSeen && trackPointCreator.isRecording()) segmentAfterReconnect = true;
+        motionFilter.reset();
+        latestRecordingPosition = null;
+        latestElapsedNanos = 0;
+    }
 
     public boolean hasFreshPreview() {
         long now = android.os.SystemClock.elapsedRealtimeNanos();
@@ -71,9 +82,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onConnected(String sensorAddress, String sensorName) {
-        motionFilter.reset();
-        latestRecordingPosition = null;
-        latestElapsedNanos = 0;
+        resetConnectionMotion();
         super.onConnected(sensorAddress, sensorName);
         gpsStatusManager.onGpsEnabled();
         gpsStatusManager.start();
@@ -81,18 +90,14 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onDisconnected() {
-        latestElapsedNanos = 0;
-        latestRecordingPosition = null;
-        motionFilter.reset();
+        resetConnectionMotion();
         super.onDisconnected();
         gpsStatusManager.stop();
     }
 
     @Override
     public void onSensorDeactivated() {
-        latestElapsedNanos = 0;
-        latestRecordingPosition = null;
-        motionFilter.reset();
+        resetConnectionMotion();
         super.onSensorDeactivated();
         gpsStatusManager.onGpsDisabled();
     }
@@ -133,7 +138,9 @@ public class GpsHandler extends SensorHandler<Location, Position> {
             recordingLocation.setLongitude(filtered.longitude());
             if (filtered.hasSpeed()) recordingLocation.setSpeed((float) filtered.speedMetersPerSecond());
             if (elapsed != location.getElapsedRealtimeNanos()) recordingLocation.setElapsedRealtimeNanos(elapsed);
-            if (filtered.segmentStart()) trackPointCreator.requestAutomaticSegmentStart();
+            if (filtered.segmentStart() || segmentAfterReconnect) trackPointCreator.requestAutomaticSegmentStart();
+            segmentAfterReconnect = false;
+            recordingFixSeen = true;
         }
 
         Position position = Position.of(recordingLocation, trackPointCreator.getNow());

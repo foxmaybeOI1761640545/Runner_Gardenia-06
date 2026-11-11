@@ -214,6 +214,14 @@ public class TrackRecordingManager implements SharedPreferences.OnSharedPreferen
             return true;
         }
 
+        // A trusted GPS discontinuity is a real point, independent of the user's
+        // minimum distance. Never reconnect it to the previous segment.
+        if (trackPoint.type() == TrackPoint.Type.SEGMENT_START_AUTOMATIC) {
+            insertTrackPoint(trackPoint, false);
+            scheduleNewIdleTimeout();
+            return true;
+        }
+
         Distance distanceToLastStoredTrackPoint;
         if (trackPoint.position().hasLocation() && !lastStoredTrackPoint.position().hasLocation()) {
             distanceToLastStoredTrackPoint = trackPoint.distanceToPreviousFromLocation(lastStoredTrackPointWithLocation);

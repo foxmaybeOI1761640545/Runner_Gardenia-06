@@ -67,8 +67,8 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
      */
     public synchronized void onChange() {
         TrackPoint trackPoint = createTrackPoint(TrackPoint.Type.TRACKPOINT);
-        if (automaticSegmentStartRequested) {
-            automaticSegmentStartRequested = false;
+        boolean automaticGpsStart = automaticSegmentStartRequested && trackPoint.position().hasLocation();
+        if (automaticGpsStart) {
             trackPoint = new TrackPoint(trackPoint.id(), TrackPoint.Type.SEGMENT_START_AUTOMATIC,
                     trackPoint.position(), trackPoint.sensorDistance(), trackPoint.heartRate(),
                     trackPoint.temperature(), trackPoint.cadence(), trackPoint.power(),
@@ -77,6 +77,7 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
 
         boolean stored = service.newTrackPoint(trackPoint, PreferencesUtils.getThresholdHorizontalAccuracy());  //TODO Cache preference for performance
         if (stored) {
+            if (automaticGpsStart) automaticSegmentStartRequested = false;
             reset();
         }
     }
