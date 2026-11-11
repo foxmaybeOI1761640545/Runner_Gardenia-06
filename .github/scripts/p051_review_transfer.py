@@ -44,6 +44,10 @@ def run():
     with zipfile.ZipFile(raw, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(root.rglob('*')):
             if path.is_file():
+                if path.suffix.lower() in ('.jks', '.keystore'):
+                    raise ValueError('Signing key files are forbidden in review evidence')
+                if path.suffix.lower() in ('.apk', '.apks', '.aab') or path.name.endswith('.apk.idsig'):
+                    continue  # Binaries remain exclusively in original Artifacts/Releases.
                 archive.write(path, path.relative_to(root))
     payload = raw.getvalue()
     api = GitHub()
@@ -53,7 +57,7 @@ def run():
         result = api.request(api.base + '/git/blobs', 'POST', {
             'encoding': 'base64', 'content': base64.b64encode(part).decode('ascii')})
         chunks.append({'blob': result['sha'], 'bytes': len(part), 'sha256': hashlib.sha256(part).hexdigest()})
-    index = {'source': source, 'workflowCommit': os.environ['GITHUB_SHA'], 'evidencePassed': accepted, 'signedApkIncluded': signed, 'runId': os.environ['GITHUB_RUN_ID'],
+    index = {'source': source, 'workflowCommit': os.environ['GITHUB_SHA'], 'evidencePassed': accepted, 'signedReview': signed, 'signedApkIncluded': False, 'runId': os.environ['GITHUB_RUN_ID'],
              'bytes': len(payload), 'sha256': hashlib.sha256(payload).hexdigest(),
              'chunks': chunks, 'originalArtifactPreserved': True,
              'gitRefUpdated': False, 'signingKeyMaterialIncluded': False}
