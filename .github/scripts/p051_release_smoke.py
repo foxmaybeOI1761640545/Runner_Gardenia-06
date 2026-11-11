@@ -33,7 +33,7 @@ def validate_live_metrics(metric):
 
 def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d32087cc675a3096852c3",6775,"aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc")):
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
-    output=Path('build/reports/p0-release-smoke');output.mkdir(parents=True,exist_ok=True)
+    output=Path('build/reports/p0-release-smoke' if baseline_spec[1]==6776 else 'build/reports/p04-upgrade-smoke');output.mkdir(parents=True,exist_ok=True)
     info=json.loads(Path('dist/build-info.json').read_text());apk=Path('dist/RunnerGardenia-P0-Release.apk').resolve()
     if hashlib.sha256(apk.read_bytes()).hexdigest()!=info['apkSha256']:raise ValueError('Signed APK changed before installation')
     baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/('RunnerGardenia-P0-Release.apk' if p02 else 'runner-gardenia-v0.1.0-rc1.6-6771.apk')
@@ -269,4 +269,10 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
 
 if __name__=='__main__':
     from p051_release_theme_ui import capture
-    run(post_verify=capture)
+    original_baseline = os.environ['P0_BASELINE_DIR']
+    run()
+    shutil.copyfile('dist/runtime-smoke.json', 'dist/p04-upgrade-smoke.json')
+    os.environ['P0_BASELINE_DIR'] = os.environ['P051_BASELINE_DIR']
+    run(post_verify=capture, baseline_spec=(
+        'a8891f61122712b81bee357f40d688151a948e57', 6776,
+        '7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598'))

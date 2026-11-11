@@ -19,7 +19,7 @@ ALLOWED_TESTS = {
     'src/' + tree + '/java/de/dennisguse/opentracks/' + name
     for tree, names in (
         ('test', ('p0/GpsMotionFilterTest.java', 'p0/GpsReadinessTest.java', 'p0/MotionFormatTest.java')),
-        ('androidTest', ('p0/P0GpsRecordingTest.java',)))
+        ('androidTest', ('p0/P0GpsRecordingTest.java', 'p0/P051GpsUiTest.java')))
     for name in names
 }
 ALLOWED_INFRA = {

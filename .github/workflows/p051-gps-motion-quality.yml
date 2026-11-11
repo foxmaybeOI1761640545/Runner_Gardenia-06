@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: p051-gps-motion-quality
+  group: p051-gps-motion-quality-${{ github.event_name }}
   cancel-in-progress: false
 defaults:
   run:
@@ -206,6 +206,7 @@ jobs:
         with:
           name: P051-visual-${{ github.run_id }}
           path: |
+            build/reports/p051-gps-ui/
             build/reports/p05-visual/
             build/reports/p05-metrics/
             build/reports/p05-settings/
@@ -352,11 +353,14 @@ jobs:
         run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
           mkdir -p "$RUNNER_TEMP/p0-baseline"
+          mkdir -p "$RUNNER_TEMP/p051-baseline"
+          gh release download test-p0-v0.1.0-p0.5 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p051-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
           gh release download test-p0-v0.1.0-p0.4 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p0-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
       - name: API35 signed install, real GPS inputs, recording recovery, upgrade and eight native schemes
         if: steps.existing.outputs.formal-id == ''
         env:
           P0_BASELINE_DIR: ${{ runner.temp }}/p0-baseline
+          P051_BASELINE_DIR: ${{ runner.temp }}/p051-baseline
         run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
           test -c /dev/kvm

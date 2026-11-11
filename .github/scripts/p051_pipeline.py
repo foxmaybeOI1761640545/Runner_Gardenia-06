@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import unittest
@@ -175,6 +176,35 @@ def helper_receipt(plan):
     return helper
 
 
+def gps_evidence(source):
+    roots = list(Path('build/outputs').glob('**/p0-ui'))
+    if len(roots) != 1:
+        raise ValueError('Actual GPS native output missing or ambiguous')
+    root = roots[0]
+    receipt = json.loads((root / 'p051-gps-ui.json').read_text())
+    rows = receipt.get('screenshots', [])
+    if (receipt.get('passed') is not True or receipt.get('sourceCommit') != source
+            or receipt.get('api') != 35 or len(rows) != 6):
+        raise ValueError('Exact-source metric/imperial GPS screenshots missing')
+    expected = {(unit, state) for unit in ('METRIC', 'IMPERIAL_FEET')
+                for state in ('stationary', 'slow-moving', 'stopped-again')}
+    if {r.get('file') for r in rows} != {'p051-' + u + '-' + state + '.png' for u, state in expected}:
+        raise ValueError('GPS native state/unit matrix incomplete')
+    target = Path('build/reports/p051-gps-ui'); target.mkdir(parents=True, exist_ok=True)
+    for row in rows:
+        path = root / row['file']; raw = path.read_bytes()
+        if (path.parent != root or raw[:8] != b'\x89PNG\r\n\x1a\n'
+                or hashlib.sha256(raw).hexdigest() != row['sha256'] or row.get('native') is not True):
+            raise ValueError('GPS native screenshot bytes/source differ')
+        if row['stationary'] and (row['pace'] != '—' or not row['speed'].startswith('0.0')):
+            raise ValueError('Stationary dashboard speed/pace is wrong')
+        if not row['stationary'] and row['pace'] == '—':
+            raise ValueError('Slow movement was hidden')
+        shutil.copy2(path, target / path.name)
+    shutil.copy2(root / 'p051-gps-ui.json', target / 'p051-gps-ui.json')
+    return receipt
+
+
 def gate():
     config = configuration()
     plan = json.loads(Path('release-plan.json').read_text())
@@ -208,6 +238,7 @@ def gate():
                     android = inspect(Path('build/outputs/androidTest-results'), selected)
             unit = inspect(Path('build/test-results/testReproducibleDebugUnitTest'),
                            Path('src/test/java'), require_environment=False)
+            proof['gpsNativeEvidence'] = gps_evidence(plan['commit'])
             proof.update(android=android, unit=unit, androidExecuted=android['executed'] > 0,
                          passed=android['passed'] and unit['passed'])
             layout = json.loads(Path('build/reports/p05-visual/p05-layout-matrix.json').read_text())

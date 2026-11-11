@@ -38,6 +38,8 @@ def validate_gate(plan,report,source):
         r=report.get(scope,{})
         if r.get('passed') is not True or r.get('executed',0)<=0 or r.get('failures')!=0 or r.get('errors')!=0 or r.get('tests')!=r['executed']+r.get('skipped',-1):raise ValueError('Missing real complete execution: '+scope)
         if r.get('skipped')!=(1 if scope=='android' else 0):raise ValueError('Additional skips are not allowed')
+    gps=report.get('gpsNativeEvidence',{})
+    if gps.get('passed') is not True or gps.get('sourceCommit')!=source or len(gps.get('screenshots',[]))!=6:raise ValueError('Actual GPS native/imperial evidence missing')
     legacy=report.get('legacySkippedTest',{})
     if legacy.get('method')!='recording_stopGPS_noop' or legacy.get('countedAsPassed') is not False or legacy.get('unchangedFromP04') is not True:raise ValueError('Original legacy Ignore must be explicitly reported, never counted as passed')
     for scope in ('processDurability','metricProcessDurability','batchProcessDurability','gpxSchema','offline'):
@@ -100,9 +102,9 @@ def verify():
 
 def finalize():
     plan,report=gate();info=json.loads(Path('dist/build-info.json').read_text())
-    summary={'commit':info['commit'],'run':info['run'],'tests':info['tests'],'helpers':report['helpers'],'legacySkippedTest':report['legacySkippedTest'],'runtimeSmokeVerified':True,'upgradeFromVersionCode':6775,'crossUidShareReceipts':6,'wechat':'NEEDS_DEVICE_VALIDATION','hardware':'NEEDS_DEVICE_VALIDATION','bleProductionChanged':False}
+    summary={'commit':info['commit'],'run':info['run'],'tests':info['tests'],'helpers':report['helpers'],'legacySkippedTest':report['legacySkippedTest'],'runtimeSmokeVerified':True,'upgradeFromVersionCode':6776,'crossUidShareReceipts':6,'wechat':'NEEDS_DEVICE_VALIDATION','hardware':'NEEDS_DEVICE_VALIDATION','bleProductionChanged':False}
     Path('dist/test-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    notes=f"[TEST][P0.5.1] {VERSION}\n\nGPS 运动状态过滤、静止坐标锚定、跳点拒绝/断段；保留四主题仪表盘、设置中心、历史/批量分享回归。完全离线，复用原 BLE/数据库/GPX 路径。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
+    notes=f"[TEST][P0.5.1] {VERSION}\n\nGPS 运动状态过滤、静止坐标锚定、跳点拒绝/断段；保留四主题仪表盘、设置中心、历史/批量分享回归。完全离线，复用原 BLE/数据库/GPX 路径。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.5与P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
     Path('dist/RELEASE_NOTES.md').write_text(notes)
     Path('dist/DEVELOPMENT_COMMITS.txt').write_text(pipeline.git('log','--reverse','--format=%H %s',validation_base()+'..'+info['commit'])+'\n')
     with zipfile.ZipFile('dist/key-test-receipts.zip','w',zipfile.ZIP_DEFLATED) as z:
@@ -121,7 +123,9 @@ def bundle(folder=Path('dist')):
     if any(info.get(k) is not True for k in ('signatureVerified','alignmentVerified','runtimeSmokeVerified','r8TaskExecuted','resourceOptimizationTaskExecuted')):raise ValueError('Missing actual signing/optimization/runtime proof')
     expected={k:{f:report[k][f] for f in ('tests','executed','failures','errors','skipped')} for k in ('android','unit')}
     if info['tests']!=expected or info['testRunId']!=c['approval']['testRunId']:raise ValueError('Full test evidence differs')
-    if runtime.get('passed') is not True or runtime.get('commit')!=info['commit'] or runtime.get('apkSha256')!=info['apkSha256'] or runtime.get('upgradeFromVersionCode')!=6775 or any(runtime.get(k) is not True for k in ('deviceConfigurationRetained','preparationCreatesNoWorkout','liveGpsFieldsVerified','releaseGpxSchemaVerified','forceStopRecovery','unitAndRateUpgradeRetained','themeUpgradeRetained','nativeRateSwitchKeepsRecording')):raise ValueError('Actual P0.4 upgrade/GPS/GPX/recovery proof absent')
+    if runtime.get('passed') is not True or runtime.get('commit')!=info['commit'] or runtime.get('apkSha256')!=info['apkSha256'] or runtime.get('upgradeFromVersionCode')!=6776 or any(runtime.get(k) is not True for k in ('deviceConfigurationRetained','preparationCreatesNoWorkout','liveGpsFieldsVerified','releaseGpxSchemaVerified','forceStopRecovery','unitAndRateUpgradeRetained','themeUpgradeRetained','nativeRateSwitchKeepsRecording')):raise ValueError('Actual P0.4 upgrade/GPS/GPX/recovery proof absent')
+    historical=json.loads((folder/'p04-upgrade-smoke.json').read_text())
+    if historical.get('passed') is not True or historical.get('commit')!=info['commit'] or historical.get('apkSha256')!=info['apkSha256'] or historical.get('upgradeFromVersionCode')!=6775:raise ValueError('Historical P0.4 upgrade is missing')
     if native.get('passed') is not True or native.get('commit')!=info['commit'] or native.get('apkSha256')!=info['apkSha256'] or native.get('api')!=35 or native.get('nativePageChecks')!=pipeline.SIGNED_PNGS or len(native.get('schemes',[]))!=8 or len(native.get('screenshots',[]))!=pipeline.SIGNED_PNGS or any(native.get(k) is not True for k in ('processRestartPersistence','metricProcessPersistence','historyBatchVerified','sharePreservesData','appVersionVerified')):raise ValueError('Actual signed P0.5 native/metric/batch proof absent')
     rawzip=(folder/'theme-screenshots.zip').read_bytes()
     if hashlib.sha256(rawzip).hexdigest()!=native['screenshotsZipSha256']:raise ValueError('Signed screenshot ZIP changed')
