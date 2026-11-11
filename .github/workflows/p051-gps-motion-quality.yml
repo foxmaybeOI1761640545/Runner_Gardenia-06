@@ -29,9 +29,7 @@ jobs:
     outputs:
       mode: ${{ steps.route.outputs.mode }}
       source: ${{ steps.route.outputs.source }}
-      test-run: |
-      test-  export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
-      test-  ${{ steps.route.outputs.test-run }}
+      test-run: ${{ steps.route.outputs.test-run }}
       reports-artifact: ${{ steps.route.outputs.reports-artifact }}
       formal-artifact: ${{ steps.route.outputs.formal-artifact }}
     steps:
@@ -61,7 +59,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - run: |
-      -   export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
           sudo timedatectl set-timezone Asia/Singapore
           test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
       - name: Verify exact branch, phase, baseline and protected historical refs
@@ -237,7 +235,7 @@ jobs:
           cmdline-tools-version: '16111833'
           packages: platform-tools
       - run: |
-      -   export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
       -   sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
       - name: API35 real native window helper self-test
         run: |
@@ -295,7 +293,7 @@ jobs:
           cmdline-tools-version: '16111833'
           packages: platform-tools
       - run: |
-      -   export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
       -   sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
       - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
         with:
@@ -430,7 +428,7 @@ jobs:
           cmdline-tools-version: '16111833'
           packages: platform-tools
       - run: |
-      -   export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
       -   sdkmanager 'build-tools;36.0.0'
       - name: Verify immutable APK and all draft assets, publish unique pre-release, re-download anonymously
         env:
