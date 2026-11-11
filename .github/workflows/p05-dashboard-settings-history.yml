@@ -1,4 +1,4 @@
-name: P0.5 dashboard settings and history
+name: P0.5.1 GPS motion quality
 on:
   push:
     branches: [feature/p0-5-1-gps-motion-quality]
