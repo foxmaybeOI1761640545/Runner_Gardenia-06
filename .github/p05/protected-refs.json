@@ -2,7 +2,7 @@
   "schema": 1,
   "repository": "foxmaybeOI1761640545/Runner_Gardenia-06",
   "baselineCommit": "f994d1ecd0e19a840800b2f946df3656a6b312c6",
-  "branch": "feature/p0-5-dashboard-settings-history",
+  "branch": "feature/p0-5-1-gps-motion-quality",
   "protectedRefs": {
     "refs/heads/design/p0-ui-lab": "45ce47d9eec81dd2f0cdfcf2bfd7055e23378e02",
     "refs/heads/feature/heart-rate-monitoring": "121ea381fd11111427073fe291dfb5ddabf8b03e",

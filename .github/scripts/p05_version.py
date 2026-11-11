@@ -1,9 +1,9 @@
-"""Explicit P0.5 allocation; preserve all published and abandoned historical codes."""
+"""Explicit P0.5.1 allocation; preserve all published and abandoned historical codes."""
 import json
 from pathlib import Path
 from publish_release import GitHub
 
-VERSION='v0.1.0-p0.5'
+VERSION='v0.1.0-p0.5.1'
 TAG='test-p0-'+VERSION
 CERT='E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22'
 APK='RunnerGardenia-P0-Release.apk'
@@ -17,9 +17,9 @@ def allocated_code(data):
     if actual!=data:raise ValueError('Allocation differs from live ledger')
     entries=ledger_history()
     chosen=[e for e in entries if e['versionName']==VERSION]
-    if len(chosen)!=1 or chosen[0].get('classification')!='reserved-p05-test':raise ValueError('Missing unique P0.5 reservation')
+    if len(chosen)!=1 or chosen[0].get('classification')!='reserved-p051-test':raise ValueError('Missing unique P0.5.1 reservation')
     row=chosen[0];others=[e['versionCode'] for e in entries[:entries.index(row)]]
-    if row['versionCode']!=max(others)+1 or data['codeHighWater']!=row['versionCode']:raise ValueError('P0.5 allocation must follow its historical predecessors')
+    if row['versionCode']!=max(others)+1 or data['codeHighWater']!=row['versionCode']:raise ValueError('P0.5.1 allocation must follow its historical predecessors')
     return row['versionCode']
 
 
@@ -35,14 +35,14 @@ def remote_history(api,commit,code):
         if len(assets)!=1:raise ValueError('Existing Release lacks unambiguous version evidence: '+release['tag_name'])
         info=json.loads(api.request(assets[0]['url'],binary=True))
         if release['tag_name']==TAG:
-            if info['commit']!=commit or info['versionName']!=VERSION or info['versionCode']!=code:raise ValueError('P0.5 already belongs to another source/allocation')
-        elif info['versionCode']>=code:raise ValueError('Published/reserved remote Version Code conflicts with P0.5')
+            if info['commit']!=commit or info['versionName']!=VERSION or info['versionCode']!=code:raise ValueError('P0.5.1 already belongs to another source/allocation')
+        elif info['versionCode']>=code:raise ValueError('Published/reserved remote Version Code conflicts with P0.5.1')
     return releases
 
 
 def check(commit):
     code=allocated_code(json.loads(Path('release-ledger.json').read_text()))
     properties=dict(line.split('=',1) for line in Path('version.properties').read_text().splitlines() if line and not line.startswith('#'))
-    if properties['VERSION_NAME']!=VERSION or int(properties['VERSION_CODE'])!=code:raise ValueError('Properties differ from P0.5 ledger reservation')
+    if properties['VERSION_NAME']!=VERSION or int(properties['VERSION_CODE'])!=code:raise ValueError('Properties differ from P0.5.1 ledger reservation')
     remote_history(GitHub(),commit,code)
     return code

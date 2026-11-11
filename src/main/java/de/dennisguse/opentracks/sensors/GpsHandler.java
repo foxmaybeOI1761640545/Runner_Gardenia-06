@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 
 import de.dennisguse.opentracks.R;
+import de.dennisguse.opentracks.p0.gps.GpsMotionFilter;
 import de.dennisguse.opentracks.data.models.Distance;
 import de.dennisguse.opentracks.data.models.Position;
 import de.dennisguse.opentracks.sensors.driver.Driver;
@@ -28,6 +29,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     private GpsStatusManager gpsStatusManager;
     private Distance thresholdHorizontalAccuracy;
     private volatile long latestElapsedNanos;
+    private final GpsMotionFilter motionFilter = new GpsMotionFilter();
+    private volatile Position latestRecordingPosition;
 
     public boolean hasFreshPreview() {
         long now = android.os.SystemClock.elapsedRealtimeNanos();
@@ -61,10 +64,16 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     }
 
     /** Last actual GPS measurement, with its original timestamp/accuracy; never consumes recording data. */
-    public Position latestPosition() {return gpsStatusManager.latestPosition();}
+    public Position latestPosition() {
+        Position current = latestRecordingPosition;
+        return current != null ? current : gpsStatusManager.latestPosition();
+    }
 
     @Override
     public void onConnected(String sensorAddress, String sensorName) {
+        motionFilter.reset();
+        latestRecordingPosition = null;
+        latestElapsedNanos = 0;
         super.onConnected(sensorAddress, sensorName);
         gpsStatusManager.onGpsEnabled();
         gpsStatusManager.start();
@@ -73,6 +82,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     @Override
     public void onDisconnected() {
         latestElapsedNanos = 0;
+        latestRecordingPosition = null;
+        motionFilter.reset();
         super.onDisconnected();
         gpsStatusManager.stop();
     }
@@ -80,6 +91,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     @Override
     public void onSensorDeactivated() {
         latestElapsedNanos = 0;
+        latestRecordingPosition = null;
+        motionFilter.reset();
         super.onSensorDeactivated();
         gpsStatusManager.onGpsDisabled();
     }
@@ -87,22 +100,48 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     @Override
     public void onDataReceived(Location location) {
         if (!trackPointCreator.acceptGpsLocation(location, thresholdHorizontalAccuracy)) return;
-        latestElapsedNanos = location.getElapsedRealtimeNanos();
-        // Send each update to the status; please note that this TrackPoint is not stored.
-        Position position = Position.of(location, trackPointCreator.getNow());
-        gpsStatusManager.onNewTrackPoint(position);
 
-        //TODO We could move the following check into the AggregatorGPS
-        if (!position.hasValidLocation()) {
+        // Keep the status path honest: invalid/weak fixes remain visible as GPS warnings,
+        // but they are never sent to the recorder or motion filter.
+        Position rawPosition = Position.of(location, trackPointCreator.getNow());
+        gpsStatusManager.onNewTrackPoint(rawPosition);
+        if (!rawPosition.hasValidLocation()) {
             Log.w(TAG, "Ignore newTrackPoint. Location is invalid.");
             return;
         }
-        if (!position.fulfillsAccuracy(thresholdHorizontalAccuracy)) {
+        if (!rawPosition.fulfillsAccuracy(thresholdHorizontalAccuracy)) {
             Log.d(TAG, "Ignore newTrackPoint. Poor accuracy.");
             return;
         }
 
-        super.onDataReceived(location);
+        Location recordingLocation = location;
+        if (trackPointCreator.isRecording()) {
+            long elapsed = location.getElapsedRealtimeNanos();
+            if (elapsed <= 0) elapsed = android.os.SystemClock.elapsedRealtimeNanos();
+            GpsMotionFilter.Result filtered = motionFilter.update(new GpsMotionFilter.Fix(
+                    location.getLatitude(), location.getLongitude(),
+                    location.hasAccuracy(), location.getAccuracy(),
+                    location.hasSpeed(), location.hasSpeed() ? location.getSpeed() : Double.NaN,
+                    elapsed));
+            if (!filtered.accepted()) {
+                Log.w(TAG, "Ignore GPS outlier; waiting for a stable fix.");
+                return;
+            }
+
+            recordingLocation = new Location(location);
+            recordingLocation.setLatitude(filtered.latitude());
+            recordingLocation.setLongitude(filtered.longitude());
+            if (filtered.hasSpeed()) recordingLocation.setSpeed((float) filtered.speedMetersPerSecond());
+            if (elapsed != location.getElapsedRealtimeNanos()) recordingLocation.setElapsedRealtimeNanos(elapsed);
+            if (filtered.segmentStart()) trackPointCreator.requestAutomaticSegmentStart();
+        }
+
+        Position position = Position.of(recordingLocation, trackPointCreator.getNow());
+        latestRecordingPosition = position;
+        long elapsed = recordingLocation.getElapsedRealtimeNanos();
+        latestElapsedNanos = elapsed > 0 ? elapsed : android.os.SystemClock.elapsedRealtimeNanos();
+        gpsStatusManager.onNewTrackPoint(position);
+        super.onDataReceived(recordingLocation);
     }
 
     @NonNull

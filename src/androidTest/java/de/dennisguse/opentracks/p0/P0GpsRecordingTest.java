@@ -21,6 +21,7 @@ import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.data.*;
 import de.dennisguse.opentracks.data.models.*;
 import de.dennisguse.opentracks.p0.data.SessionStore;
+import de.dennisguse.opentracks.p0.data.WorkoutRepository;
 import de.dennisguse.opentracks.p0.recording.*;
 import de.dennisguse.opentracks.services.TrackRecordingService;
 import de.dennisguse.opentracks.settings.PreferencesUtils;

@@ -9,7 +9,7 @@ class PublicationFlowTests(unittest.TestCase):
         import contextlib,hashlib,io,json,tempfile,urllib.parse
         import p05_publish
         raw_apk=b'publication transport fixture, not an accepted APK'
-        info={'commit':'a'*40,'versionName':p05_publish.VERSION,'versionCode':6776,'apkSha256':hashlib.sha256(raw_apk).hexdigest(),'apkBytes':len(raw_apk),'certificateSha256':p05_publish.CERT,'run':'https://test.invalid/build','tests':{},'plan':{'runId':'123'}}
+        info={'commit':'a'*40,'versionName':p05_publish.VERSION,'versionCode':6777,'apkSha256':hashlib.sha256(raw_apk).hexdigest(),'apkBytes':len(raw_apk),'certificateSha256':p05_publish.CERT,'run':'https://test.invalid/build','tests':{},'plan':{'runId':'123'}}
         class API:
             repo='test/fixture';base='https://api.github.com/repos/test/fixture'
             def __init__(self):self.release=None;self.files={};self.downloads={};self.uploaded=[];self.published=False

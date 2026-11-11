@@ -1,6 +1,9 @@
 {
-  "stage": 5,
-  "fullRegression": true,
-  "classes": [],
+  "stage": 1,
+  "fullRegression": false,
+  "classes": [
+    "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+    "de.dennisguse.opentracks.p0.P0GpsPreparationTest"
+  ],
   "signed": false
 }
