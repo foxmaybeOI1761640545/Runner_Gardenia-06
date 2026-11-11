@@ -236,7 +236,7 @@ jobs:
           packages: platform-tools
       - run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
-      -   sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
       - name: API35 real native window helper self-test
         run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
@@ -294,7 +294,7 @@ jobs:
           packages: platform-tools
       - run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
-      -   sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
       - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
         with:
           cache-disabled: true
@@ -429,7 +429,7 @@ jobs:
           packages: platform-tools
       - run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
-      -   sdkmanager 'build-tools;36.0.0'
+          sdkmanager 'build-tools;36.0.0'
       - name: Verify immutable APK and all draft assets, publish unique pre-release, re-download anonymously
         env:
           GH_TOKEN: ${{ github.token }}
