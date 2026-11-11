@@ -242,4 +242,11 @@ public class GpsMotionFilterTest {
         var recovered = filter.update(fix(3,3,81));
         assertTrue(recovered.accepted()); assertFalse(recovered.segmentStart());
     }
+
+    @Test public void missingOrNegativeMonotonicMetadataNeverEntersTheFilter() {
+        var filter = new GpsMotionFilter();
+        for (long time : new long[]{0,-1})
+            assertFalse(filter.update(new GpsMotionFilter.Fix(1.3,103.8,true,2,true,3,time)).accepted());
+        assertTrue(filter.update(fix(0,0,1)).stationary());
+    }
 }

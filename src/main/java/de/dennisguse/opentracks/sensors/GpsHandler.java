@@ -121,8 +121,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
         Location recordingLocation = location;
         // P0's acquisition guard already rejects live fixes without monotonic
-        // metadata. Legacy imported/mock Locations have no such time axis:
-        // never invent a nanosecond interval for them and infer a bogus jump.
+        // metadata. Untimed legacy Locations have no such time axis: never
+        // substitute callback arrival time and infer a bogus movement interval.
         if (trackPointCreator.isRecording() && location.getElapsedRealtimeNanos() > 0) {
             long elapsed = location.getElapsedRealtimeNanos();
             GpsMotionFilter.Result filtered = motionFilter.update(new GpsMotionFilter.Fix(

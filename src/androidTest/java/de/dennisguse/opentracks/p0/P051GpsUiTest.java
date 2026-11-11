@@ -113,6 +113,13 @@ public class P051GpsUiTest {
                 assertFalse("Live P0 fixes without monotonic metadata must not create a workout", core.isRecording());
                 P0GpsPreparationTest.ready(core);
                 assertTrue(core.isRecording());
+                double confirmedLatitude = core.getGpsPreview().latitude();
+                main(() -> {
+                    Location invalid = new Location("gps");
+                    invalid.setLatitude(4.3); invalid.setLongitude(103.8); invalid.setAccuracy(2); invalid.setSpeed(3);
+                    core.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(invalid);
+                });
+                assertEquals("Active P0 also rejects an untimed fix", confirmedLatitude, core.getGpsPreview().latitude(), 0);
                 for (int i = 0; i < 5; i++) fix(i % 2 * 0.2, 0.235f);
                 DashboardState stopped = state(screen, true);
                 assertTrue(stopped.speed().startsWith("0.0")); assertEquals("—", stopped.pace());
