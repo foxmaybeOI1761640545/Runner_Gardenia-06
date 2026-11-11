@@ -255,7 +255,7 @@ jobs:
 
   review-transfer:
     needs: [scope, checks, native-window-helper]
-    if: github.event_name == 'push' && needs.scope.outputs.mode == 'checks'
+    if: always() && github.event_name == 'push' && needs.scope.outputs.mode == 'checks' && (needs.checks.result == 'success' || needs.checks.result == 'failure')
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     permissions:
@@ -428,6 +428,37 @@ jobs:
             build/reports/
             build/outputs/mapping/reproducibleRelease/
           if-no-files-found: warn
+          retention-days: 90
+
+
+  signed-review-transfer:
+    needs: [scope, signed]
+    if: github.event_name == 'push' && needs.scope.outputs.mode == 'sign'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: RunnerGardenia-P051-Release-${{ github.run_id }}
+          path: evidence
+      - id: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p051_review_transfer.py --signed
+      - name: Signed review evidence index ${{ steps.transfer.outputs.index }}
+        run: test -s review-transfer.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-signed-review-transfer-${{ github.run_id }}
+          path: review-transfer.json
+          if-no-files-found: error
           retention-days: 90
 
   publish:

@@ -9,6 +9,7 @@ import hashlib
 import io
 import json
 import os
+import sys
 from pathlib import Path
 import zipfile
 from publish_release import GitHub
@@ -21,10 +22,24 @@ def run():
             or os.environ['GITHUB_REF'] != 'refs/heads/feature/p0-5-1-gps-motion-quality'):
         raise ValueError('Only a trusted source push can transfer evidence')
     root = Path('evidence')
-    plan = json.loads((root / 'release-plan.json').read_text())
-    report = json.loads((root / 'build/reports/p051-validation/tests.json').read_text())
-    if plan['commit'] != os.environ['GITHUB_SHA'] or report['passed'] is not True or report['plan'] != plan:
-        raise ValueError('Only successful exact-source full evidence may be transferred')
+    signed = sys.argv[1:] == ['--signed']
+    if signed:
+        info = json.loads((root / 'build-info.json').read_text())
+        approval = json.loads(Path('.github/p051/visual-approval.json').read_text())
+        runtime = json.loads((root / 'runtime-smoke.json').read_text())
+        native = json.loads((root / 'native-theme-smoke.json').read_text())
+        if (info['buildWorkflowCommit'] != os.environ['GITHUB_SHA']
+                or info['commit'] != approval['source'] or info['testRunId'] != approval['testRunId']
+                or runtime.get('passed') is not True or native.get('passed') is not True
+                or hashlib.sha256((root / 'RunnerGardenia-P0-Release.apk').read_bytes()).hexdigest() != info['apkSha256']):
+            raise ValueError('Signed review transport differs from accepted source/APK')
+        source, accepted = info['commit'], True
+    else:
+        plan = json.loads((root / 'release-plan.json').read_text())
+        report = json.loads((root / 'build/reports/p051-validation/tests.json').read_text())
+        if plan['commit'] != os.environ['GITHUB_SHA'] or report['plan'] != plan:
+            raise ValueError('Exact-source diagnostic evidence is required')
+        source, accepted = plan['commit'], report['passed'] is True
     raw = io.BytesIO()
     with zipfile.ZipFile(raw, 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sorted(root.rglob('*')):
@@ -38,10 +53,10 @@ def run():
         result = api.request(api.base + '/git/blobs', 'POST', {
             'encoding': 'base64', 'content': base64.b64encode(part).decode('ascii')})
         chunks.append({'blob': result['sha'], 'bytes': len(part), 'sha256': hashlib.sha256(part).hexdigest()})
-    index = {'source': plan['commit'], 'runId': os.environ['GITHUB_RUN_ID'],
+    index = {'source': source, 'workflowCommit': os.environ['GITHUB_SHA'], 'evidencePassed': accepted, 'signedApkIncluded': signed, 'runId': os.environ['GITHUB_RUN_ID'],
              'bytes': len(payload), 'sha256': hashlib.sha256(payload).hexdigest(),
              'chunks': chunks, 'originalArtifactPreserved': True,
-             'gitRefUpdated': False, 'signedMaterialIncluded': False}
+             'gitRefUpdated': False, 'signingKeyMaterialIncluded': False}
     result = api.request(api.base + '/git/blobs', 'POST', {
         'encoding': 'utf-8', 'content': json.dumps(index, indent=2) + '\n'})
     index['indexBlob'] = result['sha']
