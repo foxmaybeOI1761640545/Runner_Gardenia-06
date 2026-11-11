@@ -149,6 +149,10 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         long elapsed = recordingLocation.getElapsedRealtimeNanos();
         latestElapsedNanos = elapsed > 0 ? elapsed : android.os.SystemClock.elapsedRealtimeNanos();
         gpsStatusManager.onNewTrackPoint(position);
+        // The acquisition guard can publish BAD directly while the status
+        // manager still remembers FIX. An accepted fresh measurement must
+        // explicitly clear that warning, including after invalid metadata.
+        trackPointCreator.sendGpsStatus(GpsStatusValue.GPS_SIGNAL_FIX);
         super.onDataReceived(recordingLocation);
     }
 
