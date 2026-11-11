@@ -12,14 +12,13 @@ ALLOWED_PRODUCT = {
     JAVA + name for name in (
         'p0/gps/GpsMotionFilter.java', 'p0/gps/GpsReadiness.java', 'p0/gps/MotionFormat.java',
         'p0/app/DashboardState.java', 'sensors/GpsHandler.java',
-        'services/handlers/TrackPointCreator.java', 'services/TrackRecordingManager.java',
-        'data/statistics/TrackStatisticsUpdater.java')
+        'services/handlers/TrackPointCreator.java', 'services/TrackRecordingManager.java')
 }
 ALLOWED_TESTS = {
     'src/' + tree + '/java/de/dennisguse/opentracks/' + name
     for tree, names in (
         ('test', ('p0/GpsMotionFilterTest.java', 'p0/GpsReadinessTest.java', 'p0/MotionFormatTest.java')),
-        ('androidTest', ('p0/P0GpsRecordingTest.java', 'p0/P051GpsUiTest.java')))
+        ('androidTest', ('p0/P0GpsRecordingTest.java', 'p0/P051GpsUiTest.java', 'p0/P02HomeUiTest.java')))
     for name in names
 }
 ALLOWED_INFRA = {

@@ -120,9 +120,11 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         }
 
         Location recordingLocation = location;
-        if (trackPointCreator.isRecording()) {
+        // P0's acquisition guard already rejects live fixes without monotonic
+        // metadata. Legacy imported/mock Locations have no such time axis:
+        // never invent a nanosecond interval for them and infer a bogus jump.
+        if (trackPointCreator.isRecording() && location.getElapsedRealtimeNanos() > 0) {
             long elapsed = location.getElapsedRealtimeNanos();
-            if (elapsed <= 0) elapsed = android.os.SystemClock.elapsedRealtimeNanos();
             GpsMotionFilter.Result filtered = motionFilter.update(new GpsMotionFilter.Fix(
                     location.getLatitude(), location.getLongitude(),
                     location.hasAccuracy(), location.getAccuracy(),
@@ -137,7 +139,6 @@ public class GpsHandler extends SensorHandler<Location, Position> {
             recordingLocation.setLatitude(filtered.latitude());
             recordingLocation.setLongitude(filtered.longitude());
             if (filtered.hasSpeed()) recordingLocation.setSpeed((float) filtered.speedMetersPerSecond());
-            if (elapsed != location.getElapsedRealtimeNanos()) recordingLocation.setElapsedRealtimeNanos(elapsed);
             if (filtered.segmentStart() || segmentAfterReconnect) trackPointCreator.requestAutomaticSegmentStart();
             segmentAfterReconnect = false;
             recordingFixSeen = true;

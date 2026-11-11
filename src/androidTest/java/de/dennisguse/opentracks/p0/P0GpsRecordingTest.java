@@ -102,7 +102,7 @@ public class P0GpsRecordingTest {
     private void motionFix(int second, double northMeters, float speed) {
         time(second);
         Location fix = new Location("gps");
-        fix.setLatitude(1.3 + northMeters / 111_320.0); fix.setLongitude(103.8);
+        fix.setLatitude(1.3 + northMeters / 110_575.0); fix.setLongitude(103.8);
         fix.setAccuracy(2); fix.setSpeed(speed);
         fix.setTime(Instant.parse("2020-02-02T02:02:00Z").plusSeconds(second).toEpochMilli());
         fix.setElapsedRealtimeNanos((second + 1L) * 1_000_000_000L);

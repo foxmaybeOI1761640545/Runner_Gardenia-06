@@ -105,6 +105,12 @@ public class P051GpsUiTest {
             new SessionStore(context).save(RecordingSession.ready());
             try (ActivityScenario<P0Activity> screen = ActivityScenario.launch(P0Activity.class)) {
                 main(() -> {core.beginGpsAcquisition(); P0GpsPreparationTest.fixture(core);});
+                main(() -> {
+                    Location invalid = new Location("gps");
+                    invalid.setLatitude(1.3); invalid.setLongitude(103.8); invalid.setAccuracy(2); invalid.setSpeed(3);
+                    core.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(invalid);
+                });
+                assertFalse("Live P0 fixes without monotonic metadata must not create a workout", core.isRecording());
                 P0GpsPreparationTest.ready(core);
                 assertTrue(core.isRecording());
                 for (int i = 0; i < 5; i++) fix(i % 2 * 0.2, 0.235f);

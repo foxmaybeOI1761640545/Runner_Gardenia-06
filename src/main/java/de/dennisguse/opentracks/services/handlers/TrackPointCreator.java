@@ -70,7 +70,8 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         boolean automaticGpsStart = automaticSegmentStartRequested && trackPoint.position().hasLocation();
         if (automaticGpsStart) {
             trackPoint = new TrackPoint(trackPoint.id(), TrackPoint.Type.SEGMENT_START_AUTOMATIC,
-                    trackPoint.position(), trackPoint.sensorDistance(), trackPoint.heartRate(),
+                    trackPoint.position(), trackPoint.sensorDistance() != null ? trackPoint.sensorDistance() : Distance.ZERO,
+                    trackPoint.heartRate(),
                     trackPoint.temperature(), trackPoint.cadence(), trackPoint.power(),
                     trackPoint.altitudeGainLoss());
         }
