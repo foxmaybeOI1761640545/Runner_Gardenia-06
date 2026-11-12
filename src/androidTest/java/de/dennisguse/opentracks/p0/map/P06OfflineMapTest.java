@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.matcher.RootMatchers.isDialog;
 import static androidx.test.espresso.intent.Intents.intending;
 import static androidx.test.espresso.intent.matcher.IntentMatchers.hasAction;
 import android.app.Activity;
@@ -85,13 +86,15 @@ public class P06OfflineMapTest {
         try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){repository.importMap(input,"Map B");}
         try(ActivityScenario<P06MapActivity> screen=ActivityScenario.launch(P06MapActivity.class)){
             waitMap(screen);onView(withId(R.id.p06_manage_maps)).perform(click());
-            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).perform(click());
-            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_offline_map)).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).inRoot(isDialog()).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_offline_map)).inRoot(isDialog()).perform(click());
             long end=SystemClock.uptimeMillis()+10000;while(!first.equals(repository.read().selected())&&SystemClock.uptimeMillis()<end)SystemClock.sleep(100);assertEquals(first,repository.read().selected());
             SystemClock.sleep(300);onView(withId(R.id.p06_manage_maps)).perform(click());
-            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).perform(click());
-            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete)).perform(click());
-            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete)).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).inRoot(isDialog()).perform(click());
+            // Each action belongs to a newly focused dialog, never the underlying
+            // Activity or the preceding dialog while its window is being removed.
+            onView(org.hamcrest.Matchers.allOf(withId(android.R.id.button3),androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete))).inRoot(isDialog()).perform(click());
+            onView(org.hamcrest.Matchers.allOf(withId(android.R.id.button1),androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete))).inRoot(isDialog()).perform(click());
             end=SystemClock.uptimeMillis()+10000;while(repository.read().entries().size()!=1&&SystemClock.uptimeMillis()<end)SystemClock.sleep(100);
             assertEquals(1,repository.read().entries().size());assertEquals("Map B",repository.read().current().name());waitMap(screen);
             assertTrue(new WorkoutRepository(context).list().isEmpty());
