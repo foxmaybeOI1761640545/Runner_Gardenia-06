@@ -341,6 +341,31 @@ jobs:
           retention-days: 90
 
 
+  retained-sign-diagnostic:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/feature/p0-6-offline-map' && contains(github.event.head_commit.message, '[p06-review-retained-failure]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - id: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p06_retained_diagnostic.py
+      - name: Review evidence index ${{ steps.transfer.outputs.index }}
+        run: test -s retained-diagnostic-transfer.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P06-retained-sign-diagnostic-${{ github.run_id }}
+          path: retained-diagnostic-transfer.json
+          if-no-files-found: error
+          retention-days: 90
+
   signed:
     needs: scope
     if: needs.scope.outputs.mode == 'sign'

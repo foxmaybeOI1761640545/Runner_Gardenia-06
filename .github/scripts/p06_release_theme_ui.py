@@ -20,6 +20,13 @@ def page_matches(tree,page):
     if page=='delete':return any('Permanently delete selected records' in t for t in texts)
     return True
 
+def scrolled_home(tree,page,focus):
+    """A map return can restore the home ScrollView below its title."""
+    ids={n.get('resource-id') for n in tree.iter('node')}
+    return (page=='home' and 'P0Activity' in focus
+        and PACKAGE+':id/p02_home_scroll' in ids
+        and PACKAGE+':id/p0_title' not in ids)
+
 def capture(device,dump,screenshot,tap,start,output):
     info=json.loads(Path('dist/build-info.json').read_text());rows=[];schemes=[];batches=[];root='/data/user/0/'+PACKAGE
     pref=root+'/shared_prefs/'+PACKAGE+'_preferences.xml';palettes={x['id']:x for x in json.loads(Path('src/main/assets/gardenia-theme-tokens.json').read_text())['themes']}
@@ -40,7 +47,12 @@ def capture(device,dump,screenshot,tap,start,output):
         while time.monotonic()<until:
             tree=dump();windows=device('shell','dumpsys','window');focus=next((x.strip() for x in windows.splitlines() if 'mCurrentFocus=' in x),'')
             if page_matches(tree,page) and PAGE_ACTIVITIES[page] in focus:time.sleep(.2);return dump(),focus
+            if scrolled_home(tree,page,focus):
+                # Normal native touch scroll only after the actual home Activity
+                # is focused. Keep requiring the original visible title below.
+                device('shell','input','swipe','360','400','360','1200','200')
             time.sleep(.15)
+        print(json.dumps({'expectedNativePage':page,'actualFocus':focus,'visibleNativeIds':sorted({n.get('resource-id','') for n in tree.iter('node')})}),flush=True)
         raise ValueError('Focused native page unavailable: '+page)
     def photo(family,mode,page):
         tree,focus=await_page(page);name=f'p06-release-{family}-{mode}-{page}';screenshot(name);raw=(output/(name+'.png')).read_bytes();xml=ET.tostring(tree,encoding='utf-8');(output/(name+'.xml')).write_bytes(xml)
@@ -52,6 +64,7 @@ def capture(device,dump,screenshot,tap,start,output):
             actual=png_pixel(raw,2,300);expected=tuple(bytes.fromhex(palettes[family][mode]['background'][1:]))
             if actual!=expected:raise ValueError('Signed native palette differs: '+str((family,mode,page,actual,expected)))
         rows.append({'file':name+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':name+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'family':family,'appearance':mode,'page':page,'nativePageVerified':True,'focusedWindow':focus,'renderedBackgroundVerified':actual is not None,'renderedBackgroundRgb':actual})
+        print('Actual signed native page '+name,flush=True)
     def home():
         device('shell','am','force-stop',PACKAGE);device('shell','am','start','-W','-f','0x10008000','-n',PACKAGE+'/de.dennisguse.opentracks.introduction.IntroductionActivity');await_page('home')
     def back(page):device('shell','input','keyevent','4');await_page(page)

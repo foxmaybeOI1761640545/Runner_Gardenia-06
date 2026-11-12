@@ -8,6 +8,18 @@ from p06_map_evidence import validate_summary
 from p06_map_durability import parse_result
 
 class MapReleaseGateTests(unittest.TestCase):
+    def test_home_viewport_restoration_requires_real_home_and_retains_title_assertion(self):
+        import xml.etree.ElementTree as ET
+        from p06_release_theme_ui import scrolled_home,page_matches
+        tree=ET.fromstring('<hierarchy><node resource-id="com.fox.runner:id/p02_home_scroll"/></hierarchy>')
+        self.assertFalse(page_matches(tree,'home'))
+        self.assertTrue(scrolled_home(tree,'home','mCurrentFocus=P0Activity'))
+        for page,focus in [('home','mCurrentFocus=P06MapActivity'),('home','mCurrentFocus=Application Error'),('history','mCurrentFocus=P0Activity')]:
+            with self.subTest(page=page,focus=focus):self.assertFalse(scrolled_home(tree,page,focus))
+        restored=ET.fromstring('<hierarchy><node resource-id="com.fox.runner:id/p02_home_scroll"/><node resource-id="com.fox.runner:id/p0_title"/></hierarchy>')
+        self.assertFalse(scrolled_home(restored,'home','mCurrentFocus=P0Activity'))
+        self.assertTrue(page_matches(restored,'home'))
+        self.assertFalse(scrolled_home(ET.fromstring('<hierarchy/>'),'home','mCurrentFocus=P0Activity'))
     def valid(self):
         plan,report,source=previous_tests.FinalP05GateTests().valid();plan['versionName']='v0.1.0-p0.6'
         names=['imported-airplane','zoom-pan','recreated-airplane','current-position','live-track','segmented-track','historical-track','invalid-file-retains-map']
