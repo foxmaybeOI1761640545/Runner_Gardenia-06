@@ -29,7 +29,7 @@ def accepted_jobs(api,a):
     run=api.request(api.base+'/actions/runs/'+a['testRunId'])
     if run['head_sha']!=a['source'] or run['head_branch']!=BRANCH or run['event']!='push' or run['conclusion']!='success':raise ValueError('Approved exact-source full test run did not succeed')
     jobs=api.request(api.base+'/actions/runs/'+a['testRunId']+'/jobs?per_page=100&filter=all')['jobs']
-    for name in ('checks','native-window-helper'):
+    for name in ('checks','native-window-helper','map-smoke'):
         if not any(j['name']==name and j['conclusion']=='success' for j in jobs):raise ValueError('Missing complete original/native gate: '+name)
     return jobs
 

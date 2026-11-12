@@ -222,6 +222,57 @@ jobs:
           retention-days: 90
 
 
+  map-smoke:
+    needs: scope
+    if: github.event_name == 'push' && needs.scope.outputs.mode == 'checks'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-read-only: true
+      - name: Prepare real API35 map/GPS subsuite without release keys
+        run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+          ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac
+      - name: Actual touch gestures, offline maps, recording GPS and BLE regressions
+        run: |
+          classes="$(python3 .github/scripts/p06_map_smoke.py classes)"
+          timeout --signal=INT --kill-after=30s 25m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" "-Pandroid.testInstrumentationRunnerArguments.class=$classes"
+      - name: Require raw XML and actual map images for this subsuite only
+        if: always()
+        run: python3 .github/scripts/p06_map_smoke.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P06-map-smoke-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/reports/
+            build/outputs/androidTest-results/
+            build/outputs/**/p0-ui/
+            build/outputs/**/p0-gpx/
+          if-no-files-found: error
+          retention-days: 90
+
+
   native-window-helper:
     needs: scope
     if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && (github.ref == 'refs/heads/feature/p0-6-offline-map' || (github.event_name == 'pull_request' && github.head_ref == 'feature/p0-6-offline-map'))

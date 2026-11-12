@@ -113,7 +113,7 @@ public class P06OfflineMapTest {
                 screen.onActivity(a->{var m=view(a).mapView();assertEquals(zoomBefore[0]+1,m.getModel().mapViewPosition.getZoomLevel());});
                 AtomicReference<org.mapsforge.core.model.LatLong> beforePan=new AtomicReference<>();
                 screen.onActivity(a->beforePan.set(view(a).mapView().getModel().mapViewPosition.getCenter()));
-                onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(new androidx.test.espresso.action.GeneralSwipeAction(androidx.test.espresso.action.Swipe.SLOW,
+                onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(new androidx.test.espresso.action.GeneralSwipeAction(androidx.test.espresso.action.Swipe.FAST,
                         v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.45f,xy[1]+v.getHeight()*.5f};},
                         v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.55f,xy[1]+v.getHeight()*.5f};},androidx.test.espresso.action.Press.FINGER));
                 SystemClock.sleep(300);screen.onActivity(a->assertNotEquals("Real touch drag moves the map",beforePan.get(),view(a).mapView().getModel().mapViewPosition.getCenter()));
