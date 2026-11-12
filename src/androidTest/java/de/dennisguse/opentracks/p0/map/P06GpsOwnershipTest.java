@@ -60,7 +60,9 @@ public class P06GpsOwnershipTest {
         main(service::endCurrentTrack);assertFalse(service.isRecording());assertTrue(service.areSensorsStarted());
         relocatedFix();SystemClock.sleep(50);relocatedFix();
         var old=new de.dennisguse.opentracks.data.ContentProviderUtils(context).getTrack(id).statistics().totalDistance().toM();
-        main(()->service.resumeTrack(id));assertEquals(id,service.getRecordingStatus().trackId());relocatedFix();
+        main(()->service.resumeTrack(id));assertEquals(id,service.getRecordingStatus().trackId());
+        main(()->assertFalse("Paused GPS preview must not leak into a resumed BLE-only update",service.getTrackPointCreator().getSensorManager().getSensorDataSet(service.getTrackPointCreator().getNow()).position().data().hasLocation()));
+        relocatedFix();
         java.util.concurrent.atomic.AtomicReference<de.dennisguse.opentracks.data.models.Position> last=new java.util.concurrent.atomic.AtomicReference<>();
         new WorkoutRepository(context).forEachPoint(id,p->{if(p.position().hasLocation())last.set(p.position());});
         assertNotNull(last.get());assertEquals("First resumed fix must not be rejected against the pre-pause anchor",1.31,last.get().latitude(),.000001);

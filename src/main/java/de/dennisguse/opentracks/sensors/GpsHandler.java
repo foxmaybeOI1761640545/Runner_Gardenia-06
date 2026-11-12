@@ -33,6 +33,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     /** A manual recording boundary can occur while a visible map keeps GPS connected. */
     public void beginRecordingSegment() {
+        resetAggregated(); // An idle preview must not become GPS data on a BLE-only update.
         motionFilter.reset();
         segmentAfterReconnect = false;
         recordingFixSeen = false;
