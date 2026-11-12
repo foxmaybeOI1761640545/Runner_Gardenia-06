@@ -28,3 +28,13 @@ class MapScopeTest(unittest.TestCase):
             self.assertEqual(added,{'de.dennisguse.opentracks.p0.map.P06MapActivity'})
             self.assertEqual(p06_offline.original.COMPONENTS['service'],original['service'])
         finally:p06_offline.original.COMPONENTS=original
+    def test_map_runtime_keeps_original_dependencies_and_only_adds_pinned_engine(self):
+        old="implementation 'existing:library:1.0'\n"
+        added="".join("implementation '"+d+"'\n" for d in sorted(p06_offline.MAP_DEPENDENCIES))
+        p06_offline.audit_runtime(old+added,old,{'Map.java':'new TileRendererLayer()'})
+        for change in [added.replace('0.25.0','+'),added+"implementation 'second:map:1.0'\n",'']:
+            with self.assertRaises(ValueError):p06_offline.audit_runtime(old+change,old,{'Map.java':'class Map {}'})
+    def test_online_map_layer_or_client_cannot_pass_phase_offline_audit(self):
+        build="".join("implementation '"+d+"'\n" for d in sorted(p06_offline.MAP_DEPENDENCIES))
+        for source in ['new TileDownloadLayer()','import java.net.URL;','new WebView()']:
+            with self.assertRaises(ValueError):p06_offline.audit_runtime(build,'',{'Map.java':source})
