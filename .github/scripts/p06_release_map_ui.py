@@ -86,7 +86,17 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
         filename='p06-signed-map-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree);xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
         rows.append({'file':filename+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':filename+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'focusedWindow':focus,'pixels':pixels})
     def home():
-        device('shell','am','force-stop',PACKAGE);start();time.sleep(1)
+        # The inherited upgrade smoke ends in a historical-detail/share task.
+        # Use the same clear-task launcher as signed theme capture, then wait
+        # for the actual home window before searching its scrollable route card.
+        device('shell','am','force-stop',PACKAGE)
+        device('shell','am','start','-W','-f','0x10008000','-n',PACKAGE+'/de.dennisguse.opentracks.introduction.IntroductionActivity')
+        until=time.monotonic()+15
+        while time.monotonic()<until:
+            tree=dump();focus=device('shell','dumpsys','window')
+            if 'P0Activity' in next((line for line in focus.splitlines() if 'mCurrentFocus=' in line),'') and any(n.get('resource-id')==PACKAGE+':id/p0_title' for n in tree.iter('node')):return
+            time.sleep(.3)
+        raise ValueError('Signed map runtime could not reach the actual home window')
     device('shell','mkdir','-p','/sdcard/Download');device('push','src/androidTest/assets/p06/gardenia-synthetic.map','/sdcard/Download/Gardenia-synthetic.map')
     bad=output/'Gardenia-broken.map';bad.write_bytes(b'unsupported offline-map fixture');device('push',bad,'/sdcard/Download/Gardenia-broken.map')
     device('shell','cmd','connectivity','airplane-mode','enable')

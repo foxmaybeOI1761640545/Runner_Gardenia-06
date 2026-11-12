@@ -261,6 +261,10 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
     finally:
         try:screenshot('last-native-screen')
         except (OSError,subprocess.SubprocessError):pass
+        try:
+            (output/'last-native-window.xml').write_bytes(ET.tostring(dump(),encoding='utf-8'))
+            (output/'last-native-focus.txt').write_text(device('shell','dumpsys','window',check=False,timeout=15))
+        except (OSError,subprocess.SubprocessError,ValueError):pass
         try:(output/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15))
         except (OSError,subprocess.TimeoutExpired):pass
         if process is not None and process.poll() is None:
