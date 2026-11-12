@@ -11,14 +11,14 @@
   "rawJUnitVerified": true,
   "gpsPngs": 12,
   "gpsVisualReviewPassed": true,
-  "source": "6156f2cbfa2c5fa3fdca4ddd6372032ab79ad74d",
+  "source": "b8e59ac65d3c143eba8bf5a5dc9fbbd586d111e7",
   "mainTree": "3b7b266985667a8b057c5353535af56929b79a9d",
-  "testRunId": "43188522568",
+  "testRunId": "43196923473",
   "runAttempt": 1,
-  "reportsArtifactId": 13930583661,
-  "reportsArtifactSha256": "dc49ef7949d0397f4cc267e4883070f7f03f80bec30c8b921eef89848fc8fa14",
-  "visualArtifactId": 13930568791,
-  "visualArtifactSha256": "56cf05cb08b2ed1d7e620e004529f2341c3f319386d12cd9ae0d640674c1fd02",
+  "reportsArtifactId": 13935321725,
+  "reportsArtifactSha256": "eed142856977d95419754ba69742b2d45cd757dca72b7bd9e76503bc4981a830",
+  "visualArtifactId": 13935336754,
+  "visualArtifactSha256": "6c2c53e1492d1d4f5869851ecfc74bd9a413e99a09ac30f5515a9c88efe3cbf1",
   "contactSheetsReviewed": 56,
   "totalPngsReviewed": 437,
   "originalP0Pngs": 20,
@@ -33,5 +33,5 @@
   "mapVisualReviewPassed": true,
   "mapProcessRestartPassed": true,
   "mapProcessPngsReviewed": 1,
-  "reviewedAt": "2026-11-12T09:51:15.123349+00:00"
+  "reviewedAt": "2026-11-12T20:35:51.314597+08:00"
 }
