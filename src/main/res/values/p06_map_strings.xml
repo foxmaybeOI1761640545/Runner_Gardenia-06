@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p06_offline_map">Offline map</string>
+    <string name="p06_import_map">Import .map</string>
+    <string name="p06_manage_maps">Maps</string>
+    <string name="p06_my_position">My position</string>
+    <string name="p06_fit_track">Fit track</string>
+    <string name="p06_map_empty">Import a local Mapsforge .map file to display an offline map. Your tracks stay on this device.</string>
+    <string name="p06_map_loading">Loading local map…</string>
+    <string name="p06_map_ready">%1$s · local map</string>
+    <string name="p06_map_failed">Cannot import or open this map. Choose a supported, complete Mapsforge .map file. Your previous map is retained.</string>
+    <string name="p06_map_waiting_gps">Waiting for a fresh GPS position. Viewing the map does not start a workout.</string>
+    <string name="p06_map_location_denied">Precise location permission is required to show your position. The local map remains available.</string>
+    <string name="p06_map_choose">Choose a local map</string>
+    <string name="p06_map_delete">Delete local copy</string>
+    <string name="p06_map_delete_confirm">Delete “%1$s” from this app? The original file and workout history are retained.</string>
+    <string name="p06_map_summary">Import and manage local maps; view current and recorded tracks offline</string>
+    <string name="p06_map_credit">Mapsforge 0.25.0 · LGPLv3 with upstream linking exception · map data supplied by you</string>
+    <string name="p06_map_licenses">Map library licences</string>
+    <string name="p06_map_route_failed">Recorded track could not be read. Try reopening the map.</string>
+</resources>

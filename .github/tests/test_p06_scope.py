@@ -1,0 +1,30 @@
+import importlib.util,json,sys,tempfile,unittest
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+import check_p06_source as scope
+import p06_pipeline
+import p06_offline
+
+class MapScopeTest(unittest.TestCase):
+    def test_map_and_audited_integration_are_allowed(self):
+        scope.verify_changes([('A',scope.JAVA+'p0/map/P06MapActivity.java'),('M',scope.JAVA+'services/TrackRecordingService.java')])
+    def test_ble_database_gpx_and_old_phase_workflows_stay_frozen(self):
+        for path in [scope.JAVA+'sensors/HeartRateHandler.java',scope.JAVA+'data/TrackPointsColumns.java',scope.JAVA+'p0/export/P0GpxFiles.java','.github/workflows/p051-gps-motion-quality.yml']:
+            with self.assertRaises(ValueError):scope.verify_changes([('M',path)])
+    def test_deletion_and_empty_diff_fail_closed(self):
+        for rows in [[],[('D',scope.JAVA+'p0/map/P06MapActivity.java')]]:
+            with self.assertRaises(ValueError):scope.verify_changes(rows)
+    def test_exact_p06_pr_route(self):
+        env={'GITHUB_REPOSITORY':p06_pipeline.REPO,'GITHUB_EVENT_NAME':'pull_request','GITHUB_HEAD_REF':p06_pipeline.BRANCH,'GITHUB_BASE_REF':'feature/p0-5-1-gps-motion-quality'}
+        p06_pipeline.trusted(env)
+        with self.assertRaises(ValueError):p06_pipeline.trusted({**env,'GITHUB_BASE_REF':'main'})
+    def test_final_stage_requires_every_regression(self):
+        with self.assertRaises(ValueError):p06_pipeline.configuration({'stage':5,'fullRegression':False,'classes':['test.Map'],'signed':False})
+    def test_phase_specific_offline_allowlist_keeps_original_private(self):
+        original=p06_offline.original.COMPONENTS
+        try:
+            p06_offline.enable_map_activity()
+            added=p06_offline.original.COMPONENTS['activity']-original['activity']
+            self.assertEqual(added,{'de.dennisguse.opentracks.p0.map.P06MapActivity'})
+            self.assertEqual(p06_offline.original.COMPONENTS['service'],original['service'])
+        finally:p06_offline.original.COMPONENTS=original

@@ -1,9 +1,9 @@
 {
   "schema": 1,
-  "codeHighWater": 6777,
+  "codeHighWater": 6778,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
-    "v0.1.0-p0.": 5,
+    "v0.1.0-p0.": 6,
     "v0.1.0-p0.5.": 1
   },
   "allocations": [
@@ -115,6 +115,15 @@
       "classification": "reserved-p051-test",
       "tag": "test-p0-v0.1.0-p0.5.1",
       "sourceEvidence": "P0.5.1 GPS motion-quality reservation after the accepted P0.5 release; final source is bound only by the exact full-test gate, immutable annotated tag and fixed-key APK."
+    },
+    {
+      "versionName": "v0.1.0-p0.6",
+      "versionCode": 6778,
+      "commit": null,
+      "allocationBasisCommit": "ba00559af1af3d48bc3ecfde811d3e8d062e2f68",
+      "classification": "reserved-p06-test",
+      "tag": "test-p0-v0.1.0-p0.6",
+      "sourceEvidence": "Allocated after checking all 9 remote published build-info assets: maximum 6777 on P0.5.1. Final source binds only to tested fixed-key APK and annotated tag."
     }
   ]
 }
