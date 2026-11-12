@@ -256,7 +256,7 @@ jobs:
       - name: Actual touch gestures, offline maps, recording GPS and BLE regressions
         run: |
           classes="$(python3 .github/scripts/p06_map_smoke.py classes)"
-          timeout --signal=INT --kill-after=30s 25m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" "-Pandroid.testInstrumentationRunnerArguments.class=$classes"
+          timeout --signal=INT --kill-after=30s 25m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000 "-Pandroid.testInstrumentationRunnerArguments.class=$classes"
       - name: Require raw XML and actual map images for this subsuite only
         if: always()
         run: python3 .github/scripts/p06_map_smoke.py
