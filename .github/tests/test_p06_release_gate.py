@@ -45,3 +45,23 @@ class MapReleaseGateTests(unittest.TestCase):
         for kind,(first,second) in rows.items():
             raw=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',2,2,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(bytes([kind]+first+[kind]+second)))+chunk(b'IEND',b'')
             with self.subTest(filter=kind):self.assertEqual([(10,20,30),(40,50,60),(70,80,90),(100,110,120)],png_pixels(raw,[(0,0),(1,0),(0,1),(1,1)]))
+
+    def test_signed_history_requires_real_teal_route_not_only_local_basemap(self):
+        import struct,zlib,binascii,xml.etree.ElementTree as ET
+        from p06_release_map_ui import verify_track_pixels
+        def chunk(kind,data):return struct.pack('>I',len(data))+kind+data+struct.pack('>I',binascii.crc32(kind+data)&0xffffffff)
+        def picture(line):
+            rows=[]
+            for y in range(80):
+                pixels=[]
+                for x in range(24):
+                    color=(210,240,180) if x<18 else (170,220,240)
+                    if y==5:color=(100,100,100)
+                    if line and 10<=x<=14 and (12<=y<=65 if line=='route' else 35<=y<=43):color=(0,127,134)
+                    pixels.extend(color)
+                rows.append(bytes([0]+pixels))
+            return b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',24,80,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(b''.join(rows)))+chunk(b'IEND',b'')
+        tree=ET.fromstring('<hierarchy><node resource-id="com.fox.runner:id/p06_map_container" bounds="[0,0][24,80]"/></hierarchy>')
+        for invalid in [None,'point']:
+            with self.subTest(scene=invalid),self.assertRaises(ValueError):verify_track_pixels(picture(invalid),tree,32)
+        self.assertGreaterEqual(verify_track_pixels(picture('route'),tree,32)['trackSpanPixels'],32)

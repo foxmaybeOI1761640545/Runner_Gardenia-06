@@ -49,7 +49,20 @@ def verify_pixels(raw,tree=None):
     if green<3:raise ValueError('Actual synthetic park has not rendered in native offline canvas')
     return {'distributedParkPixels':green,'sampleColors':len(set(colors))}
 
-def capture_runtime(device,dump,screenshot,tap,start,output):
+def verify_track_pixels(raw,tree,min_span=0):
+    node=next((n for n in tree.iter('node') if n.get('resource-id')==PACKAGE+':id/p06_map_container'),None)
+    bounds=[] if node is None else list(map(int,re.findall(r'\d+',node.get('bounds',''))))
+    if len(bounds)!=4:raise ValueError('Actual route canvas bounds missing')
+    left,top,right,bottom=bounds;center=(left+right)//2
+    coordinates=[(x,y) for x in range(max(left,center-8),min(right,center+9),2) for y in range(top+2,bottom-2,3)]
+    colors=png_pixels(raw,coordinates)
+    hits=[y for (_,y),(r,g,b) in zip(coordinates,colors) if r<30 and 100<=g<=155 and 110<=b<=165 and abs(g-b)<25]
+    span=max(hits)-min(hits) if hits else 0
+    if len(hits)<3 or span<min_span:raise ValueError('Actual selected workout track has not rendered in native offline canvas')
+    return {'trackPixels':len(hits),'trackSpanPixels':span}
+
+
+def capture_runtime(device,dump,screenshot,tap,start,output,history_id,history_title):
     info=json.loads(Path('dist/build-info.json').read_text());rows=[]
     def click_node(node):
         bounds=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
@@ -80,10 +93,12 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
             if download is not None:click_node(download);time.sleep(.5);continue
             time.sleep(.3)
         raise ValueError('Real SAF picker did not offer local fixture '+filename)
-    def photo(name):
+    def photo(name,track=False):
         tree=dump();windows=device('shell','dumpsys','window');focus=next((l.strip() for l in windows.splitlines() if 'mCurrentFocus=' in l),'')
         if 'P06MapActivity' not in focus:raise ValueError('Signed native map is not the focused page')
-        filename='p06-signed-map-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree);xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
+        filename='p06-signed-map-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree)
+        if track:pixels.update(verify_track_pixels(raw,tree,32 if name=='history-restarted' else 0))
+        xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
         rows.append({'file':filename+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':filename+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'focusedWindow':focus,'pixels':pixels})
     def home():
         # The inherited upgrade smoke ends in a historical-detail/share task.
@@ -103,8 +118,14 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
     if device('shell','settings','get','global','airplane_mode_on')!='1':raise ValueError('Actual flight mode is required')
     home();tap('p04_route');picker('Gardenia-synthetic.map');wait_map();photo('imported-airplane')
     # Persisted copy must survive losing the external document and a new process.
-    device('shell','rm','/sdcard/Download/Gardenia-synthetic.map');home();tap('p04_route');wait_map();photo('history-restarted')
-    device('shell','input','keyevent','4');tap('p0_start');
+    device('shell','rm','/sdcard/Download/Gardenia-synthetic.map');home();tap('p0_all_history');text(history_title)
+    until=time.monotonic()+15
+    while not any(('ID '+str(history_id)) in n.get('text','') for n in dump().iter('node')):
+        if time.monotonic()>until:raise ValueError('Native history detail did not open the recorded workout ID')
+        time.sleep(.3)
+    text('More options',description=True);text('Offline map');wait_map();tap('p06_fit_track');time.sleep(1);photo('history-restarted',track=True)
+    # A historical map must be entered through History, not an idle home session.
+    home();tap('p0_start');
     for _ in range(4):device('emu','geo','fix','103.8','1.3','12','8','4');time.sleep(1)
     # Feed the ordinary emulator GNSS driver while native UI commands run.
     stop=threading.Event();errors=[]
@@ -115,15 +136,15 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
         except Exception as failure:errors.append(str(failure))
     thread=threading.Thread(target=feed);thread.start()
     try:
-        time.sleep(3);tap('p04_route');wait_map();tap('p06_my_position');time.sleep(2);photo('live-current-gps')
+        time.sleep(3);tap('p04_route');wait_map();tap('p06_my_position');time.sleep(2);photo('live-current-gps',track=True)
         picker('Gardenia-broken.map');time.sleep(1)
         if not any('Cannot import or open this map' in n.get('text','') for n in dump().iter('node')):raise ValueError('Signed APK did not reject corrupt map')
-        photo('invalid-retains-map');device('shell','input','keyevent','4');tap('p0_finish');time.sleep(1)
+        photo('invalid-retains-map',track=True);device('shell','input','keyevent','4');tap('p0_finish');time.sleep(1)
     finally:stop.set();thread.join(timeout=10)
     if thread.is_alive() or errors:raise ValueError('Ordinary emulator GNSS feeder failed: '+str(errors))
     # The extra workout above uses normal UI/driver commands. The inherited
     # native batch capture next snapshots all retained and newly recorded rows.
-    proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'airplaneMode':True,'safImport':True,'originalDocumentRemoved':True,'newProcessReload':True,'liveGpsAndTrack':True,'historyTrack':True,'invalidRetainsMap':True,'screenshots':rows}
+    proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'airplaneMode':True,'safImport':True,'originalDocumentRemoved':True,'newProcessReload':True,'liveGpsAndTrack':True,'historyTrack':True,'historyEntryThroughNativeUi':True,'historicalWorkoutId':history_id,'invalidRetainsMap':True,'screenshots':rows}
     if len(rows)!=4:raise ValueError('Signed map runtime matrix incomplete')
     archive=Path('dist/offline-map-screenshots.zip')
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
@@ -132,12 +153,16 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
 
 def verify_proof(folder,info):
     proof=json.loads((folder/'offline-map-smoke.json').read_text());raw=(folder/'offline-map-screenshots.zip').read_bytes()
-    if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or any(proof.get(k) is not True for k in ('passed','airplaneMode','safImport','originalDocumentRemoved','newProcessReload','liveGpsAndTrack','historyTrack','invalidRetainsMap')) or len(proof.get('screenshots',[]))!=4 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256']:raise ValueError('Exact signed map runtime/airplane/restart evidence missing')
+    if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or any(proof.get(k) is not True for k in ('passed','airplaneMode','safImport','originalDocumentRemoved','newProcessReload','liveGpsAndTrack','historyTrack','historyEntryThroughNativeUi','invalidRetainsMap')) or len(proof.get('screenshots',[]))!=4 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256']:raise ValueError('Exact signed map runtime/airplane/restart evidence missing')
+    if not isinstance(proof.get('historicalWorkoutId'),int) or proof['historicalWorkoutId']<=0:raise ValueError('Selected native history workout ID missing')
+    expected={'p06-signed-map-'+name+'.png' for name in ('imported-airplane','history-restarted','live-current-gps','invalid-retains-map')}
+    if {row.get('file') for row in proof['screenshots']}!=expected:raise ValueError('Signed map runtime scenes differ from required coverage')
     import io
     with zipfile.ZipFile(io.BytesIO(raw)) as z:
         for row in proof['screenshots']:
             png=z.read(row['file']);xml=z.read(row['nativeWindowFile'])
             if hashlib.sha256(png).hexdigest()!=row['sha256'] or hashlib.sha256(xml).hexdigest()!=row['nativeWindowSha256'] or 'P06MapActivity' not in row['focusedWindow']:raise ValueError('Signed map focused image/XML changed')
             if not any(n.get('resource-id')==PACKAGE+':id/p06_map_container' for n in ET.fromstring(xml).iter('node')):raise ValueError('Native map page absent')
-            verify_pixels(png,ET.fromstring(xml))
+            tree=ET.fromstring(xml);verify_pixels(png,tree)
+            if any(name in row['file'] for name in ('history-restarted','live-current-gps','invalid-retains-map')):verify_track_pixels(png,tree,32 if 'history-restarted' in row['file'] else 0)
     return proof

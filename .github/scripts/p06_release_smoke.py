@@ -254,7 +254,10 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
             if baseline_spec[1]==6777:
                 from p06_release_map_ui import capture_runtime
-                capture_runtime(device,dump,screenshot,tap,start,output)
+                with sqlite3.connect(final) as connection:
+                    workout_name=connection.execute('SELECT name FROM tracks WHERE _id=?',(workout,)).fetchone()[0]
+                if not isinstance(workout_name,str) or not workout_name:raise ValueError('Recorded history workout name missing')
+                capture_runtime(device,dump,screenshot,tap,start,output,workout,workout_name)
             if post_verify is not None:post_verify(device,dump,screenshot,tap,start,output)
             proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'unitAndRateUpgradeRetained':True,'themeUpgradeRetained':True,'nativeRateSwitchKeepsRecording':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
