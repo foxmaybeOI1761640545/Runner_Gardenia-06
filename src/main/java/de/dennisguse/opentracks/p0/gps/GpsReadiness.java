@@ -41,7 +41,8 @@ public final class GpsReadiness {
         if (previous != null && fix.elapsedNanos() <= previous.elapsedNanos()) return false;
         if (previous != null) {
             long gap = fix.elapsedNanos() - previous.elapsedNanos();
-            double allowed = Math.max(15, fix.accuracyMeters() + previous.accuracyMeters())
+            double accuracyAllowance = Math.min(15, fix.accuracyMeters() + previous.accuracyMeters());
+            double allowed = Math.max(8, accuracyAllowance)
                     + policy.maxSpeedMetersPerSecond() * (gap / 1_000_000_000.0);
             if (gap > policy.maxAgeNanos() || distance(previous, fix) > allowed) reset();
         }

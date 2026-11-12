@@ -1,0 +1,515 @@
+name: P0.5.1 GPS motion quality
+on:
+  push:
+    branches: [feature/p0-5-1-gps-motion-quality]
+    paths-ignore: ['docs/**', 'AGENTS.md']
+  pull_request:
+    branches: [feature/p0-5-dashboard-settings-history]
+    paths-ignore: ['docs/**', 'AGENTS.md']
+permissions:
+  contents: read
+concurrency:
+  group: p051-gps-motion-quality-${{ github.event_name }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  scope:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && (github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality' || (github.event_name == 'pull_request' && github.head_ref == 'feature/p0-5-1-gps-motion-quality'))
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      mode: ${{ steps.route.outputs.mode }}
+      source: ${{ steps.route.outputs.source }}
+      test-run: ${{ steps.route.outputs.test-run }}
+      reports-artifact: ${{ steps.route.outputs.reports-artifact }}
+      formal-artifact: ${{ steps.route.outputs.formal-artifact }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - id: route
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_release.py
+  checks:
+    needs: scope
+    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && (github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality' || (github.event_name == 'pull_request' && github.head_ref == 'feature/p0-5-1-gps-motion-quality'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sudo timedatectl set-timezone Asia/Singapore
+          test "$(timedatectl show --property=Timezone --value)" = Asia/Singapore
+      - name: Verify exact branch, phase, baseline and protected historical refs
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_pipeline.py prepare
+      - name: Execute complete pipeline helper regression and retain real counts
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_pipeline.py helpers
+      - name: Verify current native source scope and shared binding contracts
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/check_p051_source.py
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - name: Install only verification tools in Phase 0; never rebuild P0.4
+        if: steps.plan.outputs.stage == '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sdkmanager 'build-tools;36.0.0'
+      - name: Verify public P0.4 signature, checksum, manifest and immutable source
+        if: steps.plan.outputs.stage == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p05_baseline_apk.py
+      - name: Install actual development toolchain for activated phases only
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        if: steps.plan.outputs.stage != '0'
+        with:
+          cache-read-only: true
+      - name: Enable KVM for real API35 native tests
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - name: Debug build, lint, all JVM tests and instrumentation compilation
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug compileReproducibleDebugAndroidTestJavaWithJavac lintReproducibleDebug testReproducibleDebugUnitTest
+      - name: Final merged Release and packaged Debug offline audit
+        if: steps.plan.outputs.stage == '5'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          ./gradlew --no-daemon --no-configuration-cache processReproducibleReleaseManifest
+          python3 .github/scripts/verify_p0_offline.py
+      - name: Actual API35 stage tests and original regressions
+        if: steps.plan.outputs.stage != '0'
+        env:
+          TEST_CLASSES: ${{ steps.plan.outputs.classes }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          args=()
+          if [[ -n "$TEST_CLASSES" ]]; then args+=("-Pandroid.testInstrumentationRunnerArguments.class=$TEST_CLASSES"); fi
+          timeout --signal=INT --kill-after=30s 45m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000 "${args[@]}"
+      - name: Final actual generated GPX 1.1 Schema verification
+        if: always() && (steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5')
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/verify_p0_gpx.py
+      - name: Database and metric preferences survive a genuinely new process
+        if: steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5'
+        env:
+          P05_METRIC_DURABILITY: 'true'
+          P05_BATCH_DURABILITY: ${{ steps.plan.outputs.stage == '4' || steps.plan.outputs.stage == '5' }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
+          python3 .github/scripts/p0_durability.py
+      - name: Verify Debug identity without accessing release keys
+        if: steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/verify_debug_apk.py
+      - name: Verify original state matrix and new P0.5 large-font native matrix
+        if: always() && steps.plan.outputs.stage != '0'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          p05_collect_failed=0
+          python3 .github/scripts/collect_p04_ui.py || p05_collect_failed=1
+          python3 .github/scripts/collect_p05_ui.py || p05_collect_failed=1
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 4 ]]; then python3 .github/scripts/collect_p05_history.py || p05_collect_failed=1; fi
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 3 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_settings(os.environ["GITHUB_SHA"])' || p05_collect_failed=1; fi
+          if [[ '${{ steps.plan.outputs.stage }}' -ge 2 ]]; then python3 -c 'import sys,os; sys.path.insert(0,".github/scripts"); import collect_p05_ui; collect_p05_ui.collect_metrics(os.environ["GITHUB_SHA"])' || p05_collect_failed=1; fi
+          exit "$p05_collect_failed"
+      - name: Require all original heart-rate UI regression evidence
+        if: always() && steps.plan.outputs.stage == '5'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/collect_heart_rate_ui.py
+      - name: Require actual nonzero tests, separate failures/errors/skips and final evidence
+        if: always() && steps.plan.outcome == 'success'
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_pipeline.py gate
+      - name: Recheck every original remote branch and tag
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_pipeline.py refs
+      - name: Preserve exact phase test reports, screenshots and receipts on every outcome
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-reports-${{ github.run_id }}
+          path: |
+            release-plan.json
+            build/reports/
+            build/test-results/
+            build/outputs/androidTest-results/
+            build/outputs/**/p0-ui/
+            build/outputs/**/p05-share/
+            build/outputs/**/p0-gpx/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve actual P0.5 Debug APK for review
+        if: steps.plan.outputs.stage != '0' && success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-Debug-${{ github.run_id }}
+          path: build/outputs/apk/reproducible/debug/*.apk
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve compact native visual evidence for actual review
+        if: always() && steps.plan.outputs.stage != '0'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-visual-${{ github.run_id }}
+          path: |
+            build/reports/p051-gps-ui/
+            build/reports/p05-visual/
+            build/reports/p05-metrics/
+            build/reports/p05-settings/
+            build/reports/p05-history/
+            build/reports/p05-share/
+            build/reports/p04-visual/
+          if-no-files-found: error
+          retention-days: 90
+
+
+  native-window-helper:
+    needs: scope
+    if: needs.scope.outputs.mode == 'checks' && github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && (github.ref == 'refs/heads/feature/p0-5-1-gps-motion-quality' || (github.event_name == 'pull_request' && github.head_ref == 'feature/p0-5-1-gps-motion-quality'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - name: API35 real native window helper self-test
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+          python3 .github/scripts/check_native_window.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P051-native-window-helper-${{ github.run_id }}
+          path: build/reports/native-window-helper
+          if-no-files-found: error
+          retention-days: 90
+
+
+  review-transfer:
+    needs: [scope, checks, native-window-helper]
+    if: always() && github.event_name == 'push' && needs.scope.outputs.mode == 'checks' && (needs.checks.result == 'success' || needs.checks.result == 'failure')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: P051-reports-${{ github.run_id }}
+          path: evidence
+      - id: transfer
+        name: Preserve source-bound review transport without updating Git refs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p051_review_transfer.py
+      - name: Review evidence index ${{ steps.transfer.outputs.index }}
+        run: test -s review-transfer.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-review-transfer-${{ github.run_id }}
+          path: review-transfer.json
+          if-no-files-found: error
+          retention-days: 90
+
+
+  signed:
+    needs: scope
+    if: needs.scope.outputs.mode == 'sign'
+    environment: android-release
+    permissions:
+      contents: read
+      actions: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Bind actual reviewed source and full test run to signing activation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py context
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.scope.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Download and verify immutable full test evidence, without altering workflow identity
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py inputs
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-disabled: true
+      - name: Reuse a same-run accepted APK or preserved signed candidate on retry
+        id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py existing
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: steps.existing.outputs.formal-id != '' || steps.existing.outputs.candidate-id != ''
+        with:
+          artifact-ids: ${{ steps.existing.outputs.formal-id || steps.existing.outputs.candidate-id }}
+          path: dist
+          merge-multiple: true
+      - name: Build reviewed source with original fixed key, shrink, align and verify
+        if: steps.existing.outputs.formal-id == '' && steps.existing.outputs.candidate-id == ''
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_SIGNING_CERT_SHA256: ${{ vars.ANDROID_SIGNING_CERT_SHA256 }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          set -euo pipefail
+          umask 077
+          export ANDROID_KEYSTORE_FILE="$RUNNER_TEMP/runner-gardenia-p0-signing/release.jks"
+          mkdir -p "$(dirname "$ANDROID_KEYSTORE_FILE")"
+          trap 'rm -rf "$RUNNER_TEMP/runner-gardenia-p0-signing"; rm -f "$RUNNER_TEMP/p051-release-gradle.log"' EXIT
+          python3 .github/scripts/restore_keystore.py
+          unset ANDROID_KEYSTORE_BASE64
+          ./gradlew --no-daemon --no-configuration-cache --no-build-cache clean assembleReproducibleRelease | tee "$RUNNER_TEMP/p051-release-gradle.log"
+          python3 .github/scripts/p051_signing.py verify
+      - name: Always remove temporary fixed-key files
+        if: always()
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          rm -rf "$RUNNER_TEMP/runner-gardenia-p0-signing"
+          rm -f "$RUNNER_TEMP/p051-release-gradle.log"
+      - name: Preserve exact signed bytes before emulator acceptance, so retries never sign again
+        if: steps.existing.outputs.formal-id == '' && steps.existing.outputs.candidate-id == ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: RunnerGardenia-P051-Candidate-${{ github.run_id }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Download preserved P0.4 for actual retained-data upgrade
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          mkdir -p "$RUNNER_TEMP/p0-baseline"
+          mkdir -p "$RUNNER_TEMP/p051-baseline"
+          gh release download test-p0-v0.1.0-p0.5 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p051-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
+          gh release download test-p0-v0.1.0-p0.4 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p0-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
+      - name: API35 signed install, real GPS inputs, recording recovery, upgrade and eight native schemes
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          P0_BASELINE_DIR: ${{ runner.temp }}/p0-baseline
+          P051_BASELINE_DIR: ${{ runner.temp }}/p051-baseline
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+          python3 .github/scripts/p051_release_smoke.py
+      - name: Freeze all release payloads only after actual install, upgrade and native acceptance
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py finalize
+      - name: Verify accepted fixed-key APK, original full reports, native focused pages and upgrade
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py bundle
+      - name: Preserve formal accepted binary; publication waits for signed screenshot review
+        if: steps.existing.outputs.formal-id == ''
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: RunnerGardenia-P051-Release-${{ github.run_id }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve original optimization, install and UI diagnostic records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-Release-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/reports/
+            build/outputs/mapping/reproducibleRelease/
+          if-no-files-found: warn
+          retention-days: 90
+
+
+  signed-review-transfer:
+    needs: [scope, signed]
+    if: github.event_name == 'push' && needs.scope.outputs.mode == 'sign'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: RunnerGardenia-P051-Release-${{ github.run_id }}
+          path: evidence
+      - id: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p051_review_transfer.py --signed
+      - name: Signed review evidence index ${{ steps.transfer.outputs.index }}
+        run: test -s review-transfer.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P051-signed-review-transfer-${{ github.run_id }}
+          path: review-transfer.json
+          if-no-files-found: error
+          retention-days: 90
+
+  publish:
+    needs: scope
+    if: needs.scope.outputs.mode == 'publish'
+    permissions:
+      contents: write
+      actions: read
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Bind accepted APK and signed native visual review to publication
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_signing.py context
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.scope.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          sdkmanager 'build-tools;36.0.0'
+      - name: Verify immutable APK and all draft assets, publish unique pre-release, re-download anonymously
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
+          python3 .github/scripts/p051_publication.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P051-publication-proof-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            dist/publication.json
+            dist/test-summary.json
+            dist/RELEASE_NOTES.md
+          if-no-files-found: warn
+          retention-days: 90

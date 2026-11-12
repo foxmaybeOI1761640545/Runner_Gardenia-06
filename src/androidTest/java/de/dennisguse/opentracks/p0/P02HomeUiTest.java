@@ -140,12 +140,22 @@ public class P02HomeUiTest {
         return new File(configured!=null?new File(configured):new File(context.getExternalMediaDirs()[0],"additional_test_output"),"p0-ui");
     }
     private void fix(int second,double latitude) {
-        main(()->{
-            core.getTrackPointCreator().setClock(base.plusSeconds(second).toString());
-            Location f=new Location("gps");f.setLatitude(latitude);f.setLongitude(103.8);f.setAccuracy(2);f.setSpeed(3);
-            f.setTime(base.plusSeconds(second).toEpochMilli());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
-            core.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);
-        });
+        // Feed an actual one-Hz moving sequence through startup hysteresis;
+        // retain every original UI assertion instead of bypassing the filter.
+        var previous=core.getGpsPreview();
+        double start=previous!=null&&previous.hasLocation()?previous.latitude():latitude-3.0/111_320;
+        int steps=Math.max(1,(int)Math.ceil(Math.abs(latitude-start)*111_320/3.0));
+        for(int i=1;i<=steps;i++) {
+            int tick=second-steps+i;
+            double coordinate=start+(latitude-start)*i/steps;
+            SystemClock.sleep(1000);
+            main(()->{
+                core.getTrackPointCreator().setClock(base.plusSeconds(tick).toString());
+                Location f=new Location("gps");f.setLatitude(coordinate);f.setLongitude(103.8);f.setAccuracy(2);f.setSpeed(3);
+                f.setTime(base.plusSeconds(tick).toEpochMilli());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+                core.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);
+            });
+        }
     }
     @Test public void homeStateMatrixUsesRealRenderingInBothThemesAndScreenSizes()throws Exception {
         core=((TrackRecordingService.Binder)rule.bindService(new Intent(context,TrackRecordingService.class))).getService();

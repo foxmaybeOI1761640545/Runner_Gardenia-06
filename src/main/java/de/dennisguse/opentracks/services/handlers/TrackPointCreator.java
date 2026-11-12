@@ -35,6 +35,7 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
     @NonNull
     private Clock clock = new MonotonicClock();
     private final SensorManager sensorManager;
+    private boolean automaticSegmentStartRequested;
 
     public TrackPointCreator(Callback service) {
         this.service = service;
@@ -55,7 +56,8 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         sensorManager.reset();
     }
 
-    public void stop() {
+    public synchronized void stop() {
+        automaticSegmentStartRequested = false;
         sensorManager.stop();
         this.context = null;
     }
@@ -65,9 +67,18 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
      */
     public synchronized void onChange() {
         TrackPoint trackPoint = createTrackPoint(TrackPoint.Type.TRACKPOINT);
+        boolean automaticGpsStart = automaticSegmentStartRequested && trackPoint.position().hasLocation();
+        if (automaticGpsStart) {
+            trackPoint = new TrackPoint(trackPoint.id(), TrackPoint.Type.SEGMENT_START_AUTOMATIC,
+                    trackPoint.position(), trackPoint.sensorDistance() != null ? trackPoint.sensorDistance() : Distance.ZERO,
+                    trackPoint.heartRate(),
+                    trackPoint.temperature(), trackPoint.cadence(), trackPoint.power(),
+                    trackPoint.altitudeGainLoss());
+        }
 
         boolean stored = service.newTrackPoint(trackPoint, PreferencesUtils.getThresholdHorizontalAccuracy());  //TODO Cache preference for performance
         if (stored) {
+            if (automaticGpsStart) automaticSegmentStartRequested = false;
             reset();
         }
     }
@@ -183,8 +194,17 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         return service.acceptGpsLocation(location, requiredAccuracy);
     }
 
+    public boolean isRecording() {
+        return service.isRecording();
+    }
+
+    public synchronized void requestAutomaticSegmentStart() {
+        automaticSegmentStartRequested = true;
+    }
+
     public interface Callback {
         default boolean acceptGpsLocation(android.location.Location location, Distance requiredAccuracy) { return true; }
+        default boolean isRecording() { return false; }
 
         /**
          * @return Was TrackPoint stored (not discarded)?

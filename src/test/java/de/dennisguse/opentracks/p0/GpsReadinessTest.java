@@ -43,6 +43,14 @@ public class GpsReadinessTest {
         assertFalse(gate.add(fix(1.3,2,11),11*SECOND));assertFalse(gate.add(fix(1.31,2,12),12*SECOND));
         assertFalse(gate.add(fix(1.3,2,13),13*SECOND));assertFalse(gate.add(fix(1.3,2,14),14*SECOND));assertTrue(gate.add(fix(1.3,2,15),15*SECOND));
     }
+    @Test public void moderateOneSecondJumpCannotCompleteInitialReadiness() {
+        double thirtyMeters = 30.0 / 111_320.0;
+        assertFalse(gate.add(fix(1.3,2,11),11*SECOND));
+        assertFalse(gate.add(fix(1.3+thirtyMeters,2,12),12*SECOND));
+        assertFalse(gate.add(fix(1.3,2,13),13*SECOND));
+        assertFalse(gate.add(fix(1.3,2,14),14*SECOND));
+        assertTrue(gate.add(fix(1.3,2,15),15*SECOND));
+    }
     @Test public void longGapRestartsTheStableSequence() {
         assertFalse(gate.add(fix(1.3,2,11),11*SECOND));assertFalse(gate.add(fix(1.3,2,17),17*SECOND));assertFalse(gate.add(fix(1.3,2,18),18*SECOND));assertTrue(gate.add(fix(1.3,2,19),19*SECOND));
     }

@@ -22,6 +22,7 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
         Statistics stats=hasWorkout&&value.data().track()!=null&&value.session().trackId()!=null&&value.data().track().id().id()==value.session().trackId()?value.data().trackStatistics():Statistics.DEFAULT;
         Position p=value.position();boolean fix=recording&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&p!=null&&p.hasValidLocation();
         double speed=fix&&p.hasSpeed()?p.speed().toMPS():Double.NaN;
+        if (Double.isFinite(speed) && speed <= MotionFormat.MIN_DISPLAY_SPEED_MPS) speed = 0;
         boolean timeout=phase==RecordingSession.Phase.ACQUIRING_GPS&&value.preparation().state()==GpsPreparation.State.TIMED_OUT;
         int explanation=switch(phase){case IDLE->R.string.p02_idle_detail;case ACQUIRING_GPS->timeout?R.string.p02_gps_timeout:R.string.p02_acquiring_detail;case RECORDING->fix?R.string.p02_gps_ready:R.string.p02_gps_weak;case PAUSED->R.string.p02_paused_detail;case FINISHED->R.string.p02_finished_detail;};
         var status=value.preview().status();var hr=value.preview().value();var withoutAddress=new HeartRateStatus(status.state(),status.lastReceived(),status.observedAt(),null,status.contactLost());

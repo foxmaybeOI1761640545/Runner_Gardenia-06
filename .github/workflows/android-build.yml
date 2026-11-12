@@ -26,6 +26,7 @@ env:
 
 jobs:
   prepare:
+    if: github.head_ref != 'feature/p0-5-1-gps-motion-quality'
     name: Allocate immutable version plan
     runs-on: ubuntu-24.04
     timeout-minutes: 10
