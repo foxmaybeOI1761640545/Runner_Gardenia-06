@@ -27,6 +27,10 @@ public final class OfflineMapRepository {
     public State read() throws IOException {
         synchronized(LOCK){
             if(!directory.exists())return new State(List.of(),null);
+            // A killed process cannot execute importMap's finally block. The same
+            // lock excludes an active copy while reclaiming only incomplete files.
+            File[] abandoned=directory.listFiles((dir,name)->name.matches("[0-9a-f-]{36}\\.pending"));
+            if(abandoned!=null)for(File file:abandoned)if(file.isFile())file.delete();
             try(var input=index().openRead()){
                 ByteArrayOutputStream bytes=new ByteArrayOutputStream();byte[] buffer=new byte[4096];int n;while((n=input.read(buffer))!=-1){if(bytes.size()>1024*1024)throw new IOException("Map index too large");bytes.write(buffer,0,n);}
                 JSONObject json=new JSONObject(bytes.toString(StandardCharsets.UTF_8.name()));

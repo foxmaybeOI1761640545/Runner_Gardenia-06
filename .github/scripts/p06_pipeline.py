@@ -247,7 +247,7 @@ def gate():
             from p06_map_evidence import collect
             proof['offlineMapEvidence'] = collect(plan['commit'])
             map_process=json.loads(Path('build/reports/p06-map-durability/result.json').read_text())
-            if map_process.get('commit')!=plan['commit'] or any(map_process.get(k) is not True for k in ('passed','privateMapRetained','nativeTilesRenderedAfterRestart','airplaneMode','forceStopped')) or map_process['phases']['write']['pid']==map_process['phases']['read']['pid']:raise ValueError('Actual offline map process restart is required')
+            if map_process.get('commit')!=plan['commit'] or any(map_process.get(k) is not True for k in ('passed','privateMapRetained','pendingImportCleaned','nativeTilesRenderedAfterRestart','airplaneMode','forceStopped')) or map_process['phases']['write']['pid']==map_process['phases']['read']['pid']:raise ValueError('Actual offline map process restart is required')
             for phase in ('write','read'):
                 if any(map_process['phases'][phase].get(k)!=v for k,v in {'tests':1,'executed':1,'failures':0,'errors':0,'skipped':0}.items()):raise ValueError('Incomplete map process execution')
             proof['offlineMapProcessDurability']=map_process

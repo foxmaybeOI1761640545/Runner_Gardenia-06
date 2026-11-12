@@ -41,7 +41,7 @@ def validate_gate(plan,report,source):
     from p06_map_evidence import validate_summary
     validate_summary(report.get('offlineMapEvidence',{}),source)
     process=report.get('offlineMapProcessDurability',{})
-    if process.get('commit')!=source or any(process.get(k) is not True for k in ('passed','airplaneMode','forceStopped','nativeTilesRenderedAfterRestart','privateMapRetained')):raise ValueError('Actual map process restart evidence missing')
+    if process.get('commit')!=source or any(process.get(k) is not True for k in ('passed','airplaneMode','forceStopped','nativeTilesRenderedAfterRestart','privateMapRetained','pendingImportCleaned')):raise ValueError('Actual map process restart evidence missing')
     if process['phases']['write']['pid']==process['phases']['read']['pid']:raise ValueError('Map read reused the original process')
     gps=report.get('gpsNativeEvidence',{})
     if gps.get('passed') is not True or gps.get('sourceCommit')!=source or len(gps.get('screenshots',[]))!=12:raise ValueError('Actual GPS native/imperial evidence missing')

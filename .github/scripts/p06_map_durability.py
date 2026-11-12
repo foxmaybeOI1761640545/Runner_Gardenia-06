@@ -66,6 +66,9 @@ def run():
                 (report/(phase+'.txt')).write_text(result.stdout)
                 if result.returncode:raise RuntimeError('Instrumentation '+phase+' failed: '+result.stdout)
                 phases[phase]=parse_result(result.stdout)
+                expected='staged' if phase=='write' else 'cleaned'
+                if re.findall(r'^INSTRUMENTATION_STATUS: p06PartialCopyState=(.+)$',result.stdout,re.M)!=[expected]:raise ValueError('Interrupted import recovery evidence missing')
+                phases[phase]['partialCopyState']=expected
                 print('Completed file-backed instrumentation phase: '+phase,flush=True)
                 if phase=='write':
                     device('shell','am','force-stop','com.fox.runner.debug')
@@ -77,7 +80,7 @@ def run():
             import hashlib
             png=report/'new-process.png'
             if not png.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('Actual restarted map screenshot missing')
-            proof={'passed':True,'commit':os.environ['GITHUB_SHA'],'privateMapRetained':True,'nativeTilesRenderedAfterRestart':True,'airplaneMode':True,'forceStopped':True,'timezone':timezone,'phases':phases,'screenshotSha256':hashlib.sha256(png.read_bytes()).hexdigest()}
+            proof={'passed':True,'commit':os.environ['GITHUB_SHA'],'privateMapRetained':True,'pendingImportCleaned':True,'nativeTilesRenderedAfterRestart':True,'airplaneMode':True,'forceStopped':True,'timezone':timezone,'phases':phases,'screenshotSha256':hashlib.sha256(png.read_bytes()).hexdigest()}
             (report/'result.json').write_text(json.dumps(proof,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:(report/'logcat.txt').write_text(device('logcat','-d','-v','threadtime',check=False,timeout=15).stdout)

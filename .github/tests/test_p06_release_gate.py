@@ -14,7 +14,7 @@ class MapReleaseGateTests(unittest.TestCase):
         names+=['theme-'+f+'-'+m for f in ['PRECISION','QUIET','EXPLORER','NEON'] for m in ['dark','light']]
         receipt={k:True for k in ['passed','airplaneMode','safImport','zoomAndPan','currentPositionWithoutWorkout','liveTrack','historicalTrack','segmentBreaks','recreation','invalidFileRetainsMap']}
         receipt.update(sourceCommit=source,screenshots=[dict(file='p06-'+name+'.png') for name in names]);report['offlineMapEvidence']=receipt
-        report['offlineMapProcessDurability']=dict(commit=source,passed=True,airplaneMode=True,forceStopped=True,nativeTilesRenderedAfterRestart=True,privateMapRetained=True,phases={'write':{'pid':10},'read':{'pid':20}})
+        report['offlineMapProcessDurability']=dict(commit=source,passed=True,airplaneMode=True,forceStopped=True,nativeTilesRenderedAfterRestart=True,privateMapRetained=True,pendingImportCleaned=True,phases={'write':{'pid':10},'read':{'pid':20}})
         return plan,report,source
     def test_signing_requires_exact_map_and_all_legacy_gates(self):
         validate_gate(*self.valid())
