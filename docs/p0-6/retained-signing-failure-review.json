@@ -1,0 +1,34 @@
+{
+  "failedSource": "7c27ab2e304a66761d871aeedeed5409627b4677",
+  "failedRun": 43229996107,
+  "actualFailureFocus": "mCurrentFocus=Window{a17f u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity}",
+  "hasHomeScroll": true,
+  "titleOffscreen": true,
+  "nativeFailurePngActuallyViewed": true,
+  "retainedLogcatFatalOrAnrFound": false,
+  "replacementPreconditionMatchesActualWindow": true,
+  "acceptedForPublication": false,
+  "mapRuntimePngsActuallyViewed": 4,
+  "failedNativeViewportPngSha256": "e9e95db67a81293848ea8bb008045511693ac52364e8ab703417a7f467e5146e",
+  "mapRuntimePngs": [
+    {
+      "file": "p06-signed-map-history-restarted.png",
+      "sha256": "13ddf140df78476513ca93d7a87ba6ea18642c12b56b5c7aea393944057feb12"
+    },
+    {
+      "file": "p06-signed-map-imported-airplane.png",
+      "sha256": "20cbc74e8b5edc828962dc773cb6190a195fdb1341b4207d5ff724d47e374459"
+    },
+    {
+      "file": "p06-signed-map-invalid-retains-map.png",
+      "sha256": "95dbc8002e173a61a6cb56ca2de683f7e8a63cbcc320aa1bcb05eb1f74e862c9"
+    },
+    {
+      "file": "p06-signed-map-live-current-gps.png",
+      "sha256": "2d322fb0eb8cd27c69a19702a87faa7568b0ab41941b09384dd2457ee0cfc6f9"
+    }
+  ],
+  "originalFailedArtifactId": 13951083715,
+  "originalFailedArtifactSha256": "82f649baa4ff8eec7c7e23fa0ac84f7fd58afc68578a257e330beee5f56d529c",
+  "diagnosticTransportSha256": "c4901d8d839562819c8993c8fc2b612f1faa34f2873f83f51c631aaec7ba4597"
+}
