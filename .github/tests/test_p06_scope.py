@@ -38,3 +38,18 @@ class MapScopeTest(unittest.TestCase):
         build="".join("implementation '"+d+"'\n" for d in sorted(p06_offline.MAP_DEPENDENCIES))
         for source in ['new TileDownloadLayer()','import java.net.URL;','new WebView()']:
             with self.assertRaises(ValueError):p06_offline.audit_runtime(build,'',{'Map.java':source})
+
+    def history_baseline(self):
+        return '@Test void retained() { assertNotNull(record); '+ '; '.join([
+            'onView(withId(android.R.id.button1))','onView(withId(android.R.id.button2))',
+            'onView(withText(R.string.p05_direct_gpx))',
+            'onView(withText(context.getString(R.string.p05_delete_confirm,3)))'])+'; }'
+    def test_history_regression_only_allows_exact_dialog_root_patch(self):
+        original=self.history_baseline();scope.verify_changes([('M',scope.HISTORY_TEST)])
+        scope.verify_history_test(original,scope.focused_history_test(original))
+    def test_history_assertions_and_test_methods_cannot_be_removed(self):
+        original=self.history_baseline();patched=scope.focused_history_test(original)
+        for changed in [patched.replace('assertNotNull(record);',''),patched.replace('@Test',''),patched+' unrelated();']:
+            with self.assertRaises(ValueError):scope.verify_history_test(original,changed)
+    def test_missing_original_history_selector_cannot_be_accepted(self):
+        with self.assertRaises(ValueError):scope.focused_history_test(self.history_baseline().replace('onView(withId(android.R.id.button1))',''))

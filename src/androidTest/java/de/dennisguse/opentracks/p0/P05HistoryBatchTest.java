@@ -59,15 +59,15 @@ public class P05HistoryBatchTest {
   fixtures(3,true);shares.clear();var instrumentation=InstrumentationRegistry.getInstrumentation();var monitor=chooserMonitor();instrumentation.addMonitor(monitor);
   try(var screen=ActivityScenario.launch(P0HistoryActivity.class)){
    loaded(screen,3);row(0,true);onView(withId(R.id.p05_batch_share)).perform(click());awaitShares(1);loaded(screen,3);assertEquals(Intent.ACTION_SEND,shares.get(0).getAction());assertEquals("application/gpx+xml",shares.get(0).getType());
-   row(1,false);onView(withId(R.id.p05_batch_share)).perform(click());screen.recreate();onView(withId(android.R.id.button1)).perform(click());awaitShares(2);loaded(screen,3);assertEquals("application/zip",shares.get(1).getType());
-   onView(withId(R.id.p05_batch_share)).perform(click());onView(withText(R.string.p05_direct_gpx)).perform(click());onView(withId(android.R.id.button1)).perform(click());awaitShares(3);assertEquals(Intent.ACTION_SEND_MULTIPLE,shares.get(2).getAction());assertEquals(2,shares.get(2).getClipData().getItemCount());
+   row(1,false);onView(withId(R.id.p05_batch_share)).perform(click());screen.recreate();onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());awaitShares(2);loaded(screen,3);assertEquals("application/zip",shares.get(1).getType());
+   onView(withId(R.id.p05_batch_share)).perform(click());onView(withText(R.string.p05_direct_gpx)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());awaitShares(3);assertEquals(Intent.ACTION_SEND_MULTIPLE,shares.get(2).getAction());assertEquals(2,shares.get(2).getClipData().getItemCount());
    for(var id:ids){assertNotNull(new WorkoutRepository(context).find(id));assertEquals(3,new HeartRateRepository(context).read(id).size());}count(screen,2);
   }finally{instrumentation.removeMonitor(monitor);}
  }
  @Test public void nativeDeleteConfirmationSurvivesRotationAndCancellationThenDeletesExactCount()throws Exception{
   fixtures(3,true);try(ActivityScenario<P0HistoryActivity> screen=ActivityScenario.launch(P0HistoryActivity.managementIntent(context))){
-   loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
-   onView(withId(R.id.p05_batch_delete)).perform(click());onView(withId(android.R.id.button1)).perform(click());loaded(screen,0);
+   loaded(screen,3);onView(withId(R.id.p05_batch_select_all)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());screen.recreate();onView(withText(context.getString(R.string.p05_delete_confirm,3))).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).check(androidx.test.espresso.assertion.ViewAssertions.matches(isDisplayed()));onView(withId(android.R.id.button2)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());for(var id:ids)assertNotNull(new WorkoutRepository(context).find(id));count(screen,3);
+   onView(withId(R.id.p05_batch_delete)).perform(click());onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());loaded(screen,0);
    for(var id:ids){assertNull(new WorkoutRepository(context).find(id));assertTrue(new HeartRateRepository(context).read(id).isEmpty());}
   }
  }
@@ -101,7 +101,7 @@ public class P05HistoryBatchTest {
   for(var theme:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){PreferencesUtils.setGardeniaTheme(theme);SystemThemeTestUtils.night(dark);String name="p05-history-"+theme.id+(dark?"-dark":"-light");
    try(var screen=ActivityScenario.launch(P0HistoryActivity.class)){
     loaded(screen,3);P0UiCapture.save(name+"-list-native");row(0,true);onView(withId(R.id.p05_batch_select_all)).perform(click());count(screen,3);screen.onActivity(a->{float dp=a.getResources().getDisplayMetrics().density;for(int id:new int[]{R.id.p05_batch_share,R.id.p05_batch_export,R.id.p05_batch_delete,R.id.p05_batch_select_all,R.id.p05_batch_cancel}){View v=a.findViewById(id);assertTrue(v.getWidth()/dp>=48);assertTrue(v.getHeight()/dp>=48);}assertEquals(View.ACCESSIBILITY_LIVE_REGION_POLITE,a.findViewById(R.id.p05_selected_count).getAccessibilityLiveRegion());checkText(a.findViewById(android.R.id.content));});P0UiCapture.save(name+"-selection-native");
-    onView(withId(R.id.p05_batch_share)).perform(click());P0UiCapture.save(name+"-share-native");onView(withId(android.R.id.button2)).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());P0UiCapture.save(name+"-delete-native");onView(withId(android.R.id.button2)).perform(click());
+    onView(withId(R.id.p05_batch_share)).perform(click());P0UiCapture.save(name+"-share-native");onView(withId(android.R.id.button2)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());onView(withId(R.id.p05_batch_delete)).perform(click());P0UiCapture.save(name+"-delete-native");onView(withId(android.R.id.button2)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());
    }
   }
  }

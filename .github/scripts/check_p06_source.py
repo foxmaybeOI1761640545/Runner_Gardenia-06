@@ -12,7 +12,8 @@ ALLOWED_PRODUCT = {JAVA + name for name in (
     'p0/app/P0Activity.java','p0/app/P0HistoryActivity.java','p0/app/P05SettingsSectionFragment.java',
     'p0/app/RoutePreviewModel.java','services/TrackRecordingService.java',
     'sensors/GpsHandler.java','services/handlers/TrackPointCreator.java')}
-ALLOWED_INFRA = {'build.gradle','version.properties','release-ledger.json','src/main/AndroidManifest.xml',
+HISTORY_TEST = 'src/androidTest/java/de/dennisguse/opentracks/p0/P05HistoryBatchTest.java'
+ALLOWED_INFRA = {HISTORY_TEST,'build.gradle','version.properties','release-ledger.json','src/main/AndroidManifest.xml',
     'src/androidTest/AndroidManifest.xml','src/release/AndroidManifest.xml','.github/workflows/android-build.yml',
     '.github/workflows/p06-offline-map.yml','.github/scripts/release_policy.py','.github/scripts/p051_version.py'}
 
@@ -42,6 +43,21 @@ def verify_changes(rows):
             raise ValueError('Unreviewed P0.6 change: ' + status + ' ' + path)
 
 
+def focused_history_test(source):
+    """Only make the original dialog selectors target actual dialog windows."""
+    selectors=('onView(withId(android.R.id.button1))','onView(withId(android.R.id.button2))',
+        'onView(withText(R.string.p05_direct_gpx))',
+        'onView(withText(context.getString(R.string.p05_delete_confirm,3)))')
+    for selector in selectors:
+        if selector not in source:raise ValueError('Original history dialog selector missing')
+        source=source.replace(selector,selector+'.inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog())')
+    return source
+
+
+def verify_history_test(base,head):
+    if head!=focused_history_test(base):raise ValueError('Original history tests/assertions may only add explicit dialog roots')
+
+
 def resolve_base(environment=None):
     environment = os.environ if environment is None else environment
     if environment.get('GITHUB_EVENT_NAME') == 'pull_request':
@@ -62,6 +78,9 @@ def check():
     subprocess.run(['git', 'merge-base', '--is-ancestor', base, head], cwd=ROOT, check=True)
     rows = [line.split('\t') for line in git('diff', '--no-renames', '--name-status', base, head).splitlines()]
     verify_changes(rows)
+    if any(path==HISTORY_TEST for _,path in rows):
+        original=subprocess.check_output(['git','show',base+':'+HISTORY_TEST],cwd=ROOT,text=True)
+        verify_history_test(original,(ROOT/HISTORY_TEST).read_text())
     # A patch cannot silently alter theme layouts, palettes, GPX/export, BLE,
     # database schemas, or old phase workflows. New map dependencies are explicitly audited.
     for path in ROOT.joinpath('src/main/res/layout').glob('*home*.xml'):
