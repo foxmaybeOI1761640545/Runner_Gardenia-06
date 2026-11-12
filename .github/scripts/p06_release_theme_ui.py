@@ -46,7 +46,7 @@ def capture(device,dump,screenshot,tap,start,output):
         tree,focus=await_page(page);name=f'p06-release-{family}-{mode}-{page}';screenshot(name);raw=(output/(name+'.png')).read_bytes();xml=ET.tostring(tree,encoding='utf-8');(output/(name+'.xml')).write_bytes(xml)
         if page=='offlineMap':
             from p06_release_map_ui import verify_pixels
-            verify_pixels(raw)
+            verify_pixels(raw,tree)
         actual=None
         if page in ('home','hub'):
             actual=png_pixel(raw,2,300);expected=tuple(bytes.fromhex(palettes[family][mode]['background'][1:]))

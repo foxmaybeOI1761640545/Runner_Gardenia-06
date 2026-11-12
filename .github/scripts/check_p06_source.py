@@ -62,7 +62,7 @@ def check():
     rows = [line.split('\t') for line in git('diff', '--no-renames', '--name-status', base, head).splitlines()]
     verify_changes(rows)
     # A patch cannot silently alter theme layouts, palettes, GPX/export, BLE,
-    # database schemas, dependencies, or old phase workflows.
+    # database schemas, or old phase workflows. New map dependencies are explicitly audited.
     for path in ROOT.joinpath('src/main/res/layout').glob('*home*.xml'):
         ET.parse(path)
     for mode in ('values', 'values-night'):

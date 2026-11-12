@@ -1,4 +1,4 @@
-"""P0.5 branch-only staged validation; this module cannot sign or publish."""
+"""P0.6 branch-only staged validation; this module cannot sign or publish."""
 import argparse
 import hashlib
 import json
@@ -30,10 +30,10 @@ def git(*args):
 def configuration(value=None):
     value = json.loads(CONFIG.read_text()) if value is None else value
     if set(value) != {'stage', 'fullRegression', 'classes', 'signed'}:
-        raise ValueError('Explicit P0.5 phase configuration is required')
+        raise ValueError('Explicit P0.6 phase configuration is required')
     stage = value['stage']
     if type(stage) is not int or stage not in range(6):
-        raise ValueError('P0.5 phase must be 0 through 5')
+        raise ValueError('P0.6 phase must be 0 through 5')
     if type(value['fullRegression']) is not bool or value['signed'] is not False:
         raise ValueError('Validation route has no signing or publication authority')
     classes = value['classes']
@@ -46,7 +46,7 @@ def configuration(value=None):
     if stage > 0 and not value['fullRegression'] and not classes:
         raise ValueError('A development phase must execute selected Android classes')
     if stage == 5 and (not value['fullRegression'] or classes):
-        raise ValueError('Final validation must execute every original and P0.5 test')
+        raise ValueError('Final validation must execute every original and P0.6 test')
     if value['fullRegression'] and classes:
         raise ValueError('Full regression cannot narrow its class selection')
     return value
@@ -62,12 +62,12 @@ def trusted(environment=None):
           and environment.get('GITHUB_HEAD_REF') == BRANCH
           and environment.get('GITHUB_BASE_REF') == 'feature/p0-5-1-gps-motion-quality')
     if not (push or pr):
-        raise ValueError('Only exact P0.5.1 branch pushes and PRs can validate')
+        raise ValueError('Only exact P0.6 branch pushes and PRs can validate')
 
 
 def compare_refs(snapshot, actual):
     if snapshot.get('baselineCommit') != BASE or snapshot.get('branch') != BRANCH:
-        raise ValueError('P0.5 baseline identity differs')
+        raise ValueError('P0.6 baseline identity differs')
     protected = snapshot.get('protectedRefs', {})
     if not protected or any(not name.startswith(('refs/heads/', 'refs/tags/')) for name in protected):
         raise ValueError('Protected reference snapshot is empty or invalid')
@@ -308,7 +308,7 @@ def gate():
     write_report('tests.json', proof)
     print(json.dumps(proof, indent=2))
     if not proof['passed']:
-        raise SystemExit('P0.5 actual phase evidence gate failed')
+        raise SystemExit('P0.6 actual phase evidence gate failed')
 
 
 if __name__ == '__main__':

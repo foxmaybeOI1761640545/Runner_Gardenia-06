@@ -154,7 +154,7 @@ jobs:
         run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
           python3 .github/scripts/verify_debug_apk.py
-      - name: Verify original state matrix and new P0.5 large-font native matrix
+      - name: Verify original state matrix and original P0.5 large-font native matrix
         if: always() && steps.plan.outputs.stage != '0'
         run: |
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
@@ -194,7 +194,7 @@ jobs:
             build/outputs/**/p0-gpx/
           if-no-files-found: error
           retention-days: 90
-      - name: Preserve actual P0.5 Debug APK for review
+      - name: Preserve actual P0.6 Debug APK for review
         if: steps.plan.outputs.stage != '0' && success()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

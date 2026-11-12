@@ -18,4 +18,8 @@
     <string name="p06_map_credit">Mapsforge · OSM data: © OpenStreetMap contributors (ODbL)</string>
     <string name="p06_map_licenses">Map library licences</string>
     <string name="p06_map_route_failed">Recorded track could not be read. Try reopening the map.</string>
+    <string name="p06_zoom_in">Zoom in</string>
+    <string name="p06_zoom_out">Zoom out</string>
+    <item name="p06_zoom_in" type="id" />
+    <item name="p06_zoom_out" type="id" />
 </resources>

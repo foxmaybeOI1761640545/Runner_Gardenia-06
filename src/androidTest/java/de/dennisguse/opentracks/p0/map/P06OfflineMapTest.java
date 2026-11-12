@@ -108,25 +108,29 @@ public class P06OfflineMapTest {
                     onView(withId(R.id.p06_import_map)).perform(click());waitMap(screen);
                 }finally{Intents.release();}
                 assertNotNull(repository.read().current());capture(screen,"imported-airplane");
-                screen.onActivity(a->{var m=view(a).mapView();byte old=m.getModel().mapViewPosition.getZoomLevel();m.setZoomLevel((byte)(old+1));assertEquals(old+1,m.getModel().mapViewPosition.getZoomLevel());var center=m.getModel().mapViewPosition.getCenter();m.getModel().mapViewPosition.moveCenter(80,40,false);assertNotEquals(center,m.getModel().mapViewPosition.getCenter());});
+                byte[] zoomBefore={0};screen.onActivity(a->zoomBefore[0]=view(a).mapView().getModel().mapViewPosition.getZoomLevel());
+                onView(withId(R.id.p06_zoom_in)).perform(click());SystemClock.sleep(350);
+                screen.onActivity(a->{var m=view(a).mapView();assertEquals(zoomBefore[0]+1,m.getModel().mapViewPosition.getZoomLevel());});
                 AtomicReference<org.mapsforge.core.model.LatLong> beforePan=new AtomicReference<>();
                 screen.onActivity(a->beforePan.set(view(a).mapView().getModel().mapViewPosition.getCenter()));
-                onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(androidx.test.espresso.action.ViewActions.swipeLeft());
+                onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(new androidx.test.espresso.action.GeneralSwipeAction(androidx.test.espresso.action.Swipe.SLOW,
+                        v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.45f,xy[1]+v.getHeight()*.5f};},
+                        v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.55f,xy[1]+v.getHeight()*.5f};},androidx.test.espresso.action.Press.FINGER));
                 SystemClock.sleep(300);screen.onActivity(a->assertNotEquals("Real touch drag moves the map",beforePan.get(),view(a).mapView().getModel().mapViewPosition.getCenter()));
                 capture(screen,"zoom-pan");screen.recreate();waitMap(screen);capture(screen,"recreated-airplane");
                 onView(withId(R.id.p06_my_position)).perform(click());SystemClock.sleep(250);main(()->P0GpsPreparationTest.fixture(service));fix(0);fix(2);
                 assertFalse("Map GPS preview must never create a workout",service.isRecording());assertTrue(new WorkoutRepository(context).list().isEmpty());
-                SystemClock.sleep(1200);capture(screen,"current-position");
+                SystemClock.sleep(1200);screen.onActivity(a->assertTrue(((TextView)a.findViewById(R.id.p06_map_status)).getText().toString().contains("local map")));capture(screen,"current-position");
                 main(()->service.startNewTrack());for(int i=2;i<=12;i++)fix(i*2);
                 var id=service.getRecordingStatus().trackId();new SessionStore(context).save(RecordingSession.recover(id.id(),true));
-                SystemClock.sleep(1300);onView(withId(R.id.p06_fit_track)).perform(androidx.test.espresso.action.ViewActions.scrollTo(),click());capture(screen,"live-track");
+                SystemClock.sleep(1300);onView(withId(R.id.p06_fit_track)).perform(click());capture(screen,"live-track");
                 screen.onActivity(a->assertTrue(view(a).segmentCount()>0));
                 main(()->{service.getTrackPointCreator().getSensorManager().getGpsHandler().onDisconnected();P0GpsPreparationTest.fixture(service);});
                 for(int i=0;i<4;i++)fix(200+i*2);SystemClock.sleep(1300);
                 screen.onActivity(a->assertTrue("Relocation segments must not be joined",view(a).segmentCount()>=2));capture(screen,"segmented-track");
                 main(service::endCurrentTrack);assertTrue("Ending a workout keeps the visible map preview alive",service.areSensorsStarted());
                 new SessionStore(context).save(RecordingSession.ready());
-                try(ActivityScenario<P06MapActivity> history=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){waitMap(history);SystemClock.sleep(1000);onView(withId(R.id.p06_fit_track)).perform(androidx.test.espresso.action.ViewActions.scrollTo(),click());capture(history,"historical-track");history.onActivity(a->assertTrue(view(a).segmentCount()>=2));}
+                try(ActivityScenario<P06MapActivity> history=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){waitMap(history);SystemClock.sleep(1000);onView(withId(R.id.p06_fit_track)).perform(click());capture(history,"historical-track");history.onActivity(a->assertTrue(view(a).segmentCount()>=2));}
             }
             // Both visible owners are gone; no map-owned GPS may survive.
             assertFalse(service.isRecording());

@@ -37,3 +37,11 @@ class MapReleaseGateTests(unittest.TestCase):
         self.assertEqual(parse_result(text)['executed'],1)
         for bad in [text.replace('123','0'),text.replace('1 test','0 tests'),text+'FAILURES!!!']:
             with self.assertRaises(ValueError):parse_result(bad)
+    def test_native_png_sampler_decodes_all_five_filters_without_redecoding_per_pixel(self):
+        import struct,zlib,binascii
+        from p06_release_map_ui import png_pixels
+        def chunk(kind,data):return struct.pack('>I',len(data))+kind+data+struct.pack('>I',binascii.crc32(kind+data)&0xffffffff)
+        rows={0:([10,20,30,40,50,60],[70,80,90,100,110,120]),1:([10,20,30,30,30,30],[70,80,90,30,30,30]),2:([10,20,30,40,50,60],[60,60,60,60,60,60]),3:([10,20,30,35,40,45],[65,70,75,45,45,45]),4:([10,20,30,30,30,30],[60,60,60,30,30,30])}
+        for kind,(first,second) in rows.items():
+            raw=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',2,2,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(bytes([kind]+first+[kind]+second)))+chunk(b'IEND',b'')
+            with self.subTest(filter=kind):self.assertEqual([(10,20,30),(40,50,60),(70,80,90),(100,110,120)],png_pixels(raw,[(0,0),(1,0),(0,1),(1,1)]))

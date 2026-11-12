@@ -18,4 +18,6 @@
     <string name="p06_map_credit">Mapsforge · OSM 数据：© OpenStreetMap 贡献者（ODbL）</string>
     <string name="p06_map_licenses">地图库许可证</string>
     <string name="p06_map_route_failed">无法读取运动轨迹，请重新打开地图。</string>
+    <string name="p06_zoom_in">放大</string>
+    <string name="p06_zoom_out">缩小</string>
 </resources>

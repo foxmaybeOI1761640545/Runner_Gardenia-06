@@ -8,7 +8,6 @@ import org.mapsforge.map.android.graphics.AndroidGraphicFactory;
 import org.mapsforge.map.android.view.MapView;
 import org.mapsforge.map.layer.Layer;
 import org.mapsforge.map.layer.cache.InMemoryTileCache;
-import org.mapsforge.map.layer.overlay.Circle;
 import org.mapsforge.map.layer.overlay.FixedPixelCircle;
 import org.mapsforge.map.layer.overlay.Polyline;
 import org.mapsforge.map.layer.renderer.TileRendererLayer;
@@ -30,6 +29,11 @@ public final class OfflineMapView extends FrameLayout {
     public void load(MapFile file){
         clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());
         map=new MapView(getContext());map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
+        map.getMapZoomControls().setAutoHide(false);
+        map.getMapZoomControls().getButtonZoomIn().setId(de.dennisguse.opentracks.R.id.p06_zoom_in);
+        map.getMapZoomControls().getButtonZoomIn().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_in));
+        map.getMapZoomControls().getButtonZoomOut().setId(de.dennisguse.opentracks.R.id.p06_zoom_out);
+        map.getMapZoomControls().getButtonZoomOut().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_out));
         addView(map,new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
         int tileSize=map.getModel().displayModel.getTileSize();
         int capacity=(int)Math.max(8,Math.min(64,32L*1024*1024/(tileSize*(long)tileSize*4)));
@@ -53,13 +57,13 @@ public final class OfflineMapView extends FrameLayout {
             if(segment.size()==1){
                 var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
                 var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
-                overlays.add(dot);layers.add(dot);
+                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot);
             }
         }
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            Circle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);overlays.add(marker);layers.add(marker);
+            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker);
         }
         map.getLayerManager().redrawLayers();
     }

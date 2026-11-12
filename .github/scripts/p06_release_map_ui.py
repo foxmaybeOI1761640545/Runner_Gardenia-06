@@ -2,20 +2,51 @@
 import hashlib,json,re,time,threading,zipfile
 from pathlib import Path
 import xml.etree.ElementTree as ET
-from p04_release_theme_ui import png_pixel
+import struct,zlib
 PACKAGE='com.fox.runner'
 
-def verify_pixels(raw):
-    # Sample actual map canvas away from bars. Synthetic park is green in the
-    # unmodified bundled Mapsforge theme; neither blank tiles nor track strokes
-    # can supply this distributed polygon fill.
-    import struct
-    width,height=struct.unpack('>II',raw[16:24]);colors=[]
-    for x in range(width//5,4*width//5,max(1,width//8)):
-        for y in range(height*2//5,height*4//5,max(1,height//10)):
-            colors.append(png_pixel(raw,x,y))
-    green=sum(g>r+10 and g>b+10 for r,g,b in colors)
-    if green<3 or len(set(colors))<3:raise ValueError('Actual synthetic park/roads have not rendered in native offline canvas')
+def png_pixels(raw,coordinates):
+    if raw[:8]!=b'\x89PNG\r\n\x1a\n':raise ValueError('Native PNG missing')
+    offset=8;compressed=bytearray();width=height=channels=0
+    while offset<len(raw):
+        size=struct.unpack_from('>I',raw,offset)[0];kind=raw[offset+4:offset+8];data=raw[offset+8:offset+8+size];offset+=size+12
+        if kind==b'IHDR':
+            width,height,depth,color,_,_,interlace=struct.unpack('>IIBBBBB',data)
+            if depth!=8 or color not in (2,6) or interlace:raise ValueError('Unsupported native PNG')
+            channels=4 if color==6 else 3
+        elif kind==b'IDAT':compressed.extend(data)
+    if not coordinates or any(not(0<=x<width and 0<=y<height) for x,y in coordinates):raise ValueError('Invalid native pixel coordinates')
+    decoded=zlib.decompress(compressed);stride=width*channels;previous=bytearray(stride);wanted=set(coordinates);found={}
+    for y in range(max(y for _,y in coordinates)+1):
+        at=y*(stride+1);kind=decoded[at];row=bytearray(decoded[at+1:at+1+stride])
+        if kind not in range(5):raise ValueError('Invalid PNG filter')
+        if kind:
+            for i in range(stride):
+                left=row[i-channels] if i>=channels else 0;up=previous[i];corner=previous[i-channels] if i>=channels else 0
+                if kind==1:value=left
+                elif kind==2:value=up
+                elif kind==3:value=(left+up)//2
+                else:
+                    predict=left+up-corner;a=abs(predict-left);b=abs(predict-up);c=abs(predict-corner);value=left if a<=b and a<=c else up if b<=c else corner
+                row[i]=(row[i]+value)&255
+        for x,py in wanted:
+            if py==y:found[x,py]=tuple(row[x*channels:x*channels+3])
+        previous=row
+    return [found[point] for point in coordinates]
+
+
+def verify_pixels(raw,tree=None):
+    # The fixture's distributed green park fill cannot come from blank tiles,
+    # the purple position marker or the teal track overlay. Decode once/image.
+    width,height=struct.unpack('>II',raw[16:24]);bounds=None
+    if tree is not None:
+        node=next((n for n in tree.iter('node') if n.get('resource-id')==PACKAGE+':id/p06_map_container'),None)
+        if node is not None:bounds=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
+    if not bounds or len(bounds)!=4:bounds=[0,height//4,width,height*9//10]
+    left,top,right,bottom=bounds
+    coordinates=[(int(left+(right-left)*x/10),int(top+(bottom-top)*y/10)) for x in range(2,9,2) for y in range(2,9,2)]
+    colors=png_pixels(raw,coordinates);green=sum(g>r+10 and g>b+10 for r,g,b in colors)
+    if green<3:raise ValueError('Actual synthetic park has not rendered in native offline canvas')
     return {'distributedParkPixels':green,'sampleColors':len(set(colors))}
 
 def capture_runtime(device,dump,screenshot,tap,start,output):
@@ -52,7 +83,7 @@ def capture_runtime(device,dump,screenshot,tap,start,output):
     def photo(name):
         tree=dump();windows=device('shell','dumpsys','window');focus=next((l.strip() for l in windows.splitlines() if 'mCurrentFocus=' in l),'')
         if 'P06MapActivity' not in focus:raise ValueError('Signed native map is not the focused page')
-        filename='p06-signed-map-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw);xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
+        filename='p06-signed-map-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree);xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
         rows.append({'file':filename+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':filename+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'focusedWindow':focus,'pixels':pixels})
     def home():
         device('shell','am','force-stop',PACKAGE);start();time.sleep(1)
@@ -98,5 +129,5 @@ def verify_proof(folder,info):
             png=z.read(row['file']);xml=z.read(row['nativeWindowFile'])
             if hashlib.sha256(png).hexdigest()!=row['sha256'] or hashlib.sha256(xml).hexdigest()!=row['nativeWindowSha256'] or 'P06MapActivity' not in row['focusedWindow']:raise ValueError('Signed map focused image/XML changed')
             if not any(n.get('resource-id')==PACKAGE+':id/p06_map_container' for n in ET.fromstring(xml).iter('node')):raise ValueError('Native map page absent')
-            verify_pixels(png)
+            verify_pixels(png,ET.fromstring(xml))
     return proof
