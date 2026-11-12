@@ -45,7 +45,7 @@ Full push run: https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/action
 | Full JVM unit tests |154|154|0|0|0|
 | Full API35 instrumentation |435|434|0|0|1|
 
-Debug assembly, lint, instrumentation compilation, actual API35 execution, GPX 1.1 schema, merged/packaged offline audit, all original phase matrices, cross-UID shares and three independent new-process durability checks passed. The original skipped method is listed above. A successful compile is not counted as test execution.
+Debug assembly, lint, instrumentation compilation, actual API35 execution, GPX 1.1 schema, merged/packaged offline audit, all original phase matrices, cross-UID shares and one real write/new-process-read probe pair covering database, metric preferences and batch cache passed. The original skipped method is listed above. A successful compile is not counted as test execution.
 
 Original reports Artifact: `13878632370`, SHA-256 `2e62ebb3bb066e4bfbc78d6331e49a7a76a7c9a8b2cc4524e249d89366680ad0`.
 Original native visual Artifact: `13878622397`, SHA-256 `a033d8bc0f2ccf41ff57b6526af9e603b689aa1d41b4ac3369cff1bf630598df`.
