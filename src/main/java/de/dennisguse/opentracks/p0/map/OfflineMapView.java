@@ -50,6 +50,11 @@ public final class OfflineMapView extends FrameLayout {
             Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
             line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
             overlays.add(line);layers.add(line);segmentCount++;
+            if(segment.size()==1){
+                var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
+                var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
+                overlays.add(dot);layers.add(dot);
+            }
         }
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);

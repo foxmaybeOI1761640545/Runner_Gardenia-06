@@ -15,7 +15,7 @@
     <string name="p06_map_delete">删除本地副本</string>
     <string name="p06_map_delete_confirm">从应用中删除“%1$s”？原始文件和运动历史仍被保留。</string>
     <string name="p06_map_summary">导入与管理本地地图，离线查看当前位置和运动轨迹</string>
-    <string name="p06_map_credit">Mapsforge 0.25.0 · LGPLv3 及上游链接豁免 · 地图数据由您提供</string>
+    <string name="p06_map_credit">Mapsforge · OSM 数据：© OpenStreetMap 贡献者（ODbL）</string>
     <string name="p06_map_licenses">地图库许可证</string>
     <string name="p06_map_route_failed">无法读取运动轨迹，请重新打开地图。</string>
 </resources>

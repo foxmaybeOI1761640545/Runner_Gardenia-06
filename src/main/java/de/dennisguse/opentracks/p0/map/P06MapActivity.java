@@ -63,7 +63,7 @@ public class P06MapActivity extends AbstractActivity {
     }
     @Override public boolean onCreateOptionsMenu(android.view.Menu menu){menu.add(0,1,0,R.string.p06_map_licenses);return true;}
     @Override public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item){
-        if(item.getItemId()==1){String[] files={"Mapsforge-0.25.0-README.md","Mapsforge-LGPL-3.0.txt","Mapsforge-GPL-3.0.txt","AndroidSVG-NOTICE.txt","AndroidSVG-Apache-2.0.txt"};
+        if(item.getItemId()==1){String[] files={"Mapsforge-0.25.0-README.md","Mapsforge-LGPL-3.0.txt","Mapsforge-GPL-3.0.txt","AndroidSVG-NOTICE.txt","AndroidSVG-Apache-2.0.txt","OSM-data-NOTICE.txt"};
             new AlertDialog.Builder(this).setTitle(R.string.p06_map_licenses).setItems(files,(dialog,which)->worker.execute(()->{
                 try(var input=getAssets().open("p06-licenses/"+files[which]);var output=new ByteArrayOutputStream()){
                     byte[] bytes=new byte[4096];int n;while((n=input.read(bytes))!=-1)output.write(bytes,0,n);String text=output.toString(java.nio.charset.StandardCharsets.UTF_8.name());

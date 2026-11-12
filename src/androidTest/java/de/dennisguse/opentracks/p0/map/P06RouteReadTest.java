@@ -25,7 +25,7 @@ public class P06RouteReadTest {
         point(4,1.301,TrackPoint.Type.SEGMENT_START_AUTOMATIC);point(5,1.30101,TrackPoint.Type.TRACKPOINT);point(6,null,TrackPoint.Type.SEGMENT_END_MANUAL);
         point(7,null,TrackPoint.Type.SEGMENT_START_MANUAL);point(8,1.302,TrackPoint.Type.TRACKPOINT);
         AtomicReference<RoutePreviewModel.Result> result=new AtomicReference<>();
-        try(var screen=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){
+        try(ActivityScenario<P06MapActivity> screen=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){
             long end=android.os.SystemClock.uptimeMillis()+10000;
             do{screen.onActivity(a->result.set(new ViewModelProvider(a).get(RoutePreviewModel.class).route().getValue()));if(result.get().points().size()==5)break;android.os.SystemClock.sleep(100);}while(android.os.SystemClock.uptimeMillis()<end);
             var points=result.get().points();assertEquals(5,points.size());assertEquals(List.of(true,false,true,false,true),points.stream().map(RouteGeometry.Point::breakBefore).toList());assertEquals(1.301,points.get(2).latitude(),.000001);assertFalse(result.get().failed());

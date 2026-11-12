@@ -15,7 +15,7 @@
     <string name="p06_map_delete">Delete local copy</string>
     <string name="p06_map_delete_confirm">Delete “%1$s” from this app? The original file and workout history are retained.</string>
     <string name="p06_map_summary">Import and manage local maps; view current and recorded tracks offline</string>
-    <string name="p06_map_credit">Mapsforge 0.25.0 · LGPLv3 with upstream linking exception · map data supplied by you</string>
+    <string name="p06_map_credit">Mapsforge · OSM data: © OpenStreetMap contributors (ODbL)</string>
     <string name="p06_map_licenses">Map library licences</string>
     <string name="p06_map_route_failed">Recorded track could not be read. Try reopening the map.</string>
 </resources>
