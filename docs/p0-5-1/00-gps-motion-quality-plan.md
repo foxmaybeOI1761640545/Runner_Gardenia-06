@@ -2,23 +2,13 @@
 
 ## Why this phase exists
 
-The 2026-11-11 export comparison shows that iGPSPORT omits many stationary intervals while Runner Gardenia continues writing one-second points. This is consistent with bike-computer auto-pause, not proof of its setting: the iGPSPORT GPX contains timestamps/coordinates but no explicit speed extension, so its pre/post speeds below are derived from adjacent coordinate fixes. Runner Gardenia GPX includes speedMetersPerSecond.
+Stationary GNSS noise must not inflate recorded distance or invent a pace. The private user-supplied archive is kept outside the repository. Public tests and evidence use synthetic coordinates and clocks only; no user GPX or personal route is included.
 
-Strong matched examples (Beijing time):
-
-| iGPSPORT point gap | Phone points in the same interval | Phone speed evidence | Phone position drift |
-|---|---:|---|---:|
-| Nov 7 19:33:58–19:48:51 (893 s) | 893 | 98.3% ≤ 0.3 m/s; deceleration immediately before the gap about 1.09 → 0.83 → 0.64 → 0.46 m/s | max ~8 m |
-| Nov 7 19:51:24–19:59:46 (502 s) | 502 | 98.8% ≤ 0.3 m/s; deceleration about 1.08 → 0.93 → 0.79 → 0.70 → 0.59 m/s | max ~2.8 m |
-| Nov 7 19:10:29–19:14:07 (218 s) | 218 | 100% reported 0 m/s | ~0 m |
-| Nov 9 18:59:04–19:03:10 (246 s) | 246 | 97.6% ≤ 0.3 m/s; phone speed falls 1.47 → 1.12 m/s immediately before and rises 0.54 → 3.65 m/s after | max ~3.7 m |
-| Nov 11 18:56:22–19:00:36 (254 s) | 254 | 100% reported 0 m/s | max ~0.6 m |
-
-These are strong stationary/auto-pause signatures. They do not prove the iGPSPORT auto-pause preference was enabled; a manual stop or device-side recording interruption can also create a gap. In the iGPSPORT files, normal sampling is approximately 2 s; Gardenia is approximately 1 s. Point-count comparisons must therefore account for both the different sampling rates and omitted stationary points. GPX first-to-last timestamps are wall-clock spans; an omitted stationary interval remains a timestamp gap and should not be described as elapsed time removed unless the device's moving-time field is separately compared.
+The existing P0.5.1 implementation is continued on its original branch. The acceptance fixture retains 255 one-second stationary points with 0–0.3m/s reported noise and all heart-rate samples, and separately exercises 60-second true movement at 0.5, 0.7, 3 and 10m/s.
 
 ## P0.5.1 implementation scope
 
-1. Add a pure-Java GpsMotionFilter with hysteresis:
+1. Review and correct the existing pure-Java GpsMotionFilter with hysteresis:
    - pin stationary GPS coordinates to a stable anchor while retaining the time samples;
    - clamp stationary/near-zero speed to 0 and render pace as `—`;
    - require consistent movement evidence before releasing the anchor;
