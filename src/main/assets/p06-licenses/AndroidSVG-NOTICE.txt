@@ -1,0 +1,9 @@
+AndroidSVG 1.4 — https://github.com/BigBadaboom/androidsvg
+Copyright 2013 Paul LeBeau, Cave Rock Software Ltd.
+Licensed under the Apache License, Version 2.0.
+The Apache-2.0 text is provided in AndroidSVG-Apache-2.0.txt.
+
+Mapsforge 0.25.0 — https://github.com/mapsforge/mapsforge/tree/0.25.0
+LGPLv3, with LGPL v3 sections 4(d) and 4(e) waived by upstream.
+Original library sources are unmodified. The pinned README and complete GPL/LGPL
+texts are bundled here. Mapsforge themes and assets retain upstream notices.

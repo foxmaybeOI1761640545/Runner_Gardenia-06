@@ -52,6 +52,12 @@ public class TrackPointCreator implements SharedPreferences.OnSharedPreferenceCh
         return context != null;
     }
 
+    /** The already-stored manual boundary supersedes an old pending automatic break. */
+    public synchronized void beginGpsRecordingSegment() {
+        automaticSegmentStartRequested = false;
+        sensorManager.getGpsHandler().beginRecordingSegment();
+    }
+
     private synchronized void reset() {
         sensorManager.reset();
     }

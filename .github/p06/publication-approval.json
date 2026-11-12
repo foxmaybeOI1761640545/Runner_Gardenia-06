@@ -1,0 +1,53 @@
+{
+  "source": "af6e90eabee20ada79ba942584ab7eb8c08660e3",
+  "buildRunId": "43241685805",
+  "buildWorkflowCommit": "60f9fa1700dc8aac42ec636563216da711fa3ee9",
+  "formalArtifactId": 13957072567,
+  "formalArtifactSha256": "a9480768cb94e27a0315c34513d2f1948ee9d922540191a016587967cbe20bbb",
+  "apkSha256": "6a605a9c4f6a1e5fc73b5be3598225fd3bf88fda7eea15436d9ce133ab7a8c44",
+  "signedNativeVisualReviewPassed": true,
+  "signedPngsReviewed": 88,
+  "signedMapRuntimePngsReviewed": 4,
+  "reviewedAt": "2026-11-13T01:35:22.525183+08:00",
+  "signedVisualReview": {
+    "source": "af6e90eabee20ada79ba942584ab7eb8c08660e3",
+    "buildRunId": "43241685805",
+    "workflowCommit": "60f9fa1700dc8aac42ec636563216da711fa3ee9",
+    "apkSha256": "6a605a9c4f6a1e5fc73b5be3598225fd3bf88fda7eea15436d9ce133ab7a8c44",
+    "passed": true,
+    "nativePngsActuallyViewed": 88,
+    "mapRuntimePngsActuallyViewed": 4,
+    "contactSheetsActuallyViewed": 12,
+    "sheetsActuallyViewed": [
+      "signed-native-01.jpg",
+      "signed-native-02.jpg",
+      "signed-native-03.jpg",
+      "signed-native-04.jpg",
+      "signed-native-05.jpg",
+      "signed-native-06.jpg",
+      "signed-native-07.jpg",
+      "signed-native-08.jpg",
+      "signed-native-09.jpg",
+      "signed-native-10.jpg",
+      "signed-native-11.jpg",
+      "signed-native-12.jpg"
+    ],
+    "reviewedAt": "2026-11-13T01:35:22.019949+08:00",
+    "method": "All12 contact sheets of88 signed native pages plus4 map runtime PNGs actually inspected with view_image; PNG/XML/focus/version/manifest hashes independently verified. Real vector tiles, separated historical route, live position/track, retained map after invalid import, actual eight schemes and native controls readable. No new blocking clipping/overlap observed. Actual native title/focus restoration passed for Neon.",
+    "physicalDeviceValidation": "NEEDS_DEVICE_VALIDATION",
+    "sheetSha256": {
+      "signed-native-01.jpg": "8a6c422c8d9b49f35e95b31a4c7827d910737c0c024097952d966b61b46e256c",
+      "signed-native-02.jpg": "a7560a69a68c4ed81ef04b6e60bd23161cf7af18c8c34c3a4f2be54f06a666be",
+      "signed-native-03.jpg": "daca3efb1c3101334c0277bee54d21180c0a0681e0b8e22d8421bcafb92242e7",
+      "signed-native-04.jpg": "ce0f75c8efae0e86f13f493698f3dd3bdb556e51836d033546169e2a9b641b8c",
+      "signed-native-05.jpg": "aef8e528277eb99b772ad0323d3e57c107d6a2fb7e9197f35861d9c87b9fff5a",
+      "signed-native-06.jpg": "a1e2a223f899928161c1beeaab3a1913aedc009681c78a0701331b14e91721eb",
+      "signed-native-07.jpg": "a3879c2a50436fd8b7ab08ff20b240dd987df7fd17c467c1d156c2bc164b13bc",
+      "signed-native-08.jpg": "8730fcde9d0be42cb957c756cf01ffceb084dc059d1a5bf5a459af86b0582391",
+      "signed-native-09.jpg": "9203b3acc58fe080c7501894726eab9f4548e4490b61de200d225b5e83496b99",
+      "signed-native-10.jpg": "b34156e38783b8fc7b7f4e4213e37e434af325c5197eb139a9e05d44ab770883",
+      "signed-native-11.jpg": "5bc45306fa9f6d35fc1fe2ca23f48e682ff3d6f162c2d8f2f946256854875f47",
+      "signed-native-12.jpg": "665d43fabfc73210146a6d80dd3c3dd3f7649292c36ff526344a570a17b1a1e0"
+    }
+  }
+}

@@ -23,7 +23,7 @@ public class P05SettingsSectionFragment extends PreferenceFragmentCompat {
             case "motion" -> motion();
             case "devices" -> link("p05_manage_devices",R.string.p05_manage_devices,R.string.p05_devices_summary,P0SensorsActivity.class);
             case "history" -> link("p05_manage_history",R.string.p05_manage_history,R.string.p05_history_summary,P0HistoryActivity.class);
-            case "privacy" -> {info("p05_local_data",R.string.p05_local_data,R.string.p05_local_data_detail);info("p05_user_export",R.string.p05_user_export,R.string.p05_user_export_detail);}
+            case "privacy" -> {link("p06_offline_maps",R.string.p06_offline_map,R.string.p06_map_summary,de.dennisguse.opentracks.p0.map.P06MapActivity.class);info("p05_local_data",R.string.p05_local_data,R.string.p05_local_data_detail);info("p05_user_export",R.string.p05_user_export,R.string.p05_user_export_detail);}
             case "info" -> {text("p05_app_name",R.string.p05_app_name,requireContext().getApplicationInfo().loadLabel(requireContext().getPackageManager()).toString());text("p05_version",R.string.p05_version,BuildConfig.VERSION_NAME);text("p05_build",R.string.p05_build,Integer.toString(BuildConfig.VERSION_CODE));}
             default -> throw new IllegalArgumentException("Unknown settings category");
         }

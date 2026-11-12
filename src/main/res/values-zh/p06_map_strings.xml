@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p06_offline_map">离线地图</string>
+    <string name="p06_import_map">导入 .map</string>
+    <string name="p06_manage_maps">地图管理</string>
+    <string name="p06_my_position">我的位置</string>
+    <string name="p06_fit_track">显示全程</string>
+    <string name="p06_map_empty">导入本地 Mapsforge .map 文件以显示离线地图。运动轨迹仅保存在本机。</string>
+    <string name="p06_map_loading">正在加载本地地图…</string>
+    <string name="p06_map_ready">%1$s · 本地地图</string>
+    <string name="p06_map_failed">无法导入或打开此地图。请选择完整、受支持的 Mapsforge .map 文件。此前可用地图仍被保留。</string>
+    <string name="p06_map_waiting_gps">正在等待新的 GPS 定位。查看地图不会开始运动。</string>
+    <string name="p06_map_location_denied">显示当前位置需要精确位置权限。本地地图仍可使用。</string>
+    <string name="p06_map_choose">选择本地地图</string>
+    <string name="p06_map_delete">删除本地副本</string>
+    <string name="p06_map_delete_confirm">从应用中删除“%1$s”？原始文件和运动历史仍被保留。</string>
+    <string name="p06_map_summary">导入与管理本地地图，离线查看当前位置和运动轨迹</string>
+    <string name="p06_map_credit">Mapsforge · OSM 数据：© OpenStreetMap 贡献者（ODbL）</string>
+    <string name="p06_map_licenses">地图库许可证</string>
+    <string name="p06_map_route_failed">无法读取运动轨迹，请重新打开地图。</string>
+    <string name="p06_zoom_in">放大</string>
+    <string name="p06_zoom_out">缩小</string>
+</resources>

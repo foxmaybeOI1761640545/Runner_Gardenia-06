@@ -1,0 +1,14 @@
+Map data attribution
+
+For imported data derived from OpenStreetMap:
+Copyright OpenStreetMap contributors. Data is available under the Open Database
+License (ODbL): https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+The OSM data attribution is displayed on the map screen.
+
+Mapsforge .map is a file format, not a licence. Other datasets retain their
+original licences and attribution. Runner Gardenia does not bundle, download or
+redistribute a production map dataset. Import a dataset you have permission to use.
+
+The self-authored fictional map used only by automated tests is CC0-1.0,
+contains no OSM-derived data and is not packaged in the production APK.

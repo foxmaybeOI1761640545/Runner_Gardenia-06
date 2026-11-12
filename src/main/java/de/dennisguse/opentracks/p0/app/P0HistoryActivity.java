@@ -94,6 +94,14 @@ public class P0HistoryActivity extends AbstractActivity {
         long selected=saved!=null?saved.getLong(WORKOUT_ID,0):getIntent().getLongExtra(WORKOUT_ID,0);
         model.open(selected>0?selected:null);
     }
+    @Override public boolean onCreateOptionsMenu(android.view.Menu menu){
+        if(model!=null&&model.selectedId()!=null)menu.add(0,R.id.p06_map_container,0,R.string.p06_offline_map).setShowAsAction(android.view.MenuItem.SHOW_AS_ACTION_NEVER);
+        return true;
+    }
+    @Override public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item){
+        if(item.getItemId()==R.id.p06_map_container&&model.selectedId()!=null){startActivity(de.dennisguse.opentracks.p0.map.P06MapActivity.intent(this,model.selectedId()));return true;}
+        return super.onOptionsItemSelected(item);
+    }
     @Override protected void onStart(){super.onStart();model.refresh();}
     @Override protected void onSaveInstanceState(@NonNull Bundle out){out.putLong(WORKOUT_ID,model.selectedId()==null?0:model.selectedId());out.putBoolean(MODE,model.selection().getValue().active());out.putLongArray(CHOSEN,array(model.selection().getValue().ids()));out.putLongArray(PENDING,pendingIds);out.putBoolean(PENDING_ZIP,pendingZip);super.onSaveInstanceState(out);}
     private void saveGpx(){if(model.selectedId()!=null)saveSelection(java.util.List.of(model.selectedId()));}
@@ -104,7 +112,7 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p05BatchShare.setEnabled(actionable);binding.p05BatchExport.setEnabled(actionable);binding.p05BatchDelete.setEnabled(actionable);binding.p05BatchSelectAll.setEnabled(!busy&&!state.loading()&&!state.rows().isEmpty());binding.p05BatchCancel.setEnabled(!busy);
         for(int id:new int[]{R.id.p04_nav_run,R.id.p0_all_history,R.id.p04_nav_heart,R.id.p03_settings})findViewById(id).setEnabled(!busy);
         if(getSupportActionBar()!=null)getSupportActionBar().setTitle(detail?R.string.p0_workout:R.string.p0_history);
-        binding.p0HistoryRows.setVisibility(detail?View.GONE:View.VISIBLE);binding.p0WorkoutPane.setVisibility(detail?View.VISIBLE:View.GONE);
+        binding.p0HistoryRows.setVisibility(detail?View.GONE:View.VISIBLE);binding.p0WorkoutPane.setVisibility(detail?View.VISIBLE:View.GONE);invalidateOptionsMenu();
         String message=busy?getString(model.operation().getValue().packing()?R.string.p05_packing:R.string.p05_processing,model.operation().getValue().done(),model.operation().getValue().total()):model.operationError().getValue()!=null?model.operationError().getValue():state.error()!=null?state.error():state.loading()?getString(R.string.p0_loading):!detail&&state.rows().isEmpty()?getString(R.string.p0_no_workouts):null;
         binding.p0HistoryStatus.setText(message);binding.p0HistoryStatus.setVisibility(message==null?View.GONE:View.VISIBLE);
         rows=state.rows();adapter.notifyDataSetChanged();binding.p0HistoryList.setEnabled(!state.loading()&&!busy);

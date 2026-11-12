@@ -37,8 +37,9 @@ public final class RoutePreviewModel extends AndroidViewModel {
                     if(c==null)throw new IllegalStateException("Route cursor unavailable");
                     while(c.moveToNext()){
                         lastId=c.getLong(0);int type=c.getInt(1);long time=c.getLong(2);
-                        if(type!=0){if(type==-2||type==-1||type==1)gap=true;continue;}
-                        if(c.isNull(3)||c.isNull(4)){gap=true;continue;}
+                        if(type==-2||type==-1)gap=true;
+                        else if(type!=0){if(type==1||type==3)gap=true;continue;}
+                        if(c.isNull(3)||c.isNull(4))continue; // BLE-only samples do not break GPS geometry.
                         RouteGeometry.Point p=new RouteGeometry.Point(c.getDouble(3)/1E6,c.getDouble(4)/1E6,gap||lastTime<0||time-lastTime>15000);
                         if(!p.valid()){gap=true;continue;}points.add(p);lastTime=time;gap=false;
                         if(points.size()>16000){List<RouteGeometry.Point> reduced=RouteGeometry.bounded(points,4000);points.clear();points.addAll(reduced);partial=true;}

@@ -62,6 +62,7 @@ public class P0Activity extends AbstractActivity {
         P0Navigation.bind(this);
         binding.p04GpsStatus.setOnClickListener(view->startActivity(new android.content.Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)));
         dashboard=new DashboardRenderer(this,binding);
+        binding.p04Route.setOnClickListener(v->startActivity(de.dennisguse.opentracks.p0.map.P06MapActivity.intent(this,model.snapshot().getValue().session().trackId())));
         routeModel=new ViewModelProvider(this).get(RoutePreviewModel.class);
         routeModel.route().observe(this,value->{currentRoute=value;binding.p04Route.bind(value,currentGps);});
         chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);

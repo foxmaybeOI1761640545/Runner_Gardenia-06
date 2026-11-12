@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SPDX-License-Identifier: CC0-1.0. Entirely fictional, self-authored geometry. -->
+<osm version="0.6" generator="Runner Gardenia synthetic fixture">
+ <node id="1" lat="1.298" lon="103.798"/><node id="2" lat="1.302" lon="103.798"/>
+ <node id="3" lat="1.302" lon="103.802"/><node id="4" lat="1.298" lon="103.802"/>
+ <node id="5" lat="1.299" lon="103.799"/><node id="6" lat="1.301" lon="103.799"/>
+ <node id="7" lat="1.301" lon="103.801"/><node id="8" lat="1.299" lon="103.801"/>
+ <node id="9" lat="1.297" lon="103.800"/><node id="10" lat="1.303" lon="103.800"/>
+ <node id="11" lat="1.300" lon="103.797"/><node id="12" lat="1.300" lon="103.803"/>
+ <node id="13" lat="1.3003" lon="103.8003"/><node id="14" lat="1.3008" lon="103.8003"/>
+ <node id="15" lat="1.3008" lon="103.8008"/><node id="16" lat="1.3003" lon="103.8008"/>
+ <way id="101"><nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/><tag k="leisure" v="park"/><tag k="name" v="Gardenia Synthetic Park"/></way>
+ <way id="102"><nd ref="5"/><nd ref="6"/><nd ref="7"/><nd ref="8"/><nd ref="5"/><tag k="highway" v="footway"/><tag k="name" v="Fictional Loop"/></way>
+ <way id="103"><nd ref="9"/><nd ref="10"/><tag k="highway" v="residential"/><tag k="name" v="Synthetic Avenue"/></way>
+ <way id="104"><nd ref="11"/><nd ref="12"/><tag k="highway" v="footway"/><tag k="name" v="Gardenia Walk"/></way>
+ <way id="105"><nd ref="13"/><nd ref="14"/><nd ref="15"/><nd ref="16"/><nd ref="13"/><tag k="natural" v="water"/><tag k="name" v="Fictional Pond"/></way>
+</osm>
