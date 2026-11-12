@@ -30,6 +30,13 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     private Distance thresholdHorizontalAccuracy;
     private volatile long latestElapsedNanos;
     private final GpsMotionFilter motionFilter = new GpsMotionFilter();
+
+    /** A manual recording boundary can occur while a visible map keeps GPS connected. */
+    public void beginRecordingSegment() {
+        motionFilter.reset();
+        segmentAfterReconnect = false;
+        recordingFixSeen = false;
+    }
     private volatile Position latestRecordingPosition;
     private boolean recordingFixSeen;
     private boolean segmentAfterReconnect;

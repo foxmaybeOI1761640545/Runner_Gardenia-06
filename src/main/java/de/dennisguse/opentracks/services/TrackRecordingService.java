@@ -316,6 +316,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // A Bluetooth-only preview may have started before GPS permission was granted.
         // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
         if (areSensorsStarted()) {
+            if (!mapGpsOwners.isEmpty()) trackPointCreator.beginGpsRecordingSegment();
             trackPointCreator.getSensorManager().getHeartRateHandler().beginRecordingSegment(trackPointCreator.getNow());
         }
         startSensors();

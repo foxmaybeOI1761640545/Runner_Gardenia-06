@@ -39,6 +39,7 @@ public class P06GpsOwnershipTest {
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(context,hrEnabled);new SessionStore(context).save(RecordingSession.ready());
     }
     private void fix(boolean timed){main(()->{Location f=new Location("gps");f.setLatitude(1.3);f.setLongitude(103.8);f.setAccuracy(2);f.setTime(System.currentTimeMillis());if(timed)f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);});}
+    private void relocatedFix(){main(()->{Location f=new Location("gps");f.setLatitude(1.31);f.setLongitude(103.8);f.setAccuracy(2);f.setSpeed(0);f.setTime(System.currentTimeMillis());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);});}
     @Test public void multipleVisibleMapsReleaseOnlyTheirOwnGpsAndNeverCreateWorkout(){
         main(()->{service.acquireMapGps(first);service.acquireMapGps(second);P0GpsPreparationTest.fixture(service);});fix(true);
         assertTrue(service.hasFreshGpsPreview());assertFalse(service.isAcquiringGps());assertFalse(service.isRecording());assertTrue(new WorkoutRepository(context).list().isEmpty());
@@ -57,7 +58,14 @@ public class P06GpsOwnershipTest {
     @Test public void pausedWorkoutKeepsVisibleMapGpsAndResumeRetainsSameTrack(){
         main(()->{service.acquireMapGps(first);service.startNewTrack();P0GpsPreparationTest.fixture(service);});fix(true);var id=service.getRecordingStatus().trackId();
         main(service::endCurrentTrack);assertFalse(service.isRecording());assertTrue(service.areSensorsStarted());
-        main(()->service.resumeTrack(id));assertEquals(id,service.getRecordingStatus().trackId());main(()->service.releaseMapGps(first));assertTrue(service.isRecording());
+        relocatedFix();SystemClock.sleep(50);relocatedFix();
+        var old=new de.dennisguse.opentracks.data.ContentProviderUtils(context).getTrack(id).statistics().totalDistance().toM();
+        main(()->service.resumeTrack(id));assertEquals(id,service.getRecordingStatus().trackId());relocatedFix();
+        java.util.concurrent.atomic.AtomicReference<de.dennisguse.opentracks.data.models.Position> last=new java.util.concurrent.atomic.AtomicReference<>();
+        new WorkoutRepository(context).forEachPoint(id,p->{if(p.position().hasLocation())last.set(p.position());});
+        assertNotNull(last.get());assertEquals("First resumed fix must not be rejected against the pre-pause anchor",1.31,last.get().latitude(),.000001);
+        assertEquals("A paused relocation must never add a distance bridge",old,new de.dennisguse.opentracks.data.ContentProviderUtils(context).getTrack(id).statistics().totalDistance().toM(),.001);
+        main(()->service.releaseMapGps(first));assertTrue(service.isRecording());
     }
     @Test public void mapPreviewRejectsUntimedFixAndKeepsRecordingPreparationIndependent(){
         main(()->{service.acquireMapGps(first);P0GpsPreparationTest.fixture(service);});fix(false);assertFalse(service.hasFreshGpsPreview());assertFalse(service.isRecording());

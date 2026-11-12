@@ -10,7 +10,8 @@ BASE_REF = 'refs/remotes/origin/feature/p0-5-1-gps-motion-quality'
 JAVA = 'src/main/java/de/dennisguse/opentracks/'
 ALLOWED_PRODUCT = {JAVA + name for name in (
     'p0/app/P0Activity.java','p0/app/P0HistoryActivity.java','p0/app/P05SettingsSectionFragment.java',
-    'p0/app/RoutePreviewModel.java','services/TrackRecordingService.java')}
+    'p0/app/RoutePreviewModel.java','services/TrackRecordingService.java',
+    'sensors/GpsHandler.java','services/handlers/TrackPointCreator.java')}
 ALLOWED_INFRA = {'build.gradle','version.properties','release-ledger.json','src/main/AndroidManifest.xml',
     'src/androidTest/AndroidManifest.xml','src/release/AndroidManifest.xml','.github/workflows/android-build.yml',
     '.github/workflows/p06-offline-map.yml','.github/scripts/release_policy.py','.github/scripts/p051_version.py'}
