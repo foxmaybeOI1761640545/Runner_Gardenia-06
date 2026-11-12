@@ -9,6 +9,7 @@ import org.mapsforge.map.android.view.MapView;
 import org.mapsforge.map.layer.Layer;
 import org.mapsforge.map.layer.cache.InMemoryTileCache;
 import org.mapsforge.map.layer.overlay.Circle;
+import org.mapsforge.map.layer.overlay.FixedPixelCircle;
 import org.mapsforge.map.layer.overlay.Polyline;
 import org.mapsforge.map.layer.renderer.TileRendererLayer;
 import org.mapsforge.map.reader.MapFile;
@@ -56,7 +57,7 @@ public final class OfflineMapView extends FrameLayout {
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            Circle marker=new Circle(new LatLong(position.latitude(),position.longitude()),8,fill,stroke);overlays.add(marker);layers.add(marker);
+            Circle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);overlays.add(marker);layers.add(marker);
         }
         map.getLayerManager().redrawLayers();
     }

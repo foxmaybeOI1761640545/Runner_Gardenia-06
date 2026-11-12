@@ -32,7 +32,7 @@ public class P06MapActivity extends AbstractActivity {
     private P0RecordingViewModel recording;
     private final ExecutorService worker=Executors.newSingleThreadExecutor();
     private final Handler main=new Handler(Looper.getMainLooper());
-    private boolean closed,started,busy,gpsWanted,centerPending;
+    private boolean closed,started,busy,gpsWanted,centerPending,initialFitDone;
     private Long trackId;
     private List<RouteGeometry.Point> points=List.of();
     private de.dennisguse.opentracks.data.models.Position position;
@@ -51,7 +51,7 @@ public class P06MapActivity extends AbstractActivity {
         binding.p06FitTrack.setOnClickListener(v->map.fitRoute());
         binding.p06MyPosition.setOnClickListener(v->{centerPending=true;if(hasLocation()){gpsWanted=true;acquireGps();if(map.centerPosition())centerPending=false;else message(R.string.p06_map_waiting_gps);}else permission.launch(P0PermissionPolicy.location().toArray(new String[0]));});
         route=new ViewModelProvider(this).get(RoutePreviewModel.class);recording=new ViewModelProvider(this).get(P0RecordingViewModel.class);
-        route.route().observe(this,result->{points=result.points();map.bind(points,position);binding.p06FitTrack.setEnabled(!points.isEmpty());if(result.failed())message(R.string.p06_map_route_failed);});
+        route.route().observe(this,result->{points=result.points();map.bind(points,position);binding.p06FitTrack.setEnabled(!points.isEmpty());if(!initialFitDone&&!points.isEmpty()&&map.mapView()!=null){initialFitDone=true;map.post(map::fitRoute);}if(result.failed())message(R.string.p06_map_route_failed);});
         recording.snapshot().observe(this,snapshot->{
             position=snapshot.freshGps()?snapshot.position():null;map.bind(points,position);
             if(centerPending&&map.centerPosition())centerPending=false;
@@ -60,6 +60,17 @@ public class P06MapActivity extends AbstractActivity {
             route.refresh(id);
         });
         load(null);
+    }
+    @Override public boolean onCreateOptionsMenu(android.view.Menu menu){menu.add(0,1,0,R.string.p06_map_licenses);return true;}
+    @Override public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item){
+        if(item.getItemId()==1){String[] files={"Mapsforge-0.25.0-README.md","Mapsforge-LGPL-3.0.txt","Mapsforge-GPL-3.0.txt","AndroidSVG-NOTICE.txt","AndroidSVG-Apache-2.0.txt"};
+            new AlertDialog.Builder(this).setTitle(R.string.p06_map_licenses).setItems(files,(dialog,which)->worker.execute(()->{
+                try(var input=getAssets().open("p06-licenses/"+files[which]);var output=new ByteArrayOutputStream()){
+                    byte[] bytes=new byte[4096];int n;while((n=input.read(bytes))!=-1)output.write(bytes,0,n);String text=output.toString(java.nio.charset.StandardCharsets.UTF_8.name());
+                    main.post(()->{if(closed)return;var content=new android.widget.TextView(this);content.setText(text);content.setTextIsSelectable(true);content.setPadding(24,24,24,24);var scroll=new android.widget.ScrollView(this);scroll.addView(content);new AlertDialog.Builder(this).setTitle(files[which]).setView(scroll).setPositiveButton(android.R.string.ok,null).show();});
+                }catch(IOException failure){main.post(()->{if(!closed)message(R.string.p0_operation_failed);});}
+            })).setNegativeButton(android.R.string.cancel,null).show();return true;}
+        return super.onOptionsItemSelected(item);
     }
     private boolean hasLocation(){return de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this);}
     private void acquireGps(){
@@ -86,7 +97,7 @@ public class P06MapActivity extends AbstractActivity {
             var result=state;var file=opened;var problem=error;
             main.post(()->{if(closed){if(file!=null)file.close();return;}setBusy(false);
                 if(problem!=null){message(R.string.p06_map_failed);return;}
-                maps=result;if(file!=null){map.load(file);map.bind(points,position);binding.p06MapStatus.setText(getString(R.string.p06_map_ready,result.current().name()));}
+                maps=result;if(file!=null){map.load(file);map.bind(points,position);if(!initialFitDone&&!points.isEmpty()){initialFitDone=true;map.post(map::fitRoute);}binding.p06MapStatus.setText(getString(R.string.p06_map_ready,result.current().name()));}
                 else{map.clear();message(R.string.p06_map_empty);}
             });
         });

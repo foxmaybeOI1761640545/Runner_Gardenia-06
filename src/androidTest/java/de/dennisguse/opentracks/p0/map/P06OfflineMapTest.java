@@ -91,6 +91,10 @@ public class P06OfflineMapTest {
                 }finally{Intents.release();}
                 assertNotNull(repository.read().current());capture(screen,"imported-airplane");
                 screen.onActivity(a->{var m=view(a).mapView();byte old=m.getModel().mapViewPosition.getZoomLevel();m.setZoomLevel((byte)(old+1));assertEquals(old+1,m.getModel().mapViewPosition.getZoomLevel());var center=m.getModel().mapViewPosition.getCenter();m.getModel().mapViewPosition.moveCenter(80,40,false);assertNotEquals(center,m.getModel().mapViewPosition.getCenter());});
+                AtomicReference<org.mapsforge.core.model.LatLong> beforePan=new AtomicReference<>();
+                screen.onActivity(a->beforePan.set(view(a).mapView().getModel().mapViewPosition.getCenter()));
+                onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(androidx.test.espresso.action.ViewActions.swipeLeft());
+                SystemClock.sleep(300);screen.onActivity(a->assertNotEquals("Real touch drag moves the map",beforePan.get(),view(a).mapView().getModel().mapViewPosition.getCenter()));
                 capture(screen,"zoom-pan");screen.recreate();waitMap(screen);capture(screen,"recreated-airplane");
                 onView(withId(R.id.p06_my_position)).perform(click());SystemClock.sleep(250);main(()->P0GpsPreparationTest.fixture(service));fix(0);fix(2);
                 assertFalse("Map GPS preview must never create a workout",service.isRecording());assertTrue(new WorkoutRepository(context).list().isEmpty());

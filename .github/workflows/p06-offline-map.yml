@@ -147,6 +147,8 @@ jobs:
           export GITHUB_SHA="${{ github.event.pull_request.head.sha || github.sha }}"
           ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
           python3 .github/scripts/p0_durability.py
+      - name: Private offline map renders after a genuine force-stop and process restart in airplane mode
+        run: python3 .github/scripts/p06_map_durability.py
       - name: Verify Debug identity without accessing release keys
         if: steps.plan.outputs.stage != '0'
         run: |

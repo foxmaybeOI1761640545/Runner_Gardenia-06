@@ -12,7 +12,7 @@ ALLOWED_PRODUCT = {JAVA + name for name in (
     'p0/app/P0Activity.java','p0/app/P0HistoryActivity.java','p0/app/P05SettingsSectionFragment.java',
     'p0/app/RoutePreviewModel.java','services/TrackRecordingService.java')}
 ALLOWED_INFRA = {'build.gradle','version.properties','release-ledger.json','src/main/AndroidManifest.xml',
-    'src/androidTest/AndroidManifest.xml','.github/workflows/android-build.yml',
+    'src/androidTest/AndroidManifest.xml','src/release/AndroidManifest.xml','.github/workflows/android-build.yml',
     '.github/workflows/p06-offline-map.yml','.github/scripts/release_policy.py','.github/scripts/p051_version.py'}
 
 

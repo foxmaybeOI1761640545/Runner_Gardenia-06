@@ -246,6 +246,11 @@ def gate():
             proof['gpsNativeEvidence'] = gps_evidence(plan['commit'])
             from p06_map_evidence import collect
             proof['offlineMapEvidence'] = collect(plan['commit'])
+            map_process=json.loads(Path('build/reports/p06-map-durability/result.json').read_text())
+            if map_process.get('commit')!=plan['commit'] or any(map_process.get(k) is not True for k in ('passed','privateMapRetained','nativeTilesRenderedAfterRestart','airplaneMode','forceStopped')) or map_process['phases']['write']['pid']==map_process['phases']['read']['pid']:raise ValueError('Actual offline map process restart is required')
+            for phase in ('write','read'):
+                if any(map_process['phases'][phase].get(k)!=v for k,v in {'tests':1,'executed':1,'failures':0,'errors':0,'skipped':0}.items()):raise ValueError('Incomplete map process execution')
+            proof['offlineMapProcessDurability']=map_process
             layout = json.loads(Path('build/reports/p05-visual/p05-layout-matrix.json').read_text())
             original_matrix = json.loads(Path('build/reports/p04-visual/p04-visual-matrix.json').read_text())
             for matrix, count in ((layout, 48), (original_matrix, 192)):

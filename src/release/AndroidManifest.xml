@@ -20,6 +20,7 @@
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
         </activity>
         <activity android:name="de.dennisguse.opentracks.p0.app.P0Activity" android:exported="false" />
+        <activity android:name="de.dennisguse.opentracks.p0.map.P06MapActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <activity android:name="de.dennisguse.opentracks.p0.app.P0SensorsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <activity android:name="de.dennisguse.opentracks.p0.app.P0SettingsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
         <activity android:name="de.dennisguse.opentracks.p0.app.P0HistoryActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
