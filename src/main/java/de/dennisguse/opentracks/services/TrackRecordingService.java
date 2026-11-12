@@ -97,18 +97,20 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     private boolean previewBeforePreparation;
     private boolean p0GpsGuard;
     private final java.util.Set<Object> mapGpsOwners=java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
+    private boolean previewBeforeMap;
 
     /** Visible map lifetime only; never begins a workout, clock or associated HR samples. */
     public void acquireMapGps(Object owner) {
         if (!de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this))
             throw new SecurityException("Fine location permission required");
+        if (mapGpsOwners.isEmpty()) previewBeforeMap=areSensorsStarted()&&!isRecording()&&!isAcquiringGps();
         mapGpsOwners.add(owner);
         try { startSensors(); } catch (RuntimeException failure) { mapGpsOwners.remove(owner);throw failure; }
     }
     public void releaseMapGps(Object owner) {
         if (!mapGpsOwners.remove(owner)) return;
         if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty()) startSensors();
-        else if (de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(this)
+        else if (previewBeforeMap && de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(this)
                 && de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) startSensors();
         else stopIdleSensors();
     }
@@ -329,7 +331,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     public void tryStartSensors() {
         if (!isRecording()&&!isAcquiringGps()&&!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) {stopSelf();return;}
         Log.i(TAG, "tryStartSensors");
-
+        if (!mapGpsOwners.isEmpty()) previewBeforeMap=true; // Explicit existing HR preview command.
         startSensors();
     }
 

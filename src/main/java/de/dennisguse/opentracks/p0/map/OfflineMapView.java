@@ -26,7 +26,7 @@ public final class OfflineMapView extends FrameLayout {
     private Position position;
     private int segmentCount;
     private final java.util.concurrent.atomic.AtomicInteger renderedTiles=new java.util.concurrent.atomic.AtomicInteger();
-    public OfflineMapView(Context context){super(context);setContentDescription("Offline vector map");}
+    public OfflineMapView(Context context){super(context);setContentDescription(context.getString(de.dennisguse.opentracks.R.string.p06_offline_map));}
     public void load(MapFile file){
         clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());
         map=new MapView(getContext());map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
@@ -45,14 +45,11 @@ public final class OfflineMapView extends FrameLayout {
     public void bind(List<RouteGeometry.Point> points,Position current){route=List.copyOf(points);position=current;drawOverlays();}
     private void drawOverlays(){
         if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:overlays)layers.remove(layer);overlays.clear();segmentCount=0;
-        Polyline line=null;
-        for(var p:route){
-            if(!p.valid()){line=null;continue;}
-            if(line==null||p.breakBefore()){
-                var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
-                line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);overlays.add(line);layers.add(line);segmentCount++;
-            }
-            line.getLatLongs().add(new LatLong(p.latitude(),p.longitude()));
+        for(var segment:MapRouteSegments.split(route)){
+            var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
+            Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
+            line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
+            overlays.add(line);layers.add(line);segmentCount++;
         }
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);

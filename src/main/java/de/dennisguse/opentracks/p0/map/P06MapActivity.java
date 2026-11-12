@@ -54,7 +54,7 @@ public class P06MapActivity extends AbstractActivity {
         route.route().observe(this,result->{points=result.points();map.bind(points,position);binding.p06FitTrack.setEnabled(!points.isEmpty());if(!initialFitDone&&!points.isEmpty()&&map.mapView()!=null){initialFitDone=true;map.post(map::fitRoute);}if(result.failed())message(R.string.p06_map_route_failed);});
         recording.snapshot().observe(this,snapshot->{
             position=snapshot.freshGps()?snapshot.position():null;map.bind(points,position);
-            if(centerPending&&map.centerPosition())centerPending=false;
+            if(centerPending&&map.centerPosition()){centerPending=false;if(maps.current()!=null)binding.p06MapStatus.setText(getString(R.string.p06_map_ready,maps.current().name()));}
             Long id=trackId;
             if(id==null&&(snapshot.session().phase()==RecordingSession.Phase.RECORDING||snapshot.session().phase()==RecordingSession.Phase.PAUSED))id=snapshot.session().trackId();
             route.refresh(id);

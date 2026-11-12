@@ -49,6 +49,11 @@ public class P06GpsOwnershipTest {
         main(()->{service.startNewTrack();service.acquireMapGps(first);P0GpsPreparationTest.fixture(service);});fix(true);var id=service.getRecordingStatus().trackId();
         main(()->service.releaseMapGps(first));assertTrue(service.isRecording());assertTrue(service.areSensorsStarted());assertEquals(id,service.getRecordingStatus().trackId());
     }
+    @Test public void defaultHeartRatePreferenceCannotKeepMapOnlySensorsAlive(){
+        de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(context,true);
+        main(()->service.acquireMapGps(first));assertTrue(service.areSensorsStarted());
+        main(()->service.releaseMapGps(first));assertFalse(service.areSensorsStarted());assertFalse(service.isRecording());
+    }
     @Test public void pausedWorkoutKeepsVisibleMapGpsAndResumeRetainsSameTrack(){
         main(()->{service.acquireMapGps(first);service.startNewTrack();P0GpsPreparationTest.fixture(service);});fix(true);var id=service.getRecordingStatus().trackId();
         main(service::endCurrentTrack);assertFalse(service.isRecording());assertTrue(service.areSensorsStarted());

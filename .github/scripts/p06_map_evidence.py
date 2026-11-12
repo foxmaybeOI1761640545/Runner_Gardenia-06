@@ -7,12 +7,8 @@ def collect(source):
     matches=[root for root in roots if (root/'p06-offline-map.json').is_file()]
     if len(matches)!=1:raise ValueError('Missing or ambiguous actual offline-map receipt')
     root=matches[0];receipt=json.loads((root/'p06-offline-map.json').read_text())
-    required=['passed','airplaneMode','safImport','zoomAndPan','currentPositionWithoutWorkout','liveTrack','historicalTrack','segmentBreaks','recreation','invalidFileRetainsMap']
-    if receipt.get('sourceCommit')!=source or any(receipt.get(key) is not True for key in required):raise ValueError('Incomplete or stale actual map acceptance')
-    names={'p06-'+name+'.png' for name in ['imported-airplane','zoom-pan','recreated-airplane','current-position','live-track','segmented-track','historical-track','invalid-file-retains-map']}
-    names|={'p06-theme-'+theme+'-'+mode+'.png' for theme in ['PRECISION','QUIET','EXPLORER','NEON'] for mode in ['dark','light']}
-    rows=receipt.get('screenshots',[])
-    if len(rows)!=16 or {row['file'] for row in rows}!=names:raise ValueError('Incomplete native map screenshot matrix')
+    validate_summary(receipt,source)
+    rows=receipt['screenshots']
     target=Path('build/reports/p06-offline-map');target.mkdir(parents=True,exist_ok=True)
     for row in rows:
         path=root/row['file']
@@ -20,3 +16,12 @@ def collect(source):
         shutil.copy2(path,target/path.name)
     shutil.copy2(root/'p06-offline-map.json',target/'p06-offline-map.json')
     return receipt
+
+
+def validate_summary(receipt,source):
+    required=['passed','airplaneMode','safImport','zoomAndPan','currentPositionWithoutWorkout','liveTrack','historicalTrack','segmentBreaks','recreation','invalidFileRetainsMap']
+    if receipt.get('sourceCommit')!=source or any(receipt.get(key) is not True for key in required):raise ValueError('Incomplete or stale actual map acceptance')
+    names={'p06-'+name+'.png' for name in ['imported-airplane','zoom-pan','recreated-airplane','current-position','live-track','segmented-track','historical-track','invalid-file-retains-map']}
+    names|={'p06-theme-'+theme+'-'+mode+'.png' for theme in ['PRECISION','QUIET','EXPLORER','NEON'] for mode in ['dark','light']}
+    rows=receipt.get('screenshots',[])
+    if len(rows)!=16 or {row['file'] for row in rows}!=names:raise ValueError('Incomplete native map screenshot matrix')

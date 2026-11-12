@@ -79,6 +79,24 @@ public class P06OfflineMapTest {
     private String shell(String command)throws Exception{
         try(var descriptor=InstrumentationRegistry.getInstrumentation().getUiAutomation().executeShellCommand(command);var input=new FileInputStream(descriptor.getFileDescriptor());var output=new ByteArrayOutputStream()){byte[] data=new byte[4096];int n;while((n=input.read(data))!=-1)output.write(data,0,n);return output.toString(java.nio.charset.StandardCharsets.UTF_8);}
     }
+    @Test public void nativeManagerSelectsAndDeletesOnlyTheChosenPrivateMap()throws Exception{
+        String first;
+        try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){first=repository.importMap(input,"Map A").selected();}
+        try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){repository.importMap(input,"Map B");}
+        try(ActivityScenario<P06MapActivity> screen=ActivityScenario.launch(P06MapActivity.class)){
+            waitMap(screen);onView(withId(R.id.p06_manage_maps)).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_offline_map)).perform(click());
+            long end=SystemClock.uptimeMillis()+10000;while(!first.equals(repository.read().selected())&&SystemClock.uptimeMillis()<end)SystemClock.sleep(100);assertEquals(first,repository.read().selected());
+            SystemClock.sleep(300);onView(withId(R.id.p06_manage_maps)).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText("Map A")).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete)).perform(click());
+            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p06_map_delete)).perform(click());
+            end=SystemClock.uptimeMillis()+10000;while(repository.read().entries().size()!=1&&SystemClock.uptimeMillis()<end)SystemClock.sleep(100);
+            assertEquals(1,repository.read().entries().size());assertEquals("Map B",repository.read().current().name());waitMap(screen);
+            assertTrue(new WorkoutRepository(context).list().isEmpty());
+        }
+    }
     @Test public void safImportAirplaneRenderGesturesCurrentLiveHistoricalTrackAndAllThemes()throws Exception{
         String airplane=shell("settings get global airplane_mode_on").strip();
         try{
@@ -101,14 +119,14 @@ public class P06OfflineMapTest {
                 SystemClock.sleep(1200);capture(screen,"current-position");
                 main(()->service.startNewTrack());for(int i=2;i<=12;i++)fix(i*2);
                 var id=service.getRecordingStatus().trackId();new SessionStore(context).save(RecordingSession.recover(id.id(),true));
-                SystemClock.sleep(1300);onView(withId(R.id.p06_fit_track)).perform(click());capture(screen,"live-track");
+                SystemClock.sleep(1300);onView(withId(R.id.p06_fit_track)).perform(androidx.test.espresso.action.ViewActions.scrollTo(),click());capture(screen,"live-track");
                 screen.onActivity(a->assertTrue(view(a).segmentCount()>0));
                 main(()->{service.getTrackPointCreator().getSensorManager().getGpsHandler().onDisconnected();P0GpsPreparationTest.fixture(service);});
                 for(int i=0;i<4;i++)fix(200+i*2);SystemClock.sleep(1300);
                 screen.onActivity(a->assertTrue("Relocation segments must not be joined",view(a).segmentCount()>=2));capture(screen,"segmented-track");
                 main(service::endCurrentTrack);assertTrue("Ending a workout keeps the visible map preview alive",service.areSensorsStarted());
                 new SessionStore(context).save(RecordingSession.ready());
-                try(ActivityScenario<P06MapActivity> history=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){waitMap(history);SystemClock.sleep(1000);onView(withId(R.id.p06_fit_track)).perform(click());capture(history,"historical-track");history.onActivity(a->assertTrue(view(a).segmentCount()>=2));}
+                try(ActivityScenario<P06MapActivity> history=ActivityScenario.launch(P06MapActivity.intent(context,id.id()))){waitMap(history);SystemClock.sleep(1000);onView(withId(R.id.p06_fit_track)).perform(androidx.test.espresso.action.ViewActions.scrollTo(),click());capture(history,"historical-track");history.onActivity(a->assertTrue(view(a).segmentCount()>=2));}
             }
             // Both visible owners are gone; no map-owned GPS may survive.
             assertFalse(service.isRecording());
