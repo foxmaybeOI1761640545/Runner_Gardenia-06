@@ -39,7 +39,7 @@ def download(url,dest):
  run(["curl","--fail","--location","--retry","5","--retry-all-errors","--connect-timeout","30","--max-time","3600",url,"--output",dest])
 def norm(value):
  value=unicodedata.normalize("NFKC",value).casefold().strip()
- for suffix in (" city","市","地区"):
+ for suffix in (" city"," county"," district"," shi","市","地区"):
   if value.endswith(suffix):value=value[:-len(suffix)].strip()
  return "".join(ch for ch in value if ch.isalnum() or "\u4e00"<=ch<="\u9fff")
 def polygon_parts(g):
@@ -59,19 +59,18 @@ def main():
  print("Downloading current Geofabrik China PBF.",flush=True)
  download(CHINA_URL,china); china_hash=sha256(china)
  china_info=subprocess.run(["osmium","fileinfo","-e",china],check=True,capture_output=True,text=True).stdout
- run(["osmium","tags-filter","--overwrite","-o",admin,china,"r/admin_level=5","r/admin_level=6","r/admin_level=7"])
+ run(["osmium","tags-filter","--overwrite","-o",admin,china,"r/admin_level=4","r/admin_level=5","r/admin_level=6","r/admin_level=7"])
  run(["osmium","export","--overwrite","--attributes=type,id","--geometry-types=polygon","-o",gj,admin])
  features=json.loads(gj.read_text(encoding="utf-8"))["features"]
  aliases={c:{norm(x) for x in xs} for c,xs in CITIES.items()}; candidates={c:[] for c in CITIES}
  for ft in features:
   p=ft.get("properties") or {}
-  if p.get("boundary")!="administrative":continue
   typ=p.get("@type")
   if typ and typ!="relation":continue
   try:level=int(p.get("admin_level",-1))
   except (ValueError,TypeError):continue
-  if level not in (5,6,7):continue
-  names=[p.get(k,"") for k in ("name","name:zh","name:zh-Hans","name:en","official_name")]
+  if level not in (4,5,6,7):continue
+  names=[p.get(k,"") for k in ("name","name:zh","name:zh-Hans","name:en","official_name","alt_name","short_name","int_name")]
   nset={norm(str(x)) for x in names if x}; matched=[c for c,a in aliases.items() if nset&a]
   if not matched:continue
   g=shape(ft["geometry"])
@@ -80,6 +79,58 @@ def main():
   if not parts:continue
   g=unary_union(parts)
   for c in matched:candidates[c].append((level,g,p.get("@id","unknown"),names))
+
+ # Zhangzhou's prefecture-level boundary is absent or incomplete in the current OSM extract.
+ # Reconstruct the Zhangzhou coverage from its 11 county-level administrative relations
+ # only when every county polygon is present; do not substitute Fujian Province or a rectangle.
+ if not candidates["漳州"]:
+  county_aliases={
+   "芗城区":["芗城区","Xiangcheng District"],
+   "龙文区":["龙文区","Longwen District"],
+   "龙海区":["龙海区","龙海市","Longhai District","Longhai City"],
+   "长泰区":["长泰区","长泰县","Changtai District","Changtai County"],
+   "云霄县":["云霄县","Yunxiao County"],
+   "漳浦县":["漳浦县","Zhangpu County"],
+   "诏安县":["诏安县","Zhao'an County","Zhaoan County"],
+   "东山县":["东山县","Dongshan County"],
+   "南靖县":["南靖县","Nanjing County"],
+   "平和县":["平和县","Pinghe County"],
+   "华安县":["华安县","Hua'an County","Huaan County"]
+  }
+  county_rows={name:[] for name in county_aliases}
+  for ft in features:
+   p=ft.get("properties") or {}
+   typ=p.get("@type")
+   if typ and typ!="relation":continue
+   try:level=int(p.get("admin_level",-1))
+   except (ValueError,TypeError):continue
+   if level!=6:continue
+   names=[p.get(k,"") for k in ("name","name:zh","name:zh-Hans","name:en","official_name","alt_name","short_name","int_name")]
+   nset={norm(str(x)) for x in names if x}
+   for county,aliases0 in county_aliases.items():
+    if nset & {norm(x) for x in aliases0}:
+     g=shape(ft["geometry"])
+     if not g.is_valid:g=make_valid(g)
+     parts=polygon_parts(g)
+     if parts:county_rows[county].append((unary_union(parts),p.get("@id","unknown"),names))
+  missing_counties=[n for n,rows in county_rows.items() if not rows]
+  if not missing_counties:
+   county_geoms=[]; county_ids=[]; county_names=[]
+   for county,rows in county_rows.items():
+    rows.sort(key=lambda x:-x[0].area)
+    geom,rid,names=rows[0]
+    county_geoms.append(geom);county_ids.append(rid)
+    county_names.append(county+": "+", ".join(x for x in names if x))
+   candidates["漳州"]=[(6,unary_union(county_geoms),"county-union:"+",".join(county_ids),county_names)]
+  else:
+   (OUT/"zhangzhou-county-diagnostic.json").write_text(
+    json.dumps({"missing_counties":missing_counties,
+     "found_counties":[n for n,rows in county_rows.items() if rows],
+     "all_admin_names":[{"level":(ft.get("properties") or {}).get("admin_level"),
+      "names":[(ft.get("properties") or {}).get(k) for k in ("name","name:zh","name:en") if (ft.get("properties") or {}).get(k)]}
+      for ft in features if any("漳" in str((ft.get("properties") or {}).get(k,"")) or "zhang" in str((ft.get("properties") or {}).get(k,"")).lower()
+      for k in ("name","name:zh","name:en","official_name"))]},ensure_ascii=False,indent=2),encoding="utf-8")
+
  missing=[c for c,rows in candidates.items() if not rows]
  if missing:
   sample=[]
@@ -87,7 +138,7 @@ def main():
    p=ft.get("properties") or {}
    if p.get("boundary")=="administrative":
     sample.append({"level":p.get("admin_level"),"names":[p.get(k) for k in ("name","name:zh","name:en") if p.get(k)]})
-  (OUT/"boundary-candidates-diagnostic.json").write_text(json.dumps({"missing":missing,"sample":sample[:600]},ensure_ascii=False,indent=2),encoding="utf-8")
+  (OUT/"boundary-candidates-diagnostic.json").write_text(json.dumps({"missing":missing,"sample":sample},ensure_ascii=False,indent=2),encoding="utf-8")
   raise RuntimeError("Missing exact administrative boundary relations: "+", ".join(missing)+". No rectangle fallback.")
  local=CRS.from_proj4("+proj=aeqd +lat_0=23.2 +lon_0=114.8 +datum=WGS84 +units=m +no_defs")
  to_local=Transformer.from_crs("EPSG:4326",local,always_xy=True).transform
