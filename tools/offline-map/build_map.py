@@ -112,7 +112,7 @@ def main():
      g=shape(ft["geometry"])
      if not g.is_valid:g=make_valid(g)
      parts=polygon_parts(g)
-     if parts:county_rows[county].append((unary_union(parts),p.get("@id","unknown"),names))
+     if parts:county_rows[county].append((unary_union(parts),str(p.get("@id","unknown")),names))
   missing_counties=[n for n,rows in county_rows.items() if not rows]
   # Longhai District (formerly Longhai City) is absent from the current Geofabrik
   # China extract. Fetch its complete OSM boundary relation instead of using a
@@ -150,7 +150,7 @@ def main():
     geom,rid,names=rows[0]
     county_geoms.append(geom);county_ids.append(rid)
     county_names.append(county+": "+", ".join(x for x in names if x))
-   candidates["漳州"]=[(6,unary_union(county_geoms),"county-union:"+",".join(county_ids),county_names)]
+   candidates["漳州"]=[(6,unary_union(county_geoms),"county-union:"+",".join(map(str,county_ids)),county_names)]
   else:
    (OUT/"zhangzhou-county-diagnostic.json").write_text(
     json.dumps({"missing_counties":missing_counties,
