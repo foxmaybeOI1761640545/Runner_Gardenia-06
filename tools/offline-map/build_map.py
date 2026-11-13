@@ -187,7 +187,7 @@ def main():
   "geometry":mapping(target)}]},ensure_ascii=False),encoding="utf-8")
  print("Selected boundaries:",json.dumps(selected,ensure_ascii=False),flush=True)
  print("Target bounds:",bounds,flush=True)
- run(["osmium","extract","--overwrite","--polygon",target_gj,"--strategy","smart","-S","types=multipolygon,boundary",
+ run(["osmium","extract","--overwrite","--verbose","--progress","--polygon",target_gj,"--strategy","smart","-S","types=multipolygon",
       "--set-bounds","-o",region,china])
  region_info=subprocess.run(["osmium","fileinfo","-e",region],check=True,capture_output=True,text=True).stdout
  download(WRITER_URL,writer)
