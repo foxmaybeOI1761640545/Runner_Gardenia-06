@@ -35,7 +35,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends osmosis osmium-tool maven python3-shapely python3-pyproj
           python3 -c "import shapely, pyproj; print('Shapely', shapely.__version__, 'pyproj', pyproj.__version__)"
-          osmosis --version
+          dpkg-query -W osmosis
           osmium --version
           java -version
           df -h
