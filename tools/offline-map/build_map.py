@@ -114,6 +114,35 @@ def main():
      parts=polygon_parts(g)
      if parts:county_rows[county].append((unary_union(parts),p.get("@id","unknown"),names))
   missing_counties=[n for n,rows in county_rows.items() if not rows]
+  # Longhai District (formerly Longhai City) is absent from the current Geofabrik
+  # China extract. Fetch its complete OSM boundary relation instead of using a
+  # rectangle or silently omitting part of Zhangzhou.
+  if "龙海区" in missing_counties:
+   relation_id="3242114"
+   relation_xml=WORK/"longhai-relation.osm"
+   relation_pbf=WORK/"longhai-relation.osm.pbf"
+   relation_gj=WORK/"longhai-relation.geojson"
+   relation_url="https://api.openstreetmap.org/api/0.6/relation/"+relation_id+"/full"
+   print("Fetching missing Longhai administrative relation "+relation_id+" from OpenStreetMap API.",flush=True)
+   download(relation_url,relation_xml)
+   run(["osmium","cat",relation_xml,"--overwrite","-o",relation_pbf])
+   run(["osmium","export","--overwrite","--attributes=type,id","--geometry-types=polygon","-o",relation_gj,relation_pbf])
+   relation_features=json.loads(relation_gj.read_text(encoding="utf-8"))["features"]
+   found=False
+   for ft in relation_features:
+    p=ft.get("properties") or {}
+    if p.get("@type")!="relation" or str(p.get("@id"))!=relation_id or not ft.get("geometry"):
+     continue
+    g=shape(ft["geometry"])
+    if not g.is_valid:g=make_valid(g)
+    parts=polygon_parts(g)
+    if not parts:continue
+    county_rows["龙海区"].append((unary_union(parts),"relation/"+relation_id,["龙海区","Longhai District"]))
+    found=True
+    break
+   if not found:
+    raise RuntimeError("OpenStreetMap relation "+relation_id+" did not yield a valid Longhai polygon; refusing to build an incomplete Zhangzhou map.")
+   missing_counties=[n for n,rows in county_rows.items() if not rows]
   if not missing_counties:
    county_geoms=[]; county_ids=[]; county_names=[]
    for county,rows in county_rows.items():
