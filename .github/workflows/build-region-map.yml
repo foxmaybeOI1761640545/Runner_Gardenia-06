@@ -1,0 +1,178 @@
+name: Build Guangdong-East Fujian offline map
+
+on:
+  push:
+    branches:
+      - data/region-map-gd-prd-east-fujian
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: regional-offline-map-build
+  cancel-in-progress: false
+
+jobs:
+  build-map:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Checkout map build recipe
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install OSM tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y osmium-tool maven unzip zip
+          python -m pip install --upgrade pip
+          python -m pip install osmium shapely pyproj
+
+      - name: Download regional OSM source extracts
+        run: |
+          mkdir -p work/input work/extract work/tmp dist
+          cd work/input
+          for region in guangdong fujian; do
+            curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 --max-time 2400 \
+              "https://download.geofabrik.de/asia/china/${region}-latest.osm.pbf" \
+              -o "${region}-latest.osm.pbf"
+            curl --fail --location --retry 5 --retry-all-errors --connect-timeout 30 --max-time 120 \
+              "https://download.geofabrik.de/asia/china/${region}-latest.osm.pbf.md5" \
+              -o "${region}-latest.osm.pbf.md5"
+            md5sum --check "${region}-latest.osm.pbf.md5"
+            osmium fileinfo --extended "${region}-latest.osm.pbf" > "${region}-fileinfo.txt"
+          done
+
+      - name: Build exact target coverage polygon
+        run: |
+          python tools/offline-map/build_region.py \
+            --guangdong work/input/guangdong-latest.osm.pbf \
+            --fujian work/input/fujian-latest.osm.pbf \
+            --out work/region
+
+      - name: Extract only the requested continuous region
+        run: |
+          osmium extract \
+            --polygon=work/region/region.geojson \
+            --strategy=smart \
+            --set-bounds \
+            --option=types=multipolygon,boundary \
+            --output=work/extract/guangdong-region.osm.pbf \
+            work/input/guangdong-latest.osm.pbf
+          osmium extract \
+            --polygon=work/region/region.geojson \
+            --strategy=smart \
+            --set-bounds \
+            --option=types=multipolygon,boundary \
+            --output=work/extract/fujian-region.osm.pbf \
+            work/input/fujian-latest.osm.pbf
+          osmium merge \
+            work/extract/guangdong-region.osm.pbf \
+            work/extract/fujian-region.osm.pbf \
+            --output=work/extract/combined-region.osm.pbf
+          osmium fileinfo --extended work/extract/combined-region.osm.pbf > work/combined-fileinfo.txt
+
+      - name: Build Mapsforge 0.25.0 map writer plugin
+        uses: actions/checkout@v4
+        with:
+          repository: mapsforge/mapsforge
+          ref: '0.25.0'
+          path: mapsforge-src
+
+      - name: Compile Mapsforge writer matching the installed P0.6 reader
+        run: |
+          cd mapsforge-src
+          ./gradlew --no-daemon :mapsforge-map-writer:fatJar
+          mkdir -p "$HOME/.openstreetmap/osmosis/plugins"
+          find mapsforge-map-writer/build/libs -type f -name '*jar-with-dependencies.jar' -print -quit | \
+            xargs -r -I{} cp "{}" "$HOME/.openstreetmap/osmosis/plugins/mapsforge-map-writer-0.25.0-jar-with-dependencies.jar"
+          test -s "$HOME/.openstreetmap/osmosis/plugins/mapsforge-map-writer-0.25.0-jar-with-dependencies.jar"
+
+      - name: Install Osmosis and generate the Mapsforge file
+        run: |
+          curl --fail --location --retry 5 --retry-all-errors \
+            https://github.com/openstreetmap/osmosis/releases/download/0.49.2/osmosis-0.49.2.zip \
+            -o work/osmosis.zip
+          mkdir -p work/osmosis
+          unzip -q work/osmosis.zip -d work/osmosis
+          OSMOSIS_BIN="$(find work/osmosis -type f -path '*/bin/osmosis' -print -quit)"
+          test -n "$OSMOSIS_BIN"
+          chmod +x "$OSMOSIS_BIN"
+          export JAVACMD_OPTIONS="-Xmx6G -XX:+UseG1GC"
+          "$OSMOSIS_BIN" \
+            --rb file=work/extract/combined-region.osm.pbf \
+            --mw file=dist/RunnerGardenia_GD_PRD_East_Fujian.map \
+              type=hd \
+              threads=2 \
+              map-start-position=23.45,115.65 \
+              map-start-zoom=8 \
+              preferred-languages=zh,en \
+              tag-values=true \
+              simplification-factor=1.0 \
+              simplification-max-zoom=12 \
+              label-position=true \
+              polylabel=true \
+              polygon-clipping=true \
+              way-clipping=true \
+              comment="OpenStreetMap contributors; Guangdong PRD and East Guangdong cities plus Zhangzhou, Fujian; generated for Runner Gardenia P0.6"
+
+      - name: Validate the map with Mapsforge 0.25.0 reader
+        run: |
+          mvn -B -q -f tools/offline-map/validator-pom.xml dependency:build-classpath -Dmdep.outputFile=work/mapsforge-classpath.txt
+          CP="$(cat work/mapsforge-classpath.txt)"
+          javac -encoding UTF-8 -cp "$CP" -d work tools/offline-map/ValidateMap.java
+          java -cp "work:$CP" ValidateMap \
+            dist/RunnerGardenia_GD_PRD_East_Fujian.map \
+            work/region/map-samples.csv
+          test "$(stat -c %s dist/RunnerGardenia_GD_PRD_East_Fujian.map)" -le 1932735283
+
+      - name: Assemble manifest and import guide
+        run: |
+          python tools/offline-map/package_manifest.py \
+            --region work/region \
+            --map dist/RunnerGardenia_GD_PRD_East_Fujian.map \
+            --guangdong-info work/input/guangdong-fileinfo.txt \
+            --fujian-info work/input/fujian-fileinfo.txt \
+            --combined-info work/combined-fileinfo.txt \
+            --out dist
+          cp work/region/region.geojson dist/region.geojson
+          cp work/region/boundary-audit.json dist/boundary-audit.json
+          cp work/region/map-samples.csv dist/map-samples.csv
+          cp work/input/guangdong-latest.osm.pbf.md5 dist/guangdong-source.md5
+          cp work/input/fujian-latest.osm.pbf.md5 dist/fujian-source.md5
+          sha256sum dist/RunnerGardenia_GD_PRD_East_Fujian.map > dist/SHA256SUMS.txt
+          cd dist
+          zip -1 -q RunnerGardenia_GD_PRD_East_Fujian_bundle.zip \
+            RunnerGardenia_GD_PRD_East_Fujian.map \
+            README_IMPORT_CN.md manifest.json boundary-audit.json region.geojson \
+            map-samples.csv SHA256SUMS.txt guangdong-source.md5 fujian-source.md5
+
+      - name: Upload map and audit evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: RunnerGardenia-GD-PRD-East-Fujian-OfflineMap
+          path: |
+            dist/RunnerGardenia_GD_PRD_East_Fujian.map
+            dist/RunnerGardenia_GD_PRD_East_Fujian_bundle.zip
+            dist/README_IMPORT_CN.md
+            dist/manifest.json
+            dist/boundary-audit.json
+            dist/region.geojson
+            dist/map-samples.csv
+            dist/SHA256SUMS.txt
+            dist/guangdong-source.md5
+            dist/fujian-source.md5
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
