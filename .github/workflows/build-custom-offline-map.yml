@@ -1,0 +1,62 @@
+name: Build Runner Gardenia custom offline map
+
+on:
+  push:
+    branches:
+      - tools/offline-map-custom-area-build
+    paths:
+      - tools/offline-map/build_map.py
+      - .github/workflows/build-custom-offline-map.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: runner-gardenia-custom-offline-map
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and validate Mapsforge regional map
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Checkout build specification
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install OSM and map build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends osmosis osmium-tool maven python3-shapely python3-pyproj
+          python3 -c "import shapely, pyproj; print('Shapely', shapely.__version__, 'pyproj', pyproj.__version__)"
+          osmosis --version
+          osmium --version
+          java -version
+          df -h
+
+      - name: Build custom regional map
+        env:
+          RUNNER_TEMP: ${{ runner.temp }}
+        run: |
+          python3 tools/offline-map/build_map.py
+
+      - name: Upload map and acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: RunnerGardenia-GD-PRD-Zhangzhou-Dongshan
+          path: |
+            output/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+            output/ATTRIBUTION.txt
+            output/build-manifest.json
+            output/acceptance-report.md
+            output/boundary-candidates-diagnostic.json
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14
