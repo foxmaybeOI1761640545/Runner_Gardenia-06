@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: runner-gardenia-custom-offline-map
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
