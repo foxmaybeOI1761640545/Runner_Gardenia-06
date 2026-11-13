@@ -4,7 +4,7 @@ import hashlib, json, os, subprocess, unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 from pyproj import CRS, Transformer
-from shapely.geometry import shape, mapping
+from shapely.geometry import Point, shape, mapping
 from shapely.ops import transform, unary_union
 from shapely.validation import make_valid
 
@@ -38,10 +38,30 @@ def sha256(path):
 def download(url,dest):
  run(["curl","--fail","--location","--retry","5","--retry-all-errors","--connect-timeout","30","--max-time","3600",url,"--output",dest])
 def norm(value):
- value=unicodedata.normalize("NFKC",value).casefold().strip()
- for suffix in (" city"," county"," district"," shi","市","地区"):
-  if value.endswith(suffix):value=value[:-len(suffix)].strip()
+ value=unicodedata.normalize("NFKC",str(value)).casefold().strip()
  return "".join(ch for ch in value if ch.isalnum() or "\u4e00"<=ch<="\u9fff")
+def has_chinese(value):
+ return any("\u4e00"<=ch<="\u9fff" for ch in str(value))
+def tag_values(value):
+ if value is None:return []
+ if isinstance(value,list):items=value
+ else:items=str(value).split(";")
+ return [str(x).strip() for x in items if str(x).strip()]
+def admin_match_names(props):
+ # Chinese names take precedence. If a Chinese name exists but does not
+ # match the requested Chinese administrative name, never fall back to a
+ # homonymous English alias such as Zhongshan County or Huizhou District.
+ zh=[]
+ for key in ("name:zh","name:zh-Hans","name:zh-Hant"):
+  zh.extend(tag_values(props.get(key)))
+ if not zh:
+  for key in ("name","official_name"):
+   zh.extend(x for x in tag_values(props.get(key)) if has_chinese(x))
+ if zh:return "zh",{norm(x) for x in zh},zh
+ en=[]
+ for key in ("name:en","int_name","name","official_name:en"):
+  en.extend(x for x in tag_values(props.get(key)) if not has_chinese(x))
+ return "en",{norm(x) for x in en},en
 def polygon_parts(g):
  if g.is_empty:return []
  if g.geom_type=="Polygon":return [g]
@@ -62,7 +82,10 @@ def main():
  run(["osmium","tags-filter","--overwrite","-o",admin,china,"r/admin_level=4","r/admin_level=5","r/admin_level=6","r/admin_level=7"])
  run(["osmium","export","--overwrite","--attributes=type,id","--geometry-types=polygon","-o",gj,admin])
  features=json.loads(gj.read_text(encoding="utf-8"))["features"]
- aliases={c:{norm(x) for x in xs} for c,xs in CITIES.items()}; candidates={c:[] for c in CITIES}
+ aliases={
+  "zh":{c:{norm(x) for x in xs if has_chinese(x)} for c,xs in CITIES.items()},
+  "en":{c:{norm(x) for x in xs if not has_chinese(x)} for c,xs in CITIES.items()}
+ }; candidates={c:[] for c in CITIES}
  for ft in features:
   p=ft.get("properties") or {}
   typ=p.get("@type")
@@ -71,7 +94,8 @@ def main():
   except (ValueError,TypeError):continue
   if level not in (4,5,6,7):continue
   names=[p.get(k,"") for k in ("name","name:zh","name:zh-Hans","name:en","official_name","alt_name","short_name","int_name")]
-  nset={norm(str(x)) for x in names if x}; matched=[c for c,a in aliases.items() if nset&a]
+  lang,nset,_=admin_match_names(p)
+  matched=[c for c,a in aliases[lang].items() if nset&a]
   if not matched:continue
   g=shape(ft["geometry"])
   if not g.is_valid:g=make_valid(g)
@@ -97,6 +121,10 @@ def main():
    "平和县":["平和县","Pinghe County"],
    "华安县":["华安县","Hua'an County","Huaan County"]
   }
+  county_aliases_by_lang={
+   "zh":{n:{norm(x) for x in xs if has_chinese(x)} for n,xs in county_aliases.items()},
+   "en":{n:{norm(x) for x in xs if not has_chinese(x)} for n,xs in county_aliases.items()}
+  }
   county_rows={name:[] for name in county_aliases}
   for ft in features:
    p=ft.get("properties") or {}
@@ -106,9 +134,9 @@ def main():
    except (ValueError,TypeError):continue
    if level!=6:continue
    names=[p.get(k,"") for k in ("name","name:zh","name:zh-Hans","name:en","official_name","alt_name","short_name","int_name")]
-   nset={norm(str(x)) for x in names if x}
-   for county,aliases0 in county_aliases.items():
-    if nset & {norm(x) for x in aliases0}:
+   lang,nset,_=admin_match_names(p)
+   for county,county_aliases0 in county_aliases_by_lang[lang].items():
+    if nset & county_aliases0:
      g=shape(ft["geometry"])
      if not g.is_valid:g=make_valid(g)
      parts=polygon_parts(g)
@@ -172,16 +200,53 @@ def main():
  local=CRS.from_proj4("+proj=aeqd +lat_0=23.2 +lon_0=114.8 +datum=WGS84 +units=m +no_defs")
  to_local=Transformer.from_crs("EPSG:4326",local,always_xy=True).transform
  to_wgs=Transformer.from_crs(local,"EPSG:4326",always_xy=True).transform
- selected=[]; geoms=[]
+ city_test_points={
+  "广州":TEST_POINTS["Guangzhou"],"深圳":TEST_POINTS["Shenzhen"],"珠海":TEST_POINTS["Zhuhai"],
+  "佛山":TEST_POINTS["Foshan"],"东莞":TEST_POINTS["Dongguan"],"中山":TEST_POINTS["Zhongshan"],
+  "江门":TEST_POINTS["Jiangmen"],"惠州":TEST_POINTS["Huizhou"],"肇庆":TEST_POINTS["Zhaoqing"],
+  "汕尾":TEST_POINTS["Shanwei"],"揭阳":TEST_POINTS["Jieyang"],"汕头":TEST_POINTS["Shantou"],
+  "潮州":TEST_POINTS["Chaozhou"],"漳州":TEST_POINTS["Zhangzhou"]
+ }
+ selected=[]; geoms=[]; boundary_diagnostics={}
  for city,rows in candidates.items():
-  rows.sort(key=lambda x:(0 if x[0]==6 else 1,-transform(to_local,x[1]).area))
-  level,g,rid,names=rows[0]; metric=transform(to_local,g)
+  lat,lon=city_test_points[city]; test_point=transform(to_local,Point(lon,lat))
+  viable=[]
+  boundary_diagnostics[city]=[]
+  for level,g,rid,names in rows:
+   metric=transform(to_local,g)
+   covered=metric.buffer(750).covers(test_point)
+   boundary_diagnostics[city].append({"admin_level":level,"osm_relation_id":rid,
+    "matched_names":[x for x in names if x],"area_km2":round(metric.area/1e6,2),
+    "contains_test_point_with_750m_tolerance":covered})
+   if covered:viable.append((level,g,rid,names,metric))
+  if not viable:
+   (OUT/"boundary-candidates-diagnostic.json").write_text(json.dumps({
+    "status":"failed","reason":"No matching administrative relation contains the known city-center test point",
+    "city":city,"test_point_lat_lon":[lat,lon],"candidates":boundary_diagnostics
+   },ensure_ascii=False,indent=2),encoding="utf-8")
+   raise RuntimeError(f"No exact administrative boundary for {city} contains its known test point ({lat},{lon}).")
+  # Prefer prefecture-level city boundaries (admin_level=5); use level 6 only
+  # for directly-administered cities when no level-5 relation covers the city center.
+  viable.sort(key=lambda x:(0 if x[0]==5 else 1 if x[0]==6 else 2,-x[4].area))
+  level,g,rid,names,metric=viable[0]
   if metric.area<100_000_000:raise RuntimeError(f"Suspiciously small boundary for {city}: {metric.area/1e6:.1f} km2")
+  if city=="漳州":
+   for point_name in ("Zhangzhou","Dongshan Island"):
+    plat,plon=TEST_POINTS[point_name]
+    if not metric.buffer(750).covers(transform(to_local,Point(plon,plat))):
+     raise RuntimeError(f"Zhangzhou boundary does not cover required {point_name} test point ({plat},{plon}).")
   geoms.append(metric); selected.append({"city":city,"admin_level":level,"osm_relation_id":rid,
-    "matched_names":[x for x in names if x],"area_km2":round(metric.area/1e6,2)})
+    "matched_names":[x for x in names if x],"area_km2":round(metric.area/1e6,2),
+    "test_point_lat_lon":[lat,lon],"test_point_covered":True})
+ (OUT/"boundary-candidates-diagnostic.json").write_text(json.dumps({
+  "status":"passed","selection_rule":"Chinese administrative names take precedence; English aliases are used only when no Chinese name is available; selected relation must contain the city's known test point.",
+  "selected":selected,"candidates":boundary_diagnostics
+ },ensure_ascii=False,indent=2),encoding="utf-8")
  dissolved=unary_union(geoms).buffer(750)
  if not dissolved.is_valid:dissolved=make_valid(dissolved)
  target=transform(to_wgs,dissolved); bounds=target.bounds
+ if bounds[0]<108 or bounds[2]>121 or bounds[1]<18 or bounds[3]>28:
+  raise RuntimeError(f"Selected regional boundary union is geographically implausible: {bounds}. Check for homonymous or remote administrative relations.")
  target_gj.write_text(json.dumps({"type":"FeatureCollection","features":[{"type":"Feature",
   "properties":{"name":"Runner Gardenia PRD Eastern Guangdong Zhangzhou","buffer_m":750},
   "geometry":mapping(target)}]},ensure_ascii=False),encoding="utf-8")
@@ -237,7 +302,9 @@ public class MapFileCheck {
   "bounds_wgs84":{"min_lon":bounds[0],"min_lat":bounds[1],"max_lon":bounds[2],"max_lat":bounds[3]},
   "region_extract_fileinfo":region_info,
   "map":{"filename":MAP_NAME,"bytes":MAP_PATH.stat().st_size,"sha256":sha256(MAP_PATH)},
-  "validation":{"reader":"Mapsforge map-reader 0.25.0","test_points":list(TEST_POINTS),"reader_output":result.stdout},
+  "validation":{"reader":"Mapsforge map-reader 0.25.0","test_points":list(TEST_POINTS),
+   "boundary_containment":"All 14 selected city-center points and the Dongshan Island point are required to fall inside the selected boundary union (750 m tolerance).",
+   "reader_output":result.stdout},
   "built_at_utc":datetime.now(timezone.utc).isoformat()}
  (OUT/"build-manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
  lines=["# Runner Gardenia Custom Offline Map — Acceptance Report","",
@@ -245,7 +312,9 @@ public class MapFileCheck {
   f"- Size: {MAP_PATH.stat().st_size:,} bytes",f"- SHA-256: {manifest['map']['sha256']}",
   "- Reader: Mapsforge 0.25.0","- Target boundaries: 14 requested city relations",
   "- Meizhou: full prefecture excluded; no route corridor supplied",
-  "- West Guangdong: excluded except complete OSM ways crossing the selected boundary","",
+  "- West Guangdong: excluded except complete OSM ways crossing the selected boundary",
+  "- Boundary validation: all 14 city-center points and Dongshan Island are checked against the selected administrative geometry with a 750 m tolerance",
+  "",
   "## Selected boundaries","","| City | admin_level | OSM relation | area km² |","|---|---:|---:|---:|"]
  for row in selected:lines.append(f"| {row['city']} | {row['admin_level']} | {row['osm_relation_id']} | {row['area_km2']} |")
  lines += ["","## Reader checks","",result.stdout.rstrip(),"",
