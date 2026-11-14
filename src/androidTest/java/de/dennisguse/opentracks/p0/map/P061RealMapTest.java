@@ -53,7 +53,13 @@ public class P061RealMapTest {
             if(snapshot[0]!=null){var expected=snapshot[0].tiles().stream().filter(t->bounds.intersects(t.tile().getBoundingBox())).toList();
                 complete[0]=!expected.isEmpty()&&expected.stream().allMatch(OfflineMapView.TileState::cached);}
         });if(complete[0]){SystemClock.sleep(500);return snapshot[0];}SystemClock.sleep(150);}while(SystemClock.uptimeMillis()<until);
-        fail("Every visible file-supported tile must finish rendering before capture; partial screenshots are not acceptance");return null;
+        String diagnostic="no snapshot";
+        try{var repository=new OfflineMapRepository(context);var file=repository.open(repository.read().current());
+            try{diagnostic=MapDiagnostics.inspect(file,snapshot[0]);}finally{file.close();}
+            P0UiCapture.save("p061-incomplete-viewport");
+        }catch(Exception failure){diagnostic+="; diagnostic failed: "+failure;}
+        System.out.println("P061_INCOMPLETE_VIEWPORT "+diagnostic);
+        fail("Every visible file-supported tile must finish rendering before capture; partial screenshots are not acceptance: "+diagnostic);return null;
     }
     private File privateFile(OfflineMapRepository.State state){return new File(context.getFilesDir(),"offline-maps/"+state.selected()+".map");}
     @Test public void realMapSafImportFlightModeFeaturesRenderRecreateAndIndependentRestart()throws Exception{

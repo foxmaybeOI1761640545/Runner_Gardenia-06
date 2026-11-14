@@ -45,7 +45,7 @@ def allowed(path):
         or path.startswith(('.github/scripts/p061_','.github/tests/test_p061_')) and path.endswith('.py')
         or path=='.github/scripts/check_p061_source.py'
         or path in {'src/main/res/values/p06_map_strings.xml','src/main/res/values-zh/p06_map_strings.xml',
-                    'src/test/java/de/dennisguse/opentracks/p0/RealMapFileTest.java'})
+                    'src/test/java/de/dennisguse/opentracks/p0/RealMapFileTest.java','src/test/java/de/dennisguse/opentracks/p0/MapRenderBudgetTest.java'})
 
 def verify_changes(rows):
     if not rows:

@@ -6,7 +6,7 @@ from p0_pipeline import scoped_sources,MANDATORY
 from p06_map_evidence import collect
 CLASSES=sorted(set(MANDATORY+['de.dennisguse.opentracks.p0.'+name for name in [
  'P0GpsRecordingTest','P0GpsPreparationTest','P051GpsUiTest','P05HistoryBatchTest','P0SensorsTest',
- 'map.P061GpsPreferencesTest','map.P06GpsOwnershipTest','map.P06MapRepositoryTest','map.P06OfflineMapTest',
+ 'map.P061RealMapTest','map.P061GpsPreferencesTest','map.P06GpsOwnershipTest','map.P06MapRepositoryTest','map.P06OfflineMapTest',
  'map.P06MapPersistenceTest','map.P06RouteReadTest']]))
 
 def run():

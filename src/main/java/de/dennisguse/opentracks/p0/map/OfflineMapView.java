@@ -23,7 +23,9 @@ public final class OfflineMapView extends FrameLayout {
     private final Map<org.mapsforge.core.model.Tile, org.mapsforge.map.layer.queue.Job> tileJobs = new LinkedHashMap<>();
     private InMemoryTileCache tileCache;
     public record TileState(org.mapsforge.core.model.Tile tile, boolean cached) {}
-    public record DiagnosticViewport(LatLong center, byte zoom, List<TileState> tiles) {}
+    public record DiagnosticViewport(LatLong center, byte zoom, List<TileState> tiles,
+            int tileSize,int cacheCapacity,int viewWidth,int viewHeight,int frameWidth,int frameHeight,
+            double overdraw,int completedTiles) {}
     /** Only captures UI/cache state here; file reads belong to the Activity's worker. */
     public DiagnosticViewport diagnosticViewport() {
         if (map == null) return null;
@@ -44,7 +46,10 @@ public final class OfflineMapView extends FrameLayout {
                 }
             }
         }
-        return new DiagnosticViewport(center, zoom, List.copyOf(rows));
+        var frame=map.getModel().frameBufferModel.getDimension();
+        return new DiagnosticViewport(center,zoom,List.copyOf(rows),map.getModel().displayModel.getTileSize(),
+                tileCache.getCapacity(),map.getWidth(),map.getHeight(),frame==null?0:frame.width,frame==null?0:frame.height,
+                map.getModel().frameBufferModel.getOverdrawFactor(),renderedTiles.get());
     }
     private final List<Layer> overlays=new ArrayList<>();
     private List<RouteGeometry.Point> route=List.of();
@@ -53,8 +58,8 @@ public final class OfflineMapView extends FrameLayout {
     private final java.util.concurrent.atomic.AtomicInteger renderedTiles=new java.util.concurrent.atomic.AtomicInteger();
     public OfflineMapView(Context context){super(context);setContentDescription(context.getString(de.dennisguse.opentracks.R.string.p06_offline_map));}
     public void load(MapFile file){
-        clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());
-        map=new MapView(getContext());map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
+        clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());MapRenderBudget.configure();
+        map=new MapView(getContext());map.getModel().frameBufferModel.setOverdrawFactor(MapRenderBudget.OVERDRAW);map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
         map.getMapZoomControls().setAutoHide(false);
         map.getMapZoomControls().getButtonZoomIn().setId(de.dennisguse.opentracks.R.id.p06_zoom_in);
         map.getMapZoomControls().getButtonZoomIn().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_in));
@@ -62,7 +67,7 @@ public final class OfflineMapView extends FrameLayout {
         map.getMapZoomControls().getButtonZoomOut().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_out));
         addView(map,new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
         int tileSize=map.getModel().displayModel.getTileSize();
-        int capacity=(int)Math.max(8,Math.min(64,32L*1024*1024/(tileSize*(long)tileSize*4)));
+        int capacity=MapRenderBudget.capacity(tileSize);
         renderedTiles.set(0);
         var cache=new InMemoryTileCache(capacity){
             @Override public synchronized void put(org.mapsforge.map.layer.queue.Job job,org.mapsforge.core.graphics.TileBitmap bitmap){super.put(job,bitmap);renderedTiles.incrementAndGet();tileJobs.put(job.tile,job);

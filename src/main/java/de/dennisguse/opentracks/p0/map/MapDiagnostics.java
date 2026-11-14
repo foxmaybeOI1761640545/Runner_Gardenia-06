@@ -11,6 +11,10 @@ public final class MapDiagnostics {
         JSONObject result = new JSONObject().put("latitude", viewport.center().latitude)
                 .put("longitude", viewport.center().longitude).put("zoom", viewport.zoom())
                 .put("mapFileBoundingBox", file.boundingBox().toString())
+                .put("tilePixelSize",viewport.tileSize()).put("cacheCapacity",viewport.cacheCapacity())
+                .put("viewWidth",viewport.viewWidth()).put("viewHeight",viewport.viewHeight())
+                .put("frameWidth",viewport.frameWidth()).put("frameHeight",viewport.frameHeight())
+                .put("overdrawFactor",viewport.overdraw()).put("completedTilesTotal",viewport.completedTiles())
                 .put("administrativePolygon", "UNKNOWN: bounding box is not the target union")
                 .put("renderer", "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure");
         JSONArray tiles = new JSONArray();
