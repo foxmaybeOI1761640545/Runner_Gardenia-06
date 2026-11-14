@@ -1,0 +1,15 @@
+{
+  "source": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+  "buildRunId": "43613996030",
+  "buildWorkflowCommit": "8958de3422e62b6e1ad69e26690754ad8c3d069e",
+  "formalArtifactId": 14121714342,
+  "formalArtifactSha256": "1055fa97a881b0d69d65613c11c817bf86c92202bd73d33cb5c62c9d341e85fa",
+  "apkSha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+  "signedPngsReviewed": 88,
+  "signedMapRuntimePngsReviewed": 4,
+  "signedRealMapPngsReviewed": 7,
+  "signedNativeVisualReviewPassed": true,
+  "reviewedAtUtc": "2026-11-14T16:47:41.875150+00:00",
+  "reviewer": "Codex: all 9 native contact sheets, full-size real-map detail/live/320dp views, focused XML and SHA-256; emulator evidence only",
+  "hardware": "NEEDS_DEVICE_VALIDATION"
+}

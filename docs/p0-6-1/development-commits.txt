@@ -1,0 +1,13 @@
+0f27eb8bb965834b627fd72f215c038d102609b4 fix(map): isolate GPS preview preferences and validate actual regional map on P0.6.1
+2e3d0e51f6c4f14bd030a66b73de02b9c969cff5 fix(map): use native integer tile coordinates in diagnostics
+efcbe89633a961bc0b4e94cde3b3607f677f337b fix(gps): preserve effective recording configuration and explicit map test fixtures
+615c86972f4b8fc90883c107680732c37b9f86f6 test(map): require actual-file signed SAF runtime and source-bound visual review
+37dd1d6d8b660b30351bf1d1a681b2770c2ff6c6 test(map): complete real-file lifecycle, memory, route and large-font acceptance
+5e4d8f8a2ed30dce314db7094d09041d3c7f9f96 test(map): reject partial viewport captures and await all supported visible tiles
+1c9121a2fe158fafb5710a1f910cf08cee85f0fe fix(test): type historical map scenario and verify retained GPS/map upgrade fixtures
+4e5f20e66aa5a1927a0a24617ab414501406614c test(release): require settled native real-map screenshots and preserve valid action states
+71755ed51aac554a4102bda3fca0b22fdbcb2d23 fix(gps): disconnect unused map preview before restoring remote GPS preferences
+a8a6c4c27faaedab07c64fb4bbb71261da0512f5 Fix bounded map rendering with a rectangular viewport buffer
+6b8d8fa2134704b2f51dd23695deb0397fd671a1 Query native renderer cache keys without truncated diagnostic history
+5f4c4884a0e7f5065ea73105305955a6056af74c Sequence real map scenarios without using a destroyed task
+6cee1958a23bfd1a1fe3b6a9b547717c528cbc75 Require native touch and zoom evidence on the actual 100MB map

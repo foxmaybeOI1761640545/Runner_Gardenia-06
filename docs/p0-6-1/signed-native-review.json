@@ -1,0 +1,530 @@
+{
+  "passed": true,
+  "reviewedAtUtc": "2026-11-14T16:47:41.875150+00:00",
+  "source": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+  "buildRunId": "43613996030",
+  "formalArtifactId": 14121714342,
+  "formalArtifactSha256": "1055fa97a881b0d69d65613c11c817bf86c92202bd73d33cb5c62c9d341e85fa",
+  "pngsReviewed": 99,
+  "sheetsDirectlyViewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fullResolutionDirectlyViewed": [
+    "p061-signed-real-320dp-large-font.png",
+    "p061-signed-real-detail-z16.png",
+    "p061-signed-real-live-route.png"
+  ],
+  "observations": [
+    "88 native theme pages preserve labels, controls and palette; synthetic map identified as fixture",
+    "4 synthetic native map states include historical/live route and invalid import preservation",
+    "7 actual 100MB native map states show real roads/buildings/labels, teal live route and position marker; supported visible tiles cached",
+    "320dp/1.5 font controls remain visible and usable; filename/button text wraps and map viewport becomes short",
+    "New-process overview retains actual local map; blank exterior is not a claim of administrative coverage",
+    "No claim of physical GNSS/BLE/long-term power validation"
+  ],
+  "files": [
+    {
+      "file": "p06-release-explorer-dark-appearance.png",
+      "sha256": "ec4e18bf85aae5a89391104670f7a8dbfecb9e1953a53c10b37fbb3e2e24da9a",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-delete.png",
+      "sha256": "caba8b457e32deca33dbf7f390978e4f11134b5653c3e166469e2039914d4717",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-heart.png",
+      "sha256": "c4681ca149b0b679a18e2fe0b9c5866c116e43c0817466b5c60981fe1dadb55e",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-history.png",
+      "sha256": "09259683ecce067aa0309c655139af93dc199f1b744489eb20e93be0f2b8abcd",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-home.png",
+      "sha256": "d848a0912a6b53c22595c64e3177e6c5dd3badeb40176f09cf6defc32de3f602",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-hub.png",
+      "sha256": "e0e970030fc38767b8804235013fb22bf7a1c9e3da536ecae5d8827c5e051ce4",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-info.png",
+      "sha256": "6fcdc6325bdf9d3a1402cf01a371bf595b0e335bd2072f72f2e44e1dbf356744",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-motion.png",
+      "sha256": "f929928958dc94860a00f8d36d776db8d53cd5bd50653e95d6bb051551fdcace",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-offlineMap.png",
+      "sha256": "8441d6b98a1c77b5cebed874f4a0c75c266e7cd4a452ef244eb7cc10ec4cd229",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-selection.png",
+      "sha256": "f4c973aff8886ca39fba7a4d4749517e14496e04db0ba21b8da83136a2f49f96",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-dark-share.png",
+      "sha256": "072e71f59cbf991254c822d0d76a8cabf8167115b4c931fc11d32914541d4799",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-light-appearance.png",
+      "sha256": "71e2b241bb148c865e045ced5e8e29d6d087e9dede5c835d144f83538f8685a5",
+      "sheet": "01.png"
+    },
+    {
+      "file": "p06-release-explorer-light-delete.png",
+      "sha256": "883075b19ef114d2adf5277063cb9bc7637d4acad83e0189bec8017b48a64799",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-heart.png",
+      "sha256": "0be7801e55e2838d50c02704f44990255197bb31d519893462885257cc3fa971",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-history.png",
+      "sha256": "c5dc0918bb1071d6c6b6e1fced5b9194464c51c9347a1b8b724df0d9d531dc19",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-home.png",
+      "sha256": "e4e0083b7fc87eab0444c0ff033e32a549db2d99a9a9ff9825f7ae3411054438",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-hub.png",
+      "sha256": "d54ec3658fddce6b3eb01d37f2d7494535f81ba59e59fb0f382636962771c778",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-info.png",
+      "sha256": "9eca64abee4676c419d54619d6944b3481241e5cc4d47c0906a461c93fa420c2",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-motion.png",
+      "sha256": "fdb4ab8fac8d51f609d52d8cf1ef28980a744e5a400a197d796a31571038139c",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-offlineMap.png",
+      "sha256": "8db2fd77195ae76937ffded04c027e227a15c1217c0095ab1f5870e428356c1c",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-selection.png",
+      "sha256": "74268b77f01ee044d16fe37970a6509d800ec2b8800ea483b0ecefbbfb1ebbb7",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-explorer-light-share.png",
+      "sha256": "d3c11de390a6bf5b34208bfb629040645cc8fefc7b08099751b88c291a89117e",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-neon-dark-appearance.png",
+      "sha256": "3ca3d81e0d6ab418119e3b5c43a1cb81bd575b6da7af58059e79c2a10ebbd5b0",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-neon-dark-delete.png",
+      "sha256": "4cab2ab3cf1e89cb10c59d3fe0f5167a1f9dc1721592bb6dfb4da5a6b7e18a81",
+      "sheet": "02.png"
+    },
+    {
+      "file": "p06-release-neon-dark-heart.png",
+      "sha256": "887b4b0acdf2a373d28a1086f76b4026fdd9ce83d0230d89f6f69954677b9362",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-history.png",
+      "sha256": "050ac22b782b9ec13517943595fc990eb6de7d8a939a516d7fa24719f1933949",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-home.png",
+      "sha256": "bf61220837b9e06508d13ae3037626ac428c0fd88c0d69affa3fbc1628ec6148",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-hub.png",
+      "sha256": "57eb2a7fcd21483fec07a01b1972c25ddcd77959b2a7ba4341aef891dcb79c4e",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-info.png",
+      "sha256": "26ee408b7a7a67027e3a5231d9b40757ddcc1859955558f68910740872ddac47",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-motion.png",
+      "sha256": "bfe5a1a15c2e2e1e1bea03a6c13df91465691f13f4de5c3a2761d37f988dd571",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-offlineMap.png",
+      "sha256": "b3a2206cfb2b9d6fff45916955bfe0cfd7a9d61e25d5c2964d2244c08f8978a0",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-selection.png",
+      "sha256": "b53400e85c046433173dab2139e80e5690b7621d628bbe4af54f1ea4c65e4eb0",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-dark-share.png",
+      "sha256": "0ff3c647612e6f49e122971aff10338ba36bb2c50fdc18a2d3961289d9597e57",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-light-appearance.png",
+      "sha256": "80833a92728b484fce91d183c61571af9821ed3a0fa5a7274c6f65e5c94dac65",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-light-delete.png",
+      "sha256": "439b62d4a766732e0d9451b73f92b5a33b7144d6d723f0c272f6363c93acf53c",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-light-heart.png",
+      "sha256": "a42180344728e58878e4e2de5335d57c069f8a0198a5c6e88d50a650b036ce3a",
+      "sheet": "03.png"
+    },
+    {
+      "file": "p06-release-neon-light-history.png",
+      "sha256": "1319f2e0ebbbdf0fa1bd025fa7f6d93ae3390a191809f78e81ca50421bcc698a",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-home.png",
+      "sha256": "cd3118a8dcb27444deeb8629bc7c8369eb66edb1c99c8da0e749619f74d26c7e",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-hub.png",
+      "sha256": "1bcc84d430d68181e24c285ac8051958c51fb3c70e33f364e7307595f8af4de6",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-info.png",
+      "sha256": "e7e7fd9175adb94b4f9e0f5d0aaf8ec55cad90f249ab0413b810fd3e166da841",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-motion.png",
+      "sha256": "2d45d6f9b91fd383b4cb4f951f0a736d5eda4125fa0a8e6713c7d84cb2723dfd",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-offlineMap.png",
+      "sha256": "894fe83b2ed0a39079a6bda71d3e661badf1eb68d4650ecef281c87e0eed805f",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-selection.png",
+      "sha256": "785528c3d3d6091f7f52039ad5b3e5e4727bf8069c157a97624b347a708d8c92",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-neon-light-share.png",
+      "sha256": "c5f50f34c4d4e6608ab51e78fa10ad316670fb6130019f97b913a915f869f4e2",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-precision-dark-appearance.png",
+      "sha256": "c66039ac6e7888a655bac42d43169bd391a147ab473ac1a90433319b44802bdd",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-precision-dark-delete.png",
+      "sha256": "e211b31d3d267f974853270c64b297d51b384b4175ae1288636e6b5db4d75362",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-precision-dark-heart.png",
+      "sha256": "5a8f449c381b638801d812b1064d5e91d7bb49cf4a6ed6c6e628623eca9ab3da",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-precision-dark-history.png",
+      "sha256": "1291e9b7cd95e6fa28252f14365c64384328800c592fd06621d4500b54bea34b",
+      "sheet": "04.png"
+    },
+    {
+      "file": "p06-release-precision-dark-home.png",
+      "sha256": "ed3b0781e73fa9e257032af09a41a5e5b0e69b544d61c2a17131191a9e873a44",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-hub.png",
+      "sha256": "84205f714201f8b148714e48a7c72a0869eadd7431a9370c260428ee6e9250a5",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-info.png",
+      "sha256": "24d0727b2e4de159f3992a22fb0f8bb4e53ff597bf59a299ef01d78c2e33c07f",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-motion.png",
+      "sha256": "5e6f06bd1d6558ec26c8799944ac5f86d29e75c4e418f3b3494bcdca61035e9f",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-offlineMap.png",
+      "sha256": "b93b26ebf4ae281097a60ca5e4f4371e7480dff05237148a3858c36b04572580",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-selection.png",
+      "sha256": "a563cd752e668193c3403dee872b62d224b39acea803b094bc2dc3819a605b73",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-dark-share.png",
+      "sha256": "05c89ba8d49af1fec51f0f636a472af56b49757892a0ecf039a76c586b1390a8",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-appearance.png",
+      "sha256": "ddd443fd6fcc9b89e235bb45ae1ab09011c40ce17b5df3159e2a182b1bab2a8e",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-delete.png",
+      "sha256": "a7d5e1c87a6e20a13d4381e58305b320cd6d274e7dc04efd5a2f10d45c3c8d57",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-heart.png",
+      "sha256": "fb2782685487d6f6e3dd7beba88df764cbde86345a78eaf2f27236cd074a2c16",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-history.png",
+      "sha256": "fc731b8889dbec25aa6417e8ef143bb31e88257da580991be800c7d40d13f162",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-home.png",
+      "sha256": "ab590342c89a7da83c907780f88622ec587932b60273e86cb1c6077918a43b32",
+      "sheet": "05.png"
+    },
+    {
+      "file": "p06-release-precision-light-hub.png",
+      "sha256": "1f556450e1d4d3bfca84317822356d0512f22113edb7a0bdd3a655598f921b1d",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-precision-light-info.png",
+      "sha256": "aef2185760e992c031b3aa3069c5f4e9fcd0b5f5132786900d99457e90a541d5",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-precision-light-motion.png",
+      "sha256": "faac5cb1472f7f0ac4bed8b83a5ff78305449efb6594a4624bad0f0a929f27ec",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-precision-light-offlineMap.png",
+      "sha256": "5e9692fb57a5531af67d65e58dd6d1b732f714acc3113ef3994e31af5419c2b2",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-precision-light-selection.png",
+      "sha256": "5b3b220a3bae9eb65caf14089593964ba9134146c8216b20e47316e1300f0086",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-precision-light-share.png",
+      "sha256": "436a9719f506bd1bfc6b0b708f5be11c9261efb43ba4ed994747a378706c9b36",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-appearance.png",
+      "sha256": "23798a5dfeb86509a09d0ea6d8501df9314f2cb6f9fde426efb098d75d9ab673",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-delete.png",
+      "sha256": "799a7512ef0dc9d0bdd9451e85b75a6c6067bd7dbfda7f382fa7d372ad3e5a93",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-heart.png",
+      "sha256": "1a117b4bba3ea0dc957ab5bddce48f0c688b8a1501cf843fff356b56b8d2d403",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-history.png",
+      "sha256": "4c37d6319324bd3a1703965da1dd153bdd030e885329c6232c2c195777ad01a6",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-home.png",
+      "sha256": "91c61a51753d6d959afceb6fcb05896a720b251ac6d4b35a703d6a4eb0bde612",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-hub.png",
+      "sha256": "900b821a1bded2f4518b707d746637687f3694c9ffb3bfdd8fe531d31e5611d9",
+      "sheet": "06.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-info.png",
+      "sha256": "42d816af2ff887e5d5af1cc10954834ebeec886744d9ce9a86b10f43cc74e3bd",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-motion.png",
+      "sha256": "acad74a47239be8b31dd75109cb440aeb31f93aecf25c61c9e21c7a0f3da13cd",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-offlineMap.png",
+      "sha256": "a26f33965ea9c30639ae30ed23afe8df7ed4ef99cf0540ada295ce045a2143d7",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-selection.png",
+      "sha256": "1e8b38b75dc1fbe259d1df77a840bec6954dcf2abecf4621a7e915cae0fd7083",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-dark-share.png",
+      "sha256": "e3db0fa5afef95f67b0fa41e0f272699d09a229c4be1c81335724d0550eaec61",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-appearance.png",
+      "sha256": "afb7acd8f2f85d7f17a02f0180dfc1f43260ff7c43525900cd76c25a0c6eaaf0",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-delete.png",
+      "sha256": "568751bcaf36e86c43eeba0ecd55776ea448cbef718645d6826ccbc756248bff",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-heart.png",
+      "sha256": "28a733aae397ee2731af56e242020bcad753375191ebe6f20df20df3a07bc8ee",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-history.png",
+      "sha256": "7e850f445547f6cd8a6a0b746f4d8d33d0736fa96a2130ddabecfcd17035a3b2",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-home.png",
+      "sha256": "5c82970e1ad854bea3b7fb40f20ac5d474efbf1cecf8e1c30ecebd53d6b460bb",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-hub.png",
+      "sha256": "97938c6286cc438a39859586b95898feb0202e7f0b632bb0f82113559da24565",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-info.png",
+      "sha256": "1146cdef2145c30d7145224f888aaa51e1ec3f61f4ef14a2132eee2355450967",
+      "sheet": "07.png"
+    },
+    {
+      "file": "p06-release-quiet-light-motion.png",
+      "sha256": "f8acbe436281dadcda361df45bab52a91b8e53a9ff30dac97ad58ee13fa3cc8a",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-release-quiet-light-offlineMap.png",
+      "sha256": "62fcf79afa92c457a0c8a312016b0ce7d0b1b1a9747198047c85a9affa9219c3",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-release-quiet-light-selection.png",
+      "sha256": "cfa47eeed062a652fafa7823b85fc38f7e4d7794244fe8ae7de02f3c0eecd3d6",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-release-quiet-light-share.png",
+      "sha256": "9dcd9eaacfd609e384659dda07b6742f1195d43b638dce9dd6c6da096985e51a",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-signed-map-history-restarted.png",
+      "sha256": "ebe7d34dc91672d9122b47ec2af5204762d781b243c4f88f187595b3d46147b4",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-signed-map-imported-airplane.png",
+      "sha256": "3c1249a7e527beb938156e3bb332945e2e281ab688c6c40f85dc13359035f471",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-signed-map-invalid-retains-map.png",
+      "sha256": "46a07a4f2d8454c1be252f8492e23c541304f2f375780ebab07ea72aee4aa298",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p06-signed-map-live-current-gps.png",
+      "sha256": "0100ebd7298544e7febbbdb944dc711e0b98d7d35fc791d617df37698befa842",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p061-signed-real-320dp-large-font.png",
+      "sha256": "26dba97f0c9da5ec994c0e860ab967152e03de9d450ad54793905532942bdeeb",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p061-signed-real-detail-z12.png",
+      "sha256": "04922abbbd411c46b1ea8500d1e253979443ef8cf84f88e6f03df53b47f4d7e9",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p061-signed-real-detail-z16.png",
+      "sha256": "d589ab40609582d0e46e4ed5bd501477b10d99d7294e3389579cfd1bec332fe6",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p061-signed-real-imported-z7.png",
+      "sha256": "1b9d164103d9ba4b3726d30ade27316b0fe7a297d7dc9abbfa018f5d6a1a6ca0",
+      "sheet": "08.png"
+    },
+    {
+      "file": "p061-signed-real-invalid-retains.png",
+      "sha256": "c1529a7380bad2512a6ea23e88edcc8db3a8e8d0bfe07ed75fad7f535bc6057f",
+      "sheet": "09.png"
+    },
+    {
+      "file": "p061-signed-real-live-route.png",
+      "sha256": "87b313e76b1455b47136d9906f9a9c51e2c0788927f52d8c59d533395457e4c5",
+      "sheet": "09.png"
+    },
+    {
+      "file": "p061-signed-real-new-process.png",
+      "sha256": "33609af0d865abfc89a4ac10a90a9cd74d2b94c0c1966b520b86c08726255a3f",
+      "sheet": "09.png"
+    }
+  ]
+}
