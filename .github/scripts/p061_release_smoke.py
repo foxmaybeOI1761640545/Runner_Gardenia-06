@@ -187,7 +187,7 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             if baseline_spec[1]==6778:
                 from p061_real_map import NAME as map_name,SHA as map_sha
                 retained_map='/data/user/0/'+PACKAGE+'/files/offline-maps/'
-                device('shell','mkdir','-p',retained_map);device('shell','chown',uid+':'+uid,retained_map)
+                device('shell','mkdir','-p',retained_map);device('shell','chown','-R',uid+':'+uid,'/data/user/0/'+PACKAGE+'/files')
                 map_id='06106106-1061-4061-8061-061061061061'
                 device('push',Path('work/real-map')/map_name,retained_map+map_id+'.map',timeout=120)
                 map_index=temporary/'baseline-map-index.json';map_index.write_text(json.dumps({'schema':1,'selected':map_id,'maps':[{'id':map_id,'name':map_name}]}))

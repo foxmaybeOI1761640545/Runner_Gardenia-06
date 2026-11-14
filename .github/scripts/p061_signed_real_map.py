@@ -66,13 +66,29 @@ def capture(device,dump,screenshot,tap,start,output):
     for node in ET.parse(xml).getroot():
      if node.get('name')==resource and node.text:keys.add(node.text)
   return {key:next((n.text if n.tag=='string' else n.get('value') for n in root if n.get('name')==key),None) for key in keys}
+ def wait_tiles():
+  until=time.monotonic()+60
+  while time.monotonic()<until:
+   text('More options',description=True);text('Map diagnostics (local)')
+   end=time.monotonic()+20;diagnostic=None
+   while time.monotonic()<end:
+    for node in dump().iter('node'):
+     value=node.get('text','')
+     if '"visibleTiles"' in value and value.strip().startswith('{'):diagnostic=json.loads(value);break
+    if diagnostic is not None:break
+    time.sleep(.25)
+   if diagnostic is None:raise ValueError('Actual signed map diagnostic dialog unavailable')
+   text('OK');expected=[t for t in diagnostic['visibleTiles'] if t['readerSupportsTile']]
+   if expected and all(t['rendererTileState']=='CACHED' for t in expected):time.sleep(.5);return diagnostic
+   time.sleep(.5)
+  raise ValueError('Signed native viewport did not complete every file-supported tile')
  def photo(name,track=False):
-  tree=dump();focus=next((l.strip() for l in device('shell','dumpsys','window').splitlines() if 'mCurrentFocus=' in l),'')
+  diagnostic=wait_tiles();tree=dump();focus=next((l.strip() for l in device('shell','dumpsys','window').splitlines() if 'mCurrentFocus=' in l),'')
   if 'P06MapActivity' not in focus:raise ValueError('Actual signed map Activity must be focused')
   filename='p061-signed-real-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree)
   if track:pixels.update(verify_track_pixels(raw,tree,32))
   xml=ET.tostring(tree,encoding='utf-8');(output/(filename+'.xml')).write_bytes(xml)
-  rows.append({'file':filename+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':filename+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'focusedWindow':focus,'pixels':pixels})
+  rows.append({'file':filename+'.png','sha256':hashlib.sha256(raw).hexdigest(),'nativeWindowFile':filename+'.xml','nativeWindowSha256':hashlib.sha256(xml).hexdigest(),'focusedWindow':focus,'pixels':pixels,'viewportDiagnostic':diagnostic})
  source=Path('work/real-map')/NAME
  if source.stat().st_size!=BYTES:raise ValueError('Actual map must be supplied to signed runtime')
  device('push',source,'/sdcard/Download/'+NAME,timeout=120)
@@ -91,15 +107,18 @@ def capture(device,dump,screenshot,tap,start,output):
   nodes=list(dump().iter('node'))
   for action in ('p06_import_map','p06_manage_maps','p06_my_position','p06_fit_track'):
    node=next((n for n in nodes if n.get('resource-id')==PACKAGE+':id/'+action),None)
-   if node is None or node.get('enabled')!='true':raise ValueError('Large-font map action unavailable: '+action)
+   if node is None or (action!='p06_fit_track' and node.get('enabled')!='true'):raise ValueError('Large-font map action unavailable: '+action)
+   # Fit is actionable only when a route exists; the live-route scene exercises its enabled state.
    b=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
-   if len(b)!=4 or b[3]-b[1]<48 or b[2]<=b[0]:raise ValueError('Large-font map action clipped: '+action)
+   if len(b)!=4 or b[3]-b[1]<96 or b[2]<=b[0]:raise ValueError('Large-font map action clipped: '+action)
   photo('320dp-large-font')
  finally:
   device('shell','wm','size','reset');device('shell','wm','density','reset')
   device('shell','settings','put','system','font_scale',old_font if old_font!='null' else '1.0');time.sleep(2)
 
- device('shell','rm','/sdcard/Download/'+NAME);home();tap('p04_route');ready();retained();photo('new-process')
+ device('shell','rm','/sdcard/Download/'+NAME);home();tap('p04_route');ready();retained();tap('p06_my_position')
+ for _ in range(3):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
+ photo('new-process')
  home();tap('p0_start')
  for _ in range(4):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
  stop=threading.Event();errors=[]
@@ -134,6 +153,7 @@ def verify(folder,info):
  import io
  with zipfile.ZipFile(io.BytesIO(raw)) as z:
   for row in proof['screenshots']:
+   if not any(t['readerSupportsTile'] for t in row['viewportDiagnostic']['visibleTiles']) or any(t['readerSupportsTile'] and t['rendererTileState']!='CACHED' for t in row['viewportDiagnostic']['visibleTiles']):raise ValueError('Signed partial viewport cannot pass')
    png=z.read(row['file']);xml=z.read(row['nativeWindowFile']);tree=ET.fromstring(xml)
    if hashlib.sha256(png).hexdigest()!=row['sha256'] or hashlib.sha256(xml).hexdigest()!=row['nativeWindowSha256'] or 'P06MapActivity' not in row['focusedWindow']:raise ValueError('Actual signed map native evidence differs')
    verify_pixels(png,tree)
