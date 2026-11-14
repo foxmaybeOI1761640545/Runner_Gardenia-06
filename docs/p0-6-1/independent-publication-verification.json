@@ -1,0 +1,23 @@
+{
+  "verifiedAtUtc": "2026-11-14T16:52:03.641945+00:00",
+  "releaseId": 445443618,
+  "publicationRunId": 43617601031,
+  "source": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+  "tagObject": "4b85d6a73a49e75d52b27497c3fb85ff666ee39b",
+  "annotatedTagMatchesSource": true,
+  "originalRefsUnchanged": 32,
+  "completeAssetCount": 16,
+  "anonymousHttp": 200,
+  "anonymousAuthorizationHeader": false,
+  "anonymousChannel": "public GitHub Release asset API",
+  "apkBytes": 3234719,
+  "apkSha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+  "sameBytesAsAcceptedSignedArtifact": true,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "ciAnonymousApksignerVerified": true,
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "latestEndpoint": "404: repository has no formal latest release",
+  "releaseApprovalHead": "c8efde1d73469b027dc7d28d41b7056d6efa5fbc"
+}

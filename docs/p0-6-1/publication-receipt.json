@@ -1,0 +1,117 @@
+{
+  "publicDownloadVerified": true,
+  "publicSignatureVerified": true,
+  "tag": "test-p0-v0.1.0-p0.6.1",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.6.1",
+  "commit": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+  "versionCode": 6779,
+  "apk": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RunnerGardenia-P0-Release.apk",
+  "publicDownloadUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130211",
+  "publicDownloadChannel": "anonymous-public-asset-api",
+  "publicDownloadHttp": 200,
+  "publicDownloadAuthenticated": false,
+  "apkSha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+  "apkBytes": 3234719,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 4708,
+      "sha256": "90c5d2a48d9d11df037abb8cafdba524f5c950f61b9f0b92a15e4e781988e35a",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/build-info.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130105"
+    },
+    "DEVELOPMENT_COMMITS.txt": {
+      "bytes": 1517,
+      "sha256": "941d5839343e36b2dbd8ac6717afebe97d2b9dea4a7e26430720133399746cea",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/DEVELOPMENT_COMMITS.txt",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130131"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1107,
+      "sha256": "21164abb5b6bcb50b172f526ea2627c2dfdf49fd9b469a17c562faaca12d0dcf",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RELEASE_NOTES.md",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130169"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 3234719,
+      "sha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RunnerGardenia-P0-Release.apk",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130211"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "1ae109bc9ac605822bba8f56d11dad1e357f1a68867cc2dbf62ebe5ff3c6e5b8",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/SHA256SUMS",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130263"
+    },
+    "key-test-receipts.zip": {
+      "bytes": 2078659,
+      "sha256": "22e4ffe252734042716863d56efad4c9bf29bb3f23ed90dfa87bff4e525d5f57",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/key-test-receipts.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130339"
+    },
+    "native-theme-smoke.json": {
+      "bytes": 65313,
+      "sha256": "6f115f965b07fad9f67907804fac99832fcc196ce19cbc8169f6038a194602ae",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/native-theme-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130396"
+    },
+    "offline-map-screenshots.zip": {
+      "bytes": 623864,
+      "sha256": "d31724997671d6b337132351576aea26aba5bf3b871a2e78a9207c7bbf4a3b36",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/offline-map-screenshots.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130424"
+    },
+    "offline-map-smoke.json": {
+      "bytes": 2809,
+      "sha256": "8a58e5139aeabcad8c136212a97a084d3f75d010c67d3f84065fc9eaf0f42d52",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/offline-map-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130459"
+    },
+    "p04-upgrade-smoke.json": {
+      "bytes": 939,
+      "sha256": "a26416b535331c1c2dde655e006deccbbfbbc40f73719a19bfd3e248a8a051d7",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/p04-upgrade-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130484"
+    },
+    "real-map-screenshots.zip": {
+      "bytes": 2939823,
+      "sha256": "352a412f46c9db3b176dfa314becfac2e3ae7c8478e84546e9dd34b5bcf40450",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/real-map-screenshots.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130509"
+    },
+    "real-map-smoke.json": {
+      "bytes": 24428,
+      "sha256": "833794b2e23023c34344358d6e223043d7c2264c295bdc03c4634b6896b376ab",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/real-map-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130555"
+    },
+    "runtime-smoke.json": {
+      "bytes": 940,
+      "sha256": "0972e4799d79e1dc1848fbdbd5bbbaaa53399a91162e2cefd430dc28cb82839c",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/runtime-smoke.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130584"
+    },
+    "test-summary.json": {
+      "bytes": 1071,
+      "sha256": "8c3f46242e559f6017b7cffbb0a3dedb1bb4827328e2d1d7f859577ac4fb6679",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/test-summary.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130611"
+    },
+    "theme-screenshots.zip": {
+      "bytes": 8705439,
+      "sha256": "f7a3d150aeba97983b8a0628ebbcb623007073beae2daf1cfc0fe3f116752965",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/theme-screenshots.zip",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130651"
+    },
+    "ARTIFACT-MANIFEST.json": {
+      "bytes": 1420,
+      "sha256": "95c48a49dc54b3156570c3ffc9c6aa4532ba97c41d61e39dd86dc72d7c3946a7",
+      "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/ARTIFACT-MANIFEST.json",
+      "apiUrl": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/releases/assets/748130698"
+    }
+  }
+}

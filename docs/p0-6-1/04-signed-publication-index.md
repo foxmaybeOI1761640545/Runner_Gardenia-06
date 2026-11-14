@@ -17,3 +17,13 @@ P0.6/6778安装-r升级未卸载、未清数据：原GPS点1、原始心率2、�
 公开后固定地址：[Release](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.6.1)。附件包含全部15个payload与ARTIFACT-MANIFEST，共16项；theme-screenshots.zip、offline-map-screenshots.zip、real-map-screenshots.zip是可公开下载的原生PNG/XML证据。未将私人录屏/真实运动数据上传。
 
 真实手机、户外GNSS、Magene H303、长期后台/耗电仍为NEEDS_DEVICE_VALIDATION。所有32个原ref于发布前重新比对未变；服务器保护查询403不能等同已检查服务器保护。
+
+## 已完成的公开发布与匿名复核
+
+[发布运行43617601031](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43617601031)已终态success，head_sha=c8efde1d73469b027dc7d28d41b7056d6efa5fbc，event=push，branch=feature/p0-6-map-real-validation，attempt1。scope132515971848、publish132516050007成功；其他模式Job按设计跳过。2026-11-14T16:50:38Z公开Release445443618，非Draft/Pre-release/非Latest，16项附件完整uploaded。新annotated Tag对象4b85d6a73a49e75d52b27497c3fb85ff666ee39b只指向验收源码6cee1958。32个历史ref再次保持原值。
+
+CI匿名下载与实际apksigner通过；独立匿名public asset API下载HTTP200，无Authorization，3234719字节、SHA256 b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11，与正式签名Artifact逐字节相同。全部16项Release资产的大小/摘要与正式包一致。原仓库Latest endpoint为404（无正式Latest），新测试版未成为Latest。
+
+publication-receipt.json为发布Job实际生成的原始回执；independent-publication-verification.json记录独立下载及保护ref核验。回执Artifact14122364720、3314字节、ZIP SHA256 4b6b14736e484d70d135c051b48c56e35e17dc954009f736169f1298291f70e6已实际计算匹配。
+
+本次后续报告提交仅保存已完成的事实；发布脚本按同一Tag/同一APK/同一资产集合执行幂等复核，不覆盖附件、不创建新版本、不访问签名Secrets。最终文档HEAD及这次复核run_id由最终交付消息单独记录，避免把自身文档提交的SHA冒充APK源码。

@@ -2,7 +2,7 @@
 
 ## A. Git、来源与历史保护
 
-原始开发基线为 `c7112514565c6b10dac7131b97432328ec67ef1d`，独立分支为 `feature/p0-6-map-real-validation`。实际验收、编译与新Tag指向的源码为 `6cee1958a23bfd1a1fe3b6a9b547717c528cbc75`，`src/main` tree为 `4b0442e84948da0180bb5b5b17715747115401b7`。签名批准提交 `8958de3422e62b6e1ad69e26690754ad8c3d069e` 和后续发布批准只增加批准记录与文档，不能改变已验收的应用、测试、版本或构建代码。发布批准与最终文档HEAD见本目录的最终索引；不要把文档HEAD误认成APK源码。
+原始开发基线为 `c7112514565c6b10dac7131b97432328ec67ef1d`，独立分支为 `feature/p0-6-map-real-validation`。实际验收、编译与新Tag指向的源码为 `6cee1958a23bfd1a1fe3b6a9b547717c528cbc75`，`src/main` tree为 `4b0442e84948da0180bb5b5b17715747115401b7`。签名批准提交 `8958de3422e62b6e1ad69e26690754ad8c3d069e` 和后续发布批准只增加批准记录与文档，不能改变已验收的应用、测试、版本或构建代码。发布批准提交为 `c8efde1d73469b027dc7d28d41b7056d6efa5fbc`；发布完成后的回执/报告提交仅改文档，最终文档HEAD见最终交付消息及分支提交记录，不要把它误认成APK源码。
 
 原P0.6源码 `af6e90eabee20ada79ba942584ab7eb8c08660e3`、版本6778、Tag/Release/APK全部保留。正常提交、正常推送独立分支，无main修改、强推、历史改写或历史资产替换。CI逐项核对 `.github/p061/protected-refs.json` 中原分支与Tag快照。服务器分支保护查询返回403，不能声称已检查或修改服务器保护设置。新版本分配前核查全部远程refs、10个既有Release及其build-info、台账与properties，原最高6778；新6779独立预留并验证reservation、seriesHighWater、codeHighWater一致。旧 `p06_version.py` 的来源保护没有放宽。
 
@@ -75,17 +75,17 @@ Reader与原生图像检查覆盖广州、深圳、珠海、佛山、东莞、�
 |快速真实地图/GPS|14119833108|813e3c8e4ff2f638ee523050ec3c8b05ebb35377940f8e49c5b0c5749f6db7ba|
 |完整边界/覆盖|14120306229|c29ec01ede070c34cd361a7059d1e1e835643b1f8d400e03e76c30c454da6193|
 
-历史失败和取消记录仍保留；根因、修复见01-ci.md，包括类型编译、旧GPS夹具、ActivityScenario生命周期、真实瓦片未完成和诊断历史假阴性。它们未被当作当前成功。签名运行43613996030已终态success；scope、signed、signed-review-transfer成功，其他模式Job按设计跳过。实际覆盖升级、99张签名图和正式Artifact均已复核，细节见04-signed-publication-index.md。发布终态与匿名下载结果须以该批准提交对应的发布运行和最终交付消息为准，批准记录本身不冒充公开下载回执。
+历史失败和取消记录仍保留；根因、修复见01-ci.md，包括类型编译、旧GPS夹具、ActivityScenario生命周期、真实瓦片未完成和诊断历史假阴性。它们未被当作当前成功。签名运行43613996030已终态success；scope、signed、signed-review-transfer成功，其他模式Job按设计跳过。实际覆盖升级、99张签名图和正式Artifact均已复核，细节见04-signed-publication-index.md。[发布运行43617601031](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43617601031)也已终态success：scope、publish成功，其余模式Job按设计跳过。仓库/分支/push/attempt1/head_sha均核对为本次批准提交。发布回执及独立匿名下载记录已保存于publication-receipt.json、independent-publication-verification.json。
 
 ## E. APK与发布
 
-固定密钥v0.1.0-p0.6.1 /6779，Application ID com.fox.runner，APK3234719字节，SHA-256 `b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11`，证书SHA-256 `E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22`。R8、资源优化、zipalign与apksigner实际执行；最终发布索引须同时附签名/覆盖升级和匿名下载回执，单纯构建成功不等于交付通过。
+固定密钥v0.1.0-p0.6.1 /6779，Application ID com.fox.runner，APK3234719字节，SHA-256 `b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11`，证书SHA-256 `E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22`。R8、资源优化、zipalign与apksigner实际执行；签名、覆盖升级、公开发布与匿名下载回执均已实际完成。Release ID445443618，2026-11-14T16:50:38Z公开，16项资产全部uploaded且逐项摘要匹配。CI匿名下载后实际apksigner复核通过；独立无Authorization下载HTTP200、3234719字节、SHA完全一致。
 
-新版本固定Release地址（发布终态以回执为准）：https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.6.1
+已公开Release：https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.6.1
 
-新版本固定APK地址（发布终态以回执为准）：https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RunnerGardenia-P0-Release.apk
+APK直接下载：https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RunnerGardenia-P0-Release.apk
 
-只允许新唯一Tag、测试Pre-release、非Latest；发布批准搬运已验收同字节APK，不重编译、不重签，不替换旧版本附件。
+新annotated Tag对象为 `4b85d6a73a49e75d52b27497c3fb85ff666ee39b`，指向已验收6cee1958；Pre-release=true、draft=false、非Latest。全部16项资产按不可变manifest核验。原仓库没有正式Latest，Latest API返回404；新测试版未成为Latest。发布仅搬运已验收同字节APK，不重编译、不重签、不替换旧附件。
 
 ## F. 状态边界及用户最后验收
 
@@ -106,3 +106,5 @@ Reader与原生图像检查覆盖广州、深圳、珠海、佛山、东莞、�
 4. 遇到空白，打开“地图诊断（本地）”，记录中心、zoom、tile X/Y、Reader要素与renderer状态；可同时录屏。文件bbox本身不代表实际行政覆盖。
 5. 点击我的位置再按需授权，户外检查位置；打开历史与实时轨迹、全程适配，关闭地图确认运动持续、GPS设置保持、Magene H303心率继续。
 6. 强制结束/重开应用确认本地地图保留；观察长时间缩放、拖动、后台、内存/耗电与小米省电策略。将真机结果单独记录，尤其GNSS/BLE和长时表现。
+
+发布证明Artifact14122364720，P061-publication-proof-43617601031-1，3314字节，ZIP SHA256 `4b6b14736e484d70d135c051b48c56e35e17dc954009f736169f1298291f70e6`，已实际下载和核验。匿名下载使用GitHub公开Release asset API且没有Authorization；用户正常下载地址仍是上面的GitHub Release附件。
