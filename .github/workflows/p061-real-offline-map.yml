@@ -469,6 +469,15 @@ jobs:
           mkdir -p "$RUNNER_TEMP/p06-baseline"
           gh release download test-p0-v0.1.0-p0.6 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p06-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
           gh release download test-p0-v0.1.0-p0.4 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p0-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
+      - name: Download actual map for optimized signed native runtime
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: '14061852955'
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          run-id: '43470716313'
+          path: work/real-map
+      - run: python3 .github/scripts/p061_real_map.py fixture
       - name: API35 signed install, real GPS inputs, recording recovery, upgrade and eight native schemes
         if: steps.existing.outputs.formal-id == ''
         env:

@@ -114,7 +114,7 @@ def finalize():
     plan,report=gate();info=json.loads(Path('dist/build-info.json').read_text())
     summary={'commit':info['commit'],'run':info['run'],'tests':info['tests'],'helpers':report['helpers'],'legacySkippedTest':report['legacySkippedTest'],'runtimeSmokeVerified':True,'upgradeFromVersionCode':6778,'crossUidShareReceipts':6,'wechat':'NEEDS_DEVICE_VALIDATION','hardware':'NEEDS_DEVICE_VALIDATION','bleProductionChanged':False}
     Path('dist/test-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
-    notes=f"[TEST][P0.6] {VERSION}\n\n本地 Mapsforge 地图导入、校验、私有持久副本、管理与删除、缩放拖动、当前位置及实时／历史轨迹。飞行模式与进程重启已验证；保留 GPS 质量修复及所有旧阶段回归。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.6与P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
+    notes=f"[TEST][P0.6.1] {VERSION}\n\n本地 Mapsforge 地图导入、校验、私有持久副本、管理与删除、缩放拖动、当前位置及实时／历史轨迹。飞行模式与进程重启已验证；保留 GPS 质量修复及所有旧阶段回归。\n\n- Application ID: com.fox.runner\n- Version: {VERSION} / {info['versionCode']}\n- Source: {info['commit']}\n- APK SHA-256: {info['apkSha256']}\n- Certificate: {CERT}\n- Full test run: {info['testRunId']}\n- Tests: {json.dumps(info['tests'])}\n- 原有唯一Ignore单独计入Skipped，未计作通过；没有新增跳过。\n- P0.6与P0.4固定签名覆盖升级、历史/GPS/心率/设置保留、GPX/ZIP与新进程恢复已在API35验证。\n- 实际原生截图与模拟数据/模拟接收回执不代表实体GNSS/BLE/耗电、TalkBack语音或微信客户端通过；这些保持NEEDS_DEVICE_VALIDATION。\n"
     Path('dist/RELEASE_NOTES.md').write_text(notes)
     Path('dist/DEVELOPMENT_COMMITS.txt').write_text(pipeline.git('log','--reverse','--format=%H %s',validation_base()+'..'+info['commit'])+'\n')
     with zipfile.ZipFile('dist/key-test-receipts.zip','w',zipfile.ZIP_DEFLATED) as z:
@@ -139,6 +139,8 @@ def bundle(folder=Path('dist')):
     if native.get('passed') is not True or native.get('commit')!=info['commit'] or native.get('apkSha256')!=info['apkSha256'] or native.get('api')!=35 or native.get('nativePageChecks')!=pipeline.SIGNED_PNGS or len(native.get('schemes',[]))!=8 or len(native.get('screenshots',[]))!=pipeline.SIGNED_PNGS or any(native.get(k) is not True for k in ('processRestartPersistence','metricProcessPersistence','historyBatchVerified','sharePreservesData','appVersionVerified')):raise ValueError('Actual signed P0.5 native/metric/batch proof absent')
     from p06_release_map_ui import verify_proof
     verify_proof(folder,info)
+    from p061_signed_real_map import verify as verify_real_map
+    verify_real_map(folder,info)
     rawzip=(folder/'theme-screenshots.zip').read_bytes()
     if hashlib.sha256(rawzip).hexdigest()!=native['screenshotsZipSha256']:raise ValueError('Signed screenshot ZIP changed')
     from p061_release_theme_ui import PAGE_IDS,PAGE_ACTIVITIES,page_matches

@@ -25,6 +25,10 @@ public final class P06FixtureProvider extends ContentProvider {
         }catch(IOException failure){throw new FileNotFoundException(failure.toString());}
     }
     @Override public Uri insert(Uri u,ContentValues v){throw new UnsupportedOperationException();}
-    @Override public int delete(Uri u,String s,String[] a){throw new UnsupportedOperationException();}
+    @Override public int delete(Uri u,String s,String[] a){
+        if(!"real.map".equals(u.getLastPathSegment()))throw new UnsupportedOperationException();
+        File file=new File(getContext().getCacheDir(),"p06-provider-valid");
+        return file.isFile()&&file.delete()?1:0;
+    }
     @Override public int update(Uri u,ContentValues v,String s,String[] a){throw new UnsupportedOperationException();}
 }

@@ -21,7 +21,7 @@ def publication_paths(paths):
     if not paths or any(p!=str(PUBLICATION) and not p.startswith('docs/') for p in paths):raise ValueError('Publication cannot change accepted app/test/version/build/signing code')
 def approval_record():
     a=json.loads(APPROVAL.read_text())
-    required={'passed':True,'kind':'ACTUAL_NATIVE_VISUAL_REVIEW','schemes':8,'layoutPngs':48,'statePngs':192,'metricPngs':8,'settingsPngs':16,'historyPngs':32,'fullRegressionPassed':True,'rawJUnitVerified':True,'gpsPngs':12,'gpsVisualReviewPassed':True,'mapPngs':16,'mapVisualReviewPassed':True,'mapProcessRestartPassed':True}
+    required={'passed':True,'kind':'ACTUAL_NATIVE_VISUAL_REVIEW','schemes':8,'layoutPngs':48,'statePngs':192,'metricPngs':8,'settingsPngs':16,'historyPngs':32,'fullRegressionPassed':True,'rawJUnitVerified':True,'gpsPngs':12,'gpsVisualReviewPassed':True,'mapPngs':16,'mapVisualReviewPassed':True,'mapProcessRestartPassed':True,'realMapPngsReviewed':53,'realMapVisualReviewPassed':True,'geometryReviewPassed':True}
     if any(a.get(k)!=v for k,v in required.items()):raise ValueError('Complete actual-source visual/full-test approval required')
     return a
 
@@ -38,6 +38,7 @@ def accepted_build(api,p):
     if run['head_sha']!=p['buildWorkflowCommit'] or run['head_branch']!=BRANCH or run['event']!='push' or run['conclusion']!='success':raise ValueError('Accepted fixed-key build run did not succeed')
     jobs=api.request(api.base+'/actions/runs/'+p['buildRunId']+'/jobs?per_page=100&filter=all')['jobs']
     if not any(j['name']=='signed' and j['conclusion']=='success' for j in jobs):raise ValueError('Signed install/upgrade/native gate did not succeed')
+    if p.get('signedRealMapPngsReviewed')!=6:raise ValueError('Actual signed 100MB screenshots require review')
     if p.get('signedMapRuntimePngsReviewed')!=4:raise ValueError('Signed map runtime screenshots require actual review')
     if p.get('signedNativeVisualReviewPassed') is not True or p.get('signedPngsReviewed')!=SIGNED_PNGS:raise ValueError('Actual signed native screenshots have not been reviewed')
 

@@ -68,8 +68,8 @@ public class P061RealMapTest {
                 receipt.put("importMillis",SystemClock.uptimeMillis()-began);
                 var state=repository.read();assertEquals(105834033L,state.current().bytes());assertEquals(SHA,hash(privateFile(state)));
                 // Remove the provider's external source copy: read phase can use only the private file.
-                File provider=new File(InstrumentationRegistry.getInstrumentation().getContext().getCacheDir(),"p06-provider-valid");
-                assertTrue(!provider.exists()||provider.delete());
+                assertEquals("Delete the external provider copy through its owning UID",1,
+                        context.getContentResolver().delete(Uri.parse("content://com.fox.runner.p06.fixture/real.map"),null,null));
                 // A partial/corrupt import must leave the selected complete file untouched.
                 try{repository.importMap(new ByteArrayInputStream(new byte[80]),"broken.map");fail("Corrupt map accepted");}catch(IOException expected){}
                 assertEquals(state.selected(),repository.read().selected());
