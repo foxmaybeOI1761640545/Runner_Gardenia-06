@@ -340,6 +340,9 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     private synchronized void startSensors() {
         boolean gpsNeeded=isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty();
+        // Stop an unneeded preview before restoring the configured GPS source: an idle
+        // HR preview must never attempt to connect a user's remote/disabled GPS driver.
+        if (!gpsNeeded) trackPointCreator.getSensorManager().setGpsRecording(false);
         trackPointCreator.getSensorManager().setMapGpsPreview(!mapGpsOwners.isEmpty() && !isRecording() && !isAcquiringGps());
         trackPointCreator.getSensorManager().setGpsRecording(gpsNeeded);
         if (!trackPointCreator.isStarted()) {

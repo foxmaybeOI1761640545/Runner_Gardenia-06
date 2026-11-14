@@ -80,4 +80,30 @@ public class P061GpsPreferencesTest {
         assertEquals("INTERNAL",PreferencesUtils.getString(R.string.settings_sensor_gps_key,""));assertEquals("7",PreferencesUtils.getString(R.string.min_sampling_interval_key,""));
     }
 
+    @Test public void closingLastMapRestoresIdleHeartPreviewWithoutConnectingRemoteGps(){
+        String heart=PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key,"NONE");
+        boolean enabled=de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(context);
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,"AA:BB:CC:DD:EE:FF");
+        PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,"NONE");
+        de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(context,true);
+        try {
+            main(service::tryStartSensors);
+            Object[] heartHandler={null};main(()->{heartHandler[0]=service.getTrackPointCreator().getSensorManager().getHeartRateHandler();
+                assertNull(service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
+            try(var screen=ActivityScenario.launch(P06MapActivity.class)){
+                onView(withId(R.id.p06_my_position)).perform(click());owners(1);
+                screen.onActivity(a->assertTrue(service.getTrackPointCreator().getSensorManager().getGpsHandler().driver instanceof GpsInternal));
+            }
+            main(()->{assertEquals(0,service.mapGpsOwnerCount());assertTrue(service.areSensorsStarted());assertFalse(service.isRecording());
+                assertNull(service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);
+                assertSame(heartHandler[0],service.getTrackPointCreator().getSensorManager().getHeartRateHandler());});
+            assertEquals("AA:BB:CC:DD:EE:FF",PreferencesUtils.getString(R.string.settings_sensor_gps_key,""));
+            assertEquals("7",PreferencesUtils.getString(R.string.min_sampling_interval_key,""));
+        } finally {
+            main(service::stopIdleSensors);
+            PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,heart);
+            de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(context,enabled);
+        }
+    }
+
 }
