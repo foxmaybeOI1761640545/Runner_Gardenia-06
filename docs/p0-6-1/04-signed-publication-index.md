@@ -26,4 +26,4 @@ CI匿名下载与实际apksigner通过；独立匿名public asset API下载HTTP2
 
 publication-receipt.json为发布Job实际生成的原始回执；independent-publication-verification.json记录独立下载及保护ref核验。回执Artifact14122364720、3314字节、ZIP SHA256 4b6b14736e484d70d135c051b48c56e35e17dc954009f736169f1298291f70e6已实际计算匹配。
 
-本次后续报告提交仅保存已完成的事实；发布脚本按同一Tag/同一APK/同一资产集合执行幂等复核，不覆盖附件、不创建新版本、不访问签名Secrets。最终文档HEAD及这次复核run_id由最终交付消息单独记录，避免把自身文档提交的SHA冒充APK源码。
+后续报告提交仅保存已完成的事实。现有工作流配置paths-ignore=[docs/**, AGENTS.md]，文档提交不触发新运行；因此不存在文档HEAD对应的新验收或复核run_id。实际完整/签名/发布依据仍分别是43609863706、43613996030、43617601031，不以文档提交冒充另一次测试。没有重构建、重签、重复分配版本或覆盖任何附件。最终文档HEAD由最终交付消息和分支提交记录单独标明。

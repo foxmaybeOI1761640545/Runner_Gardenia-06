@@ -13,5 +13,6 @@ a8a6c4c27faaedab07c64fb4bbb71261da0512f5 Fix bounded map rendering with a rectan
 6cee1958a23bfd1a1fe3b6a9b547717c528cbc75 Require native touch and zoom evidence on the actual 100MB map
 8958de3422e62b6e1ad69e26690754ad8c3d069e [p061-release-accepted-ui] Approve complete actual-source regression and native map evidence
 c8efde1d73469b027dc7d28d41b7056d6efa5fbc [p061-publish-accepted-apk] Publish reviewed fixed-key P0.6.1 APK and complete Chinese acceptance report
+e6f6e82e98e978923f009a987eb8b20745481de6 [p061-publish-accepted-apk] Record completed publication and independent anonymous verification receipts
 
-Final receipt-only documentation commit: see this file's enclosing Git commit; no app/test/version/build changes.
+Final receipt-only documentation commit: see enclosing Git commit; docs/** is ignored by existing CI triggers.
