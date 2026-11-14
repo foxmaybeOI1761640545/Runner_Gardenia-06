@@ -83,7 +83,10 @@ def capture(device,dump,screenshot,tap,start,output):
    time.sleep(.5)
   raise ValueError('Signed native viewport did not complete every file-supported tile')
  def photo(name,track=False):
-  diagnostic=wait_tiles();tree=dump();focus=next((l.strip() for l in device('shell','dumpsys','window').splitlines() if 'mCurrentFocus=' in l),'')
+  diagnostic=wait_tiles()
+  requested=re.search(r'-z(\d+)$',name)
+  if requested and diagnostic['zoom']!=int(requested.group(1)):raise ValueError('Signed native zoom differs from requested detail level')
+  tree=dump();focus=next((l.strip() for l in device('shell','dumpsys','window').splitlines() if 'mCurrentFocus=' in l),'')
   if 'P06MapActivity' not in focus:raise ValueError('Actual signed map Activity must be focused')
   filename='p061-signed-real-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree)
   if track:pixels.update(verify_track_pixels(raw,tree,32))
@@ -100,7 +103,16 @@ def capture(device,dump,screenshot,tap,start,output):
  for _ in range(5):tap('p06_zoom_in');time.sleep(.35)
  time.sleep(3);photo('detail-z12')
  for _ in range(4):tap('p06_zoom_in');time.sleep(.35)
- time.sleep(3);photo('detail-z16')
+ time.sleep(3);before_pan=wait_tiles();canvas=next(n for n in dump().iter('node') if n.get('resource-id')==PACKAGE+':id/p06_map_container')
+ b=list(map(int,re.findall(r'\d+',canvas.get('bounds',''))));left,top,right,bottom=b
+ device('shell','input','swipe',str(int(left+(right-left)*.45)),str((top+bottom)//2),str(int(left+(right-left)*.55)),str((top+bottom)//2),'300');time.sleep(.5)
+ after_pan=wait_tiles()
+ if (before_pan['latitude'],before_pan['longitude'])==(after_pan['latitude'],after_pan['longitude']):raise ValueError('Actual signed 100MB touch drag did not move the map')
+ photo('detail-z16')
+ tap('p06_zoom_out');time.sleep(.5)
+ if wait_tiles()['zoom']!=15:raise ValueError('Signed native zoom-out did not change level')
+ tap('p06_zoom_in');time.sleep(.5)
+ if wait_tiles()['zoom']!=16:raise ValueError('Signed native zoom-in did not restore level')
  old_font=device('shell','settings','get','system','font_scale')
  try:
   device('shell','wm','size','640x1136');device('shell','wm','density','320');device('shell','settings','put','system','font_scale','1.5');time.sleep(3);ready()
@@ -143,16 +155,19 @@ def capture(device,dump,screenshot,tap,start,output):
  with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
   for row in rows:
    for key in ('file','nativeWindowFile'):z.write(output/row[key],row[key])
- proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'mapSha256':SHA,'mapBytes':BYTES,'safSystemPicker':True,'privateFileShaVerified':True,'sourceDeleted':True,'newProcessReload':True,'airplaneMode':True,'recordingSurvivesMapClose':True,'gpsPreferencesUnchanged':True,'largeFont320dpVerified':True,'screenshots':rows,'screenshotsZipSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'hardware':'NEEDS_DEVICE_VALIDATION'}
+ proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'mapSha256':SHA,'mapBytes':BYTES,'safSystemPicker':True,'privateFileShaVerified':True,'sourceDeleted':True,'newProcessReload':True,'airplaneMode':True,'recordingSurvivesMapClose':True,'gpsPreferencesUnchanged':True,'largeFont320dpVerified':True,'nativePanVerified':True,'nativeZoomOutVerified':True,'nativeZoomLevelsVerified':[7,12,16],'screenshots':rows,'screenshotsZipSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'hardware':'NEEDS_DEVICE_VALIDATION'}
  if len(rows)!=7:raise ValueError('Signed actual map screenshot set incomplete')
  Path('dist/real-map-smoke.json').write_text(json.dumps(proof,indent=2)+'\n')
 
 def verify(folder,info):
  proof=json.loads((folder/'real-map-smoke.json').read_text());raw=(folder/'real-map-screenshots.zip').read_bytes()
- if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or proof.get('mapSha256')!=SHA or proof.get('mapBytes')!=BYTES or len(proof.get('screenshots',[]))!=7 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256'] or any(proof.get(k) is not True for k in ('passed','safSystemPicker','privateFileShaVerified','sourceDeleted','newProcessReload','airplaneMode','recordingSurvivesMapClose','gpsPreferencesUnchanged','largeFont320dpVerified')):raise ValueError('Exact signed actual-map runtime proof missing')
+ if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or proof.get('mapSha256')!=SHA or proof.get('mapBytes')!=BYTES or len(proof.get('screenshots',[]))!=7 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256'] or any(proof.get(k) is not True for k in ('passed','safSystemPicker','privateFileShaVerified','sourceDeleted','newProcessReload','airplaneMode','recordingSurvivesMapClose','gpsPreferencesUnchanged','largeFont320dpVerified','nativePanVerified','nativeZoomOutVerified')):raise ValueError('Exact signed actual-map runtime proof missing')
+ if proof.get('nativeZoomLevelsVerified')!=[7,12,16]:raise ValueError('Actual signed zoom-level evidence missing')
  import io
  with zipfile.ZipFile(io.BytesIO(raw)) as z:
   for row in proof['screenshots']:
+   requested=re.search(r'-z(\d+)\.png$',row['file'])
+   if requested and row['viewportDiagnostic']['zoom']!=int(requested.group(1)):raise ValueError('Signed screenshot zoom evidence differs')
    if not any(t['readerSupportsTile'] for t in row['viewportDiagnostic']['visibleTiles']) or any(t['readerSupportsTile'] and t['rendererTileState']!='CACHED' for t in row['viewportDiagnostic']['visibleTiles']):raise ValueError('Signed partial viewport cannot pass')
    png=z.read(row['file']);xml=z.read(row['nativeWindowFile']);tree=ET.fromstring(xml)
    if hashlib.sha256(png).hexdigest()!=row['sha256'] or hashlib.sha256(xml).hexdigest()!=row['nativeWindowSha256'] or 'P06MapActivity' not in row['focusedWindow']:raise ValueError('Actual signed map native evidence differs')

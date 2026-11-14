@@ -28,7 +28,7 @@ def collect():
  roots=list(Path('build/outputs').glob('**/p0-ui'));hits=[p/'p061-real-map-both.json' for p in roots if (p/'p061-real-map-both.json').is_file()]
  if len(hits)!=1:raise ValueError('Missing unambiguous real-file native receipt')
  path=hits[0];r=json.loads(path.read_text())
- if r.get('sourceCommit')!=os.environ['GITHUB_SHA'] or r.get('passed') is not True or r.get('privateFileShaVerified') is not True or r.get('airplaneMode') is not True or r.get('realMapSwitchAndDeletePassed') is not True or r.get('mapSha256')!=SHA or r.get('mapBytes')!=BYTES or len(r.get('screenshots',[]))!=51:raise ValueError('Incomplete exact-source actual-map receipt')
+ if r.get('sourceCommit')!=os.environ['GITHUB_SHA'] or r.get('passed') is not True or r.get('privateFileShaVerified') is not True or r.get('airplaneMode') is not True or r.get('realMapSwitchAndDeletePassed') is not True or r.get('realMapNativeZoomAndPan') is not True or r.get('mapSha256')!=SHA or r.get('mapBytes')!=BYTES or len(r.get('screenshots',[]))!=51:raise ValueError('Incomplete exact-source actual-map receipt')
  out=Path('build/reports/p061-real-map');out.mkdir(parents=True,exist_ok=True)
  rows=[]
  for row in r['screenshots']+[{'file':'p061-real-route.png'},{'file':'p061-real-recreated.png'}]:

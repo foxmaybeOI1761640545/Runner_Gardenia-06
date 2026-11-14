@@ -133,6 +133,17 @@ public class P061RealMapTest {
                             onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());
                         }
                     }
+                    // Real-file acceptance must exercise native controls and touch, not only model setters.
+                    onView(withId(R.id.p06_zoom_in)).perform(click());SystemClock.sleep(350);
+                    screen.onActivity(a->assertEquals(17,view(a).mapView().getModel().mapViewPosition.getZoomLevel()));
+                    ready(screen);
+                    onView(withId(R.id.p06_zoom_out)).perform(click());SystemClock.sleep(350);
+                    screen.onActivity(a->{assertEquals(16,view(a).mapView().getModel().mapViewPosition.getZoomLevel());center[0]=view(a).mapView().getModel().mapViewPosition.getCenter();});
+                    onView(androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom(org.mapsforge.map.android.view.MapView.class)).perform(new androidx.test.espresso.action.GeneralSwipeAction(androidx.test.espresso.action.Swipe.FAST,
+                            v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.45f,xy[1]+v.getHeight()*.5f};},
+                            v->{int[] xy=new int[2];v.getLocationOnScreen(xy);return new float[]{xy[0]+v.getWidth()*.55f,xy[1]+v.getHeight()*.5f};},androidx.test.espresso.action.Press.FINGER));
+                    SystemClock.sleep(350);ready(screen);
+                    screen.onActivity(a->assertNotEquals("Actual 100MB map moves after touch drag",center[0],view(a).mapView().getModel().mapViewPosition.getCenter()));
                     screen.onActivity(a->{center[0]=view(a).mapView().getModel().mapViewPosition.getCenter();savedZoom[0]=view(a).mapView().getModel().mapViewPosition.getZoomLevel();});
                 }
                 // ActivityScenario launches isolated tasks: finish one before starting the next.
@@ -166,7 +177,7 @@ public class P061RealMapTest {
                 try(var switched=ActivityScenario.launch(P06MapActivity.class)){ready(switched);}
                 repository.delete(actualId);assertFalse("Actual private file must be removed after closing renderer",actualFile.exists());
                 assertTrue(repository.read().entries().isEmpty());
-                receipt.put("screenshots",captures).put("privateFileShaVerified",true).put("realMapSwitchAndDeletePassed",true).put("airplaneMode",true).put("passed",true);
+                receipt.put("screenshots",captures).put("privateFileShaVerified",true).put("realMapSwitchAndDeletePassed",true).put("realMapNativeZoomAndPan",true).put("airplaneMode",true).put("passed",true);
             } else receipt.put("passed",true).put("privateFileShaVerified",true).put("sourceCopyDeleted",true);
             String output=InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
             File dir=new File(output!=null?new File(output):new File(context.getExternalMediaDirs()[0],"additional_test_output"),"p0-ui");dir.mkdirs();
