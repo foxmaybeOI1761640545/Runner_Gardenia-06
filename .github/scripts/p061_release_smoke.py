@@ -178,16 +178,29 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             pref='/data/user/0/'+PACKAGE+'/shared_prefs/'+PACKAGE+'_preferences.xml';local=temporary/'preferences.xml';device('pull',pref,local)
             tree=ET.parse(local);root=tree.getroot()
             for node in list(root):
-                if node.get('name') in ('bluetoothSensor','p0_hr_connection_enabled','p0_hr_auto_reconnect','statsUnits','statsRate','gardenia_theme_family'):root.remove(node)
+                if node.get('name') in ('bluetoothSensor','p0_hr_connection_enabled','p0_hr_auto_reconnect','statsUnits','statsRate','gardenia_theme_family','bluetoothGPSSensor','minRecordingIntervalV2'):root.remove(node)
             ET.SubElement(root,'string',{'name':'bluetoothSensor'}).text='AA:BB:CC:DD:EE:FF';ET.SubElement(root,'boolean',{'name':'p0_hr_connection_enabled','value':'true'})
             ET.SubElement(root,'boolean',{'name':'p0_hr_auto_reconnect','value':'false'})
-            for key,value in [('statsUnits','METRIC'),('statsRate','SPEED'),('gardenia_theme_family','precision')]:ET.SubElement(root,'string',{'name':key}).text=value
+            for key,value in [('statsUnits','METRIC'),('statsRate','SPEED'),('gardenia_theme_family','precision'),('bluetoothGPSSensor','NONE'),('minRecordingIntervalV2','7')]:ET.SubElement(root,'string',{'name':key}).text=value
             tree.write(local,encoding='utf-8',xml_declaration=True);device('push',local,pref);device('shell','chown',uid+':'+uid,pref)
+            retained_map=None
+            if baseline_spec[1]==6778:
+                from p061_real_map import NAME as map_name,SHA as map_sha
+                retained_map='/data/user/0/'+PACKAGE+'/files/offline-maps/'
+                device('shell','mkdir','-p',retained_map);device('shell','chown',uid+':'+uid,retained_map)
+                map_id='06106106-1061-4061-8061-061061061061'
+                device('push',Path('work/real-map')/map_name,retained_map+map_id+'.map',timeout=120)
+                map_index=temporary/'baseline-map-index.json';map_index.write_text(json.dumps({'schema':1,'selected':map_id,'maps':[{'id':map_id,'name':map_name}]}))
+                device('push',map_index,retained_map+'index.json');device('shell','chown','-R',uid+':'+uid,retained_map)
+                if device('shell','sha256sum',retained_map+map_id+'.map').split()[0]!=map_sha:raise ValueError('Baseline real-map fixture checksum differs')
             print('Installing verified fixed-key P0 APK over baseline without clearing data',flush=True);device('install','-r',apk,timeout=120)
             upgraded_preferences=ET.fromstring(device('shell','cat',pref))
             retained_settings={n.get('name'):n.text if n.tag=='string' else n.get('value') for n in upgraded_preferences}
-            expected_settings={'statsUnits':'METRIC','statsRate':'SPEED','gardenia_theme_family':'precision','bluetoothSensor':'AA:BB:CC:DD:EE:FF','p0_hr_connection_enabled':'true','p0_hr_auto_reconnect':'false'}
+            expected_settings={'statsUnits':'METRIC','statsRate':'SPEED','gardenia_theme_family':'precision','bluetoothSensor':'AA:BB:CC:DD:EE:FF','p0_hr_connection_enabled':'true','p0_hr_auto_reconnect':'false','bluetoothGPSSensor':'NONE','minRecordingIntervalV2':'7'}
             if any(retained_settings.get(k)!=v for k,v in expected_settings.items()):raise ValueError('P0.4 upgrade lost existing theme/unit/rate/device preferences')
+            if retained_map is not None:
+                if json.loads(device('shell','cat',retained_map+'index.json'))['selected']!=map_id or device('shell','sha256sum',retained_map+map_id+'.map').split()[0]!=map_sha:raise ValueError('P0.6 upgrade lost the original 100MB private map')
+
             device('shell','cmd','location','set-location-enabled','false' if p02 else 'true');start();wait_text('Not recording' if p02 else 'Ready');screenshot('release-home-gps-only')
             device('emu','geo','fix','103.8','1.3','12','8','4');tap('p0_start')
             if p02:
@@ -262,7 +275,7 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             if baseline_spec[1]==6778:
                 from p061_signed_real_map import capture as real_map_capture
                 real_map_capture(device,dump,screenshot,tap,start,output)
-            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'unitAndRateUpgradeRetained':True,'themeUpgradeRetained':True,'nativeRateSwitchKeepsRecording':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
+            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'gpsSettingsUpgradeRetained':True,'baselineMapRetained':retained_map is not None,'unitAndRateUpgradeRetained':True,'themeUpgradeRetained':True,'nativeRateSwitchKeepsRecording':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:screenshot('last-native-screen')

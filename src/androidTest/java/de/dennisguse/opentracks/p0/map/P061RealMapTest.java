@@ -132,7 +132,7 @@ public class P061RealMapTest {
                         var position=new de.dennisguse.opentracks.data.models.Position(java.time.Instant.EPOCH.plusSeconds(i),23.700+i*.001,117.429+i*.0005,de.dennisguse.opentracks.data.models.Distance.of(2),null,null,null,null);
                         database.insertTrackPoint(new de.dennisguse.opentracks.data.models.TrackPoint(null,de.dennisguse.opentracks.data.models.TrackPoint.Type.TRACKPOINT,position,null,null,null,null,null,null),track);
                     }
-                    try(var history=ActivityScenario.launch(P06MapActivity.intent(context,track.id()))){
+                    try(ActivityScenario<P06MapActivity> history=ActivityScenario.launch(P06MapActivity.intent(context,track.id()))){
                         ready(history);long until=SystemClock.uptimeMillis()+10000;int[] segments={0};
                         do{history.onActivity(a->segments[0]=view(a).segmentCount());if(segments[0]>0)break;SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<until);
                         assertEquals(1,segments[0]);onView(withId(R.id.p06_fit_track)).perform(click());SystemClock.sleep(500);P0UiCapture.save("p061-real-route");
