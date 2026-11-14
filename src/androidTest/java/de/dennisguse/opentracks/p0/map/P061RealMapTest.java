@@ -40,8 +40,20 @@ public class P061RealMapTest {
     }
     private void ready(ActivityScenario<P06MapActivity> screen)throws Exception{
         long until=SystemClock.uptimeMillis()+60000;boolean[] ready={false};
-        do{screen.onActivity(a->{var v=view(a);ready[0]=v.mapView()!=null&&v.renderedTileCount()>0;});if(ready[0])return;SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<until);
+        do{screen.onActivity(a->{var v=view(a);ready[0]=v.mapView()!=null&&v.renderedTileCount()>0;});if(ready[0]){
+            var repository=new OfflineMapRepository(context);var file=repository.open(repository.read().current());
+            org.mapsforge.core.model.BoundingBox bounds;try{bounds=file.boundingBox();}finally{file.close();}
+            settled(screen,bounds);return;
+        }SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<until);
         fail("Actual map must finish importing and render native vector tiles");
+    }
+    private OfflineMapView.DiagnosticViewport settled(ActivityScenario<P06MapActivity> screen,org.mapsforge.core.model.BoundingBox bounds){
+        long until=SystemClock.uptimeMillis()+45000;OfflineMapView.DiagnosticViewport[] snapshot={null};boolean[] complete={false};
+        do{screen.onActivity(a->{snapshot[0]=view(a).diagnosticViewport();
+            if(snapshot[0]!=null){var expected=snapshot[0].tiles().stream().filter(t->bounds.intersects(t.tile().getBoundingBox())).toList();
+                complete[0]=!expected.isEmpty()&&expected.stream().allMatch(OfflineMapView.TileState::cached);}
+        });if(complete[0]){SystemClock.sleep(500);return snapshot[0];}SystemClock.sleep(150);}while(SystemClock.uptimeMillis()<until);
+        fail("Every visible file-supported tile must finish rendering before capture; partial screenshots are not acceptance");return null;
     }
     private File privateFile(OfflineMapRepository.State state){return new File(context.getFilesDir(),"offline-maps/"+state.selected()+".map");}
     @Test public void realMapSafImportFlightModeFeaturesRenderRecreateAndIndependentRestart()throws Exception{
@@ -97,14 +109,12 @@ public class P061RealMapTest {
                     for(int i=0;i<p.length;i++)for(byte zoom:new byte[]{7,12,16}){
                         final int index=i;final byte z=zoom;
                         screen.onActivity(a->{var map=view(a).mapView();map.setCenter(new LatLong(p[index][0],p[index][1]));map.setZoomLevel(z);});
-                        long until=SystemClock.uptimeMillis()+45000;boolean[] cached={false};OfflineMapView.DiagnosticViewport[] viewport={null};
-                        do{screen.onActivity(a->{viewport[0]=view(a).diagnosticViewport();cached[0]=viewport[0].tiles().stream().anyMatch(OfflineMapView.TileState::cached);});if(cached[0])break;SystemClock.sleep(150);}while(SystemClock.uptimeMillis()<until);
-                        assertTrue("Native real-map viewport has no rendered tile: "+names[i]+" z"+z,cached[0]);
-                        org.mapsforge.map.reader.MapFile file=repository.open(state.current());String diagnostic;
-                        try{diagnostic=MapDiagnostics.inspect(file,viewport[0]);}finally{file.close();}
+                        org.mapsforge.map.reader.MapFile file=repository.open(state.current());String diagnostic;long began=SystemClock.uptimeMillis();
+                        try{var viewport=settled(screen,file.boundingBox());diagnostic=MapDiagnostics.inspect(file,viewport);}finally{file.close();}
+                        long renderWait=SystemClock.uptimeMillis()-began;
                         if(z==12){JSONObject d=new JSONObject(diagnostic);boolean features=false;for(int t=0;t<d.getJSONArray("visibleTiles").length();t++){var tile=d.getJSONArray("visibleTiles").getJSONObject(t);features|=tile.getInt("ways")>0||tile.getInt("pois")>0;}assertTrue("Readable target features are required",features);}
                         SystemClock.sleep(500);String name="p061-real-"+names[i]+"-z"+z;P0UiCapture.save(name);
-                        captures.put(new JSONObject().put("file",name+".png").put("diagnostic",new JSONObject(diagnostic)));
+                        captures.put(new JSONObject().put("file",name+".png").put("diagnostic",new JSONObject(diagnostic)).put("renderWaitMillis",renderWait));
                         if(i==0&&z==16){
                             androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu(context);
                             onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p061_map_diagnostics)).perform(click());

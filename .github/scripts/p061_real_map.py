@@ -32,6 +32,7 @@ def collect():
  out=Path('build/reports/p061-real-map');out.mkdir(parents=True,exist_ok=True)
  rows=[]
  for row in r['screenshots']+[{'file':'p061-real-route.png'},{'file':'p061-real-recreated.png'}]:
+  if 'diagnostic' in row and any(t['readerSupportsTile'] and t['rendererTileState']!='CACHED' for t in row['diagnostic']['visibleTiles']):raise ValueError('Partial viewport cannot pass actual map screenshot acceptance')
   name=row['file']
   if Path(name).name!=name:raise ValueError('Unsafe screenshot path')
   f=path.parent/name
