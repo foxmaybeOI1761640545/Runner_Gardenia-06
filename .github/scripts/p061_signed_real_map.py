@@ -2,8 +2,17 @@
 import hashlib,json,re,threading,time,zipfile,xml.etree.ElementTree as ET
 from pathlib import Path
 from p061_real_map import NAME,SHA,BYTES
-from p06_release_map_ui import verify_pixels,verify_track_pixels
+from p06_release_map_ui import png_pixels,verify_track_pixels
 PACKAGE='com.fox.runner'
+
+def verify_pixels(raw,tree):
+ node=next((n for n in tree.iter('node') if n.get('resource-id')==PACKAGE+':id/p06_map_container'),None)
+ bounds=[] if node is None else list(map(int,re.findall(r'\d+',node.get('bounds',''))))
+ if len(bounds)!=4:raise ValueError('Actual map canvas bounds missing')
+ left,top,right,bottom=bounds
+ colors=png_pixels(raw,[(int(left+(right-left)*x/10),int(top+(bottom-top)*y/10)) for x in (2,3,4,6,7,8) for y in (2,3,4,6,7,8)])
+ if len(set(colors))<3:raise ValueError('Real-map screenshot has insufficient native feature variation')
+ return {'sampleColors':len(set(colors)),'realMapFeatureVariation':True}
 
 def capture(device,dump,screenshot,tap,start,output):
  info=json.loads(Path('dist/build-info.json').read_text());rows=[]
@@ -70,18 +79,34 @@ def capture(device,dump,screenshot,tap,start,output):
  device('shell','cmd','connectivity','airplane-mode','enable')
  if device('shell','settings','get','global','airplane_mode_on')!='1':raise ValueError('Actual airplane mode required')
  home();tap('p04_route');picker(NAME);ready();retained();photo('imported-z7')
+ tap('p06_my_position')
+ for _ in range(3):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
  for _ in range(5):tap('p06_zoom_in');time.sleep(.35)
  time.sleep(3);photo('detail-z12')
  for _ in range(4):tap('p06_zoom_in');time.sleep(.35)
  time.sleep(3);photo('detail-z16')
+ old_font=device('shell','settings','get','system','font_scale')
+ try:
+  device('shell','wm','size','640x1136');device('shell','wm','density','320');device('shell','settings','put','system','font_scale','1.5');time.sleep(3);ready()
+  nodes=list(dump().iter('node'))
+  for action in ('p06_import_map','p06_manage_maps','p06_my_position','p06_fit_track'):
+   node=next((n for n in nodes if n.get('resource-id')==PACKAGE+':id/'+action),None)
+   if node is None or node.get('enabled')!='true':raise ValueError('Large-font map action unavailable: '+action)
+   b=list(map(int,re.findall(r'\d+',node.get('bounds',''))))
+   if len(b)!=4 or b[3]-b[1]<48 or b[2]<=b[0]:raise ValueError('Large-font map action clipped: '+action)
+  photo('320dp-large-font')
+ finally:
+  device('shell','wm','size','reset');device('shell','wm','density','reset')
+  device('shell','settings','put','system','font_scale',old_font if old_font!='null' else '1.0');time.sleep(2)
+
  device('shell','rm','/sdcard/Download/'+NAME);home();tap('p04_route');ready();retained();photo('new-process')
  home();tap('p0_start')
- for _ in range(4):device('emu','geo','fix','114.8','23.2','12','8','4');time.sleep(1)
+ for _ in range(4):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
  stop=threading.Event();errors=[]
  def feed():
   try:
    i=0
-   while not stop.is_set():device('emu','geo','fix','114.8',str(23.2+min(i,40)*.000018),'12','8','4');i+=1;stop.wait(1)
+   while not stop.is_set():device('emu','geo','fix','113.2644',str(23.1291+min(i,40)*.000018),'12','8','4');i+=1;stop.wait(1)
   except Exception as error:errors.append(str(error))
  thread=threading.Thread(target=feed);thread.start()
  try:
@@ -99,13 +124,13 @@ def capture(device,dump,screenshot,tap,start,output):
  with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
   for row in rows:
    for key in ('file','nativeWindowFile'):z.write(output/row[key],row[key])
- proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'mapSha256':SHA,'mapBytes':BYTES,'safSystemPicker':True,'privateFileShaVerified':True,'sourceDeleted':True,'newProcessReload':True,'airplaneMode':True,'recordingSurvivesMapClose':True,'gpsPreferencesUnchanged':True,'screenshots':rows,'screenshotsZipSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'hardware':'NEEDS_DEVICE_VALIDATION'}
- if len(rows)!=6:raise ValueError('Signed actual map screenshot set incomplete')
+ proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'mapSha256':SHA,'mapBytes':BYTES,'safSystemPicker':True,'privateFileShaVerified':True,'sourceDeleted':True,'newProcessReload':True,'airplaneMode':True,'recordingSurvivesMapClose':True,'gpsPreferencesUnchanged':True,'largeFont320dpVerified':True,'screenshots':rows,'screenshotsZipSha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'hardware':'NEEDS_DEVICE_VALIDATION'}
+ if len(rows)!=7:raise ValueError('Signed actual map screenshot set incomplete')
  Path('dist/real-map-smoke.json').write_text(json.dumps(proof,indent=2)+'\n')
 
 def verify(folder,info):
  proof=json.loads((folder/'real-map-smoke.json').read_text());raw=(folder/'real-map-screenshots.zip').read_bytes()
- if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or proof.get('mapSha256')!=SHA or proof.get('mapBytes')!=BYTES or len(proof.get('screenshots',[]))!=6 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256'] or any(proof.get(k) is not True for k in ('passed','safSystemPicker','privateFileShaVerified','sourceDeleted','newProcessReload','airplaneMode','recordingSurvivesMapClose','gpsPreferencesUnchanged')):raise ValueError('Exact signed actual-map runtime proof missing')
+ if proof.get('commit')!=info['commit'] or proof.get('apkSha256')!=info['apkSha256'] or proof.get('mapSha256')!=SHA or proof.get('mapBytes')!=BYTES or len(proof.get('screenshots',[]))!=7 or hashlib.sha256(raw).hexdigest()!=proof['screenshotsZipSha256'] or any(proof.get(k) is not True for k in ('passed','safSystemPicker','privateFileShaVerified','sourceDeleted','newProcessReload','airplaneMode','recordingSurvivesMapClose','gpsPreferencesUnchanged','largeFont320dpVerified')):raise ValueError('Exact signed actual-map runtime proof missing')
  import io
  with zipfile.ZipFile(io.BytesIO(raw)) as z:
   for row in proof['screenshots']:

@@ -55,6 +55,13 @@ public class P061RealMapTest {
             if(!phase.equals("read")){
                 for(var entry:repository.read().entries())repository.delete(entry.id());
                 long began=SystemClock.uptimeMillis();
+                var sampling=new java.util.concurrent.atomic.AtomicBoolean(true);
+                var peakHeap=new java.util.concurrent.atomic.AtomicLong();var peakPss=new java.util.concurrent.atomic.AtomicLong();
+                long beforeHeap=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+                Thread memory=new Thread(()->{while(sampling.get()){
+                    long heap=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();peakHeap.accumulateAndGet(heap,Math::max);
+                    peakPss.accumulateAndGet(android.os.Debug.getPss(),Math::max);SystemClock.sleep(200);
+                }},"p061-import-memory-sampler");memory.start();
                 try(var screen=ActivityScenario.launch(P06MapActivity.class)){
                     Intents.init();try{
                         intending(hasAction(Intent.ACTION_OPEN_DOCUMENT)).respondWith(new Instrumentation.ActivityResult(Activity.RESULT_OK,
@@ -65,7 +72,10 @@ public class P061RealMapTest {
                         ready(screen);
                     }finally{Intents.release();}
                 }
-                receipt.put("importMillis",SystemClock.uptimeMillis()-began);
+                finally{sampling.set(false);memory.join(3000);assertFalse("Memory sampler must finish",memory.isAlive());}
+                receipt.put("importMillis",SystemClock.uptimeMillis()-began).put("heapBeforeImportBytes",beforeHeap)
+                        .put("peakSampledJavaHeapBytes",peakHeap.get()).put("peakSampledPssKb",peakPss.get())
+                        .put("heapLimitBytes",Runtime.getRuntime().maxMemory());
                 var state=repository.read();assertEquals(105834033L,state.current().bytes());assertEquals(SHA,hash(privateFile(state)));
                 // Remove the provider's external source copy: read phase can use only the private file.
                 assertEquals("Delete the external provider copy through its owning UID",1,
@@ -95,14 +105,43 @@ public class P061RealMapTest {
                         if(z==12){JSONObject d=new JSONObject(diagnostic);boolean features=false;for(int t=0;t<d.getJSONArray("visibleTiles").length();t++){var tile=d.getJSONArray("visibleTiles").getJSONObject(t);features|=tile.getInt("ways")>0||tile.getInt("pois")>0;}assertTrue("Readable target features are required",features);}
                         SystemClock.sleep(500);String name="p061-real-"+names[i]+"-z"+z;P0UiCapture.save(name);
                         captures.put(new JSONObject().put("file",name+".png").put("diagnostic",new JSONObject(diagnostic)));
+                        if(i==0&&z==16){
+                            androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu(context);
+                            onView(androidx.test.espresso.matcher.ViewMatchers.withText(R.string.p061_map_diagnostics)).perform(click());
+                            long end=SystemClock.uptimeMillis()+15000;boolean shown=false;
+                            do{var root=InstrumentationRegistry.getInstrumentation().getUiAutomation().getRootInActiveWindow();
+                                shown=root!=null&&!root.findAccessibilityNodeInfosByText("visibleTiles").isEmpty();if(shown)break;SystemClock.sleep(100);
+                            }while(SystemClock.uptimeMillis()<end);
+                            assertTrue("Native diagnostic dialog must show actual per-tile JSON",shown);
+                            onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());
+                        }
                     }
-                    screen.onActivity(a->{var v=view(a);v.bind(List.of(new RouteGeometry.Point(23.700,117.429,false),new RouteGeometry.Point(23.702,117.430,false)),null);v.fitRoute();assertEquals(1,v.segmentCount());});
-                    P0UiCapture.save("p061-real-route");
+                    var database=new de.dennisguse.opentracks.data.ContentProviderUtils(context);
+                    var track=database.insertTrack(new de.dennisguse.opentracks.data.models.Track(null,UUID.randomUUID(),"Synthetic actual-map overlay","","",de.dennisguse.opentracks.data.models.ActivityType.RUNNING,java.time.ZoneOffset.UTC,de.dennisguse.opentracks.data.models.Statistics.DEFAULT));
+                    for(int i=0;i<3;i++){
+                        var position=new de.dennisguse.opentracks.data.models.Position(java.time.Instant.EPOCH.plusSeconds(i),23.700+i*.001,117.429+i*.0005,de.dennisguse.opentracks.data.models.Distance.of(2),null,null,null,null);
+                        database.insertTrackPoint(new de.dennisguse.opentracks.data.models.TrackPoint(null,de.dennisguse.opentracks.data.models.TrackPoint.Type.TRACKPOINT,position,null,null,null,null,null,null),track);
+                    }
+                    try(var history=ActivityScenario.launch(P06MapActivity.intent(context,track.id()))){
+                        ready(history);long until=SystemClock.uptimeMillis()+10000;int[] segments={0};
+                        do{history.onActivity(a->segments[0]=view(a).segmentCount());if(segments[0]>0)break;SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<until);
+                        assertEquals(1,segments[0]);onView(withId(R.id.p06_fit_track)).perform(click());SystemClock.sleep(500);P0UiCapture.save("p061-real-route");
+                    }
                     LatLong[] center={null};byte[] zoom={0};screen.onActivity(a->{center[0]=view(a).mapView().getModel().mapViewPosition.getCenter();zoom[0]=view(a).mapView().getModel().mapViewPosition.getZoomLevel();});
                     screen.recreate();ready(screen);screen.onActivity(a->{assertEquals(center[0],view(a).mapView().getModel().mapViewPosition.getCenter());assertEquals(zoom[0],view(a).mapView().getModel().mapViewPosition.getZoomLevel());});
                     P0UiCapture.save("p061-real-recreated");
                 }
-                receipt.put("screenshots",captures).put("privateFileShaVerified",true).put("airplaneMode",true).put("passed",true);
+                // Switch away from and back to the actual 100MB private file, then unlink it only after all renderers close.
+                String actualId=state.selected();File actualFile=privateFile(state);String smallId;
+                try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){
+                    smallId=repository.importMap(input,"Switch fixture.map").selected();
+                }
+                assertEquals(751,repository.read().current().bytes());repository.select(actualId);
+                assertEquals(SHA,hash(privateFile(repository.read())));repository.delete(smallId);
+                try(var switched=ActivityScenario.launch(P06MapActivity.class)){ready(switched);}
+                repository.delete(actualId);assertFalse("Actual private file must be removed after closing renderer",actualFile.exists());
+                assertTrue(repository.read().entries().isEmpty());
+                receipt.put("screenshots",captures).put("privateFileShaVerified",true).put("realMapSwitchAndDeletePassed",true).put("airplaneMode",true).put("passed",true);
             } else receipt.put("passed",true).put("privateFileShaVerified",true).put("sourceCopyDeleted",true);
             String output=InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
             File dir=new File(output!=null?new File(output):new File(context.getExternalMediaDirs()[0],"additional_test_output"),"p0-ui");dir.mkdirs();
