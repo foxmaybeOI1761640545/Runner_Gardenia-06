@@ -38,6 +38,11 @@ public class P061GpsPreferencesTest {
         PreferencesUtils.setString(R.string.settings_sensor_gps_key,gps);PreferencesUtils.setString(R.string.min_sampling_interval_key,interval);
         new SessionStore(context).save(RecordingSession.ready());
     }
+    private void owners(int expected){
+        long end=android.os.SystemClock.uptimeMillis()+5000;int[] count={-1};
+        do{main(()->count[0]=service.mapGpsOwnerCount());if(count[0]==expected)return;android.os.SystemClock.sleep(50);}while(android.os.SystemClock.uptimeMillis()<end);
+        assertEquals(expected,count[0]);
+    }
     private void preferences(){assertEquals("NONE",PreferencesUtils.getString(R.string.settings_sensor_gps_key,""));assertEquals("7",PreferencesUtils.getString(R.string.min_sampling_interval_key,""));}
     @Test public void idlePreviewRecreateAndRepeatedEntryNeverWritePreferencesOrLeakOwners(){
         for(int i=0;i<3;i++){
@@ -46,7 +51,7 @@ public class P061GpsPreferencesTest {
                 screen.onActivity(a->{assertEquals(1,service.mapGpsOwnerCount());preferences();
                     var driver=(GpsInternal)service.getTrackPointCreator().getSensorManager().getGpsHandler().driver;
                     assertNotNull(driver);assertEquals(1000,driver.createLocationRequest().getIntervalMillis());});
-                screen.recreate();screen.onActivity(a->{assertEquals(1,service.mapGpsOwnerCount());preferences();});
+                screen.recreate();owners(1);screen.onActivity(a->{assertEquals(1,service.mapGpsOwnerCount());preferences();});
             }
             main(()->assertEquals(0,service.mapGpsOwnerCount()));preferences();
         }
@@ -58,8 +63,21 @@ public class P061GpsPreferencesTest {
             onView(withId(R.id.p06_my_position)).perform(click());
             screen.onActivity(a->{preferences();assertTrue(service.isRecording());assertEquals(1,service.mapGpsOwnerCount());
                 assertNull("A map must not turn a user's GPS-disabled recording into GPS recording",service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
-            screen.recreate();screen.onActivity(a->assertEquals(1,service.mapGpsOwnerCount()));
+            screen.recreate();owners(1);screen.onActivity(a->assertEquals(1,service.mapGpsOwnerCount()));
         }
         main(()->{assertTrue(service.isRecording());assertEquals(0,service.mapGpsOwnerCount());});preferences();
     }
+    @Test public void openingAndClosingMapKeepsLiveGpsDriverAndSevenSecondRecordingInterval(){
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,"INTERNAL");
+        main(service::startNewTrack);
+        GpsInternal[] original={null};
+        main(()->{original[0]=(GpsInternal)service.getTrackPointCreator().getSensorManager().getGpsHandler().driver;assertEquals(7000,original[0].createLocationRequest().getIntervalMillis());});
+        try(var screen=ActivityScenario.launch(P06MapActivity.class)){
+            onView(withId(R.id.p06_my_position)).perform(click());
+            screen.onActivity(a->{assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);assertEquals(7000,original[0].createLocationRequest().getIntervalMillis());});
+        }
+        main(()->{assertEquals(0,service.mapGpsOwnerCount());assertTrue(service.isRecording());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
+        assertEquals("INTERNAL",PreferencesUtils.getString(R.string.settings_sensor_gps_key,""));assertEquals("7",PreferencesUtils.getString(R.string.min_sampling_interval_key,""));
+    }
+
 }

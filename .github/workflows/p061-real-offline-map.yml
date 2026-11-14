@@ -628,6 +628,8 @@ jobs:
           RG_SOURCE_SHA256: c2f4fb0e0239219c4b9f02a90355f65c0d2986d7c3c948324acc72000a6f8be3
           RG_BOUNDARY_ONLY: 'true'
         run: python3 tools/offline-map/build_map.py
+      - name: Audit every tile intersecting the actual union and retain highway diagnostics
+        run: python3 .github/scripts/p061_coverage.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

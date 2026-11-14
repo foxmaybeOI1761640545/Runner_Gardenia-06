@@ -58,8 +58,12 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     /** Service-owned idle preview; active recording always uses the user's configuration. */
     public void setMapGpsPreview(boolean preview) {
         if (mapGpsPreview == preview) return;
+        String address = isStarted() ? gpsHandler.getSensorAddress() : null;
+        long interval = isStarted() ? gpsHandler.samplingIntervalMillis() : 0;
         mapGpsPreview = preview;
-        if (isStarted() && gpsRecording) gpsHandler.connect();
+        // Preserve a live GPS connection when its effective configuration did not change.
+        if (isStarted() && gpsRecording && (!java.util.Objects.equals(address, gpsHandler.getSensorAddress())
+                || interval != gpsHandler.samplingIntervalMillis())) gpsHandler.connect();
     }
 
     public boolean isMapGpsPreview() { return mapGpsPreview; }

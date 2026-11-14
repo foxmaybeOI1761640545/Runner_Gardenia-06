@@ -101,6 +101,7 @@ public class P06OfflineMapTest {
         }
     }
     @Test public void safImportAirplaneRenderGesturesCurrentLiveHistoricalTrackAndAllThemes()throws Exception{
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,"INTERNAL");
         String airplane=shell("settings get global airplane_mode_on").strip();
         try{
             shell("cmd connectivity airplane-mode enable");assertEquals("1",shell("settings get global airplane_mode_on").strip());

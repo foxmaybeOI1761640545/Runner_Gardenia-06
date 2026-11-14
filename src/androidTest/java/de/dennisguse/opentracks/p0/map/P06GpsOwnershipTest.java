@@ -56,6 +56,7 @@ public class P06GpsOwnershipTest {
         main(()->service.releaseMapGps(first));assertFalse(service.areSensorsStarted());assertFalse(service.isRecording());
     }
     @Test public void pausedWorkoutKeepsVisibleMapGpsAndResumeRetainsSameTrack(){
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,"INTERNAL");
         main(()->{service.acquireMapGps(first);service.startNewTrack();P0GpsPreparationTest.fixture(service);});fix(true);var id=service.getRecordingStatus().trackId();
         main(service::endCurrentTrack);assertFalse(service.isRecording());assertTrue(service.areSensorsStarted());
         relocatedFix();SystemClock.sleep(50);relocatedFix();

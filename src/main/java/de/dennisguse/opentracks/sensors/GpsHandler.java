@@ -167,7 +167,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     @NonNull
     @Override
     protected Driver createDriverInternal() {
-        return new GpsInternal(this, () -> sensorManager.isMapGpsPreview() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis());
+        return new GpsInternal(this, this::samplingIntervalMillis);
     }
 
     @NonNull
@@ -175,6 +175,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     protected AggregatorGPS createAggregator(String sensorAddress, String sensorName) {
         return new AggregatorGPS(sensorAddress, sensorName);
     }
+
+    long samplingIntervalMillis() { return sensorManager.isMapGpsPreview() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis(); }
 
     @Override
     protected String getSensorAddress() {
