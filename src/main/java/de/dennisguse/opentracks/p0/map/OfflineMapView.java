@@ -30,14 +30,14 @@ public final class OfflineMapView extends FrameLayout {
         var center = map.getModel().mapViewPosition.getCenter();
         byte zoom = map.getModel().mapViewPosition.getZoomLevel();
         var box = map.getBoundingBox();
-        long left = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.minLongitude, zoom);
-        long right = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.maxLongitude, zoom);
-        long top = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.maxLatitude, zoom);
-        long bottom = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.minLatitude, zoom);
+        int left = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.minLongitude, zoom);
+        int right = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.maxLongitude, zoom);
+        int top = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.maxLatitude, zoom);
+        int bottom = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.minLatitude, zoom);
         var rows = new ArrayList<TileState>();
         synchronized (tileCache) {
-            for (long y = top; y <= bottom && rows.size() < 128; y++) {
-                for (long x = left; x <= right && rows.size() < 128; x++) {
+            for (int y = top; y <= bottom && rows.size() < 128; y++) {
+                for (int x = left; x <= right && rows.size() < 128; x++) {
                     var tile = new org.mapsforge.core.model.Tile(x, y, zoom, map.getModel().displayModel.getTileSize());
                     var job = tileJobs.get(tile);
                     rows.add(new TileState(tile, job != null && tileCache.containsKey(job)));
