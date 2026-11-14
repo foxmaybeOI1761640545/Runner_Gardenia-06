@@ -1,0 +1,274 @@
+{
+  "sourceSha256": "c2f4fb0e0239219c4b9f02a90355f65c0d2986d7c3c948324acc72000a6f8be3",
+  "geometrySha256": "c1dcdecec318fadafd854117582f7b603bf4eaf1fa928edf849112ae8a58161e",
+  "selected": [
+    {
+      "city": "广州",
+      "admin_level": 5,
+      "osm_relation_id": 3287346,
+      "matched_names": [
+        "广州市",
+        "广州市",
+        "广州市",
+        "Guangzhou City",
+        "广州;羊城;省城;穗城;花城;五羊城",
+        "穗;广;省"
+      ],
+      "area_km2": 7373.37,
+      "test_point_lat_lon": [
+        23.1291,
+        113.2644
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "深圳",
+      "admin_level": 5,
+      "osm_relation_id": 3464353,
+      "matched_names": [
+        "深圳市",
+        "深圳市",
+        "深圳市",
+        "Shenzhen",
+        "深圳"
+      ],
+      "area_km2": 5935.52,
+      "test_point_lat_lon": [
+        22.5431,
+        114.0579
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "珠海",
+      "admin_level": 5,
+      "osm_relation_id": 3464829,
+      "matched_names": [
+        "珠海市",
+        "珠海市",
+        "珠海市",
+        "Zhuhai",
+        "珠海"
+      ],
+      "area_km2": 10675.14,
+      "test_point_lat_lon": [
+        22.271,
+        113.5767
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "佛山",
+      "admin_level": 5,
+      "osm_relation_id": 3464719,
+      "matched_names": [
+        "佛山市",
+        "佛山市",
+        "佛山市",
+        "Foshan",
+        "佛山"
+      ],
+      "area_km2": 3884.98,
+      "test_point_lat_lon": [
+        23.0218,
+        113.1219
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "东莞",
+      "admin_level": 5,
+      "osm_relation_id": 3464319,
+      "matched_names": [
+        "东莞市",
+        "东莞市",
+        "东莞市",
+        "Dongguan",
+        "东莞"
+      ],
+      "area_km2": 2472.81,
+      "test_point_lat_lon": [
+        23.0207,
+        113.7518
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "中山",
+      "admin_level": 5,
+      "osm_relation_id": 3464878,
+      "matched_names": [
+        "中山市",
+        "中山市",
+        "中山市",
+        "Zhongshan",
+        "中山"
+      ],
+      "area_km2": 1898.18,
+      "test_point_lat_lon": [
+        22.5159,
+        113.3926
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "江门",
+      "admin_level": 5,
+      "osm_relation_id": 3463901,
+      "matched_names": [
+        "江门市",
+        "江门市",
+        "江门市",
+        "Jiangmen",
+        "江门"
+      ],
+      "area_km2": 14024.64,
+      "test_point_lat_lon": [
+        22.5787,
+        113.0815
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "惠州",
+      "admin_level": 5,
+      "osm_relation_id": 3209912,
+      "matched_names": [
+        "惠州市",
+        "惠州市",
+        "Huizhou",
+        "惠州"
+      ],
+      "area_km2": 15055.17,
+      "test_point_lat_lon": [
+        23.1115,
+        114.4152
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "肇庆",
+      "admin_level": 5,
+      "osm_relation_id": 3205802,
+      "matched_names": [
+        "肇庆市",
+        "肇庆市",
+        "Zhaoqing City",
+        "肇庆"
+      ],
+      "area_km2": 14815.16,
+      "test_point_lat_lon": [
+        23.0469,
+        112.4651
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "汕尾",
+      "admin_level": 5,
+      "osm_relation_id": 19791426,
+      "matched_names": [
+        "汕尾市",
+        "汕尾市",
+        "Shanwei",
+        "汕尾"
+      ],
+      "area_km2": 11103.91,
+      "test_point_lat_lon": [
+        22.7876,
+        115.3753
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "揭阳",
+      "admin_level": 5,
+      "osm_relation_id": 3282749,
+      "matched_names": [
+        "揭阳市",
+        "揭阳市",
+        "Jieyang City",
+        "揭阳"
+      ],
+      "area_km2": 6584.46,
+      "test_point_lat_lon": [
+        23.5438,
+        116.3557
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "汕头",
+      "admin_level": 5,
+      "osm_relation_id": 3282750,
+      "matched_names": [
+        "汕头市",
+        "汕头市",
+        "Shantou",
+        "汕头"
+      ],
+      "area_km2": 6497.17,
+      "test_point_lat_lon": [
+        23.3535,
+        116.6822
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "潮州",
+      "admin_level": 5,
+      "osm_relation_id": 3244431,
+      "matched_names": [
+        "潮州市",
+        "潮州市",
+        "Chaozhou",
+        "潮州"
+      ],
+      "area_km2": 3377.96,
+      "test_point_lat_lon": [
+        23.6567,
+        116.6226
+      ],
+      "test_point_covered": true
+    },
+    {
+      "city": "漳州",
+      "admin_level": 6,
+      "osm_relation_id": "county-union:3242118,3242115,relation/3242114,3242111,3242119,3242120,3242121,3242112,3242116,3242117,3242113",
+      "matched_names": [
+        "芗城区: 芗城区, 芗城区, 芗城区, Xiangcheng District, 芗城",
+        "龙文区: 龙文区, 龙文区, 龙文区, Longwen District, 龙文",
+        "龙海区: 龙海区, Longhai District",
+        "长泰区: 长泰区, 长泰区, 长泰区, Changtai District, 长泰县",
+        "云霄县: 云霄县, 云霄县, 云霄县, Yunxiao County, 云霄",
+        "漳浦县: 漳浦县, 漳浦县, 漳浦县, Zhangpu County, 漳浦",
+        "诏安县: 诏安县, 诏安县, 诏安县, Zhao'an County, 诏安",
+        "东山县: 东山县, 东山县, 东山县, Dongshan County, 东山",
+        "南靖县: 南靖县, 南靖县, 南靖县, Nanjing County, 南靖",
+        "平和县: 平和县, 平和县, Pinghe County, 平和;Pinghe",
+        "华安县: 华安县, 华安县, 华安县, Hua'an County, 华安"
+      ],
+      "area_km2": 19487.86,
+      "test_point_lat_lon": [
+        24.513,
+        117.6471
+      ],
+      "test_point_covered": true
+    }
+  ],
+  "excludedCityCenters": {
+    "Meizhou": true,
+    "Yangjiang": true,
+    "Maoming": true,
+    "Zhanjiang": true,
+    "Quanzhou": true
+  },
+  "bounds": [
+    111.3494849123392,
+    21.025508217563754,
+    118.48862265883056,
+    25.222025931358555
+  ],
+  "bufferMeters": 750,
+  "exactSourceRequired": true
+}

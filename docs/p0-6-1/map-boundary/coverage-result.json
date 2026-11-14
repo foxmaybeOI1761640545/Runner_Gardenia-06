@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "sourceCommit": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+  "mapSha256": "5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e",
+  "geometrySha256": "c1dcdecec318fadafd854117582f7b603bf4eaf1fa928edf849112ae8a58161e",
+  "geometryValid": true,
+  "geometryConnectedComponents": 1,
+  "zoom": 12,
+  "allIntersectingTiles": 1727,
+  "unreadable": 0,
+  "emptyFeatureTiles": 98,
+  "excludedCityCenters": {
+    "Meizhou": true,
+    "Yangjiang": true,
+    "Maoming": true,
+    "Zhanjiang": true,
+    "Quanzhou": true
+  },
+  "roadGraph": [
+    {
+      "name": "Guangzhou",
+      "nearestHighwayMetres": "83.4282493510614",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Foshan",
+      "nearestHighwayMetres": "70.83912191098275",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Zhuhai",
+      "nearestHighwayMetres": "1.7354351245375856",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Shenzhen",
+      "nearestHighwayMetres": "20.22583300211269",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Dongguan",
+      "nearestHighwayMetres": "33.143261013470195",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Zhongshan",
+      "nearestHighwayMetres": "47.55591788417931",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Jiangmen",
+      "nearestHighwayMetres": "59.449455526221335",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Huizhou",
+      "nearestHighwayMetres": "8.062894083272875",
+      "component": "2663121",
+      "componentNodes": "143715"
+    },
+    {
+      "name": "Zhaoqing",
+      "nearestHighwayMetres": "27.192020689639243",
+      "component": "209447",
+      "componentNodes": "1834535"
+    },
+    {
+      "name": "Shanwei",
+      "nearestHighwayMetres": "58.04801621202896",
+      "component": "3075594",
+      "componentNodes": "5263"
+    },
+    {
+      "name": "Jieyang",
+      "nearestHighwayMetres": "117.23860105368138",
+      "component": "3230682",
+      "componentNodes": "224704"
+    },
+    {
+      "name": "Shantou",
+      "nearestHighwayMetres": "27.16552824830123",
+      "component": "3230682",
+      "componentNodes": "224704"
+    },
+    {
+      "name": "Chaozhou",
+      "nearestHighwayMetres": "12.64315427201066",
+      "component": "3230682",
+      "componentNodes": "224704"
+    },
+    {
+      "name": "Zhangzhou",
+      "nearestHighwayMetres": "34.18451493805628",
+      "component": "3814608",
+      "componentNodes": "196260"
+    },
+    {
+      "name": "Longhai",
+      "nearestHighwayMetres": "92.24291428817997",
+      "component": "3814608",
+      "componentNodes": "196260"
+    },
+    {
+      "name": "Zhangpu",
+      "nearestHighwayMetres": "27.439821871301522",
+      "component": "3814608",
+      "componentNodes": "196260"
+    },
+    {
+      "name": "Dongshan",
+      "nearestHighwayMetres": "40.59924424555229",
+      "component": "3759505",
+      "componentNodes": "15778"
+    }
+  ],
+  "roadGraphLimit": "Undirected rendered highway geometry at z12, quantized about 1m; filtered/simplified roads and nearest isolated footpaths can split components. This is not turn-by-turn route validation.",
+  "emptyTileLimit": "Valid empty data is not automatically a map omission; coastline/land classification and native visual evidence remain separate.",
+  "wholeRegionFullyAccepted": false
+}

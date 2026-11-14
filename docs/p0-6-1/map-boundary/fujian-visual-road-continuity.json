@@ -1,0 +1,52 @@
+{
+  "method": "Visual highway geometry connectivity at z16,0.2m buffer to absorb E6 coordinate precision. Not navigation; grade separation ignored. Map bytes unchanged.",
+  "sourceMapSha256": "5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e",
+  "uniqueLines": 55064,
+  "components": 274,
+  "cityNearbyLargestComponents": {
+    "Zhangzhou": [
+      [
+        0,
+        21.5411790696443
+      ],
+      [
+        54,
+        1980.5860533093137
+      ],
+      [
+        128,
+        1310.5755516282297
+      ],
+      [
+        198,
+        1696.1808878793388
+      ]
+    ],
+    "Longhai": [
+      [
+        0,
+        90.22264180978945
+      ],
+      [
+        149,
+        1530.7929732612374
+      ]
+    ],
+    "Zhangpu": [
+      [
+        0,
+        3.421847668215806
+      ],
+      [
+        166,
+        422.4161907719508
+      ]
+    ],
+    "Dongshan": [
+      [
+        0,
+        16.44696651319468
+      ]
+    ]
+  }
+}
