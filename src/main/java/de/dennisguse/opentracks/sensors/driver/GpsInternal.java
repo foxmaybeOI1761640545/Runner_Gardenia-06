@@ -40,12 +40,18 @@ public class GpsInternal implements Driver {
     };
 
     private final DriverObserver<Location> driverObserver;
+    private final java.util.function.LongSupplier intervalMillis;
 
     @VisibleForTesting
     public LocationManager locationManager;
 
     public GpsInternal(DriverObserver<Location> driverObserver) {
+        this(driverObserver, () -> PreferencesUtils.getMinSamplingInterval().toMillis());
+    }
+
+    public GpsInternal(DriverObserver<Location> driverObserver, java.util.function.LongSupplier intervalMillis) {
         this.driverObserver = driverObserver;
+        this.intervalMillis = intervalMillis;
     }
 
     @Override
@@ -99,7 +105,7 @@ public class GpsInternal implements Driver {
 
     @VisibleForTesting
     public LocationRequestCompat createLocationRequest() {
-        return new LocationRequestCompat.Builder(PreferencesUtils.getMinSamplingInterval().toMillis())
+        return new LocationRequestCompat.Builder(intervalMillis.getAsLong())
                 .setQuality(LocationRequestCompat.QUALITY_HIGH_ACCURACY)
                 .setMaxUpdateDelayMillis(0)
                 .build();

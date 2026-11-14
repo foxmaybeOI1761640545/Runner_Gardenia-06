@@ -53,6 +53,17 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
 
     private GpsHandler gpsHandler;
     private boolean gpsRecording=true;
+    private boolean mapGpsPreview;
+
+    /** Service-owned idle preview; active recording always uses the user's configuration. */
+    public void setMapGpsPreview(boolean preview) {
+        if (mapGpsPreview == preview) return;
+        mapGpsPreview = preview;
+        if (isStarted() && gpsRecording) gpsHandler.connect();
+    }
+
+    public boolean isMapGpsPreview() { return mapGpsPreview; }
+
 
     /** P0 keeps GPS off during an idle heart-rate preview. */
     public void setGpsRecording(boolean recording) {

@@ -20,6 +20,32 @@ import java.util.*;
 /** Owns exactly one native offline renderer. No downloader or network tile layer. */
 public final class OfflineMapView extends FrameLayout {
     private MapView map;
+    private final Map<org.mapsforge.core.model.Tile, org.mapsforge.map.layer.queue.Job> tileJobs = new LinkedHashMap<>();
+    private InMemoryTileCache tileCache;
+    public record TileState(org.mapsforge.core.model.Tile tile, boolean cached) {}
+    public record DiagnosticViewport(LatLong center, byte zoom, List<TileState> tiles) {}
+    /** Only captures UI/cache state here; file reads belong to the Activity's worker. */
+    public DiagnosticViewport diagnosticViewport() {
+        if (map == null) return null;
+        var center = map.getModel().mapViewPosition.getCenter();
+        byte zoom = map.getModel().mapViewPosition.getZoomLevel();
+        var box = map.getBoundingBox();
+        long left = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.minLongitude, zoom);
+        long right = org.mapsforge.core.util.MercatorProjection.longitudeToTileX(box.maxLongitude, zoom);
+        long top = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.maxLatitude, zoom);
+        long bottom = org.mapsforge.core.util.MercatorProjection.latitudeToTileY(box.minLatitude, zoom);
+        var rows = new ArrayList<TileState>();
+        synchronized (tileCache) {
+            for (long y = top; y <= bottom && rows.size() < 128; y++) {
+                for (long x = left; x <= right && rows.size() < 128; x++) {
+                    var tile = new org.mapsforge.core.model.Tile(x, y, zoom, map.getModel().displayModel.getTileSize());
+                    var job = tileJobs.get(tile);
+                    rows.add(new TileState(tile, job != null && tileCache.containsKey(job)));
+                }
+            }
+        }
+        return new DiagnosticViewport(center, zoom, List.copyOf(rows));
+    }
     private final List<Layer> overlays=new ArrayList<>();
     private List<RouteGeometry.Point> route=List.of();
     private Position position;
@@ -39,8 +65,10 @@ public final class OfflineMapView extends FrameLayout {
         int capacity=(int)Math.max(8,Math.min(64,32L*1024*1024/(tileSize*(long)tileSize*4)));
         renderedTiles.set(0);
         var cache=new InMemoryTileCache(capacity){
-            @Override public synchronized void put(org.mapsforge.map.layer.queue.Job job,org.mapsforge.core.graphics.TileBitmap bitmap){super.put(job,bitmap);renderedTiles.incrementAndGet();}
+            @Override public synchronized void put(org.mapsforge.map.layer.queue.Job job,org.mapsforge.core.graphics.TileBitmap bitmap){super.put(job,bitmap);renderedTiles.incrementAndGet();tileJobs.put(job.tile,job);
+                if(tileJobs.size()>128)tileJobs.remove(tileJobs.keySet().iterator().next());}
         };
+        tileCache=cache;
         var renderer=new TileRendererLayer(cache,file,map.getModel().mapViewPosition,AndroidGraphicFactory.INSTANCE);
         renderer.setXmlRenderTheme(MapsforgeThemes.DEFAULT);map.getLayerManager().getLayers().add(renderer);
         map.setCenter(file.startPosition());map.setZoomLevel(file.startZoomLevel());
@@ -72,5 +100,5 @@ public final class OfflineMapView extends FrameLayout {
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}overlays.clear();}
+    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}overlays.clear();tileJobs.clear();tileCache=null;segmentCount=0;}
 }

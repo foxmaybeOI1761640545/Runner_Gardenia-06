@@ -59,6 +59,8 @@ public final class OfflineMapRepository {
                 long count=0;try(FileOutputStream output=new FileOutputStream(pending)){
                     byte[] buffer=new byte[65536];int n;while((n=input.read(buffer))!=-1){if(Thread.currentThread().isInterrupted())throw new InterruptedIOException();count+=n;if(count>MAX_BYTES)throw new IOException("Map exceeds 2 GiB limit");output.write(buffer,0,n);}output.getFD().sync();
                 }
+                if (pending.length()!=count) throw new IOException("Incomplete map copy");
+                if (Thread.currentThread().isInterrupted()) throw new InterruptedIOException();
                 validate(pending);
                 if(!pending.renameTo(target))throw new IOException("Cannot retain imported map");
                 String name=displayName==null?"Local map":displayName.replaceAll("[\\p{Cntrl}/\\\\]","_").strip();if(name.isEmpty())name="Local map";if(name.length()>160)name=name.substring(0,160);

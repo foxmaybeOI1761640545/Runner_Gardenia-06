@@ -1,10 +1,11 @@
 {
   "schema": 1,
-  "codeHighWater": 6778,
+  "codeHighWater": 6779,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
     "v0.1.0-p0.": 6,
-    "v0.1.0-p0.5.": 1
+    "v0.1.0-p0.5.": 1,
+    "v0.1.0-p0.6.": 1
   },
   "allocations": [
     {
@@ -124,6 +125,15 @@
       "classification": "reserved-p06-test",
       "tag": "test-p0-v0.1.0-p0.6",
       "sourceEvidence": "Allocated after checking all 9 remote published build-info assets: maximum 6777 on P0.5.1. Final source binds only to tested fixed-key APK and annotated tag."
+    },
+    {
+      "versionName": "v0.1.0-p0.6.1",
+      "versionCode": 6779,
+      "commit": null,
+      "allocationBasisCommit": "c7112514565c6b10dac7131b97432328ec67ef1d",
+      "classification": "reserved-p061-test",
+      "tag": "test-p0-v0.1.0-p0.6.1",
+      "sourceEvidence": "Checked all remote refs and all ten Releases/build-info.json on 2026-11-14: highest 6778. New independent real-map validation branch. Final source bound by complete tests, fixed-key APK and immutable tag."
     }
   ]
 }

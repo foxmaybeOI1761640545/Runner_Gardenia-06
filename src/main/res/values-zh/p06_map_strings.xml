@@ -20,4 +20,5 @@
     <string name="p06_map_route_failed">无法读取运动轨迹，请重新打开地图。</string>
     <string name="p06_zoom_in">放大</string>
     <string name="p06_zoom_out">缩小</string>
+    <string name="p061_map_diagnostics">地图诊断（仅本机）</string>
 </resources>

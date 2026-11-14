@@ -19,7 +19,7 @@ import de.dennisguse.opentracks.databinding.P06OfflineMapBinding;
 import de.dennisguse.opentracks.p0.app.*;
 import de.dennisguse.opentracks.p0.recording.*;
 import de.dennisguse.opentracks.services.*;
-import de.dennisguse.opentracks.settings.PreferencesUtils;
+
 
 /** Read-only map screen. All document, index and map-file IO runs on its serial worker. */
 public class P06MapActivity extends AbstractActivity {
@@ -34,6 +34,7 @@ public class P06MapActivity extends AbstractActivity {
     private final Handler main=new Handler(Looper.getMainLooper());
     private boolean closed,started,busy,gpsWanted,centerPending,initialFitDone;
     private Long trackId;
+    private Bundle restoredViewport;
     private List<RouteGeometry.Point> points=List.of();
     private de.dennisguse.opentracks.data.models.Position position;
     private TrackRecordingService gpsService;
@@ -43,6 +44,7 @@ public class P06MapActivity extends AbstractActivity {
     public static Intent intent(Context context,Long track){Intent intent=new Intent(context,P06MapActivity.class);if(track!=null)intent.putExtra(TRACK,track);return intent;}
     @Override protected View createRootView(){binding=P06OfflineMapBinding.inflate(getLayoutInflater());return binding.getRoot();}
     @Override protected void onCreate(Bundle saved){
+        restoredViewport=saved;
         super.onCreate(saved);setSupportActionBar(binding.p06MapToolbar);getSupportActionBar().setTitle(R.string.p06_offline_map);getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         repository=new OfflineMapRepository(this);map=new OfflineMapView(this);binding.p06MapContainer.addView(map,new android.widget.FrameLayout.LayoutParams(-1,-1));
         trackId=getIntent().hasExtra(TRACK)?getIntent().getLongExtra(TRACK,0):null;gpsWanted=saved!=null&&saved.getBoolean("gpsWanted");
@@ -61,8 +63,22 @@ public class P06MapActivity extends AbstractActivity {
         });
         load(null);
     }
-    @Override public boolean onCreateOptionsMenu(android.view.Menu menu){menu.add(0,1,0,R.string.p06_map_licenses);return true;}
+    @Override public boolean onCreateOptionsMenu(android.view.Menu menu){menu.add(0,1,0,R.string.p06_map_licenses);menu.add(0,2,1,R.string.p061_map_diagnostics);return true;}
     @Override public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item){
+        if(item.getItemId()==2){
+            var viewport=map.diagnosticViewport();var entry=maps.current();
+            if(viewport==null||entry==null)return true;
+            worker.execute(()->{
+                org.mapsforge.map.reader.MapFile file=null;String diagnostic;
+                try{file=repository.open(entry);diagnostic=MapDiagnostics.inspect(file,viewport);}
+                catch(Exception failure){diagnostic="Map diagnostic failed: "+failure.getClass().getSimpleName();}
+                finally{if(file!=null)file.close();}
+                String text=diagnostic;main.post(()->{if(closed)return;
+                    var content=new android.widget.TextView(this);content.setText(text);content.setTextIsSelectable(true);content.setPadding(24,24,24,24);
+                    var scroll=new android.widget.ScrollView(this);scroll.addView(content);
+                    new AlertDialog.Builder(this).setTitle(R.string.p061_map_diagnostics).setView(scroll).setPositiveButton(android.R.string.ok,null).show();});
+            });return true;
+        }
         if(item.getItemId()==1){String[] files={"Mapsforge-0.25.0-README.md","Mapsforge-LGPL-3.0.txt","Mapsforge-GPL-3.0.txt","AndroidSVG-NOTICE.txt","AndroidSVG-Apache-2.0.txt","OSM-data-NOTICE.txt"};
             new AlertDialog.Builder(this).setTitle(R.string.p06_map_licenses).setItems(files,(dialog,which)->worker.execute(()->{
                 try(var input=getAssets().open("p06-licenses/"+files[which]);var output=new ByteArrayOutputStream()){
@@ -76,14 +92,17 @@ public class P06MapActivity extends AbstractActivity {
     private void acquireGps(){
         if(!started||!gpsWanted||gpsService==null||!hasLocation())return;
         try{
-            PreferencesUtils.setString(R.string.settings_sensor_gps_key,de.dennisguse.opentracks.sensors.driver.SensorType.INTERNAL.getPreferenceValue());
-            PreferencesUtils.setString(R.string.min_sampling_interval_key,"1");
             gpsService.acquireMapGps(this);
         }catch(RuntimeException failure){message(R.string.p06_map_location_denied);}
     }
     @Override protected void onStart(){super.onStart();started=true;recording.attach();gpsConnection.bindWithStart(this);}
     @Override protected void onStop(){started=false;if(gpsService!=null)gpsService.releaseMapGps(this);gpsService=null;gpsConnection.unbind(this);recording.detach();super.onStop();}
-    @Override protected void onSaveInstanceState(@NonNull Bundle state){state.putBoolean("gpsWanted",gpsWanted);super.onSaveInstanceState(state);}
+    @Override protected void onSaveInstanceState(@NonNull Bundle state){
+        state.putBoolean("gpsWanted",gpsWanted);
+        if(map.mapView()!=null){var viewport=map.mapView().getModel().mapViewPosition;
+            state.putDouble("mapLat",viewport.getCenter().latitude);state.putDouble("mapLon",viewport.getCenter().longitude);state.putByte("mapZoom",viewport.getZoomLevel());}
+        super.onSaveInstanceState(state);
+    }
     @Override protected void onDestroy(){closed=true;map.clear();worker.shutdownNow();super.onDestroy();}
     private void setBusy(boolean value){busy=value;binding.p06ImportMap.setEnabled(!value);binding.p06ManageMaps.setEnabled(!value);}
     private void message(int resource){binding.p06MapStatus.setText(resource);}
@@ -97,7 +116,11 @@ public class P06MapActivity extends AbstractActivity {
             var result=state;var file=opened;var problem=error;
             main.post(()->{if(closed){if(file!=null)file.close();return;}setBusy(false);
                 if(problem!=null){message(R.string.p06_map_failed);return;}
-                maps=result;if(file!=null){map.load(file);map.bind(points,position);if(!initialFitDone&&!points.isEmpty()){initialFitDone=true;map.post(map::fitRoute);}binding.p06MapStatus.setText(getString(R.string.p06_map_ready,result.current().name()));}
+                maps=result;if(file!=null){map.load(file);map.bind(points,position);
+                    if(restoredViewport!=null&&restoredViewport.containsKey("mapZoom")){
+                        map.mapView().setCenter(new org.mapsforge.core.model.LatLong(restoredViewport.getDouble("mapLat"),restoredViewport.getDouble("mapLon")));
+                        map.mapView().setZoomLevel(restoredViewport.getByte("mapZoom"));initialFitDone=true;restoredViewport=null;
+                    }if(!initialFitDone&&!points.isEmpty()){initialFitDone=true;map.post(map::fitRoute);}binding.p06MapStatus.setText(getString(R.string.p06_map_ready,result.current().name()));}
                 else{map.clear();message(R.string.p06_map_empty);}
             });
         });

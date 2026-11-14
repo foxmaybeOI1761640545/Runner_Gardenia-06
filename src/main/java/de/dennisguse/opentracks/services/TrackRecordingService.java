@@ -107,6 +107,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         mapGpsOwners.add(owner);
         try { startSensors(); } catch (RuntimeException failure) { mapGpsOwners.remove(owner);throw failure; }
     }
+    @androidx.annotation.VisibleForTesting public int mapGpsOwnerCount() { return mapGpsOwners.size(); }
+
     public void releaseMapGps(Object owner) {
         if (!mapGpsOwners.remove(owner)) return;
         if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty()) startSensors();
@@ -338,6 +340,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     private synchronized void startSensors() {
         boolean gpsNeeded=isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty();
+        trackPointCreator.getSensorManager().setMapGpsPreview(!mapGpsOwners.isEmpty() && !isRecording() && !isAcquiringGps());
         trackPointCreator.getSensorManager().setGpsRecording(gpsNeeded);
         if (!trackPointCreator.isStarted()) {
             Log.i(TAG, "startSensors");

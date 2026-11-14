@@ -19,7 +19,7 @@ public final class P06FixtureProvider extends ContentProvider {
             File file=new File(getContext().getCacheDir(),"p06-provider-"+("broken.map".equals(uri.getLastPathSegment())?"broken":"valid"));
             try(var out=new FileOutputStream(file)){
                 if("broken.map".equals(uri.getLastPathSegment()))out.write(new byte[80]);
-                else try(var in=getContext().getAssets().open("p06/gardenia-synthetic.map")){byte[] buffer=new byte[4096];int n;while((n=in.read(buffer))!=-1)out.write(buffer,0,n);}
+                else try(var in=getContext().getAssets().open("real.map".equals(uri.getLastPathSegment())?"p061/real.map":"p06/gardenia-synthetic.map")){byte[] buffer=new byte[4096];int n;while((n=in.read(buffer))!=-1)out.write(buffer,0,n);}
             }
             return ParcelFileDescriptor.open(file,ParcelFileDescriptor.MODE_READ_ONLY);
         }catch(IOException failure){throw new FileNotFoundException(failure.toString());}

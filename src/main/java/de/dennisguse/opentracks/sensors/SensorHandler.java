@@ -35,7 +35,7 @@ public abstract class SensorHandler<AggregatorInput, AggregatorOutput> implement
     void connect() {
         disconnect();
 
-        String address = PreferencesUtils.getString(getSensorPreferenceKey(), getSensorPreferenceDefaultValue());
+        String address = getSensorAddress();
 
         switch (PreferencesUtils.getSensorType(address)) {
             case NONE -> {
@@ -59,6 +59,11 @@ public abstract class SensorHandler<AggregatorInput, AggregatorOutput> implement
 
         driver.disconnect();
         driver = null;
+    }
+
+    /** Temporary sensor configuration may override reads without writing user preferences. */
+    protected String getSensorAddress() {
+        return PreferencesUtils.getString(getSensorPreferenceKey(), getSensorPreferenceDefaultValue());
     }
 
     @NonNull

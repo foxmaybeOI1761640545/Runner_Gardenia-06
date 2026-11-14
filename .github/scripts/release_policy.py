@@ -68,11 +68,11 @@ def ledger_history():
             raise SystemExit('Invalid historical allocation.')
         # P0 test tags have their own prefix. A reservation is an allocation basis,
         # never a fabricated self-referential future source commit.
-        reserved = entry.get('classification') in ('reserved-p02-test','reserved-p03-test','reserved-p04-refinement','reserved-p05-test','reserved-p051-test','reserved-p06-test')
+        reserved = entry.get('classification') in ('reserved-p02-test','reserved-p03-test','reserved-p04-refinement','reserved-p05-test','reserved-p051-test','reserved-p06-test','reserved-p061-test')
         source = entry.get('allocationBasisCommit') if reserved else entry.get('commit')
         if not isinstance(source,str) or not re.fullmatch('[0-9a-f]{40}',source):
             raise SystemExit('Invalid history source/basis.')
-        if reserved and (name!={'reserved-p02-test':'v0.1.0-p0.2','reserved-p03-test':'v0.1.0-p0.3','reserved-p04-refinement':'v0.1.0-p0.4','reserved-p05-test':'v0.1.0-p0.5','reserved-p051-test':'v0.1.0-p0.5.1','reserved-p06-test':'v0.1.0-p0.6'}[entry['classification']] or entry.get('commit') is not None or entry.get('tag')!='test-p0-'+name):
+        if reserved and (name!={'reserved-p02-test':'v0.1.0-p0.2','reserved-p03-test':'v0.1.0-p0.3','reserved-p04-refinement':'v0.1.0-p0.4','reserved-p05-test':'v0.1.0-p0.5','reserved-p051-test':'v0.1.0-p0.5.1','reserved-p06-test':'v0.1.0-p0.6','reserved-p061-test':'v0.1.0-p0.6.1'}[entry['classification']] or entry.get('commit') is not None or entry.get('tag')!='test-p0-'+name):
             raise SystemExit('Invalid P0.2 reservation.')
         if name in versions or code in codes:
             raise SystemExit('Duplicate version or Code in release ledger.')
