@@ -110,6 +110,7 @@ public class P061RealMapTest {
                 JSONArray captures=new JSONArray();
                 String[] names={"Guangzhou","Foshan","Zhuhai","Shenzhen","Dongguan","Zhongshan","Jiangmen","Huizhou","Zhaoqing","Shanwei","Jieyang","Shantou","Chaozhou","Zhangzhou","Longhai","Zhangpu","Dongshan"};
                 double[][] p={{23.1291,113.2644},{23.0218,113.1219},{22.271,113.5767},{22.5431,114.0579},{23.0207,113.7518},{22.5159,113.3926},{22.5787,113.0815},{23.1115,114.4152},{23.0469,112.4651},{22.7876,115.3753},{23.5438,116.3557},{23.3535,116.6822},{23.6567,116.6226},{24.513,117.6471},{24.446,117.818},{24.117,117.613},{23.701,117.429}};
+                LatLong[] center={null};byte[] savedZoom={0};
                 try(var screen=ActivityScenario.launch(P06MapActivity.class)){
                     ready(screen);
                     for(int i=0;i<p.length;i++)for(byte zoom:new byte[]{7,12,16}){
@@ -132,6 +133,10 @@ public class P061RealMapTest {
                             onView(withId(android.R.id.button1)).inRoot(androidx.test.espresso.matcher.RootMatchers.isDialog()).perform(click());
                         }
                     }
+                    screen.onActivity(a->{center[0]=view(a).mapView().getModel().mapViewPosition.getCenter();savedZoom[0]=view(a).mapView().getModel().mapViewPosition.getZoomLevel();});
+                }
+                // ActivityScenario launches isolated tasks: finish one before starting the next.
+                {
                     var database=new de.dennisguse.opentracks.data.ContentProviderUtils(context);
                     var track=database.insertTrack(new de.dennisguse.opentracks.data.models.Track(null,UUID.randomUUID(),"Synthetic actual-map overlay","","",de.dennisguse.opentracks.data.models.ActivityType.RUNNING,java.time.ZoneOffset.UTC,de.dennisguse.opentracks.data.models.Statistics.DEFAULT));
                     for(int i=0;i<3;i++){
@@ -143,8 +148,12 @@ public class P061RealMapTest {
                         do{history.onActivity(a->segments[0]=view(a).segmentCount());if(segments[0]>0)break;SystemClock.sleep(100);}while(SystemClock.uptimeMillis()<until);
                         assertEquals(1,segments[0]);onView(withId(R.id.p06_fit_track)).perform(click());SystemClock.sleep(500);P0UiCapture.save("p061-real-route");
                     }
-                    LatLong[] center={null};byte[] zoom={0};screen.onActivity(a->{center[0]=view(a).mapView().getModel().mapViewPosition.getCenter();zoom[0]=view(a).mapView().getModel().mapViewPosition.getZoomLevel();});
-                    screen.recreate();ready(screen);screen.onActivity(a->{assertEquals(center[0],view(a).mapView().getModel().mapViewPosition.getCenter());assertEquals(zoom[0],view(a).mapView().getModel().mapViewPosition.getZoomLevel());});
+                }
+                try(var screen=ActivityScenario.launch(P06MapActivity.class)){
+                    ready(screen);
+                    screen.onActivity(a->{view(a).mapView().setCenter(center[0]);view(a).mapView().setZoomLevel(savedZoom[0]);});
+                    ready(screen);
+                    screen.recreate();ready(screen);screen.onActivity(a->{assertEquals(center[0],view(a).mapView().getModel().mapViewPosition.getCenter());assertEquals(savedZoom[0],view(a).mapView().getModel().mapViewPosition.getZoomLevel());});
                     P0UiCapture.save("p061-real-recreated");
                 }
                 // Switch away from and back to the actual 100MB private file, then unlink it only after all renderers close.
