@@ -159,4 +159,32 @@ public class P06OfflineMapTest {
             try(var out=new FileOutputStream(new File(dir,"p06-offline-map.json"))){out.write(proof.toString(2).getBytes(java.nio.charset.StandardCharsets.UTF_8));}
         }finally{shell("cmd connectivity airplane-mode "+("1".equals(airplane)?"enable":"disable"));}
     }
+    @Test public void homeDashboardLoadsSelectedOfflineMapAndKeepsPreviewSeparateFromWorkout() throws Exception {
+        PreferencesUtils.setString(R.string.settings_sensor_gps_key,"INTERNAL");
+        fixtureMap();
+        try(ActivityScenario<de.dennisguse.opentracks.p0.app.P0Activity> home=
+                    ActivityScenario.launch(de.dennisguse.opentracks.p0.app.P0Activity.class)) {
+            java.util.concurrent.atomic.AtomicReference<de.dennisguse.opentracks.p0.app.RouteMapView> map=
+                    new java.util.concurrent.atomic.AtomicReference<>();
+            long deadline=SystemClock.uptimeMillis()+20000;
+            boolean loaded=false;
+            while(SystemClock.uptimeMillis()<deadline) {
+                home.onActivity(activity->map.set(activity.findViewById(R.id.p04_route)));
+                loaded=map.get()!=null&&map.get().hasOfflineMap();
+                if(loaded)break;
+                SystemClock.sleep(100);
+            }
+            assertTrue("Home must render the selected real Mapsforge map, not the illustrative route",loaded);
+            long ownerDeadline=SystemClock.uptimeMillis()+10000;
+            while(service.mapGpsOwnerCount()==0&&SystemClock.uptimeMillis()<ownerDeadline)SystemClock.sleep(50);
+            assertTrue("The app foreground must own the idle GPS preview",service.mapGpsOwnerCount()>0);
+            assertTrue("The foreground preview may start sensors but must not start a workout",service.areSensorsStarted());
+            assertFalse(service.isRecording());
+            assertTrue(new WorkoutRepository(context).list().isEmpty());
+        }
+        assertEquals("Closing the last foreground activity releases only the preview owner",0,service.mapGpsOwnerCount());
+        assertFalse(service.isRecording());
+        assertTrue(new WorkoutRepository(context).list().isEmpty());
+    }
+
 }
