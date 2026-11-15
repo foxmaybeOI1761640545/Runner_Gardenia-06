@@ -71,6 +71,9 @@ public class P07HomeMapTest {
         try(var screen=ActivityScenario.launch(P0Activity.class)){
             ready(screen,true);
             screen.onActivity(a->{var h=home(a);bind(h,position(23.7,117.43));var view=h.offlineMap();
+                boolean accuracy=false;
+                for(var layer:view.mapView().getLayerManager().getLayers())if(layer.getClass()==org.mapsforge.map.layer.overlay.Circle.class){accuracy=true;assertEquals(8f,((org.mapsforge.map.layer.overlay.Circle)layer).getRadius(),.01f);}
+                assertTrue("The GPS horizontal accuracy must be represented in meters",accuracy);
                 assertTrue(view.isFollowing());assertEquals(new LatLong(23.7,117.43),view.mapView().getModel().mapViewPosition.getCenter());
                 var d=view.diagnosticViewport();assertTrue(d.cacheCapacity()<=64);assertTrue(d.cacheCapacity()*(long)d.tileSize()*d.tileSize()*4<=32L*1024*1024);
             });
@@ -112,6 +115,10 @@ public class P07HomeMapTest {
                         home(a).requestRectangleOnScreen(new android.graphics.Rect(0,0,home(a).getWidth(),home(a).getHeight()),true);
                         assertEquals(width,a.getResources().getConfiguration().screenWidthDp);
                         assertEquals(dark,ThemeUtils.isNight(a));
+                        android.graphics.Rect locate=new android.graphics.Rect(),zoom=new android.graphics.Rect();
+                        a.findViewById(R.id.p07_home_locate).getGlobalVisibleRect(locate);
+                        home(a).offlineMap().mapView().getMapZoomControls().getGlobalVisibleRect(zoom);
+                        assertFalse("Recenter must not cover native zoom controls",android.graphics.Rect.intersects(locate,zoom));
                     });SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
                 }
             }

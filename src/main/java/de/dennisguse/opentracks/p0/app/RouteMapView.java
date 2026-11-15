@@ -49,7 +49,7 @@ public final class RouteMapView extends FrameLayout {
         Button locate=new Button(context);locate.setId(R.id.p07_home_locate);
         locate.setText(R.string.p06_my_position);
         locate.setTextSize(10);locate.setMinHeight(0);locate.setMinimumHeight(0);
-        addView(locate,new LayoutParams(-2,(int)(40*getResources().getDisplayMetrics().density),Gravity.BOTTOM|Gravity.END));
+        addView(locate,new LayoutParams(-2,(int)(40*getResources().getDisplayMetrics().density),Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL));
         locate.setOnClickListener(v->{map.setFollowing(true);map.centerPosition();scheduleCoverage();});
         map.setOnViewportChanged(this::scheduleCoverage);
     }
