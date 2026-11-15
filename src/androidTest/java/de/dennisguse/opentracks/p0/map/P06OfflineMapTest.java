@@ -71,6 +71,15 @@ public class P06OfflineMapTest {
     private void fix(int meters){
         main(()->{Location f=new Location("gps");f.setLatitude(1.3+meters/110575.0);f.setLongitude(103.8);f.setAccuracy(2);f.setSpeed(2);f.setTime(System.currentTimeMillis());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);});SystemClock.sleep(150);
     }
+    private void fixAt(double latitude,double longitude){
+        main(()->{
+            Location f=new Location("gps");
+            f.setLatitude(latitude);f.setLongitude(longitude);f.setAccuracy(15);f.setSpeed(0);
+            f.setTime(System.currentTimeMillis());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+            service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);
+        });
+        SystemClock.sleep(150);
+    }
     private void capture(ActivityScenario<P06MapActivity> screen,String name)throws Exception{
         waitMap(screen);screen.onActivity(a->assertTrue(a.hasWindowFocus()));SystemClock.sleep(400);P0UiCapture.save("p06-"+name);
         String output=InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");File dir=new File(output!=null?new File(output):new File(context.getExternalMediaDirs()[0],"additional_test_output"),"p0-ui");
@@ -175,6 +184,34 @@ public class P06OfflineMapTest {
                 SystemClock.sleep(100);
             }
             assertTrue("Home must render the selected real Mapsforge map, not the illustrative route",loaded);
+
+            // This selected map does not cover Japan. The home surface must switch to
+            // the neutral position fallback while foreground GPS continues uninterrupted.
+            fixAt(35.0,139.0);
+            long coverageDeadline=SystemClock.uptimeMillis()+10000;
+            while(SystemClock.uptimeMillis()<coverageDeadline) {
+                home.onActivity(activity->map.set(activity.findViewById(R.id.p04_route)));
+                if(map.get()!=null&&!map.get().hasOfflineMap())break;
+                SystemClock.sleep(100);
+            }
+            assertFalse("A selected map outside its geographic bounds must not be presented as coverage",map.get().hasOfflineMap());
+            assertEquals(context.getString(R.string.p07_home_map_position_no_map_accuracy,15f),map.get().getContentDescription().toString());
+            main(()->assertTrue("Map coverage fallback must not stop foreground GPS",service.areSensorsStarted()));
+            assertFalse(service.isRecording());
+
+            // Returning inside the fixture map bounds restores the real renderer and
+            // shows a meter-based accuracy circle without creating a workout.
+            fixAt(1.3,103.8);
+            coverageDeadline=SystemClock.uptimeMillis()+10000;
+            while(SystemClock.uptimeMillis()<coverageDeadline) {
+                home.onActivity(activity->map.set(activity.findViewById(R.id.p04_route)));
+                if(map.get()!=null&&map.get().hasOfflineMap()&&map.get().hasGpsAccuracyIndicator())break;
+                SystemClock.sleep(100);
+            }
+            assertTrue("The offline map should reappear when the current fix returns inside coverage",map.get().hasOfflineMap());
+            assertTrue("A valid GPS accuracy value should be visible on the map",map.get().hasGpsAccuracyIndicator());
+            assertTrue(new WorkoutRepository(context).list().isEmpty());
+
             java.util.concurrent.atomic.AtomicInteger owners=new java.util.concurrent.atomic.AtomicInteger();
             long ownerDeadline=SystemClock.uptimeMillis()+10000;
             while(SystemClock.uptimeMillis()<ownerDeadline) {
