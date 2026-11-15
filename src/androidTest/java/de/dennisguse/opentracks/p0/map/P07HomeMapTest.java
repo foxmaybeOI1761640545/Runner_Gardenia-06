@@ -119,7 +119,9 @@ public class P07HomeMapTest {
                         a.findViewById(R.id.p07_home_locate).getGlobalVisibleRect(locate);
                         home(a).offlineMap().mapView().getMapZoomControls().getGlobalVisibleRect(zoom);
                         assertFalse("Recenter must not cover native zoom controls",android.graphics.Rect.intersects(locate,zoom));
-                    });SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
+                    });SystemClock.sleep(800);
+                    screen.onActivity(a->assertEquals(a.getString(R.string.p05_gps_fixed),((android.widget.TextView)a.findViewById(R.id.p04_gps_status)).getText().toString()));
+                    P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
                 }
             }
         }

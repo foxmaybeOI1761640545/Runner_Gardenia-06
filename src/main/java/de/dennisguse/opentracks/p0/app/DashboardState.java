@@ -20,7 +20,8 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
         var phase=value.session().phase();boolean recording=phase==RecordingSession.Phase.RECORDING;
         boolean hasWorkout=recording||phase==RecordingSession.Phase.PAUSED||phase==RecordingSession.Phase.FINISHED;
         Statistics stats=hasWorkout&&value.data().track()!=null&&value.session().trackId()!=null&&value.data().track().id().id()==value.session().trackId()?value.data().trackStatistics():Statistics.DEFAULT;
-        Position p=value.position();boolean fix=recording&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&p!=null&&p.hasValidLocation();
+        Position p=value.position();boolean gpsFix=value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&p!=null&&p.hasValidLocation();
+        boolean fix=recording&&gpsFix; // Preview never starts workout metrics.
         double speed=fix&&p.hasSpeed()?p.speed().toMPS():Double.NaN;
         if (Double.isFinite(speed) && speed <= MotionFormat.MIN_DISPLAY_SPEED_MPS) speed = 0;
         boolean timeout=phase==RecordingSession.Phase.ACQUIRING_GPS&&value.preparation().state()==GpsPreparation.State.TIMED_OUT;
@@ -33,8 +34,8 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
         // An identifier is never used as a display name on the dashboard.
         if(device==null||device.isBlank()||device.matches("(?i)[0-9a-f]{2}(:[0-9a-f]{2}){5}"))device=context.getString(connected?R.string.p04_heart_device:R.string.p04_heart_none);
         String last=status.lastReceived()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(status.lastReceived());
-        String accuracy=fix&&p.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",p.horizontalAccuracy().toM()):"—";
-        String location=fix?context.getString(R.string.p02_gps_details,p.latitude(),p.longitude(),accuracy,p.time()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(p.time())):"—";
+        String accuracy=gpsFix&&p.hasHorizontalAccuracy()?String.format(Locale.ROOT,"±%.1f m",p.horizontalAccuracy().toM()):"—";
+        String location=gpsFix?context.getString(R.string.p02_gps_details,p.latitude(),p.longitude(),accuracy,p.time()==null?"—":DateTimeFormatter.ofPattern("HH:mm:ss").withZone(ZoneId.systemDefault()).format(p.time())):"—";
         var unit=de.dennisguse.opentracks.settings.PreferencesUtils.getUnitSystem();
         String distanceText=unit==de.dennisguse.opentracks.settings.UnitSystem.METRIC?MotionFormat.distance(stats.totalDistance().toM()):DistanceFormatter.Builder().setUnit(unit).setThreshold(1).build(context).formatDistance(stats.totalDistance());
         String speedText=MotionFormat.speed(speed),paceText=MotionFormat.pace(speed);
@@ -42,6 +43,6 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
             speedText=Double.isFinite(speed)&&speed>=0?SpeedFormatter.Builder().setUnit(unit).setReportSpeedOrPace(true).build(context).formatSpeed(Speed.of(speed)):"—";
             paceText=Double.isFinite(speed)&&speed>0?SpeedFormatter.Builder().setUnit(unit).setReportSpeedOrPace(false).build(context).formatSpeed(Speed.of(speed)):"—";
         }
-        return new DashboardState(phase,value.busy(),timeout,distanceText,MotionFormat.duration(stats.totalDuration()),speedText,paceText,described.bpm(),connected&&status.lastReceived()==null&&!status.contactLost()?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,fix?p:null,connected,fresh,value.error());
+        return new DashboardState(phase,value.busy(),timeout,distanceText,MotionFormat.duration(stats.totalDuration()),speedText,paceText,described.bpm(),connected&&status.lastReceived()==null&&!status.contactLost()?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,gpsFix?p:null,connected,fresh,value.error());
     }
 }

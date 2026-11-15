@@ -49,7 +49,7 @@ public final class RouteMapView extends FrameLayout {
         Button locate=new Button(context);locate.setId(R.id.p07_home_locate);
         locate.setText(R.string.p06_my_position);
         locate.setTextSize(10);locate.setMinHeight(0);locate.setMinimumHeight(0);
-        addView(locate,new LayoutParams(-2,(int)(40*getResources().getDisplayMetrics().density),Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL));
+        addView(locate,new LayoutParams(-2,(int)(40*getResources().getDisplayMetrics().density),Gravity.BOTTOM|Gravity.START));
         locate.setOnClickListener(v->{map.setFollowing(true);map.centerPosition();scheduleCoverage();});
         map.setOnViewportChanged(this::scheduleCoverage);
     }
@@ -78,6 +78,8 @@ public final class RouteMapView extends FrameLayout {
                     map.mapView().setCenter(new org.mapsforge.core.model.LatLong(viewport.getDouble("lat"),viewport.getDouble("lon")));
                     map.mapView().setZoomLevel(viewport.getByte("zoom"));
                 }
+                // The compact home map reserves opposite corners for locate and zoom.
+                map.mapView().getMapScaleBar().setVisible(false);
                 if(viewport==null||!viewport.containsKey("zoom"))map.mapView().setZoomLevel((byte)15);
                 map.bind(points,current);if(map.isFollowing())map.centerPosition();
                 status.setText(error?R.string.p06_map_failed:selected==null?R.string.p07_no_map:R.string.p07_map_checking);
