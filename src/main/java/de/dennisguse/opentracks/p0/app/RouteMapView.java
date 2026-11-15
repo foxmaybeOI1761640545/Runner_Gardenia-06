@@ -78,6 +78,7 @@ public final class RouteMapView extends FrameLayout {
                     map.mapView().setCenter(new org.mapsforge.core.model.LatLong(viewport.getDouble("lat"),viewport.getDouble("lon")));
                     map.mapView().setZoomLevel(viewport.getByte("zoom"));
                 }
+                if(viewport==null||!viewport.containsKey("zoom"))map.mapView().setZoomLevel((byte)15);
                 map.bind(points,current);if(map.isFollowing())map.centerPosition();
                 status.setText(error?R.string.p06_map_failed:selected==null?R.string.p07_no_map:R.string.p07_map_checking);
                 scheduleCoverage();

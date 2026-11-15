@@ -25,16 +25,23 @@ public class P07HomeMapTest {
     @Rule public final androidx.test.rule.ServiceTestRule serviceRule=new androidx.test.rule.ServiceTestRule();
     private de.dennisguse.opentracks.services.TrackRecordingService service;
     private ThemeUtils.Family family;
-    private String night;
+    private String night,flight,font,size,density;
     @Before public void before()throws Exception{
         de.dennisguse.opentracks.util.TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
         service=((de.dennisguse.opentracks.services.TrackRecordingService.Binder)serviceRule.bindService(new android.content.Intent(context,de.dennisguse.opentracks.services.TrackRecordingService.class))).getService();
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.acquireMapGps(this));
         repository=new OfflineMapRepository(context);for(var e:repository.read().entries())repository.delete(e.id());
         family=PreferencesUtils.getGardeniaTheme();night=de.dennisguse.opentracks.p0.SystemThemeTestUtils.savedMode();
+        flight=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("settings get global airplane_mode_on");
+        font=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("settings get system font_scale");
+        size=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm size");density=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm density");
+        de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("cmd connectivity airplane-mode enable");
     }
     @After public void after()throws Exception{
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.releaseMapGps(this));
+        if(!flight.equals("1"))de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("cmd connectivity airplane-mode disable");
+        de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("settings put system font_scale "+(font.equals("null")?"1.0":font));
+        for(String[] r:new String[][]{{"size",size},{"density",density}}){var m=java.util.regex.Pattern.compile("Override (?:size|density): ([^\r\n]+)").matcher(r[1]);de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm "+r[0]+" "+(m.find()?m.group(1).trim():"reset"));}
         PreferencesUtils.setGardeniaTheme(family);de.dennisguse.opentracks.p0.SystemThemeTestUtils.restore(night);for(var e:repository.read().entries())repository.delete(e.id());
     }
     private RouteMapView home(P0Activity a){return a.findViewById(R.id.p04_route);}
@@ -94,9 +101,20 @@ public class P07HomeMapTest {
             ready(screen,true);screen.onActivity(a->{var h=home(a);bind(h,position(blank.latitude,blank.longitude));h.offlineMap().mapView().setZoomLevel((byte)12);});SystemClock.sleep(1500);
             screen.onActivity(a->assertEquals(a.getString(R.string.p07_no_features),home(a).mapStatus()));P0UiCapture.save("p07-home-inside-bounds-no-features");
         }
-        for(ThemeUtils.Family f:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){
-            PreferencesUtils.setGardeniaTheme(f);de.dennisguse.opentracks.p0.SystemThemeTestUtils.night(dark);
-            try(var screen=ActivityScenario.launch(P0Activity.class)){ready(screen,true);screen.onActivity(a->bind(home(a),position(23.7,117.43)));SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light"));}
+        for(int width:new int[]{360,390})for(float scale:new float[]{1.0f,1.4f}){
+            de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm size "+(width*2)+"x1600");
+            de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm density 320");
+            de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("settings put system font_scale "+scale);
+            for(ThemeUtils.Family f:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){
+                PreferencesUtils.setGardeniaTheme(f);de.dennisguse.opentracks.p0.SystemThemeTestUtils.night(dark);
+                try(var screen=ActivityScenario.launch(P0Activity.class)){
+                    ready(screen,true);screen.onActivity(a->{bind(home(a),position(23.7,117.43));
+                        home(a).requestRectangleOnScreen(new android.graphics.Rect(0,0,home(a).getWidth(),home(a).getHeight()),true);
+                        assertEquals(width,a.getResources().getConfiguration().screenWidthDp);
+                        assertEquals(dark,ThemeUtils.isNight(a));
+                    });SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
+                }
+            }
         }
         try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){repository.importMap(input,"Replacement");}
         try(var screen=ActivityScenario.launch(P0Activity.class)){ready(screen,true);}

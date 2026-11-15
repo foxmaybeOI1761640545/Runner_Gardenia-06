@@ -20,7 +20,7 @@ import java.util.*;
 /** Owns exactly one native offline renderer. No downloader or network tile layer. */
 public final class OfflineMapView extends FrameLayout {
     private MapView map;
-    private boolean following=true;
+    private boolean following=true,touching;
     private Runnable viewportChanged=()->{};
     public boolean isFollowing(){return following;}
     public void setFollowing(boolean value){following=value;}
@@ -81,9 +81,10 @@ public final class OfflineMapView extends FrameLayout {
         map.setOnTouchListener(new android.view.View.OnTouchListener(){
             private float x,y;
             @Override public boolean onTouch(android.view.View view,android.view.MotionEvent event){
-                if(event.getActionMasked()==android.view.MotionEvent.ACTION_DOWN){x=event.getX();y=event.getY();getParent().requestDisallowInterceptTouchEvent(true);}
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_DOWN){touching=true;x=event.getX();y=event.getY();getParent().requestDisallowInterceptTouchEvent(true);}
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_POINTER_DOWN)following=false;
                 if(event.getActionMasked()==android.view.MotionEvent.ACTION_MOVE&&Math.hypot(event.getX()-x,event.getY()-y)>android.view.ViewConfiguration.get(getContext()).getScaledTouchSlop())following=false;
-                if(event.getActionMasked()==android.view.MotionEvent.ACTION_UP||event.getActionMasked()==android.view.MotionEvent.ACTION_CANCEL){getParent().requestDisallowInterceptTouchEvent(false);viewportChanged.run();}
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_UP||event.getActionMasked()==android.view.MotionEvent.ACTION_CANCEL){touching=false;getParent().requestDisallowInterceptTouchEvent(false);viewportChanged.run();}
                 return false;
             }
         });
@@ -129,9 +130,9 @@ public final class OfflineMapView extends FrameLayout {
         map.getLayerManager().redrawLayers();
     }
     public void fitRoute(){if(map==null||route.isEmpty())return;var v=MapViewport.fit(route,getWidth(),getHeight(),map.getModel().displayModel.getTileSize());map.setCenter(new LatLong(v.latitude(),v.longitude()));map.setZoomLevel(v.zoom());}
-    public boolean centerPosition(){if(map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
+    public boolean centerPosition(){if(touching||map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();if(renderer==null&&tileCache!=null)tileCache.destroy();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){touching=false;if(map!=null){map.destroyAll();if(renderer==null&&tileCache!=null)tileCache.destroy();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
 }
