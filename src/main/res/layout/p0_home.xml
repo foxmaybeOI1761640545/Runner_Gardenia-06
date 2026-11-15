@@ -62,8 +62,8 @@
           <com.google.android.material.button.MaterialButton android:id="@+id/p0_finish" style="@style/P02SecondaryAction" android:layout_width="0dp" android:layout_weight="1" android:layout_height="56dp" android:layout_marginHorizontal="2dp" android:text="@string/p0_finish" android:visibility="gone" android:textSize="13sp" android:insetTop="4dp" android:insetBottom="4dp" />
         </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="18dp">
-          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p04_route_title" android:layout_marginBottom="8dp" />
-          <de.dennisguse.opentracks.p0.app.RouteMapView android:id="@+id/p04_route" android:layout_width="match_parent" android:layout_height="170dp" android:contentDescription="@string/p04_route_empty" />
+          <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p07_home_map_title" android:layout_marginBottom="8dp" />
+          <de.dennisguse.opentracks.p0.app.RouteMapView android:id="@+id/p04_route" android:layout_width="match_parent" android:layout_height="200dp" android:contentDescription="@string/p06_map_empty" />
         </LinearLayout>
         <TextView android:id="@+id/p0_metrics" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:textSize="10sp" android:visibility="gone" android:layout_marginTop="6dp" />
         <com.google.android.material.button.MaterialButton android:id="@+id/p0_notification_permission" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p0_enable_notification" android:visibility="gone" />

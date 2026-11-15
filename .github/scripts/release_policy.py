@@ -8,7 +8,8 @@ import subprocess
 
 MARKER = 'Runner-Gardenia-Plan: '
 APK_MARKER = 'Runner-Gardenia-APK-SHA256: '
-NAME = re.compile(r'(v\d+\.\d+\.\d+-rc\d+\.)(\d+)')
+NAME = re.compile(r'(v\d+\.\d+\.\d+-(?:rc\d+|p0(?:\.\d+)?)\.)(\d+)')
+RELEASE_BRANCH = 'release/p0-7-to-p1-0'
 HISTORY_NAME = re.compile(r'(v\d+\.\d+\.\d+-(?:rc\d+|p0(?:\.\d+)?)\.)(\d+)')
 
 
@@ -87,12 +88,12 @@ def prepare(output):
     seed = properties(Path('version.properties').read_text())
     match = NAME.fullmatch(seed['VERSION_NAME'])
     if not match:
-        raise SystemExit('version.properties must define a vX.Y.Z-rcN.M series.')
+        raise SystemExit('version.properties must define a supported P0 or rc release series.')
     head = git('rev-parse', 'HEAD')
     if os.environ.get('GITHUB_SHA') and os.environ['GITHUB_SHA'] != head:
         raise SystemExit('Checkout differs from the workflow event SHA.')
     publishing = (os.environ.get('GITHUB_EVENT_NAME') == 'push'
-                  and os.environ.get('GITHUB_REF') == 'refs/heads/main'
+                  and os.environ.get('GITHUB_REF') in ('refs/heads/main', 'refs/heads/' + RELEASE_BRANCH)
                   and os.environ.get('GITHUB_REPOSITORY') == 'foxmaybeOI1761640545/Runner_Gardenia-06')
     run_id = os.environ.get('GITHUB_RUN_ID', 'local')
     previous = [tag_plan(tag) for tag in git('tag', '--list', 'v*').splitlines()]
@@ -136,14 +137,17 @@ def apply(path):
 def create_tag(path, gate_path, signed_path='dist'):
     from signed_bundle import validate_bundle
     plan = load(path)
-    if not plan['publishing'] or os.environ.get('GITHUB_REF') != 'refs/heads/main':
-        raise SystemExit('Only main push runs can publish.')
+    allowed_refs = ('refs/heads/main', 'refs/heads/' + RELEASE_BRANCH)
+    ref = os.environ.get('GITHUB_REF')
+    if not plan['publishing'] or ref not in allowed_refs:
+        raise SystemExit('Only main or the dedicated P0 release branch can publish.')
     gate = json.loads(Path(gate_path).read_text())
     if gate['plan'] != plan or not gate['passed']:
         raise SystemExit('Missing successful test gate for this exact plan.')
     signed = validate_bundle(plan, Path(signed_path))
-    subprocess.run(['git', 'fetch', 'origin', 'main', '--tags'], check=True)
-    subprocess.run(['git', 'merge-base', '--is-ancestor', plan['commit'], 'origin/main'], check=True)
+    target_branch = ref.removeprefix('refs/heads/')
+    subprocess.run(['git', 'fetch', 'origin', target_branch, '--tags'], check=True)
+    subprocess.run(['git', 'merge-base', '--is-ancestor', plan['commit'], 'origin/' + target_branch], check=True)
     tag = plan['versionName']
     tags = git('tag', '--list', 'v*').splitlines()
     if tag in tags:

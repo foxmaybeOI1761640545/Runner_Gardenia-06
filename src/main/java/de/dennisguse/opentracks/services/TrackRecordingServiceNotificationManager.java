@@ -69,10 +69,14 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
     }
 
     Notification onSensorsStarted(Context context) {
-        return onSensorsStarted(context,true);
+        return onSensorsStarted(context,true,true);
     }
 
     Notification onSensorsStarted(Context context,boolean recording) {
+        return onSensorsStarted(context,recording,recording);
+    }
+
+    Notification onSensorsStarted(Context context,boolean gpsActive,boolean recording) {
         Intent intent = IntentUtils.newIntent(context, P0Activity.class);
 
         PendingIntent pendingIntent = TaskStackBuilder.create(context)
@@ -80,7 +84,7 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        updateGPSStatus(context.getString(recording?R.string.gps_starting:R.string.p0_hr_preview_notification));
+        updateGPSStatus(context.getString(recording?R.string.gps_starting:(gpsActive?R.string.p07_location_preview_notification:R.string.p0_hr_preview_notification)));
 
         notificationBuilder.setContentIntent(pendingIntent);
         updateNotification();

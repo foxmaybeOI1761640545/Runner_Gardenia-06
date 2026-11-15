@@ -8,6 +8,7 @@ import org.mapsforge.map.android.graphics.AndroidGraphicFactory;
 import org.mapsforge.map.android.view.MapView;
 import org.mapsforge.map.layer.Layer;
 import org.mapsforge.map.layer.cache.InMemoryTileCache;
+import org.mapsforge.map.layer.overlay.Circle;
 import org.mapsforge.map.layer.overlay.FixedPixelCircle;
 import org.mapsforge.map.layer.overlay.Polyline;
 import org.mapsforge.map.layer.renderer.TileRendererLayer;
@@ -20,6 +21,7 @@ import java.util.*;
 /** Owns exactly one native offline renderer. No downloader or network tile layer. */
 public final class OfflineMapView extends FrameLayout {
     private MapView map;
+    private MapFile mapFile;
     private DiagnosticRenderer renderer;
     /** Query the same key as TileLayer, without a lossy history of completed jobs. */
     private static final class DiagnosticRenderer extends TileRendererLayer {
@@ -57,14 +59,18 @@ public final class OfflineMapView extends FrameLayout {
                 tileCache.getCapacity(),map.getWidth(),map.getHeight(),frame==null?0:frame.width,frame==null?0:frame.height,
                 map.getModel().frameBufferModel.getOverdrawFactor(),renderedTiles.get());
     }
-    private final List<Layer> overlays=new ArrayList<>();
+    private final List<Layer> routeOverlays=new ArrayList<>();
+    private Layer positionOverlay;
+    private Circle accuracyOverlay;
     private List<RouteGeometry.Point> route=List.of();
     private Position position;
     private int segmentCount;
     private final java.util.concurrent.atomic.AtomicInteger renderedTiles=new java.util.concurrent.atomic.AtomicInteger();
     public OfflineMapView(Context context){super(context);setContentDescription(context.getString(de.dennisguse.opentracks.R.string.p06_offline_map));}
     public void load(MapFile file){
-        clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());MapRenderBudget.configure();
+        clear();
+        mapFile=file;
+        AndroidGraphicFactory.createInstance(getContext().getApplicationContext());MapRenderBudget.configure();
         map=new MapView(getContext());map.getModel().frameBufferModel.setOverdrawFactor(MapRenderBudget.OVERDRAW);map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
         map.getMapZoomControls().setAutoHide(false);
         map.getMapZoomControls().getButtonZoomIn().setId(de.dennisguse.opentracks.R.id.p06_zoom_in);
@@ -82,33 +88,75 @@ public final class OfflineMapView extends FrameLayout {
         renderer=new DiagnosticRenderer(cache,file,map.getModel().mapViewPosition);
         renderer.setXmlRenderTheme(MapsforgeThemes.DEFAULT);map.getLayerManager().getLayers().add(renderer);
         map.setCenter(file.startPosition());map.setZoomLevel(file.startZoomLevel());
-        drawOverlays();
+        drawRouteOverlays();
+        drawPositionOverlay();
     }
-    public void bind(List<RouteGeometry.Point> points,Position current){route=List.copyOf(points);position=current;drawOverlays();}
-    private void drawOverlays(){
-        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:overlays)layers.remove(layer);overlays.clear();segmentCount=0;
+    public void bind(List<RouteGeometry.Point> points,Position current){
+        List<RouteGeometry.Point> next=List.copyOf(points);
+        boolean routeChanged=!route.equals(next);
+        route=next;
+        position=current;
+        if(routeChanged)drawRouteOverlays();
+        drawPositionOverlay();
+    }
+    private void drawRouteOverlays(){
+        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:routeOverlays)layers.remove(layer);routeOverlays.clear();segmentCount=0;
         for(var segment:MapRouteSegments.split(route)){
             var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
             Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
             line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
-            overlays.add(line);layers.add(line);segmentCount++;
+            routeOverlays.add(line);layers.add(line);segmentCount++;
             if(segment.size()==1){
                 var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
                 var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
-                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot);
+                dot.setScaleRadius(false);routeOverlays.add(dot);layers.add(dot);
             }
         }
+        map.getLayerManager().redrawLayers();
+    }
+    private void drawPositionOverlay(){
+        if(map==null)return;
+        var layers=map.getLayerManager().getLayers();
+        if(positionOverlay!=null){layers.remove(positionOverlay);positionOverlay=null;}
+        if(accuracyOverlay!=null){layers.remove(accuracyOverlay);accuracyOverlay=null;}
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
+            LatLong point=new LatLong(position.latitude(),position.longitude());
+            if(position.hasHorizontalAccuracy()){
+                double meters=position.horizontalAccuracy().toM();
+                if(Double.isFinite(meters)&&meters>0){
+                    var areaFill=AndroidGraphicFactory.INSTANCE.createPaint();areaFill.setColor(0x229b3dc8);areaFill.setStyle(Style.FILL);
+                    var areaStroke=AndroidGraphicFactory.INSTANCE.createPaint();areaStroke.setColor(0x889b3dc8);areaStroke.setStrokeWidth(1.5f*getResources().getDisplayMetrics().density);areaStroke.setStyle(Style.STROKE);
+                    accuracyOverlay=new Circle(point,(float)Math.min(meters,100000d),areaFill,areaStroke);
+                    layers.add(accuracyOverlay);
+                }
+            }
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker);
+            FixedPixelCircle marker=new FixedPixelCircle(point,8*getResources().getDisplayMetrics().density,fill,stroke);
+            marker.setScaleRadius(false);positionOverlay=marker;layers.add(marker);
         }
         map.getLayerManager().redrawLayers();
     }
     public void fitRoute(){if(map==null||route.isEmpty())return;var v=MapViewport.fit(route,getWidth(),getHeight(),map.getModel().displayModel.getTileSize());map.setCenter(new LatLong(v.latitude(),v.longitude()));map.setZoomLevel(v.zoom());}
     public boolean centerPosition(){if(map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
+    /** A selected map may be loaded but not cover the current GPS coordinates. */
+    public boolean covers(Position value){
+        if(mapFile==null)return false;
+        return value==null||!value.hasValidLocation()||mapFile.boundingBox().contains(value.latitude(),value.longitude());
+    }
+    public boolean hasAccuracyOverlay(){return accuracyOverlay!=null;}
+    public boolean followPosition(Position value,byte minimumZoom){
+        if(map==null||value==null||!value.hasValidLocation())return false;
+        map.setCenter(new LatLong(value.latitude(),value.longitude()));
+        if(map.getModel().mapViewPosition.getZoomLevel()<minimumZoom)map.setZoomLevel(minimumZoom);
+        return true;
+    }
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){
+        if(map!=null){map.destroyAll();removeView(map);map=null;}
+        routeOverlays.clear();positionOverlay=null;accuracyOverlay=null;renderer=null;tileCache=null;segmentCount=0;
+        if(mapFile!=null){mapFile.close();mapFile=null;}
+    }
 }
