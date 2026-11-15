@@ -1,0 +1,673 @@
+stage-validation	Debug, lint, every JVM test and instrumented compilation	﻿2026-11-15T16:29:40.1232516Z ##[group]Run ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1234113Z [36;1m./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac[0m
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1249898Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1250688Z env:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1250967Z   TZ: Asia/Singapore
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1251317Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1251696Z   ANDROID_HOME: /usr/local/lib/android/sdk
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1252052Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1252582Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1253173Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1253738Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1254180Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1254509Z   GRADLE_USER_HOME: /home/runner/.gradle
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1254940Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1255507Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1255975Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1256412Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1256814Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1257105Z ##[endgroup]
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.1607183Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:40.7957998Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:41.5949500Z Daemon will be stopped at the end of the build 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:50.0973404Z > Task :clean UP-TO-DATE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:50.0974592Z > Task :preBuild UP-TO-DATE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:50.0975458Z > Task :preReproducibleDebugBuild UP-TO-DATE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:50.0976221Z > Task :mergeReproducibleDebugNativeDebugMetadata NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:51.4962164Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:51.4991599Z > Task :generateReproducibleDebugResValues
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:51.4992397Z > Task :extractReproducibleDebugSupportedLocales
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:51.5945648Z > Task :mapReproducibleDebugSourceSetPaths
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:52.5968536Z > Task :generateReproducibleDebugResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:52.5969624Z > Task :generateReproducibleDebugLocaleConfig
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:55.5021987Z > Task :packageReproducibleDebugResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:55.5962152Z > Task :processReproducibleDebugNavigationResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.0962061Z > Task :generateReproducibleDebugBuildConfig
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.0975846Z > Task :generateReproducibleDebugAssets UP-TO-DATE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.0981383Z > Task :javaPreCompileReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.1947849Z > Task :mergeReproducibleDebugResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.2954444Z > Task :parseReproducibleDebugLocalResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.2966996Z > Task :mergeReproducibleDebugAssets
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.7947277Z > Task :dataBindingGenBaseClassesReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.7955152Z > Task :compressReproducibleDebugAssets
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:56.7956099Z > Task :generateReproducibleDebugRFile
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:58.6962048Z > Task :generateReproducibleDebugGlobalSynthetics
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:29:58.7963615Z > Task :compileReproducibleDebugKotlin NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2951021Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2959825Z Note: Some input files use or override a deprecated API.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2960943Z > Task :compileReproducibleDebugJavaWithJavac
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2963405Z Note: Recompile with -Xlint:deprecation for details.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2964244Z Note: Some input files use unchecked or unsafe operations.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:03.2965090Z Note: Recompile with -Xlint:unchecked for details.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:04.4947804Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:04.4966012Z > Task :desugarReproducibleDebugFileDependencies
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:04.4967206Z > Task :checkReproducibleDebugDuplicateClasses
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:04.5950162Z > Task :checkReproducibleDebugAarMetadata
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:05.7011942Z > Task :l8DexDesugarLibReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.0962580Z > Task :compileReproducibleDebugNavigationResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.0988878Z > Task :mergeLibDexReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.1964078Z > Task :createReproducibleDebugCompatibleScreenManifests
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.1965506Z > Task :extractDeepLinksReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.4970821Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.4999536Z > Task :processReproducibleDebugMainManifest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.5000818Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/debug/AndroidManifest.xml Warning:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.5031669Z 	uses-permission#android.permission.INTERNET was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.7008245Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.7076174Z > Task :processReproducibleDebugManifest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:08.7111761Z > Task :compressReproducibleDebugJavaRes NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:09.0953202Z > Task :mergeReproducibleDebugJniLibFolders
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:09.1973449Z > Task :mergeReproducibleDebugJavaResource
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:09.2973053Z > Task :mergeReproducibleDebugNativeLibs NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:09.3972576Z > Task :stripReproducibleDebugDebugSymbols NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.6951943Z > Task :validateSigningReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.6971254Z > Task :writeReproducibleDebugAppMetadata
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.7011551Z > Task :writeReproducibleDebugSigningConfigVersions
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.7031196Z > Task :preReproducibleDebugAndroidTestBuild SKIPPED
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.7061461Z > Task :processReproducibleDebugManifestForPackage
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.8982326Z > Task :generateReproducibleDebugAndroidTestResValues
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:10.9011692Z > Task :extractProguardFiles
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:11.2980528Z > Task :generateReproducibleDebugLintReportModel
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:11.3011274Z > Task :preReproducibleDebugUnitTestBuild UP-TO-DATE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:11.4962295Z > Task :javaPreCompileReproducibleDebugUnitTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:11.9969490Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebugAndroidTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.0021390Z > Task :generateReproducibleDebugAndroidTestResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.0978062Z > Task :mergeReproducibleDebugAndroidTestResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.1981928Z > Task :dataBindingGenBaseClassesReproducibleDebugAndroidTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.2961908Z > Task :mergeReproducibleDebugAndroidTestManifest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.2991370Z > Task :processReproducibleDebugResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:12.2992409Z > Task :processReproducibleDebugAndroidTestManifest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:14.7961757Z > Task :mergeExtDexReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:17.7991768Z > Task :dexBuilderReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:17.8962215Z > Task :bundleReproducibleDebugClassesToCompileJar
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:17.9966425Z > Task :bundleReproducibleDebugClassesToRuntimeJar
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:18.1962211Z > Task :mergeProjectDexReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:18.2947434Z > Task :generateReproducibleDebugAndroidTestLintModel
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:18.3955016Z > Task :generateReproducibleDebugUnitTestLintModel
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:18.4994887Z > Task :compileReproducibleDebugUnitTestKotlin NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.1952116Z > Task :compileReproducibleDebugUnitTestJavaWithJavac
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.1991960Z > Task :compressReproducibleDebugUnitTestJavaRes NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.2021091Z > Task :extractReproducibleDebugUnitTestJavaRes
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.2060930Z > Task :packageReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.2080957Z > Task :createReproducibleDebugApkListingFileRedirect
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:19.2110959Z > Task :assembleReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.1950615Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.1979659Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.1980750Z > Task :testReproducibleDebugUnitTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.6950620Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.6961873Z > Task :generateReproducibleDebugAndroidTestBuildConfig
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.6991526Z > Task :packageReproducibleDebugAndroidTestResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.7001392Z > Task :processReproducibleDebugAndroidTestNavigationResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.7979858Z > Task :javaPreCompileReproducibleDebugAndroidTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.8002597Z > Task :parseReproducibleDebugAndroidTestLocalResources
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.8021565Z > Task :generateReproducibleDebugAndroidTestRFile
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:21.8081489Z > Task :compileReproducibleDebugAndroidTestKotlin NO-SOURCE
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:24.0952715Z Note: Some input files use or override a deprecated API.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:24.0954096Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:24.0961518Z Note: Recompile with -Xlint:deprecation for details.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:24.0971670Z > Task :compileReproducibleDebugAndroidTestJavaWithJavac
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:41.2944880Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:41.2948397Z > Task :lintAnalyzeReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:45.1946879Z > Task :lintAnalyzeReproducibleDebugAndroidTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:46.2961977Z > Task :lintAnalyzeReproducibleDebugUnitTest
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6002671Z Couldn't compute fix edits for Replace with ’
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6003458Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6014019Z java.lang.IllegalArgumentException: Did not find "'" in "r" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6015173Z > Task :lintReportReproducibleDebug
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6049278Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6050903Z Wrote HTML report to file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/lint-results-reproducibleDebug.html
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6078845Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6080419Z Wrote SARIF report to file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/lint-results-reproducibleDebug.sarif
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6081547Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6082247Z Lint found 1 error, 998 warnings and 191 hints. First failure:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6082749Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6106339Z ##[error]/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/RouteMapView.java:95: Error: Call requires API level 29 (current min is 26): android.os.Handler#hasCallbacks [NewApi]
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6109358Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6110914Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6111807Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6112948Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6114036Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6115061Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6116079Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6117702Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6118660Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6119530Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6120507Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6121285Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6122113Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6123183Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6124002Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6124772Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6125413Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6126039Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6126866Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6127745Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6128761Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6129901Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6131042Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6132088Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6133075Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6134198Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6135285Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6136410Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6137389Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6373000Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6374380Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6375831Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6377050Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6378452Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6379564Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6380649Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6381425Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6382185Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6382978Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6383746Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6384386Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6385184Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6386142Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6387127Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6387856Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6388620Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6389737Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6391466Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6392436Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6393444Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6394373Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6395329Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6396333Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6397386Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6398274Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6398965Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6399887Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6400934Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6401742Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6402401Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6402948Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6403696Z Couldn't compute fix edits for Replace with ’
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6404476Z java.lang.IllegalArgumentException: Did not find "'" in "S" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6405017Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6405369Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6405897Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6406384Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6406679Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6407299Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6408107Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6409209Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6410260Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6411213Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6412090Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6412990Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6413813Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6414545Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6415251Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6415950Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6416698Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6417454Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6418167Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6419444Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6420157Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6420644Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6421429Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6422240Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6423194Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6424266Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6425237Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6426178Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6427057Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6427935Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6428862Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6429834Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6430961Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6431685Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6432731Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6434041Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6435089Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6436137Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6437191Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6438497Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6439543Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6440818Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6441784Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6442732Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6443532Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6444554Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6445811Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6447056Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6447870Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6448744Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6449743Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6451179Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6452253Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6453250Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6454255Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6455354Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6456540Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6457769Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6458750Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6459470Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6460433Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6461407Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6462308Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6463159Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6463794Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6464413Z Couldn't compute fix edits for Replace with ’
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6465179Z java.lang.IllegalArgumentException: Did not find "'" in "i" in src/main/res/values-fr/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6465670Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6465997Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6466530Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6466769Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6467040Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6467617Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6468530Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6469253Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6470251Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6471057Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6471858Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6472666Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6473404Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6474084Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6474732Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6475408Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6475953Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6476625Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6477248Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6477861Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6478635Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6479096Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6479821Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6480761Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6481647Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6482714Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6483669Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6484568Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6485480Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6486482Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6487462Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6488459Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6489334Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6490184Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6491200Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6492502Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6493678Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6494700Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6495748Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6496792Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6498073Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6499083Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6500306Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6501289Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6502128Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6503123Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6504393Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6505634Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6506473Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6507312Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6508286Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6509250Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6510562Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6511551Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6512520Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6513404Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6514391Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6515450Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6516426Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6517123Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6517935Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6518875Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6524566Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6525607Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6526277Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6526904Z Couldn't compute fix edits for Replace with ’
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6527720Z java.lang.IllegalArgumentException: Did not find "'" in "n" in src/main/res/values-it/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6528230Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6528546Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6529083Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6529329Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6529605Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6530463Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6531355Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6532470Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6533366Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6534231Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6535091Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6535924Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6536701Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6537446Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6538140Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6538795Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6539554Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6540556Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6541239Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6541890Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6542457Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6542919Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6543835Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6544591Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6545524Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6546617Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6547582Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6548546Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6549488Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6550545Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6551505Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6552520Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6553401Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6554067Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6555085Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6556376Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6557540Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6558599Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6559661Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6560983Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6562033Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6563228Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6564216Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6565203Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6566030Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6567036Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6568327Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6569576Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6570696Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6571563Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6572566Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6573565Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6574642Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6575986Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6577034Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6578089Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6579308Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6580683Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6581660Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6582380Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6583226Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6584165Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6585093Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6585981Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6586657Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6587250Z Couldn't compute fix edits for Replace with ’
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6588081Z java.lang.IllegalArgumentException: Did not find "'" in "e" in src/main/res/values-et/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6588629Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6588960Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6589485Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6589713Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6590153Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6590762Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6591561Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6592414Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6593423Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6594291Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6595140Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6595897Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6596689Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6597414Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6598078Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6598741Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6599367Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6600287Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6600913Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6601520Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6602077Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6602562Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6603319Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6604082Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6605172Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6606182Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6607160Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6608077Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6608969Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6609872Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6610955Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6611839Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6612669Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6613355Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6614330Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6615607Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6616774Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6617812Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6618864Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6620436Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6621636Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6623083Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6624497Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6625500Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6626442Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6627556Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6629028Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6630559Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6631672Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6632789Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6633752Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6634820Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6636021Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6637128Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6638545Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6639591Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6641100Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6642855Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6643850Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6644681Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6645640Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6646843Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6647786Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6648775Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6649531Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6650339Z Couldn't compute fix edits for Replace with “OpenTracks\”
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6651462Z java.lang.IllegalArgumentException: Did not find ""OpenTracks\"" in "\"Google Play\" parduotuvėje</a>,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6652119Z \n f) aukoti ir
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6652914Z \n g) darykite viską, kas, jūs" in src/main/res/values-lt/strings.xml as suggested in the quickfix.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6653401Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6653770Z Consider calling ReplaceStringBuilder#range() to set a larger range to
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6654336Z search than the default highlight range.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6654579Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6654860Z (This fix is associated with the issue id `TypographyQuotes`,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6655478Z reported via com.android.tools.lint.checks.TypographyDetector.)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6656531Z 	at com.android.tools.lint.client.api.LintFixPerformer.addReplaceString(LintFixPerformer.kt:710)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6657544Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits(LintFixPerformer.kt:366)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6658685Z 	at com.android.tools.lint.client.api.LintFixPerformer.addEdits$default(LintFixPerformer.kt:341)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6659583Z 	at com.android.tools.lint.client.api.LintFixPerformer.registerFix(LintFixPerformer.kt:98)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6660621Z 	at com.android.tools.lint.client.api.LintFixPerformer.computeEdits(LintFixPerformer.kt:823)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6661491Z 	at com.android.tools.lint.LintCliFixPerformer.computeEdits(LintCliFixPerformer.kt:80)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6662254Z 	at com.android.tools.lint.SarifReporter.writeQuickFixes(SarifReporter.kt:568)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6662968Z 	at com.android.tools.lint.SarifReporter.writeResults(SarifReporter.kt:315)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6663676Z 	at com.android.tools.lint.SarifReporter.write(SarifReporter.kt:124)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6664347Z 	at com.android.tools.lint.LintCliClient.writeReports(LintCliClient.kt:468)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6665109Z 	at com.android.tools.lint.LintCliClient.performReporting(LintCliClient.kt:335)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6665840Z 	at com.android.tools.lint.LintCliClient.mergeOnly$lambda$1(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6666500Z 	at com.android.tools.lint.LintCliClient.run(LintCliClient.kt:323)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6667146Z 	at com.android.tools.lint.LintCliClient.mergeOnly(LintCliClient.kt:286)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6667708Z 	at com.android.tools.lint.Main.run(Main.java:1790)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6668196Z 	at com.android.tools.lint.Main.run(Main.java:287)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6668854Z 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6669539Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6676335Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.invokeLintMainRunMethod(AndroidLintWorkAction.kt:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6677401Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.runLint(AndroidLintWorkAction.kt:90)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6678367Z 	at com.android.build.gradle.internal.lint.AndroidLintWorkAction.execute(AndroidLintWorkAction.kt:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6679264Z 	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:68)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6680460Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:64)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6681437Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6682418Z 	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:103)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6683430Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:61)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6684323Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6684972Z 	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6685966Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:210)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6687100Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:205)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6688104Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:67)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6689000Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6690145Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:167)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6691060Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:60)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6691994Z 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:54)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6692868Z 	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6694013Z 	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:58)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6694949Z 	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$1(DefaultWorkerExecutor.java:169)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6695739Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6696705Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:191)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6697974Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$600(DefaultConditionalExecutionQueue.java:112)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6699186Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:168)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6700210Z 	at org.gradle.internal.Factories$1.create(Factories.java:30)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6701089Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.lambda$runAndReleaseLocks$0(DefaultWorkerLeaseService.java:296)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6702107Z 	at org.gradle.internal.work.ResourceLockStatistics$1.measure(ResourceLockStatistics.java:43)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6703095Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAndReleaseLocks(DefaultWorkerLeaseService.java:294)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6704068Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocksAcquired(DefaultWorkerLeaseService.java:290)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6704926Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:282)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6706088Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6707019Z 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:138)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6708060Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:163)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6709149Z 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:125)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6710264Z 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6710943Z 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6711719Z 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:65)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6712564Z 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6713408Z 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6714281Z 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6714958Z 	at java.base/java.lang.Thread.run(Thread.java:1583)
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6715560Z         if(!main.hasCallbacks(coverage))main.postDelayed(coverage,300);
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6716092Z                  ~~~~~~~~~~~~
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6716289Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6716299Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6716490Z > Task :lintReproducibleDebug FAILED
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6716970Z Lint found 1 error, 998 warnings, 191 hints. First failure:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6717262Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6718851Z ##[error]/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/RouteMapView.java:95: Error: Call requires API level 29 (current min is 26): android.os.Handler#hasCallbacks [NewApi]
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6720798Z         if(!main.hasCallbacks(coverage))main.postDelayed(coverage,300);
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6721267Z                  ~~~~~~~~~~~~
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6721471Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6721671Z    Explanation for issues of type "NewApi":
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6722211Z    This check scans through all the Android API calls in the application and
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6722853Z    warns about any calls that are not available on all versions targeted by
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6726901Z    this application (according to its minimum SDK attribute in the manifest).
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6727285Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6727604Z    If you really want to use this API and don't need to support older devices
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6728243Z    just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6728689Z    files.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6728840Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6729166Z    If your code is deliberately accessing newer APIs, and you have ensured
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6729818Z    (e.g. with conditional execution) that this code will only ever be called
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6730825Z    on a supported platform, then you can annotate your class or method with
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6731517Z    the @TargetApi annotation specifying the local minimum SDK to apply, such
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6732163Z    as @TargetApi(11), such that this check considers 11 rather than your
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6732754Z    manifest file's minimum SDK as the required API level.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6733050Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6733406Z    If you are deliberately setting android: attributes in style definitions,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6734056Z    make sure you place this in a values-vNN folder in order to avoid running
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6734736Z    into runtime conflicts on certain devices where manufacturers have added
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6735413Z    custom attributes whose ids conflict with the new ones on later platforms.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6735769Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6736114Z    Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6736909Z    the element will only be inflated in an adequate context.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6737213Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6737222Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6737422Z The full lint text report is located at:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.6738581Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/intermediates/lint_intermediate_text_report/reproducibleDebug/lintReportReproducibleDebug/lint-results-reproducibleDebug.txt
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7000529Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7001434Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_4-1794760183200.json
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7030769Z FAILURE: Build failed with an exception.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7031093Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7047578Z [Incubating] Problems report is available at: file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/problems/problems-report.html
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7059883Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7060432Z * What went wrong:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7061249Z Execution failed for task ':lintReproducibleDebug' (registered by plugin 'com.android.internal.application').
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7062005Z > Lint found errors in the project; aborting build.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7062462Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7062973Z   Fix the issues identified by lint, or create a baseline to see only new errors.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7063783Z   To create a baseline, run `gradlew updateLintBaseline` after adding the following to the module's build.gradle file:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7064422Z   ```
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7064674Z   android {
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7064930Z       lint {
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7065285Z           baseline = file("lint-baseline.xml")
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7065638Z       }
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7065877Z   }
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7066106Z   ```
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7066602Z   For more details, see https://developer.android.com/studio/write/lint#snapshot
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7067070Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7067470Z   Lint found 1 error, 998 warnings, 191 hints. First failure:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7067873Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7070341Z ##[error]  /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/main/java/de/dennisguse/opentracks/p0/app/RouteMapView.java:95: Error: Call requires API level 29 (current min is 26): android.os.Handler#hasCallbacks [NewApi]
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7072381Z           if(!main.hasCallbacks(coverage))main.postDelayed(coverage,300);
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7073151Z                    ~~~~~~~~~~~~
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7073471Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7073955Z      Explanation for issues of type "NewApi":
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7074565Z      This check scans through all the Android API calls in the application and
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7075268Z      warns about any calls that are not available on all versions targeted by
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7075965Z      this application (according to its minimum SDK attribute in the manifest).
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7076391Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7076853Z      If you really want to use this API and don't need to support older devices
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7077527Z      just set the minSdkVersion in your build.gradle or AndroidManifest.xml
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7077984Z      files.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7078225Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7078669Z      If your code is deliberately accessing newer APIs, and you have ensured
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7079337Z      (e.g. with conditional execution) that this code will only ever be called
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7102174Z      on a supported platform, then you can annotate your class or method with
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7103176Z      the @TargetApi annotation specifying the local minimum SDK to apply, such
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7103805Z      as @TargetApi(11), such that this check considers 11 rather than your
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7104404Z      manifest file's minimum SDK as the required API level.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7104817Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7105310Z      If you are deliberately setting android: attributes in style definitions,
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7106013Z      make sure you place this in a values-vNN folder in order to avoid running
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7113464Z      into runtime conflicts on certain devices where manufacturers have added
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7114161Z      custom attributes whose ids conflict with the new ones on later platforms.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7114616Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7115102Z      Similarly, you can use tools:targetApi="11" in an XML file to indicate that
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7115734Z      the element will only be inflated in an adequate context.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7116138Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7116375Z   
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7116698Z   The full lint text report is located at:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7117888Z     /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/intermediates/lint_intermediate_text_report/reproducibleDebug/lintReportReproducibleDebug/lint-results-reproducibleDebug.txt
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7118715Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7118832Z * Try:
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7119222Z > Run with --stacktrace option to get the stack trace.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7119782Z > Run with --info or --debug option to get more log output.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7120763Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7121327Z > Get more help at https://help.gradle.org.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7121579Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7121728Z BUILD FAILED in 1m 7s
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7121923Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7122327Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7122740Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7123336Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7123891Z 
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7124581Z For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:47.7125281Z 70 actionable tasks: 69 executed, 1 up-to-date
+stage-validation	Debug, lint, every JVM test and instrumented compilation	2026-11-15T16:30:48.0786281Z ##[error]Process completed with exit code 1.
+stage-validation	Reject missing, empty, failed or new skipped reports	﻿2026-11-15T16:30:48.0824445Z ##[group]Run python3 .github/scripts/p07_stage.py gate
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0824801Z [36;1mpython3 .github/scripts/p07_stage.py gate[0m
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0835880Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0836156Z env:
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0836338Z   TZ: Asia/Singapore
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0836565Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0836971Z   ANDROID_HOME: /usr/local/lib/android/sdk
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0837226Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0837675Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0838166Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0838538Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0838867Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0839114Z   GRADLE_USER_HOME: /home/runner/.gradle
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0839388Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0839634Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0840684Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0841061Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0841330Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.0841560Z ##[endgroup]
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1198367Z Stage acceptance blocked
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1198973Z {
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1199422Z   "passed": false,
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1199707Z   "plan": {
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1200332Z     "commit": "7ed7fb0d57d235e6a50ff7cc97b54a40d08d90d6",
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1200743Z     "stage": 1,
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1201046Z     "fullRegression": true,
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1201492Z     "branch": "feature/p0-7-to-p1-0-offline-navigation-clean",
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1201910Z     "signed": false,
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1202213Z     "publishing": false,
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1202550Z     "runId": "43735700103"
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1202805Z   },
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1203255Z   "error": "[Errno 2] No such file or directory: 'build/reports/p07-stage/helpers.json'"
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1203694Z }
+stage-validation	Reject missing, empty, failed or new skipped reports	2026-11-15T16:30:48.1258230Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,154 @@
+{
+  "tests": 167,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "total": 167,
+  "executed": 167,
+  "missingClasses": [],
+  "missingRequiredTests": [],
+  "suites": [
+    {
+      "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+      "tests": 20,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+      "tests": 23,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "failureDetails": [],
+  "passed": true
+}
