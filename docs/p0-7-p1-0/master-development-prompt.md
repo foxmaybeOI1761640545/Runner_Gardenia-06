@@ -15,6 +15,7 @@ This file is the source-of-truth execution brief. Update its status and append e
 - Preserve the accepted P0.6.1 source, signing identity, application ID `com.fox.runner`, existing database and workout history, existing map files, BLE heart-rate support, offline-only policy, and all existing user settings.
 - Do not rewrite history, move existing tags, delete existing releases, or replace published APK assets.
 - Do not claim a build, test, release, or device verification succeeded unless the actual evidence exists.
+- The accepted P0.6.1 real-map binary test depends on the external 105,834,033-byte fixture identified by SHA-256 `5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e`. The fixture is not committed to the repository or present in this Actions run. Keep the test active when `RG_REAL_MAP` is supplied; otherwise report it as skipped and rely only on the immutable P0.6.1 acceptance evidence. Never fabricate a map fixture or claim that binary validation ran.
 
 ## 1. Product decisions already confirmed
 
