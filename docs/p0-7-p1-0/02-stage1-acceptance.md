@@ -29,11 +29,13 @@
 
 ## 测试与失败修复
 
-最新源码候选：`dc965a5f47a872dd5066f9c253c56aaa2a76be7f`。
+最新修复候选：`9b3641fd579c5c881c6317e3cfac1e60ead11080`。
 
-Run：<https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43737955499>。
+Run：<https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43741989911>。
 
-目前已观察到构建、Lint、JVM、测试编译、Python helper 和首页地图专测步骤成功。完整 API35 步骤仍在执行；本报告暂不填写未取得的最终原始报告数量，也不把专测步骤成功换算成完整回归通过。最终必须明确 Tests / Executed / Failures / Errors / Skipped，确认唯一历史 Skip 的实际身份，并检查全部35张首页地图截图。
+上一轮 `dc965a5` / Run 43737955499 的完整测试真实成功：Python 141/141/0/0/0，JVM 167/167/0/0/0，API35 459/458/0/0/1（依次为 Tests / Executed / Failures / Errors / Skipped）。唯一历史 Skip 身份已核实，原始 XML 已提交。然而实际查看 Explorer 原生截图发现距离卡片遮挡控件，以及模拟器外部位置输入干扰有图场景，因此视觉验收明确拒绝，阶段1没有通过。
+
+新候选将 Explorer 距离卡片移出地图、保持原有页面高度预算；测试通过现有受控 GPS fixture 隔离模拟器输入，并逐张要求目标位置、真实要素和可见瓦片完整渲染。新候选的测试和截图仍待取得；不沿用旧源码的测试成功作为本轮验收结论。最终还必须逐张检查全部35张首页地图截图。
 
 已保留两次失败：API26不支持Handler.hasCallbacks（已改为兼容调度）；原生定位按钮覆盖缩放控件（布局断言未删除，已调整角落）。真实截图还发现并修复空闲定位状态与地图标记不一致的问题。失败和取消的运行都不算完整通过；见 `01-stage1-validation.md` 及 `evidence/`。
 
