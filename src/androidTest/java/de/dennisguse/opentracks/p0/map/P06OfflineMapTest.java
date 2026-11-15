@@ -76,6 +76,7 @@ public class P06OfflineMapTest {
             Location f=new Location("gps");
             f.setLatitude(latitude);f.setLongitude(longitude);f.setAccuracy(15);f.setSpeed(0);
             f.setTime(System.currentTimeMillis());f.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+            service.getTrackPointCreator().getSensorManager().getGpsHandler().onDisconnected();
             service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(f);
         });
         SystemClock.sleep(150);
