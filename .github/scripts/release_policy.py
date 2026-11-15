@@ -88,7 +88,7 @@ def prepare(output):
     seed = properties(Path('version.properties').read_text())
     match = NAME.fullmatch(seed['VERSION_NAME'])
     if not match:
-        raise SystemExit('version.properties must define a vX.Y.Z-rcN.M series.')
+        raise SystemExit('version.properties must define a supported P0 or rc release series.')
     head = git('rev-parse', 'HEAD')
     if os.environ.get('GITHUB_SHA') and os.environ['GITHUB_SHA'] != head:
         raise SystemExit('Checkout differs from the workflow event SHA.')
