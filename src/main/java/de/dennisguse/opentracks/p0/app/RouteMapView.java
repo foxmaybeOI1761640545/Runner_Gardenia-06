@@ -20,7 +20,7 @@ public final class RouteMapView extends FrameLayout {
     private final OfflineMapView offlineMap;
     private List<RouteGeometry.Point> points = List.of();
     private Position current;
-    private boolean partial, failed, hasMap, follow = true;
+    private boolean partial, failed, hasMap, coverageAvailable, follow = true;
 
     public RouteMapView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -35,9 +35,9 @@ public final class RouteMapView extends FrameLayout {
     /** The supplied MapFile is owned by OfflineMapView after this call. */
     public void load(MapFile file) {
         offlineMap.load(file);
-        offlineMap.setVisibility(VISIBLE);
         hasMap = true;
         failed = false;
+        updateCoverage();
         var nativeMap = offlineMap.mapView();
         if (nativeMap != null) {
             nativeMap.setClickable(false);
@@ -47,7 +47,7 @@ public final class RouteMapView extends FrameLayout {
             });
         }
         offlineMap.bind(points, current);
-        if (follow && current != null) offlineMap.followPosition(current, (byte) 16);
+        if (follow && coverageAvailable && current != null) offlineMap.followPosition(current, (byte) 16);
         updateDescription();
         invalidate();
     }
@@ -57,6 +57,7 @@ public final class RouteMapView extends FrameLayout {
         offlineMap.clear();
         offlineMap.setVisibility(GONE);
         hasMap = false;
+        coverageAvailable = false;
         invalidate();
     }
 
@@ -81,13 +82,17 @@ public final class RouteMapView extends FrameLayout {
         partial = result.partial();
         failed = result.failed();
         current = fix;
-        if (hasMap) {
-            offlineMap.bind(points, current);
-            if (follow && current != null && current.hasValidLocation())
-                offlineMap.followPosition(current, (byte) 16);
-        }
+        if (hasMap) offlineMap.bind(points, current);
+        updateCoverage();
+        if (hasMap && coverageAvailable && follow && current != null && current.hasValidLocation())
+            offlineMap.followPosition(current, (byte) 16);
         updateDescription();
         invalidate();
+    }
+
+    private void updateCoverage() {
+        coverageAvailable = hasMap && offlineMap.covers(current);
+        offlineMap.setVisibility(coverageAvailable ? VISIBLE : GONE);
     }
 
     public int recordedPointCount() {
@@ -96,18 +101,32 @@ public final class RouteMapView extends FrameLayout {
 
     /** True when the real Mapsforge renderer, rather than the blank fallback, is loaded. */
     public boolean hasOfflineMap() {
-        return hasMap && offlineMap.mapView() != null;
+        return hasMap && coverageAvailable && offlineMap.mapView() != null;
+    }
+
+    public boolean hasGpsAccuracyIndicator() {
+        return hasOfflineMap() && offlineMap.hasAccuracyOverlay();
     }
 
     private void updateDescription() {
-        if (hasMap) {
+        if (hasMap && coverageAvailable) {
             int segments = 0;
             for (var point : points) if (point.breakBefore()) segments++;
-            setContentDescription(points.isEmpty()
-                    ? getContext().getString(R.string.p04_route_wait)
-                    : getContext().getString(R.string.p04_route_summary, points.size(), segments));
+            if (current != null && current.hasHorizontalAccuracy()) {
+                setContentDescription(getContext().getString(R.string.p07_home_map_gps_accuracy,
+                        (float) current.horizontalAccuracy().toM()));
+            } else {
+                setContentDescription(points.isEmpty()
+                        ? getContext().getString(R.string.p06_map_waiting_gps)
+                        : getContext().getString(R.string.p04_route_summary, points.size(), segments));
+            }
         } else if (current != null && current.hasValidLocation()) {
-            setContentDescription(getContext().getString(R.string.p07_home_map_position_no_map));
+            if (current.hasHorizontalAccuracy()) {
+                setContentDescription(getContext().getString(R.string.p07_home_map_position_no_map_accuracy,
+                        (float) current.horizontalAccuracy().toM()));
+            } else {
+                setContentDescription(getContext().getString(R.string.p07_home_map_position_no_map));
+            }
         } else {
             setContentDescription(getContext().getString(failed ? R.string.p06_map_failed : R.string.p06_map_empty));
         }
@@ -116,7 +135,7 @@ public final class RouteMapView extends FrameLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (hasMap) return;
+        if (hasMap && coverageAvailable) return;
         int foreground = ThemeUtils.color(getContext(),
                 com.google.android.material.R.attr.colorOnSurfaceVariant);
         canvas.drawColor(ThemeUtils.color(getContext(), R.attr.gardeniaSurfaceVariant));
