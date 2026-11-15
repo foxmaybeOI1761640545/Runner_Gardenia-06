@@ -30,6 +30,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     private Distance thresholdHorizontalAccuracy;
     private volatile long latestElapsedNanos;
     private final GpsMotionFilter motionFilter = new GpsMotionFilter();
+    private final GpsMotionFilter previewMotionFilter = new GpsMotionFilter();
 
     /** A manual recording boundary can occur while a visible map keeps GPS connected. */
     public void beginRecordingSegment() {
@@ -49,6 +50,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         motionFilter.reset();
         latestRecordingPosition = null;
         latestElapsedNanos = 0;
+        previewMotionFilter.reset();
     }
 
     public boolean hasFreshPreview() {
@@ -128,6 +130,19 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         }
 
         Location recordingLocation = location;
+        if (sensorManager.isMapGpsPreview() && !trackPointCreator.isRecording() && location.getElapsedRealtimeNanos() > 0) {
+            var filtered = previewMotionFilter.update(new GpsMotionFilter.Fix(
+                    location.getLatitude(), location.getLongitude(), location.hasAccuracy(), location.getAccuracy(),
+                    location.hasSpeed(), location.hasSpeed() ? location.getSpeed() : Double.NaN,
+                    location.getElapsedRealtimeNanos()));
+            if (!filtered.accepted()) {
+                trackPointCreator.sendGpsStatus(GpsStatusValue.GPS_SIGNAL_BAD);
+                return;
+            }
+            recordingLocation = new Location(location);
+            recordingLocation.setLatitude(filtered.latitude());
+            recordingLocation.setLongitude(filtered.longitude());
+        }
         // P0's acquisition guard already rejects live fixes without monotonic
         // metadata. Untimed legacy Locations have no such time axis: never
         // substitute callback arrival time and infer a bogus movement interval.

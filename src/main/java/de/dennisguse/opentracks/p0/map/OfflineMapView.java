@@ -20,6 +20,12 @@ import java.util.*;
 /** Owns exactly one native offline renderer. No downloader or network tile layer. */
 public final class OfflineMapView extends FrameLayout {
     private MapView map;
+    private boolean following=true,touching;
+    private Runnable viewportChanged=()->{};
+    public boolean isFollowing(){return following;}
+    public void setFollowing(boolean value){following=value;}
+    public void setOnViewportChanged(Runnable callback){viewportChanged=callback;}
+    public void loadEmpty(){load(null);}
     private DiagnosticRenderer renderer;
     /** Query the same key as TileLayer, without a lossy history of completed jobs. */
     private static final class DiagnosticRenderer extends TileRendererLayer {
@@ -35,7 +41,7 @@ public final class OfflineMapView extends FrameLayout {
             double overdraw,int completedTiles) {}
     /** Only captures UI/cache state here; file reads belong to the Activity's worker. */
     public DiagnosticViewport diagnosticViewport() {
-        if (map == null) return null;
+        if (map == null || renderer == null) return null;
         var center = map.getModel().mapViewPosition.getCenter();
         byte zoom = map.getModel().mapViewPosition.getZoomLevel();
         var box = map.getBoundingBox();
@@ -71,6 +77,18 @@ public final class OfflineMapView extends FrameLayout {
         map.getMapZoomControls().getButtonZoomIn().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_in));
         map.getMapZoomControls().getButtonZoomOut().setId(de.dennisguse.opentracks.R.id.p06_zoom_out);
         map.getMapZoomControls().getButtonZoomOut().setContentDescription(getContext().getString(de.dennisguse.opentracks.R.string.p06_zoom_out));
+        map.setBackgroundColor(0xffeeeeee);
+        map.setOnTouchListener(new android.view.View.OnTouchListener(){
+            private float x,y;
+            @Override public boolean onTouch(android.view.View view,android.view.MotionEvent event){
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_DOWN){touching=true;x=event.getX();y=event.getY();getParent().requestDisallowInterceptTouchEvent(true);}
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_POINTER_DOWN)following=false;
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_MOVE&&Math.hypot(event.getX()-x,event.getY()-y)>android.view.ViewConfiguration.get(getContext()).getScaledTouchSlop())following=false;
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_UP||event.getActionMasked()==android.view.MotionEvent.ACTION_CANCEL){touching=false;getParent().requestDisallowInterceptTouchEvent(false);viewportChanged.run();}
+                return false;
+            }
+        });
+        map.getModel().mapViewPosition.addObserver(()->viewportChanged.run());
         addView(map,new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
         int tileSize=map.getModel().displayModel.getTileSize();
         int capacity=MapRenderBudget.capacity(tileSize);
@@ -79,6 +97,7 @@ public final class OfflineMapView extends FrameLayout {
             @Override public synchronized void put(org.mapsforge.map.layer.queue.Job job,org.mapsforge.core.graphics.TileBitmap bitmap){super.put(job,bitmap);renderedTiles.incrementAndGet();}
         };
         tileCache=cache;
+        if(file==null){map.setCenter(new LatLong(0,0));map.setZoomLevel((byte)15);drawOverlays();return;}
         renderer=new DiagnosticRenderer(cache,file,map.getModel().mapViewPosition);
         renderer.setXmlRenderTheme(MapsforgeThemes.DEFAULT);map.getLayerManager().getLayers().add(renderer);
         map.setCenter(file.startPosition());map.setZoomLevel(file.startZoomLevel());
@@ -86,29 +105,39 @@ public final class OfflineMapView extends FrameLayout {
     }
     public void bind(List<RouteGeometry.Point> points,Position current){route=List.copyOf(points);position=current;drawOverlays();}
     private void drawOverlays(){
-        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:overlays)layers.remove(layer);overlays.clear();segmentCount=0;
+        if(map==null)return;var layers=map.getLayerManager().getLayers();
+        // LayerManager draws under this same monitor. Publish one complete overlay
+        // frame, never an intermediate accuracy-only or marker-free snapshot.
+        synchronized(layers){
+        for(Layer layer:overlays)layers.remove(layer,false);overlays.clear();segmentCount=0;
         for(var segment:MapRouteSegments.split(route)){
             var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
             Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
             line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
-            overlays.add(line);layers.add(line);segmentCount++;
+            overlays.add(line);layers.add(line,false);segmentCount++;
             if(segment.size()==1){
                 var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
                 var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
-                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot);
+                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot,false);
             }
         }
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
+            if(position.hasHorizontalAccuracy()&&Double.isFinite(position.horizontalAccuracy().toM())&&position.horizontalAccuracy().toM()>0){
+                var accuracy=AndroidGraphicFactory.INSTANCE.createPaint();accuracy.setColor(0x339b3dc8);accuracy.setStyle(Style.FILL);
+                var circle=new org.mapsforge.map.layer.overlay.Circle(new LatLong(position.latitude(),position.longitude()),(float)Math.min(position.horizontalAccuracy().toM(),100000),accuracy,null);
+                overlays.add(circle);layers.add(circle,false);
+            }
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker);
+            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker,false);
+        }
         }
         map.getLayerManager().redrawLayers();
     }
     public void fitRoute(){if(map==null||route.isEmpty())return;var v=MapViewport.fit(route,getWidth(),getHeight(),map.getModel().displayModel.getTileSize());map.setCenter(new LatLong(v.latitude(),v.longitude()));map.setZoomLevel(v.zoom());}
-    public boolean centerPosition(){if(map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
+    public boolean centerPosition(){if(touching||map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){touching=false;if(map!=null){map.destroyAll();if(renderer==null&&tileCache!=null)tileCache.destroy();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
 }

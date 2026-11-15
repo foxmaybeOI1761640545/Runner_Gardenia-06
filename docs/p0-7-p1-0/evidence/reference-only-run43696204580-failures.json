@@ -1,0 +1,57 @@
+{
+  "runId": "43696204580",
+  "source": "e7f5ee7b475ea02961489f540bd262f9e916fc3d",
+  "classification": "REFERENCE ONLY \u2014 DO NOT MERGE",
+  "conclusion": "failure",
+  "failures": [
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+      "test": "waitingUiHasNoCoordinatesAndCancelLeavesNoWorkout",
+      "message": null,
+      "detail": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:87)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat org.junit.Assert.assertFalse(Assert.java:65)\n\tat org.junit.Assert.assertFalse(Assert.java:75)\n\tat de.dennisguse.opentracks.p0.P0RecordingUiTest.waitingUiHasNoCoordinatesAndCancelLeavesNoWorkout(P0RecordingUiTest.java:98)\n"
+    },
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+      "test": "closingLastMapRestoresIdleHeartPreviewWithoutConnectingRemoteGps",
+      "message": null,
+      "detail": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.owners(P061GpsPreferencesTest.java:44)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.closingLastMapRestoresIdleHeartPreviewWithoutConnectingRemoteGps(P061GpsPreferencesTest.java:94)\n"
+    },
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+      "test": "idlePreviewRecreateAndRepeatedEntryNeverWritePreferencesOrLeakOwners",
+      "message": null,
+      "detail": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.lambda$idlePreviewRecreateAndRepeatedEntryNeverWritePreferencesOrLeakOwners$2(P061GpsPreferencesTest.java:51)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.$r8$lambda$d9zFX2bkEqkGmeDdHZEnsTiK7SE(Unknown Source:0)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest$$ExternalSyntheticLambda0.perform(D8$$SyntheticClass:0)\n\tat androidx.test.core.app.ActivityScenario.lambda$onActivity$2$androidx-test-core-app-ActivityScenario(ActivityScenario.java:794)\n\tat androidx.test.core.app.ActivityScenario$$ExternalSyntheticLambda2.run(D8$$SyntheticClass:0)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)\n\tat android.os.Handler.handleCallback(Handler.java:959)\n\tat android.os.Handler.dispatchMessage(Handler.java:100)\n\tat android.os.Looper.loopOnce(Looper.java:232)\n\tat android.os.Looper.loop(Looper.java:317)\n\tat android.app.ActivityThread.main(ActivityThread.java:8705)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)\n"
+    },
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+      "test": "recordingUsesOriginalGpsConfigurationAndSurvivesMapClosure",
+      "message": null,
+      "detail": "java.lang.AssertionError: expected:<1> but was:<2>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:647)\n\tat org.junit.Assert.assertEquals(Assert.java:633)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.lambda$recordingUsesOriginalGpsConfigurationAndSurvivesMapClosure$6(P061GpsPreferencesTest.java:64)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest.$r8$lambda$2p4jktkBeJudbkoqR8Dv9aGmSUM(Unknown Source:0)\n\tat de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest$$ExternalSyntheticLambda14.perform(D8$$SyntheticClass:0)\n\tat androidx.test.core.app.ActivityScenario.lambda$onActivity$2$androidx-test-core-app-ActivityScenario(ActivityScenario.java:794)\n\tat androidx.test.core.app.ActivityScenario$$ExternalSyntheticLambda2.run(D8$$SyntheticClass:0)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)\n\tat android.os.Handler.handleCallback(Handler.java:959)\n\tat android.os.Handler.dispatchMessage(Handler.java:100)\n\tat android.os.Looper.loopOnce(Looper.java:232)\n\tat android.os.Looper.loop(Looper.java:317)\n\tat android.app.ActivityThread.main(ActivityThread.java:8705)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)\n"
+    },
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.map.P061RealMapTest",
+      "test": "realMapSafImportFlightModeFeaturesRenderRecreateAndIndependentRestart",
+      "message": null,
+      "detail": "java.lang.AssertionError: Actual map must finish importing and render native vector tiles\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat de.dennisguse.opentracks.p0.map.P061RealMapTest.ready(P061RealMapTest.java:48)\n\tat de.dennisguse.opentracks.p0.map.P061RealMapTest.realMapSafImportFlightModeFeaturesRenderRecreateAndIndependentRestart(P061RealMapTest.java:90)\n"
+    },
+    {
+      "file": "outputs/androidTest-results/managedDevice/debug/flavors/reproducible/mediumPhone/TEST-mediumPhone.xml",
+      "class": "de.dennisguse.opentracks.p0.map.P06OfflineMapTest",
+      "test": "homeDashboardLoadsSelectedOfflineMapAndKeepsPreviewSeparateFromWorkout",
+      "message": null,
+      "detail": "java.lang.RuntimeException: Received data while being disconnected.\n\tat de.dennisguse.opentracks.sensors.SensorHandler.onDataReceived(SensorHandler.java:129)\n\tat de.dennisguse.opentracks.sensors.GpsHandler.onDataReceived(GpsHandler.java:164)\n\tat de.dennisguse.opentracks.p0.map.P06OfflineMapTest.lambda$fixAt$4(P06OfflineMapTest.java:80)\n\tat de.dennisguse.opentracks.p0.map.P06OfflineMapTest.$r8$lambda$PUdFE9-kDE_FczcuMEqqrlgf9U8(Unknown Source:0)\n\tat de.dennisguse.opentracks.p0.map.P06OfflineMapTest$$ExternalSyntheticLambda3.run(D8$$SyntheticClass:0)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:264)\n\tat android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)\n\tat android.os.Handler.handleCallback(Handler.java:959)\n\tat android.os.Handler.dispatchMessage(Handler.java:100)\n\tat android.os.Looper.loopOnce(Looper.java:232)\n\tat android.os.Looper.loop(Looper.java:317)\n\tat android.app.ActivityThread.main(ActivityThread.java:8705)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)\n"
+    }
+  ],
+  "androidCounts": {
+    "tests": 458,
+    "executed": 457,
+    "failures": 6,
+    "errors": 0,
+    "skipped": 1
+  }
+}

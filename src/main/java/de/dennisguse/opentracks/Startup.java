@@ -39,6 +39,7 @@ public class Startup extends Application {
         PreferencesUtils.resetPreferences(this, false);
         PreferencesUtils.applyDefaultUnit();
         PreferencesUtils.applyNightModeAndDynamicColors(this);
+        if (!isCrashReportingProcess()) new de.dennisguse.opentracks.p0.gps.ForegroundGpsController(this);
     }
 
     @Override

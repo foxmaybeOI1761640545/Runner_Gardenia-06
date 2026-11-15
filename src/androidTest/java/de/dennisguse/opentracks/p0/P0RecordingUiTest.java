@@ -95,6 +95,10 @@ public class P0RecordingUiTest {
             assertNull(TrackRecordingService.activeTrackId(context));assertFalse(metrics(screen).contains("1.300000"));
             assertTrue(new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().isEmpty());
             onView(withId(R.id.p0_cancel_gps)).perform(click());phase(screen,R.string.p02_idle);
+            assertTrue("A foreground app keeps its idle GPS preview after cancellation",core.hasForegroundGpsRequest());
+            assertTrue(core.areSensorsStarted());assertFalse(core.isRecording());
+            assertTrue(new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().isEmpty());
+            screen.moveToState(Lifecycle.State.CREATED);
             assertFalse(core.isAcquiringGps());assertFalse(core.areSensorsStarted());assertNull(TrackRecordingService.activeTrackId(context));
         }
     }

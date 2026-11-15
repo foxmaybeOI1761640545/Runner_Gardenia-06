@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.MotionFormatTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-15T16:54:28.216Z" hostname="ip-10-0-143-129" time="0.005">
+  <properties/>
+  <testcase name="nearZeroSpeedDoesNotProduceAnImplausiblePace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.003"/>
+  <testcase name="durationRetainsHoursBeyondADay" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.001"/>
+  <testcase name="distanceChangesUnitsAtOneKilometerWithoutChangingStoredValues" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="subHourDurationIsReadable" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="invalidDistanceNeverBecomesPlausibleData" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="stationaryNoiseHasNeitherZeroPaceNorSeventyOneMinutePace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.001"/>
+  <testcase name="zeroOrMissingSpeedDoesNotInventPace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="slowRealMovementRetainsSpeedAndPace" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="speedAndPaceUseConsistentMetricUnits" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <testcase name="invalidSpeedsHaveNoPlausiblePaceOrSpeed" classname="de.dennisguse.opentracks.p0.MotionFormatTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

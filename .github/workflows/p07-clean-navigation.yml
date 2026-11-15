@@ -1,0 +1,123 @@
+name: Clean offline navigation stage gates
+on:
+  push:
+    branches: [feature/p0-7-to-p1-0-offline-navigation-clean]
+    paths-ignore: ['docs/**', 'AGENTS.md']
+  pull_request:
+    branches: [feature/p0-6-map-real-validation]
+    paths-ignore: ['docs/**', 'AGENTS.md']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: clean-navigation-${{ github.event_name }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  stage-validation:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.event_name == 'push' && github.ref == 'refs/heads/feature/p0-7-to-p1-0-offline-navigation-clean'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify clean ancestry and frozen historical refs
+        id: plan
+        run: |
+          git merge-base --is-ancestor ae68319361c1277e97e4fe9bfc9ae52de88146e5 HEAD
+          python3 .github/scripts/p07_stage.py prepare
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: '14061852955'
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          run-id: '43470716313'
+          path: work/real-map
+      - run: python3 .github/scripts/p061_real_map.py fixture
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - name: Use existing toolchain and real API35 managed device
+        run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-read-only: true
+      - name: Debug, lint, every JVM test and instrumented compilation
+        run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
+      - name: Execute original Python helper regressions
+        run: python3 .github/scripts/p07_stage.py helpers
+      - name: Focused application GPS, untouched ownership/preferences and preparation regressions
+        if: steps.plan.outputs.stage == '2'
+        run: |
+          classes="$(python3 .github/scripts/p07_stage.py gps-classes)"
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" "-Pandroid.testInstrumentationRunnerArguments.class=$classes" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Require actual nonzero GPS focused results
+        if: steps.plan.outputs.stage == '2'
+        run: python3 .github/scripts/p07_stage.py gps-focused
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.plan.outputs.stage == '2' && success()
+        with:
+          name: Clean-navigation-gps-review-${{ github.run_id }}
+          path: build/reports/p07-gps-focused/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Focused actual home map acceptance before the complete regression
+        run: |
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.map.P07HomeMapTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Preserve actual focused native evidence before the full rerun clears outputs
+        run: python3 .github/scripts/p07_stage.py focused
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Clean-navigation-home-review-${{ github.run_id }}
+          path: build/reports/p07-focused/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Actual denied and granted permissions in independently restarted API35 processes
+        if: steps.plan.outputs.stage == '2'
+        run: python3 .github/scripts/p07_permission_smoke.py
+      - name: Preserve actual permission results and native screenshots before full regression
+        if: steps.plan.outputs.stage == '2' && success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Clean-navigation-permissions-${{ github.run_id }}
+          path: build/reports/p07-permissions/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Full API35 regression with original GPS ownership assertions
+        run: |
+          timeout --signal=INT --kill-after=30s 50m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Reject missing, empty, failed or new skipped reports
+        if: always()
+        run: python3 .github/scripts/p07_stage.py gate
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: Clean-navigation-stage-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/reports/
+            build/test-results/
+            build/outputs/androidTest-results/
+            build/outputs/**/p0-ui/
+            build/outputs/apk/reproducible/debug/*.apk
+            release-plan.json
+          if-no-files-found: error
+          retention-days: 90
