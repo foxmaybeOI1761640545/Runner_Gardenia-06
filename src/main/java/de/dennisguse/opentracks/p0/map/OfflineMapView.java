@@ -8,6 +8,7 @@ import org.mapsforge.map.android.graphics.AndroidGraphicFactory;
 import org.mapsforge.map.android.view.MapView;
 import org.mapsforge.map.layer.Layer;
 import org.mapsforge.map.layer.cache.InMemoryTileCache;
+import org.mapsforge.map.layer.overlay.Circle;
 import org.mapsforge.map.layer.overlay.FixedPixelCircle;
 import org.mapsforge.map.layer.overlay.Polyline;
 import org.mapsforge.map.layer.renderer.TileRendererLayer;
@@ -60,6 +61,7 @@ public final class OfflineMapView extends FrameLayout {
     }
     private final List<Layer> routeOverlays=new ArrayList<>();
     private Layer positionOverlay;
+    private Circle accuracyOverlay;
     private List<RouteGeometry.Point> route=List.of();
     private Position position;
     private int segmentCount;
@@ -116,16 +118,33 @@ public final class OfflineMapView extends FrameLayout {
         if(map==null)return;
         var layers=map.getLayerManager().getLayers();
         if(positionOverlay!=null){layers.remove(positionOverlay);positionOverlay=null;}
+        if(accuracyOverlay!=null){layers.remove(accuracyOverlay);accuracyOverlay=null;}
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
+            LatLong point=new LatLong(position.latitude(),position.longitude());
+            if(position.hasHorizontalAccuracy()){
+                double meters=position.horizontalAccuracy().toM();
+                if(Double.isFinite(meters)&&meters>0){
+                    var areaFill=AndroidGraphicFactory.INSTANCE.createPaint();areaFill.setColor(0x229b3dc8);areaFill.setStyle(Style.FILL);
+                    var areaStroke=AndroidGraphicFactory.INSTANCE.createPaint();areaStroke.setColor(0x889b3dc8);areaStroke.setStrokeWidth(1.5f*getResources().getDisplayMetrics().density);areaStroke.setStyle(Style.STROKE);
+                    accuracyOverlay=new Circle(point,(float)Math.min(meters,100000d),areaFill,areaStroke);
+                    layers.add(accuracyOverlay);
+                }
+            }
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);
+            FixedPixelCircle marker=new FixedPixelCircle(point,8*getResources().getDisplayMetrics().density,fill,stroke);
             marker.setScaleRadius(false);positionOverlay=marker;layers.add(marker);
         }
         map.getLayerManager().redrawLayers();
     }
     public void fitRoute(){if(map==null||route.isEmpty())return;var v=MapViewport.fit(route,getWidth(),getHeight(),map.getModel().displayModel.getTileSize());map.setCenter(new LatLong(v.latitude(),v.longitude()));map.setZoomLevel(v.zoom());}
     public boolean centerPosition(){if(map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
+    /** A selected map may be loaded but not cover the current GPS coordinates. */
+    public boolean covers(Position value){
+        if(mapFile==null)return false;
+        return value==null||!value.hasValidLocation()||mapFile.boundingBox().contains(value.latitude(),value.longitude());
+    }
+    public boolean hasAccuracyOverlay(){return accuracyOverlay!=null;}
     public boolean followPosition(Position value,byte minimumZoom){
         if(map==null||value==null||!value.hasValidLocation())return false;
         map.setCenter(new LatLong(value.latitude(),value.longitude()));
@@ -137,7 +156,7 @@ public final class OfflineMapView extends FrameLayout {
     public MapView mapView(){return map;}
     public void clear(){
         if(map!=null){map.destroyAll();removeView(map);map=null;}
-        routeOverlays.clear();positionOverlay=null;renderer=null;tileCache=null;segmentCount=0;
+        routeOverlays.clear();positionOverlay=null;accuracyOverlay=null;renderer=null;tileCache=null;segmentCount=0;
         if(mapFile!=null){mapFile.close();mapFile=null;}
     }
 }
