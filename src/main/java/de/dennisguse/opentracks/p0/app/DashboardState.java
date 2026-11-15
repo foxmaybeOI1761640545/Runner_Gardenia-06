@@ -16,11 +16,17 @@ import de.dennisguse.opentracks.ui.HeartRatePanel;
 
 /** Immutable presentation data. The only production source is the existing recording snapshot. */
 public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean timedOut,String distance,String duration,String speed,String pace,String bpm,String heartState,String device,String updated,String reconnect,String detail,String gpsDetails,String accuracy,Position currentGps,boolean heartConnected,boolean heartFresh,String error){
+    static Position currentMapPosition(boolean freshGps,GpsStatusValue gps,Position position) {
+        return freshGps&&gps==GpsStatusValue.GPS_SIGNAL_FIX&&position!=null&&position.hasValidLocation()?position:null;
+    }
+
     public static DashboardState from(Context context,P0RecordingViewModel.Snapshot value){
         var phase=value.session().phase();boolean recording=phase==RecordingSession.Phase.RECORDING;
         boolean hasWorkout=recording||phase==RecordingSession.Phase.PAUSED||phase==RecordingSession.Phase.FINISHED;
         Statistics stats=hasWorkout&&value.data().track()!=null&&value.session().trackId()!=null&&value.data().track().id().id()==value.session().trackId()?value.data().trackStatistics():Statistics.DEFAULT;
-        Position p=value.position();boolean fix=recording&&value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&p!=null&&p.hasValidLocation();
+        Position p=value.position();
+        Position mapPosition=currentMapPosition(value.freshGps(),value.gps(),p);
+        boolean fix=recording&&mapPosition!=null;
         double speed=fix&&p.hasSpeed()?p.speed().toMPS():Double.NaN;
         if (Double.isFinite(speed) && speed <= MotionFormat.MIN_DISPLAY_SPEED_MPS) speed = 0;
         boolean timeout=phase==RecordingSession.Phase.ACQUIRING_GPS&&value.preparation().state()==GpsPreparation.State.TIMED_OUT;
@@ -42,6 +48,6 @@ public record DashboardState(RecordingSession.Phase phase,boolean busy,boolean t
             speedText=Double.isFinite(speed)&&speed>=0?SpeedFormatter.Builder().setUnit(unit).setReportSpeedOrPace(true).build(context).formatSpeed(Speed.of(speed)):"—";
             paceText=Double.isFinite(speed)&&speed>0?SpeedFormatter.Builder().setUnit(unit).setReportSpeedOrPace(false).build(context).formatSpeed(Speed.of(speed)):"—";
         }
-        return new DashboardState(phase,value.busy(),timeout,distanceText,MotionFormat.duration(stats.totalDuration()),speedText,paceText,described.bpm(),connected&&status.lastReceived()==null&&!status.contactLost()?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,fix?p:null,connected,fresh,value.error());
+        return new DashboardState(phase,value.busy(),timeout,distanceText,MotionFormat.duration(stats.totalDuration()),speedText,paceText,described.bpm(),connected&&status.lastReceived()==null&&!status.contactLost()?context.getString(R.string.p04_heart_wait):described.state(),device,context.getString(R.string.p02_last_heart,last),context.getString(!HeartRateCommands.connectionEnabled(context)?R.string.p02_reconnect_stopped:HeartRateCommands.autoReconnectEnabled(context)?R.string.p02_reconnect_on:R.string.p02_reconnect_off),context.getString(explanation),location,accuracy,mapPosition,connected,fresh,value.error());
     }
 }
