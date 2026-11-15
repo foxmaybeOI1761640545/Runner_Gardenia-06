@@ -1,0 +1,1486 @@
+11-16 01:54:24.190  2270  2290 I TestRunner: started: noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation(de.dennisguse.opentracks.p0.map.P07HomeMapTest)
+11-16 01:54:24.197  2270  2290 I UiAutomationPermGranter: Attempting to grant android.permission.BLUETOOTH_SCAN to com.fox.runner.debug
+11-16 01:54:24.202  2270  2290 I UiAutomationPermGranter: Attempting to grant android.permission.BLUETOOTH_CONNECT to com.fox.runner.debug
+11-16 01:54:24.202  2270  2290 I UiAutomationPermGranter: Attempting to grant android.permission.ACCESS_FINE_LOCATION to com.fox.runner.debug
+11-16 01:54:24.203  2270  2290 I UiAutomationPermGranter: Attempting to grant android.permission.POST_NOTIFICATIONS to com.fox.runner.debug
+11-16 01:54:24.209  2270  2290 W CustomContentProvider: Deleting from table tracks
+11-16 01:54:24.209  2270  2290 I CustomContentProvider: Deleted 0 rows of table tracks
+11-16 01:54:24.211  2270  2290 I CustomContentProvider: Deleted 0 total rows from database
+11-16 01:54:24.220  2270  2270 D TrackRecordingService: Create
+11-16 01:54:24.220  2270  2270 I TrackRecordingService: new status null -> RecordingStatus[trackId=null]
+11-16 01:54:24.225  2270  2270 I TrackRecordingService: startSensors
+11-16 01:54:24.225  2270  2270 I SystemUtils: Acquiring wake lock.
+11-16 01:54:24.229  2270  2270 I GpsInternal: Register for location updates
+11-16 01:54:24.229  2270  2270 I TrackRecordingService: newGpsStatus: 2131820803
+11-16 01:54:24.235  2270  2270 I TrackRecordingService: newGpsStatus: 2131820803
+11-16 01:54:24.249  2270  2270 D StrictMode: StrictMode policy violation; ~duration=7 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.HeartRateHandler.connect(HeartRateHandler.java:38)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.SensorManager.onSharedPreferenceChanged(SensorManager.java:180)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.SensorManager.start(SensorManager.java:106)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.handlers.TrackPointCreator.start(TrackPointCreator.java:48)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.TrackRecordingService.startSensors(TrackRecordingService.java:350)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.TrackRecordingService.acquireMapGps(TrackRecordingService.java:108)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest.lambda$before$0(P07HomeMapTest.java:32)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest.$r8$lambda$_pTfFnow2knsu8EHB7fuYsRRJSE(Unknown Source:0)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest$$ExternalSyntheticLambda4.run(D8$$SyntheticClass:0)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:24.249  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:24.251  2270  2270 D StrictMode: StrictMode policy violation; ~duration=7 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.HeartRateHandler.connect(HeartRateHandler.java:38)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.SensorManager.onSharedPreferenceChanged(SensorManager.java:180)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.sensors.SensorManager.start(SensorManager.java:106)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.handlers.TrackPointCreator.start(TrackPointCreator.java:48)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.TrackRecordingService.startSensors(TrackRecordingService.java:350)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.services.TrackRecordingService.acquireMapGps(TrackRecordingService.java:108)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest.lambda$before$0(P07HomeMapTest.java:32)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest.$r8$lambda$_pTfFnow2knsu8EHB7fuYsRRJSE(Unknown Source:0)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.P07HomeMapTest$$ExternalSyntheticLambda4.run(D8$$SyntheticClass:0)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:24.251  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:24.268   907  2303 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.270   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.271   907  2303 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-16 01:54:24.271   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-16 01:54:24.271   907  2303 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-16 01:54:24.285   866   993 D EGL_emulation: app_time_stats: avg=9662.60ms min=9662.60ms max=9662.60ms count=1
+11-16 01:54:24.356   549   780 D WifiController: Airplane mode toggled
+11-16 01:54:24.356   549   780 D WifiController: Wifi disabled on APM, disable wifi
+11-16 01:54:24.356   549   780 D WifiActiveModeWarden: Shutting down all mode managers
+11-16 01:54:24.356   549   780 D WifiClientModeManager[25239:wlan0]:  currentstate: ConnectModeState
+11-16 01:54:24.356  1020  1020 I PhoneGlobals: handleAirplaneModeChange: isAirplaneNewlyOn=true
+11-16 01:54:24.357   940   940 D GsmCellBroadcastHandler: Airplane mode on.
+11-16 01:54:24.357   940   940 D CellBroadcastHandler: Airplane mode on.
+11-16 01:54:24.358  1020  1020 I PhoneGlobals: Turning radio off - airplane
+11-16 01:54:24.358   866  1098 I WifiPickerTracker: Scanning stopped
+11-16 01:54:24.359  2270  2270 I TrackRecordingService: newGpsStatus: 2131820797
+11-16 01:54:24.360   907  2303 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-16 01:54:24.360   549   570 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda14@fdae761
+11-16 01:54:24.360   549   570 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@8ba4286
+11-16 01:54:24.364   549   780 D WifiClientModeManager[25239:wlan0]: IMS not registered over IWLAN for subId: 1
+11-16 01:54:24.364   549   780 D WifiClientModeManager[25239:wlan0]: The target role change info null
+11-16 01:54:24.364   549   780 D WifiClientModeManager[25239:wlan0]: Continue to stop wifi
+11-16 01:54:24.366   549   655 I BluetoothSystemServer: AirplaneModeListener: Legacy Mode: no override, turns OFF
+11-16 01:54:24.366   549   655 I BluetoothSystemServer: AirplaneModeListener: Trigger callback. previousMode=false, isOn=true, isOnOverrode=true, isMediaConnected=false
+11-16 01:54:24.366  2270  2270 I TrackRecordingService: newGpsStatus: 2131820803
+11-16 01:54:24.366   549   780 D WifiClientModeManager[25239:wlan0]: ConnectModeState.exit(): Stopping ClientModeImpl
+11-16 01:54:24.368   549   655 D BluetoothSystemServer: BluetoothManagerService: delayModeChangedIfNeeded(onAirplaneModeChanged): state=ON Airplane.isOnOverrode=true Airplane.isOn=true isSatelliteModeOn()=false delayed=0ms
+11-16 01:54:24.369   549   655 D BluetoothSystemServer: BluetoothManagerService: isBluetoothPersistedStateOn: 1
+11-16 01:54:24.369   549   655 I BluetoothSystemServer: BluetoothServerProxy: setBluetoothPersistedState(2)
+11-16 01:54:24.369   549   655 D BluetoothSystemServer: BluetoothManagerService: handleAirplaneModeChanged(true): currentState=ON
+11-16 01:54:24.371   549   655 D BluetoothSystemServer: BluetoothManagerService: 11-16 01:54:24.371 	Package [android] requested to [Disable]. 	Reason is AIRPLANE_MODE
+11-16 01:54:24.371   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_DISABLE: mAdapter=[Binder=194111551, createdAt=11-16 01:53:40.999]
+11-16 01:54:24.383  1502  1502 I wpa_supplicant: p2p-dev-wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+11-16 01:54:24.383  1502  1502 I wpa_supplicant: Deinit sm=0x77d32caab810
+11-16 01:54:24.383  1502  1502 I wpa_supplicant: p2p-dev-wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+11-16 01:54:24.383  1502  1502 I wpa_supplicant: nl80211: deinit ifname=p2p-dev-wlan0 disabled_11b_rates=0
+11-16 01:54:24.388  1752  1752 D CarrierDefaultBroadcastReceiver: onReceive intent: android.telephony.action.CARRIER_SIGNAL_RESET
+11-16 01:54:24.390  2270  2340 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-16 01:54:24.397  1752  1752 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 6
+11-16 01:54:24.397  1752  1752 D CarrierActionUtils: onCancelAllNotifications
+11-16 01:54:24.397  1752  1752 D CarrierDefaultBroadcastReceiver: apply carrier action idx: 8
+11-16 01:54:24.397  1752  1752 D CarrierActionUtils: onDisableDefaultURLHandler
+11-16 01:54:24.411   549  1834 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:24.415   549   787 D ConnectivityService: [100 CELLULAR] EVENT_NETWORK_INFO_CHANGED, going from CONNECTED to DISCONNECTED
+11-16 01:54:24.415   549   787 D ConnectivityService: [100 CELLULAR] disconnected, was satisfying 11
+11-16 01:54:24.416   352   388 I netd    : idletimerRemoveInterface(eth0, 10, 100) <0.51ms>
+11-16 01:54:24.439   352   388 I netd    : tetherGetStats() -> {[]} <0.23ms>
+11-16 01:54:24.441   352   388 I netd    : wakeupDelInterface(eth0, 432902426637:eth0, -2147483648, -2147483648) <0.33ms>
+11-16 01:54:24.443   352   388 I netd    : setNetworkAllowlist([NativeUidRangeConfig{netId: 101, uidRanges: [UidRangeParcel{start: 0, stop: 99999}], subPriority: 0}]) <0.00ms>
+11-16 01:54:24.443   549   787 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+11-16 01:54:24.447   352   388 I netd    : networkDestroy(100) <3.19ms>
+11-16 01:54:24.449   352   388 I resolv  : DNS cache flushed
+11-16 01:54:24.449   352   388 W resolv  : resolv_stats_set_addrs: Network 100 not found for PROTO_DOT
+11-16 01:54:24.449   352   388 W resolv  : resolv_stats_set_addrs: Network 100 not found for PROTO_DOH
+11-16 01:54:24.449   352   388 I netd    : destroyNetworkCache(100) <0.16ms>
+11-16 01:54:24.451  1020  1181 D com.android.ons.ONSProfileActivator: Internet connection lost
+11-16 01:54:24.459  1502  1502 I wpa_supplicant: wlan0: CTRL-EVENT-DISCONNECTED bssid=02:15:b2:00:00:01 reason=3 locally_generated=1
+11-16 01:54:24.459  1502  1502 I wpa_supplicant: assoc key_mgmt 0x4 network key_mgmt 0x4
+11-16 01:54:24.459  1502  1502 I wpa_supplicant: wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+11-16 01:54:24.460   549   570 I GnssNetworkConnectivityHandler: Network connection lost. Available networks count: 1
+11-16 01:54:24.460   549   570 I GnssNetworkConnectivityHandler: updateNetworkState, state=CLOSED, connected=false, network=100, capabilityFlags=2, availableNetworkCount: 1
+11-16 01:54:24.461   549   865 D NetworkStatsObservers: Unregistering RequestInfo from pid/uid:549/1000(android) for DataUsageRequest [ requestId=3, networkTemplate=NetworkTemplate: matchRule=MOBILE, matchSubscriberIds=[310260...], matchWifiNetworkKeys=[], metered=YES, defaultNetwork=NO, thresholdInBytes=3578077 ] accessLevel:3
+11-16 01:54:24.463   352   388 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.90ms>
+11-16 01:54:24.464   940  1547 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 16 down
+11-16 01:54:24.468  1020  1029 W m.android.phone: Missing inline cache for void android.net.NetworkAgent$NetworkAgentHandler.handleMessage(android.os.Message)
+11-16 01:54:24.479  1502  1502 I BpBinder: onLastStrongRef automatically unlinking death recipients: android.hardware.wifi.supplicant.ISupplicantStaNetworkCallback
+11-16 01:54:24.479  1502  1502 I wpa_supplicant: Deinit sm=0x77d32caa9190
+11-16 01:54:24.499   422   422 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-16 01:54:24.503   549  1160 D WifiNl80211Manager: OnRegDomainChanged 00
+11-16 01:54:24.503   549  1160 D WifiNative: onCountryCodeChanged: 00
+11-16 01:54:24.503   549  1160 I WifiCountryCode: Receive onDriverCountryCodeChanged 00
+11-16 01:54:24.505  1257  1257 W SplitSelectStateCtor: Missing session instanceIds
+11-16 01:54:24.505  1257  1257 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-16 01:54:24.507  1502  1502 I wpa_supplicant: wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+11-16 01:54:24.507  1502  1502 I wpa_supplicant: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+11-16 01:54:24.507  1502  1502 I BpBinder: onLastStrongRef automatically unlinking death recipients: android.hardware.wifi.supplicant.ISupplicantStaIfaceCallback
+11-16 01:54:24.514   485   485 E libgoldfish-rild: IRadio HAL 1.0 not supported
+11-16 01:54:24.518   940  1547 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 16 down
+11-16 01:54:24.520  1257  1257 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=8, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }
+11-16 01:54:24.527  1020  1176 D CellBroadcastConfigTracker-0: IdleState message:4
+11-16 01:54:24.527  1020  1176 D CellBroadcastConfigTracker-0: DefaultState message:4
+11-16 01:54:24.531   549   780 I SupplicantStaIfaceHalAidlImpl: Terminate supplicant service
+11-16 01:54:24.535   866   966 D SplashScreenView: Build android.window.SplashScreenView{4633068 V.E...... ......ID 0,0-0,0}
+11-16 01:54:24.535   866   966 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-16 01:54:24.535   866   966 D SplashScreenView: Branding: view: android.view.View{f6b7c81 G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-16 01:54:24.536   940  1547 D IpClient/wlan0: interfaceLinkStateChanged: ifindex 16 down
+11-16 01:54:24.536   940  1547 D IpClient/wlan0: routeRemoved: fe80::/64 -> :: wlan0 mtu 0
+11-16 01:54:24.547  1502  1502 I wpa_supplicant: Terminating...
+11-16 01:54:24.549   940  1547 D IpClient/wlan0: routeRemoved: fec0::/64 -> :: wlan0 mtu 0
+11-16 01:54:24.551   940  1547 D IpClient/wlan0: routeRemoved: ::/0 -> fe80::2 wlan0 mtu 0
+11-16 01:54:24.556   940  1547 D IpClient/wlan0: addressRemoved: fec0::5233:fcfd:befa:4234/64 on ifindex 16 flags 0x00000001 scope 200
+11-16 01:54:24.556   940  1547 D IpClient/wlan0: addressRemoved: fec0::cbd5:c825:4af8:f573/64 on ifindex 16 flags 0x00000900 scope 200
+11-16 01:54:24.556   940  1547 D IpClient/wlan0: addressRemoved: fe80::2b25:c9fb:16df:7998/64 on ifindex 16 flags 0x00000880 scope 253
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: readPacket error: 
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: android.system.ErrnoException: read failed: ENETDOWN (Network is down)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at libcore.io.Linux.readBytes(Native Method)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at libcore.io.Linux.read(Linux.java:190)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at libcore.io.BlockGuardOs.read(BlockGuardOs.java:325)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.system.Os.read(Os.java:571)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.PacketReader.readPacket(PacketReader.java:57)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.PacketReader.readPacket(PacketReader.java:32)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.handleInput(FdEventsReader.java:248)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.lambda$createAndRegisterFd$0(FdEventsReader.java:228)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.$r8$lambda$jjSC4hVD2AlVH3T-DbWnF2T3fK8(FdEventsReader.java:0)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader$$ExternalSyntheticLambda0.onFileDescriptorEvents(R8$$SyntheticClass:0)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.MessageQueue.dispatchEvents(MessageQueue.java:304)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.MessageQueue.nativePollOnce(Native Method)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.MessageQueue.next(MessageQueue.java:346)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.Looper.loopOnce(Looper.java:189)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:24.557   940  1547 E ConnectivityPacketTracker.wlan0: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+11-16 01:54:24.588   940  2085 E ApfFilter: Read error
+11-16 01:54:24.588   940  2085 E ApfFilter: android.system.ErrnoException: read failed: ENETDOWN (Network is down)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at libcore.io.Linux.readBytes(Native Method)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at libcore.io.Linux.read(Linux.java:190)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at libcore.io.BlockGuardOs.read(BlockGuardOs.java:325)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at android.system.Os.read(Os.java:571)
+11-16 01:54:24.588   940  2085 E ApfFilter: 	at com.android.networkstack.android.net.apf.ApfFilter$ReceiveThread.run(ApfFilter.java:229)
+11-16 01:54:24.596  1020  1020 D ServiceStateProvider: subId=1
+11-16 01:54:24.596   549   780 W SupplicantStaIfaceHalAidlImpl: Timed out waiting for confirmation of supplicant death
+11-16 01:54:24.596   549   780 D WifiNl80211Manager: tearing down interfaces in wificond
+11-16 01:54:24.601  1168  1168 D CellBroadcastReceiver: onReceive Intent { act=android.intent.action.SERVICE_STATE flg=0x1000010 cmp=com.android.cellbroadcastreceiver.module/com.android.cellbroadcastreceiver.CellBroadcastReceiver (has extras) }
+11-16 01:54:24.601  1168  1168 D CellBroadcastReceiver: onServiceStateChanged, ss: 3
+11-16 01:54:24.602  1257  1477 D EGL_emulation: app_time_stats: avg=2493.89ms min=2493.89ms max=2493.89ms count=1
+11-16 01:54:24.609   485   485 W libgoldfish-rild: Multi-element reporting criteria are not supported with HIDL HAL
+11-16 01:54:24.611  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: PRE_ON_CREATE
+11-16 01:54:24.611  2270  2270 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-16 01:54:24.613   485   485 E libgoldfish-rild: IRadio HAL 1.0 not supported
+11-16 01:54:24.616   549   617 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=43713 mSleepTimeMs=0 mIdleTimeMs=43676 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=0}]}
+11-16 01:54:24.623  1020  1020 D MultiSimSettingController: notifySubscriptionInfoChanged
+11-16 01:54:24.623   549   780 I WifiVendorHal: Vendor Hal stopped
+11-16 01:54:24.623   549   780 I WifiNative: Successfully torn down Iface:{Name=wlan0,Id=0,Type=STA_CONNECTIVITY}
+11-16 01:54:24.623   549   780 D HalDevMgr: updateRttController: no one is interested in RTT controllers
+11-16 01:54:24.623   549   780 I WifiNative: Successfully initiated teardown for iface=wlan0
+11-16 01:54:24.623   549   780 I WifiClientModeManager[25239:unknown]: StartedState.exit(), setting mRole = null
+11-16 01:54:24.625   549   780 D WifiClientModeManager[25239:unknown]: IdleState.exit()
+11-16 01:54:24.625   549   780 D WifiClientModeImpl[25489:wlan0]: ClientModeImpl: Leaving Connected state
+11-16 01:54:24.629   549   567 W SupplicantStaIfaceHalAidlImpl: ISupplicant binder died. who=android.os.BinderProxy@65e4a04, service=android.os.BinderProxy@65e4a04
+11-16 01:54:24.629   549   567 W SupplicantStaIfaceHalAidlImpl: Handle supplicant death
+11-16 01:54:24.629   549   567 I SupplicantStaIfaceHalAidlImpl: Clearing internal state
+11-16 01:54:24.642   549   780 D WifiCountryCode: evaluateAllCmmStateAndApplyIfAllReady: {ConcreteClientModeManager{id=25239 iface=null role=ROLE_CLIENT_PRIMARY}=true}
+11-16 01:54:24.642   549   780 E SupplicantStaIfaceHalAidlImpl: Can't call disableCurrentNetwork, SupplicantStaNetwork for iface=wlan0 is null.
+11-16 01:54:24.643   549   617 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:24.643   549   617 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:24.643   485   485 E libgoldfish-rild: IRadio HAL 1.0 not supported
+11-16 01:54:24.643   549   549 I AS.AudioService: onSubscriptionsChanged()
+11-16 01:54:24.659   352   388 I netd    : tetherGetStats() -> {[]} <0.21ms>
+11-16 01:54:24.662  1020  1020 I Telephony: TelecomAccountRegistry$TelecomAccountTelephonyCallback: onServiceStateChanged: newState=3, mServiceState=0
+11-16 01:54:24.662  1020  1020 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:24.662  1020  1020 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+11-16 01:54:24.662  1020  1020 I Telephony:  isRttSupported: false
+11-16 01:54:24.662  1020  1020 I Telephony:  alwaysAllowWhileRoaming: false
+11-16 01:54:24.662  1020  1020 I Telephony:  isRoaming: false
+11-16 01:54:24.662  1020  1020 I Telephony:  isOnWfc: false
+11-16 01:54:24.672   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_HANDLE_DISABLE_DELAYED: disabling:false
+11-16 01:54:24.672   549   655 D BluetoothSystemServer: BluetoothManagerService: handleDisable: Sending off request.
+11-16 01:54:24.673   997   997 I AdapterState: TURNING_OFF : entered 
+11-16 01:54:24.674   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: prevState=ON newState=TURNING_OFF
+11-16 01:54:24.674   549   655 D BluetoothSystemServer: BluetoothManagerService: No support for AutoOn feature: Not creating a timer
+11-16 01:54:24.674   997  1100 I bt_btif_dm: system/btif/src/btif_dm.cc:2556 btif_dm_cancel_discovery: Cancel search
+11-16 01:54:24.674   997  1100 I bt_bta_sd: system/bta/dm/bta_dm_device_search.cc:853 bta_dm_search_sm_execute: state:BTA_DM_SEARCH_IDLE, event:BTA_DM_API_SEARCH_CANCEL_EVT[0x1]
+11-16 01:54:24.675   549   655 D BluetoothSystemServer: BluetoothManagerService: broadcastIntentStateChange: action=BLE_STATE_CHANGED prevState=ON newState=TURNING_OFF
+11-16 01:54:24.676   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:7 len:4
+11-16 01:54:24.676  1020  1020 D MultiSimSettingController: onSubscriptionsChanged
+11-16 01:54:24.676  1020  1020 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true, satelliteEnabledOrBeingEnabled=false
+11-16 01:54:24.676  1020  1020 D MultiSimSettingController: updateDefaults
+11-16 01:54:24.676   997   997 I A2dpService: stop()
+11-16 01:54:24.676  1020  1020 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true, satelliteEnabledOrBeingEnabled=false
+11-16 01:54:24.677   997   997 I bluetooth-a2dp: system/btif/src/btif_av.cc:3757 cleanup_src: 
+11-16 01:54:24.681   997  1105 F bluetooth: system/gd/hci/hci_layer.cc:478 on_hardware_error: Hardware Error Event with code 0x42
+--------- beginning of crash
+11-16 01:54:24.681   997  1105 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 1105 (bt_stack_manage), pid 997 (droid.bluetooth)
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_av.cc:1211 Cleanup: 
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_av.cc:3952 btif_av_source_execute_service: enable=false
+11-16 01:54:24.681   997  1100 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x62500040
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_av.cc:1375 CleanupAllPeers: 
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_av.cc:500 SetActivePeer: peer=00:00:00:00:00:00 active_peer=00:00:00:00:00:00
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_a2dp_source.cc:526 btif_a2dp_source_cleanup: state=STATE_OFF
+11-16 01:54:24.681   997  1100 I bluetooth-a2dp: system/btif/src/btif_a2dp_source.cc:489 btif_a2dp_source_shutdown: state=STATE_OFF
+11-16 01:54:24.681  1020  1020 D MultiSimSettingController: updateDefaultValues: change: 0
+11-16 01:54:24.681  1020  1020 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true, satelliteEnabledOrBeingEnabled=false
+11-16 01:54:24.682  1020  1020 D CallNotifier: updatePhoneStateListeners: update CF notifications.
+11-16 01:54:24.682  1020  1020 I NotificationMgr: updateCfi: subId= 1, visible=N
+11-16 01:54:24.682  1020  1020 I NotificationMgr: updateMwi(): subId 1 update to false
+11-16 01:54:24.694   997   997 I A2dpService: cleanup()
+11-16 01:54:24.694   997   997 I AvrcpTargetService: Stopping the AVRCP Target Service
+11-16 01:54:24.694  1020  1176 D CellBroadcastConfigTracker-0: IdleState message:5
+11-16 01:54:24.694  1020  1176 D CellBroadcastConfigTracker-0: DefaultState message:5
+11-16 01:54:24.706   997  1138 I bluetooth-a2dp: system/btif/src/btif_a2dp_source.cc:540 btif_a2dp_source_cleanup_delayed: state=STATE_OFF
+11-16 01:54:24.706   997  1138 I bluetooth: system/common/message_loop_thread.cc:209 Run: message loop finished for thread bt_a2dp_source_worker_thread
+11-16 01:54:24.706   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.706   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_aact.cc:858 bta_av_cleanup: peer 00:00:00:00:00:00
+11-16 01:54:24.707   997  1100 I bluetooth-a2dp: system/bta/av/bta_av_main.cc:387 SetAvdtpVersion: AVDTP version for 00:00:00:00:00:00 set to 0x0
+11-16 01:54:24.707   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x110A from extended inquiry response
+11-16 01:54:24.707   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:24.715   940  1547 E DhcpClient: readPacket error: 
+11-16 01:54:24.715   940  1547 E DhcpClient: android.system.ErrnoException: read failed: ENETDOWN (Network is down)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at libcore.io.Linux.readBytes(Native Method)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at libcore.io.Linux.read(Linux.java:190)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at libcore.io.BlockGuardOs.read(BlockGuardOs.java:325)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at libcore.io.ForwardingOs.read(ForwardingOs.java:613)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.system.Os.read(Os.java:571)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.android.net.dhcp.DhcpClient$DhcpPacketHandler.readPacket(DhcpClient.java:721)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.android.net.dhcp.DhcpClient$DhcpPacketHandler.readPacket(DhcpClient.java:667)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.handleInput(FdEventsReader.java:248)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.lambda$createAndRegisterFd$0(FdEventsReader.java:228)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader.$r8$lambda$jjSC4hVD2AlVH3T-DbWnF2T3fK8(FdEventsReader.java:0)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at com.android.networkstack.com.android.net.module.util.FdEventsReader$$ExternalSyntheticLambda0.onFileDescriptorEvents(R8$$SyntheticClass:0)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.MessageQueue.dispatchEvents(MessageQueue.java:304)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.MessageQueue.nativePollOnce(Native Method)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.MessageQueue.next(MessageQueue.java:346)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.Looper.loopOnce(Looper.java:189)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:24.715   940  1547 E DhcpClient: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+11-16 01:54:24.718  2351  2351 E crash_dump64: failed to get the guest state header for thread 997: Bad address
+11-16 01:54:24.724  2351  2351 E crash_dump64: failed to get the guest state header for thread 998: Bad address
+11-16 01:54:24.724  2351  2351 E crash_dump64: failed to get the guest state header for thread 999: Bad address
+11-16 01:54:24.725  2351  2351 E crash_dump64: failed to get the guest state header for thread 1000: Bad address
+11-16 01:54:24.725   549   780 E SupplicantStaIfaceHalAidlImpl: Can't call listNetworks, ISupplicantStaIface is null for iface=wlan0
+11-16 01:54:24.725   549   780 E SupplicantStaIfaceHalAidlImpl: removeAllNetworks failed, got null networks
+11-16 01:54:24.730  2351  2351 E crash_dump64: failed to get the guest state header for thread 1001: Bad address
+11-16 01:54:24.731   549   780 E WifiClientModeImpl[25489:wlan0]: Failed to remove networks on exiting connect mode
+11-16 01:54:24.733   940  1547 D IpClient.wlan0: set max DTIM multiplier to 1
+11-16 01:54:24.740  1287  1287 I ContactsDatabaseHelper: updateUseStrictPhoneNumberComparison: US
+11-16 01:54:24.756  1973  1990 W MessagingApp: canonicalizeMccMnc: invalid mccmnc:null ,null
+11-16 01:54:24.758   549   780 E SupplicantStaIfaceHalAidlImpl: Can't call setPowerSave, ISupplicantStaIface is null for iface=wlan0
+11-16 01:54:24.758   549   780 E SupplicantStaIfaceHalAidlImpl: Can't call setBtCoexistenceMode, ISupplicantStaIface is null for iface=wlan0
+11-16 01:54:24.763  1973  1990 I MessagingApp: Carrier configs loaded: Bundle[{httpSocketTimeout=60000, aliasMinChars=2, smsToMmsTextThreshold=-1, enableSMSDeliveryReports=true, maxMessageTextSize=-1, supportMmsContentDisposition=true, enabledTransID=false, aliasEnabled=false, supportHttpCharsetHeader=false, allowAttachAudio=true, smsToMmsTextLengthThreshold=-1, recipientLimit=2147483647, uaProfTagName=x-wap-profile, aliasMaxChars=48, maxImageHeight=1944, enableMMSDeliveryReports=false, userAgent=, mmsCloseConnection=true, config_cellBroadcastAppLinks=true, maxSubjectLength=40, httpParams=, enableGroupMms=true, emailGatewayNumber=, maxMessageSize=1048576, naiSuffix=, enableMMSReadReports=false, maxImageWidth=2592, uaProfUrl=, enabledMMS=false, enabledNotifyWapMMSC=false, sendMultipartSmsAsSeparateMessages=false, enableMultipartSMS=true}] from resources+system for subId=1
+11-16 01:54:24.764  1020  1020 I Telephony: TelecomAccountRegistry: onSubscriptionsChanged - update accounts
+11-16 01:54:24.764  1020  1020 I Telephony: PstnIncomingCallNotifier: Unregistering: [0]
+11-16 01:54:24.764  1020  1020 D Telephony: Unregistering: Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}
+11-16 01:54:24.764   997  1118 I bt_btif_queue: system/btif/src/btif_profile_queue.cc:130 queue_int_cleanup: UUID=110A
+11-16 01:54:24.764   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:64
+11-16 01:54:24.764  1020  1020 I PhoneInterfaceManager: unregisterMmTelCapabilityCallback: 1 is inactive, ignoring unregister.
+11-16 01:54:24.764   549   655 D BluetoothSystemServer: BluetoothManagerService: broadcastIntentStateChange: action=STATE_CHANGED prevState=ON newState=TURNING_OFF
+11-16 01:54:24.765  1020  1020 I PhoneInterfaceManager: unregisterImsRegistrationCallback: 1is inactive, ignoring unregister.
+11-16 01:54:24.765  1020  1020 I Telephony: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+11-16 01:54:24.765  1020  1020 I Telephony: TelecomAccountRegistry: setupAccounts: Phone with subscription id 1
+11-16 01:54:24.766  1020  1020 V SimultaneousCallingTracker: Device is not simultaneous calling capable
+11-16 01:54:24.766  2351  2351 E crash_dump64: failed to get the guest state header for thread 1002: Bad address
+11-16 01:54:24.770   940  1547 D ApfFilter: (wlan0): shutting down
+11-16 01:54:24.770   940  1547 D DhcpClient: doQuit
+11-16 01:54:24.772   940  1547 D DhcpClient: DHCP Packet Handler stopped
+11-16 01:54:24.772   940  1547 D DhcpClient: onQuitting
+11-16 01:54:24.802   352   388 I netd    : interfaceSetCfg(InterfaceConfigurationParcel{ifName: wlan0, hwAddr: , ipv4Addr: 0.0.0.0, prefixLength: 0, flags: []}) <0.12ms>
+11-16 01:54:24.802   352   373 I Netd    : Destroyed 1 sockets on 10.0.2.16 in 371us
+11-16 01:54:24.802   352  2098 I resolv  :  SSL_connect returned -1 with mark 0xf0065
+11-16 01:54:24.802   352  2098 W resolv  : SSL_connect ssl error =5, mark 0xf0065: Software caused connection abort
+11-16 01:54:24.802   352  2098 W resolv  : TLS Handshake failed
+11-16 01:54:24.802   352  2098 W resolv  : query failed
+11-16 01:54:24.802   352  2098 W resolv  : validateDnsTlsServer returned 0 for {10.0.2.3/}
+11-16 01:54:24.802   352  2098 W resolv  : Validation failed
+11-16 01:54:24.804   352   388 I netd    : interfaceSetEnableIPv6(wlan0, false) <0.08ms>
+11-16 01:54:24.807   549   549 D BluetoothAdapter: isLeEnabled(): TURNING_OFF
+11-16 01:54:24.807   549   549 D BluetoothAdapter: isLeEnabled(): TURNING_OFF
+11-16 01:54:24.809   352   388 I netd    : interfaceClearAddrs(wlan0) <0.09ms>
+11-16 01:54:24.809   352   352 I netd    : setProcSysNet(6, 1, wlan0, accept_ra, 2) <0.03ms>
+11-16 01:54:24.809   352   352 I netd    : setProcSysNet(6, 1, wlan0, accept_ra_defrtr, 1) <0.02ms>
+11-16 01:54:24.809   352   388 I netd    : setProcSysNet(6, 1, wlan0, accept_ra_min_lft, 0) <0.01ms>
+11-16 01:54:24.815   549   787 D ConnectivityService: [101 WIFI] EVENT_NETWORK_INFO_CHANGED, going from CONNECTED to DISCONNECTED
+11-16 01:54:24.815   549   787 D ConnectivityService: [101 WIFI] disconnected, was satisfying 32
+11-16 01:54:24.817   352   352 I netd    : idletimerRemoveInterface(wlan0, 15, 101) <1.40ms>
+11-16 01:54:24.883  1020  1020 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+11-16 01:54:24.883  1020  1020 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+11-16 01:54:24.883  1020  1020 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+11-16 01:54:24.883  1020  1020 I Telephony:  isRttSupported: false
+11-16 01:54:24.883  1020  1020 I Telephony:  alwaysAllowWhileRoaming: false
+11-16 01:54:24.883  1020  1020 I Telephony:  isRoaming: false
+11-16 01:54:24.883  1020  1020 I Telephony:  isOnWfc: false
+11-16 01:54:24.892  2351  2351 E crash_dump64: failed to get the guest state header for thread 1003: Bad address
+11-16 01:54:24.892  2351  2351 E crash_dump64: failed to get the guest state header for thread 1004: Bad address
+11-16 01:54:24.892   549   780 D WifiDiags: stopLogging() iface list is {} after removing wlan0
+11-16 01:54:24.892   549   780 W WifiDiags: Fail to reset log handler
+11-16 01:54:25.177  2351  2351 E crash_dump64: failed to get the guest state header for thread 1005: Bad address
+11-16 01:54:25.177  2351  2351 E crash_dump64: failed to get the guest state header for thread 1006: Bad address
+11-16 01:54:25.178   549   570 W system_server: Long monitor contention with owner WifiHandlerThread (780) at int com.android.server.am.ActivityManagerService.broadcastIntentWithFeature(android.app.IApplicationThread, java.lang.String, android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], java.lang.String[], java.lang.String[], int, android.os.Bundle, boolean, boolean, int)(ActivityManagerService.java:16332) waiters=0 in int com.android.server.am.ActivityManagerService.broadcastIntentWithFeature(android.app.IApplicationThread, java.lang.String, android.content.Intent, java.lang.String, android.content.IIntentReceiver, int, java.lang.String, android.os.Bundle, java.lang.String[], java.lang.String[], java.lang.String[], int, android.os.Bundle, boolean, boolean, int) for 296ms
+11-16 01:54:25.178   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_HANDLE_DISABLE_DELAYED: disabling:true
+11-16 01:54:25.178   549   655 D BluetoothSystemServer: BluetoothManagerService: Handle disable is finished
+11-16 01:54:25.178  2351  2351 E crash_dump64: failed to get the guest state header for thread 1050: Bad address
+11-16 01:54:25.179  2351  2351 E crash_dump64: failed to get the guest state header for thread 1055: Bad address
+11-16 01:54:25.179  2351  2351 E crash_dump64: failed to get the guest state header for thread 1056: Bad address
+11-16 01:54:25.183   352   352 I netd    : tetherGetStats() -> {[]} <0.74ms>
+11-16 01:54:25.196   866   866 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+11-16 01:54:25.201  1020  1020 I Telephony: TelecomAccountRegistry$AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with Telecom. subId=1
+11-16 01:54:25.205   940  1009 D UpstreamNetworkMonitor: Lost default Internet network: 101
+11-16 01:54:25.211  1020  1181 D com.android.ons.ONSProfileActivator: Internet connection lost
+11-16 01:54:25.212   352   352 I netd    : wakeupDelInterface(wlan0, 437197393933:wlan0, -2147483648, -2147483648) <5.48ms>
+11-16 01:54:25.213   549   570 I GnssNetworkConnectivityHandler: Network connection lost. Available networks count: 0
+11-16 01:54:25.213   549   570 I GnssNetworkConnectivityHandler: updateNetworkState, state=CLOSED, connected=false, network=101, capabilityFlags=3, availableNetworkCount: 0
+11-16 01:54:25.215   352   352 I netd    : setNetworkAllowlist([]) <0.00ms>
+11-16 01:54:25.217   549   780 D WifiScanRequestProxy: Sending scan available broadcast: false
+11-16 01:54:25.221   549   787 D ConnectivityService: Sending DISCONNECTED broadcast for type 1 [101 WIFI] isDefaultNetwork=true
+11-16 01:54:25.222   549   784 I WifiScanningService: Received a request to disable scanning, UID = 1000
+11-16 01:54:25.222   549   784 E WifiNl80211Manager: No valid wificond scanner interface handler for iface=wlan0
+11-16 01:54:25.222   549   784 I WifiScanningService: Removed an impl for wlan0
+11-16 01:54:25.222   549   784 I WifiScanningService: wifi driver unloaded
+11-16 01:54:25.223   549   780 I WifiScanRequestProxy: Scanning is disabled
+11-16 01:54:25.226   549   780 I WifiCountryCode: No active mode, call onDriverCountryCodeChanged with Null
+11-16 01:54:25.226   549   780 W AlarmManager: Unrecognized alarm listener com.android.server.wifi.hotspot2.ANQPRequestManager$1@2060001
+11-16 01:54:25.227   549   780 D WifiP2pService: Wifi enabled=false, P2P disallowed by admin=false, D2D allowed when infra sta is disabled=false
+11-16 01:54:25.230  2270  2270 W ox.runner.debug: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+11-16 01:54:25.239   549   787 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+11-16 01:54:25.240   549   780 E WifiDataStall: onDataConnectionStateChanged unexpected State: 4
+11-16 01:54:25.243   352   352 I netd    : networkDestroy(101) <2.91ms>
+11-16 01:54:25.244   352   352 I resolv  : DNS cache flushed
+11-16 01:54:25.244   352   352 W resolv  : resolv_stats_set_addrs: Network 101 not found for PROTO_DOT
+11-16 01:54:25.244   352   352 W resolv  : resolv_stats_set_addrs: Network 101 not found for PROTO_DOH
+11-16 01:54:25.244   352   352 I netd    : destroyNetworkCache(101) <0.33ms>
+11-16 01:54:25.253   549   780 D WifiService: Country code changed to :
+11-16 01:54:25.255   866   866 D GlobalActionsDialogLite: Service changed before actions created
+11-16 01:54:25.255   866   866 D GlobalActionsDialogLite: Service changed before actions created
+11-16 01:54:25.259   549   780 D WifiCountryCode: Set telephony country code to: 
+11-16 01:54:25.260   549   780 D WifiCountryCode: updateCountryCode to US
+11-16 01:54:25.260  1020  1020 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}, hasService=false, callingPackage=com.android.server.telecom
+11-16 01:54:25.261   549   780 D WifiCountryCode: skip update supplicant not ready yet
+11-16 01:54:25.261  1020  1020 I Telephony: TelecomAccountRegistry$AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+11-16 01:54:25.261  1020  1020 I Telephony: PstnIncomingCallNotifier: Registering: [0]
+11-16 01:54:25.261  1020  1020 D Telephony: Registering: Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}
+11-16 01:54:25.261  1020  1020 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:25.262  1020  1020 W Telephony: registerImsRegistrationCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:25.262  1020  1020 D Telephony: Finished registering mSimultaneousCallingTrackerListener for phoneId = 0; subId = 1
+11-16 01:54:25.265   549   618 D WifiMemoryStoreImpl: Set cluster G957096b7b70ee262 for Wca4dd87370120fc7: SUCCESS
+11-16 01:54:25.268  1020  1020 V SimultaneousCallingTracker: Received EVENT 101
+11-16 01:54:25.269  1020  1020 D SimultaneousCallingTracker: Ignoring updatePhoneMapAndSimultaneousCallSupportMap since device is not DSDA capable.
+11-16 01:54:25.282   866  1321 I HWUI    : Davey! duration=727ms; Flags=0, FrameTimelineVsyncId=6442, IntendedVsync=43640669949, Vsync=44307336589, InputEventId=0, HandleInputStart=44326634794, AnimationStart=44326635374, PerformTraversalsStart=44326722199, DrawStart=44353209831, FrameDeadline=43840669941, FrameInterval=44320997302, FrameStartTime=16666666, SyncQueued=44353270157, SyncStart=44373486905, IssueDrawCommandsStart=44373540859, SwapBuffers=44379795125, FrameCompleted=44388194577, DequeueBufferDuration=2227, QueueBufferDuration=5980723, GpuCompleted=44388108405, SwapBuffersCompleted=44388194577, DisplayPresentTime=0, CommandSubmissionCompleted=44379795125, 
+11-16 01:54:25.287   549   780 D WifiCountryCode: setCountryCodeNative: US, isClientModeOnly: false mDriverCountryCode: null
+11-16 01:54:25.287   549   780 D WifiNetworkAgent: NetworkAgent: NetworkAgent channel lost
+11-16 01:54:25.288   549   780 I WifiService: Receive onDriverCountryCodeChanged to null, update available channel list
+11-16 01:54:25.288   549   780 D WifiController: STA disabled, return to DisabledState.
+11-16 01:54:25.288   549   780 D WifiController: EnabledState.exit()
+11-16 01:54:25.289   549   780 D WifiController: DisabledState.enter()
+11-16 01:54:25.290   549   936 W ScanResultUtil: Empty or null ScanResult list
+11-16 01:54:25.290   549   936 W WifiService: Attempt to retrieve WifiConfiguration with invalid scanResult List
+11-16 01:54:25.292  2351  2351 E crash_dump64: failed to get the guest state header for thread 1089: Bad address
+11-16 01:54:25.296  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: CREATED
+11-16 01:54:25.297  2270  2270 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@890424b
+11-16 01:54:25.298   866   866 D KeyguardViewMediator: onSimStateChanged(subId=1, slotId=0,state=6)
+11-16 01:54:25.298  2270  2270 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-16 01:54:25.302  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: STARTED
+11-16 01:54:25.302  2270  2270 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@890424b
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1097: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1099: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1100: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1101: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1102: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1103: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1104: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1105: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1106: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1109: Bad address
+11-16 01:54:25.313  2351  2351 E crash_dump64: failed to get the guest state header for thread 1118: Bad address
+11-16 01:54:25.329  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: RESUMED
+11-16 01:54:25.330  1020  1020 W FeatureConnection: getRegistrationTech: ImsRegistration is null
+11-16 01:54:25.330  2351  2351 E crash_dump64: failed to get the guest state header for thread 1119: Bad address
+11-16 01:54:25.331  2351  2351 E crash_dump64: failed to get the guest state header for thread 1120: Bad address
+11-16 01:54:25.331  2351  2351 E crash_dump64: failed to get the guest state header for thread 1123: Bad address
+11-16 01:54:25.331  2351  2351 E crash_dump64: failed to get the guest state header for thread 1124: Bad address
+11-16 01:54:25.331  2351  2351 E crash_dump64: failed to get the guest state header for thread 1125: Bad address
+11-16 01:54:25.331  2351  2351 E crash_dump64: failed to get the guest state header for thread 1126: Bad address
+11-16 01:54:25.333  2351  2351 E crash_dump64: failed to get the guest state header for thread 1128: Bad address
+11-16 01:54:25.333  2351  2351 E crash_dump64: failed to get the guest state header for thread 1129: Bad address
+11-16 01:54:25.333  2270  2270 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@890424b
+11-16 01:54:25.334  2351  2351 E crash_dump64: failed to get the guest state header for thread 1131: Bad address
+11-16 01:54:25.335  2351  2351 E crash_dump64: failed to get the guest state header for thread 1132: Bad address
+11-16 01:54:25.335  2351  2351 E crash_dump64: failed to get the guest state header for thread 1133: Bad address
+11-16 01:54:25.336  2351  2351 E crash_dump64: failed to get the guest state header for thread 1134: Bad address
+11-16 01:54:25.336  2351  2351 E crash_dump64: failed to get the guest state header for thread 1135: Bad address
+11-16 01:54:25.336  2351  2351 E crash_dump64: failed to get the guest state header for thread 1136: Bad address
+11-16 01:54:25.337  2351  2351 E crash_dump64: failed to get the guest state header for thread 1139: Bad address
+11-16 01:54:25.338  2351  2351 E crash_dump64: failed to get the guest state header for thread 1140: Bad address
+11-16 01:54:25.342  2351  2351 E crash_dump64: failed to get the guest state header for thread 1141: Bad address
+11-16 01:54:25.343  2351  2351 E crash_dump64: failed to get the guest state header for thread 1144: Bad address
+11-16 01:54:25.345   549  1012 W ScanResultUtil: Empty or null ScanResult list
+11-16 01:54:25.345   549  1012 W WifiService: Attempt to retrieve WifiConfiguration with invalid scanResult List
+11-16 01:54:25.345   549  1012 W ScanResultUtil: Empty or null ScanResult list
+11-16 01:54:25.345   549  1012 E WifiService: Attempt to retrieve passpoint with invalid scanResult List
+11-16 01:54:25.345   549  1012 W ScanResultUtil: Empty or null ScanResult list
+11-16 01:54:25.345   549  1012 W WifiService: Attempt to retrieve OsuProviders with invalid scanResult List
+11-16 01:54:25.347  1020  1030 I m.android.phone: Background concurrent mark compact GC freed 3288KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 3573KB/7146KB, paused 172us,531us total 165.491ms
+11-16 01:54:25.350  2270  2270 W HWUI    : Unknown dataspace 0
+11-16 01:54:25.356  1020  1020 I Telephony: Locale change; re-registering phone accounts.
+11-16 01:54:25.356  1020  1020 I Telephony: PstnIncomingCallNotifier: Unregistering: [0]
+11-16 01:54:25.356  1020  1020 D Telephony: Unregistering: Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}
+11-16 01:54:25.356  1020  1020 I PhoneInterfaceManager: unregisterMmTelCapabilityCallback: 1 is inactive, ignoring unregister.
+11-16 01:54:25.356  1020  1020 I PhoneInterfaceManager: unregisterImsRegistrationCallback: 1is inactive, ignoring unregister.
+11-16 01:54:25.362  2351  2351 E crash_dump64: failed to get the guest state header for thread 1145: Bad address
+11-16 01:54:25.367   549  1012 D WifiMemoryStoreImpl: Set cluster G957096b7b70ee262 for W957096b7b70ee262: SUCCESS
+11-16 01:54:25.368   352   352 I netd    : tetherGetStats() -> {[]} <0.19ms>
+11-16 01:54:25.415  2351  2351 E crash_dump64: failed to get the guest state header for thread 1147: Bad address
+11-16 01:54:25.415  1020  1020 I Telephony: TelecomAccountRegistry: setupAccounts: Found 1 phones.  Attempting to register.
+11-16 01:54:25.415  1020  1020 I Telephony: TelecomAccountRegistry: setupAccounts: Phone with subscription id 1
+11-16 01:54:25.451  2351  2351 E crash_dump64: failed to get the guest state header for thread 1148: Bad address
+11-16 01:54:25.454  2351  2351 E crash_dump64: failed to get the guest state header for thread 1149: Bad address
+11-16 01:54:25.454  2351  2351 E crash_dump64: failed to get the guest state header for thread 1150: Bad address
+11-16 01:54:25.454  2351  2351 E crash_dump64: failed to get the guest state header for thread 1151: Bad address
+11-16 01:54:25.455  2351  2351 E crash_dump64: failed to get the guest state header for thread 1152: Bad address
+11-16 01:54:25.455  2351  2351 E crash_dump64: failed to get the guest state header for thread 1154: Bad address
+11-16 01:54:25.455  2351  2351 E crash_dump64: failed to get the guest state header for thread 1155: Bad address
+11-16 01:54:25.455  2351  2351 E crash_dump64: failed to get the guest state header for thread 2080: Bad address
+11-16 01:54:25.461  1257  1477 D EGL_emulation: app_time_stats: avg=4098.18ms min=3.33ms max=15997.81ms count=4
+11-16 01:54:25.463   866   993 D EGL_emulation: app_time_stats: avg=233.75ms min=4.35ms max=592.80ms count=5
+11-16 01:54:25.469  2351  2351 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdTombstoneProto
+11-16 01:54:25.472   213   213 I tombstoned: received crash request for pid 1105
+11-16 01:54:25.474   997   997 I PlayerSettingsManager: getPlayerRepeatMode: no active player
+11-16 01:54:25.475   997   997 I PlayerSettingsManager: getPlayerShuffleMode: no active player
+11-16 01:54:25.475   997   997 I PlayerSettingsManager: updateRemoteDevice: STATE_REPEAT_OFF, STATE_SHUFFLE_OFF
+11-16 01:54:25.475   997   997 I bluetooth: system/btif/avrcp/avrcp_service.cc:586 SendPlayerSettingsChanged: {attribute=PlayerAttribute::REPEAT : value=PlayerRepeatValue::OFF}, {attribute=PlayerAttribute::SHUFFLE : value=PlayerShuffleValue::OFF}
+11-16 01:54:25.479   997  1100 I bluetooth: system/btif/avrcp/avrcp_service.cc:457 Cleanup: AVRCP Target Service stopped
+11-16 01:54:25.479   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x110C from extended inquiry response
+11-16 01:54:25.479   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.479   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x110E from extended inquiry response
+11-16 01:54:25.479   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.480  1020  1020 V SimultaneousCallingTracker: Device is not simultaneous calling capable
+11-16 01:54:25.480  1020  1020 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+11-16 01:54:25.480  1020  1020 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+11-16 01:54:25.480  1020  1020 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+11-16 01:54:25.480  1020  1020 I Telephony:  isRttSupported: false
+11-16 01:54:25.480  1020  1020 I Telephony:  alwaysAllowWhileRoaming: false
+11-16 01:54:25.480  1020  1020 I Telephony:  isRoaming: false
+11-16 01:54:25.480  1020  1020 I Telephony:  isOnWfc: false
+11-16 01:54:25.482  2351  2351 I crash_dump64: performing dump of process 997 (target tid = 1105)
+11-16 01:54:25.487  2351  2351 E DEBUG   : failed to read process info: failed to open /proc/997: No such file or directory
+11-16 01:54:25.490   997   997 I HeadsetService: stop()
+11-16 01:54:25.495   997   997 I BluetoothHeadsetServiceJni: android/app/jni/com_android_bluetooth_hfp.cpp:481 cleanupNative: Cleaning up Bluetooth Handsfree Interface
+11-16 01:54:25.495   997  1118 I bt_btif_queue: system/btif/src/btif_profile_queue.cc:130 queue_int_cleanup: UUID=111F
+11-16 01:54:25.495   997   997 I bt_btif_hf: system/btif/src/btif_hf.cc:1603 ExecuteService: service starts to: Shutdown
+11-16 01:54:25.498   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=2
+11-16 01:54:25.498   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=3
+11-16 01:54:25.498   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1112 from extended inquiry response
+11-16 01:54:25.498   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.498   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x111F from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=4
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=5
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1112 from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x111F from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=6
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=7
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1112 from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x111F from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=8
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=9
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1112 from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x111F from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=10
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=11
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1112 from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x111F from extended inquiry response
+11-16 01:54:25.499   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=12
+11-16 01:54:25.499   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=13
+11-16 01:54:25.499   997  1118 I bt_btif_hf: system/btif/src/btif_hf.cc:310 btif_hf_upstreams_evt: AG enable/disable event 30
+11-16 01:54:25.499   997   997 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x62500000
+11-16 01:54:25.502  2270  2270 D StrictMode: StrictMode policy violation; ~duration=623 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ContextImpl.getFilesDir(ContextImpl.java:855)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.OfflineMapRepository.<init>(OfflineMapRepository.java:24)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.RouteMapView.<init>(RouteMapView.java:43)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createView(LayoutInflater.java:742)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:894)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:849)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1011)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:570)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:462)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.createRootView(P0Activity.java:95)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.AbstractActivity.onCreate(AbstractActivity.java:51)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:38)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.502  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.503   997   997 I BluetoothHeadsetServiceJni: android/app/jni/com_android_bluetooth_hfp.cpp:487 cleanupNative: Cleaning up Bluetooth Handsfree callback object
+11-16 01:54:25.506   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:32
+11-16 01:54:25.507  2270  2270 D StrictMode: StrictMode policy violation; ~duration=254 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.data.SessionStore.<init>(SessionStore.java:10)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.recording.P0RecordingViewModel.<init>(P0RecordingViewModel.java:76)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:295)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:287)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:261)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.SavedStateViewModelFactory.create(SavedStateViewModelFactory.android.kt:142)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.SavedStateViewModelFactory.create(SavedStateViewModelFactory.android.kt:112)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl_androidKt.createViewModel(ViewModelProviderImpl.android.kt:35)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel(ViewModelProviderImpl.kt:59)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel$default(ViewModelProviderImpl.kt:43)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider.get(ViewModelProvider.android.kt:90)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider.get(ViewModelProvider.android.kt:104)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:40)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.507  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.508  2270  2270 D StrictMode: StrictMode policy violation; ~duration=225 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:283)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.SharedPreferencesImpl.getLong(SharedPreferencesImpl.java:336)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.data.SessionStore.recover(SessionStore.java:13)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.recording.P0RecordingViewModel.<init>(P0RecordingViewModel.java:77)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:295)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:287)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider$AndroidViewModelFactory.create(ViewModelProvider.android.kt:261)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.SavedStateViewModelFactory.create(SavedStateViewModelFactory.android.kt:142)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.SavedStateViewModelFactory.create(SavedStateViewModelFactory.android.kt:112)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl_androidKt.createViewModel(ViewModelProviderImpl.android.kt:35)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel(ViewModelProviderImpl.kt:59)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.viewmodel.internal.ViewModelProviderImpl.getViewModel$lifecycle_viewmodel$default(ViewModelProviderImpl.kt:43)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider.get(ViewModelProvider.android.kt:90)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ViewModelProvider.get(ViewModelProvider.android.kt:104)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:40)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.508  2270  2270 D StrictMode: StrictMode policy violation; ~duration=186 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.508  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.509  2270  2270 D StrictMode: StrictMode policy violation; ~duration=186 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.509  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.555  1020  1020 I Telephony: TelecomAccountRegistry$AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with Telecom. subId=1
+11-16 01:54:25.579  1020  1020 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}, hasService=false, callingPackage=com.android.server.telecom
+11-16 01:54:25.579  1020  1020 I Telephony: TelecomAccountRegistry$AccountEntry: Registered phoneAccount: [[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with handle: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0}
+11-16 01:54:25.579  1020  1020 I Telephony: PstnIncomingCallNotifier: Registering: [0]
+11-16 01:54:25.579  1020  1020 D Telephony: Registering: Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}
+11-16 01:54:25.580  1020  1020 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:25.580  1020  1020 W Telephony: registerImsRegistrationCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:25.580  1020  1020 D Telephony: Finished registering mSimultaneousCallingTrackerListener for phoneId = 0; subId = 1
+11-16 01:54:25.585  1020  1020 W AlarmManager: Unrecognized alarm listener com.android.internal.telephony.data.AutoDataSwitchController$$ExternalSyntheticLambda0@393a4b9
+11-16 01:54:25.586  1020  1020 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+11-16 01:54:25.586  1020  1020 D ImsExternalCallTracker: refreshCallPullState
+11-16 01:54:25.586  1020  1020 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+11-16 01:54:25.586  1020  1020 D IntentBroadcaster: Broadcasting and adding intent for rebroadcast: android.intent.action.SIM_STATE_CHANGED NOT_READY for phoneId 0
+11-16 01:54:25.593   485   485 W libgoldfish-rild: Multi-element reporting criteria are not supported with HIDL HAL
+11-16 01:54:25.602   866   866 D KeyguardViewMediator: onSimStateChanged(subId=1, slotId=0,state=6)
+11-16 01:54:25.625  2270  2270 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@8a940ca
+11-16 01:54:25.627  1257  1257 D VRI[QuickstepLauncher]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 01:54:25.627  1020  1020 I ImsExternalCallTracker: handleVideoCapabilitiesChanged : isVideoCapable = false
+11-16 01:54:25.627  1020  1020 D ImsExternalCallTracker: refreshCallPullState
+11-16 01:54:25.627  1020  1020 I Telephony: handleVideoCapabilitesChanged. Video capability - false
+11-16 01:54:25.628  1020  1020 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+11-16 01:54:25.628  1020  1020 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+11-16 01:54:25.628  1020  1020 W Telephony: registerMmTelCapabilityCallback: registration failed, no ImsService available. Exception: code: 1
+11-16 01:54:25.632  1020  1020 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: false
+11-16 01:54:25.632  1020  1020 I Telephony:  isRttSupported: false
+11-16 01:54:25.632  1020  1020 I Telephony:  alwaysAllowWhileRoaming: false
+11-16 01:54:25.632  1020  1020 I Telephony:  isRoaming: false
+11-16 01:54:25.632  1020  1020 I Telephony:  isOnWfc: false
+11-16 01:54:25.691  1020  1020 I Telephony: TelecomAccountRegistry$AccountEntry: registerPstnPhoneAccount: Registering account=[[ ] PhoneAccount: ComponentInfo{com.android.phone/com.android.services.telephony.TelephonyConnectionService}, 1, UserHandle{0} Capabilities: CallProvider MultiUser PlaceEmerg SimSub  Audio Routes: BESW Schemes: tel voicemail  Extras: Bundle[{android.telecom.extra.SUPPORTS_VIDEO_CALLING_FALLBACK=true}] GroupId: *** SC Restrictions: [ ]] with Telecom. subId=1
+11-16 01:54:25.701   866  1279 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-16 01:54:25.715  1020  1020 I PhoneInterfaceManager: setVoiceServiceStateOverride: subId=1, phone=Handler (com.android.internal.telephony.GsmCdmaPhone) {f1bbb01}, hasService=false, callingPackage=com.android.server.telecom
+11-16 01:54:25.715   352   352 I netd    : tetherGetStats() -> {[]} <0.26ms>
+11-16 01:54:25.722   866  1279 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-16 01:54:25.795   549   842 I SdkSandboxManager: Reconciling sdk data package directories for 0
+11-16 01:54:25.806   997  1139 I HeadsetPhoneState: stopListenForPhoneState(), no listener indicates nothing is listening
+11-16 01:54:25.806   997  1139 W HeadsetPhoneState: startListenForPhoneState, no event to listen
+11-16 01:54:25.813   997   997 W droid.bluetooth: Long monitor contention with owner HeadsetService.StateMachines (1139) at int com.android.bluetooth.hfp.HeadsetPhoneState.getTelephonyEventsToListen()(HeadsetPhoneState.java:131) waiters=0 in void com.android.bluetooth.hfp.HeadsetPhoneState.cleanup() for 306ms
+11-16 01:54:25.846  2270  2274 I ox.runner.debug: Compiler allocated 4219KB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
+11-16 01:54:25.892   422  1332 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10148 pid=2270
+11-16 01:54:25.892   422  1332 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10148 => denied (176 us)
+11-16 01:54:25.892   422  1332 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10148 pid=2270
+11-16 01:54:25.892   422  1332 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10148 => denied (61 us)
+11-16 01:54:25.892   422  1332 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10148 pid=2270
+11-16 01:54:25.892   422  1332 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10148 => denied (79 us)
+11-16 01:54:25.897  2270  2270 D AutofillManager: notifyViewReadyInner:1073741825
+11-16 01:54:25.897   422   442 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10148 pid=0
+11-16 01:54:25.897   422   442 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10148 => denied (83953 us)
+11-16 01:54:25.904  1020  1020 I PhoneGlobals: Dismissing depersonal panelNOT_READY
+11-16 01:54:25.905  2270  2343 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 01:54:25.905  2270  2343 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 01:54:25.906   485   485 W libgoldfish-rild: Multi-element reporting criteria are not supported with HIDL HAL
+11-16 01:54:25.906   997   997 I HeadsetPhoneState: stopListenForPhoneState(), no listener indicates nothing is listening
+11-16 01:54:25.914  2270  2270 D AutofillManager: notifyViewReadyInner:1073741826
+11-16 01:54:25.915  2270  2270 D AutofillManager: notifyViewReadyInner:1073741824
+11-16 01:54:25.925   997   997 I HeadsetService: cleanup
+11-16 01:54:25.927   997  1100 I bluetooth: system/bta/hearing_aid/hearing_aid_audio_source.cc:412 Stop: Hearing Aid Source Close
+11-16 01:54:25.927   997  1100 I BTAudioHearingAidAIDL: system/audio_hal_interface/aidl/hearing_aid_software_encoding_aidl.cc:255 end_session: 
+11-16 01:54:25.927   997  1100 I BTAudioClientAIDL: system/audio_hal_interface/aidl/client_interface_aidl.cc:503 EndSession: session ended already
+11-16 01:54:25.927   997  1100 I bluetooth: system/bta/hearing_aid/hearing_aid_audio_source.cc:150 stop_audio_ticks: stopped
+11-16 01:54:25.927   997  1100 I BTAudioHearingAidAIDL: system/audio_hal_interface/aidl/hearing_aid_software_encoding_aidl.cc:227 cleanup: 
+11-16 01:54:25.927   997  1100 I BTAudioHearingAidAIDL: system/audio_hal_interface/aidl/hearing_aid_software_encoding_aidl.cc:255 end_session: 
+11-16 01:54:25.927   997  1100 I BTAudioClientAIDL: system/audio_hal_interface/aidl/client_interface_aidl.cc:503 EndSession: session ended already
+11-16 01:54:25.927   997  1100 I gatt_api: system/stack/gatt/gatt_api.cc:1274 GATT_Deregister: gatt_if=4
+11-16 01:54:25.927   997  1100 I bluetooth-asha: system/bta/hearing_aid/hearing_aid.cc:2090 hearingaid_gattc_callback: 
+11-16 01:54:25.928   997   997 I BluetoothHidDeviceServiceJni: android/app/jni/com_android_bluetooth_hid_device.cpp:196 cleanupNative: Cleaning up interface
+11-16 01:54:25.928   997  1100 I bt_bta_sys_main: system/bta/sys/bta_sys_main.cc:83 bta_sys_event: Ignoring receipt of unregistered event id:BTA_ID_HD[20]
+11-16 01:54:25.928   997   997 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x22500000
+11-16 01:54:25.928   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:32
+11-16 01:54:25.928   997   997 I BluetoothHidDeviceServiceJni: android/app/jni/com_android_bluetooth_hid_device.cpp:202 cleanupNative: Cleaning up callback object
+11-16 01:54:25.928   997   997 W BluetoothHidHostServiceJni: android/app/jni/com_android_bluetooth_hid_host.cpp:257 cleanupNative: Cleaning up Bluetooth HID Interface...
+11-16 01:54:25.928   997  1100 I gatt_api: system/stack/gatt/gatt_api.cc:1274 GATT_Deregister: gatt_if=5
+11-16 01:54:25.928   997   997 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x22400000
+11-16 01:54:25.928   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:32
+11-16 01:54:25.928   997   997 W BluetoothHidHostServiceJni: android/app/jni/com_android_bluetooth_hid_host.cpp:263 cleanupNative: Cleaning up Bluetooth GID callback object
+11-16 01:54:25.928   997  1141 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x20400000
+11-16 01:54:25.931   997  1134 I bt_btif_sock_rfcomm: system/btif/src/btif_sock_rfc.cc:448 cleanup_rfc_slot: disconnected from RFCOMM socket connections for device: 00:00:00:00:00:00, scn: 4, app_uid: 1002, id: 1
+11-16 01:54:25.931   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=14
+11-16 01:54:25.931   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:230 btsock_l2cap_free_l: Disconnected L2CAP connection for device: 00:00:00:00:00:00, channel: 4097, app_uid: 1002, id: 1, is_le: false
+11-16 01:54:25.931   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:251 btsock_l2cap_free_l: Application has already closed l2cap socket socket_id:1
+11-16 01:54:25.931   997  1100 I bluetooth: system/btif/src/btif_sock_l2cap.cc:626 on_l2cap_close: Unable to find probably already closed l2cap socket with socket_id:1
+11-16 01:54:25.932   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:16
+11-16 01:54:25.937   549   936 D MediaSessionService: The MediaKeyEventSessionChangedListener (android.os.BinderProxy@f2d48d) is removed by com.android.bluetooth
+11-16 01:54:25.939   997  1100 E gatt_api: system/stack/gatt/gatt_api.cc:345 is_active_service: Active Service Found: 00001849-0000-1000-8000-00805f9b34fb
+11-16 01:54:25.939   997  1100 I gatt_api: system/stack/gatt/gatt_api.cc:413 GATTS_StopService: service = 0x28
+11-16 01:54:25.939   997  1100 I bluetooth: system/stack/gatt/gatt_sr_hash.cc:129 gatts_calculate_database_hash: hash=8991C462EBE9D90B9EA0DA3E16D0F513
+11-16 01:54:25.940   997   997 W LeAudioService: getLeAudioService(): service is NULL
+11-16 01:54:25.940   997  1134 I bt_btif_sock_rfcomm: system/btif/src/btif_sock_rfc.cc:448 cleanup_rfc_slot: disconnected from RFCOMM socket connections for device: 00:00:00:00:00:00, scn: 6, app_uid: 1002, id: 3
+11-16 01:54:25.940   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=16
+11-16 01:54:25.940   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:230 btsock_l2cap_free_l: Disconnected L2CAP connection for device: 00:00:00:00:00:00, channel: 4101, app_uid: 1002, id: 3, is_le: false
+11-16 01:54:25.940   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:251 btsock_l2cap_free_l: Application has already closed l2cap socket socket_id:3
+11-16 01:54:25.941   997  1100 I bluetooth: system/btif/src/btif_sock_l2cap.cc:626 on_l2cap_close: Unable to find probably already closed l2cap socket with socket_id:3
+11-16 01:54:25.941   997  1100 I gatt_api: system/stack/gatt/gatt_api.cc:1274 GATT_Deregister: gatt_if=6
+11-16 01:54:25.948   997   997 I TetheringManager: unregisterTetheringEventCallback caller:com.android.bluetooth
+11-16 01:54:25.949   997   997 W BluetoothPanServiceJni: android/app/jni/com_android_bluetooth_pan.cpp:141 cleanupNative: Cleaning up Bluetooth PAN Interface...
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1116 from extended inquiry response
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1117 from extended inquiry response
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1408 bta_dm_eir_update_uuid: EIR Removing UUID=0x1115 from extended inquiry response
+11-16 01:54:25.949   997  1100 I bt_bta_dm: system/bta/dm/bta_dm_act.cc:1132 bta_dm_set_eir: Generating extended inquiry response packet EIR
+11-16 01:54:25.950   997   997 W BluetoothPanServiceJni: android/app/jni/com_android_bluetooth_pan.cpp:147 cleanupNative: Cleaning up Bluetooth PAN callback object
+11-16 01:54:25.950   997  1144 I bt_btif_storage: system/btif/src/btif_storage.cc:634 btif_storage_get_adapter_property: Service_mask=0x20000000
+11-16 01:54:25.951   997  1134 I bt_btif_sock_rfcomm: system/btif/src/btif_sock_rfc.cc:448 cleanup_rfc_slot: disconnected from RFCOMM socket connections for device: 00:00:00:00:00:00, scn: 5, app_uid: 1002, id: 2
+11-16 01:54:25.951   997  1100 I bt_port_api: system/stack/rfcomm/port_api.cc:355 RFCOMM_RemoveServer: handle=15
+11-16 01:54:25.952   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:230 btsock_l2cap_free_l: Disconnected L2CAP connection for device: 00:00:00:00:00:00, channel: 4099, app_uid: 1002, id: 2, is_le: false
+11-16 01:54:25.952   997  1134 I bluetooth: system/btif/src/btif_sock_l2cap.cc:251 btsock_l2cap_free_l: Application has already closed l2cap socket socket_id:2
+11-16 01:54:25.952   997  1100 I bluetooth: system/btif/src/btif_sock_l2cap.cc:626 on_l2cap_close: Unable to find probably already closed l2cap socket with socket_id:2
+11-16 01:54:25.952   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:3 len:0
+11-16 01:54:25.954   997   997 I AdapterState: BLE_ON : entered 
+11-16 01:54:25.957   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: prevState=TURNING_OFF newState=BLE_ON
+11-16 01:54:25.957   549   655 D BluetoothSystemServer: BluetoothManagerService: broadcastIntentStateChange: action=BLE_STATE_CHANGED prevState=TURNING_OFF newState=BLE_ON
+11-16 01:54:25.957   549   655 D BluetoothSystemServer: BluetoothManagerService: Broadcasting onBluetoothOff() to 4 receivers.
+11-16 01:54:25.957   549   655 D BluetoothAdapter: onBluetoothOff
+11-16 01:54:25.958   549   549 D BluetoothAdapter: HEADSET disconnected
+11-16 01:54:25.958   549   549 D BluetoothAdapter: HEARING_AID disconnected
+11-16 01:54:25.958   549   549 D BluetoothAdapter: isLeEnabled(): BLE_ON
+11-16 01:54:25.958   549   549 D BluetoothAdapter: HEARING_AID disconnected
+11-16 01:54:25.958   549   549 D BluetoothAdapter: A2DP disconnected
+11-16 01:54:25.958   549   549 D BluetoothAdapter: HEADSET disconnected
+11-16 01:54:25.958   549   549 I AS.BtHelper: BT profile service: disconnecting HEADSET profile
+11-16 01:54:25.958   549   549 D BluetoothAdapter: A2DP disconnected
+11-16 01:54:25.958   549   549 I AS.BtHelper: BT profile service: disconnecting A2DP profile
+11-16 01:54:25.958   549   549 D BluetoothAdapter: HEARING_AID disconnected
+11-16 01:54:25.958   549   549 I AS.BtHelper: BT profile service: disconnecting HEARING_AID profile
+11-16 01:54:25.958   549   799 I AS.BtHelper: BT profile HEADSET disconnected
+11-16 01:54:25.958   549   799 I AS.BtHelper: BT profile A2DP disconnected
+11-16 01:54:25.959   549   799 I AS.BtHelper: BT profile HEARING_AID disconnected
+11-16 01:54:25.959   549   655 I BluetoothSystemServer: BluetoothManagerService: sendBrEdrDownCallback: Stopping ble
+11-16 01:54:25.960   997   997 I AdapterState: BLE_TURNING_OFF : entered 
+11-16 01:54:25.960  1020  1225 D BluetoothAdapter: onBluetoothOff
+11-16 01:54:25.960   549   655 D BluetoothSystemServer: BluetoothManagerService: broadcastIntentStateChange: action=STATE_CHANGED prevState=TURNING_OFF newState=OFF
+11-16 01:54:25.960   549   549 D BluetoothAdapter: isLeEnabled(): BLE_TURNING_OFF
+11-16 01:54:25.961  1020  1020 D BluetoothAdapter: HEADSET disconnected
+11-16 01:54:25.962   997  1118 I AdapterProperties: adapterPropertyChangedCallback with type:7 len:4
+11-16 01:54:25.963   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_BLUETOOTH_STATE_CHANGE: prevState=BLE_ON newState=BLE_TURNING_OFF
+11-16 01:54:25.963   549   655 D BluetoothSystemServer: BluetoothManagerService: broadcastIntentStateChange: action=BLE_STATE_CHANGED prevState=BLE_ON newState=BLE_TURNING_OFF
+11-16 01:54:25.963   997  1100 I gatt_api: system/stack/gatt/gatt_api.cc:1274 GATT_Deregister: gatt_if=3
+11-16 01:54:25.967   549   549 D BluetoothAdapter: isLeEnabled(): BLE_TURNING_OFF
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: exception when invoking removeOnUidImportanceListener
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: java.lang.IllegalArgumentException: Listener not registered: com.android.bluetooth.le_scan.ScanManager$2@d5c63e7
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.app.ActivityManager.removeOnUidImportanceListener(ActivityManager.java:4730)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.le_scan.ScanManager.cleanup(ScanManager.java:214)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.le_scan.TransitionalScanHelper.cleanup(TransitionalScanHelper.java:219)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.gatt.GattService.cleanup(GattService.java:274)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterService.stopGattProfileService(AdapterService.java:1141)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterService.bringDownBle(AdapterService.java:1038)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterState$TurningBleOffState.enter(AdapterState.java:388)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.invokeEnterMethods(StateMachine.java:1042)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.performTransitions(StateMachine.java:888)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.handleMessage(StateMachine.java:828)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: exception when invoking unregisterReceiver(mLocationReceiver)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: java.lang.IllegalArgumentException: Receiver not registered: com.android.bluetooth.le_scan.ScanManager$3@2711b94
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.app.LoadedApk.forgetReceiverDispatcher(LoadedApk.java:1674)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.app.ContextImpl.unregisterReceiver(ContextImpl.java:1901)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.content.ContextWrapper.unregisterReceiver(ContextWrapper.java:822)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.content.ContextWrapper.unregisterReceiver(ContextWrapper.java:822)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.le_scan.ScanManager.cleanup(ScanManager.java:235)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.le_scan.TransitionalScanHelper.cleanup(TransitionalScanHelper.java:219)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.gatt.GattService.cleanup(GattService.java:274)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterService.stopGattProfileService(AdapterService.java:1141)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterService.bringDownBle(AdapterService.java:1038)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.btservice.AdapterState$TurningBleOffState.enter(AdapterState.java:388)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.invokeEnterMethods(StateMachine.java:1042)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.performTransitions(StateMachine.java:888)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.bluetooth.jarjar.com.android.internal.util.StateMachine$SmHandler.handleMessage(StateMachine.java:828)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:25.968   997   997 W BtGatt.ScanManager: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:25.971   997  1099 I bt_stack_manager: system/btif/src/stack_manager.cc:345 event_shut_down_stack: is bringing down the stack
+11-16 01:54:25.971   997  1099 I bt_core_module: system/btcore/src/module.cc:108 module_shut_down: Shutting down module "rust_module"
+11-16 01:54:25.971   997  1099 I bt_core_module: system/btcore/src/module.cc:113 module_shut_down: Shutdown of module "rust_module" completed
+11-16 01:54:25.971   997  1134 I bt_btif_sock: system/btif/src/btif_sock_thread.cc:461 sock_poll_thread: h:7, process_cmd_sock return false, exit...
+11-16 01:54:25.971   997  1134 I bt_btif_sock: system/btif/src/btif_sock_thread.cc:475 sock_poll_thread: socket poll thread exiting, h:7
+11-16 01:54:25.971   997  1100 I bluetooth: system/bta/jv/bta_jv_act.cc:648 bta_jv_disable: 
+11-16 01:54:25.971   997  1135 W bt_osi_thread: system/osi/src/thread.cc:240 run_thread: thread id 1135, thread name btif_sock exited
+11-16 01:54:25.992  2270  2343 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 01:54:26.000  2351  2351 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+11-16 01:54:26.000  2351  2351 F DEBUG   : Build fingerprint: 'Android/sdk_phone64_x86_64/emu64x:15/AE3A.240806.019/12368160:userdebug/test-keys'
+11-16 01:54:26.000  2351  2351 F DEBUG   : Revision: '0'
+11-16 01:54:26.000  2351  2351 F DEBUG   : ABI: 'x86_64'
+11-16 01:54:26.000  2351  2351 F DEBUG   : Timestamp: 2026-11-16 01:54:25.487785652+0800
+11-16 01:54:26.000  2351  2351 F DEBUG   : Process uptime: 0s
+11-16 01:54:26.000  2351  2351 F DEBUG   : Cmdline: com.android.bluetooth
+11-16 01:54:26.000  2351  2351 F DEBUG   : pid: 997, tid: 1105, name: bt_stack_manage  >>> com.android.bluetooth <<<
+11-16 01:54:26.000  2351  2351 F DEBUG   : uid: 1002
+11-16 01:54:26.000  2351  2351 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+11-16 01:54:26.000  2351  2351 F DEBUG   : Abort message: 'system/gd/hci/hci_layer.cc:478 on_hardware_error: Hardware Error Event with code 0x42'
+11-16 01:54:26.000  2351  2351 F DEBUG   :     rax 0000000000000000  rbx 000073673a96a8a8  rcx 0000736a780c1b90  rdx 0000000000000006
+11-16 01:54:26.000   866  1321 D BluetoothAdapter: onBluetoothOff
+11-16 01:54:26.000  2351  2351 F DEBUG   :     r8  0000736a7814f380  r9  0000736a7814f380  r10 000073673a96a8b0  r11 0000000000000203
+11-16 01:54:26.000  2351  2351 F DEBUG   :     r12 000073673a96aa08  r13 0000000000000002  r14 00000000000003e5  r15 0000000000000451
+11-16 01:54:26.000  2351  2351 F DEBUG   :     rdi 00000000000003e5  rsi 0000000000000451
+11-16 01:54:26.000  2351  2351 F DEBUG   :     rbp 00007367bdc09950  rsp 000073673a96a8a0  rip 0000736a780c1b90
+11-16 01:54:26.000  2351  2351 F DEBUG   : 15 total frames
+11-16 01:54:26.000  2351  2351 F DEBUG   : backtrace:
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #00 pc 000000000005cb90  /apex/com.android.runtime/lib64/bionic/libc.so (abort+192) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #01 pc 000000000087e4a0  /apex/com.android.art/lib64/libart.so (art::Runtime::Abort(char const*)+96) (BuildId: 86541675bab12d77c4cd601b77f3f707)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #02 pc 0000000000015eea  /apex/com.android.art/lib64/libbase.so (android::base::SetAborter(std::__1::function<void (char const*)>&&)::$_0::__invoke(char const*)+58) (BuildId: 2d7df6e607a8928501c5363a393a3a89)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #03 pc 0000000000c0a97b  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::log_internal::vlog(bluetooth::log_internal::Level, char const*, bluetooth::log_internal::source_location, fmt::v10::basic_string_view<char>, fmt::v10::basic_format_args<fmt::v10::basic_format_context<fmt::v10::appender, char>>)+1435) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #04 pc 0000000000433a66  /apex/com.android.btservices/lib64/libbluetooth_jni.so (void bluetooth::log::fatal<unsigned char>(fmt::v10::basic_format_string<char, fmt::v10::type_identity<unsigned char>::type>, unsigned char&&, bluetooth::log_internal::source_location)+70) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #05 pc 000000000042db0a  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::hci::HciLayer::impl::on_hardware_error(bluetooth::hci::EventView)+218) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #06 pc 000000000042b7ba  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::hci::HciLayer::impl::on_hci_event(bluetooth::hci::EventView)+6186) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.000  2351  2351 F DEBUG   :       #07 pc 000000000042c091  /apex/com.android.btservices/lib64/libbluetooth_jni.so (void base::internal::FunctorTraits<void (bluetooth::hci::HciLayer::impl::*)(bluetooth::hci::EventView), void>::Invoke<void (bluetooth::hci::HciLayer::impl::*)(bluetooth::hci::EventView), bluetooth::hci::HciLayer::impl*, bluetooth::hci::EventView>(void (bluetooth::hci::HciLayer::impl::*)(bluetooth::hci::EventView), bluetooth::hci::HciLayer::impl*&&, bluetooth::hci::EventView&&)+305) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #08 pc 000000000042bf43  /apex/com.android.btservices/lib64/libbluetooth_jni.so (base::internal::Invoker<base::internal::BindState<void (bluetooth::hci::HciLayer::impl::*)(bluetooth::hci::EventView), base::internal::UnretainedWrapper<bluetooth::hci::HciLayer::impl>, bluetooth::hci::EventView>, void ()>::RunOnce(base::internal::BindStateBase*)+51) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #09 pc 00000000003be62b  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::os::Handler::handle_next_event()+315) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #10 pc 00000000003bfb18  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::os::Reactor::Run()+968) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #11 pc 00000000003bee59  /apex/com.android.btservices/lib64/libbluetooth_jni.so (bluetooth::os::Thread::run(bluetooth::os::Thread::Priority)+233) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #12 pc 00000000003bf009  /apex/com.android.btservices/lib64/libbluetooth_jni.so (void* std::__1::__thread_proxy[abi:nn180000]<std::__1::tuple<std::__1::unique_ptr<std::__1::__thread_struct, std::__1::default_delete<std::__1::__thread_struct>>, void (bluetooth::os::Thread::*)(bluetooth::os::Thread::Priority), bluetooth::os::Thread*, bluetooth::os::Thread::Priority>>(void*)+57) (BuildId: d96d97cd4f08129f39402e7a2181369d)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #13 pc 000000000006d62a  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+58) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+11-16 01:54:26.001  2351  2351 F DEBUG   :       #14 pc 0000000000060348  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+56) (BuildId: eb58b4d427279994f00c0e1818477e4f)
+11-16 01:54:26.029   213   213 E tombstoned: Tombstone written to: tombstone_00
+11-16 01:54:26.038   149   149 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 01:54:26.040  2270  2343 I Gralloc4: mapper 4.x is not supported
+11-16 01:54:26.049   866   866 D BluetoothAdapter: HEADSET disconnected
+11-16 01:54:26.054   866   866 D BluetoothAdapter: HID_DEVICE disconnected
+11-16 01:54:26.059   549   933 D MediaSessionService: destroySessionLocked: record=com.android.bluetooth/BluetoothMediaBrowserService/2 (userId=0)
+11-16 01:54:26.060   549   933 D MediaSessionService: destroySessionLocked: record=com.android.bluetooth/BluetoothMediaBrowserService/3 (userId=0)
+11-16 01:54:26.060   549   933 D MediaSessionService: destroySessionLocked: record=com.android.bluetooth/BluetoothMediaBrowserService/5 (userId=0)
+11-16 01:54:26.060   549   933 D MediaSessionService: destroySessionLocked: record=com.android.bluetooth/BluetoothMediaBrowserService/4 (userId=0)
+11-16 01:54:26.062   866   866 D BluetoothAdapter: PBAP disconnected
+11-16 01:54:26.062   866   866 D BluetoothAdapter: MAP disconnected
+11-16 01:54:26.062   866   866 D BluetoothAdapter: HEARING_AID disconnected
+11-16 01:54:26.062   866   866 D BluetoothAdapter: PAN disconnected
+11-16 01:54:26.062   866   866 D BluetoothAdapter: A2DP disconnected
+11-16 01:54:26.062   866   866 D BluetoothAdapter: HID_HOST disconnected
+11-16 01:54:26.065   549   549 D BluetoothSystemServer: BluetoothManagerService: ServiceConnection.onServiceDisconnected(com.android.bluetooth.btservice.AdapterService)
+11-16 01:54:26.065   549   584 I libprocessgroup: Removed cgroup /sys/fs/cgroup/uid_1002/pid_997
+11-16 01:54:26.074   549   655 E BluetoothSystemServer: BluetoothManagerService: MESSAGE_BLUETOOTH_SERVICE_DISCONNECTED
+11-16 01:54:26.074   392   392 E android.hardware.bluetooth.service.default: Bluetooth remote service has died
+11-16 01:54:26.074   392   392 I android.hardware.bluetooth.service.default: close
+11-16 01:54:26.075   392   392 E android.hardware.bluetooth.service.default: unable to open /dev/rfkill: Permission denied
+11-16 01:54:26.075   392   392 E android.hardware.bluetooth.service.default: rfkill unavailable
+11-16 01:54:26.075   392   392 E android.hardware.bluetooth-service.default: unlinkToDeath: removed reference to death recipient but unlink failed: DEAD_OBJECT
+11-16 01:54:26.075   549   655 D BluetoothSystemServer: BluetoothManagerService: 11-16 01:54:26.075 	Package [android] requested to [Disable]. 	Reason is CRASH
+11-16 01:54:26.075   549   655 D BluetoothSystemServer: BluetoothManagerService: sendBluetoothServiceDownCallback(): to 3 receivers
+11-16 01:54:26.075   549   655 D BluetoothAdapter: onBluetoothServiceDown
+11-16 01:54:26.075   866   875 D BluetoothAdapter: onBluetoothServiceDown
+11-16 01:54:26.076  1020  1225 D BluetoothAdapter: onBluetoothServiceDown
+11-16 01:54:26.087   358   358 I Zygote  : Process 997 exited due to signal 6 (Aborted)
+11-16 01:54:26.532  2270  2274 I ox.runner.debug: Compiler allocated 5174KB to compile void android.view.ViewRootImpl.performTraversals()
+11-16 01:54:26.738   549   936 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10148 pid=0
+11-16 01:54:26.739   549   936 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10148 => denied (326 us)
+11-16 01:54:26.739   549   936 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10148 pid=0
+11-16 01:54:26.739   549   936 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10148 => denied (82 us)
+11-16 01:54:26.739   549   936 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10148 pid=0
+11-16 01:54:26.739   549   936 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10148 => denied (41 us)
+11-16 01:54:26.739  2270  2270 I Choreographer: Skipped 63 frames!  The application may be doing too much work on its main thread.
+11-16 01:54:26.746   549   570 W ziparchive: Unable to open '/data/app/~~DYiVATua_A6bjCorU6A8_w==/com.fox.runner.debug-_7zResf28Wx1pIOf6G5BPg==/base.dm': No such file or directory
+11-16 01:54:26.762  2270  2281 I HWUI    : Davey! duration=1264ms; Flags=1, FrameTimelineVsyncId=6703, IntendedVsync=44590669911, Vsync=44774003237, InputEventId=0, HandleInputStart=44788289048, AnimationStart=44788290644, PerformTraversalsStart=44788291046, DrawStart=45182135144, FrameDeadline=44607336577, FrameInterval=44788218836, FrameStartTime=16666666, SyncQueued=45219475559, SyncStart=45227223174, IssueDrawCommandsStart=45228720287, SwapBuffers=45771662613, FrameCompleted=45863416002, DequeueBufferDuration=2650, QueueBufferDuration=198878, GpuCompleted=45863366487, SwapBuffersCompleted=45863416002, DisplayPresentTime=0, CommandSubmissionCompleted=45771662613, 
+11-16 01:54:26.762   549   570 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity for user 0: +2s349ms
+11-16 01:54:26.997  2270  2280 I HWUI    : Davey! duration=1283ms; Flags=0, FrameTimelineVsyncId=6806, IntendedVsync=44807336569, Vsync=45857336527, InputEventId=0, HandleInputStart=45865048740, AnimationStart=45865049410, PerformTraversalsStart=45865381036, DrawStart=45865418176, FrameDeadline=45890669859, FrameInterval=45864901457, FrameStartTime=16666666, SyncQueued=45866604256, SyncStart=45866620957, IssueDrawCommandsStart=45867582288, SwapBuffers=45999720467, FrameCompleted=46091208608, DequeueBufferDuration=2709, QueueBufferDuration=5799507, GpuCompleted=46091208608, SwapBuffersCompleted=46075465180, DisplayPresentTime=0, CommandSubmissionCompleted=45999720467, 
+11-16 01:54:27.002   549   661 I ImeTracker: com.fox.runner.debug:9547bd72: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-16 01:54:27.002   549   661 I ImeTracker: com.fox.runner.debug:9547bd72: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-16 01:54:27.221  1257  1257 D BaseDepthController: setSurface:
+11-16 01:54:27.221  1257  1257 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-16 01:54:27.221  1257  1257 D BaseDepthController: 	mSurface: null
+11-16 01:54:27.222  1257  1257 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-16 01:54:27.222  1257  1257 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-16 01:54:27.222  1257  1257 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:453)
+11-16 01:54:27.222  1257  1257 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:444)
+11-16 01:54:27.222  1257  1257 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(StatefulActivity.java:119)
+11-16 01:54:27.226  1257  1257 D StatsLog: LAUNCHER_ONSTOP
+11-16 01:54:27.246   352   352 I netd    : tetherGetStats() -> {[]} <4.17ms>
+11-16 01:54:27.392   866   964 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+11-16 01:54:27.469   549   618 W InputManager-JNI: Input channel object 'f58210f Splash Screen com.fox.runner.debug (client)' was disposed without first being removed with the input manager!
+11-16 01:54:27.513  1409  1416 I or.multidisplay: Background concurrent mark compact GC freed 848KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 1819KB/3638KB, paused 35us,14.237ms total 17.263ms
+11-16 01:54:27.531   866   964 W FrameTracker: Missed App frame:UNKNOWN: 10, 7032, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-16 01:54:27.531   866   964 W FrameTracker: Missed SF frame:UNKNOWN: 10, 7032, 0, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-16 01:54:27.531   866   964 W FrameTracker: Missing HWUI jank callback for vsyncId: 7032, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-16 01:54:27.531   866   964 W FrameTracker: Missed App frame:UNKNOWN: 74, 7053, 603753533, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-16 01:54:27.531   866   964 W FrameTracker: Missed SF frame:UNKNOWN: 74, 7053, 603753533, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+11-16 01:54:27.532   866   939 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-39 - not enough time since last trigger
+11-16 01:54:27.720  2270  2270 I TrackRecordingService: newGpsStatus: 2131820798
+11-16 01:54:27.722  2270  2270 I TrackRecordingService: newGpsStatus: 2131820798
+11-16 01:54:27.727  2270  2270 W TrackRecordingService: Ignore newTrackPoint. Not recording.
+11-16 01:54:27.841  2270  2270 I ActivityThread: Schedule relaunch activity: de.dennisguse.opentracks.p0.app.P0Activity
+11-16 01:54:27.841  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: PAUSED
+11-16 01:54:27.842  2270  2270 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@890424b
+11-16 01:54:27.847  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: STOPPED
+11-16 01:54:27.853  2270  2270 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@890424b
+11-16 01:54:27.855  2270  2270 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@cd2920f
+11-16 01:54:27.856  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@890424b in: DESTROYED
+11-16 01:54:27.856  2270  2270 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-16 01:54:27.860  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: PRE_ON_CREATE
+11-16 01:54:27.860  2270  2270 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was DESTROYED
+11-16 01:54:27.874  2270  2270 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-16 01:54:27.923  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: CREATED
+11-16 01:54:27.923  2270  2270 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@52ff50
+11-16 01:54:27.924  2270  2270 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-16 01:54:27.925  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: STARTED
+11-16 01:54:27.925  2270  2270 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@52ff50
+11-16 01:54:27.931  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: RESUMED
+11-16 01:54:27.931  2270  2270 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@52ff50
+11-16 01:54:27.935  2270  2270 D StrictMode: StrictMode policy violation; ~duration=22 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ContextImpl.getFilesDir(ContextImpl.java:853)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.OfflineMapRepository.<init>(OfflineMapRepository.java:24)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.RouteMapView.<init>(RouteMapView.java:43)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createView(LayoutInflater.java:742)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:894)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:849)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1011)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:570)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:462)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.createRootView(P0Activity.java:95)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.AbstractActivity.onCreate(AbstractActivity.java:51)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:38)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityInner(ActivityThread.java:6304)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:6195)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.servertransaction.ActivityRelaunchItem.execute(ActivityRelaunchItem.java:79)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.servertransaction.ActivityTransactionItem.execute(ActivityTransactionItem.java:60)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ClientTransactionHandler.executeTransaction(ClientTransactionHandler.java:68)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityLocally(ActivityThread.java:6261)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2649)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:27.935  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:27.941  2270  2270 D StrictMode: StrictMode policy violation; ~duration=22 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getFilesDir(ContextImpl.java:855)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.map.OfflineMapRepository.<init>(OfflineMapRepository.java:24)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.RouteMapView.<init>(RouteMapView.java:43)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createView(LayoutInflater.java:742)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:894)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:849)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1011)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:570)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:462)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.createRootView(P0Activity.java:95)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.AbstractActivity.onCreate(AbstractActivity.java:51)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:38)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityInner(ActivityThread.java:6304)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivity(ActivityThread.java:6195)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.ActivityRelaunchItem.execute(ActivityRelaunchItem.java:79)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.ActivityTransactionItem.execute(ActivityTransactionItem.java:60)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ClientTransactionHandler.executeTransaction(ClientTransactionHandler.java:68)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityLocally(ActivityThread.java:6261)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2649)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:27.941  2270  2270 D StrictMode: StrictMode policy violation; ~duration=7 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ClientTransactionHandler.executeTransaction(ClientTransactionHandler.java:68)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityLocally(ActivityThread.java:6261)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2649)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:27.941  2270  2270 D StrictMode: StrictMode policy violation; ~duration=7 ms: android.os.strictmode.DiskReadViolation
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ClientTransactionHandler.executeTransaction(ClientTransactionHandler.java:68)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.handleRelaunchActivityLocally(ActivityThread.java:6261)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2649)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-16 01:54:27.941  2270  2270 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-16 01:54:27.945  2270  2270 D AutofillManager: notifyViewReadyInner:1073741825
+11-16 01:54:27.945  2270  2270 D AutofillManager: notifyViewReadyInner:1073741826
+11-16 01:54:27.946  2270  2270 D AutofillManager: notifyViewReadyInner:1073741824
+11-16 01:54:27.949   866  1279 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-16 01:54:27.950   866  1279 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-16 01:54:27.965  2270  2343 D EGL_emulation: app_time_stats: avg=62.51ms min=14.08ms max=212.04ms count=17
+11-16 01:54:27.969  2270  2270 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@8a940ca
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10102} in 1ms
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.522   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20102} in 0ms
+11-16 01:54:28.568   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.569   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.569   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10074} in 1ms
+11-16 01:54:28.569   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.572   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.572   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20074} in 3ms
+11-16 01:54:28.925   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.926   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.927   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10109} in 2ms
+11-16 01:54:28.927   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:28.928   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:28.928   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20109} in 1ms
+11-16 01:54:29.054  2270  2343 D EGL_emulation: app_time_stats: avg=42.54ms min=9.33ms max=430.20ms count=23
+11-16 01:54:29.059  1394  1594 W MediaProvider: isAppCloneUserPair for user 0: false
+11-16 01:54:29.060  1394  1594 W MediaProvider: isAppCloneUserPair for user 0: false
+11-16 01:54:29.060  1394  1594 W MediaProvider: isAppCloneUserPair for user 0: false
+11-16 01:54:29.060  1394  1594 W MediaProvider: isAppCloneUserPair for user 0: false
+11-16 01:54:29.102   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.103   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.103   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10126} in 1ms
+11-16 01:54:29.103   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.103   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.103   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20126} in 0ms
+11-16 01:54:29.209  2270  2381 D ProfileInstaller: Installing profile for com.fox.runner.debug
+11-16 01:54:29.235   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.236   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.236   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10114} in 1ms
+11-16 01:54:29.236   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.236   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.236   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20114} in 0ms
+11-16 01:54:29.292   549   936 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10149, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:29.297   549   573 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10149, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:29.297  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: PAUSED
+11-16 01:54:29.298  2270  2270 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@52ff50
+11-16 01:54:29.298   866   966 D SplashScreenView: Build android.window.SplashScreenView{fa0bcad V.E...... ......ID 0,0-0,0}
+11-16 01:54:29.298   866   966 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-16 01:54:29.298   866   966 D SplashScreenView: Branding: view: android.view.View{bbb3be2 G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-16 01:54:29.300  1257  1257 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=9, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.fox.runner.debug.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity }
+11-16 01:54:29.316   422   422 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-16 01:54:29.323   358   358 D Zygote  : Forked child process 2382
+11-16 01:54:29.324   352   352 I netd    : tetherGetStats() -> {[]} <1.48ms>
+11-16 01:54:29.331  2382  2382 I nner.debug.test: Late-enabling -Xcheck:jni
+11-16 01:54:29.381  2382  2382 I nner.debug.test: Using CollectorTypeCMC GC.
+11-16 01:54:29.385   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.385   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.385   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10125} in 0ms
+11-16 01:54:29.386   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.386   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.386   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20125} in 1ms
+11-16 01:54:29.386  2382  2382 W nner.debug.test: Unexpected CPU variant for x86: x86_64.
+11-16 01:54:29.386  2382  2382 W nner.debug.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, default
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={10086} in 1ms
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+11-16 01:54:29.399   549   787 D InetDiagMessage: Destroyed live tcp sockets for uids={20086} in 0ms
+11-16 01:54:29.408  2382  2382 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+11-16 01:54:29.409   431   441 I adbd    : jdwp connection from 2382
+11-16 01:54:29.492  2382  2382 W ziparchive: Unable to open '/data/app/~~GLzRJXfEkJWsqAHOqCb9Cw==/com.fox.runner.debug.test-LgWJOb064tqreIHo_no3mQ==/base.dm': No such file or directory
+11-16 01:54:29.495  2382  2382 W ziparchive: Unable to open '/data/app/~~GLzRJXfEkJWsqAHOqCb9Cw==/com.fox.runner.debug.test-LgWJOb064tqreIHo_no3mQ==/base.dm': No such file or directory
+11-16 01:54:29.686  2382  2382 D nativeloader: Configuring clns-7 for other apk /data/app/~~GLzRJXfEkJWsqAHOqCb9Cw==/com.fox.runner.debug.test-LgWJOb064tqreIHo_no3mQ==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~GLzRJXfEkJWsqAHOqCb9Cw==/com.fox.runner.debug.test-LgWJOb064tqreIHo_no3mQ==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.fox.runner.debug.test
+11-16 01:54:29.700  2382  2382 V GraphicsEnvironment: Currently set values for:
+11-16 01:54:29.703  2382  2382 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-16 01:54:29.704  2382  2382 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-16 01:54:29.704  2382  2382 V GraphicsEnvironment: Global.Settings values are invalid: number of packages: 0, number of values: 0
+11-16 01:54:29.704  2382  2382 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-16 01:54:29.826  2382  2382 W HWUI    : Unknown dataspace 0
+11-16 01:54:29.870   422   443 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10149 pid=0
+11-16 01:54:29.870   422   443 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10149 => denied (106 us)
+11-16 01:54:29.870   422   443 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10149 pid=0
+11-16 01:54:29.870   422   443 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10149 => denied (28 us)
+11-16 01:54:29.870   422   443 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10149 pid=0
+11-16 01:54:29.870   422   443 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10149 => denied (19 us)
+11-16 01:54:29.871  2382  2396 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 01:54:29.872  2382  2396 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 01:54:29.894  2382  2396 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 01:54:29.961  2270  2270 D VRI[P0Activity]: visibilityChanged oldVisibility=true newVisibility=false
+11-16 01:54:30.005   549  2401 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+11-16 01:54:30.005   549  2401 I EGL_emulation: Opening libGLESv2_emulation.so
+11-16 01:54:30.012   549  2401 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-16 01:54:30.060  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: STOPPED
+11-16 01:54:30.060  2270  2270 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@52ff50
+11-16 01:54:30.065  2270  2270 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@c476868
+11-16 01:54:30.065  2270  2270 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@52ff50 in: DESTROYED
+11-16 01:54:30.066  2270  2270 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-16 01:54:30.070   149   149 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-16 01:54:30.070  2382  2396 I Gralloc4: mapper 4.x is not supported
+11-16 01:54:30.154   549   618 W InputManager-JNI: Input channel object '6c88473 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity (client)' was disposed without first being removed with the input manager!
+11-16 01:54:30.162  2270  2270 I TrackRecordingService: newGpsStatus: 2131820797
+11-16 01:54:30.197  1257  1257 I TopTaskTracker: onTaskRemoved: taskId=8
+11-16 01:54:30.197  1257  1257 I TopTaskTracker: onTaskRemoved: taskId=8
+11-16 01:54:30.197   549   655 I BluetoothSystemServer: AirplaneModeListener: Trigger callback. previousMode=true, isOn=false, isOnOverrode=false, isMediaConnected=false
+11-16 01:54:30.197   549   655 D BluetoothSystemServer: BluetoothManagerService: delayModeChangedIfNeeded(onAirplaneModeChanged): state=OFF Airplane.isOnOverrode=false Airplane.isOn=false isSatelliteModeOn()=false delayed=0ms
+11-16 01:54:30.197   549   655 D BluetoothSystemServer: BluetoothManagerService: isBluetoothPersistedStateOn: 2
+11-16 01:54:30.197   549   655 I BluetoothSystemServer: BluetoothServerProxy: setBluetoothPersistedState(1)
+11-16 01:54:30.198   549   655 D BluetoothSystemServer: BluetoothManagerService: handleAirplaneModeChanged(false): currentState=OFF
+11-16 01:54:30.198   549   655 D BluetoothSystemServer: BluetoothManagerService: 11-16 01:54:30.198 	Package [android] requested to [Enable]. 	Reason is AIRPLANE_MODE
+11-16 01:54:30.198   549   655 D BluetoothSystemServer: BluetoothManagerService: MESSAGE_ENABLE(quietEnable=0, isBle=0): mAdapter=null
+11-16 01:54:30.198   549   655 I BluetoothSystemServer: BluetoothServerProxy: setBluetoothPersistedState(1)
+11-16 01:54:30.198   549   655 D BluetoothSystemServer: BluetoothManagerService: binding Bluetooth service
+11-16 01:54:30.207  1020  1020 I PhoneGlobals: handleAirplaneModeChange: isAirplaneNewlyOn=false
+11-16 01:54:30.221   549   655 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 1002, packageName = null, attributionTag = null, token = android.os.Binder@e6a0f35, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-16 01:54:30.222  1020  1020 I PhoneGlobals: Turning radio on - airplane
+11-16 01:54:30.244   549   780 D WifiController: Airplane mode disabled, determine next state
+11-16 01:54:30.244   549   780 D WifiActiveModeWarden: Starting primary ClientModeManager in connect mode
+11-16 01:54:30.244   549   780 D WifiController: DisabledState.exit()
+11-16 01:54:30.244   549   780 D WifiController: EnabledState.enter()
+11-16 01:54:30.244   549   780 D WifiClientModeManager[49369:unknown]: entering IdleState
+11-16 01:54:30.252   358   358 D Zygote  : Forked child process 2428
+11-16 01:54:30.264   549   780 I WifiHalAidlImpl: Obtained the IWifi binder. Local Version: 2
+11-16 01:54:30.265   549   780 I WifiHalAidlImpl: Remote Version: 2
+11-16 01:54:30.266   391   404 W android.hardware.wifi-service: AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-16 01:54:30.266   549   780 I WifiHalAidlImpl: Initialization is complete
+11-16 01:54:30.272   549   780 E WifiChipAidlImpl: getMode failed with service-specific exception: android.os.ServiceSpecificException:  (code 5)
+11-16 01:54:30.273   549   780 I WifiVendorHal: Vendor Hal started successfully
+11-16 01:54:30.278   549   780 E WifiChipAidlImpl: getMode failed with service-specific exception: android.os.ServiceSpecificException:  (code 5)
+11-16 01:54:30.279   549   780 I HalDevMgr: currentModeId=0, requestModeId=0, currentModeIdValid=false
+11-16 01:54:30.282   549   780 D HalDevMgr: updateRttController: no one is interested in RTT controllers
+11-16 01:54:30.283   391   391 W android.hardware.wifi-service: AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-16 01:54:30.283   391   391 W android.hardware.wifi-service: AIBinder_linkToDeath is being called with a non-null cookie and no onUnlink callback set. This might not be intended. AIBinder_DeathRecipient_setOnUnlinked should be called first.
+11-16 01:54:30.283   549   780 D WifiNl80211Manager: Setting up interface for client mode: wlan0
+11-16 01:54:30.294   352   352 I netd    : interfaceGetCfg(wlan0) -> {InterfaceConfigurationParcel{ifName: wlan0, hwAddr: 02:15:b2:00:00:00, ipv4Addr: 0.0.0.0, prefixLength: 0, flags: [up, broadcast, multicast]}} <0.14ms>
+11-16 01:54:30.296   549   780 I WifiNative: Interface state changed on Iface:{Name=wlan0,Id=1,Type=STA_SCAN}, isUp=true
+11-16 01:54:30.297   549   780 I WifiNative: Successfully setup Iface:{Name=wlan0,Id=1,Type=STA_SCAN}
+11-16 01:54:30.297   549   780 E SupplicantStaIfaceHalAidlImpl: Can't call getKeyMgmtCapabilities, ISupplicantStaIface is null for iface=wlan0
+11-16 01:54:30.313  2270  2290 I TestRunner: finished: noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation(de.dennisguse.opentracks.p0.map.P07HomeMapTest)

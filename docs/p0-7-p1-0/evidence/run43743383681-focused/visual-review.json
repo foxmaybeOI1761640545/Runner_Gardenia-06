@@ -1,0 +1,279 @@
+{
+  "source": "e08887d479719699e474e8407d4ac90f98fc128a",
+  "run": "43743383681",
+  "scope": "P07HomeMapTest only; full regression still required",
+  "tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 2,
+    "executed": 2,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "sha256": "1063dd93068356eb7934416ddc44e312ed325e956ebea8e80f2944adbdc87175",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral map area, current-position marker and truthful no-map/no-features state visible; no invented roads."
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "sha256": "8de0d58e9832afc6ada29847d397798572af66feb3899d0a211f81d395c5025e",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral map area, current-position marker and truthful no-map/no-features state visible; no invented roads."
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "sha256": "9f92eb051b81993e3e54347f93f4a170ef4855e653a5ea6ace82edfca956efd2",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral map area, current-position marker and truthful no-map/no-features state visible; no invented roads."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "sha256": "fa0a64ac94025d094ba084970c1a3a0ecc5ad9c0a7e2096a3b1d30f39c1f7fb7",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "sha256": "2ce69a6ca54efb162409116fa2c28627bec449354e785c72cd51c66c2d63d76f",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "sha256": "dbd711fe490b9c6c68432ebfd6f55df0cd1e700e26ba6653701c1ebe88e5ca19",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "sha256": "089bd037b50ad7ed396f2e91e7c228b68e02cbf8968987a8e545b134e0cdcdea",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "sha256": "a6aa6f192273bf8a48a034c15bb791cf3e6b804b46bfa533e7949c29ed40fec7",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "sha256": "7081a4855dd80e29f7a2615ff76fcb7bc62b182208dd8381ed2231f64fa25fb3",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "sha256": "ec8f0f98a85e8e25e7bbf28b5ad1f811004f6790ee79feb5e16b7128b8ac5fdd",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "sha256": "0f57addc8170dc25f31dc78da5a3b3bb85f95b60782642281d1fa83f264e03b1",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "sha256": "9c5c85bec4fd885857b4437581671af9963435663c942c71bc8a66d6d6351197",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "sha256": "05e2af8641d174e7f3facda48948f2466d95435eb6f4630001db3bac285d2045",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "sha256": "709cf5213446b33d157c0ece919963fe10ba4b0bda7492f6d7d27290741e2cab",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "sha256": "d77a766422441eef75f04101bd16e8b618f52d1a8d5b2a4d75514c465c5512b2",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "sha256": "613e6c358acf80b7fba72608ac17dc867bef741dcdb1527a2619a0f2f9f553b0",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "sha256": "1cc0f9749e1833def4f6d5d84373ed47df41275f711d5ed372156bd168eb9caa",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "sha256": "b7ed1124c69aa10456b915764b97becfc3ac4ee8a56722f25d7f7b3eff1140b9",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "sha256": "b1f8d6472ccddc88da5e96c149cde72a97b9e9a1631c2ab0b23b401d3f146bf8",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "sha256": "dc9e8a68c5b1cdaabb496e7b7ab070fa527162bc7035f864fb04e6c6c21808db",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "sha256": "0a3980198da7ec57b86cc7123ab8d93a382630444e0f1deff40c26f3b496ed59",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "sha256": "f8f9203f50704d762827d59641c38d6a1166a5eead1aa4977a8c5f94772e9304",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "sha256": "e0ee2cc21787daea2c6ab36b3463fe35127f9c2098f96f086f00aba2d49f6b4a",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "sha256": "9c8c03578441f06cfd4362b8aed8c3293730150eb2d9ce99c82a930490c100e1",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "sha256": "9a2770cd7eac68e17e2fce45e4888c4eabcfb4f10f31c5b40df1f7c4f2ecbed8",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "sha256": "cb8470c967f7586e177793a73c0e6638242d4a4a724b15050b6043985bd1e047",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "sha256": "6038246d1a8e336e6fe387a630bcad4075cb007882b8c4cefd963fbd537ab858",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "sha256": "e4e91e5414586a9e84ff38ddff8cf9c46d5c9e451ab4e1a96d691302f8866244",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "sha256": "fb40691470db4dc3587f4ec0f601e5e3edb0d403a31a676c7c66532673404864",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "sha256": "f9d9532380315436cb183fa7963a65b8611168c39d5deb15d5f1a8be41ffdbb9",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "sha256": "1e337127a41d8d028c03845fa2035fb643346b945a3c8b38245033f4babc137a",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "sha256": "37b8ef74d8ae7159b91ebe4be428ba59f5c2c1e98ca5561c7519abf73f154682",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "sha256": "c3d0ea3297b5f0f496a8bba472cfb04ee47451822cf905b8633c0348e1461816",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "sha256": "9ed826ef1c07560646e18e0af6e2bfd60e61ae8143709f08be12675c5c6c202e",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "sha256": "8b81a6636c4eb011e3c3ff31ae6d8e903e5e4104fcfd749c36729cd2db6cc533",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real roads/place labels and opaque current-position marker visible; map controls separated; primary workout action available after scrolling."
+    }
+  ],
+  "visualReviewRequired": false,
+  "stageAccepted": false,
+  "artifactId": 14173223799,
+  "visualReviewPassed": true,
+  "reviewMethod": "Actual API35 native PNGs visually inspected in eight four-image sheets plus three empty-state images; all 35 reviewed. Sheets preserve full original frame dimensions. No HTML substitute.",
+  "limits": "Focused visual checkpoint only. Complete regression is still running. Synthetic GPS input; no real-phone GNSS, power or BLE hardware acceptance."
+}
