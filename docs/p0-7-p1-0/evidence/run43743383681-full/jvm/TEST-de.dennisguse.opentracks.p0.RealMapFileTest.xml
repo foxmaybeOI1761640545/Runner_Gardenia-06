@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.RealMapFileTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-15T17:52:37.059Z" hostname="ip-10-0-129-19" time="0.295">
+  <properties/>
+  <testcase name="actualMapDigestAndTargetCitiesContainFeatures" classname="de.dennisguse.opentracks.p0.RealMapFileTest" time="0.294"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

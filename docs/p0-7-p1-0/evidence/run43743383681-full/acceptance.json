@@ -1,0 +1,397 @@
+{
+  "source": "e08887d479719699e474e8407d4ac90f98fc128a",
+  "run": "43743383681",
+  "counts": {
+    "helpers": {
+      "tests": 141,
+      "executed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android": {
+      "tests": 459,
+      "executed": 458,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    }
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "bytes": 144236,
+      "sha256": "a5f9964f213d625d6489669304a779c183e6e54b871663454faa056688c896eb",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "bytes": 144407,
+      "sha256": "98dd4a926dc28a3a11d082ae45592936a15f73734649a6f66edb1ac29346b4a5",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "bytes": 143155,
+      "sha256": "f1dd34b1b72d6949618039b4a30c321091375eb015ae8fe9ea8c5bafd4a9e1a8",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "bytes": 158192,
+      "sha256": "959fc9a3aa77de2ca519f976e6957217fbcd5aeffd901984a0843840a3924868",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "bytes": 170669,
+      "sha256": "07c0e8454f849d6b91e96018add5e02acdc8cfdffb661db0c3d5e940f94ea075",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "bytes": 164892,
+      "sha256": "fb3f529679f17b3ce0d0e97c2f0be4db6e729a1b43bb9eb3e5716526b2a438b0",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "bytes": 178140,
+      "sha256": "f0e8109d891897da251db91f3ef67004f5553ab8f559e998c6386de5ad10b924",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "bytes": 157306,
+      "sha256": "b3740e1b419cfa0ba9c415dc2d5a02807e1b77b73c96843189bcdcc6a7a987f4",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "bytes": 169985,
+      "sha256": "9f336c1fc4b640454b94691fe2fe4600c9367739fb56f2ce21c77dd9444e7f91",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "bytes": 164381,
+      "sha256": "e26a9b176d8fb59f98dd2ec96a0f91571a208764a40938b250b4fbe2424be25e",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "bytes": 176680,
+      "sha256": "7400bae8650095266aa1133b449bd30fda69e93f309877225580b6ac56374d27",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "bytes": 166696,
+      "sha256": "53819a9683dd1dfeac401e44f911f5d6bfcce9ab39c2f7e7c1324a73d65c0183",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "bytes": 173808,
+      "sha256": "a257b33fee4ca767a33e2bcc5cbfdab4c9bab64b046a55c0b188cd48f75e90ed",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "bytes": 173441,
+      "sha256": "2d5683816e94a0acb7dde10e2c0d1bafb7db01ec63dbaec8abb25568886f3674",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "bytes": 180123,
+      "sha256": "01a50be186a523c3c4f9f5c96e603ee67ff28844aba617c5a28f33e4034f9cbb",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "bytes": 164751,
+      "sha256": "85822c9454ce63b250d81cf70d7bdb358adce202a08a9693e4d771b2515e1d42",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "bytes": 172121,
+      "sha256": "a2ff9547916c767e09c8c8d868c394f93fabed37519acff78f8dda27e2bac42f",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "bytes": 171128,
+      "sha256": "a827b483e1c39cbd9bba45461b5a5829873bf357a3e9465eb392f01587ec86d4",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "bytes": 178038,
+      "sha256": "99ba751e5676b0d94bd55baf78a21b5639159ef14184b0740a2fc452e1f98946",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "bytes": 159502,
+      "sha256": "0bbb633f80709f9673aa73c24e16efaa078a25734ea2fcaf6c185d5f73af0da2",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "bytes": 161610,
+      "sha256": "bd65501864bef083ddaf2ded58fde7423130d66cb689365268dd914bbbd495f9",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "bytes": 168813,
+      "sha256": "63f1f347ba7be69fb7f31e11ec569367199938626019c81e63c7e7836d8903bd",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "bytes": 170396,
+      "sha256": "72c91e06d602f067151797d02225a0b276f2938430086d078a057422c420e550",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "bytes": 159061,
+      "sha256": "cb233059c4e90c1c1756c85379af93104136ee2399c0e4c90765337fb9c5f71c",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "bytes": 160917,
+      "sha256": "4fb163d4002a5f395674356d75c50c61b0451f05900de4feff776a002fd42c52",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "bytes": 168413,
+      "sha256": "828e23290875ab80fa6bd3850abdc217a22fe9c603a5a1ba9b7e69cdbe580200",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "bytes": 170129,
+      "sha256": "69e191653bede98872796da7570b44ed1a5c1309165db9152f84d57e07054cce",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "bytes": 148305,
+      "sha256": "3b31eb649451723fe68b818f6868f416575823232abbff4ed0753e7b0a850ffb",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "bytes": 159665,
+      "sha256": "7f1909f42db67218062d4bf2383874ac494efc43bae164705189ba4c6fc41183",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "bytes": 155479,
+      "sha256": "521bac3ad13b59f558a87a0611ab77d71c72b6c258b5f027f7cc73bb94b424ed",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "bytes": 166680,
+      "sha256": "63c9215d35f2124e06d397339477bdf04883a39a890d3c0929c9c2d3f6b94b11",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "bytes": 148058,
+      "sha256": "ead7bb06f01c179ee574e103596a154da3033556203f3d459eb3fa8855956df2",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "bytes": 159277,
+      "sha256": "b13600b00f5bb82340a3decb40b2edf076640499abea32fbaa22404ee62e5a37",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "bytes": 155275,
+      "sha256": "4508ab0cca6e86fad2f74057614aa7738c8a75f320f056d759df4a0937a90330",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "bytes": 166464,
+      "sha256": "913a872577e42b855686a85cd1c2658b2854ca7614e9383c773781e9e52aaaa6",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    }
+  ],
+  "visualReviewComplete": true,
+  "stageAccepted": true,
+  "artifactId": 14174890299,
+  "artifactSha256": "3f1a7876a034a2f4b80193e5f85cc6b37f23f5726bc5990959f8e61b55daaaae",
+  "visualReviewScope": "Separate focused 35-image native checkpoint in same run/source; see ../run43743383681-focused/visual-review.json. Full regression images are indexed below, not claimed as separately visually reviewed.",
+  "debugApk": {
+    "file": "runner-gardenia_v0.1.0-p0.6.1_6779-reproducible-debug.apk",
+    "bytes": 14381516,
+    "sha256": "af5929dad26bfdab51dbd6f31c6c0217e233ee07fc3ea27847d3750f49480b95",
+    "formalRelease": false,
+    "fixedKeySignedRelease": false
+  }
+}
