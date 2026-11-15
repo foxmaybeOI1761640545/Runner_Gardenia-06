@@ -91,6 +91,17 @@ jobs:
           path: build/reports/p07-focused/
           if-no-files-found: error
           retention-days: 90
+      - name: Actual denied and granted permissions in independently restarted API35 processes
+        if: steps.plan.outputs.stage == '2'
+        run: python3 .github/scripts/p07_permission_smoke.py
+      - name: Preserve actual permission results and native screenshots before full regression
+        if: steps.plan.outputs.stage == '2' && success()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Clean-navigation-permissions-${{ github.run_id }}
+          path: build/reports/p07-permissions/
+          if-no-files-found: error
+          retention-days: 90
       - name: Full API35 regression with original GPS ownership assertions
         run: |
           timeout --signal=INT --kill-after=30s 50m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000

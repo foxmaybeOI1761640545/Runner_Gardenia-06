@@ -81,7 +81,8 @@ def gate():
   proof['passed']=all(proof[k]['passed'] for k in ['helpers','jvm','android']) and proof['android']['skipped']==1 and proof['jvm']['skipped']==0 and skips==[('de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest','recording_stopGPS_noop')]
   if proof['plan']['stage']==2:
    gps=json.loads(Path('build/reports/p07-gps-focused/focused.json').read_text());proof['gpsFocused']=gps
-   proof['passed']=proof['passed'] and gps['source']==proof['plan']['commit'] and gps['tests']['passed'] and proof['android']['tests']>=463
+   permissions=json.loads(Path('build/reports/p07-permissions/result.json').read_text());proof['permissions']=permissions
+   proof['passed']=proof['passed'] and gps['source']==proof['plan']['commit'] and gps['tests']['passed'] and proof['android']['tests']>=464 and permissions['passed'] and permissions['source']==proof['plan']['commit']
  except Exception as error:proof['error']=str(error)
  save('gate.json',proof)
  print(json.dumps(proof,indent=2))
