@@ -57,7 +57,8 @@ public final class OfflineMapView extends FrameLayout {
                 tileCache.getCapacity(),map.getWidth(),map.getHeight(),frame==null?0:frame.width,frame==null?0:frame.height,
                 map.getModel().frameBufferModel.getOverdrawFactor(),renderedTiles.get());
     }
-    private final List<Layer> overlays=new ArrayList<>();
+    private final List<Layer> routeOverlays=new ArrayList<>();
+    private Layer positionOverlay;
     private List<RouteGeometry.Point> route=List.of();
     private Position position;
     private int segmentCount;
@@ -82,26 +83,41 @@ public final class OfflineMapView extends FrameLayout {
         renderer=new DiagnosticRenderer(cache,file,map.getModel().mapViewPosition);
         renderer.setXmlRenderTheme(MapsforgeThemes.DEFAULT);map.getLayerManager().getLayers().add(renderer);
         map.setCenter(file.startPosition());map.setZoomLevel(file.startZoomLevel());
-        drawOverlays();
+        drawRouteOverlays();
+        drawPositionOverlay();
     }
-    public void bind(List<RouteGeometry.Point> points,Position current){route=List.copyOf(points);position=current;drawOverlays();}
-    private void drawOverlays(){
-        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:overlays)layers.remove(layer);overlays.clear();segmentCount=0;
+    public void bind(List<RouteGeometry.Point> points,Position current){
+        List<RouteGeometry.Point> next=List.copyOf(points);
+        boolean routeChanged=!route.equals(next);
+        route=next;
+        position=current;
+        if(routeChanged)drawRouteOverlays();
+        drawPositionOverlay();
+    }
+    private void drawRouteOverlays(){
+        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:routeOverlays)layers.remove(layer);routeOverlays.clear();segmentCount=0;
         for(var segment:MapRouteSegments.split(route)){
             var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
             Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
             line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
-            overlays.add(line);layers.add(line);segmentCount++;
+            routeOverlays.add(line);layers.add(line);segmentCount++;
             if(segment.size()==1){
                 var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
                 var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
-                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot);
+                dot.setScaleRadius(false);routeOverlays.add(dot);layers.add(dot);
             }
         }
+        map.getLayerManager().redrawLayers();
+    }
+    private void drawPositionOverlay(){
+        if(map==null)return;
+        var layers=map.getLayerManager().getLayers();
+        if(positionOverlay!=null){layers.remove(positionOverlay);positionOverlay=null;}
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker);
+            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);
+            marker.setScaleRadius(false);positionOverlay=marker;layers.add(marker);
         }
         map.getLayerManager().redrawLayers();
     }
@@ -116,5 +132,5 @@ public final class OfflineMapView extends FrameLayout {
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}routeOverlays.clear();positionOverlay=null;renderer=null;tileCache=null;segmentCount=0;}
 }
