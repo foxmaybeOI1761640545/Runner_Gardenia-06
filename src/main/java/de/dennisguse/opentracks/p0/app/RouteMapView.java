@@ -94,6 +94,11 @@ public final class RouteMapView extends FrameLayout {
         return points.size();
     }
 
+    /** True when the real Mapsforge renderer, rather than the blank fallback, is loaded. */
+    public boolean hasOfflineMap() {
+        return hasMap && offlineMap.mapView() != null;
+    }
+
     private void updateDescription() {
         if (hasMap) {
             int segments = 0;
