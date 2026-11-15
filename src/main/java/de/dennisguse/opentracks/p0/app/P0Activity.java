@@ -36,6 +36,7 @@ public class P0Activity extends AbstractActivity {
 
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state);
+        if(state!=null)binding.p04Route.restoreViewport(state.getBundle("homeMap"));
         model=new ViewModelProvider(this).get(P0RecordingViewModel.class);
         locationRequest=registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
                 result->{updateLocationPermission();model.completePermission(hasLocation());});
@@ -62,7 +63,7 @@ public class P0Activity extends AbstractActivity {
         P0Navigation.bind(this);
         binding.p04GpsStatus.setOnClickListener(view->startActivity(new android.content.Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)));
         dashboard=new DashboardRenderer(this,binding);
-        binding.p04Route.setOnClickListener(v->startActivity(de.dennisguse.opentracks.p0.map.P06MapActivity.intent(this,model.snapshot().getValue().session().trackId())));
+
         routeModel=new ViewModelProvider(this).get(RoutePreviewModel.class);
         routeModel.route().observe(this,value->{currentRoute=value;binding.p04Route.bind(value,currentGps);});
         chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);
@@ -70,8 +71,9 @@ public class P0Activity extends AbstractActivity {
         updateLocationPermission();
     }
     @Override protected void onResume(){super.onResume();if(dashboard!=null&&model!=null&&model.snapshot().getValue()!=null)dashboard.bind(DashboardState.from(this,model.snapshot().getValue()));}
-    @Override protected void onStart() {super.onStart();model.attach();}
-    @Override protected void onStop() {model.detach();super.onStop();}
+    @Override protected void onSaveInstanceState(@NonNull Bundle state){state.putBundle("homeMap",binding.p04Route.saveViewport());super.onSaveInstanceState(state);}
+    @Override protected void onStart() {super.onStart();binding.p04Route.start();model.attach();}
+    @Override protected void onStop() {binding.p04Route.stop();model.detach();super.onStop();}
     private boolean hasLocation() {return ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED;}
     private void updateLocationPermission() {
         binding.p0LocationStatus.setText(hasLocation()?R.string.p0_location_granted:R.string.p0_location_needed);
