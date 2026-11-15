@@ -20,6 +20,7 @@ import java.util.*;
 /** Owns exactly one native offline renderer. No downloader or network tile layer. */
 public final class OfflineMapView extends FrameLayout {
     private MapView map;
+    private MapFile mapFile;
     private DiagnosticRenderer renderer;
     /** Query the same key as TileLayer, without a lossy history of completed jobs. */
     private static final class DiagnosticRenderer extends TileRendererLayer {
@@ -65,7 +66,9 @@ public final class OfflineMapView extends FrameLayout {
     private final java.util.concurrent.atomic.AtomicInteger renderedTiles=new java.util.concurrent.atomic.AtomicInteger();
     public OfflineMapView(Context context){super(context);setContentDescription(context.getString(de.dennisguse.opentracks.R.string.p06_offline_map));}
     public void load(MapFile file){
-        clear();AndroidGraphicFactory.createInstance(getContext().getApplicationContext());MapRenderBudget.configure();
+        clear();
+        mapFile=file;
+        AndroidGraphicFactory.createInstance(getContext().getApplicationContext());MapRenderBudget.configure();
         map=new MapView(getContext());map.getModel().frameBufferModel.setOverdrawFactor(MapRenderBudget.OVERDRAW);map.setClickable(true);map.getMapScaleBar().setVisible(true);map.setBuiltInZoomControls(true);map.setZoomLevelMin((byte)2);map.setZoomLevelMax((byte)20);
         map.getMapZoomControls().setAutoHide(false);
         map.getMapZoomControls().getButtonZoomIn().setId(de.dennisguse.opentracks.R.id.p06_zoom_in);
@@ -132,5 +135,9 @@ public final class OfflineMapView extends FrameLayout {
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();removeView(map);map=null;}routeOverlays.clear();positionOverlay=null;renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){
+        if(map!=null){map.destroyAll();removeView(map);map=null;}
+        routeOverlays.clear();positionOverlay=null;renderer=null;tileCache=null;segmentCount=0;
+        if(mapFile!=null){mapFile.close();mapFile=null;}
+    }
 }
