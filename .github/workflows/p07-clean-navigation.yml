@@ -67,6 +67,14 @@ jobs:
       - name: Focused actual home map acceptance before the complete regression
         run: |
           timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.map.P07HomeMapTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Preserve actual focused native evidence before the full rerun clears outputs
+        run: python3 .github/scripts/p07_stage.py focused
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: Clean-navigation-home-review-${{ github.run_id }}
+          path: build/reports/p07-focused/
+          if-no-files-found: error
+          retention-days: 90
       - name: Full API35 regression with original GPS ownership assertions
         run: |
           timeout --signal=INT --kill-after=30s 50m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000

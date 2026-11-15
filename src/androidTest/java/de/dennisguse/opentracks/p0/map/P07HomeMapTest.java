@@ -36,6 +36,9 @@ public class P07HomeMapTest {
         font=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("settings get system font_scale");
         size=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm size");density=de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("wm density");
         de.dennisguse.opentracks.p0.SystemThemeTestUtils.shell("cmd connectivity airplane-mode enable");
+        // Disconnect emulator/provider inputs left by other tests; continue through
+        // the same service/GpsHandler with deterministic synthetic measurements.
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->de.dennisguse.opentracks.p0.P0GpsPreparationTest.fixture(service));
     }
     @After public void after()throws Exception{
         InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.releaseMapGps(this));
@@ -55,6 +58,22 @@ public class P07HomeMapTest {
         android.location.Location fix=point.toLocation();fix.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
         service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(fix);
         view.bind(new RoutePreviewModel.Result(List.of(),false,false),point);
+    }
+    private void settledRealMap(ActivityScenario<P0Activity> screen){
+        long end=SystemClock.uptimeMillis()+15000;long[] lastFix={0};boolean[] settled={false};
+        do{
+            screen.onActivity(a->{
+                var h=home(a);long now=SystemClock.uptimeMillis();
+                if(now-lastFix[0]>=1000){bind(h,position(23.7,117.43));lastFix[0]=now;}
+                var d=h.offlineMap().diagnosticViewport();
+                settled[0]=d!=null&&d.center().equals(new LatLong(23.7,117.43))&&!d.tiles().isEmpty()
+                    &&d.tiles().stream().allMatch(OfflineMapView.TileState::cached)
+                    &&a.getString(R.string.p07_map_ready).contentEquals(h.mapStatus());
+            });
+            if(settled[0]){SystemClock.sleep(300);return;}
+            SystemClock.sleep(100);
+        }while(SystemClock.uptimeMillis()<end);
+        fail("Real home capture requires the intended location, actual features and every visible tile cached");
     }
     @Test public void noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation()throws Exception{
         int records=new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().size();
@@ -77,6 +96,9 @@ public class P07HomeMapTest {
                 assertTrue(view.isFollowing());assertEquals(new LatLong(23.7,117.43),view.mapView().getModel().mapViewPosition.getCenter());
                 var d=view.diagnosticViewport();assertTrue(d.cacheCapacity()<=64);assertTrue(d.cacheCapacity()*(long)d.tileSize()*d.tileSize()*4<=32L*1024*1024);
             });
+            screen.onActivity(a->home(a).offlineMap().mapView().getMapZoomControls().getButtonZoomIn().performClick());SystemClock.sleep(350);
+            screen.onActivity(a->{assertEquals(16,home(a).offlineMap().mapView().getModel().mapViewPosition.getZoomLevel());home(a).offlineMap().mapView().getMapZoomControls().getButtonZoomOut().performClick();});SystemClock.sleep(350);
+            screen.onActivity(a->assertEquals(15,home(a).offlineMap().mapView().getModel().mapViewPosition.getZoomLevel()));
             // Dispatch genuine touch events to the map, exercising the drag-follow boundary.
             screen.onActivity(a->{var m=home(a).offlineMap().mapView();long t=SystemClock.uptimeMillis();
                 var down=android.view.MotionEvent.obtain(t,t,0,120,60,0);var move=android.view.MotionEvent.obtain(t,t+100,2,180,60,0);var up=android.view.MotionEvent.obtain(t,t+200,1,180,60,0);
@@ -119,7 +141,10 @@ public class P07HomeMapTest {
                         a.findViewById(R.id.p07_home_locate).getGlobalVisibleRect(locate);
                         home(a).offlineMap().mapView().getMapZoomControls().getGlobalVisibleRect(zoom);
                         assertFalse("Recenter must not cover native zoom controls",android.graphics.Rect.intersects(locate,zoom));
-                    });SystemClock.sleep(800);
+                        android.graphics.Rect metric=new android.graphics.Rect();a.findViewById(R.id.p05_primary_metric).getGlobalVisibleRect(metric);
+                        assertFalse("Primary metric must not cover map zoom",android.graphics.Rect.intersects(metric,zoom));
+                        assertFalse("Primary metric must not cover recenter",android.graphics.Rect.intersects(metric,locate));
+                    });settledRealMap(screen);
                     screen.onActivity(a->assertEquals(a.getString(R.string.p05_gps_fixed),((android.widget.TextView)a.findViewById(R.id.p04_gps_status)).getText().toString()));
                     P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
                 }

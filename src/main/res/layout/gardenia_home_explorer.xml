@@ -14,15 +14,15 @@
           <com.google.android.material.button.MaterialButton android:id="@+id/p04_gps_status" style="@style/P05CompactStatus" android:text="@string/p05_gps_unavailable" app:icon="@drawable/p04_gps" />
           <com.google.android.material.button.MaterialButton android:id="@+id/p0_devices" style="@style/P05CompactStatus" android:text="@string/p05_heart_disconnected" app:icon="@drawable/p04_bluetooth" />
         </LinearLayout>
-        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="4dp">
-          <de.dennisguse.opentracks.p0.app.RouteMapView android:id="@+id/p04_route" android:layout_width="match_parent" android:layout_height="238dp" android:contentDescription="@string/p04_route_empty" />
-          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="bottom|start" android:layout_margin="14dp" android:paddingHorizontal="12dp" android:background="@drawable/p04_map_readout">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" android:layout_marginBottom="4dp">
+          <de.dennisguse.opentracks.p0.app.RouteMapView android:id="@+id/p04_route" android:layout_width="match_parent" android:layout_height="132dp" android:contentDescription="@string/p04_route_empty" />
+          <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" android:paddingHorizontal="12dp" android:background="@drawable/p04_map_readout">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="6dp" android:paddingBottom="6dp" android:id="@+id/p05_primary_metric">
               <TextView android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_distance" android:letterSpacing="0.10" android:gravity="start" android:id="@+id/p05_primary_label" />
               <TextView android:id="@+id/p02_distance_value" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Value" android:textSize="46sp" android:gravity="start" android:textColor="?attr/gardeniaAccentText" android:layout_marginTop="6dp" android:fontFamily="sans-serif-condensed" app:autoSizeTextType="uniform" app:autoSizeMinTextSize="24sp" app:autoSizeMaxTextSize="46sp" app:autoSizeStepGranularity="1sp" android:maxLines="2" />
             </LinearLayout>
           </LinearLayout>
-        </FrameLayout>
+        </LinearLayout>
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/p03_state_card" android:paddingTop="4dp" android:paddingBottom="4dp">
           <TextView android:id="@+id/p0_recording_state" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle" android:textColor="?attr/gardeniaAccentText" android:textSize="12sp" android:textStyle="bold" android:accessibilityLiveRegion="polite" />
           <TextView android:id="@+id/p02_status_detail" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/P04Label" android:text="@string/p02_idle_detail" android:textSize="11sp" android:layout_marginTop="3dp" />

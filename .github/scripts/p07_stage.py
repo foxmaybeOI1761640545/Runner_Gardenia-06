@@ -1,5 +1,5 @@
 """Clean branch validation only. No credentials, signing or publication capability."""
-import json,os,subprocess,sys,unittest
+import json,os,subprocess,sys,unittest,shutil,tempfile,hashlib
 from pathlib import Path
 from check_test_results import inspect
 
@@ -21,6 +21,25 @@ def helpers():
  proof={'tests':r.testsRun,'executed':r.testsRun-len(r.skipped),'failures':len(r.failures),'errors':len(r.errors),'skipped':len(r.skipped),'passed':r.wasSuccessful() and r.testsRun>0 and not r.skipped}
  save('helpers.json',proof)
  if not proof['passed']:raise SystemExit('Helper regression failed')
+def focused():
+ plan=json.loads(Path('release-plan.json').read_text())
+ if plan['commit']!=os.environ['GITHUB_SHA']:raise ValueError('Wrong focused source')
+ with tempfile.TemporaryDirectory() as directory:
+  source=Path(directory);shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/map/P07HomeMapTest.java',source/'P07HomeMapTest.java')
+  report=inspect(Path('build/outputs/androidTest-results'),source,False)
+ if not report['passed'] or report['tests']!=2 or report['skipped']!=0:raise ValueError('Focused home tests incomplete or failed')
+ roots=list(Path('build/outputs').glob('**/p0-ui'))
+ if len(roots)!=1:raise ValueError('Missing unambiguous native output')
+ pictures=sorted(roots[0].glob('p07-home-*.png'))
+ if len(pictures)!=35:raise ValueError('Missing actual home matrix')
+ target=Path('build/reports/p07-focused');target.mkdir(parents=True,exist_ok=True)
+ rows=[]
+ for picture in pictures:
+  data=picture.read_bytes()
+  if not data.startswith(b'\x89PNG\r\n\x1a\n'):raise ValueError('Invalid native capture')
+  shutil.copy2(picture,target/picture.name);rows.append({'file':picture.name,'sha256':hashlib.sha256(data).hexdigest()})
+ shutil.copytree('build/outputs/androidTest-results',target/'raw-android',dirs_exist_ok=True)
+ (target/'focused.json').write_text(json.dumps({'source':plan['commit'],'run':plan['runId'],'scope':'P07HomeMapTest only; full regression still required','tests':report,'screenshots':rows,'visualReviewRequired':True,'stageAccepted':False},indent=2)+'\n')
 def gate():
  proof={'passed':False}
  try:
@@ -33,4 +52,4 @@ def gate():
  save('gate.json',proof)
  print(json.dumps(proof,indent=2))
  if not proof['passed']:raise SystemExit('Stage acceptance blocked')
-if __name__=='__main__':{'prepare':prepare,'helpers':helpers,'gate':gate}[sys.argv[1]]()
+if __name__=='__main__':{'prepare':prepare,'helpers':helpers,'focused':focused,'gate':gate}[sys.argv[1]]()
