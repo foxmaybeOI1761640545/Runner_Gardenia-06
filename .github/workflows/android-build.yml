@@ -3,7 +3,7 @@ name: Android build and pre-release
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, release/p0-7-to-p1-0]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
 
 # One main publication at a time. Never cancel a run midway through tagging/uploading.
 concurrency:
-  group: android-${{ github.ref == 'refs/heads/main' && 'main-publication' || github.ref }}
+  group: android-${{ (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release/p0-7-to-p1-0') && 'main-publication' || github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 defaults:
@@ -139,7 +139,7 @@ jobs:
     needs: [prepare, checks]
     if: >-
       needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
+      (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release/p0-7-to-p1-0') &&
       github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     permissions:
       contents: read
@@ -219,7 +219,7 @@ jobs:
     needs: [prepare, checks, signed]
     if: >-
       needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
+      (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release/p0-7-to-p1-0') &&
       github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -254,7 +254,7 @@ jobs:
     needs: [prepare, checks, signed, create-tag]
     if: >-
       needs.prepare.outputs.publishing == 'true' && github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
+      (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/release/p0-7-to-p1-0') &&
       github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06'
     runs-on: ubuntu-24.04
     timeout-minutes: 20
