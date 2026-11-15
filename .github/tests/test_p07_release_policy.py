@@ -24,8 +24,8 @@ class P07ReleasePolicyTests(unittest.TestCase):
         subprocess.run(["git", "config", "user.name", "P0.7 release test"], check=True)
         subprocess.run(["git", "config", "user.email", "p07@example.invalid"], check=True)
         Path("version.properties").write_text(
-            "VERSION_NAME=v0.1.0-p0.7.0\\n"
-            "VERSION_CODE=6780\\n"
+            "VERSION_NAME=v0.1.0-p0.7.0\n"
+            "VERSION_CODE=6780\n"
         )
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", "fixture"], check=True, capture_output=True)
