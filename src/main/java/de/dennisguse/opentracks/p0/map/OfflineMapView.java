@@ -107,6 +107,12 @@ public final class OfflineMapView extends FrameLayout {
     }
     public void fitRoute(){if(map==null||route.isEmpty())return;var v=MapViewport.fit(route,getWidth(),getHeight(),map.getModel().displayModel.getTileSize());map.setCenter(new LatLong(v.latitude(),v.longitude()));map.setZoomLevel(v.zoom());}
     public boolean centerPosition(){if(map==null||position==null||!position.hasValidLocation())return false;map.setCenter(new LatLong(position.latitude(),position.longitude()));return true;}
+    public boolean followPosition(Position value,byte minimumZoom){
+        if(map==null||value==null||!value.hasValidLocation())return false;
+        map.setCenter(new LatLong(value.latitude(),value.longitude()));
+        if(map.getModel().mapViewPosition.getZoomLevel()<minimumZoom)map.setZoomLevel(minimumZoom);
+        return true;
+    }
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
