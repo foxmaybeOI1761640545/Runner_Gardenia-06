@@ -98,12 +98,27 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     private boolean p0GpsGuard;
     private final java.util.Set<Object> mapGpsOwners=java.util.Collections.newSetFromMap(new java.util.IdentityHashMap<>());
     private boolean previewBeforeMap;
+    private boolean foregroundGpsPreview;
+    private boolean explicitHeartPreview;
+
+    /** Application visibility is a demand flag, never a second map owner or GPS listener. */
+    public void setForegroundGpsPreview(boolean requested) {
+        requested = requested && de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this);
+        if (foregroundGpsPreview == requested) return;
+        foregroundGpsPreview = requested;
+        if (requested || isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty()) startSensors();
+        else if (explicitHeartPreview && de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(this)
+                && de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) startSensors();
+        else stopIdleSensors();
+    }
+    @androidx.annotation.VisibleForTesting public boolean hasForegroundGpsRequest() { return foregroundGpsPreview; }
 
     /** Visible map lifetime only; never begins a workout, clock or associated HR samples. */
     public void acquireMapGps(Object owner) {
         if (!de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this))
             throw new SecurityException("Fine location permission required");
-        if (mapGpsOwners.isEmpty()) previewBeforeMap=areSensorsStarted()&&!isRecording()&&!isAcquiringGps();
+        if (mapGpsOwners.isEmpty()) previewBeforeMap=areSensorsStarted()&&!isRecording()&&!isAcquiringGps()
+                && (!foregroundGpsPreview || explicitHeartPreview);
         mapGpsOwners.add(owner);
         try { startSensors(); } catch (RuntimeException failure) { mapGpsOwners.remove(owner);throw failure; }
     }
@@ -111,7 +126,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     public void releaseMapGps(Object owner) {
         if (!mapGpsOwners.remove(owner)) return;
-        if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty()) startSensors();
+        if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty() || foregroundGpsPreview) startSensors();
         else if (previewBeforeMap && de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(this)
                 && de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) startSensors();
         else stopIdleSensors();
@@ -132,7 +147,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         if (isRecording() || isAcquiringGps()) return;
         if (!de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this))
             throw new SecurityException("Fine location permission required for GPS preparation");
-        previewBeforePreparation = areSensorsStarted();
+        previewBeforePreparation = areSensorsStarted() && (!foregroundGpsPreview || explicitHeartPreview);
         long started = SystemClock.elapsedRealtimeNanos();
         gpsReadiness = new GpsReadiness(started);
         p0GpsGuard = true;
@@ -158,7 +173,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         p0GpsGuard = false;
         handler.removeCallbacks(gpsPreparationTimeout);
         gpsPreparationObservable.setValue(GpsPreparation.idle());
-        if (previewBeforePreparation && de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this))
+        if (foregroundGpsPreview || !mapGpsOwners.isEmpty() || previewBeforePreparation && de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this))
             startSensors(); // Turns GPS off while preserving an existing explicit HR preview.
         else stopIdleSensors();
     }
@@ -189,7 +204,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
             gpsPreparationObservable.setValue(GpsPreparation.idle());
             return true; // The newest validated fix initializes the existing recorder.
         }
-        if ((p0GpsGuard && isRecording() || !mapGpsOwners.isEmpty()) && !GpsReadiness.usable(fix, now, 0, GpsReadiness.DEFAULT)) {
+        if ((p0GpsGuard && isRecording() || !mapGpsOwners.isEmpty() || foregroundGpsPreview && !isRecording()) && !GpsReadiness.usable(fix, now, 0, GpsReadiness.DEFAULT)) {
             newGpsStatus(GpsStatusValue.GPS_SIGNAL_BAD);
             return false;
         }
@@ -318,7 +333,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // A Bluetooth-only preview may have started before GPS permission was granted.
         // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
         if (areSensorsStarted()) {
-            if (!mapGpsOwners.isEmpty()) trackPointCreator.beginGpsRecordingSegment();
+            if (!mapGpsOwners.isEmpty() || foregroundGpsPreview) trackPointCreator.beginGpsRecordingSegment();
             trackPointCreator.getSensorManager().getHeartRateHandler().beginRecordingSegment(trackPointCreator.getNow());
         }
         startSensors();
@@ -334,16 +349,17 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     public void tryStartSensors() {
         if (!isRecording()&&!isAcquiringGps()&&!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasBluetooth(this)) {stopSelf();return;}
         Log.i(TAG, "tryStartSensors");
+        explicitHeartPreview=true;
         if (!mapGpsOwners.isEmpty()) previewBeforeMap=true; // Explicit existing HR preview command.
         startSensors();
     }
 
     private synchronized void startSensors() {
-        boolean gpsNeeded=isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty();
+        boolean gpsNeeded=isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty() || foregroundGpsPreview;
         // Stop an unneeded preview before restoring the configured GPS source: an idle
         // HR preview must never attempt to connect a user's remote/disabled GPS driver.
         if (!gpsNeeded) trackPointCreator.getSensorManager().setGpsRecording(false);
-        trackPointCreator.getSensorManager().setMapGpsPreview(!mapGpsOwners.isEmpty() && !isRecording() && !isAcquiringGps());
+        trackPointCreator.getSensorManager().setMapGpsPreview((!mapGpsOwners.isEmpty() || foregroundGpsPreview) && !isRecording() && !isAcquiringGps());
         trackPointCreator.getSensorManager().setGpsRecording(gpsNeeded);
         if (!trackPointCreator.isStarted()) {
             Log.i(TAG, "startSensors");
@@ -354,7 +370,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     }
 
     public synchronized void stopIdleSensors() {
-        if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty()) return;
+        explicitHeartPreview=false;
+        if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty() || foregroundGpsPreview) return;
         if (areSensorsStarted()) stopSensors();
         stopSelf();
     }
@@ -374,7 +391,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         stopUpdateRecordingData();
 
 
-        if (mapGpsOwners.isEmpty()) stopSensors(); else startSensors();
+        if (mapGpsOwners.isEmpty() && !foregroundGpsPreview) stopSensors(); else startSensors();
     }
 
     void stopSensors() {

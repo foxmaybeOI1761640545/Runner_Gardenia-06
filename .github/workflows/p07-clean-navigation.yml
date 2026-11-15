@@ -32,6 +32,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Verify clean ancestry and frozen historical refs
+        id: plan
         run: |
           git merge-base --is-ancestor ae68319361c1277e97e4fe9bfc9ae52de88146e5 HEAD
           python3 .github/scripts/p07_stage.py prepare
@@ -64,6 +65,21 @@ jobs:
         run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
       - name: Execute original Python helper regressions
         run: python3 .github/scripts/p07_stage.py helpers
+      - name: Focused application GPS, untouched ownership/preferences and preparation regressions
+        if: steps.plan.outputs.stage == '2'
+        run: |
+          classes="$(python3 .github/scripts/p07_stage.py gps-classes)"
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" "-Pandroid.testInstrumentationRunnerArguments.class=$classes" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Require actual nonzero GPS focused results
+        if: steps.plan.outputs.stage == '2'
+        run: python3 .github/scripts/p07_stage.py gps-focused
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.plan.outputs.stage == '2' && success()
+        with:
+          name: Clean-navigation-gps-review-${{ github.run_id }}
+          path: build/reports/p07-gps-focused/
+          if-no-files-found: error
+          retention-days: 90
       - name: Focused actual home map acceptance before the complete regression
         run: |
           timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.map.P07HomeMapTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000

@@ -127,6 +127,9 @@ public class P07HomeMapTest {
             screen.onActivity(a->{var h=home(a);saved[0]=h.offlineMap().mapView().getModel().mapViewPosition.getCenter();bind(h,position(24,117));assertEquals(saved[0],h.offlineMap().mapView().getModel().mapViewPosition.getCenter());});
             screen.recreate();ready(screen,true);
             screen.onActivity(a->{assertFalse(home(a).offlineMap().isFollowing());assertEquals(saved[0],home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());
+                // This map-coverage scenario starts a new synthetic provider session;
+                // live preview deliberately rejects a single transcontinental jump.
+                de.dennisguse.opentracks.p0.P0GpsPreparationTest.fixture(service);
                 bind(home(a),position(1.3,103.8));a.findViewById(R.id.p07_home_locate).performClick();assertTrue(home(a).offlineMap().isFollowing());assertEquals(new LatLong(1.3,103.8),home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());});
             SystemClock.sleep(1200);screen.onActivity(a->assertEquals(a.getString(R.string.p07_no_features),home(a).mapStatus()));P0UiCapture.save("p07-home-outside-map");
         }
@@ -140,7 +143,7 @@ public class P07HomeMapTest {
         }finally{file.close();}
         assertNotNull("Real map must include an inside-bbox empty tile for coverage regression",empty);LatLong blank=empty;
         try(var screen=ActivityScenario.launch(P0Activity.class)){
-            ready(screen,true);screen.onActivity(a->{var h=home(a);bind(h,position(blank.latitude,blank.longitude));h.offlineMap().mapView().setZoomLevel((byte)12);});SystemClock.sleep(1500);
+            ready(screen,true);screen.onActivity(a->{de.dennisguse.opentracks.p0.P0GpsPreparationTest.fixture(service);var h=home(a);bind(h,position(blank.latitude,blank.longitude));h.offlineMap().mapView().setZoomLevel((byte)12);});SystemClock.sleep(1500);
             screen.onActivity(a->assertEquals(a.getString(R.string.p07_no_features),home(a).mapStatus()));P0UiCapture.save("p07-home-inside-bounds-no-features");
         }
         for(int width:new int[]{360,390})for(float scale:new float[]{1.0f,1.4f}){
