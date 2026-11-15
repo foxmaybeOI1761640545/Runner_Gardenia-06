@@ -87,7 +87,9 @@ public class P0Activity extends AbstractActivity {
     private de.dennisguse.opentracks.data.models.Position currentGps;
     private RoutePreviewModel.Result currentRoute=new RoutePreviewModel.Result(java.util.List.of(),false,false);
     private void render(P0RecordingViewModel.Snapshot value) {
-        DashboardState state=DashboardState.from(this,value);dashboard.bind(state);currentGps=state.currentGps();
+        DashboardState state=DashboardState.from(this,value);dashboard.bind(state);
+        // Map preview is available while idle too; workout metric policy stays in DashboardState.
+        currentGps=value.freshGps()&&value.gps()==GpsStatusValue.GPS_SIGNAL_FIX&&value.position()!=null&&value.position().hasValidLocation()?value.position():null;
         chartModel.bind(this,binding.p03HeartChart,value.preview());routeModel.refresh(value.session().trackId());
         binding.p04Route.bind(currentRoute,currentGps);updateLocationPermission();
     }
