@@ -14,6 +14,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 import de.dennisguse.opentracks.AbstractActivity;
+import de.dennisguse.opentracks.Startup;
+import de.dennisguse.opentracks.p0.map.OfflineMapRepository;
+import org.mapsforge.map.reader.MapFile;
+import java.io.IOException;
+import java.util.Objects;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import de.dennisguse.opentracks.R;
 import de.dennisguse.opentracks.databinding.P0HomeBinding;
 import de.dennisguse.opentracks.data.models.*;
@@ -33,12 +40,17 @@ public class P0Activity extends AbstractActivity {
     private PreviewChartModel chartModel;
     private ActivityResultLauncher<String[]> locationRequest;
     private ActivityResultLauncher<String> notificationRequest;
+    private OfflineMapRepository mapRepository;
+    private final ExecutorService mapWorker=Executors.newSingleThreadExecutor();
+    private long mapLoadGeneration;
+    private String loadedMapId;
+    private boolean homeMapReady,destroyed;
 
     @Override protected void onCreate(Bundle state) {
         super.onCreate(state);
         model=new ViewModelProvider(this).get(P0RecordingViewModel.class);
         locationRequest=registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
-                result->{updateLocationPermission();model.completePermission(hasLocation());});
+                result->{updateLocationPermission();((Startup)getApplication()).onLocationPermissionChanged();model.completePermission(hasLocation());});
         notificationRequest=registerForActivityResult(new ActivityResultContracts.RequestPermission(),result->updateLocationPermission());
         binding.p0LocationPermission.setOnClickListener(view->locationRequest.launch(P0PermissionPolicy.location().toArray(new String[0])));
         binding.p0NotificationPermission.setOnClickListener(view->{if(android.os.Build.VERSION.SDK_INT>=33)notificationRequest.launch(Manifest.permission.POST_NOTIFICATIONS);});
@@ -63,15 +75,65 @@ public class P0Activity extends AbstractActivity {
         binding.p04GpsStatus.setOnClickListener(view->startActivity(new android.content.Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)));
         dashboard=new DashboardRenderer(this,binding);
         binding.p04Route.setOnClickListener(v->startActivity(de.dennisguse.opentracks.p0.map.P06MapActivity.intent(this,model.snapshot().getValue().session().trackId())));
+        mapRepository=new OfflineMapRepository(this);
+        binding.p04Route.setFollowEnabled(true);
         routeModel=new ViewModelProvider(this).get(RoutePreviewModel.class);
         routeModel.route().observe(this,value->{currentRoute=value;binding.p04Route.bind(value,currentGps);});
         chartModel=new ViewModelProvider(this).get(PreviewChartModel.class);
         model.snapshot().observe(this,this::render);
         updateLocationPermission();
     }
-    @Override protected void onResume(){super.onResume();if(dashboard!=null&&model!=null&&model.snapshot().getValue()!=null)dashboard.bind(DashboardState.from(this,model.snapshot().getValue()));}
+    @Override protected void onResume(){
+        super.onResume();
+        if(dashboard!=null&&model!=null&&model.snapshot().getValue()!=null)dashboard.bind(DashboardState.from(this,model.snapshot().getValue()));
+        ((Startup)getApplication()).onLocationPermissionChanged();
+        refreshHomeMap();
+    }
     @Override protected void onStart() {super.onStart();model.attach();}
-    @Override protected void onStop() {model.detach();super.onStop();}
+    @Override protected void onStop() {
+        model.detach();
+        mapLoadGeneration++;
+        binding.p04Route.clearMap();
+        loadedMapId=null;
+        homeMapReady=false;
+        super.onStop();
+    }
+    @Override protected void onDestroy() {
+        destroyed=true;
+        mapLoadGeneration++;
+        mapWorker.shutdownNow();
+        binding.p04Route.clearMap();
+        super.onDestroy();
+    }
+    private void refreshHomeMap() {
+        if(destroyed||mapRepository==null)return;
+        final long request=++mapLoadGeneration;
+        final String previous=loadedMapId;
+        final boolean previousReady=homeMapReady;
+        mapWorker.execute(()->{
+            OfflineMapRepository.State state=null;
+            MapFile file=null;
+            IOException problem=null;
+            try {
+                state=mapRepository.read();
+                OfflineMapRepository.Entry entry=state.current();
+                if(entry!=null&&(!previousReady||!Objects.equals(previous,entry.id())))file=mapRepository.open(entry);
+            } catch(IOException failure) { problem=failure; }
+            final OfflineMapRepository.State result=state;
+            final MapFile opened=file;
+            final IOException error=problem;
+            runOnUiThread(()->{
+                if(destroyed||request!=mapLoadGeneration){if(opened!=null)opened.close();return;}
+                if(error!=null){if(opened!=null)opened.close();binding.p04Route.showMapError();return;}
+                String id=result.current()==null?null:result.current().id();
+                if(previousReady&&Objects.equals(previous,id)){if(opened!=null)opened.close();return;}
+                if(opened!=null)binding.p04Route.load(opened);else binding.p04Route.showNoMap();
+                loadedMapId=id;
+                homeMapReady=true;
+                binding.p04Route.bind(currentRoute,currentGps);
+            });
+        });
+    }
     private boolean hasLocation() {return ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED;}
     private void updateLocationPermission() {
         binding.p0LocationStatus.setText(hasLocation()?R.string.p0_location_granted:R.string.p0_location_needed);
