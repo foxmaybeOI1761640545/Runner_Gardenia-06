@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="p06_offline_map">离线地图</string>
+    <string name="p07_home_map_title">地图与轨迹</string>
+    <string name="p07_home_map_position_no_map">当前位置 · 此区域没有离线地图</string>
+    <string name="p07_home_map_no_map_short">暂无离线地图</string>
+    <string name="p07_location_preview_notification">位置预览 · 应用打开时持续定位</string>
     <string name="p06_import_map">导入 .map</string>
     <string name="p06_manage_maps">地图管理</string>
     <string name="p06_my_position">我的位置</string>
