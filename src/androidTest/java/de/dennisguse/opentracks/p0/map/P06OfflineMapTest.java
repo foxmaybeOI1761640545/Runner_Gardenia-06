@@ -175,14 +175,21 @@ public class P06OfflineMapTest {
                 SystemClock.sleep(100);
             }
             assertTrue("Home must render the selected real Mapsforge map, not the illustrative route",loaded);
+            java.util.concurrent.atomic.AtomicInteger owners=new java.util.concurrent.atomic.AtomicInteger();
             long ownerDeadline=SystemClock.uptimeMillis()+10000;
-            while(service.mapGpsOwnerCount()==0&&SystemClock.uptimeMillis()<ownerDeadline)SystemClock.sleep(50);
-            assertTrue("The app foreground must own the idle GPS preview",service.mapGpsOwnerCount()>0);
-            assertTrue("The foreground preview may start sensors but must not start a workout",service.areSensorsStarted());
+            while(SystemClock.uptimeMillis()<ownerDeadline) {
+                main(()->owners.set(service.mapGpsOwnerCount()));
+                if(owners.get()>0)break;
+                SystemClock.sleep(50);
+            }
+            assertTrue("The app foreground must own the idle GPS preview",owners.get()>0);
+            main(()->assertTrue("The foreground preview may start sensors but must not start a workout",service.areSensorsStarted()));
             assertFalse(service.isRecording());
             assertTrue(new WorkoutRepository(context).list().isEmpty());
         }
-        assertEquals("Closing the last foreground activity releases only the preview owner",0,service.mapGpsOwnerCount());
+        java.util.concurrent.atomic.AtomicInteger remainingOwners=new java.util.concurrent.atomic.AtomicInteger(-1);
+        main(()->remainingOwners.set(service.mapGpsOwnerCount()));
+        assertEquals("Closing the last foreground activity releases only the preview owner",0,remainingOwners.get());
         assertFalse(service.isRecording());
         assertTrue(new WorkoutRepository(context).list().isEmpty());
     }
