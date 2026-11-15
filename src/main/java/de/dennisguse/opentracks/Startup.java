@@ -2,6 +2,7 @@ package de.dennisguse.opentracks;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.StrictMode;
@@ -10,6 +11,8 @@ import android.util.Log;
 import java.lang.reflect.Method;
 
 import de.dennisguse.opentracks.settings.PreferencesUtils;
+import de.dennisguse.opentracks.p0.recording.ForegroundActivityCounter;
+import de.dennisguse.opentracks.p0.recording.ForegroundLocationPreview;
 import de.dennisguse.opentracks.util.ExceptionHandler;
 
 /**
@@ -21,6 +24,8 @@ import de.dennisguse.opentracks.util.ExceptionHandler;
 public class Startup extends Application {
 
     private static final String TAG = Startup.class.getSimpleName();
+    private final ForegroundActivityCounter foregroundActivities = new ForegroundActivityCounter();
+    private ForegroundLocationPreview locationPreview;
 
     @Override
     public void onCreate() {
@@ -39,6 +44,26 @@ public class Startup extends Application {
         PreferencesUtils.resetPreferences(this, false);
         PreferencesUtils.applyDefaultUnit();
         PreferencesUtils.applyNightModeAndDynamicColors(this);
+
+        locationPreview = new ForegroundLocationPreview(this);
+        registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+            @Override public void onActivityCreated(Activity activity, android.os.Bundle state) {}
+            @Override public void onActivityStarted(Activity activity) {
+                if (foregroundActivities.onStarted()) locationPreview.setForeground(true);
+            }
+            @Override public void onActivityResumed(Activity activity) {}
+            @Override public void onActivityPaused(Activity activity) {}
+            @Override public void onActivityStopped(Activity activity) {
+                if (foregroundActivities.onStopped()) locationPreview.setForeground(false);
+            }
+            @Override public void onActivitySaveInstanceState(Activity activity, android.os.Bundle state) {}
+            @Override public void onActivityDestroyed(Activity activity) {}
+        });
+    }
+
+    /** Re-evaluate the foreground GPS owner after a runtime permission change. */
+    public void onLocationPermissionChanged() {
+        if (locationPreview != null) locationPreview.onLocationPermissionChanged();
     }
 
     @Override
