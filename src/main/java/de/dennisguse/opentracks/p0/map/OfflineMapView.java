@@ -105,27 +105,32 @@ public final class OfflineMapView extends FrameLayout {
     }
     public void bind(List<RouteGeometry.Point> points,Position current){route=List.copyOf(points);position=current;drawOverlays();}
     private void drawOverlays(){
-        if(map==null)return;var layers=map.getLayerManager().getLayers();for(Layer layer:overlays)layers.remove(layer);overlays.clear();segmentCount=0;
+        if(map==null)return;var layers=map.getLayerManager().getLayers();
+        // LayerManager draws under this same monitor. Publish one complete overlay
+        // frame, never an intermediate accuracy-only or marker-free snapshot.
+        synchronized(layers){
+        for(Layer layer:overlays)layers.remove(layer,false);overlays.clear();segmentCount=0;
         for(var segment:MapRouteSegments.split(route)){
             var paint=AndroidGraphicFactory.INSTANCE.createPaint();paint.setColor(0xff007f86);paint.setStrokeWidth(6*getResources().getDisplayMetrics().density);paint.setStyle(Style.STROKE);
             Polyline line=new Polyline(paint,AndroidGraphicFactory.INSTANCE);
             line.setPoints(segment.stream().map(p->new LatLong(p.latitude(),p.longitude())).toList());
-            overlays.add(line);layers.add(line);segmentCount++;
+            overlays.add(line);layers.add(line,false);segmentCount++;
             if(segment.size()==1){
                 var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff007f86);fill.setStyle(Style.FILL);
                 var only=segment.get(0);var dot=new FixedPixelCircle(new LatLong(only.latitude(),only.longitude()),5*getResources().getDisplayMetrics().density,fill,null);
-                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot);
+                dot.setScaleRadius(false);overlays.add(dot);layers.add(dot,false);
             }
         }
         if(position!=null&&position.hasValidLocation()&&Double.isFinite(position.latitude())&&Double.isFinite(position.longitude())){
             if(position.hasHorizontalAccuracy()&&Double.isFinite(position.horizontalAccuracy().toM())&&position.horizontalAccuracy().toM()>0){
                 var accuracy=AndroidGraphicFactory.INSTANCE.createPaint();accuracy.setColor(0x339b3dc8);accuracy.setStyle(Style.FILL);
                 var circle=new org.mapsforge.map.layer.overlay.Circle(new LatLong(position.latitude(),position.longitude()),(float)Math.min(position.horizontalAccuracy().toM(),100000),accuracy,null);
-                overlays.add(circle);layers.add(circle);
+                overlays.add(circle);layers.add(circle,false);
             }
             var fill=AndroidGraphicFactory.INSTANCE.createPaint();fill.setColor(0xff9b3dc8);fill.setStyle(Style.FILL);
             var stroke=AndroidGraphicFactory.INSTANCE.createPaint();stroke.setColor(0xffffffff);stroke.setStrokeWidth(3);stroke.setStyle(Style.STROKE);
-            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker);
+            FixedPixelCircle marker=new FixedPixelCircle(new LatLong(position.latitude(),position.longitude()),8*getResources().getDisplayMetrics().density,fill,stroke);marker.setScaleRadius(false);overlays.add(marker);layers.add(marker,false);
+        }
         }
         map.getLayerManager().redrawLayers();
     }

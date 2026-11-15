@@ -75,6 +75,23 @@ public class P07HomeMapTest {
         }while(SystemClock.uptimeMillis()<end);
         fail("Real home capture requires the intended location, actual features and every visible tile cached");
     }
+    private void visibleMarkerInActualCapture(ActivityScenario<P0Activity> screen,String name)throws Exception{
+        int[] center=new int[3];
+        screen.onActivity(a->{var m=home(a).offlineMap().mapView();m.getLocationOnScreen(center);center[0]+=m.getWidth()/2;center[1]+=m.getHeight()/2;center[2]=Math.max(1,Math.round(4*a.getResources().getDisplayMetrics().density));});
+        String configured=InstrumentationRegistry.getArguments().getString("additionalTestOutputDir");
+        java.io.File directory=new java.io.File(configured!=null?new java.io.File(configured):new java.io.File(context.getExternalMediaDirs()[0],"additional_test_output"),"p0-ui");
+        var image=android.graphics.BitmapFactory.decodeFile(new java.io.File(directory,name+".png").getPath());
+        assertNotNull("Actual native image is required",image);int colored=0,total=0;
+        try{
+            for(int y=Math.max(0,center[1]-center[2]);y<=Math.min(image.getHeight()-1,center[1]+center[2]);y++)for(int x=Math.max(0,center[0]-center[2]);x<=Math.min(image.getWidth()-1,center[0]+center[2]);x++){
+                int pixel=image.getPixel(x,y),red=android.graphics.Color.red(pixel),green=android.graphics.Color.green(pixel),blue=android.graphics.Color.blue(pixel);total++;
+                // A broad opaque purple range tolerates display color conversion;
+                // a faint accuracy circle alone cannot satisfy marker visibility.
+                if(red>70&&red<210&&green<120&&blue>red+15)colored++;
+            }
+        }finally{image.recycle();}
+        assertTrue("Current-position marker must be visible in the actual native frame: "+name+" "+colored+"/"+total,total>0&&colored>total/3);
+    }
     @Test public void noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation()throws Exception{
         int records=new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().size();
         try(var screen=ActivityScenario.launch(P0Activity.class)){
@@ -146,7 +163,8 @@ public class P07HomeMapTest {
                         assertFalse("Primary metric must not cover recenter",android.graphics.Rect.intersects(metric,locate));
                     });settledRealMap(screen);
                     screen.onActivity(a->assertEquals(a.getString(R.string.p05_gps_fixed),((android.widget.TextView)a.findViewById(R.id.p04_gps_status)).getText().toString()));
-                    P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale);
+                    String capture="p07-home-real-"+f.id+(dark?"-dark":"-light")+"-"+width+"-font"+scale;
+                    P0UiCapture.save(capture);visibleMarkerInActualCapture(screen,capture);
                 }
             }
         }
