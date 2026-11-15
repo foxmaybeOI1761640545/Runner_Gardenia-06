@@ -3,6 +3,8 @@
     <string name="p06_offline_map">Offline map</string>
     <string name="p07_home_map_title">Map and route</string>
     <string name="p07_home_map_position_no_map">Current position · no offline map covers this area</string>
+    <string name="p07_home_map_gps_accuracy">Current position · GPS accuracy ±%1$.0f m</string>
+    <string name="p07_home_map_position_no_map_accuracy">Current position · no offline map covers this area · GPS accuracy ±%1$.0f m</string>
     <string name="p07_home_map_no_map_short">No offline map</string>
     <string name="p07_location_preview_notification">Location preview · active while the app is open</string>
     <string name="p06_import_map">Import .map</string>
