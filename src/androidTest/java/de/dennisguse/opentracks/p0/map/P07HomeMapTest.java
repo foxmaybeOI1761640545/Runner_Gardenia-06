@@ -21,13 +21,20 @@ import de.dennisguse.opentracks.ui.util.ThemeUtils;
 public class P07HomeMapTest {
     private final Context context=ApplicationProvider.getApplicationContext();
     private OfflineMapRepository repository;
+    @Rule public final androidx.test.rule.GrantPermissionRule permissions=de.dennisguse.opentracks.TestUtil.createScanPermissionRule();
+    @Rule public final androidx.test.rule.ServiceTestRule serviceRule=new androidx.test.rule.ServiceTestRule();
+    private de.dennisguse.opentracks.services.TrackRecordingService service;
     private ThemeUtils.Family family;
     private String night;
     @Before public void before()throws Exception{
+        de.dennisguse.opentracks.util.TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();
+        service=((de.dennisguse.opentracks.services.TrackRecordingService.Binder)serviceRule.bindService(new android.content.Intent(context,de.dennisguse.opentracks.services.TrackRecordingService.class))).getService();
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.acquireMapGps(this));
         repository=new OfflineMapRepository(context);for(var e:repository.read().entries())repository.delete(e.id());
         family=PreferencesUtils.getGardeniaTheme();night=de.dennisguse.opentracks.p0.SystemThemeTestUtils.savedMode();
     }
     @After public void after()throws Exception{
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(()->service.releaseMapGps(this));
         PreferencesUtils.setGardeniaTheme(family);de.dennisguse.opentracks.p0.SystemThemeTestUtils.restore(night);for(var e:repository.read().entries())repository.delete(e.id());
     }
     private RouteMapView home(P0Activity a){return a.findViewById(R.id.p04_route);}
@@ -37,18 +44,26 @@ public class P07HomeMapTest {
         fail("Home native map did not initialize");
     }
     private Position position(double lat,double lon){return new Position(Instant.now(),lat,lon,Distance.of(8),null,null,null,null);}
+    private void bind(RouteMapView view,Position point){
+        android.location.Location fix=point.toLocation();fix.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+        service.getTrackPointCreator().getSensorManager().getGpsHandler().onDataReceived(fix);
+        view.bind(new RoutePreviewModel.Result(List.of(),false,false),point);
+    }
     @Test public void noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation()throws Exception{
+        int records=new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().size();
         try(var screen=ActivityScenario.launch(P0Activity.class)){
             ready(screen,false);
-            screen.onActivity(a->{home(a).bind(new RoutePreviewModel.Result(List.of(),false,false),position(23.7,117.43));assertEquals(new LatLong(23.7,117.43),home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());assertEquals(a.getString(R.string.p07_no_map),home(a).mapStatus());});
+            screen.onActivity(a->{bind(home(a),position(23.7,117.43));assertEquals(new LatLong(23.7,117.43),home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());assertEquals(a.getString(R.string.p07_no_map),home(a).mapStatus());});
             screen.recreate();ready(screen,false);P0UiCapture.save("p07-home-no-map");
         }
+        assertEquals(records,new de.dennisguse.opentracks.p0.data.WorkoutRepository(context).list().size());
+        assertFalse(service.isRecording());
     }
     @Test public void realMapPositionFollowPanZoomRecreateReplaceDeleteAndBudget()throws Exception{
         try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p061/real.map")){repository.importMap(input,"Actual 105MB map");}
         try(var screen=ActivityScenario.launch(P0Activity.class)){
             ready(screen,true);
-            screen.onActivity(a->{var h=home(a);h.bind(new RoutePreviewModel.Result(List.of(),false,false),position(23.7,117.43));var view=h.offlineMap();
+            screen.onActivity(a->{var h=home(a);bind(h,position(23.7,117.43));var view=h.offlineMap();
                 assertTrue(view.isFollowing());assertEquals(new LatLong(23.7,117.43),view.mapView().getModel().mapViewPosition.getCenter());
                 var d=view.diagnosticViewport();assertTrue(d.cacheCapacity()<=64);assertTrue(d.cacheCapacity()*(long)d.tileSize()*d.tileSize()*4<=32L*1024*1024);
             });
@@ -60,10 +75,10 @@ public class P07HomeMapTest {
             });
             SystemClock.sleep(500);
             LatLong[] saved={null};
-            screen.onActivity(a->{var h=home(a);saved[0]=h.offlineMap().mapView().getModel().mapViewPosition.getCenter();h.bind(new RoutePreviewModel.Result(List.of(),false,false),position(24,117));assertEquals(saved[0],h.offlineMap().mapView().getModel().mapViewPosition.getCenter());});
+            screen.onActivity(a->{var h=home(a);saved[0]=h.offlineMap().mapView().getModel().mapViewPosition.getCenter();bind(h,position(24,117));assertEquals(saved[0],h.offlineMap().mapView().getModel().mapViewPosition.getCenter());});
             screen.recreate();ready(screen,true);
             screen.onActivity(a->{assertFalse(home(a).offlineMap().isFollowing());assertEquals(saved[0],home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());
-                home(a).bind(new RoutePreviewModel.Result(List.of(),false,false),position(1.3,103.8));a.findViewById(R.id.p07_home_locate).performClick();assertTrue(home(a).offlineMap().isFollowing());assertEquals(new LatLong(1.3,103.8),home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());});
+                bind(home(a),position(1.3,103.8));a.findViewById(R.id.p07_home_locate).performClick();assertTrue(home(a).offlineMap().isFollowing());assertEquals(new LatLong(1.3,103.8),home(a).offlineMap().mapView().getModel().mapViewPosition.getCenter());});
             SystemClock.sleep(1200);screen.onActivity(a->assertEquals(a.getString(R.string.p07_no_features),home(a).mapStatus()));P0UiCapture.save("p07-home-outside-map");
         }
         var actual=repository.read().current();
@@ -76,12 +91,12 @@ public class P07HomeMapTest {
         }finally{file.close();}
         assertNotNull("Real map must include an inside-bbox empty tile for coverage regression",empty);LatLong blank=empty;
         try(var screen=ActivityScenario.launch(P0Activity.class)){
-            ready(screen,true);screen.onActivity(a->{var h=home(a);h.bind(new RoutePreviewModel.Result(List.of(),false,false),position(blank.latitude,blank.longitude));h.offlineMap().mapView().setZoomLevel((byte)12);});SystemClock.sleep(1500);
+            ready(screen,true);screen.onActivity(a->{var h=home(a);bind(h,position(blank.latitude,blank.longitude));h.offlineMap().mapView().setZoomLevel((byte)12);});SystemClock.sleep(1500);
             screen.onActivity(a->assertEquals(a.getString(R.string.p07_no_features),home(a).mapStatus()));P0UiCapture.save("p07-home-inside-bounds-no-features");
         }
         for(ThemeUtils.Family f:ThemeUtils.Family.values())for(boolean dark:new boolean[]{false,true}){
             PreferencesUtils.setGardeniaTheme(f);de.dennisguse.opentracks.p0.SystemThemeTestUtils.night(dark);
-            try(var screen=ActivityScenario.launch(P0Activity.class)){ready(screen,true);screen.onActivity(a->home(a).bind(new RoutePreviewModel.Result(List.of(),false,false),position(23.7,117.43)));SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light"));}
+            try(var screen=ActivityScenario.launch(P0Activity.class)){ready(screen,true);screen.onActivity(a->bind(home(a),position(23.7,117.43)));SystemClock.sleep(800);P0UiCapture.save("p07-home-real-"+f.id+(dark?"-dark":"-light"));}
         }
         try(var input=InstrumentationRegistry.getInstrumentation().getContext().getAssets().open("p06/gardenia-synthetic.map")){repository.importMap(input,"Replacement");}
         try(var screen=ActivityScenario.launch(P0Activity.class)){ready(screen,true);}

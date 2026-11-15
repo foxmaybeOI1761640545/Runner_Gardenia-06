@@ -26,7 +26,7 @@ public final class RouteMapView extends FrameLayout {
     private Position current;
     private String selected;
     private long generation;
-    private boolean active,checking;
+    private boolean active,checking,coverageScheduled;
     private android.os.Bundle viewport;
     public android.os.Bundle saveViewport(){
         var state=new android.os.Bundle();state.putBoolean("follow",map.isFollowing());
@@ -87,14 +87,17 @@ public final class RouteMapView extends FrameLayout {
     public void stop(){
         if(active)viewport=saveViewport();
         active=false;++generation;main.removeCallbacks(coverage);
-        if(worker!=null)worker.shutdownNow();worker=null;checking=false;map.clear();
+        if(worker!=null)worker.shutdownNow();worker=null;checking=false;coverageScheduled=false;map.clear();
     }
     private void scheduleCoverage(){
-        if(!active)return;
-        // Throttle the independent file query; GPS updates never block rendering.
-        if(!main.hasCallbacks(coverage))main.postDelayed(coverage,300);
+        // Mapsforge observers can run on its animation thread; serialize all UI state.
+        main.post(()->{
+            if(!active||coverageScheduled)return;
+            coverageScheduled=true;main.postDelayed(coverage,300);
+        });
     }
     private void checkCoverage(){
+        coverageScheduled=false;
         if(!active||selected==null||checking||map.mapView()==null)return;
         checking=true;long token=generation;
         var center=map.mapView().getModel().mapViewPosition.getCenter();

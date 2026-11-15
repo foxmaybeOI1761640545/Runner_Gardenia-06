@@ -133,5 +133,5 @@ public final class OfflineMapView extends FrameLayout {
     public int segmentCount(){return segmentCount;}
     public int renderedTileCount(){return renderedTiles.get();}
     public MapView mapView(){return map;}
-    public void clear(){if(map!=null){map.destroyAll();if(tileCache!=null)tileCache.destroy();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
+    public void clear(){if(map!=null){map.destroyAll();if(renderer==null&&tileCache!=null)tileCache.destroy();removeView(map);map=null;}overlays.clear();renderer=null;tileCache=null;segmentCount=0;}
 }
