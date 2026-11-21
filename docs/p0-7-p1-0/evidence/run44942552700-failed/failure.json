@@ -1,0 +1,17 @@
+{
+  "source": "a9ee02066093f832062eb4b04e6cc08363a53cc0",
+  "run": 44942552700,
+  "artifact": 14722028095,
+  "artifactSha256": "6b597ae3eb19417837d0987ba6d5fd6f4f03c06107b83412c7ca8ece0059a9f0",
+  "status": "FAILED",
+  "focused": {
+    "tests": 38,
+    "executed": 38,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "full": "NOT_EXECUTED",
+  "failure": "P0SensorsTest.scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection: platform BluetoothAdapter.getBondedDevices() returned null; scan dialog dereferenced stream()",
+  "originalTestUnchanged": true
+}

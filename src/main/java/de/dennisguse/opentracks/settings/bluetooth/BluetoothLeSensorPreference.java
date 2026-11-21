@@ -310,7 +310,10 @@ public abstract class BluetoothLeSensorPreference extends DialogPreference {
                 listAdapter.add(remembered.getAddress(),remembered.getName(),null,
                         manager!=null&&manager.getConnectionState(remembered,BluetoothProfile.GATT)==BluetoothProfile.STATE_CONNECTED);
             }
-            bluetoothAdapter.getBondedDevices().stream()
+            // The adapter can be powered off between isEnabled() and this Binder call.
+            // Keep the remembered selection usable even if the platform returns no set.
+            var bondedDevices = bluetoothAdapter.getBondedDevices();
+            (bondedDevices == null ? java.util.stream.Stream.<BluetoothDevice>empty() : bondedDevices.stream())
                     .filter(bonded -> bonded.getType() == BluetoothDevice.DEVICE_TYPE_LE || bonded.getType() == BluetoothDevice.DEVICE_TYPE_DUAL)
                     .filter(bonded -> !filterEnabled || bonded.getUuids() == null || java.util.Arrays.stream(bonded.getUuids()).anyMatch(serviceUUIDs::contains))
                     .forEach(bonded -> listAdapter.add(bonded.getAddress(), bonded.getName(),null,

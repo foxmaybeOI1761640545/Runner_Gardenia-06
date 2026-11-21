@@ -33,3 +33,5 @@
 源码1047df6 / Run44937943787：Python141/141/0/0/0，JVM167/167/0/0/0，API35 Tests464 / Executed463 / Failures1 / Errors0 / Skipped1。唯一Skip身份仍为历史项。原P0SensorsTest.scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection要求仅选择设备保持DISCONNECTED，却观察到CONNECTING：全局GPS使SensorManager提前启动，选设备偏好回调因此触发了未经请求的心率连接。原始完整XML和失败门禁见 `evidence/run44937943787-full-failed/`，37张视觉检查成功也不能覆盖这一回归失败。
 
 生产修复给既有HeartRateHandler增加独立的服务运行时请求门禁：正式记录、用户发起的GPS准备或显式Connect才请求心率；GPS空闲预览不等于Connect，不修改持久连接开关。停止空闲心率时重新裁决该门禁，仍保留前台GPS。BLE驱动/GATT/解析/采样代码不变，Handler复用。原心率测试文件也加入逐字校验保护；GPS定向扩至38项，完整Android仍464项。新增GPS-only选设备保持断开断言，旧断言一项不删。修复后重新执行全部门禁，阶段2继续PENDING。
+
+源码a9ee020 / Run44942552700：GPS定向38/38/1/0/0，完整回归未执行。心率运行时连接门禁断言及原owner/偏好均通过；原扫描对话框测试在平台BluetoothAdapter.getBondedDevices()返回null后因stream()崩溃。扫描入口现在对空集合使用空Stream，保留已记住设备、实际扫描和原全部测试断言；不将蓝牙状态竞态视为可忽略失败。原始XML、门禁及摘要见 `evidence/run44942552700-failed/`。修复候选重新执行全部门禁，阶段2仍PENDING。
