@@ -39,3 +39,18 @@
 ## 当前候选3e389c1的先行检查点
 
 Run44943379419已实际完成GPS定向38/38/0/0/0、真实地图2/2/0/0/0、独立权限denied与granted各1/1/0/0/0；两次权限进程PID1926/2400不同。三个检查点Artifact均独立下载核对SHA256，原始XML/权限stdout及37张实际查看的截图摘要见 `evidence/run44943379419-focused/`。已查看四主题昼夜360/390dp与1.0/1.4字体32图、3种空白地图状态及2张实际权限截图。完整API35尚在运行，以上不构成阶段通过，不得开始阶段3。
+
+## 需求与实际检查点对应
+
+| 阶段2要求 | 当前候选的检查 |
+|---|---|
+| 首页、设置、历史、地图管理共享最新状态，内部切页不重建驱动 | `P07ForegroundGpsTest.everyPageAndRecreationShareOneDriverAndNeverWriteHistoryOrGpsPreferences`：实际应用导航、设置重建、首页重建，Handler/driver同一身份 |
+| 整体退后台释放空闲GPS，返回前台恢复 | 同一测试的CREATED/RESUMED转换、零历史及原始来源NONE/间隔7断言 |
+| 弱精度、缺失单调时间、过期Fix、跳点、信号丢失/恢复 | `positionsStayFreshAcrossPagesAndRejectWeakExpiredUntimedAndJumpedFixes`：5.2秒实际过期、provider回调及连续一致重定位 |
+| 独立map owner不重复，默认心率开关不保持空闲GPS | `mapDemandDoesNotDuplicateGlobalDriverAndDefaultHeartPreferenceCannotRetainIdleGps`，原owner和偏好测试源码逐字保留 |
+| 心率显式预览和GPS前台生命周期独立 | `explicitHeartPreviewSurvivesAppBackgroundButItsGpsDoesNot`；原全部9项P0SensorsTest加入定向 |
+| 旧生命周期回调不污染快速重入或仅心率生命周期 | 上述两项测试的迟到旧Handler回调与freshness断言 |
+| 权限拒绝、授予以及实际新进程 | `P07PermissionStateTest`，独立AVD不自授予，外部拒绝/授予后新PID分别实际执行1项 |
+| 定位不创建运动、计时、距离、GPX或轨迹点 | 前台各页面零WorkoutRepository记录、activeTrackId为空、isRecording/isAcquiringGps=false；原生截图距离/时长0 |
+
+这里的合成位置通过既有GpsHandler及服务入口注入，只证明应用状态与过滤逻辑；不冒充实体GNSS接收、卫星搜星或实际电池测量。正式运动开始/结束/后台交接的独立验收属于阶段3，尚未启动。
