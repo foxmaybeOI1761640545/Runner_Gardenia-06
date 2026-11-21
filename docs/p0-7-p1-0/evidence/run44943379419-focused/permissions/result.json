@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source": "3e389c183a5d828906a4281dc50408f6510adb77",
+  "api": 35,
+  "phases": {
+    "denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1926,
+      "actualGpsPermission": "denied",
+      "screenshotSha256": "bcae29be012f8ce0a3ae435018e66a789bb3c6b9d40d88bafcc534c1281834e8"
+    },
+    "granted": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2400,
+      "actualGpsPermission": "granted",
+      "screenshotSha256": "5061d8222c31675f27456af2447383e7f18e6e543504a587e54bc1c137fd452f"
+    }
+  },
+  "visualReviewRequired": true
+}

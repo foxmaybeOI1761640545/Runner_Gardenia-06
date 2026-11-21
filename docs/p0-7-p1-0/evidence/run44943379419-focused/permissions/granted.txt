@@ -1,0 +1,26 @@
+INSTRUMENTATION_STATUS: class=de.dennisguse.opentracks.p0.map.P07PermissionStateTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+de.dennisguse.opentracks.p0.map.P07PermissionStateTest:
+INSTRUMENTATION_STATUS: test=actualPermissionControlsForegroundPreviewWithoutCreatingWorkout
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: p07ActualGpsPermission=granted
+INSTRUMENTATION_STATUS: p07PermissionPid=2400
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=de.dennisguse.opentracks.p0.map.P07PermissionStateTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=actualPermissionControlsForegroundPreviewWithoutCreatingWorkout
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 3.597
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1
