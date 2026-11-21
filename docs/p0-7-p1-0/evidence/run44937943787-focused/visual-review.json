@@ -1,0 +1,298 @@
+{
+  "source": "1047df65ccd57b7322d2a2d48c9902fdb1fcc754",
+  "run": "44937943787",
+  "scope": "35 actual native home screenshots reviewed; complete regression pending",
+  "tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 2,
+    "executed": 2,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "sha256": "c62b06ef849d3509620dab2c293fd6df77a02a41b8b5601baa07c8be4524d64f",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral no-map/no-features area with truthful status and actual position/accuracy; no fabricated roads."
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "sha256": "8acc5490e76a8a98254829116e4438783aa64804f20f0fa9850282d47d8e4a68",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral no-map/no-features area with truthful status and actual position/accuracy; no fabricated roads."
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "sha256": "27f191acbe0ab2fddafec0d4b04ceb2731b3bc3ef20efcc01c3836040709a13e",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Neutral no-map/no-features area with truthful status and actual position/accuracy; no fabricated roads."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "sha256": "c76e0ec571e5d54a2f313f3bb563435e126e11c77f81c8de2a23511926e997ae",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "sha256": "1c936b95a17369ee2377ca663419d6cbe532ca1beaed44fd48776a74cf6c58a4",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "sha256": "2f751eb5026c1c2d2337351e9a20ec2372cd36ad122e7cd140e7fd4353f03477",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "sha256": "d8050f664f161ecc130bba295c767ede89ccff67e1ae62ee642a3aa3f9f9cf9b",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "sha256": "0b2fedb030e546e34b291b10b73ff4fa71d8ff330eef09c565c764f923447984",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "sha256": "7cc98a2649d16cc23c050c11fb156d572fe4ab8974adfc4e73c95bfbd130dc72",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "sha256": "002cb92bb58793a1a8b3cddf37167bfe3e7bd524581ae55b5497336d84a75594",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "sha256": "7b52c935067c168ab117e32e141dc6e7dae09c13b111bf55703e873ab70303ec",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "sha256": "7f29c2f9392439e1c74002d7a5d2717f08bf3bfa9a37b189f24d15e0a0780075",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "sha256": "9566787767a7a73e5f6a53e6509009e3690757bee8cdebbb1986cde7f5b01a5e",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "sha256": "e956e3ac452ba5f4a25d8ff76c05f23492a29a866de079d820053798725aab8b",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "sha256": "76630e4fb7f0537bcf84b44f91421515809bcde3e8e2a018450c15b7c1c964a9",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "sha256": "32e483ef6bdf4fe8de43bf16c7740bd816c167e46daa36a55e9b1854e05192ce",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "sha256": "21e6a1a714f4adcc6c6b7c131b2c9c55b9a9c550491687baa80fcfef78e9a66b",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "sha256": "d4579d2095c3a9924e5400f453a5dd76ad2c93b82ceccbd5174b37a241407b2e",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "sha256": "eedc4f696b6f581aeb1e171dfd50bd73f55af49d04d5ecbab4a33338f78485ca",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "sha256": "82e18d6042002873e486a978b992e0cf2b23618e60fdd96ba8365f8ca9288ad7",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "sha256": "55f7095cfe8adc1854d9163c2da9d3425156513fe92624c1b1da0a253c978214",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "sha256": "1b36e28707b34a3e4aed5757055b777ea6c29786978d368b2d0d776fdacb8169",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "sha256": "18485cc15aa1f6513f1b1aef8bf0a5986b375dad70e6b9245a5541b75f62c0e9",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "sha256": "742349dba4835de60e92a9edf6ee2e4362e3b799b8937398399ad12f414e60d9",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "sha256": "3f3803aa1081d2aa289aae0656941c18d7663ae7e1d1e135ec7bb73debcfacd7",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "sha256": "aef35d5775de5ab7d28c5d36c4b40b6e9024cc9a29fa9c786eaf95c4afeaeb8d",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "sha256": "e15d2933af9710c2d57e20fc2fa3a62e49cbf9ac0c84a0dc97c77c4dd13c1b7b",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "sha256": "ddb013e0e0a0609fa5289c206f79f4ed9f96499b00de780da46c30f6a53b4bd3",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "sha256": "ff043666455cb44bb59870d6d264a3f45d61df385a942277df5041971c770eff",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "sha256": "1307969083144a355ac91b947ac87e6bdf8683efe4d5fc03b8c75be33a121fc6",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "sha256": "048fce9c2e3de6a74767257d0839b4d25570e862fd81652ac2652d224ae40f29",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "sha256": "a86a19f3f8ec4f24bb1a36bc19b6537f20ab916fab56dce5ee7b016f31427397",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "sha256": "178bf071887441846224f6bbcfba40259ca8a70d269a6667c8c70028b80d45cf",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "sha256": "dfe1d5d7fbdcbc0a65efe37a5efce161b781e649cf89a95d60fbef98af8f85f3",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "sha256": "0c0da5a6aca74035049a75f29d0b58e9b03771804b1b088eb5b1ea810fea6163",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Real road labels and current-position marker visible, separate recenter/zoom controls, workout remains idle; scrolled viewport intentionally brings map into view."
+    }
+  ],
+  "visualReviewRequired": false,
+  "stageAccepted": false,
+  "artifactId": 14720499356,
+  "artifactSha256": "e8b856e0f59a158bfbcb54faf92d969c0e4549752ef13e2aa19a6dc276dcbaea",
+  "visualReviewPassed": true,
+  "permissionArtifactId": 14720793986,
+  "permissionArtifactSha256": "ff1c973da981f1200f78c7489a18cb26249ab294df8481629d9e6b506e703ee8",
+  "permissionScreenshots": [
+    {
+      "file": "denied.png",
+      "sha256": "73292ed9d2e240ad731570319de3bc46e3d4b11d973f6256b73965fec581ebd0",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Actual OS permission notice/no fabricated GPS fix/idle metrics; granted but not fixed stays No fix."
+    },
+    {
+      "file": "granted.png",
+      "sha256": "2d4663fc455da7c90e3e5ad4a096819462510d5f43bb6d6623eccb663d972ccf",
+      "reviewed": true,
+      "outcome": "PASS",
+      "notes": "Actual OS permission notice/no fabricated GPS fix/idle metrics; granted but not fixed stays No fix."
+    }
+  ],
+  "reviewMethod": "All32 native real-map matrix frames viewed in eight four-frame sheets preserving original pixels, plus3 original empty-state frames and2 original permission frames. No HTML substitutes or generated imagery.",
+  "limits": "Synthetic GPS / API35 emulator only; not physical GNSS, power or BLE hardware acceptance. Full regression pending; no stage acceptance or release yet."
+}
