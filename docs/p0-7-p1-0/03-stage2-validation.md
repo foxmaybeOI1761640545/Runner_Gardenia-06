@@ -17,3 +17,5 @@
 源码 ec47d24 / [Run 43747382885](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43747382885)：GPS定向 Tests29 / Executed29 / Failures1 / Errors0 / Skipped0，完整回归未执行。原有 owner5及GPS偏好4项断言全部执行成功；新增跨页面测试在 ActivityScenario.recreate 失败，因为嵌套 launch 建立独立测试任务后销毁原首页。原始XML、gate/helpers和失败摘要见 `evidence/run43747382885-failed/`。修复改用应用原生导航按钮、Activity.recreate及实际返回流程；同驱动、1Hz、owner数量、零运动历史和偏好断言全部保留，没有 Ignore 或放宽预期。修复候选必须重新执行完整门禁。
 
 本轮用户范围已收敛到阶段1～3及P0.7交付，完成后暂停，不进入P0.8。
+
+同一测试任务栈问题也发生于前一个源码 f76d556 / Run 43747070609：Tests29 / Executed29 / Failures1 / Errors0 / Skipped0。已独立下载并核对 ZIP 摘要，原始失败 XML 和摘要保留于 `evidence/run43747070609-failed/`。两次失败均未重新标记通过，未执行的完整回归不计成功。
