@@ -1,0 +1,14 @@
+{
+  "source": "ec47d246d43d72ea8d52d0e99d87c5aa79fdf97b",
+  "run": 43747382885,
+  "artifact": 14175191970,
+  "artifactSha256": "5de7fb25826dac24d5dbd5ccacabe7e64c4a4725cfbe3ac0cab63e380a6fba8a",
+  "scope": "GPS focused only; full regression not executed",
+  "tests": 29,
+  "executed": 29,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "stageAccepted": false,
+  "failure": "ActivityScenario.recreate on a root destroyed by nested isolated ActivityScenario.launch; replace with actual in-app navigation and actual Activity recreation; keep all driver/owner/preferences assertions."
+}

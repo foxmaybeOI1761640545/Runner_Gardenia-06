@@ -11,3 +11,9 @@
 下一阶段启动条件：修复全部失败；取得当前源码完整非空报告、唯一历史 Skip、原生视觉复核及阶段报告提交/推送/远程核验。阶段2通过前不开始阶段3正式实现。
 
 补充独立权限门禁：P07PermissionStateTest 不自行授予位置权限；API35 独立设备上使用两次实际进程分别测试 denied/granted，强制检查运行时真实权限状态、前台预览是否启动、零运动历史、后台释放和不同 PID，并保留实际原生截图。普通全量回归也执行该测试的当前权限分支，但不能替代独立 denied/granted 两次运行。新增该项后完整 Android 预期至少464项（463实际执行、1项历史Skip），定向GPS子集仍为29项。
+
+## 保留的首轮失败及修复
+
+源码 ec47d24 / [Run 43747382885](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43747382885)：GPS定向 Tests29 / Executed29 / Failures1 / Errors0 / Skipped0，完整回归未执行。原有 owner5及GPS偏好4项断言全部执行成功；新增跨页面测试在 ActivityScenario.recreate 失败，因为嵌套 launch 建立独立测试任务后销毁原首页。原始XML、gate/helpers和失败摘要见 `evidence/run43747382885-failed/`。修复改用应用原生导航按钮、Activity.recreate及实际返回流程；同驱动、1Hz、owner数量、零运动历史和偏好断言全部保留，没有 Ignore 或放宽预期。修复候选必须重新执行完整门禁。
+
+本轮用户范围已收敛到阶段1～3及P0.7交付，完成后暂停，不进入P0.8。

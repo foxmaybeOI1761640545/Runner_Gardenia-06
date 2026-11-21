@@ -1,6 +1,7 @@
 package de.dennisguse.opentracks.p0.map;
 
 import static org.junit.Assert.*;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Location;
@@ -11,6 +12,10 @@ import androidx.test.core.app.ApplicationProvider;
 import androidx.test.platform.app.InstrumentationRegistry;
 import androidx.test.rule.GrantPermissionRule;
 import androidx.test.rule.ServiceTestRule;
+import androidx.test.runner.lifecycle.ActivityLifecycleMonitorRegistry;
+import androidx.test.runner.lifecycle.Stage;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.BooleanSupplier;
 import org.junit.*;
 import de.dennisguse.opentracks.R;
@@ -42,6 +47,15 @@ public class P07ForegroundGpsTest {
     }
     private void foreground(){await(()->service.hasForegroundGpsRequest()&&service.areSensorsStarted());}
     private void background(){await(()->!service.hasForegroundGpsRequest()&&!service.areSensorsStarted());}
+    private <T extends Activity> T resumed(Class<T> type,Activity previous){
+        AtomicReference<T> result=new AtomicReference<>();
+        await(()->{
+            for(Activity activity:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED))
+                if(type.isInstance(activity)&&activity!=previous){result.set(type.cast(activity));return true;}
+            return false;
+        });
+        return result.get();
+    }
     private void preferences(){assertEquals("NONE",PreferencesUtils.getString(R.string.settings_sensor_gps_key,""));assertEquals("7",PreferencesUtils.getString(R.string.min_sampling_interval_key,""));}
     @Before public void before()throws Exception{
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks();new SessionStore(context).save(RecordingSession.ready());
@@ -68,14 +82,23 @@ public class P07ForegroundGpsTest {
             foreground();Object[] handler={null},driver={null};
             main(()->{handler[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();driver[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler().driver;
                 assertTrue(driver[0] instanceof GpsInternal);assertEquals(1000,((GpsInternal)driver[0]).createLocationRequest().getIntervalMillis());assertEquals(0,service.mapGpsOwnerCount());});
-            try(var settings=ActivityScenario.launch(P0SettingsActivity.class)){
-                foreground();settings.recreate();foreground();
+            var opened=new ArrayList<Activity>();
+            try{
+                home.onActivity(a->assertTrue(a.findViewById(R.id.p03_settings).performClick()));
+                var firstSettings=resumed(P0SettingsActivity.class,null);opened.add(firstSettings);
+                foreground();main(firstSettings::recreate);
+                var settings=resumed(P0SettingsActivity.class,firstSettings);opened.add(settings);foreground();
                 main(()->{assertSame(handler[0],service.getTrackPointCreator().getSensorManager().getGpsHandler());assertSame(driver[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
-                try(var history=ActivityScenario.launch(P0HistoryActivity.class)){
-                    foreground();try(var maps=ActivityScenario.launch(P06MapActivity.class)){
-                        foreground();main(()->{assertSame(driver[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);assertEquals(0,service.mapGpsOwnerCount());});
-                    }
-                }
+                main(()->assertTrue(settings.findViewById(R.id.p0_all_history).performClick()));
+                var history=resumed(P0HistoryActivity.class,null);opened.add(history);foreground();
+                main(()->history.startActivity(P06MapActivity.intent(history,null)));
+                var maps=resumed(P06MapActivity.class,null);opened.add(maps);foreground();
+                main(()->{assertSame(driver[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);assertEquals(0,service.mapGpsOwnerCount());});
+                main(maps::finish);resumed(P0HistoryActivity.class,null);
+                main(history::finish);resumed(P0SettingsActivity.class,null);
+                main(settings::finish);resumed(P0Activity.class,null);
+            }finally{
+                main(()->{for(int i=opened.size()-1;i>=0;i--){var activity=opened.get(i);if(!activity.isDestroyed()&&!activity.isFinishing())activity.finish();}});
             }
             home.recreate();foreground();main(()->assertSame(driver[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver));
             preferences();assertTrue(new WorkoutRepository(context).list().isEmpty());assertNull(TrackRecordingService.activeTrackId(context));
@@ -88,7 +111,9 @@ public class P07ForegroundGpsTest {
     @Test public void positionsStayFreshAcrossPagesAndRejectWeakExpiredUntimedAndJumpedFixes(){
         try(var settings=ActivityScenario.launch(P0SettingsActivity.class)){
             foreground();main(()->P0GpsPreparationTest.fixture(service));fix(1.3);assertTrue(service.hasFreshGpsPreview());
-            try(var history=ActivityScenario.launch(P0HistoryActivity.class)){
+            settings.onActivity(a->assertTrue(a.findViewById(R.id.p0_all_history).performClick()));
+            var history=resumed(P0HistoryActivity.class,null);
+            try{
                 foreground();assertEquals(1.3,service.getGpsPreview().latitude(),.000001);
                 fix(1.31);assertEquals("Single outlier cannot move the preview",1.3,service.getGpsPreview().latitude(),.000001);
                 fix(1.31);fix(1.31);assertEquals(1.31,service.getGpsPreview().latitude(),.000001);
@@ -101,7 +126,8 @@ public class P07ForegroundGpsTest {
                 assertFalse(service.hasFreshGpsPreview());assertNull(service.getGpsPreview());
                 main(()->service.getTrackPointCreator().getSensorManager().getGpsHandler().onConnected(null,"Synthetic recovered GPS"));
                 fix(1.32);assertTrue(service.hasFreshGpsPreview());assertEquals(1.32,service.getGpsPreview().latitude(),.000001);
-            }
+            }finally{main(history::finish);}
+            resumed(P0SettingsActivity.class,null);
         }
         background();preferences();assertTrue(new WorkoutRepository(context).list().isEmpty());
     }
