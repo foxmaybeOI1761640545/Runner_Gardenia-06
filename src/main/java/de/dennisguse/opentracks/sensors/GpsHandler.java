@@ -114,6 +114,9 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onDataReceived(Location location) {
+        // Unregistering a driver cannot turn an already queued callback into
+        // data for a new sensor lifetime, including rapid foreground re-entry.
+        if (aggregator == null || sensorManager.getGpsHandler() != this) return;
         if (!trackPointCreator.acceptGpsLocation(location, thresholdHorizontalAccuracy)) return;
 
         // Keep the status path honest: invalid/weak fixes remain visible as GPS warnings,

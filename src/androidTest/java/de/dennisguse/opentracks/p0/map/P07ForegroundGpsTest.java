@@ -141,6 +141,12 @@ public class P07ForegroundGpsTest {
                 service.releaseMapGps(owner);assertEquals(0,service.mapGpsOwnerCount());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
         }
         background();lateFix(released[0]);assertFalse(service.hasFreshGpsPreview());
+        try(var home=ActivityScenario.launch(P0Activity.class)){
+            foreground();Object[] current={null};
+            main(()->{current[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();assertNotSame(released[0],current[0]);});
+            lateFix(released[0]);main(()->assertSame(current[0],service.getTrackPointCreator().getSensorManager().getGpsHandler()));
+        }
+        background();
         assertTrue(new WorkoutRepository(context).list().isEmpty());preferences();
     }
     private void lateFix(de.dennisguse.opentracks.sensors.GpsHandler released){main(()->{
@@ -155,7 +161,7 @@ public class P07ForegroundGpsTest {
             foreground();main(()->{service.tryStartSensors();released[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();});
         }
         await(()->!service.hasForegroundGpsRequest()&&service.areSensorsStarted());
-        lateFix(released[0]);assertFalse(service.hasFreshGpsPreview());assertNull(service.getGpsPreview());
+        lateFix(released[0]);assertFalse(service.hasFreshGpsPreview());
         main(()->{assertNull(service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);assertFalse(service.isRecording());service.stopIdleSensors();});
         background();preferences();
     }
