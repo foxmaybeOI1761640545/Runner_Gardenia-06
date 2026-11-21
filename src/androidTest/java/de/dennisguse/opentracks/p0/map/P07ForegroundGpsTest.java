@@ -133,20 +133,29 @@ public class P07ForegroundGpsTest {
     }
     @Test public void mapDemandDoesNotDuplicateGlobalDriverAndDefaultHeartPreferenceCannotRetainIdleGps(){
         HeartRateCommands.setConnectionEnabled(context,true);
+        de.dennisguse.opentracks.sensors.GpsHandler[] released={null};
         try(var home=ActivityScenario.launch(P0Activity.class)){
             foreground();Object owner=new Object();Object[] original={null};
-            main(()->{original[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler().driver;service.acquireMapGps(owner);service.acquireMapGps(owner);
+            main(()->{released[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();original[0]=released[0].driver;service.acquireMapGps(owner);service.acquireMapGps(owner);
                 assertEquals(1,service.mapGpsOwnerCount());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);
                 service.releaseMapGps(owner);assertEquals(0,service.mapGpsOwnerCount());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});
         }
-        background();assertTrue(new WorkoutRepository(context).list().isEmpty());preferences();
+        background();lateFix(released[0]);assertFalse(service.hasFreshGpsPreview());
+        assertTrue(new WorkoutRepository(context).list().isEmpty());preferences();
     }
+    private void lateFix(de.dennisguse.opentracks.sensors.GpsHandler released){main(()->{
+        Location location=new Location("gps");location.setLatitude(1.3);location.setLongitude(103.8);location.setAccuracy(2);
+        location.setTime(System.currentTimeMillis());location.setElapsedRealtimeNanos(SystemClock.elapsedRealtimeNanos());
+        released.onDataReceived(location); // A released aggregator must never be accessed or revived.
+    });}
     @Test public void explicitHeartPreviewSurvivesAppBackgroundButItsGpsDoesNot(){
         HeartRateCommands.setConnectionEnabled(context,true);
+        de.dennisguse.opentracks.sensors.GpsHandler[] released={null};
         try(var settings=ActivityScenario.launch(P0SettingsActivity.class)){
-            foreground();main(service::tryStartSensors);
+            foreground();main(()->{service.tryStartSensors();released[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();});
         }
         await(()->!service.hasForegroundGpsRequest()&&service.areSensorsStarted());
+        lateFix(released[0]);assertFalse(service.hasFreshGpsPreview());assertNull(service.getGpsPreview());
         main(()->{assertNull(service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);assertFalse(service.isRecording());service.stopIdleSensors();});
         background();preferences();
     }

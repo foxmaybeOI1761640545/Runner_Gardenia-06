@@ -178,7 +178,10 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         else stopIdleSensors();
     }
     @Override public boolean acceptGpsLocation(Location location, Distance requiredAccuracy) {
-        if (!preferenceCallbacksEnabled) return false;
+        // A previously queued driver callback can arrive after the last GPS
+        // request was released, while a binding or HR preview keeps us alive.
+        if (!preferenceCallbacksEnabled || !areSensorsStarted()
+                || !isRecording() && !isAcquiringGps() && mapGpsOwners.isEmpty() && !foregroundGpsPreview) return false;
         GpsReadiness.Fix fix = new GpsReadiness.Fix(location.getLatitude(), location.getLongitude(),
                 location.hasAccuracy() && location.getAccuracy() < requiredAccuracy.toM(),
                 location.getAccuracy(), location.getElapsedRealtimeNanos());
