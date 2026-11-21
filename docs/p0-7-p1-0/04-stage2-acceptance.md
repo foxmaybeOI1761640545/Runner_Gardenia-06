@@ -2,18 +2,19 @@
 
 **PENDING：不能据此开始阶段3或发布P0.7。**
 
-阶段1已经独立通过，验收提交c69ac06。阶段2当前受验源码为 `1047df65ccd57b7322d2a2d48c9902fdb1fcc754`，[Run44937943787](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44937943787)。完整API35已返回失败：464项中实际执行463项，1失败、0错误、1历史Skip。仅选设备意外触发心率连接，生产连接门禁修复正在重新验证，不能进入阶段3。
+阶段1已经独立通过，验收提交c69ac06。阶段2当前修复候选为 `a9ee02066093f832062eb4b04e6cc08363a53cc0`，[Run44942552700](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44942552700)，定向扩至38项。上一候选 `1047df6` / [Run44937943787](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44937943787) 的完整API35已返回失败：464项中实际执行463项，1失败、0错误、1历史Skip。仅选设备意外触发心率连接，生产连接门禁修复正在重新验证，不能进入阶段3。
 
 ## 实际实现与文件
 
 - `Startup.java` 注册 `p0/gps/ForegroundGpsController.java`，应用级管理已启动Activity集合及唯一前台需求，跨内部页面保留同一服务/驱动，普通后台立即释放，配置重建只有500ms有界过渡。晚到的服务绑定再次检查权限与前台状态；崩溃报告独立进程不采集位置。
 - `services/TrackRecordingService.java` 将应用前台请求、明确地图请求、GPS准备和正式记录统一裁决；全局请求不是第二个mapGpsOwners客户端。空闲INTERNAL/1Hz沿用现有临时读取方式，不修改持久GPS来源和间隔。显式心率预览意图独立保存；无实际GPS需求后丢弃排队位置回调。
+- `sensors/SensorManager.java`、`sensors/HeartRateHandler.java` 增加独立运行时心率请求门禁，仅显式连接、运动准备或正式记录请求连接；保留持久连接偏好及原GATT/解析/采样代码。
 - `sensors/GpsHandler.java` 复用既有GpsMotionFilter的独立预览状态，处理跳点/重定位，不污染正式记录滤波状态。已断开或不再属于当前传感器生命周期的Handler不接收旧回调。有效性、精度、单调时间及新鲜度沿用既有数据模型与服务路径。
 - `P07ForegroundGpsTest.java`、`P07PermissionStateTest.java` 添加真实Application/Activity/Service生命周期、跨页重建、同驱动、迟到回调、弱/过期/跳点、默认与显式心率、实际权限状态、零空闲历史测试。原P061GpsPreferencesTest与P06GpsOwnershipTest逐字保留。原取消UI断言保留，先验证前台GPS与零历史，再移至后台验证原停传感器断言。
 - `P07HomeMapTest.java` 保留实际105MB地图、边界、缩放、手势、重建、替换、删除和缓存断言；截图必须同时等待服务确认的新鲜Fix、实际原生Ready文本和真实可见瓦片。
 - `.github/p07/phase.json`、`p07_stage.py`、`p07_permission_smoke.py` 及clean验证workflow，要求前阶段已验收、受保护测试源码原样、当前源码的非空定向/全量报告、唯一历史Skip、不同真实进程的denied/granted权限烟测。
 
-## 已取得的实际证据
+## 上一候选1047df6的检查点（完整回归失败，不能用于修复候选验收）
 
 | 独立检查点 | Tests | Executed | Failures | Errors | Skipped |
 |---|---:|---:|---:|---:|---:|
