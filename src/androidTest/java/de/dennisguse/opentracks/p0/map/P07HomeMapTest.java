@@ -66,8 +66,13 @@ public class P07HomeMapTest {
                 var h=home(a);long now=SystemClock.uptimeMillis();
                 if(now-lastFix[0]>=1000){bind(h,position(23.7,117.43));lastFix[0]=now;}
                 var d=h.offlineMap().diagnosticViewport();
+                var accepted=service.getGpsPreview();
                 settled[0]=d!=null&&d.center().equals(new LatLong(23.7,117.43))&&!d.tiles().isEmpty()
                     &&d.tiles().stream().allMatch(OfflineMapView.TileState::cached)
+                    &&service.hasFreshGpsPreview()&&accepted!=null
+                    &&Math.abs(accepted.latitude()-23.7)<.000000001&&Math.abs(accepted.longitude()-117.43)<.000000001
+                    &&service.getGpsStatusObservable().getValue()==de.dennisguse.opentracks.sensors.GpsStatusValue.GPS_SIGNAL_FIX
+                    &&a.getString(R.string.p05_gps_fixed).equals(((android.widget.TextView)a.findViewById(R.id.p04_gps_status)).getText().toString())
                     &&a.getString(R.string.p07_map_ready).contentEquals(h.mapStatus());
             });
             if(settled[0]){SystemClock.sleep(300);return;}

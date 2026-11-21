@@ -1,0 +1,23 @@
+{
+  "source": "fcb0c69915e3f96e66deddfafc6eba300a721bd6",
+  "run": 44936917983,
+  "artifact": 14719983064,
+  "artifactSha256": "6c466c6c4a48b0ee30666e9a09c2d2ae160adb1a99b7a9bcd1caeaacd7057ef5",
+  "mapFocused": {
+    "tests": 2,
+    "executed": 2,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gpsFocused": {
+    "tests": 29,
+    "executed": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "stageAccepted": false,
+  "fullRegressionExecuted": false,
+  "failure": "Screenshot readiness only checked direct view bind and tiles, before live GPS preview confirmed the synthetic relocation. GPS Ready assertion failed correctly. Require actual accepted fresh service position and FIX state plus native chip readiness without deleting existing assertions."
+}
