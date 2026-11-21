@@ -136,6 +136,11 @@ public class P07ForegroundGpsTest {
         de.dennisguse.opentracks.sensors.GpsHandler[] released={null};
         try(var home=ActivityScenario.launch(P0Activity.class)){
             foreground();Object owner=new Object();Object[] original={null};
+            main(()->{
+                PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key,"AA:BB:CC:DD:EE:FF");
+                assertNull("Selecting a strap during GPS-only preview is not a Connect request",service.getTrackPointCreator().getSensorManager().getHeartRateHandler().driver);
+                assertEquals(de.dennisguse.opentracks.sensors.driver.BleConnectionSession.State.DISCONNECTED,service.getHeartRatePreview().status().state());
+            });
             main(()->{released[0]=service.getTrackPointCreator().getSensorManager().getGpsHandler();original[0]=released[0].driver;service.acquireMapGps(owner);service.acquireMapGps(owner);
                 assertEquals(1,service.mapGpsOwnerCount());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);
                 service.releaseMapGps(owner);assertEquals(0,service.mapGpsOwnerCount());assertSame(original[0],service.getTrackPointCreator().getSensorManager().getGpsHandler().driver);});

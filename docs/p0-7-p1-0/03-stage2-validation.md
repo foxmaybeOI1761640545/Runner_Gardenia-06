@@ -27,3 +27,9 @@
 迟到回调同时在 GpsHandler 入口检查自身是否仍为当前有效 Handler 且 aggregator 仍连接，以覆盖“旧回调排队期间应用已经重新进入前台”的快速重入。新增重入后旧 Handler 回调断言；心率保留场景检查 freshness=false（原始最后已知坐标可以作为带时间戳缓存存在，不冒充新鲜位置）。所有原有受保护owner/偏好断言保持不变。
 
 源码89c99b9 / Run44937662904 的GPS29/29/0/0/0、地图2/2/0/0/0及独立权限denied、granted各1/1/0/0/0实际成功。因最新1047df6加入旧回调生命周期保护及断言，在这些检查点保存后取消旧源码尚未完成的全量运行，所有门禁改由最新源码重跑。此取消运行不算阶段通过；96c38d7的排队运行44937849542被更新候选自动取代，也不计测试成功。部分原始证据见 `evidence/run44937662904-superseded/`。
+
+## 完整回归发现的真实连接门禁问题
+
+源码1047df6 / Run44937943787：Python141/141/0/0/0，JVM167/167/0/0/0，API35 Tests464 / Executed463 / Failures1 / Errors0 / Skipped1。唯一Skip身份仍为历史项。原P0SensorsTest.scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection要求仅选择设备保持DISCONNECTED，却观察到CONNECTING：全局GPS使SensorManager提前启动，选设备偏好回调因此触发了未经请求的心率连接。原始完整XML和失败门禁见 `evidence/run44937943787-full-failed/`，37张视觉检查成功也不能覆盖这一回归失败。
+
+生产修复给既有HeartRateHandler增加独立的服务运行时请求门禁：正式记录、用户发起的GPS准备或显式Connect才请求心率；GPS空闲预览不等于Connect，不修改持久连接开关。停止空闲心率时重新裁决该门禁，仍保留前台GPS。BLE驱动/GATT/解析/采样代码不变，Handler复用。原心率测试文件也加入逐字校验保护；GPS定向扩至38项，完整Android仍464项。新增GPS-only选设备保持断开断言，旧断言一项不删。修复后重新执行全部门禁，阶段2继续PENDING。

@@ -22,9 +22,9 @@ def prepare():
   subprocess.run(['git','merge-base','--is-ancestor',phase['previousAcceptanceCommit'],'HEAD'],check=True)
   a=json.loads(Path(phase['previousAcceptance']).read_text());v=json.loads(Path(phase['previousVisualReview']).read_text())
   if not a['stageAccepted'] or not v['visualReviewPassed'] or a['source']!=v['source'] or len(v['screenshots'])!=35:raise ValueError('Stage1 gate is not accepted')
- for name in ('P061GpsPreferencesTest.java','P06GpsOwnershipTest.java'):
-  path='src/androidTest/java/de/dennisguse/opentracks/p0/map/'+name
-  if Path(path).read_bytes()!=subprocess.check_output(['git','show','ae68319361c1277e97e4fe9bfc9ae52de88146e5:'+path]):raise ValueError('Original GPS assertions changed: '+name)
+ for name in ('map/P061GpsPreferencesTest.java','map/P06GpsOwnershipTest.java','P0SensorsTest.java'):
+  path='src/androidTest/java/de/dennisguse/opentracks/p0/'+name
+  if Path(path).read_bytes()!=subprocess.check_output(['git','show','ae68319361c1277e97e4fe9bfc9ae52de88146e5:'+path]):raise ValueError('Original GPS/heart assertions changed: '+name)
  Path('release-plan.json').write_text(json.dumps({'commit':source,'stage':phase['stage'],'fullRegression':True,'branch':expected,'signed':False,'publishing':False,'runId':os.environ['GITHUB_RUN_ID']},indent=2)+'\n')
  if os.environ.get('GITHUB_OUTPUT'):
   with open(os.environ['GITHUB_OUTPUT'],'a') as output:output.write('stage='+str(phase['stage'])+'\n')
@@ -52,7 +52,7 @@ def focused():
   shutil.copy2(picture,target/picture.name);rows.append({'file':picture.name,'sha256':hashlib.sha256(data).hexdigest()})
  shutil.copytree('build/outputs/androidTest-results',target/'raw-android',dirs_exist_ok=True)
  (target/'focused.json').write_text(json.dumps({'source':plan['commit'],'run':plan['runId'],'scope':'P07HomeMapTest only; full regression still required','tests':report,'screenshots':rows,'visualReviewRequired':True,'stageAccepted':False},indent=2)+'\n')
-GPS_FILES=['p0/map/P07ForegroundGpsTest.java','p0/map/P061GpsPreferencesTest.java','p0/map/P06GpsOwnershipTest.java','p0/P0GpsPreparationTest.java','p0/P0RecordingUiTest.java']
+GPS_FILES=['p0/map/P07ForegroundGpsTest.java','p0/map/P061GpsPreferencesTest.java','p0/map/P06GpsOwnershipTest.java','p0/P0GpsPreparationTest.java','p0/P0RecordingUiTest.java','p0/P0SensorsTest.java']
 def gps_classes():
  print(','.join('de.dennisguse.opentracks.'+p.removesuffix('.java').replace('/','.') for p in GPS_FILES))
 def gps_focused():
@@ -62,7 +62,7 @@ def gps_focused():
   source=Path(directory)
   for path in GPS_FILES:shutil.copy2(Path('src/androidTest/java/de/dennisguse/opentracks')/path,source/Path(path).name)
   report=inspect(Path('build/outputs/androidTest-results'),source,False)
- if not report['passed'] or report['tests']!=29 or report['skipped']:raise ValueError('GPS/owner/preferences regression failed or incomplete')
+ if not report['passed'] or report['tests']!=38 or report['skipped']:raise ValueError('GPS/heart/owner/preferences regression failed or incomplete')
  target=Path('build/reports/p07-gps-focused');target.mkdir(parents=True,exist_ok=True)
  for path in Path('build/outputs/androidTest-results').rglob('TEST-*.xml'):shutil.copy2(path,target/path.name)
  (target/'focused.json').write_text(json.dumps({'source':plan['commit'],'run':plan['runId'],'tests':report,'fullRegressionRequired':True,'stageAccepted':False},indent=2)+'\n')

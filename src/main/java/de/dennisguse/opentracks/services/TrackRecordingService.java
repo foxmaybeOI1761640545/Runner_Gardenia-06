@@ -359,6 +359,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     private synchronized void startSensors() {
         boolean gpsNeeded=isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty() || foregroundGpsPreview;
+        trackPointCreator.getSensorManager().setHeartRateRequested(isRecording() || isAcquiringGps() || explicitHeartPreview);
         // Stop an unneeded preview before restoring the configured GPS source: an idle
         // HR preview must never attempt to connect a user's remote/disabled GPS driver.
         if (!gpsNeeded) trackPointCreator.getSensorManager().setGpsRecording(false);
@@ -374,7 +375,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
     public synchronized void stopIdleSensors() {
         explicitHeartPreview=false;
-        if (isRecording() || isAcquiringGps() || !mapGpsOwners.isEmpty() || foregroundGpsPreview) return;
+        if (isRecording() || isAcquiringGps()) return;
+        if (!mapGpsOwners.isEmpty() || foregroundGpsPreview) { startSensors(); return; }
         if (areSensorsStarted()) stopSensors();
         stopSelf();
     }

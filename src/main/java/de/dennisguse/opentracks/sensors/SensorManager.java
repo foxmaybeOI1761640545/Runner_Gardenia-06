@@ -54,6 +54,15 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     private GpsHandler gpsHandler;
     private boolean gpsRecording=true;
     private boolean mapGpsPreview;
+    private boolean heartRateRequested=true;
+
+    /** Opening GPS preview is not a Bluetooth Connect command. User preferences stay intact. */
+    public void setHeartRateRequested(boolean requested) {
+        if (heartRateRequested == requested) return;
+        heartRateRequested=requested;
+        if (isStarted()) heartRateHandler.connect();
+    }
+    boolean isHeartRateRequested() { return heartRateRequested; }
 
     /** Service-owned idle preview; active recording always uses the user's configuration. */
     public void setMapGpsPreview(boolean preview) {

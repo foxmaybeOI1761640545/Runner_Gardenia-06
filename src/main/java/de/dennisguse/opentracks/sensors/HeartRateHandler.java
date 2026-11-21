@@ -35,7 +35,7 @@ public class HeartRateHandler extends SensorHandler<HeartRate, HeartRate> {
     }
 
     @Override void connect() {
-        if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(getContext())) {
+        if(!sensorManager.isHeartRateRequested() || !de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(getContext())) {
             disconnect();onDisconnected();return;
         }
         super.connect();

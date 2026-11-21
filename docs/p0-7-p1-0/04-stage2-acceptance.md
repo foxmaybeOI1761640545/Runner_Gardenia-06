@@ -2,7 +2,7 @@
 
 **PENDING：不能据此开始阶段3或发布P0.7。**
 
-阶段1已经独立通过，验收提交c69ac06。阶段2当前受验源码为 `1047df65ccd57b7322d2a2d48c9902fdb1fcc754`，[Run44937943787](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44937943787)。完整API35仍在执行，不把定向成功当作完整成功。
+阶段1已经独立通过，验收提交c69ac06。阶段2当前受验源码为 `1047df65ccd57b7322d2a2d48c9902fdb1fcc754`，[Run44937943787](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44937943787)。完整API35已返回失败：464项中实际执行463项，1失败、0错误、1历史Skip。仅选设备意外触发心率连接，生产连接门禁修复正在重新验证，不能进入阶段3。
 
 ## 实际实现与文件
 
@@ -30,6 +30,6 @@
 
 所有失败及修复见 `03-stage2-validation.md`，包括嵌套独立测试任务销毁首页，以及截图未等待连续定位确认。原断言未删除、未改owner预期、未新增Ignore。被新源码取代的取消运行不算成功。
 
-此阶段不改变SQLite Schema43、GPX导出、运动历史写入或BLE采集实现。不分配版本、不访问签名Secrets、不创建Tag/Release。正式运动的临时采样配置、交接和恢复是下一阶段，尚未开始。
+此阶段不改变SQLite Schema43、GPX导出、运动历史写入或BLE驱动/解析/采样实现；修复仅增加独立的运行时心率连接请求门禁。不分配版本、不访问签名Secrets、不创建Tag/Release。正式运动的临时采样配置、交接和恢复是下一阶段，尚未开始。
 
 阶段3启动条件：当前源码完整Python/JVM/API35报告成功、唯一历史Skip核实、实际原生视觉审查、阶段报告提交推送及远程核验全部完成。实体GNSS、功耗、Xiaomi CIVI5Pro、Redmi Note12Pro+及Magene H303仍为NEEDS_DEVICE_VALIDATION。
