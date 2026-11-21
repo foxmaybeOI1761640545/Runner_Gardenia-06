@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.GpsMotionFilterTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2026-11-21T19:55:37.477Z" hostname="ip-10-0-142-22" time="0.021">
+  <properties/>
+  <testcase name="longRejectedStreamCannotLegitimizeAnUnrelatedJumpThroughAgeAlone" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.002"/>
+  <testcase name="zeroToPointThreeSpeedNoiseNeverReleasesAStationaryAnchor" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <testcase name="stoppingJitterAddsNoDistanceEvenDuringStopConfirmation" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="halfMeterPerSecondForSixtySecondsKeepsAllThirtyMeters" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.004"/>
+  <testcase name="decelerationConfirmsStopAndClampsSpeed" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="relocationWithoutReportedSpeedDoesNotInheritTheJumpVelocity" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="invalidOrNonMonotonicFixDoesNotChangeTheState" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="cyclingForSixtySecondsKeepsAllDistance" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <testcase name="slowButSustainedMovementCanLeaveStationaryState" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="longFixGapStartsASeparateSegment" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="impossibleReportedSpeedCannotBecomeANewSegmentEvenAfterThreeFixes" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="shortDecelerationDoesNotDeclareAStop" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="repeatedRelocationStartsAnExplicitNewSegment" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <testcase name="invalidAccuracyAndSpeedNeverMutateTheAnchor" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="rejectedJumpStillAdvancesMonotonicTimestampWatermark" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="runningForSixtySecondsKeepsAllDistance" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <testcase name="resetClearsPreviousMotionAndAnchor" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="stationaryJitterKeepsEveryFixAtOneAnchorAndZeroSpeed" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="twoConsistentMovingFixesReleaseStationaryAnchor" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="slowWalkingForSixtySecondsKeepsAllFortyTwoMeters" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="missingSpeedCanDetectSustainedMotionWithoutAmplifyingStationaryNoise" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="unrelatedConsecutiveJumpsNeverEstablishARelocation" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <testcase name="missingOrNegativeMonotonicMetadataNeverEntersTheFilter" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="stoppedRunnerCanResumeSlowWalkingWithoutRepeatedStops" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.0"/>
+  <testcase name="isolatedJumpIsRejectedWithoutLosingTheNextGoodFix" classname="de.dennisguse.opentracks.p0.GpsMotionFilterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
