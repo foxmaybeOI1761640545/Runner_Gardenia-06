@@ -39,6 +39,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         segmentAfterReconnect = false;
         recordingFixSeen = false;
     }
+    /** A finished workout must not inherit the old pre-workout preview anchor. */
+    public void beginPreviewSegment() { previewMotionFilter.reset(); }
     private volatile Position latestRecordingPosition;
     private boolean recordingFixSeen;
     private boolean segmentAfterReconnect;
@@ -194,11 +196,11 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         return new AggregatorGPS(sensorAddress, sensorName);
     }
 
-    long samplingIntervalMillis() { return sensorManager.isMapGpsPreview() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis(); }
+    long samplingIntervalMillis() { return sensorManager.usesInternalOneHzGps() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis(); }
 
     @Override
     protected String getSensorAddress() {
-        return sensorManager.isMapGpsPreview() ? SensorType.INTERNAL.getPreferenceValue() : super.getSensorAddress();
+        return sensorManager.usesInternalOneHzGps() ? SensorType.INTERNAL.getPreferenceValue() : super.getSensorAddress();
     }
 
     @Override

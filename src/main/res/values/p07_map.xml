@@ -1,6 +1,7 @@
 <resources>
     <item name="p07_home_locate" type="id" />
-    <string name="p07_no_map">No offline map selected · location remains available</string>
+    <string name="p07_no_map">No offline map selected</string>
+    <string name="p07_gps_preview_notification">Live location preview · no workout recording</string>
     <string name="p07_map_checking">Checking local map features…</string>
     <string name="p07_map_ready">Offline map · © OpenStreetMap contributors</string>
     <string name="p07_no_features">No offline map features in this area at this zoom</string>

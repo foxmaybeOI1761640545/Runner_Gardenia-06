@@ -53,7 +53,8 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
 
     private GpsHandler gpsHandler;
     private boolean gpsRecording=true;
-    private boolean mapGpsPreview;
+    public enum GpsMode { CONFIGURED, PREVIEW, P0_SESSION }
+    private GpsMode gpsMode = GpsMode.CONFIGURED;
     private boolean heartRateRequested=true;
 
     /** Opening GPS preview is not a Bluetooth Connect command. User preferences stay intact. */
@@ -64,18 +65,24 @@ public class SensorManager implements SharedPreferences.OnSharedPreferenceChange
     }
     boolean isHeartRateRequested() { return heartRateRequested; }
 
-    /** Service-owned idle preview; active recording always uses the user's configuration. */
-    public void setMapGpsPreview(boolean preview) {
-        if (mapGpsPreview == preview) return;
+    /** Change effective GPS configuration once, without an intermediate preference reconnect. */
+    public void setGpsMode(GpsMode mode) {
+        if (gpsMode == mode) return;
         String address = isStarted() ? gpsHandler.getSensorAddress() : null;
         long interval = isStarted() ? gpsHandler.samplingIntervalMillis() : 0;
-        mapGpsPreview = preview;
-        // Preserve a live GPS connection when its effective configuration did not change.
+        gpsMode = mode;
+        if (isStarted() && mode == GpsMode.PREVIEW) gpsHandler.beginPreviewSegment();
         if (isStarted() && gpsRecording && (!java.util.Objects.equals(address, gpsHandler.getSensorAddress())
                 || interval != gpsHandler.samplingIntervalMillis())) gpsHandler.connect();
     }
 
-    public boolean isMapGpsPreview() { return mapGpsPreview; }
+    /** Compatibility entry point for an idle map; formal legacy sessions remain configured. */
+    public void setMapGpsPreview(boolean preview) {
+        setGpsMode(preview ? GpsMode.PREVIEW : GpsMode.CONFIGURED);
+    }
+
+    public boolean isMapGpsPreview() { return gpsMode == GpsMode.PREVIEW; }
+    public boolean usesInternalOneHzGps() { return gpsMode != GpsMode.CONFIGURED; }
 
 
     /** P0 keeps GPS off during an idle heart-rate preview. */

@@ -47,6 +47,9 @@ public class TrackRecordingManager implements SharedPreferences.OnSharedPreferen
     private final TrackPointCreator trackPointCreator;
 
     private Distance recordingDistanceInterval;
+    private boolean p0GpsSession;
+
+    synchronized void setP0GpsSession(boolean active) { p0GpsSession = active; }
     private Distance maxRecordingDistance;
     private Duration idleDuration;
 
@@ -237,7 +240,7 @@ public class TrackRecordingManager implements SharedPreferences.OnSharedPreferen
             return true;
         }
 
-        if (distanceToLastStoredTrackPoint.greaterOrEqualThan(recordingDistanceInterval)) {
+        if (distanceToLastStoredTrackPoint.greaterOrEqualThan(p0GpsSession ? Distance.ZERO : recordingDistanceInterval)) {
             insertTrackPoint(trackPoint, false);
 
             scheduleNewIdleTimeout();

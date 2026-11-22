@@ -93,6 +93,16 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
         updateNotification();
     }
 
+    /** Reuse the quiet existing notification without showing the last workout's totals. */
+    void onIdlePreview(Context context, boolean gps) {
+        notificationBuilder.setContentTitle(context.getString(R.string.p0_title))
+                .setContentText(context.getString(gps ? R.string.p07_gps_preview_notification : R.string.p0_hr_preview_notification))
+                .setSubText(null)
+                .setOnlyAlertOnce(true);
+        previousLocationWasAccurate = true;
+        updateNotification();
+    }
+
     public void onRecordingStarted(Context context, @NonNull Track.Id trackId) {
         Intent intent = IntentUtils.newIntent(context, P0Activity.class);
 
@@ -101,7 +111,10 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        notificationBuilder.setContentIntent(pendingIntent);
+        notificationBuilder.setContentIntent(pendingIntent)
+                .setContentTitle(context.getString(R.string.p0_title))
+                .setContentText(context.getString(R.string.p0_recording))
+                .setOnlyAlertOnce(true);
         updateNotification();
     }
 

@@ -199,6 +199,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
             try {
                 if (startNewTrack() == null) throw new IllegalStateException("Unable to begin GPS workout");
             } catch (RuntimeException failure) {
+                if (isRecording()) endCurrentTrack();
+                p0GpsGuard = false;
                 stopIdleSensors();
                 gpsPreparationObservable.setValue(new GpsPreparation(GpsPreparation.State.UNAVAILABLE, 0));
                 Log.e(TAG, "GPS preparation could not start recording", failure);
@@ -285,12 +287,21 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
             //Best guess: do we need to resume a recording?
             Track.Id trackId = TrackIdStorage.get(this);
             if(trackId==null) {stopSelf(startId);return START_NOT_STICKY;}
+            boolean p0Session = TrackIdStorage.isP0GpsSession(this);
+            if (p0Session && !de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this)) {
+                // A retained P0 workout cannot silently resume without GPS just because
+                // Bluetooth permission is still granted. Keep the saved workout available.
+                TrackIdStorage.unset(this);
+                gpsPreparationObservable.setValue(new GpsPreparation(GpsPreparation.State.UNAVAILABLE, 0));
+                stopSelf(startId);
+                return START_NOT_STICKY;
+            }
             if (trackId != null) {
                 // System recovery is not an explicit Connect action when automatic retry is off.
                 if(!de.dennisguse.opentracks.p0.ble.HeartRateCommands.autoReconnectEnabled(this))
                     de.dennisguse.opentracks.p0.ble.HeartRateCommands.setConnectionEnabled(this,false);
                 Log.i(TAG, "After restart: resuming recording for " + trackId);
-                resumeTrack(trackId);
+                resumeTrack(trackId, p0Session);
                 if(!isRecording()){TrackIdStorage.unset(this);stopSelf(startId);return START_NOT_STICKY;}
             }
         }
@@ -319,24 +330,37 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
     public static Track.Id activeTrackId(android.content.Context context) {return TrackIdStorage.get(context);}
 
     public void resumeTrack(Track.Id trackId) {
+        resumeTrack(trackId, false);
+    }
+
+    /** Explicit P0 UI resume; direct legacy recording APIs keep the user's configured GPS. */
+    public void resumeP0Track(Track.Id trackId) {
+        if (!de.dennisguse.opentracks.util.PermissionRequester.GPS.hasPermission(this))
+            throw new SecurityException("Fine location permission required for P0 recording");
+        resumeTrack(trackId, true);
+    }
+
+    private void resumeTrack(Track.Id trackId, boolean p0Session) {
+        if (isRecording()) return;
         if (!de.dennisguse.opentracks.p0.recording.RecordingPermissions.hasAny(this)) return;
         if (!trackRecordingManager.resumeExistingTrack(trackId)) {
             Log.w(TAG, "Cannot resume a non-existing track.");
             return;
         }
         Log.i(TAG, "resumeTrack");
-
+        p0GpsGuard = p0Session;
         startRecording(trackId);
     }
 
     private void startRecording(Track.Id trackId) {
         updateRecordingStatus(RecordingStatus.record(trackId));
-        TrackIdStorage.set(this, trackId);
+        TrackIdStorage.set(this, trackId, p0GpsGuard);
+        trackRecordingManager.setP0GpsSession(p0GpsGuard);
 
         // A Bluetooth-only preview may have started before GPS permission was granted.
         // Reopen only GPS when beginning a workout; keep the selected HR connection alive.
         if (areSensorsStarted()) {
-            if (!mapGpsOwners.isEmpty() || foregroundGpsPreview) trackPointCreator.beginGpsRecordingSegment();
+            if (p0GpsGuard || !mapGpsOwners.isEmpty() || foregroundGpsPreview) trackPointCreator.beginGpsRecordingSegment();
             trackPointCreator.getSensorManager().getHeartRateHandler().beginRecordingSegment(trackPointCreator.getNow());
         }
         startSensors();
@@ -363,7 +387,12 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         // Stop an unneeded preview before restoring the configured GPS source: an idle
         // HR preview must never attempt to connect a user's remote/disabled GPS driver.
         if (!gpsNeeded) trackPointCreator.getSensorManager().setGpsRecording(false);
-        trackPointCreator.getSensorManager().setMapGpsPreview((!mapGpsOwners.isEmpty() || foregroundGpsPreview) && !isRecording() && !isAcquiringGps());
+        var mode = p0GpsGuard && (isRecording() || isAcquiringGps())
+                ? de.dennisguse.opentracks.sensors.SensorManager.GpsMode.P0_SESSION
+                : (!mapGpsOwners.isEmpty() || foregroundGpsPreview) && !isRecording() && !isAcquiringGps()
+                ? de.dennisguse.opentracks.sensors.SensorManager.GpsMode.PREVIEW
+                : de.dennisguse.opentracks.sensors.SensorManager.GpsMode.CONFIGURED;
+        trackPointCreator.getSensorManager().setGpsMode(mode);
         trackPointCreator.getSensorManager().setGpsRecording(gpsNeeded);
         if (!trackPointCreator.isStarted()) {
             Log.i(TAG, "startSensors");
@@ -371,6 +400,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
         }
         // Refresh the foreground capabilities after a newly granted GPS/Bluetooth permission.
         ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this,gpsNeeded), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this,gpsNeeded));
+        if (!isRecording()) notificationManager.onIdlePreview(this, gpsNeeded);
     }
 
     public synchronized void stopIdleSensors() {
@@ -392,6 +422,8 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
 
         trackRecordingManager.endCurrentTrack();
         TrackIdStorage.unset(this);
+        p0GpsGuard = false;
+        trackRecordingManager.setP0GpsSession(false);
 
         stopUpdateRecordingData();
 
