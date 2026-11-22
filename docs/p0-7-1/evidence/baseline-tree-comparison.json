@@ -1,0 +1,13 @@
+{
+  "productSource": "467f2086c0f712e04430382203da2bde0c870acb",
+  "deliveryHead": "cf679d7d7c5870ace7aec0a68b356fc303997273",
+  "ancestor": true,
+  "aheadCommits": 6,
+  "changedFileCount": 189,
+  "nonDocumentationChanges": [
+    ".github/p07/publication-approval.json",
+    ".github/p07/visual-approval.json"
+  ],
+  "allOtherFilesByteIdentical": true,
+  "comparisonUsesCompleteLocalGitObjects": true
+}

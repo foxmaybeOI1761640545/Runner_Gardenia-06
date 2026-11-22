@@ -1,0 +1,11 @@
+Allocate immutable version plan	Allocate or resume this run's exact version	﻿2026-11-22T18:08:53.0785834Z ##[group]Run python3 .github/scripts/release_policy.py prepare
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0786336Z [36;1mpython3 .github/scripts/release_policy.py prepare[0m
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0811767Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0812118Z env:
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0812489Z   TZ: Asia/Singapore
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0812781Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0813120Z   ANDROID_HOME: /usr/local/lib/android/sdk
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0813392Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.0813659Z ##[endgroup]
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.1095852Z version.properties must define a vX.Y.Z-rcN.M series.
+Allocate immutable version plan	Allocate or resume this run's exact version	2026-11-22T18:08:53.1143975Z ##[error]Process completed with exit code 1.

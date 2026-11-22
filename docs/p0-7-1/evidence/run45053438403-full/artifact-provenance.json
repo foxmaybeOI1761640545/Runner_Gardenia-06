@@ -1,0 +1,9 @@
+{
+  "runId": 45053438403,
+  "source": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "artifactId": 14768630800,
+  "artifactName": "P071-navigation-stage-45053438403-1",
+  "sha256": "07f1de9a02fd2d4e0bf1cdbce9a75b3020274d685c868b2d904a366cac13e88c",
+  "bytes": 207726920,
+  "focusedNavigationScreenshotScope": "focused.json image hashes bind the independent focused artifact 14766766714 (3d34f5ab2c0412ace6c11d978535e4bd4a6e1f0dbe3d058151524651dbc128ad). The full artifact retains that focused receipt but its common PNG paths were subsequently replaced by full-run images; final full.json and delivery.json bind current full PNGs. No focused/full image hash interchange."
+}
