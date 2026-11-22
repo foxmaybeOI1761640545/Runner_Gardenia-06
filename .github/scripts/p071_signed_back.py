@@ -19,7 +19,11 @@ def root_back_home(device):
         if after and PACKAGE not in after and 'mCurrentFocus=null' not in after:break
         time.sleep(.2)
     else:raise ValueError('Root Back revealed another application page instead of backgrounding the task')
-    device('shell','am','start','-W','-f','0x30020000','-n',PACKAGE+'/de.dennisguse.opentracks.p0.app.P0Activity')
+    # API35 can leave `am start -W` waiting for a launch-drawn event when
+    # REORDER_TO_FRONT resumes an existing Activity that is already drawn.
+    # Issue the start without the shell's launch wait, then independently
+    # require the actual Home window below. Do not replace the Back probe.
+    device('shell','am','start','-f','0x30020000','-n',PACKAGE+'/de.dennisguse.opentracks.p0.app.P0Activity')
     until=time.monotonic()+15
     while time.monotonic()<until:
         if 'P0Activity' in focus(device):break

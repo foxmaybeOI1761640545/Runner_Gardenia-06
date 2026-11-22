@@ -1,0 +1,59 @@
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	﻿2026-11-22T19:18:31.4351699Z ##[group]Run python3 .github/scripts/p071_release_smoke.py
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4352196Z [36;1mpython3 .github/scripts/p071_release_smoke.py[0m
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4390749Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4391162Z env:
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4391402Z   TZ: Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4391710Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4392066Z   ANDROID_HOME: /usr/local/lib/android/sdk
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4392412Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4393074Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4393653Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4394086Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4394437Z   GRADLE_USER_HOME: /home/runner/.gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4394767Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4395116Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4395693Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4396256Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4396563Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4397102Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4397912Z   P0_BASELINE_DIR: /home/runner/work/_temp/p070-baseline
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.4398244Z ##[endgroup]
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.5164225Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:31.7534133Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:32.3034499Z Loading local repository...                                                     
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:32.6342502Z [=========                              ] 25% Loading local repository...       
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:18:32.6343365Z Auto-selecting single ABI x86_64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:00.4153327Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.0028561Z warning: [options] source value 8 is obsolete and will be removed in a future release
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.0029702Z warning: [options] target value 8 is obsolete and will be removed in a future release
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.0064302Z warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.7186095Z Note: .github/scripts/NativeWindowDump.java uses or overrides a deprecated API.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.7198715Z Note: Recompile with -Xlint:deprecation for details.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.7199195Z 3 warnings
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:01.7417929Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:14.2771505Z 
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:19:14.2772419Z Installing verified fixed-key P0 APK over baseline without clearing data
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:43.7238315Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7629599Z Traceback (most recent call last):
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7630495Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p071_release_smoke.py", line 46, in <module>
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7631914Z     run(post_verify=capture,baseline_spec=('467f2086c0f712e04430382203da2bde0c870acb',6780,'3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7'),map_validation=True,capture_adapter=navigation_adapter,output_name='p071-release-smoke',preserve_gps_preferences=True)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7633169Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p071_runtime.py", line 225, in run
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7633634Z     root_back_home(device);wait_text('Recording')
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7633900Z     ^^^^^^^^^^^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7634367Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p071_signed_back.py", line 22, in root_back_home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7635014Z     device('shell','am','start','-W','-f','0x30020000','-n',PACKAGE+'/de.dennisguse.opentracks.p0.app.P0Activity')
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7636384Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p071_runtime.py", line 52, in device
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7637193Z     result=subprocess.run([str(adb),'-s',serial,*map(str,args)],text=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,timeout=timeout)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7638000Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7638513Z   File "/usr/lib/python3.12/subprocess.py", line 550, in run
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7642268Z     stdout, stderr = process.communicate(input, timeout=timeout)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7642808Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7643356Z   File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7643965Z     stdout, stderr = self._communicate(input, endtime, timeout)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7644485Z                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7645028Z   File "/usr/lib/python3.12/subprocess.py", line 2116, in _communicate
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7653518Z     self._check_timeout(endtime, orig_timeout, stdout, stderr)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7654148Z   File "/usr/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7654872Z     raise TimeoutExpired(
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7656624Z subprocess.TimeoutExpired: Command '['/usr/local/lib/android/sdk/platform-tools/adb', '-s', 'emulator-5562', 'shell', 'am', 'start', '-W', '-f', '0x30020000', '-n', 'com.fox.runner/de.dennisguse.opentracks.p0.app.P0Activity']' timed out after 40 seconds
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T19:20:44.7826716Z ##[error]Process completed with exit code 1.
