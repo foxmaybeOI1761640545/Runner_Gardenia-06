@@ -1,0 +1,78 @@
+{
+  "checkedAtUtc": "2026-11-22T10:19:46.862549+00:00",
+  "protectedHistoricalRefsUnchanged": 36,
+  "historicalReleasesUnchanged": [
+    {
+      "tag": "test-p0-v0.1.0-p0.6.1",
+      "releaseId": 445443618,
+      "assetsUnchanged": 16
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6",
+      "releaseId": 443298861,
+      "assetsUnchanged": 14
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5.1",
+      "releaseId": 442439079,
+      "assetsUnchanged": 12
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5",
+      "releaseId": 439993653,
+      "assetsUnchanged": 11
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.4",
+      "releaseId": 438419806,
+      "assetsUnchanged": 8
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.3",
+      "releaseId": 438149787,
+      "assetsUnchanged": 8
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.2",
+      "releaseId": 436759328,
+      "assetsUnchanged": 6
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.1",
+      "releaseId": 434907895,
+      "assetsUnchanged": 6
+    },
+    {
+      "tag": "v0.1.0-rc1.6",
+      "releaseId": 434053067,
+      "assetsUnchanged": 3
+    },
+    {
+      "tag": "v0.1.0-rc1.5",
+      "releaseId": 433333387,
+      "assetsUnchanged": 3
+    },
+    {
+      "tag": "v0.1.0-rc1.4",
+      "releaseId": 433029650,
+      "assetsUnchanged": 3
+    }
+  ],
+  "experimentalHead": "e7f5ee7b475ea02961489f540bd262f9e916fc3d",
+  "experimentalHeadIsAncestor": false,
+  "experimentalFailedRunStillFailure": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/43696204580",
+  "draftPr": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/pull/5",
+  "prBase": "feature/p0-6-map-real-validation",
+  "newRelease": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.7.0",
+  "newReleaseIsPrerelease": true,
+  "newReleaseIsLatest": false,
+  "tagObject": "bbb9ebc63e9f9210e8b191c205dcb08d0d5e1b68",
+  "tagRecord": {
+    "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+    "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+    "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+    "versionCode": 6780,
+    "versionName": "v0.1.0-p0.7.0"
+  },
+  "passed": true
+}

@@ -1,0 +1,40 @@
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	﻿2026-11-22T10:17:28.1048888Z ##[group]Run sdkmanager 'build-tools;36.0.0'
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1049438Z [36;1msdkmanager 'build-tools;36.0.0'[0m
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1050082Z [36;1mpython3 .github/scripts/p07_public_verify.py[0m
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1848863Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1849431Z env:
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1849802Z   TZ: Asia/Singapore
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1850152Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1850548Z   ANDROID_HOME: /usr/local/lib/android/sdk
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1851001Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1851583Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1852262Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1852703Z ##[endgroup]
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1955585Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1957093Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1958284Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.1959201Z 
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:28.2000613Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0931512Z Traceback (most recent call last):
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0932319Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p07_public_verify.py", line 12, in <module>
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0933506Z     with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Runner-Gardenia-independent-public-check','Accept':'application/octet-stream'}),timeout=120) as response:
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0934414Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0934901Z   File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0939411Z     return opener.open(url, data, timeout)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0939934Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0940282Z   File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0945015Z     response = meth(req, response)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0945448Z                ^^^^^^^^^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0946080Z   File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0946753Z     response = self.parent.error(
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0947349Z                ^^^^^^^^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0947895Z   File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0948404Z     return self._call_chain(*args)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0948847Z            ^^^^^^^^^^^^^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0949347Z   File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0949890Z     result = func(*args)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0950399Z              ^^^^^^^^^^^
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0951191Z   File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0952280Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.0953001Z urllib.error.HTTPError: HTTP Error 403: rate limit exceeded
+independent-public-verification	Run sdkmanager 'build-tools;36.0.0'	2026-11-22T10:17:30.1085148Z ##[error]Process completed with exit code 1.

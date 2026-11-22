@@ -1,0 +1,44 @@
+publish	Reuse reviewed immutable bytes; no build or signing here	﻿2026-11-22T10:12:21.4016321Z ##[group]Run python3 .github/scripts/p07_signing.py inputs
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4016686Z [36;1mpython3 .github/scripts/p07_signing.py inputs[0m
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4016951Z [36;1mpython3 .github/scripts/p07_publish.py[0m
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4048863Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4049135Z env:
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4049303Z   TZ: Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4049499Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4049737Z   ANDROID_HOME: /usr/local/lib/android/sdk
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4049956Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4050245Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4050578Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4052949Z   GH_TOKEN: ***
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:12:21.4053129Z ##[endgroup]
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:06.7380841Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:08.6051575Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:10.4183276Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:11.0534154Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:11.7261440Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5898142Z Traceback (most recent call last):
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5899155Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p07_publish.py", line 103, in <module>
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5899677Z     if __name__=='__main__':publish(GitHub())
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5900072Z                             ^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5900610Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p07_publish.py", line 91, in publish
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5901510Z     with urllib.request.urlopen(urllib.request.Request(download_url,headers={'User-Agent':'Runner-Gardenia-public-verification','Accept':'application/octet-stream'}),timeout=120) as response:
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5902383Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5903023Z   File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5903531Z     return opener.open(url, data, timeout)
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5903927Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5904308Z   File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5907678Z     response = meth(req, response)
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5908044Z                ^^^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5908533Z   File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5908964Z     response = self.parent.error(
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5909338Z                ^^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5909679Z   File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5910065Z     return self._call_chain(*args)
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5910394Z            ^^^^^^^^^^^^^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5910770Z   File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5911164Z     result = func(*args)
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5911421Z              ^^^^^^^^^^^
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5911775Z   File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5912204Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.5912824Z urllib.error.HTTPError: HTTP Error 403: rate limit exceeded
+publish	Reuse reviewed immutable bytes; no build or signing here	2026-11-22T10:13:45.6141212Z ##[error]Process completed with exit code 1.
