@@ -1,0 +1,261 @@
+name: P0.7.1 reviewed fixed-key release
+on:
+  push:
+    branches: [fix/p0-7-1-navigation-backstack]
+    paths:
+      - '.github/p071/visual-approval.json'
+      - '.github/p071/publication-approval.json'
+      - '.github/workflows/p071-release.yml'
+      - '.github/scripts/p071_release.py'
+      - '.github/scripts/p071_signing.py'
+      - '.github/scripts/p071_publish.py'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: p071-fixed-key-release
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  scope:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.event_name == 'push' && github.ref == 'refs/heads/fix/p0-7-1-navigation-backstack'
+    runs-on: ubuntu-24.04
+    outputs:
+      mode: ${{ steps.route.outputs.mode }}
+      source: ${{ steps.route.outputs.source }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: route
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_release.py
+  approved-tests:
+    needs: scope
+    if: needs.scope.outputs.mode == 'sign' || needs.scope.outputs.mode == 'publish'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py context
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.scope.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Independently reject failed, empty, stale or unreviewed complete evidence before signing eligibility
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py inputs
+  signed:
+    needs: [scope, approved-tests]
+    if: needs.scope.outputs.mode == 'sign'
+    environment: android-release
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py context
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.scope.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py inputs
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-disabled: true
+      - id: existing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py existing
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: steps.existing.outputs.formal-id != '' || steps.existing.outputs.candidate-id != ''
+        with:
+          artifact-ids: ${{ steps.existing.outputs.formal-id || steps.existing.outputs.candidate-id }}
+          path: dist
+          merge-multiple: true
+      - name: Build only approved source with the original fixed key, then independently verify actual APK identity
+        if: steps.existing.outputs.formal-id == '' && steps.existing.outputs.candidate-id == ''
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_SIGNING_CERT_SHA256: ${{ secrets.ANDROID_SIGNING_CERT_SHA256 || vars.ANDROID_SIGNING_CERT_SHA256 }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          umask 077
+          export ANDROID_KEYSTORE_FILE="$RUNNER_TEMP/runner-gardenia-p071-signing/release.jks"
+          mkdir -p "$(dirname "$ANDROID_KEYSTORE_FILE")"
+          trap 'rm -rf "$RUNNER_TEMP/runner-gardenia-p071-signing"; rm -f "$RUNNER_TEMP/p071-release-gradle.log"' EXIT
+          python3 .github/scripts/restore_keystore.py
+          unset ANDROID_KEYSTORE_BASE64
+          ./gradlew --no-daemon --no-configuration-cache --no-build-cache clean assembleReproducibleRelease | tee "$RUNNER_TEMP/p071-release-gradle.log"
+          python3 .github/scripts/p071_signing.py verify
+      - name: Clean fixed-key temporary files on every outcome
+        if: always()
+        run: |
+          rm -rf "$RUNNER_TEMP/runner-gardenia-p071-signing"
+          rm -f "$RUNNER_TEMP/p071-release-gradle.log"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.existing.outputs.formal-id == '' && steps.existing.outputs.candidate-id == ''
+        with:
+          name: RunnerGardenia-P071-Candidate-${{ github.run_id }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        if: steps.existing.outputs.formal-id == ''
+        with:
+          artifact-ids: '14061852955'
+          github-token: ${{ github.token }}
+          run-id: '43470716313'
+          merge-multiple: true
+          path: work/real-map
+      - name: Download preserved P0.7.0 without replacing or rebuilding it
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/p070-baseline"
+          gh release download test-p0-v0.1.0-p0.7.0 --repo "$GITHUB_REPOSITORY" --dir "$RUNNER_TEMP/p070-baseline" --pattern 'RunnerGardenia-P0-Release.apk' --pattern 'build-info.json' --pattern 'SHA256SUMS'
+          python3 .github/scripts/p061_real_map.py fixture
+      - name: Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          P0_BASELINE_DIR: ${{ runner.temp }}/p070-baseline
+        run: python3 .github/scripts/p071_release_smoke.py
+      - name: Freeze the accepted signed payload after actual runtime gates
+        if: steps.existing.outputs.formal-id == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py finalize
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py bundle
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: steps.existing.outputs.formal-id == ''
+        with:
+          name: RunnerGardenia-P071-Release-${{ github.run_id }}
+          path: dist/
+          if-no-files-found: error
+          retention-days: 90
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P071-signed-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/reports/
+            build/outputs/mapping/reproducibleRelease/
+          if-no-files-found: warn
+          retention-days: 90
+  publish:
+    needs: [scope, approved-tests]
+    if: needs.scope.outputs.mode == 'publish'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p071_signing.py context
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.scope.outputs.source }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: sdkmanager 'build-tools;36.0.0'
+      - name: Reuse reviewed immutable bytes; no build or signing here
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/scripts/p071_signing.py inputs
+          python3 .github/scripts/p071_publish.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P071-publication-${{ github.run_id }}
+          path: |
+            dist/publication.json
+            dist/build-info.json
+          if-no-files-found: error
+          retention-days: 90
+  independent-public-verification:
+    needs: publish
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: P071-publication-${{ github.run_id }}
+          path: receipt
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          sdkmanager 'build-tools;36.0.0'
+          python3 .github/scripts/p071_public_verify.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: P071-independent-public-verification-${{ github.run_id }}
+          path: public-verification/
+          if-no-files-found: error
+          retention-days: 90

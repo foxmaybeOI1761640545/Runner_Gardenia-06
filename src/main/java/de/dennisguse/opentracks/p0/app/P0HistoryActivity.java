@@ -80,7 +80,7 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0ShareGpx.setOnClickListener(view->model.exportSelected(null));
         binding.p0DeleteWorkout.setOnClickListener(view->{if(model.selectedId()!=null)P05BatchDialog.create(new long[]{model.selectedId()},true).show(getSupportFragmentManager(),"p05-batch-dialog");});
         getOnBackPressedDispatcher().addCallback(this,new OnBackPressedCallback(true) {
-            @Override public void handleOnBackPressed(){if(model.busy()){android.widget.Toast.makeText(P0HistoryActivity.this,R.string.p05_please_wait,android.widget.Toast.LENGTH_SHORT).show();return;}if(model.selection().getValue().active())model.exitSelection();else if(model.selectedId()!=null)model.open(null);else{setEnabled(false);getOnBackPressedDispatcher().onBackPressed();}}
+            @Override public void handleOnBackPressed(){if(model.busy()){android.widget.Toast.makeText(P0HistoryActivity.this,R.string.p05_please_wait,android.widget.Toast.LENGTH_SHORT).show();return;}if(model.selection().getValue().active())model.exitSelection();else if(model.selectedId()!=null)model.open(null);else P0Navigation.leaveRoot(P0HistoryActivity.this);}
         });
         if(saved!=null){pendingIds=saved.getLongArray(PENDING);pendingZip=saved.getBoolean(PENDING_ZIP);long[] restored=saved.getLongArray(CHOSEN);model.restoreSelection(saved.getBoolean(MODE),restored==null?new long[0]:restored);}
         else if(getIntent().getBooleanExtra(MANAGEMENT,false))model.manage();

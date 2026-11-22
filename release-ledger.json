@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "codeHighWater": 6780,
+  "codeHighWater": 6781,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
     "v0.1.0-p0.": 6,
     "v0.1.0-p0.5.": 1,
     "v0.1.0-p0.6.": 1,
-    "v0.1.0-p0.7.": 0
+    "v0.1.0-p0.7.": 1
   },
   "allocations": [
     {
@@ -144,6 +144,15 @@
       "classification": "reserved-p07-test",
       "tag": "test-p0-v0.1.0-p0.7.0",
       "sourceEvidence": "Fresh all-remote refs/branch ledgers/tag properties and eleven Release build-info audit after independent Stage2 acceptance; published/allocated/tag high-water6779. Experimental property6780 had no valid reservation or release. Final source binds only to successful exact-source full tests, fixed-key APK and immutable tag. See docs/p0-7-p1-0/evidence/p07-version-allocation-audit.json."
+    },
+    {
+      "versionName": "v0.1.0-p0.7.1",
+      "versionCode": 6781,
+      "commit": null,
+      "allocationBasisCommit": "cf679d7d7c5870ace7aec0a68b356fc303997273",
+      "classification": "reserved-p071-test",
+      "tag": "test-p0-v0.1.0-p0.7.1",
+      "sourceEvidence": "Fresh audit of every remote branch ledger/properties, Tag, and all 12 Release build-info assets: maximum 6780. See docs/p0-7-1/evidence/baseline-version-audit.json. Actual source is bound only by accepted full tests, fixed-key APK and immutable annotated tag."
     }
   ]
 }
