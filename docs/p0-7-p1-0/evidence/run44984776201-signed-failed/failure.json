@@ -1,0 +1,19 @@
+{
+  "run": "44984776201",
+  "workflowCommit": "5fefd7a876d28137880b56afe337ca4259a718f1",
+  "productSource": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+  "conclusion": "failure",
+  "failedStep": "Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps",
+  "error": "Signed native viewport did not complete every file-supported tile",
+  "reportsArtifactId": 14739679246,
+  "reportsArtifactSha256": "40488437ca4f37e04ef8a7d43b44198e955a22afc8eb17e49a669ff038cf11a5",
+  "candidateArtifactId": 14739378132,
+  "candidateArtifactSha256": "6e4310c81738f08675ad3eaf938f16ebbfac3c6cccabee19ca82e5ac54e33a2d",
+  "formalArtifactCreated": false,
+  "tagCreated": false,
+  "releasePublished": false,
+  "observed": "All 88 native page captures completed; real-map imported-z7 completed. detail-z12 timed out and actual final native screenshot shows an empty viewport. Preceding home native XML has GPS Ready and fresh accuracy, while fixture injects Guangzhou only after the first one-shot Locate action. Full real-map proof was not completed.",
+  "rootCauseAssessment": "Existing cold-GPS smoke ordering conflicts with the new warm foreground preview: the first Locate can center a previous fresh Singapore fix; P06MapActivity clears centerPending after this one-shot success and does not automatically follow later fixture teleportation. Recenter through the real UI after new consistent driver fixes; add explicit Guangzhou viewport-center assertions and persist last diagnostic. This assessment still requires a successful same-source rerun to validate.",
+  "allOriginalTileAssertionsRetained": true,
+  "requiresNewFullValidation": true
+}
