@@ -1,0 +1,330 @@
+{
+  "passed": true,
+  "sourceCommit": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "api": 35,
+  "native": true,
+  "screenshots": [
+    {
+      "file": "p05-history-precision-light-list-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "7b202a2aeb73c2d45f78b82969a63b53b0a50d41f947d007383b93c84dc9d36c",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-light-selection-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "dedf897773d6b18d6ff3f553ec49cfe9142324fbd31d2982511c82b2120a12a7",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-light-share-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "3cee617024681db2c9a6d0a8861a794ebdf1756df2f2b9956e1b7e0abf166c92",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-light-delete-native.png",
+      "family": "precision",
+      "appearance": "light",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "3a6abb605479a1dab3a4cb69af3693475c6e05f68dd1a026efff18b9f1898dd1",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-dark-list-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "b677d2eebc15e9440a9f2dae20b8d6d731cdf35e2746a2759899ca3573568be5",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-dark-selection-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "2b7e60ec6753fb728d17c912e7ec2b17d3996740fd6007de65574a82b22721d7",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-dark-share-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "686bb2e71bcee93b4282d1e1d6880b79b9a646250009fe0dc6539083750d1400",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-precision-dark-delete-native.png",
+      "family": "precision",
+      "appearance": "dark",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "bce0c0193aca8abfea63366510bd9ad391f0975bbbc115b66e828de1ebe21126",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-light-list-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "f5c61b5562080cc6662643700eda9453bfdabdd46f4ed98ad90e729e9f6177cf",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-light-selection-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "6759e385b1bf8e372cf7e479dfef7bb3f511e9064b13e13ee6b7809847007924",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-light-share-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "ea268e7f0474a00ef2aa0d55f877fd1e086381c3d221eaff9e715f21fb8a14a6",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-light-delete-native.png",
+      "family": "quiet",
+      "appearance": "light",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "480dbed9fb57dd36af907e5871c3a73b0b3368287dd627713abecf66cbfc13da",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-dark-list-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "534ab5f842674971ca3d409c4b16b42dbbea922736f8a533c3f58d359a4d5d5f",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-dark-selection-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "adbfa2b190bccb0788e6a8e84f63b2824fd8c82e88d4d8d5867049b077e3c894",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-dark-share-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "306222227b1d3fcac07d7231f8bcc43df75f68b254ab533c79ad63eea0424405",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-quiet-dark-delete-native.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "d7c7016746df0b9226b310a473aa0665653d574f5dceb24f26fcbe7932105acc",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-light-list-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "796ff8174179a3456a9a689632836389511c8a09f3ab3f1b94bdc4ef5c033981",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-light-selection-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "247f2085d767ef4e4739c74578fdded70a85a3267c67f1d6c4cf28e62e42fd36",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-light-share-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "ebf9a75a6e46b0c25521b8330bae0f1025981c3b29daf51bc8e71e268774de38",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-light-delete-native.png",
+      "family": "explorer",
+      "appearance": "light",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "edfd9e06052a36a43bc78e03a86cdde18d84d6101b2cf401be5e8887100cb805",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-dark-list-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "0a7e38e2e014ef14032685aaef797e207f39da2c9ea02d81776541afefa29c1b",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-dark-selection-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "735d3a0ab53f9467caa8c95cfd51592070fd8ea7d5e9cb78aee184d4afebe11b",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-dark-share-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "6c11c7e0586da114f787995c842fe9d4c744a06c1a6b16a3c04fa569c3b698b5",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-explorer-dark-delete-native.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "b52d7865edbb7bfd810d9c8ba87caf1828e50ece33c688a607b1731abcd6b17a",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-light-list-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "98367f1a0f0208f14c002874cdbae517041901cfa57298b0481803a8f6fdf7c2",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-light-selection-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "6ed994c878a344e110f26c0460fa45c7700ab7db15b5bb8df653cb54ef321b2d",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-light-share-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "c7fe5b91da3082922a18dd6e93e87f6c536c253b49457492df820dea0ffc4616",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-light-delete-native.png",
+      "family": "neon",
+      "appearance": "light",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "95a2d1eb9de1470a23e4123be4627c3c69f098a504b2750302c7bbdd90489c5e",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-dark-list-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "list",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "d8ac66efc53583b0864ab358fc1296fa9861e230688f78a5152b9e16e4cb1959",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-dark-selection-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "selection",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "3a88993a948fae8f98b0dbcfa376e2d41fcc68586cf8760dcbd386cf9baf1cf4",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-dark-share-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "share",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "7ccb50be2dd070ccb623923de80c2f1e9523f07dac6edaab4b2a84c98d96b0e1",
+      "syntheticWorkoutInputs": true
+    },
+    {
+      "file": "p05-history-neon-dark-delete-native.png",
+      "family": "neon",
+      "appearance": "dark",
+      "page": "delete",
+      "widthDp": 360,
+      "fontScale": 1.3,
+      "sha256": "45585bf45d359f27fea83ced54914f74ccd0e4ed3c92eef9f59c4054234d3473",
+      "syntheticWorkoutInputs": true
+    }
+  ],
+  "receiverReceipts": 6,
+  "wechat": "NEEDS_DEVICE_VALIDATION"
+}

@@ -1,0 +1,7 @@
+{
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "testUid": 10149,
+  "receiverJson": "{\"package\":\"com.fox.runner.debug.test\",\"uid\":10149,\"pid\":5980,\"action\":\"android.intent.action.SEND\",\"mime\":\"application\\\/gpx+xml\",\"flags\":268435457,\"clip\":[\"content:\\\/\\\/com.fox.runner.debug.fileprovider\\\/p0_gpx\\\/batch-57a2a10c-eaa0-486b-a79a-67f968231853\\\/Workout-1795372003909.gpx\"],\"files\":[{\"uri\":\"content:\\\/\\\/com.fox.runner.debug.fileprovider\\\/p0_gpx\\\/batch-57a2a10c-eaa0-486b-a79a-67f968231853\\\/Workout-1795372003909.gpx\",\"permission\":0,\"sha256\":\"26fea0f955302bb5e11e88e8339f1d9c8e1c23073635725ecb299eaa92482f6a\",\"bytes\":2093,\"read\":true,\"gpx\":{\"workoutId\":\"1795372003909\",\"rawSamples\":3,\"sha256\":\"26fea0f955302bb5e11e88e8339f1d9c8e1c23073635725ecb299eaa92482f6a\",\"bytes\":2093}}]}",
+  "sourceCommit": "a189bca91b92fd3258d3ace35c3523bf1cba4688"
+}

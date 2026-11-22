@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "source": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "api": 35,
+  "phases": {
+    "denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1881,
+      "actualGpsPermission": "denied",
+      "screenshotSha256": "e9d52402add6a53c8857c9b61668340e310ad7c4bbc4681d03cb03597d1ff749"
+    },
+    "granted": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2388,
+      "actualGpsPermission": "granted",
+      "screenshotSha256": "66b73290d16ee1bf359c8a07c002b900807dae23e0843ec401fa0ea189e53900"
+    },
+    "recovery-denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2481,
+      "actualGpsPermission": "denied",
+      "actualBluetoothPermission": "granted",
+      "savedWorkoutRetained": true,
+      "p0RecoveryRejected": true
+    }
+  },
+  "visualReviewRequired": true
+}

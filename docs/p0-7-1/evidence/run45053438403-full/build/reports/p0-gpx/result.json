@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "commit": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "files": [
+    {
+      "file": "batch-multiple-Workout-1795372003909.gpx",
+      "sha256": "26fea0f955302bb5e11e88e8339f1d9c8e1c23073635725ecb299eaa92482f6a",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-multiple-Workout-1795372003910.gpx",
+      "sha256": "4548084af7fe935a635a649015527a34d187bb62172405f6992d32333ef8181b",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-multiple-Workout-1795372003911.gpx",
+      "sha256": "5ae7d5b58ef512a51d36a0cacc9d9d0859732e2bda35e2dcc5f88961b6a7c725",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-single-Workout-1795372003909.gpx",
+      "sha256": "26fea0f955302bb5e11e88e8339f1d9c8e1c23073635725ecb299eaa92482f6a",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1795372003909.gpx",
+      "sha256": "26fea0f955302bb5e11e88e8339f1d9c8e1c23073635725ecb299eaa92482f6a",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1795372003910.gpx",
+      "sha256": "4548084af7fe935a635a649015527a34d187bb62172405f6992d32333ef8181b",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "batch-zip-Workout-1795372003911.gpx",
+      "sha256": "5ae7d5b58ef512a51d36a0cacc9d9d0859732e2bda35e2dcc5f88961b6a7c725",
+      "points": 2,
+      "samples": 3
+    },
+    {
+      "file": "decimal-escaping.gpx",
+      "sha256": "21b4acef3478b179f697f8ef112c1f52233dc3c47dbe50293d02c68185e9a2d5",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "event-boundaries.gpx",
+      "sha256": "4c3bf653d97b2a0da0581d8cefcd4bc0db0547f3bad27d37de18aec95c3e866e",
+      "points": 2,
+      "samples": 0
+    },
+    {
+      "file": "gps-gap.gpx",
+      "sha256": "e22453b659afd0db197ca5c43e007ddec4dc23fd2c0033668789898f4437ba8f",
+      "points": 4,
+      "samples": 1
+    },
+    {
+      "file": "gps-only.gpx",
+      "sha256": "80d0ba1031119f61e9f6281265fb77eecfda76dc8b4ef95b7053654f42642756",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "heart-only.gpx",
+      "sha256": "b78d7d2d026bfd120df77f0cbbb7040f82781c53a72d237f8ee88a528401d04b",
+      "points": 0,
+      "samples": 2
+    },
+    {
+      "file": "legacy.gpx",
+      "sha256": "34904a95de128a4bdc8e6710df0d0bd8425dfa36848379e3d7a9a8e52bcd8ab6",
+      "points": 1,
+      "samples": 0
+    },
+    {
+      "file": "local-file.gpx",
+      "sha256": "3362a85a0dc759c68e3f045e60205b7fcd7b3fe7b26ae3ab1a52be85f1cce166",
+      "points": 1,
+      "samples": 1
+    },
+    {
+      "file": "p051-reconnect-real-chain.gpx",
+      "sha256": "edce97855dac85da4c5d2e23c695c4e9a67440ca63649f223b447d64fbc3624e",
+      "points": 4,
+      "samples": 1
+    },
+    {
+      "file": "p051-relocation-gap-real-chain.gpx",
+      "sha256": "08c2ca6de42a9308a3bf0d2726964908750ac290662d1eac42869d8b60cbf801",
+      "points": 6,
+      "samples": 0
+    },
+    {
+      "file": "p051-stationary-real-chain.gpx",
+      "sha256": "b7f520ddabeac3712417d628139631ca024a85abaa5084e07641460b45c3dfd1",
+      "points": 255,
+      "samples": 255
+    },
+    {
+      "file": "raw-complete.gpx",
+      "sha256": "0ebe46b688e84d59a0e3a6de07615a7a60a4c92116318a9151721cad09fcddc4",
+      "points": 2,
+      "samples": 4
+    },
+    {
+      "file": "segments.gpx",
+      "sha256": "daa78636951f27a9149abad3b4d082891f29d8dfc2d524198719299fb35af82c",
+      "points": 6,
+      "samples": 2
+    }
+  ],
+  "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+}
