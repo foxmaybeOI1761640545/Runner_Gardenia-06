@@ -1,0 +1,264 @@
+{
+  "passed": true,
+  "commit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+  "receipts": [
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+      "mime": "application/gpx+xml",
+      "flags": 268435456,
+      "clip": [],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-e73b6d84-893d-416c-bc8e-a5812a9ff447/Workout-1795318882020.gpx",
+          "permission": -1,
+          "read": false,
+          "errorClass": "java.lang.SecurityException"
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": true,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2"
+    },
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "android.intent.action.SEND",
+      "mime": "application/gpx+xml",
+      "flags": 268435457,
+      "clip": [
+        "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-e73b6d84-893d-416c-bc8e-a5812a9ff447/Workout-1795318882020.gpx"
+      ],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-e73b6d84-893d-416c-bc8e-a5812a9ff447/Workout-1795318882020.gpx",
+          "permission": 0,
+          "sha256": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+          "bytes": 2093,
+          "read": true,
+          "gpx": {
+            "workoutId": "1795318882020",
+            "rawSamples": 3,
+            "sha256": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+            "bytes": 2093
+          }
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": false,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+      "contentContractPassed": true,
+      "expectedWorkoutIds": [
+        1795318882020
+      ],
+      "expectedGpxSha256": {
+        "1795318882020": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5"
+      }
+    },
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+      "mime": "application/gpx+xml",
+      "flags": 268435456,
+      "clip": [],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882020.gpx",
+          "permission": -1,
+          "read": false,
+          "errorClass": "java.lang.SecurityException"
+        },
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882021.gpx",
+          "permission": -1,
+          "read": false,
+          "errorClass": "java.lang.SecurityException"
+        },
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882022.gpx",
+          "permission": -1,
+          "read": false,
+          "errorClass": "java.lang.SecurityException"
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": true,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2"
+    },
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "android.intent.action.SEND_MULTIPLE",
+      "mime": "application/gpx+xml",
+      "flags": 268435457,
+      "clip": [
+        "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882020.gpx",
+        "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882021.gpx",
+        "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882022.gpx"
+      ],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882020.gpx",
+          "permission": 0,
+          "sha256": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+          "bytes": 2093,
+          "read": true,
+          "gpx": {
+            "workoutId": "1795318882020",
+            "rawSamples": 3,
+            "sha256": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+            "bytes": 2093
+          }
+        },
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882021.gpx",
+          "permission": 0,
+          "sha256": "d0e764f0b230f66d2858b1c410cf995ac28509c21be11dd0b177d769904f4285",
+          "bytes": 2093,
+          "read": true,
+          "gpx": {
+            "workoutId": "1795318882021",
+            "rawSamples": 3,
+            "sha256": "d0e764f0b230f66d2858b1c410cf995ac28509c21be11dd0b177d769904f4285",
+            "bytes": 2093
+          }
+        },
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-a4b0b92e-d720-40cb-910f-087b72f73e4d/Workout-1795318882022.gpx",
+          "permission": 0,
+          "sha256": "ed9951b893fab94434ccd3a1cbf8af9c89fe255f2e0c43dadb3923dcd99e264d",
+          "bytes": 2093,
+          "read": true,
+          "gpx": {
+            "workoutId": "1795318882022",
+            "rawSamples": 3,
+            "sha256": "ed9951b893fab94434ccd3a1cbf8af9c89fe255f2e0c43dadb3923dcd99e264d",
+            "bytes": 2093
+          }
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": false,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+      "contentContractPassed": true,
+      "expectedWorkoutIds": [
+        1795318882020,
+        1795318882021,
+        1795318882022
+      ],
+      "expectedGpxSha256": {
+        "1795318882020": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+        "1795318882021": "d0e764f0b230f66d2858b1c410cf995ac28509c21be11dd0b177d769904f4285",
+        "1795318882022": "ed9951b893fab94434ccd3a1cbf8af9c89fe255f2e0c43dadb3923dcd99e264d"
+      }
+    },
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+      "mime": "application/zip",
+      "flags": 268435456,
+      "clip": [],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-f1d7ed77-55f7-4b02-b360-11a2e402bc1f/RunnerGardenia-Export-20261122-115016-f1d7ed77-55f7-4b02-b360-11a2e402bc1f.zip",
+          "permission": -1,
+          "read": false,
+          "errorClass": "java.lang.SecurityException"
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": true,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2"
+    },
+    {
+      "package": "com.fox.runner.debug.test",
+      "uid": 10149,
+      "pid": 5915,
+      "action": "android.intent.action.SEND",
+      "mime": "application/zip",
+      "flags": 268435457,
+      "clip": [
+        "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-f1d7ed77-55f7-4b02-b360-11a2e402bc1f/RunnerGardenia-Export-20261122-115016-f1d7ed77-55f7-4b02-b360-11a2e402bc1f.zip"
+      ],
+      "files": [
+        {
+          "uri": "content://com.fox.runner.debug.fileprovider/p0_gpx/batch-f1d7ed77-55f7-4b02-b360-11a2e402bc1f/RunnerGardenia-Export-20261122-115016-f1d7ed77-55f7-4b02-b360-11a2e402bc1f.zip",
+          "permission": 0,
+          "sha256": "db07223c01b220a85a6c254706bb3290f4b43928f36356b77e2f16e6064f8380",
+          "bytes": 2810,
+          "read": true,
+          "entries": [
+            {
+              "workoutId": "1795318882020",
+              "rawSamples": 3,
+              "sha256": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+              "bytes": 2093,
+              "name": "Workout-1795318882020.gpx"
+            },
+            {
+              "workoutId": "1795318882021",
+              "rawSamples": 3,
+              "sha256": "d0e764f0b230f66d2858b1c410cf995ac28509c21be11dd0b177d769904f4285",
+              "bytes": 2093,
+              "name": "Workout-1795318882021.gpx"
+            },
+            {
+              "workoutId": "1795318882022",
+              "rawSamples": 3,
+              "sha256": "ed9951b893fab94434ccd3a1cbf8af9c89fe255f2e0c43dadb3923dcd99e264d",
+              "bytes": 2093,
+              "name": "Workout-1795318882022.gpx"
+            }
+          ]
+        }
+      ],
+      "permissionContractPassed": true,
+      "targetPid": 2254,
+      "api": 35,
+      "authenticatedBinderUid": 10149,
+      "targetUid": 10148,
+      "negativeControl": false,
+      "sourceCommit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+      "contentContractPassed": true,
+      "expectedWorkoutIds": [
+        1795318882020,
+        1795318882021,
+        1795318882022
+      ],
+      "expectedGpxSha256": {
+        "1795318882020": "3b3301045dce8ded471d45da4f1facc29eac0218477b59de6dafa5ebbf81f1b5",
+        "1795318882021": "d0e764f0b230f66d2858b1c410cf995ac28509c21be11dd0b177d769904f4285",
+        "1795318882022": "ed9951b893fab94434ccd3a1cbf8af9c89fe255f2e0c43dadb3923dcd99e264d"
+      }
+    }
+  ],
+  "wechat": "NEEDS_DEVICE_VALIDATION"
+}

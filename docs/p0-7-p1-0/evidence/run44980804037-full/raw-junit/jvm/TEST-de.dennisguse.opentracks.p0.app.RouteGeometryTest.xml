@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.app.RouteGeometryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-22T03:30:21.954Z" hostname="ip-10-0-130-70" time="0.024">
+  <properties/>
+  <testcase name="noLocationsProduceNoFabricatedRoute" classname="de.dennisguse.opentracks.p0.app.RouteGeometryTest" time="0.001"/>
+  <testcase name="invalidLocationCannotJoinSeparatedSegments" classname="de.dennisguse.opentracks.p0.app.RouteGeometryTest" time="0.001"/>
+  <testcase name="localProjectionFitsRecordedPositionsAndPreservesBreaks" classname="de.dennisguse.opentracks.p0.app.RouteGeometryTest" time="0.0"/>
+  <testcase name="reductionNeverJoinsAcrossDiscardedGapsAndIsBounded" classname="de.dennisguse.opentracks.p0.app.RouteGeometryTest" time="0.021"/>
+  <testcase name="crossingDateLineStaysLocal" classname="de.dennisguse.opentracks.p0.app.RouteGeometryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
