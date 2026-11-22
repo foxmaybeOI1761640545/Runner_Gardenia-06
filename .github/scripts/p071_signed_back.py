@@ -16,7 +16,7 @@ def root_back_home(device):
     until=time.monotonic()+15
     while time.monotonic()<until:
         after=focus(device)
-        if PACKAGE not in after and 'mCurrentFocus=null' not in after:break
+        if after and PACKAGE not in after and 'mCurrentFocus=null' not in after:break
         time.sleep(.2)
     else:raise ValueError('Root Back revealed another application page instead of backgrounding the task')
     device('shell','am','start','-W','-f','0x30020000','-n',PACKAGE+'/de.dennisguse.opentracks.p0.app.P0Activity')

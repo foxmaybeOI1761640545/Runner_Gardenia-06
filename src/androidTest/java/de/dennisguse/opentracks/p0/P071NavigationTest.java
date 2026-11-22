@@ -70,7 +70,8 @@ public class P071NavigationTest {
         main(()->context.startActivity(new Intent(context,roots[tab]).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_REORDER_TO_FRONT|Intent.FLAG_ACTIVITY_SINGLE_TOP)));
         await(tab);
     }
-    private void background(){waitUntil("Root Back must background the task, never reveal another tab",()->current()==null);}
+    private void background(){waitUntil("Root Back must background the task, never reveal another tab",()->{AtomicReference<Boolean> resumed=new AtomicReference<>(false);main(()->{for(Activity a:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED))if(root(a))resumed.set(true);});return !resumed.get();});}
+    private String navigationMode(){try{return SystemThemeTestUtils.shell("settings get secure navigation_mode");}catch(Exception error){throw new AssertionError("Cannot read actual OS navigation mode",error);}}
     private void capture(String name)throws Exception{P0UiCapture.save("p071-"+name);}
     private PreferenceFragmentCompat settings(){return (PreferenceFragmentCompat)((P0SettingsActivity)current()).getSupportFragmentManager().findFragmentById(R.id.gardenia_settings_container);}
     private void settingsCategory(String name){Activity a=current();main(()->{((P0SettingsActivity)a).openCategory(name);((P0SettingsActivity)a).getSupportFragmentManager().executePendingTransactions();});}
@@ -113,14 +114,16 @@ public class P071NavigationTest {
         for(int tab:new int[]{1,3,2,0}){select(tab);osBack();background();reopen(tab);assertFalse(core.isRecording());uniqueRoots();}capture("T07-root-restored");
     }
     @Test public void T08_actualApi35EdgeGestureBackgroundsRoot()throws Exception{
-        String overlays=SystemThemeTestUtils.shell("cmd overlay list --user 0 com.android.internal.systemui.navbar");
-        String enabled=Arrays.stream(overlays.split("\n")).filter(s->s.trim().startsWith("[x]")).map(s->s.trim().substring(4).trim()).findFirst().orElse("com.android.internal.systemui.navbar.threebutton");
+        String overlays=SystemThemeTestUtils.shell("cmd overlay list --user 0");
+        String enabled=Arrays.stream(overlays.split("\n")).filter(s->s.trim().startsWith("[x]")&&s.contains("com.android.internal.systemui.navbar.")).map(s->s.trim().substring(4).trim()).findFirst().orElse("com.android.internal.systemui.navbar.threebutton");
         try{
             SystemThemeTestUtils.shell("cmd overlay enable-exclusive --user 0 --category com.android.internal.systemui.navbar.gestural");
-            assertEquals("2",SystemThemeTestUtils.shell("settings get secure navigation_mode"));select(2);Activity a=current();
+            // SystemUI applies the overlay asynchronously after the shell command returns.
+            waitUntil("SystemUI did not enable actual gestural navigation",()->"2".equals(navigationMode()));
+            assertEquals("2",navigationMode());await(0);select(2);Activity a=current();
             AtomicReference<int[]> size=new AtomicReference<>();main(()->size.set(new int[]{a.getWindow().getDecorView().getWidth(),a.getWindow().getDecorView().getHeight()}));
             int[] wh=size.get();SystemThemeTestUtils.shell("input swipe 1 "+wh[1]/2+" "+wh[0]/2+" "+wh[1]/2+" 400");background();reopen(2);capture("T08-gesture-restored");
-        }finally{SystemThemeTestUtils.shell("cmd overlay enable-exclusive --user 0 --category "+enabled);}
+        }finally{SystemThemeTestUtils.shell("cmd overlay enable-exclusive --user 0 --category "+enabled);String expected=enabled.endsWith(".gestural")?"2":enabled.endsWith(".twobutton")?"1":"0";waitUntil("Original OS navigation mode not restored",()->expected.equals(navigationMode()));}
     }
     @Test public void T09_settingsInternalBackSurvivesRootReturn()throws Exception{
         select(3);for(int round=0;round<2;round++){
