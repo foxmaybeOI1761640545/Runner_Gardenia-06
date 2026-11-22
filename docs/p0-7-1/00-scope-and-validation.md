@@ -16,7 +16,7 @@
 
 保留现有四个 Activity 及其 ViewModel、Fragment 和界面状态。一级根节点通过 AndroidX Back dispatcher 将整项任务置于后台，符合 Android launcher 根页面的返回行为；不 finish、不停止服务。设置分类、历史详情/选择/忙碌保护和弹窗继续先处理内部返回。回调不再永久禁用。顶层切换加 SINGLE_TOP，并在切换启动到下次 onResume 之间拒绝重复请求。页面数量保持最多每类一个，返回不会遍历访问过的顶层页面。
 
-生产修改只涉及 P0Navigation、P0SettingsActivity、P0HistoryActivity。GPS/BLE/TrackRecordingService、数据库 schema 43、地图及主题业务代码保持原样。没有重写导航架构。
+生产修改涉及 P0Navigation、P0SettingsActivity、P0HistoryActivity，以及首页和设置分类中通往已有一级页面的快捷入口（P0Activity、P05SettingsSectionFragment）。快捷入口也使用相同的 REORDER_TO_FRONT/SINGLE_TOP，避免从首页或设置重复创建心率/历史根；历史管理请求通过 onNewIntent 进入原管理模式，正在执行的批量工作仍受保护。GPS/BLE/TrackRecordingService、数据库 schema 43、地图及主题业务代码保持原样。没有重写导航架构。
 
 ## 独立门禁
 
@@ -32,4 +32,4 @@ Xiaomi CIVI5Pro、Redmi Note12Pro+ 分别执行 T01～T18，尤其左右边缘�
 
 所有状态在实际执行后写入独立报告。当前文档是计划与实现说明，不宣称尚未执行的 Android、签名、升级或发布已经通过。
 
-版本台账新增维护预留时，需要让 release_policy 识别 reserved-p071-test，并让旧 p07_version 精确读取自身的历史预留行。保留原台账前缀、编号连续性及全部原测试断言，未修改旧 phase/审批/测试收据。初次本地 Python 151 项中 6 项因上述兼容问题报错，修复后新增准入测试共 156 项全部通过；Android 测试尚待 Actions。
+版本台账新增维护预留时，需要让 release_policy 识别 reserved-p071-test，并让旧 p07_version 精确读取自身的历史预留行。保留原台账前缀、编号连续性及全部原测试断言，未修改旧 phase/审批/测试收据。初次本地 Python 151 项中 6 项因上述兼容问题报错，修复后新增准入测试共 156 项全部通过；后续 Actions 实际结果及失败修正见 01、02、03 文档，不能以本计划末尾的早期状态代替最终报告。

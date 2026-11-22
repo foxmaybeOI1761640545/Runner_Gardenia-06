@@ -2,6 +2,7 @@ package de.dennisguse.opentracks.p0.app;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -18,6 +19,7 @@ import de.dennisguse.opentracks.ui.util.ThemeUtils;
 /** Four existing destinations, one consistent native navigation component. No fake tabs. */
 public final class P0Navigation {
     private P0Navigation(){}
+    static Intent rootIntent(Context context,Class<?> destination){return new Intent(context,destination).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT|Intent.FLAG_ACTIVITY_SINGLE_TOP);}
     public static void bind(Activity activity){bind(activity,activity.getClass());}
     public static void bind(Activity activity,Class<?> activeDestination){
         // Keep the four existing instances (and their ViewModels). A top-level
@@ -43,7 +45,7 @@ public final class P0Navigation {
             button.setOnClickListener(v->{
                 if(selected||switching[0])return;
                 switching[0]=true;
-                try{activity.startActivity(new Intent(activity,target).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT|Intent.FLAG_ACTIVITY_SINGLE_TOP));}
+                try{activity.startActivity(rootIntent(activity,target));}
                 catch(RuntimeException error){switching[0]=false;throw error;}
             });
         }

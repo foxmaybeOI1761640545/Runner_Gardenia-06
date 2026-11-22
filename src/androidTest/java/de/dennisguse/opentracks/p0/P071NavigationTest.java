@@ -139,10 +139,16 @@ public class P071NavigationTest {
         androidx.test.espresso.Espresso.onData(org.hamcrest.Matchers.anything()).inAdapterView(withId(R.id.p0_history_list)).atPosition(0).perform(click());
         waitUntil("History detail not shown",()->{AtomicReference<Boolean> v=new AtomicReference<>(false);main(()->v.set(current().findViewById(R.id.p0_workout_pane).isShown()));return v.get();});
         capture("T10-history-detail");osBack();await(1);main(()->assertTrue(current().findViewById(R.id.p0_history_list).isShown()));assertNotNull(new WorkoutRepository(context).find(id));osBack();background();reopen(1);
+        Activity history=current();select(3);settingsCategory("history");main(()->settings().findPreference("p05_manage_history").performClick());await(1);assertSame(history,current());uniqueRoots();
+        main(()->assertTrue(current().findViewById(R.id.p05_selected_count).isShown()));osBack();await(1);main(()->assertFalse(current().findViewById(R.id.p05_selected_count).isShown()));assertNotNull(new WorkoutRepository(context).find(id));
+        select(3);main(()->assertEquals(1,((P0SettingsActivity)current()).getSupportFragmentManager().getBackStackEntryCount()));osBack();await(3);main(()->assertEquals(0,((P0SettingsActivity)current()).getSupportFragmentManager().getBackStackEntryCount()));
     }
     @Test public void T11_heartDeviceDialogReturnsToHeart()throws Exception{
         select(2);Activity a=current();main(()->{var f=(P0SensorsFragment)((P0SensorsActivity)a).getSupportFragmentManager().findFragmentById(R.id.p0_sensor_container);f.onDisplayPreferenceDialog(f.findPreference(context.getString(R.string.settings_sensor_bluetooth_heart_rate_key)));((P0SensorsActivity)a).getSupportFragmentManager().executePendingTransactions();});
         capture("T11-device-dialog");osBack();await(2);main(()->assertNull(((P0SensorsActivity)a).getSupportFragmentManager().findFragmentByTag("p0-heart-rate-scan")));assertFalse(core.isRecording());
+        select(0);onView(withId(R.id.p0_devices)).perform(click());await(2);assertSame(a,current());uniqueRoots();
+        select(3);settingsCategory("devices");main(()->settings().findPreference("p05_manage_devices").performClick());await(2);assertSame(a,current());uniqueRoots();osBack();background();reopen(3);
+        main(()->assertEquals(1,((P0SettingsActivity)current()).getSupportFragmentManager().getBackStackEntryCount()));osBack();await(3);main(()->assertEquals(0,((P0SettingsActivity)current()).getSupportFragmentManager().getBackStackEntryCount()));
     }
     @Test public void T12_bottomSheetDismissedBeforeTaskBack()throws Exception{
         var id=P05HistoryFixtures.create(context,"Synthetic P071 sheet",false);select(1);Activity a=current();
