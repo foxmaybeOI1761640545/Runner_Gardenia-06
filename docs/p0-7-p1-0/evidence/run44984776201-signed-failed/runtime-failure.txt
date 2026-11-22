@@ -1,0 +1,189 @@
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	﻿2026-11-22T04:27:01.3978040Z ##[group]Run python3 .github/scripts/p07_release_smoke.py
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.3978550Z [36;1mpython3 .github/scripts/p07_release_smoke.py[0m
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4016373Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4016794Z env:
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4017034Z   TZ: Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4017317Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4017683Z   ANDROID_HOME: /usr/local/lib/android/sdk
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4018034Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4018711Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4019266Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4019706Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4020073Z   GRADLE_USER_HOME: /home/runner/.gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4020400Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4020862Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4021416Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4022133Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4022468Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4023059Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4023700Z   P0_BASELINE_DIR: /home/runner/work/_temp/p061-baseline
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.4024035Z ##[endgroup]
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.5230951Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:01.7532892Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:02.3136937Z Loading local repository...                                                     
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:02.6665661Z [=========                              ] 25% Loading local repository...       
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:02.6666352Z Auto-selecting single ABI x86_64
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:30.7953452Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.2506537Z warning: [options] source value 8 is obsolete and will be removed in a future release
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.2519351Z warning: [options] target value 8 is obsolete and will be removed in a future release
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.2528432Z warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.9363951Z Note: .github/scripts/NativeWindowDump.java uses or overrides a deprecated API.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.9393099Z Note: Recompile with -Xlint:deprecation for details.
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.9422508Z 3 warnings
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:31.9752904Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:43.9372888Z 
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:27:43.9373714Z Installing verified fixed-key P0 APK over baseline without clearing data
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:29:31.0153123Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:29:31.9097938Z Validated GPX 1.1: release-export.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:31:30.6834799Z Actual signed native page p06-release-precision-light-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:31:35.5151485Z Actual signed native page p06-release-precision-light-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:31:41.6705784Z Actual signed native page p06-release-precision-light-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:31:51.5366529Z Actual signed native page p06-release-precision-light-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:31:59.5311730Z Actual signed native page p06-release-precision-light-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:11.2093462Z Actual signed native page p06-release-precision-light-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:22.2647214Z Actual signed native page p06-release-precision-light-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:32.7072806Z Actual signed native page p06-release-precision-light-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:41.9543238Z Actual signed native page p06-release-precision-light-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:49.4783195Z Actual signed native page p06-release-precision-light-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:51.1103185Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:51.9813103Z Validated GPX 1.1: p05-precision-zip-Workout-991001.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:51.9903166Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:52.8458579Z Validated GPX 1.1: p05-precision-zip-Workout-991003.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:52.8833209Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:32:53.4361189Z Validated GPX 1.1: p05-precision-zip-Workout-991002.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:03.0792770Z Actual signed native page p06-release-precision-light-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:14.3133089Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:15.0909134Z Validated GPX 1.1: p05-precision-multiple-0.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:15.1146931Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:15.5538680Z Validated GPX 1.1: p05-precision-multiple-1.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:15.5703075Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:33:16.4075816Z Validated GPX 1.1: p05-precision-multiple-2.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:06.4477090Z Actual signed native page p06-release-precision-dark-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:11.3850733Z Actual signed native page p06-release-precision-dark-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:17.6238611Z Actual signed native page p06-release-precision-dark-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:27.6080631Z Actual signed native page p06-release-precision-dark-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:35.7606238Z Actual signed native page p06-release-precision-dark-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:47.4409503Z Actual signed native page p06-release-precision-dark-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:34:58.5442551Z Actual signed native page p06-release-precision-dark-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:35:08.7732169Z Actual signed native page p06-release-precision-dark-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:35:18.0624854Z Actual signed native page p06-release-precision-dark-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:35:25.6053190Z Actual signed native page p06-release-precision-dark-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:35:36.4094213Z Actual signed native page p06-release-precision-dark-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:36:43.6645651Z Actual signed native page p06-release-quiet-light-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:36:48.5564022Z Actual signed native page p06-release-quiet-light-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:36:54.7051269Z Actual signed native page p06-release-quiet-light-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:04.7566979Z Actual signed native page p06-release-quiet-light-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:12.9708049Z Actual signed native page p06-release-quiet-light-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:24.6573013Z Actual signed native page p06-release-quiet-light-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:36.0284456Z Actual signed native page p06-release-quiet-light-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:46.4687671Z Actual signed native page p06-release-quiet-light-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:37:55.7194487Z Actual signed native page p06-release-quiet-light-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:03.2954903Z Actual signed native page p06-release-quiet-light-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:05.1313373Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:05.8434041Z Validated GPX 1.1: p05-quiet-zip-Workout-991001.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:05.8880585Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:06.6267859Z Validated GPX 1.1: p05-quiet-zip-Workout-991003.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:06.6452831Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:07.2656376Z Validated GPX 1.1: p05-quiet-zip-Workout-991002.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:17.0763447Z Actual signed native page p06-release-quiet-light-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:28.2483092Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:29.0593886Z Validated GPX 1.1: p05-quiet-multiple-0.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:29.0804340Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:29.5343213Z Validated GPX 1.1: p05-quiet-multiple-1.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:29.5573789Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:38:30.3561865Z Validated GPX 1.1: p05-quiet-multiple-2.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:39:19.8896065Z Actual signed native page p06-release-quiet-dark-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:39:24.7611404Z Actual signed native page p06-release-quiet-dark-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:39:31.0434209Z Actual signed native page p06-release-quiet-dark-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:39:40.9943942Z Actual signed native page p06-release-quiet-dark-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:39:48.9671264Z Actual signed native page p06-release-quiet-dark-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:00.9234944Z Actual signed native page p06-release-quiet-dark-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:11.9339398Z Actual signed native page p06-release-quiet-dark-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:22.0636759Z Actual signed native page p06-release-quiet-dark-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:31.4868565Z Actual signed native page p06-release-quiet-dark-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:39.1297557Z Actual signed native page p06-release-quiet-dark-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:40:49.8482691Z Actual signed native page p06-release-quiet-dark-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:41:57.8127366Z Actual signed native page p06-release-explorer-light-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:02.7361166Z Actual signed native page p06-release-explorer-light-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:08.8995104Z Actual signed native page p06-release-explorer-light-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:18.7959469Z Actual signed native page p06-release-explorer-light-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:27.0803144Z Actual signed native page p06-release-explorer-light-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:38.8170628Z Actual signed native page p06-release-explorer-light-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:42:50.1689769Z Actual signed native page p06-release-explorer-light-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:00.7528575Z Actual signed native page p06-release-explorer-light-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:10.0439391Z Actual signed native page p06-release-explorer-light-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:17.5104345Z Actual signed native page p06-release-explorer-light-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:19.4152843Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:20.3003344Z Validated GPX 1.1: p05-explorer-zip-Workout-991001.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:20.3452870Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:21.1053089Z Validated GPX 1.1: p05-explorer-zip-Workout-991003.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:21.1456139Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:21.8333353Z Validated GPX 1.1: p05-explorer-zip-Workout-991002.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:31.7692752Z Actual signed native page p06-release-explorer-light-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:43.3253588Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:44.1571423Z Validated GPX 1.1: p05-explorer-multiple-0.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:44.1786501Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:44.6783063Z Validated GPX 1.1: p05-explorer-multiple-1.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:44.7564306Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:43:45.4575019Z Validated GPX 1.1: p05-explorer-multiple-2.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:44:35.4848209Z Actual signed native page p06-release-explorer-dark-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:44:40.3734340Z Actual signed native page p06-release-explorer-dark-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:44:46.4377418Z Actual signed native page p06-release-explorer-dark-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:44:56.3741312Z Actual signed native page p06-release-explorer-dark-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:04.4182170Z Actual signed native page p06-release-explorer-dark-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:16.0215157Z Actual signed native page p06-release-explorer-dark-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:27.1413477Z Actual signed native page p06-release-explorer-dark-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:37.6595067Z Actual signed native page p06-release-explorer-dark-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:47.1039447Z Actual signed native page p06-release-explorer-dark-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:45:54.5914759Z Actual signed native page p06-release-explorer-dark-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:46:05.4323643Z Actual signed native page p06-release-explorer-dark-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:13.9128708Z Actual signed native page p06-release-neon-light-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:18.8014586Z Actual signed native page p06-release-neon-light-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:24.9075591Z Actual signed native page p06-release-neon-light-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:34.8855551Z Actual signed native page p06-release-neon-light-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:42.8734212Z Actual signed native page p06-release-neon-light-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:47:54.5707227Z Actual signed native page p06-release-neon-light-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:05.6176532Z Actual signed native page p06-release-neon-light-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:15.9341851Z Actual signed native page p06-release-neon-light-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:25.3175885Z Actual signed native page p06-release-neon-light-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:32.9509620Z Actual signed native page p06-release-neon-light-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:34.7131182Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:35.4973038Z Validated GPX 1.1: p05-neon-zip-Workout-991001.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:35.5204317Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:36.6012844Z Validated GPX 1.1: p05-neon-zip-Workout-991003.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:36.6433208Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:37.1364593Z Validated GPX 1.1: p05-neon-zip-Workout-991002.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:46.6684664Z Actual signed native page p06-release-neon-light-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:58.2134062Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:59.1268596Z Validated GPX 1.1: p05-neon-multiple-0.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:59.1942873Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:59.7879328Z Validated GPX 1.1: p05-neon-multiple-1.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:48:59.9262259Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:49:00.5507628Z Validated GPX 1.1: p05-neon-multiple-2.gpx
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:49:50.1735642Z Actual signed native page p06-release-neon-dark-appearance
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:49:55.0621604Z Actual signed native page p06-release-neon-dark-hub
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:01.2993099Z Actual signed native page p06-release-neon-dark-motion
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:11.1910885Z Actual signed native page p06-release-neon-dark-info
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:23.9483528Z Actual signed native page p06-release-neon-dark-home
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:35.8175241Z Actual signed native page p06-release-neon-dark-offlineMap
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:46.8508114Z Actual signed native page p06-release-neon-dark-heart
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:50:57.1604278Z Actual signed native page p06-release-neon-dark-history
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:51:06.5197774Z Actual signed native page p06-release-neon-dark-selection
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:51:14.1720069Z Actual signed native page p06-release-neon-dark-share
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:51:24.7085177Z Actual signed native page p06-release-neon-dark-delete
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:02.4424451Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5314739Z Traceback (most recent call last):
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5315651Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p07_release_smoke.py", line 44, in <module>
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5317378Z     run(post_verify=capture,baseline_spec=('6cee1958a23bfd1a1fe3b6a9b547717c528cbc75',6779,'b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11'),
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5319351Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p061_release_smoke.py", line 281, in run
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5320757Z     real_map_capture(capture_device,dump,screenshot,capture_tap,start,output)
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5322457Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p061_signed_real_map.py", line 104, in capture
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5332974Z     time.sleep(3);photo('detail-z12')
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5333412Z                   ^^^^^^^^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5334066Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p061_signed_real_map.py", line 86, in photo
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5334523Z     diagnostic=wait_tiles()
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5334742Z                ^^^^^^^^^^^^
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5335214Z   File "/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.github/scripts/p061_signed_real_map.py", line 84, in wait_tiles
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5335816Z     raise ValueError('Signed native viewport did not complete every file-supported tile')
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5336609Z ValueError: Signed native viewport did not complete every file-supported tile
+signed	Actual API35 signed upgrade, live GPS, process recovery, native themes and real offline maps	2026-11-22T04:54:03.5515949Z ##[error]Process completed with exit code 1.
