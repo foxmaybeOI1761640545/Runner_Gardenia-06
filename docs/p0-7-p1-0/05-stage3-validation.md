@@ -28,7 +28,7 @@ P07GpsHandoffTest共6项：真实P0命令与相同Handler/driver、开始时间�
 
 ## 当前结果与边界
 
-尚未运行阶段3Android测试、未访问签名密钥、未生成正式APK、未创建Tag/Release。当前只完成静态语法及文件差异检查，不能作为阶段验收。
+第一轮Android定向已实际执行并失败，具体计数及证据见下节；未访问签名密钥、未生成正式APK、未创建Tag/Release。阶段3仍不能验收。
 
 所有Android构建、测试、签名与发布均由Actions完成；本地不安装SDK。新服务生命周期测试不等于绕过强制停止或系统权限限制；实体GNSS、电池、Xiaomi CIVI5Pro、Redmi Note12Pro+和Magene H303仍需真机验证。
 
@@ -37,3 +37,9 @@ P07GpsHandoffTest共6项：真实P0命令与相同Handler/driver、开始时间�
 源码289ce602f5a5c3af59155053dc43abd4e2a1ddb3 / Run44979967128：Python146/146/0/0/0、JVM167/167/0/0/0，GPS定向45/45/2/0/0；完整API35、地图及额外交付烟测未执行。两项新增通知断言观察到旧角色内容（恢复仍显示预览、结束仍显示旧距离），其余43项通过，原owner/偏好/心率断言无失败。原始XML、gate/helpers和摘要见evidence/run44979967128-failed/。
 
 修复在准备startForeground的单一权威通知包之前设置正确角色内容，同角色正式运动保留已有实时总量，停止后重置角色。通知服务发布本身异步，新增测试有界等待实际NotificationManagerService出现目标文本，原精确文本与常驻断言不变；不新增Ignore、不改原owner/偏好/心率源码。当前仍PENDING，修复源码必须重新执行全部门禁。
+
+## 当前重新验证候选
+
+通知修复源码f794dce94d843bc4d890c05436ab1c82bd64e6e2 / [Run44980804037](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44980804037) 已推送并核对远程，正在执行45项定向；地图、独立权限、完整API35与全部交付烟测仍需同源码实际成功。没有将失败运行改为通过。
+
+主要提交：00fb224（生产运行时模式/交接与7项测试）、289ce60（阶段3与固定签名交付门禁/6780独立分配）、f794dce（通知权威包角色及真实系统通知等待修复）。阶段2验收提交aebc672在上述所有生产修改之前。
