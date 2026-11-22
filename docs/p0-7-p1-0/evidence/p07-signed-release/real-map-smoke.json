@@ -1,0 +1,761 @@
+{
+  "passed": true,
+  "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+  "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+  "mapSha256": "5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e",
+  "mapBytes": 105834033,
+  "safSystemPicker": true,
+  "privateFileShaVerified": true,
+  "sourceDeleted": true,
+  "newProcessReload": true,
+  "airplaneMode": true,
+  "recordingSurvivesMapClose": true,
+  "gpsPreferencesUnchanged": true,
+  "largeFont320dpVerified": true,
+  "nativePanVerified": true,
+  "nativeZoomOutVerified": true,
+  "nativeZoomLevelsVerified": [
+    7,
+    12,
+    16
+  ],
+  "screenshots": [
+    {
+      "file": "p061-signed-real-imported-z7.png",
+      "sha256": "cda7cd4ceb85dc4a39c0489cadf611c73822a390d9c0238f9e94819ddb1baaa0",
+      "nativeWindowFile": "p061-signed-real-imported-z7.xml",
+      "nativeWindowSha256": "b5ea8b76ed7e4e867bf288461e05ad63b55daa33806e9f7b03157bbfba64edb9",
+      "focusedWindow": "mCurrentFocus=Window{f967651 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 8,
+        "realMapFeatureVariation": true
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.2,
+        "longitude": 114.8,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 512,
+        "cacheCapacity": 32,
+        "viewWidth": 720,
+        "viewHeight": 752,
+        "frameWidth": 720,
+        "frameHeight": 752,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 6,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-detail-z12.png",
+      "sha256": "d5351907db5515bee95e80f874d8bd1b08bb08bb68a6961edd5e8e316643882f",
+      "nativeWindowFile": "p061-signed-real-detail-z12.xml",
+      "nativeWindowSha256": "b5ea8b76ed7e4e867bf288461e05ad63b55daa33806e9f7b03157bbfba64edb9",
+      "focusedWindow": "mCurrentFocus=Window{f967651 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 17,
+        "realMapFeatureVariation": true
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.1291,
+        "longitude": 113.26439833333333,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 512,
+        "cacheCapacity": 32,
+        "viewWidth": 720,
+        "viewHeight": 752,
+        "frameWidth": 720,
+        "frameHeight": 752,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 49,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3335,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2187,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6085,
+            "pois": 191,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3343,
+            "pois": 214,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4688,
+            "pois": 37,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 9726,
+            "pois": 1066,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 9027,
+            "pois": 821,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5886,
+            "pois": 158,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5453,
+            "pois": 92,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6091,
+            "pois": 255,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-detail-z16.png",
+      "sha256": "0ee6947b4ad1d5ecfabef11ae5f616f172a834f8e5e26d8d4ffa082cb8f81bb1",
+      "nativeWindowFile": "p061-signed-real-detail-z16.xml",
+      "nativeWindowSha256": "b5ea8b76ed7e4e867bf288461e05ad63b55daa33806e9f7b03157bbfba64edb9",
+      "focusedWindow": "mCurrentFocus=Window{f967651 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 21,
+        "realMapFeatureVariation": true
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.129100000000008,
+        "longitude": 113.26356234326579,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 512,
+        "cacheCapacity": 32,
+        "viewWidth": 720,
+        "viewHeight": 752,
+        "frameWidth": 720,
+        "frameHeight": 752,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 71,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53386,
+            "y": 28437,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 263,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28437,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 317,
+            "pois": 18,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53386,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 351,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 353,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-320dp-large-font.png",
+      "sha256": "1140f4cccc11c4e2dfa250ad7f2c77cfbbb0d1b46bf3c19f14c8eea154ea768e",
+      "nativeWindowFile": "p061-signed-real-320dp-large-font.xml",
+      "nativeWindowSha256": "de65a001e02e63d277287b0ddb16e28fe4905231cc262845ff22d45ca25ba439",
+      "focusedWindow": "mCurrentFocus=Window{3e7e50 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 18,
+        "realMapFeatureVariation": true
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.129100000000008,
+        "longitude": 113.26356234326579,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 512,
+        "cacheCapacity": 32,
+        "viewWidth": 640,
+        "viewHeight": 167,
+        "frameWidth": 640,
+        "frameHeight": 167,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 2,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53386,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 351,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 353,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-new-process.png",
+      "sha256": "d63a23428f3d2135da76a5ac258ad1ecce40e14ca22fd8bb898e6e9c9fdd8799",
+      "nativeWindowFile": "p061-signed-real-new-process.xml",
+      "nativeWindowSha256": "115608c89f63cf707c000f547bce483cbc589e088d5eef3c3f23032a721292a6",
+      "focusedWindow": "mCurrentFocus=Window{506d0e2 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 6,
+        "realMapFeatureVariation": true
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.1291,
+        "longitude": 113.26439833333333,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1273,
+        "frameWidth": 1080,
+        "frameHeight": 1273,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 9,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-live-route.png",
+      "sha256": "4f97f7625d37aae3e2bcf9b4440bd4ff90ba03185eba9c6263154ff8e0e0db74",
+      "nativeWindowFile": "p061-signed-real-live-route.xml",
+      "nativeWindowSha256": "10a037bdcef51b1edba720b8d8128a7229379c4bccddfdbe6afe66d9d9ec0f50",
+      "focusedWindow": "mCurrentFocus=Window{9c55731 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 13,
+        "realMapFeatureVariation": true,
+        "trackPixels": 699,
+        "trackSpanPixels": 264
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.12927050010835,
+        "longitude": 113.26439800000003,
+        "zoom": 18,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1273,
+        "frameWidth": 1080,
+        "frameHeight": 1273,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 15,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 213547,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 46,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 38,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 55,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213547,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 46,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 52,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213547,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 58,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 43,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p061-signed-real-invalid-retains.png",
+      "sha256": "7b47a9485944f5fb872c391a7267e116f70b33daed17e87632b92fdfb15cb2ae",
+      "nativeWindowFile": "p061-signed-real-invalid-retains.xml",
+      "nativeWindowSha256": "683d328ef7a773350c1e0fd73732358114a24b84b631eb6bbd07984152806b98",
+      "focusedWindow": "mCurrentFocus=Window{e25ec54 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "sampleColors": 7,
+        "realMapFeatureVariation": true,
+        "trackPixels": 1022,
+        "trackSpanPixels": 384
+      },
+      "viewportDiagnostic": {
+        "latitude": 23.129460000483085,
+        "longitude": 113.26439800000003,
+        "zoom": 18,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1273,
+        "frameWidth": 1080,
+        "frameHeight": 1273,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 15,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 213547,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 46,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 38,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113751,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 55,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213547,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 46,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113752,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 52,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213547,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 58,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213548,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 43,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 213549,
+            "y": 113753,
+            "zoom": 18,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      }
+    }
+  ],
+  "screenshotsZipSha256": "41aede2856c372531b6a90834316f80fbe21da2f4e82b233cdb79187070b9abb",
+  "hardware": "NEEDS_DEVICE_VALIDATION"
+}

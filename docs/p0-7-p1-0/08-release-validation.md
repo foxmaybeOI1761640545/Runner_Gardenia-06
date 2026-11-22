@@ -19,3 +19,13 @@
 ## 修复后的完整回归
 
 467f208的[完整Run44987372985](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44987372985)已SUCCESS，原始146 Python、167 JVM、471 API35（执行470，历史Skip1）重新核验，492张本轮原生截图已全部实际查看。完整新证据在evidence/run44987372985-full。此结果授权再次进入原固定密钥签名及完整运行门禁；尚不宣称旧签名失败已被新的实际签名运行证明修复，尚未发布。
+
+## 第二次签名运行与实际视觉审查成功
+
+[Run45008081843](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/45008081843) SUCCESS，激活87c87b7、实际源码467f208，approved-tests与受保护android-release signed全部成功。正式Artifact14749309660，ZIP SHA-256 9111a4f64e4c64a4c444c112e3913962a808a217b394f537308e39cdf4c82433。已独立下载核验MANIFEST、APK、全部截图归档、99个PNG和对应原生窗口XML摘要，再实际查看全部99图（13张审查拼图），通过视觉审查。
+
+正式候选APK3,236,595bytes（比P0.6.1增加1,876bytes），SHA-256 3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7，com.fox.runner/v0.1.0-p0.7.0/6780，固定证书E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22，debuggable=false，16KiB对齐、实际R8/资源优化均核验。
+
+原P0.6.1覆盖升级保留配置/历史/地图，实际模拟GPS记录38点、暂停恢复两段，空闲预览不生成历史，运动后用户GPS偏好保留；强制停止数据保留及显式恢复、GPX1.1导出成功。88张页面、4张离线夹具地图和7张真实地图均完整通过；热GPS情形下原生定位按钮修正实际验证成功，z12和新进程视口中心核验及全部原瓦片/渲染/缩放断言均通过。真实地图经SAF导入、源文件删除、私有文件校验、飞行模式新进程重载；实际地图平移缩放和关闭地图继续运动均通过。320dp大字体Import .map文字换行略生硬但控件完整可用，作为外观限制记录，不隐藏。证据见evidence/p07-signed-release。
+
+旧失败Run44984776201仍保留failure及所有证据。当前仅签名运行及审查成功，公开发布与独立公开下载核验尚待完成；不重构建/重签名正式包，未启动P0.8。
