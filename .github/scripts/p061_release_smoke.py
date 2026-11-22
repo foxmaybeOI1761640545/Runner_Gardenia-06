@@ -31,9 +31,9 @@ def validate_live_metrics(metric):
             and speed>0 and 0<=seconds<60 and minutes*60+seconds>0):
         raise ValueError('Actual Release GPS metrics outside the controlled route: '+metric)
 
-def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d32087cc675a3096852c3",6775,"aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc")):
+def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d32087cc675a3096852c3",6775,"aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc"),map_validation=False,capture_adapter=None,output_name=None,preserve_gps_preferences=False):
     sdk=Path(os.environ['ANDROID_HOME']);adb=sdk/'platform-tools/adb';emulator=sdk/'emulator/emulator';manager=shutil.which('avdmanager')
-    output=Path('build/reports/p0-release-smoke' if baseline_spec[1]==6778 else 'build/reports/p04-upgrade-smoke');output.mkdir(parents=True,exist_ok=True)
+    output=Path('build/reports')/(output_name or ('p0-release-smoke' if baseline_spec[1]==6778 else 'p04-upgrade-smoke'));output.mkdir(parents=True,exist_ok=True)
     info=json.loads(Path('dist/build-info.json').read_text());apk=Path('dist/RunnerGardenia-P0-Release.apk').resolve()
     if hashlib.sha256(apk.read_bytes()).hexdigest()!=info['apkSha256']:raise ValueError('Signed APK changed before installation')
     baseline=Path(os.environ['P0_BASELINE_DIR']);old=baseline/('RunnerGardenia-P0-Release.apk' if p02 else 'runner-gardenia-v0.1.0-rc1.6-6771.apk')
@@ -184,7 +184,7 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             for key,value in [('statsUnits','METRIC'),('statsRate','SPEED'),('gardenia_theme_family','precision'),('bluetoothGPSSensor','NONE'),('minRecordingIntervalV2','7')]:ET.SubElement(root,'string',{'name':key}).text=value
             tree.write(local,encoding='utf-8',xml_declaration=True);device('push',local,pref);device('shell','chown',uid+':'+uid,pref)
             retained_map=None
-            if baseline_spec[1]==6778:
+            if baseline_spec[1]==6778 or map_validation:
                 from p061_real_map import NAME as map_name,SHA as map_sha
                 retained_map='/data/user/0/'+PACKAGE+'/files/offline-maps/'
                 device('shell','mkdir','-p',retained_map);device('shell','chown','-R',uid+':'+uid,'/data/user/0/'+PACKAGE+'/files')
@@ -265,17 +265,21 @@ def run(p02=True,p03=True,post_verify=None,baseline_spec=("ccc59b546b5087a2038d3
             if selected!='AA:BB:CC:DD:EE:FF' or enabled!='true':raise ValueError('Upgrade lost device configuration')
             permissions=device('shell','dumpsys','package',PACKAGE)
             if re.search(r'android.permission.BLUETOOTH_CONNECT: granted=true',permissions) or re.search(r'android.permission.POST_NOTIFICATIONS: granted=true',permissions):raise ValueError('GPS-only smoke accidentally granted Bluetooth/notification permission')
-            if baseline_spec[1]==6778:
+            if preserve_gps_preferences:
+                final_gps={n.get('name'):n.text for n in preferences if n.tag=='string'}
+                if final_gps.get('bluetoothGPSSensor')!='NONE' or final_gps.get('minRecordingIntervalV2')!='7':raise ValueError('P0 workout changed persisted GPS source/interval')
+            capture_device,capture_tap=(capture_adapter(device,dump,tap) if capture_adapter else (device,tap))
+            if baseline_spec[1]==6778 or map_validation:
                 from p06_release_map_ui import capture_runtime
                 with sqlite3.connect(final) as connection:
                     workout_name=connection.execute('SELECT name FROM tracks WHERE _id=?',(workout,)).fetchone()[0]
                 if not isinstance(workout_name,str) or not workout_name:raise ValueError('Recorded history workout name missing')
-                capture_runtime(device,dump,screenshot,tap,start,output,workout,workout_name)
-            if post_verify is not None:post_verify(device,dump,screenshot,tap,start,output)
-            if baseline_spec[1]==6778:
+                capture_runtime(capture_device,dump,screenshot,capture_tap,start,output,workout,workout_name)
+            if post_verify is not None:post_verify(capture_device,dump,screenshot,capture_tap,start,output)
+            if baseline_spec[1]==6778 or map_validation:
                 from p061_signed_real_map import capture as real_map_capture
-                real_map_capture(device,dump,screenshot,tap,start,output)
-            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'gpsSettingsUpgradeRetained':True,'baselineMapRetained':retained_map is not None,'unitAndRateUpgradeRetained':True,'themeUpgradeRetained':True,'nativeRateSwitchKeepsRecording':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
+                real_map_capture(capture_device,dump,screenshot,capture_tap,start,output)
+            proof={'passed':True,'commit':info['commit'],'apkSha256':info['apkSha256'],'installed':True,'upgradeFromVersionCode':oldInfo['versionCode'],'deviceConfigurationRetained':True,'gpsSettingsUpgradeRetained':True,'baselineMapRetained':retained_map is not None,'unitAndRateUpgradeRetained':True,'themeUpgradeRetained':True,'nativeRateSwitchKeepsRecording':True,'preparationCreatesNoWorkout':p02,'retainedGpsPoints':1,'retainedRawHeartSamples':2,'gpsPoints':points,'manualSegments':segments,'gpsDistanceMeters':stats[0],'activeMillis':stats[1],'wallMillis':stats[2],'forceStopRecovery':True,'bluetoothAndNotificationPermissionDenied':True,'timezone':'Asia/Singapore','physicalBleTested':False,'gpsPreferencesRetainedAfterWorkout':preserve_gps_preferences,'liveGpsFieldsVerified':True,'releaseGpxSchemaVerified':True,'releaseExportGpsPoints':1,'releaseExportRawSamples':2}
             (output/'result.json').write_text(json.dumps(proof,indent=2)+'\n');shutil.copyfile(output/'result.json','dist/runtime-smoke.json');info['runtimeSmokeVerified']=True;info['upgradeFromVersionCode']=oldInfo['versionCode'];Path('dist/build-info.json').write_text(json.dumps(info,indent=2)+'\n');print(json.dumps(proof,indent=2))
     finally:
         try:screenshot('last-native-screen')

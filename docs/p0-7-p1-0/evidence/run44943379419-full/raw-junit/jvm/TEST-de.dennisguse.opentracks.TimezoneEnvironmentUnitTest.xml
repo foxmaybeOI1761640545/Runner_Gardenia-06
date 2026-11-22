@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.TimezoneEnvironmentUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-21T19:55:37.340Z" hostname="ip-10-0-142-22" time="0.03">
+  <properties/>
+  <testcase name="gradleTestWorkerActuallyUsesSingapore" classname="de.dennisguse.opentracks.TimezoneEnvironmentUnitTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

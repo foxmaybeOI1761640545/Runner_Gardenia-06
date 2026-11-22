@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+  "privateMapRetained": true,
+  "pendingImportCleaned": true,
+  "nativeTilesRenderedAfterRestart": true,
+  "airplaneMode": true,
+  "forceStopped": true,
+  "timezone": "Asia/Singapore",
+  "phases": {
+    "write": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1979,
+      "partialCopyState": "staged"
+    },
+    "read": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2251,
+      "partialCopyState": "cleaned"
+    }
+  },
+  "screenshotSha256": "7b55a0458a5b7288ee30733a6b716bf532d2044eb67263bec02845ca5d094ace"
+}

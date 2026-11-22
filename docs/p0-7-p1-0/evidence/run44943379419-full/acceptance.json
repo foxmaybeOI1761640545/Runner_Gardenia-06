@@ -1,0 +1,77 @@
+{
+  "source": "3e389c183a5d828906a4281dc50408f6510adb77",
+  "run": "44943379419",
+  "counts": {
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android": {
+      "tests": 464,
+      "executed": 463,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "helpers": {
+      "tests": 141,
+      "executed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "gpsFocused": {
+    "tests": 38,
+    "executed": 38,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "permissionPhases": {
+    "denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1926,
+      "actualGpsPermission": "denied",
+      "screenshotSha256": "bcae29be012f8ce0a3ae435018e66a789bb3c6b9d40d88bafcc534c1281834e8"
+    },
+    "granted": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2400,
+      "actualGpsPermission": "granted",
+      "screenshotSha256": "5061d8222c31675f27456af2447383e7f18e6e543504a587e54bc1c137fd452f"
+    }
+  },
+  "nativeScreenshots": 35,
+  "visualReviewComplete": true,
+  "stageAccepted": true,
+  "nativeScreenshotsReviewed": 37,
+  "artifactId": 14723562373,
+  "artifactSha256": "e2ad214c5b27c1603ea991d38f680f3156a37eeb095692e0973c821153d8a1e8",
+  "debugApk": {
+    "name": "runner-gardenia_v0.1.0-p0.6.1_6779-reproducible-debug.apk",
+    "bytes": 14383716,
+    "sha256": "994618f55386806798d8a81af8bc4901524cd2e7e0f796e542dc1c4986f9b410",
+    "applicationId": "com.fox.runner.debug",
+    "formalFixedKeyRelease": false
+  },
+  "originalProtectedTestSourcesByteIdentical": true,
+  "nextStage": "Stage3 only after this acceptance is committed/pushed and remote verified"
+}

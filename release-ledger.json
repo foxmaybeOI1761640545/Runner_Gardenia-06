@@ -1,11 +1,12 @@
 {
   "schema": 1,
-  "codeHighWater": 6779,
+  "codeHighWater": 6780,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
     "v0.1.0-p0.": 6,
     "v0.1.0-p0.5.": 1,
-    "v0.1.0-p0.6.": 1
+    "v0.1.0-p0.6.": 1,
+    "v0.1.0-p0.7.": 0
   },
   "allocations": [
     {
@@ -134,6 +135,15 @@
       "classification": "reserved-p061-test",
       "tag": "test-p0-v0.1.0-p0.6.1",
       "sourceEvidence": "Checked all remote refs and all ten Releases/build-info.json on 2026-11-14: highest 6778. New independent real-map validation branch. Final source bound by complete tests, fixed-key APK and immutable tag."
+    },
+    {
+      "versionName": "v0.1.0-p0.7.0",
+      "versionCode": 6780,
+      "commit": null,
+      "allocationBasisCommit": "aebc67245bf3db90b928d781b88bbcd8fbc5d90d",
+      "classification": "reserved-p07-test",
+      "tag": "test-p0-v0.1.0-p0.7.0",
+      "sourceEvidence": "Fresh all-remote refs/branch ledgers/tag properties and eleven Release build-info audit after independent Stage2 acceptance; published/allocated/tag high-water6779. Experimental property6780 had no valid reservation or release. Final source binds only to successful exact-source full tests, fixed-key APK and immutable tag. See docs/p0-7-p1-0/evidence/p07-version-allocation-audit.json."
     }
   ]
 }

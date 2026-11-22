@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+  "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+  "airplaneMode": true,
+  "safImport": true,
+  "originalDocumentRemoved": true,
+  "newProcessReload": true,
+  "liveGpsAndTrack": true,
+  "historyTrack": true,
+  "historyEntryThroughNativeUi": true,
+  "historicalWorkoutId": 991002,
+  "invalidRetainsMap": true,
+  "screenshots": [
+    {
+      "file": "p06-signed-map-imported-airplane.png",
+      "sha256": "ecd5926b0f588ba7b30427dad44048acff9c585e5b098debaa3fc48a0c3853e3",
+      "nativeWindowFile": "p06-signed-map-imported-airplane.xml",
+      "nativeWindowSha256": "643ada389b2f957d0039e01a09025e9f8028e80e2ab143970acf0274bf57be3f",
+      "focusedWindow": "mCurrentFocus=Window{afc5c25 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "distributedParkPixels": 4,
+        "sampleColors": 2
+      }
+    },
+    {
+      "file": "p06-signed-map-history-restarted.png",
+      "sha256": "4c6627b0f073c7f803551b92bcb8ecfc1f3447f1b62ef950fbf9a10d6b035b5a",
+      "nativeWindowFile": "p06-signed-map-history-restarted.xml",
+      "nativeWindowSha256": "f78c5c9d4566c4499c62245e9443e3e7adeba6af93f7681d303ded8c94f30e29",
+      "focusedWindow": "mCurrentFocus=Window{a6c6eb3 u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "distributedParkPixels": 15,
+        "sampleColors": 2,
+        "trackPixels": 287,
+        "trackSpanPixels": 351
+      }
+    },
+    {
+      "file": "p06-signed-map-live-current-gps.png",
+      "sha256": "2af91770f7910c60829b7b4192f8bc76515fd7b0e4d846a8dea7e5d677939a96",
+      "nativeWindowFile": "p06-signed-map-live-current-gps.xml",
+      "nativeWindowSha256": "f78c5c9d4566c4499c62245e9443e3e7adeba6af93f7681d303ded8c94f30e29",
+      "focusedWindow": "mCurrentFocus=Window{1a5e1be u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "distributedParkPixels": 15,
+        "sampleColors": 2,
+        "trackPixels": 371,
+        "trackSpanPixels": 138
+      }
+    },
+    {
+      "file": "p06-signed-map-invalid-retains-map.png",
+      "sha256": "147bac4e9a2514bb0e279579806901b2e0ba8fd04c12f5261f3646882a54dd9d",
+      "nativeWindowFile": "p06-signed-map-invalid-retains-map.xml",
+      "nativeWindowSha256": "fc9068e001d09190c9de1e3c883d467f6f88c61bee2b710dd31c1369e4b33b84",
+      "focusedWindow": "mCurrentFocus=Window{1a5e1be u0 com.fox.runner/de.dennisguse.opentracks.p0.map.P06MapActivity}",
+      "pixels": {
+        "distributedParkPixels": 15,
+        "sampleColors": 2,
+        "trackPixels": 694,
+        "trackSpanPixels": 261
+      }
+    }
+  ],
+  "screenshotsZipSha256": "475604fb12a5047e1f77ef879dab2e90a31a7eb395cb4ca404756a2961387be4"
+}

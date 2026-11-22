@@ -1,0 +1,31 @@
+{
+  "source": "1047df65ccd57b7322d2a2d48c9902fdb1fcc754",
+  "run": 44937943787,
+  "artifact": 14721593979,
+  "artifactSha256": "2544e91cc85002316a0ce15838d73900d12d097c4baefb74167add5824c36690",
+  "counts": {
+    "helpers": {
+      "tests": 141,
+      "executed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android": {
+      "tests": 464,
+      "executed": 463,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 1
+    }
+  },
+  "stageAccepted": false,
+  "failure": "Original P0SensorsTest.scanDialogRemembersSelectedDeviceWithoutStartingAnUnrequestedConnection expected DISCONNECTED, observed CONNECTING. GPS-only lifetime exposed an unrequested heart connection through the preference listener. Preserve the original test and add an independent runtime heart request gate; no BLE parser/driver changes."
+}

@@ -1,0 +1,7 @@
+<resources>
+    <string name="p07_no_map">未选择离线地图</string>
+    <string name="p07_gps_preview_notification">实时位置预览 · 未记录运动</string>
+    <string name="p07_map_checking">正在检查本地地图要素…</string>
+    <string name="p07_map_ready">离线地图 · © OpenStreetMap 贡献者</string>
+    <string name="p07_no_features">当前区域在此缩放级别无可用离线地图要素</string>
+</resources>

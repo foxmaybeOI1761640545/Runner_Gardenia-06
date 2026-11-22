@@ -30,6 +30,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
     private Distance thresholdHorizontalAccuracy;
     private volatile long latestElapsedNanos;
     private final GpsMotionFilter motionFilter = new GpsMotionFilter();
+    private final GpsMotionFilter previewMotionFilter = new GpsMotionFilter();
 
     /** A manual recording boundary can occur while a visible map keeps GPS connected. */
     public void beginRecordingSegment() {
@@ -38,6 +39,8 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         segmentAfterReconnect = false;
         recordingFixSeen = false;
     }
+    /** A finished workout must not inherit the old pre-workout preview anchor. */
+    public void beginPreviewSegment() { previewMotionFilter.reset(); }
     private volatile Position latestRecordingPosition;
     private boolean recordingFixSeen;
     private boolean segmentAfterReconnect;
@@ -49,6 +52,7 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         motionFilter.reset();
         latestRecordingPosition = null;
         latestElapsedNanos = 0;
+        previewMotionFilter.reset();
     }
 
     public boolean hasFreshPreview() {
@@ -112,6 +116,9 @@ public class GpsHandler extends SensorHandler<Location, Position> {
 
     @Override
     public void onDataReceived(Location location) {
+        // Unregistering a driver cannot turn an already queued callback into
+        // data for a new sensor lifetime, including rapid foreground re-entry.
+        if (aggregator == null || sensorManager.getGpsHandler() != this) return;
         if (!trackPointCreator.acceptGpsLocation(location, thresholdHorizontalAccuracy)) return;
 
         // Keep the status path honest: invalid/weak fixes remain visible as GPS warnings,
@@ -128,6 +135,19 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         }
 
         Location recordingLocation = location;
+        if (sensorManager.isMapGpsPreview() && !trackPointCreator.isRecording() && location.getElapsedRealtimeNanos() > 0) {
+            var filtered = previewMotionFilter.update(new GpsMotionFilter.Fix(
+                    location.getLatitude(), location.getLongitude(), location.hasAccuracy(), location.getAccuracy(),
+                    location.hasSpeed(), location.hasSpeed() ? location.getSpeed() : Double.NaN,
+                    location.getElapsedRealtimeNanos()));
+            if (!filtered.accepted()) {
+                trackPointCreator.sendGpsStatus(GpsStatusValue.GPS_SIGNAL_BAD);
+                return;
+            }
+            recordingLocation = new Location(location);
+            recordingLocation.setLatitude(filtered.latitude());
+            recordingLocation.setLongitude(filtered.longitude());
+        }
         // P0's acquisition guard already rejects live fixes without monotonic
         // metadata. Untimed legacy Locations have no such time axis: never
         // substitute callback arrival time and infer a bogus movement interval.
@@ -176,11 +196,11 @@ public class GpsHandler extends SensorHandler<Location, Position> {
         return new AggregatorGPS(sensorAddress, sensorName);
     }
 
-    long samplingIntervalMillis() { return sensorManager.isMapGpsPreview() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis(); }
+    long samplingIntervalMillis() { return sensorManager.usesInternalOneHzGps() ? 1000L : PreferencesUtils.getMinSamplingInterval().toMillis(); }
 
     @Override
     protected String getSensorAddress() {
-        return sensorManager.isMapGpsPreview() ? SensorType.INTERNAL.getPreferenceValue() : super.getSensorAddress();
+        return sensorManager.usesInternalOneHzGps() ? SensorType.INTERNAL.getPreferenceValue() : super.getSensorAddress();
     }
 
     @Override

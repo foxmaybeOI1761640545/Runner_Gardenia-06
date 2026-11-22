@@ -1,0 +1,243 @@
+{
+  "source": "9b3641fd579c5c881c6317e3cfac1e60ead11080",
+  "run": "43741989911",
+  "scope": "P07HomeMapTest only; full regression still required",
+  "tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 2,
+    "executed": 2,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "sha256": "29bb1d612fa02fbcaef5a5ffc4a51b751bddaafbf5ebce6900e412f8b5572dca",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "sha256": "cc8e6d85fe081a907955a91d2576e01bdac244e32b1d8d9ee18d00a189c9fa70",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "sha256": "686e7ed54b18ab0dc1b6a8bae796ddfeba9a3b256fe930c83f8ba6a1159f8803",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "sha256": "a255a93b1c98d1e3ce1480b42112bb777c69ca0d1c285d85d2a01e41c504b881",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "sha256": "dec52db4f07d7836e3484217b2df2f314ab9dcdf8ff1d1d5eb19319fdb8a3686",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "sha256": "e49f058bf6be6782cb9fa410e66e27132ecbe563cb89c20d173aa95dc4bbad4d",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "sha256": "8e6047ee6be53cfe48ede5d4a94b21e161bfe0d709d1dd89780c1c2f755532d0",
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "sha256": "53b5477b35de9b3ea65c7cfacb539b31dd5eab1eac1b8553939061bb18a9e99a",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "sha256": "dc276585a2319634b33eb62494555f123b6b3d20ffdebe095d5af2d4eb278830",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "sha256": "1fb83a7c11cddf67a38bc9c1b9eb04ee3b4e332660085fcb1880c82586423f8b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "sha256": "d132c3fcd768cd9662ca2938fb40f411eaad3147c7ccf8ceed9c7364573d833f",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "sha256": "f404214bc69e8fbe5101baaf3604467afa17bf90c8e0c0c39705b52c16518400",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "sha256": "e9a3a3bb7718513c57390c382860894e77256afead9ff799474d6539c085c1a8",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "sha256": "6256cd93b0d76dc4fa3d4f4d17bc2ccfd1b4911905dec1cb85748383fa75ed2a",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "sha256": "90f673907bc13a1f25e100ac15cf0ec5273d58c009cff1eb954a92ca1e3bda2c",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "sha256": "39f7d60eb1505ec9443d8644a5eb208d6fc9ebc58de151053bca6c383cb223f1",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "sha256": "98e91756affdd9548dd1939c1e668b51f17af9aab69405964d7951ccd1ab3b8c",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "sha256": "720973621e0cd92579019d6edcae4a35db1627cb6be2296b8082e43648a00adc",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "sha256": "104b030b069dd0651f2f5b7271de9ae3617c4759031c68747717c75abbd86db2",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "sha256": "5fc42922a36c8b58623670f93e33a8d4683d0728c8951d825e569fdaecae790b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "sha256": "2ccb1ac7e4c6d0b31bc6a84f73e222502807cc9b0b27e36c1e5e734a4e3f8af0",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "sha256": "b8e881450cc33fd9462372cecf12b4a7aa8aea9236abc117af99b9dc652dbe4b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "sha256": "379ca26084122234e19c21aa3dfee765f5666336b71ebb7e076f906f604bde7b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "sha256": "0098cb044fac583ebe8526f191f264971a42649785fa8b4cfa36265a138110b5",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "sha256": "20205a92ae4be549b430ffb4607d400c31cbf4ac036ecee40b14509d4c0da63b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "sha256": "d05f3151977a7fbd5aef255411e708b96879207068f3dc93d072dcbf7db846a3",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "sha256": "1722854257a28554223923eaef865bf51be7998484cdda002cda2944db693bae",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "sha256": "e87fdba7e88d1b52153d8ed461929b9954b767fbdb0a639903658323524427c2",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "sha256": "351a383a185641b2b8c2f0b92d1b14d5a64e5cf9b5e38524bf18a328fc4369b8",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "sha256": "14ff2cc80614607620ac9ca9ff755b4d79b189b5a8a089ba219d0b3e90f82e2d",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "sha256": "821b2c0dddc0c4c4e6d1043ee7f424af46492f4fe386ed60c04ef8ffba9b1511",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "sha256": "07eda9e641dde8b5ae029134b33fb088283c2cf66d229eb1517aa5f98cd9e593",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "sha256": "213c3d1edbfa80b1fb556393ba285224148fafd81ef5d3e464462914100ac655",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "sha256": "b9a4923c40575f165aeab59dbb080b998b66d3b9070c3a1be1524c39e5baa88b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "sha256": "31a6d7fc83b99e8387efbd773bf8559bd6255287061f7349f6c4731c0f1d9d8b",
+      "reviewed": true,
+      "visualOutcome": "PASS"
+    }
+  ],
+  "visualReviewRequired": true,
+  "stageAccepted": false,
+  "visualReviewComplete": true,
+  "visualOutcome": "REJECTED",
+  "finding": "Explorer dark / 390dp / font1.4 has an accuracy-only frame without the opaque current-position marker; other 34 captures visually reviewed. Layers were being removed/added in separately redrawable operations."
+}

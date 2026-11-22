@@ -1,0 +1,42 @@
+7ed7fb0d57d235e6a50ff7cc97b54a40d08d90d6 feat(p07-stage1): embed real offline home map on verified clean baseline
+c0275174634c73becf0c454ea67fd0ef768c548b fix(p07-stage1): retain API26 scheduling and exercise shared GPS preview in tests
+ee50f005847b9bf6fad7153a660def562bc45c52 docs(p07): retain initial lint failure and actual JVM execution evidence
+6f4bbbbb2cde86a97c91622346d0b0680db69577 fix(p07-stage1): bind idle home map to the existing fresh GPS snapshot
+d8367683afac82524628d4700c0b5d9ab1a1e588 fix(ci): isolate skipped PR routing from queued exact-source push validation
+83f315dd81b0543a82a8107be7a95bdff4354835 fix(p07-stage1): protect map gestures and cover native offline theme and font matrix
+17e332c7472c0a785048c474df1e0a89e526fbb0 ci(p07): run actual home map acceptance before complete API35 regression
+c6b17a56b27f2630bbff23ae745672a15a5b0401 fix(p07-stage1): keep recenter clear of native zoom controls and verify accuracy circle
+a2612d74ae471a8e188b59bff9021ee39a263fb7 docs: preserve reference-only experiment six-failure API35 evidence
+dc965a5f47a872dd5066f9c253c56aaa2a76be7f fix(p07-stage1): separate native map controls and align idle fix presentation
+dbc566133ac05cb62e9a2a5e47c23ebcb88eecac docs(p07): record stage1 implementation and pending acceptance conditions
+9b3641fd579c5c881c6317e3cfac1e60ead11080 fix(p07-stage1): uncover Explorer map and require stable real-map visual evidence
+8f63254ecabf130f182454d53654ee532698edab docs(p07): keep stage1 pending after native visual rejection
+e08887d479719699e474e8407d4ac90f98fc128a fix(p07-stage1): publish complete map overlay frames atomically
+503a212025325a5f53ed292279ddb5d8de692fc9 docs(p07): retain reviewed native map matrix for atomic overlays
+c69ac06b9bf084e1bf3490f568e3c005e99d430c docs(p07-stage1): accept real home maps after full regression and native review
+f76d556c4caf0831a1966f7c1f3f4300bf5af687 feat(p07-stage2): share foreground GPS across application pages through existing service
+ec47d246d43d72ea8d52d0e99d87c5aa79fdf97b test(p07-stage2): verify actual denied and granted GPS in separate API35 processes
+fcb0c69915e3f96e66deddfafc6eba300a721bd6 fix(p07-stage2): exercise real app navigation without destroying scenario root
+370f6d88db260c68223235e6a7180789d8d11fa3 docs(p07-stage2): retain both original focused failure receipts
+89c99b912908d7d794bbf6c4be7666ee9b1310ab fix(p07-stage2): await accepted live GPS fix before native map capture
+96c38d7bc03465049da3dbd80fee1398d0bee64d fix(p07-stage2): reject queued GPS callbacks after preview demand is released
+1047df65ccd57b7322d2a2d48c9902fdb1fcc754 fix(p07-stage2): ignore disposed GPS handlers across rapid foreground re-entry
+8e180e770981bd6fae4710135c869d2425ea079f docs(p07-stage2): preserve superseded checkpoints without claiming full acceptance
+9559ac05a8667fad7fd6d5630adc199bc84f8a76 docs(p07-stage2): record reviewed native evidence while full regression remains pending
+fb36a25ea3dd35ae450f23fbd76d212fb4cc8ee2 docs(p07): refresh remote release and version audit without allocating a code
+a9ee02066093f832062eb4b04e6cc08363a53cc0 fix(p07-stage2): keep GPS-only preview from requesting heart-rate connections
+9267adf0488db56d444b3cbc1ed9ba2b23a1539d docs(p07-stage2): bind pending acceptance to heart-demand fix candidate
+3e389c183a5d828906a4281dc50408f6510adb77 fix: tolerate unavailable paired Bluetooth devices during GPS preview
+c307bb14c1d2680164aa5f065d20428688d46caa docs: track stage two Bluetooth scan failure and current rerun
+42b702be291810f205e99b294d52949e904f2cec docs: preserve current stage two GPS map and permission checkpoints
+82f5d35545bff2542b2a7f88cbfb69eb7855ffbd docs: map foreground GPS requirements to actual stage two checks
+aebc67245bf3db90b928d781b88bbcd8fbc5d90d docs: accept stage two exact-source full regression and native review
+00fb224e650fd85fae2f8050fc540fe271309b16 feat: hand off foreground GPS to transient P0 sessions without changing preferences
+289ce602f5a5c3af59155053dc43abd4e2a1ddb3 ci: require complete P0.7 evidence before protected fixed-key signing and publication
+f794dce94d843bc4d890c05436ab1c82bd64e6e2 fix: prepare GPS preview and recording notification roles before foreground submission
+b493b0221ee96c035162f62366c1b847a829438e docs: bind stage three notification rerun to its exact candidate source
+6cbbae5d9ced01b878e2860ed90da1a262fd2123 docs: preserve passing handoff map and actual recovery-permission checkpoints
+f15b054c122f79512e911dbc570de74a167a4830 docs: accept stage three full regression durability and all 492 native screenshots
+5fefd7a876d28137880b56afe337ca4259a718f1 release: authorize fixed-key signing of accepted P0.7 source [p07-sign-reviewed-source]
+e7a84bff34e203ed419bee4d391bc5527b237fce docs: separate pending P0.7 physical GPS BLE and power acceptance
+467f2086c0f712e04430382203da2bde0c870acb fix: recenter signed native map after warm foreground GPS fixture relocation

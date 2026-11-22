@@ -111,7 +111,7 @@ public class P0RecordingViewModel extends AndroidViewModel {
     public void start(ActivityType type) {
         if(session.phase()==RecordingSession.Phase.RECORDING||session.phase()==RecordingSession.Phase.PAUSED||session.phase()==RecordingSession.Phase.ACQUIRING_GPS)return;
         command(true,service->{
-            configureGps();PreferencesUtils.setDefaultActivityLocalized(getApplication().getString(type.getLocalizedStringId()));
+            PreferencesUtils.setDefaultActivityLocalized(getApplication().getString(type.getLocalizedStringId()));
             if(service.isRecording())return;
             service.beginGpsAcquisition();
             if(service.isAcquiringGps())session=new RecordingSession(RecordingSession.Phase.ACQUIRING_GPS,null);
@@ -120,12 +120,6 @@ public class P0RecordingViewModel extends AndroidViewModel {
     }
     public void cancelGpsAcquisition() { command(false,TrackRecordingService::cancelGpsAcquisition); }
     public void continueGpsAcquisition() { command(false,TrackRecordingService::continueGpsAcquisition); }
-    private void configureGps() {
-        // Both are existing driver/filter settings: one-second requests, retain each valid GPS fix.
-        PreferencesUtils.setString(R.string.settings_sensor_gps_key,de.dennisguse.opentracks.sensors.driver.SensorType.INTERNAL.getPreferenceValue());
-        PreferencesUtils.setString(R.string.min_sampling_interval_key,"1");
-        PreferencesUtils.setString(R.string.recording_distance_interval_key,"0");
-    }
     public void pause() {
         if(session.phase()!=RecordingSession.Phase.RECORDING)return;
         command(false,service->{session=session.pause();service.endCurrentTrack();service.stopIdleSensors();store.save(session);reloadHistory();});
@@ -133,8 +127,8 @@ public class P0RecordingViewModel extends AndroidViewModel {
     public void resume() {
         if(session.phase()!=RecordingSession.Phase.PAUSED)return;
         command(true,service->{
-            configureGps();Track.Id id=new Track.Id(session.trackId());
-            if(!service.isRecording())service.resumeTrack(id);
+            Track.Id id=new Track.Id(session.trackId());
+            if(!service.isRecording())service.resumeP0Track(id);
             if(!service.isRecording())throw new IllegalStateException("Recording no longer exists");
             session=session.resume();store.save(session);reloadHistory();
         });

@@ -1,0 +1,28 @@
+{
+  "source": "89c99b912908d7d794bbf6c4be7666ee9b1310ab",
+  "run": 44937662904,
+  "overall": "CANCELLED_SUPERSEDED_NOT_ACCEPTED",
+  "fullRegression": "No complete accepted report; never counted as passed",
+  "mapFocused": {
+    "tests": 2,
+    "executed": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "gpsFocused": {
+    "tests": 29,
+    "executed": 29,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "reason": "Latest source1047df6 adds released-callback protection and deterministic assertions; all gates must run again for that source. Intermediate96c38d7 pending run44937849542 automatically superseded, not a test pass.",
+  "artifacts": {
+    "home": 14721095855,
+    "gps": 14720526977,
+    "permissions": 14720826918
+  },
+  "permissionVisualCheck": "Actual denied/granted native PNGs viewed; correct permission notice/no fabricated fix/zero workout metrics. This is not a source1047df6 review.",
+  "stageAccepted": false
+}

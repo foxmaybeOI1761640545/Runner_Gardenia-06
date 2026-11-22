@@ -1,0 +1,400 @@
+{
+  "source": "dc965a5f47a872dd5066f9c253c56aaa2a76be7f",
+  "run": "43737955499",
+  "counts": {
+    "helpers": {
+      "tests": 141,
+      "executed": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android": {
+      "tests": 459,
+      "executed": 458,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    }
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "bytes": 145785,
+      "sha256": "1dd458e4555604e6d3303c9379babc40c2eafaff061fc117be6aae34adb00225",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "bytes": 146673,
+      "sha256": "fdb49c30ca1f68fcbfb5200fd82cd5e5bf54a1d5c39c2bf796b4b719e969d9ed",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "bytes": 145448,
+      "sha256": "8e60a87afabb61cc5dde7f9768bc8988f9eb05f745fab99870c72e29878f3867",
+      "size": [
+        1080,
+        2400
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "bytes": 87842,
+      "sha256": "e8c9a0d3b3525119f00cfdfb7b7e09b6b90edb7903b73d357b4098d567054dfe",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "bytes": 102799,
+      "sha256": "633adb4e12ff183aeb2b00b9f51e639b5e1c06392cb049a8ea596280231fdccf",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "bytes": 171671,
+      "sha256": "a2a8e57ef832fc8ab505a3890eb6ed55986a00947bcd9fdf1ab7fb189e5520e3",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "bytes": 105311,
+      "sha256": "21de05da8ee67c60663c20dda4f9c44780384c285e37afb514a6e1f4d346a219",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "bytes": 161663,
+      "sha256": "40c5470a769fd531e884be505a3f2dcc7ae944bfef92f52c01e989ce6a5ec102",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "bytes": 172123,
+      "sha256": "71e0ab29992de636e0db6de2ec81f631c857a30ec8bfec0d7b259e15ac2527ae",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "bytes": 87441,
+      "sha256": "1d9cdaf9a8067475e162f656584e007692dc42c3796e16da5baa32f93e470103",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "bytes": 181717,
+      "sha256": "adfc41605217260ef728abaa294baafe9dc299d1fb8ba06264e3d9a30b624e9e",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": true,
+      "visualOutcome": "REJECTED"
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "bytes": 108822,
+      "sha256": "c46de1a0dec10c5d1e97960b64eae39235772b78dfed9f716c5c3a9274f4634f",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "bytes": 173943,
+      "sha256": "28c8cd4fa2ea458919184766e031b5c32f38456e6bfe8efb243a18fb9d85350b",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "bytes": 109689,
+      "sha256": "72af68839105a86f26d506be547470d11652ac2830d9fcefb2664987619a0c36",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "bytes": 180350,
+      "sha256": "281b4b1a69a39d170e0864a9f9eca10827d48d456f11198e37de8d585cd60758",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "bytes": 165133,
+      "sha256": "92fc2b3b6ade8e81e7fd63081998549511549ac3bddd32577ad1c7cf936d4620",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "bytes": 172112,
+      "sha256": "f74a704cd1aa6e49d10d27218cfa29128ed2fac485dbe3a796e01cc77abe7733",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "bytes": 171199,
+      "sha256": "dad33693c693ca11320c3fc3051d8e27bcf18333f750f3548ff0abf66084d183",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "bytes": 116019,
+      "sha256": "8a6f8e8d373bd553ee90d505fab23a0f714a870b2d9700897b9c9aaa6c7c675a",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "bytes": 88939,
+      "sha256": "2c0fed78f124abb03a05aa90c2990db3ae1e1477882825e21e7339358d8f8bca",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "bytes": 161893,
+      "sha256": "1a09ca73fa5bc8554ffd0b929f1196f5b8f03c629357cd9b690b92ca99b8d9c0",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "bytes": 87316,
+      "sha256": "8704b633d9dc13aad9e04d0b7e495a5ace95fbb6f8fd6d8cbadcb55c97957b4b",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "bytes": 91799,
+      "sha256": "cb83fa21e5ace6866a1a95fcc7e7d882fc60c74ac74531cc7a5a93dc11d6f33b",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "bytes": 88680,
+      "sha256": "707673511aaf582278853ea76e486c5a4491d9c70e66005b5ceb9db6b89c140a",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "bytes": 91123,
+      "sha256": "55904ce0735f07f90b7fb592d30eb552bd90ba4e9dfb06f28f79bb8702d905fc",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "bytes": 87082,
+      "sha256": "e2450f659d4eb591e541982b49cf5b2030f3c5e8b871d2c8b41bd7e2d8f511b8",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "bytes": 170352,
+      "sha256": "210cd94f0fdaa43b57d9c1eb7d369c938d7b70a12d914b3b353fbe64f312cb22",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "bytes": 84040,
+      "sha256": "35d43ed20ac1976b3386fd3cd573a55bf852a310dfcb7f9ffd91045461aea71b",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "bytes": 159975,
+      "sha256": "e7ccdf9617a4bfffd5e77add7d25c9d443870cf97365cb7469a95e6902a9aca0",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "bytes": 155460,
+      "sha256": "3552b045261d3b275945313febd908970b5362b0d247b32dc3b5cc59f6062389",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "bytes": 167112,
+      "sha256": "667af6058c9b965234512c684c534cbd2148182c0bdf092f1834d4734b6752dd",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "bytes": 83787,
+      "sha256": "b60a3ebb61341266cd160d0650e7586454b18f43f27625afd8aa6afb1bf30b60",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "bytes": 95761,
+      "sha256": "fb403a9cea7efb60ce066583e9a798671ed6ee7a5424d35b97cb3bc70415a185",
+      "size": [
+        720,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "bytes": 83941,
+      "sha256": "28b2e6ed9e04d353187927fb051ccc749c327a73a7c65fb78d3ab01170de3975",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "bytes": 167652,
+      "sha256": "290e7d18a8d3815dc5d8e27904cf2ebcd186f915c8f4987e17a0f359851eab30",
+      "size": [
+        780,
+        1600
+      ],
+      "reviewed": false
+    }
+  ],
+  "visualReviewComplete": false,
+  "stageAccepted": false,
+  "visualReviewOutcome": "REJECTED",
+  "findings": [
+    "Explorer primary metric card obscures map zoom and recenter controls.",
+    "Some intended real-map captures show a different GPS fix and blank map; uncontrolled emulator location interfered with injected service measurements."
+  ]
+}

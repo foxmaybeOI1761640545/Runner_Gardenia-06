@@ -1,0 +1,11 @@
+{
+  "commit": "f794dce94d843bc4d890c05436ab1c82bd64e6e2",
+  "stage": 3,
+  "fullRegression": true,
+  "branch": "feature/p0-7-to-p1-0-offline-navigation-clean",
+  "signed": false,
+  "publishing": false,
+  "runId": "44980804037",
+  "versionCode": 6780,
+  "versionName": "v0.1.0-p0.7.0"
+}

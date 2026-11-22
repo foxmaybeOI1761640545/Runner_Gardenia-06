@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "independentRunner": true,
+  "authenticatedDownload": false,
+  "signingKeyUsed": false,
+  "runId": "45011169008",
+  "source": "467f2086c0f712e04430382203da2bde0c870acb",
+  "release": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/tag/test-p0-v0.1.0-p0.7.0",
+  "versionName": "v0.1.0-p0.7.0",
+  "versionCode": 6780,
+  "applicationId": "com.fox.runner",
+  "apkBytes": 3236595,
+  "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+}

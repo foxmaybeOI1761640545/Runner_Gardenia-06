@@ -1,0 +1,508 @@
+{
+  "source": "467f2086c0f712e04430382203da2bde0c870acb",
+  "buildRunId": "45008081843",
+  "buildWorkflowCommit": "87c87b7d5f75151387a6088cf94b6407e7f609c2",
+  "formalArtifactId": 14749309660,
+  "formalArtifactName": "RunnerGardenia-P07-Release-45008081843",
+  "formalArtifactSha256": "9111a4f64e4c64a4c444c112e3913962a808a217b394f537308e39cdf4c82433",
+  "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+  "signedVisualReviewPassed": true,
+  "signedPngsReviewed": 99,
+  "reviewedSignedScreenshots": [
+    {
+      "file": "p06-release-precision-light-appearance.png",
+      "sha256": "a0ab984b188d8b0651b478f839927bc40b35fbe9a9200996de00ec8542a3400f",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-hub.png",
+      "sha256": "25ddb8733a58bd981fa3d141968170266a3b78a5b7432784cd3a2a40bbb1a7df",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-motion.png",
+      "sha256": "ee63b176547843d59277930d308a0b5232cbaa5f3ce09013db84ba8b4edab152",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-info.png",
+      "sha256": "8a9c22330eee6eab4cc3259588694706813803cd1fa43f8f9fc8d6838421420e",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-home.png",
+      "sha256": "cd672fe11e662eb4fb737ee744a484f31b94bbd19df658164c02d0909539ca27",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-offlineMap.png",
+      "sha256": "85e7d4b64d33e18e976536886e245f97409e7a6f7ba12c6945d0101598e9e60e",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-heart.png",
+      "sha256": "8bc583178cdceee860ca95c57d5bfe1acc59eaac8ee2edcd88d73a09d9a1947b",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-history.png",
+      "sha256": "4518306de1cdc1dd6b637ffe93fad0fd6553997e477c72f4834a9c2c8a147f11",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-selection.png",
+      "sha256": "c0e1058626ff3d939fbac3e63e9a310fc10a8e9aaae3388983dcc619294719e6",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-share.png",
+      "sha256": "eac9caa200ca13866777e91d7dc21af504713430d74edac7c5714869989cf92f",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-light-delete.png",
+      "sha256": "0059f32e8b5617d17696408aa81901f67b9a615f4d39611845710448bf8beb8c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-appearance.png",
+      "sha256": "f0f290eb945da389c30eafd7bec7f3f841e26d1e78b3c713ce4acd505e9f5213",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-hub.png",
+      "sha256": "56b52453c5868e5468bec1588d51da942c5f1037b7afa62fc134222776e689a7",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-motion.png",
+      "sha256": "435ebfd90744c0278aac1fcac3bbba94d952567d3472924d160110b17847c6bd",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-info.png",
+      "sha256": "c6306c84749ca31bbf08afadd8993eed71f8c4569f205f56d15473e5056d959c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-home.png",
+      "sha256": "8294e4b04198fb4d8eee73c27c3789e56d44fabcb61297e369e7fc1f18f591c8",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-offlineMap.png",
+      "sha256": "4f0366f260635156c7b7c3d78bd7a9adefc5c16ebd5994ecb00d3406f98192bf",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-heart.png",
+      "sha256": "79ec6a670c18b9aae4d5357fbbce5ec15411c3ebe83b8abff7c0434d1f4e6d48",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-history.png",
+      "sha256": "ea3c21b89360d1d7f511e7a7a0626066e82597d20d6d1932abdbdba95acfec60",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-selection.png",
+      "sha256": "2e3c1a0f4c6396851b54e499111ee477c07065ab34c22aed5502385591a22c45",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-share.png",
+      "sha256": "fcb02c7620ed13151ae62f4fe1e3b9f6738d921efb2a2d9007d96478e3b09fd3",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-precision-dark-delete.png",
+      "sha256": "fd81f64c0dec02cf968e0e4992542d9d83731167d0258bd3e090d61247db012f",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-appearance.png",
+      "sha256": "a472434419f02f450d68b53d4a9f7d28311a9825f9075c7820c5a65e0fd21a15",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-hub.png",
+      "sha256": "d00e118f21f88e4f2510a599457edfa04bdfa215270f6cb310728ccab8d4713e",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-motion.png",
+      "sha256": "74e86709caf99dc0ed0892bd127fea6c293273401d46a517d67c3077af32ca1c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-info.png",
+      "sha256": "59dc98d2717bde812a2a2bb7c471586ed7923e5736abef1e9dd658f4b9bdf32d",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-home.png",
+      "sha256": "997dd69932dd30a11af2698e5c8164122f3a130b04891348cbcddb150ac326bb",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-offlineMap.png",
+      "sha256": "4701c6d9ca62ed555e22879031aab33895951fe4aa887d0e902b2f129b68edc2",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-heart.png",
+      "sha256": "15b922b14bf4fbdc6fbf191cf803e5c6d5dfc0d25dcf529c22454a6baae2a9e6",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-history.png",
+      "sha256": "eadb018486fc40f08be18f6d18c78765f82e37f30f403de3279509ea21fcd4a5",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-selection.png",
+      "sha256": "e5953bfc6baad4aab999a579b454514ded9646f1a04a627a999973e30bb67b59",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-share.png",
+      "sha256": "f287d2ff39ba29592fd301c1884d94764577cfadb6f7e23e4b887f71e1370fbf",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-light-delete.png",
+      "sha256": "93cfa6b1bdcc9d4e603988c261d3a5b6c22e0dd5e619969779c6177cb635ef9d",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-appearance.png",
+      "sha256": "c1d82ea0590c8303805cd54fd2c3b0a510033faee88747c38febce2091272249",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-hub.png",
+      "sha256": "44c641d86e9938e42fd62f19fae158530f227a7bf35c1d834ffe5a80ccedc312",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-motion.png",
+      "sha256": "c78b0fdef8fd506250583500ee86945997b95d1786fce95e0fe33f5c4c9e9952",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-info.png",
+      "sha256": "00a344cea602618db7061cc9551e805d2c755fe7f6c144a0f762a035c3473a46",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-home.png",
+      "sha256": "15e0d98979e8235d5dc11b67c2532b9a4a45a48e67cc29e0d1f3cf4336a827e2",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-offlineMap.png",
+      "sha256": "5bf75be98778e73965ac426677ae98b7424a95293d0f2d478170474d948577a1",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-heart.png",
+      "sha256": "689e27705d5df8a04403d6630d6d53b3d8a9e3854f9fedec023e7a45a56bf71c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-history.png",
+      "sha256": "758d08d660caf857862d52d36a12cdcee7b295a95e3f2cad3acbbcc00844aea4",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-selection.png",
+      "sha256": "f53cd0bf1da93319872f2a166ed91dabdbc2634c3539d4ed5254d8ff57621882",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-share.png",
+      "sha256": "171c7e7ea2dcdec680de690b0a9a0ee05a10b7373f4f75e70458f371d68c204d",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-quiet-dark-delete.png",
+      "sha256": "e148601f7074860712b4a5a7b5eb5ce7a1f8778e096936864bed351934666c70",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-appearance.png",
+      "sha256": "a6170db84317a46f96fe9954ba106a3dd3c007e17967a1201d1d06c1347dfd7f",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-hub.png",
+      "sha256": "567da0c802585bef6ebe0b52a6f05854d32650b591426281b27cba6efcea2bb2",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-motion.png",
+      "sha256": "7f85c52fb9dab6e309ab3bd5709c930978e3a43ce5f9b0550e44f76fdb8fca5b",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-info.png",
+      "sha256": "03ba23f8273ae2e835f8c60204097b7a4d69e5796eb2af1bfce86597d6e82ede",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-home.png",
+      "sha256": "9b8dffde06ee9ea151d3e4139a01ff8506d50ba2e744c778624a005fc7a11c41",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-offlineMap.png",
+      "sha256": "90fb6d1451fd7c5c7aceda21c3da90e9bd68a1a038f4c9dfa8974be820ea4b6d",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-heart.png",
+      "sha256": "dc351ad6ddb29fa1c8fb417f9b7205493ba8e042bc44fe12037560489dfcbae9",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-history.png",
+      "sha256": "6d39dec2f860db1aabc8939a6e6e4504fdf648abc6857e79465c5eb82ec9adff",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-selection.png",
+      "sha256": "1b3da2e02d17b69dc10608ada204c635d5ffb9da5a8dcc9cfb8e76d567dcb3a5",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-share.png",
+      "sha256": "7502aa67c1426ca9614d193d45cd4cea3c4249107208a9e51ea2e3a89974c2b9",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-light-delete.png",
+      "sha256": "31f34fe2a668a2d5172f07cac91b6f7a053985823adb5c0a14917601d56a3d56",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-appearance.png",
+      "sha256": "b4848eaf41dbeddca50e1d79db89612746dacea2c6852803e1d307a542769da5",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-hub.png",
+      "sha256": "811235e28ab44d483cb05b2553bcdd51469ad5f5a2d61ff026f1cad261788ad4",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-motion.png",
+      "sha256": "2da924be8803426968f49db1400287be30316d492ca8af16458283a1acd55dd8",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-info.png",
+      "sha256": "d7dca67d92f05b2406426c9ffa546269ff460f2e921353d0b49b76c7f7ff416a",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-home.png",
+      "sha256": "05c407372671b16dc3701cc9718f19a0185458b77a67beaed9037c9093fa3aab",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-offlineMap.png",
+      "sha256": "8ffd8f73026c91646fbe2cb28f77ada31e213282493ffd6d46c32afdaecd2943",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-heart.png",
+      "sha256": "704733403465b0e306bad19f812ae5fe958722b9828c039b5d343deeca8c7c55",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-history.png",
+      "sha256": "8c5ca37c3f33c1e0f86ab34185e57afa37535be4aa779539d15d419b93f38820",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-selection.png",
+      "sha256": "a3c993f94fdf0e88b6ca08cef27baa59b94f35cf0ad4966a536b47bdde3332eb",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-share.png",
+      "sha256": "9313f4c9c8d1bc355fad9d4000a977b4931d399cbad1815985ff6fdd94c257bd",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-explorer-dark-delete.png",
+      "sha256": "02a1f4c6cc88c1c4cce32fe866e0ae9ec8df89cb5d2c48548c2d04a016908440",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-appearance.png",
+      "sha256": "b338a035fa67bf8af826ce4572b6ce653bef8d922633064519e05573e7a5ce63",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-hub.png",
+      "sha256": "15298dbb72652e41f637ea66c6286b2652de14103530da5215a003d03f955f7e",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-motion.png",
+      "sha256": "6a5fe22958733f4d8b2fad22b02ab1a3eadcc7132566f2b37673b0f91221ffb9",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-info.png",
+      "sha256": "a9d1b5ff5715963f8ae8b682e93017402f203620eb732a03aeecdf58d37c9dd0",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-home.png",
+      "sha256": "464cc989efb19f481549c39715cfd36f6bea2042a16d4de4e1f3e406fb91c044",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-offlineMap.png",
+      "sha256": "5e70e7c914f7d9a4e101631e4e7ed79a5af374375b25934976b20d120bca9f0c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-heart.png",
+      "sha256": "b398b87d0cf0e439f47243d9fead374b9345bc658f5309452d681747dbc53389",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-history.png",
+      "sha256": "641639f2b87e09c91b8e531b87e6d59548cc28fb793ff86c14d7ea6d029efde0",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-selection.png",
+      "sha256": "a47adb04614026d4d25cbf626035aa1d60f27996e54005f39b983404ad227887",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-share.png",
+      "sha256": "20bd8fb0fb30f073ec990b114a70bc49a9a6ea2057e19006c6c19a8521b5e968",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-light-delete.png",
+      "sha256": "5f0b463d2dd54d6f1d6cb08774f8a4d7a41df39d4cdd7382ad2ca35c04137d46",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-appearance.png",
+      "sha256": "8a2f134ae6ffeee75cb8ab0c5a6ea8d9162eccce215aa469662a0703b63af870",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-hub.png",
+      "sha256": "c46089dd1c3824fdf7e09dd345c0d8cfafd91ea8363ad45a275f4567b458c9e2",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-motion.png",
+      "sha256": "567c8be33eba71fb000ae63e44204c7b1ecf5ea41198f5153f3636a4478b29ae",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-info.png",
+      "sha256": "7a6c622b228af23efae7493ae86f9d49416024734e44248bdfe7182baf8041ac",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-home.png",
+      "sha256": "d7e88c9409d530560a90b5c6321f48b9915efb866bb76e49b5ebcca9746f4e6a",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-offlineMap.png",
+      "sha256": "68267fc3610697b5fb3fb2e0555f538b38a3fd67fbf52b7b2dd76e9fe627dccf",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-heart.png",
+      "sha256": "9603ebce2c9aa6a0feca5fe1dcca81e1587e3c71cd2174dd51acf769b43357a3",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-history.png",
+      "sha256": "643907d99e08ae851b0ba9cdf306c56bcabcdebdf10d2c51458afb35fe32ddb9",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-selection.png",
+      "sha256": "f6195719474fa372ffca206484e5277fa35cddd7a7cdef036b7acbcfc8ad4a47",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-share.png",
+      "sha256": "713feabc50341738b7c7f0804f9b8cf1a130020677480fe9ce7cbcbf237dd3a8",
+      "reviewed": true
+    },
+    {
+      "file": "p06-release-neon-dark-delete.png",
+      "sha256": "991f1541e019ee750ed4a90cb0a3c42ecced86cfc0cc238cae6933683b7cc50c",
+      "reviewed": true
+    },
+    {
+      "file": "p06-signed-map-imported-airplane.png",
+      "sha256": "ecd5926b0f588ba7b30427dad44048acff9c585e5b098debaa3fc48a0c3853e3",
+      "reviewed": true
+    },
+    {
+      "file": "p06-signed-map-history-restarted.png",
+      "sha256": "4c6627b0f073c7f803551b92bcb8ecfc1f3447f1b62ef950fbf9a10d6b035b5a",
+      "reviewed": true
+    },
+    {
+      "file": "p06-signed-map-live-current-gps.png",
+      "sha256": "2af91770f7910c60829b7b4192f8bc76515fd7b0e4d846a8dea7e5d677939a96",
+      "reviewed": true
+    },
+    {
+      "file": "p06-signed-map-invalid-retains-map.png",
+      "sha256": "147bac4e9a2514bb0e279579806901b2e0ba8fd04c12f5261f3646882a54dd9d",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-imported-z7.png",
+      "sha256": "cda7cd4ceb85dc4a39c0489cadf611c73822a390d9c0238f9e94819ddb1baaa0",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-detail-z12.png",
+      "sha256": "d5351907db5515bee95e80f874d8bd1b08bb08bb68a6961edd5e8e316643882f",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-detail-z16.png",
+      "sha256": "0ee6947b4ad1d5ecfabef11ae5f616f172a834f8e5e26d8d4ffa082cb8f81bb1",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-320dp-large-font.png",
+      "sha256": "1140f4cccc11c4e2dfa250ad7f2c77cfbbb0d1b46bf3c19f14c8eea154ea768e",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-new-process.png",
+      "sha256": "d63a23428f3d2135da76a5ac258ad1ecce40e14ca22fd8bb898e6e9c9fdd8799",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-live-route.png",
+      "sha256": "4f97f7625d37aae3e2bcf9b4440bd4ff90ba03185eba9c6263154ff8e0e0db74",
+      "reviewed": true
+    },
+    {
+      "file": "p061-signed-real-invalid-retains.png",
+      "sha256": "7b47a9485944f5fb872c391a7267e116f70b33daed17e87632b92fdfb15cb2ae",
+      "reviewed": true
+    }
+  ]
+}

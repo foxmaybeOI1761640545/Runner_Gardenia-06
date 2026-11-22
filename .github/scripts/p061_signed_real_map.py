@@ -78,6 +78,7 @@ def capture(device,dump,screenshot,tap,start,output):
     if diagnostic is not None:break
     time.sleep(.25)
    if diagnostic is None:raise ValueError('Actual signed map diagnostic dialog unavailable')
+   (output/'last-real-map-viewport.json').write_text(json.dumps({'commit':info['commit'],'apkSha256':info['apkSha256'],'viewport':diagnostic},indent=2)+'\n')
    text('OK');expected=[t for t in diagnostic['visibleTiles'] if t['readerSupportsTile']]
    if expected and all(t['rendererTileState']=='CACHED' for t in expected):time.sleep(.5);return diagnostic
    time.sleep(.5)
@@ -86,6 +87,7 @@ def capture(device,dump,screenshot,tap,start,output):
   diagnostic=wait_tiles()
   requested=re.search(r'-z(\d+)$',name)
   if requested and diagnostic['zoom']!=int(requested.group(1)):raise ValueError('Signed native zoom differs from requested detail level')
+  if name in ('detail-z12','new-process') and (abs(diagnostic['latitude']-23.1291)>.002 or abs(diagnostic['longitude']-113.2644)>.002):raise ValueError('Native locate did not center the accepted Guangzhou fixture fix')
   tree=dump();focus=next((l.strip() for l in device('shell','dumpsys','window').splitlines() if 'mCurrentFocus=' in l),'')
   if 'P06MapActivity' not in focus:raise ValueError('Actual signed map Activity must be focused')
   filename='p061-signed-real-'+name;screenshot(filename);raw=(output/(filename+'.png')).read_bytes();pixels=verify_pixels(raw,tree)
@@ -99,7 +101,12 @@ def capture(device,dump,screenshot,tap,start,output):
  if device('shell','settings','get','global','airplane_mode_on')!='1':raise ValueError('Actual airplane mode required')
  home();tap('p04_route');picker(NAME);ready();retained();photo('imported-z7')
  tap('p06_my_position')
- for _ in range(3):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
+ for _ in range(4):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
+ # A foreground preview may already have a fresh Singapore fix from the
+ # previous scenario. Locate is a one-shot action, so request it again after
+ # the new, spatially consistent Guangzhou fixes have reached the real driver.
+ # Keep every supported-tile assertion and also verify the resulting center.
+ tap('p06_my_position')
  for _ in range(5):tap('p06_zoom_in');time.sleep(.35)
  time.sleep(3);photo('detail-z12')
  for _ in range(4):tap('p06_zoom_in');time.sleep(.35)
@@ -129,7 +136,8 @@ def capture(device,dump,screenshot,tap,start,output):
   device('shell','settings','put','system','font_scale',old_font if old_font!='null' else '1.0');time.sleep(2)
 
  device('shell','rm','/sdcard/Download/'+NAME);home();tap('p04_route');ready();retained();tap('p06_my_position')
- for _ in range(3):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
+ for _ in range(4):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)
+ tap('p06_my_position')
  photo('new-process')
  home();tap('p0_start')
  for _ in range(4):device('emu','geo','fix','113.2644','23.1291','12','8','4');time.sleep(1)

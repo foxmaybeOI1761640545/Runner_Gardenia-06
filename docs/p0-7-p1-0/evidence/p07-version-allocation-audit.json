@@ -1,0 +1,520 @@
+{
+  "checkedAtUtc": "2026-11-21T20:38:11.673198+00:00",
+  "releaseCount": 11,
+  "publishedHighWater": 6779,
+  "allocatedHighWater": 6779,
+  "tagHighWater": 6779,
+  "tags": [
+    {
+      "tag": "test-p0-v0.1.0-p0.1",
+      "object": "c3af195d4d99eb468dc09420bee43336b295bbd2",
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.2",
+      "object": "51c7f7684ef111352f765ebf35d65562bf35fb42",
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.3",
+      "object": "3839bd2e288de3dc47219cbb8c036f8919d6bed7",
+      "versionName": "v0.1.0-p0.3",
+      "versionCode": 6774
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.4",
+      "object": "f3900d5dadd09d3b8132bd2951d674692b2a6011",
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5",
+      "object": "84ca084c781aa4596dcfa09945d54c17fc89fc1f",
+      "versionName": "v0.1.0-p0.5",
+      "versionCode": 6776
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5.1",
+      "object": "3ec2cb44df7a7117ce91ab26ce348098cc2e9ad8",
+      "versionName": "v0.1.0-p0.5.1",
+      "versionCode": 6777
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6",
+      "object": "639a85c889f5a1e696faa0032f19a2718232cab8",
+      "versionName": "v0.1.0-p0.6",
+      "versionCode": 6778
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6.1",
+      "object": "4b85d6a73a49e75d52b27497c3fb85ff666ee39b",
+      "versionName": "v0.1.0-p0.6.1",
+      "versionCode": 6779
+    },
+    {
+      "tag": "v0.1.0-rc1.4",
+      "object": "4d9e25e8f6d189c7334fb5a1af4cbb16209cf66e",
+      "versionName": "v0.1.0-rc1.1",
+      "versionCode": 6766
+    },
+    {
+      "tag": "v0.1.0-rc1.5",
+      "object": "ee40e121ceb03a9bfacea7bdb8a58fa077a553f3",
+      "versionName": "v0.1.0-rc1.1",
+      "versionCode": 6766
+    },
+    {
+      "tag": "v0.1.0-rc1.6",
+      "object": "a4516af24b687a26be55ae2ceeac745fe840d6b7",
+      "versionName": "v0.1.0-rc1.1",
+      "versionCode": 6766
+    }
+  ],
+  "suggestedNextCandidate": 6780,
+  "candidateReserved": false,
+  "notes": "Read-only audit only. Experimental property6780 is not a formal ledger allocation. Recheck at actual Stage3 allocation; no version/ledger changes here.",
+  "refsSha256": "6b8d4ce1ef86ca54eb55823000e0353ec4729bc415ebc2c1fe0f9ca956a6a251",
+  "releases": [
+    {
+      "tag": "test-p0-v0.1.0-p0.6.1",
+      "draft": false,
+      "assetId": 748130105,
+      "assetSha256": "90c5d2a48d9d11df037abb8cafdba524f5c950f61b9f0b92a15e4e781988e35a",
+      "versionName": "v0.1.0-p0.6.1",
+      "versionCode": 6779,
+      "applicationId": "com.fox.runner",
+      "commit": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+      "apkSha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6",
+      "draft": false,
+      "assetId": 740430942,
+      "assetSha256": "1279cfab0c6e509c76ac9fd6d432c7adcfb03173c9ce36bedb7cf90f3c5f4ec9",
+      "versionName": "v0.1.0-p0.6",
+      "versionCode": 6778,
+      "applicationId": "com.fox.runner",
+      "commit": "af6e90eabee20ada79ba942584ab7eb8c08660e3",
+      "apkSha256": "6a605a9c4f6a1e5fc73b5be3598225fd3bf88fda7eea15436d9ce133ab7a8c44",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5.1",
+      "draft": false,
+      "assetId": 737809187,
+      "assetSha256": "fe0cc56da6c15254b4118f6570c1db87256199a5d2b4db744ab62d2b6653a46c",
+      "versionName": "v0.1.0-p0.5.1",
+      "versionCode": 6777,
+      "applicationId": "com.fox.runner",
+      "commit": "a4b2c7a7521a19a60c1d444449ff82c0560e4d19",
+      "apkSha256": "a99a489ffdc63c746346d9a6521884b4fc21a6698552f10c4963711b2232816d",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5",
+      "draft": false,
+      "assetId": 730286545,
+      "assetSha256": "2a81a5e6d943aa66992b7fe26869ea3bd29bfef80b82690350a9525cb0ce0d15",
+      "versionName": "v0.1.0-p0.5",
+      "versionCode": 6776,
+      "applicationId": "com.fox.runner",
+      "commit": "a8891f61122712b81bee357f40d688151a948e57",
+      "apkSha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.4",
+      "draft": false,
+      "assetId": 724746686,
+      "assetSha256": "2db139350aefb03457edbb7ac9068bf9a4f7a2c4e34dfff875643bf0145ae75d",
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775,
+      "applicationId": "com.fox.runner",
+      "commit": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.3",
+      "draft": false,
+      "assetId": 723506616,
+      "assetSha256": "b44e31a63f84bc5d3ca10edbb4373fe49425103c02be08fe70d19176cef1f38c",
+      "versionName": "v0.1.0-p0.3",
+      "versionCode": 6774,
+      "applicationId": "com.fox.runner",
+      "commit": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.2",
+      "draft": false,
+      "assetId": 717852424,
+      "assetSha256": "c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7",
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773,
+      "applicationId": "com.fox.runner",
+      "commit": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.1",
+      "draft": false,
+      "assetId": 712576218,
+      "assetSha256": "b0b7082ad2a9ea656c0e40fe2c0d1eee9996a2d666c4058be6f8ee7b89e1f2ee",
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772,
+      "applicationId": "com.fox.runner",
+      "commit": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "v0.1.0-rc1.6",
+      "draft": false,
+      "assetId": 709849073,
+      "assetSha256": "ca8747a9b0f63e7c23ffde00fce59997f1a149f2843181835bf52e70272e6958",
+      "versionName": "v0.1.0-rc1.6",
+      "versionCode": 6771,
+      "applicationId": "com.fox.runner",
+      "commit": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "apkSha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "v0.1.0-rc1.5",
+      "draft": false,
+      "assetId": 707490316,
+      "assetSha256": "4b657df8a9abfe690cbd73a09b7e4a7a97401c2836fbba924ff62ff54486e279",
+      "versionName": "v0.1.0-rc1.5",
+      "versionCode": 6770,
+      "applicationId": "com.fox.runner",
+      "commit": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "apkSha256": "6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    },
+    {
+      "tag": "v0.1.0-rc1.4",
+      "draft": false,
+      "assetId": 706522328,
+      "assetSha256": "bd82e2d6fbf1a53b0d40f832779d401a42994eeda19deac84e9f5fbec01acb5b",
+      "versionName": "v0.1.0-rc1.4",
+      "versionCode": 6769,
+      "applicationId": "com.fox.runner",
+      "commit": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22"
+    }
+  ],
+  "branches": [
+    {
+      "ref": "refs/remotes/origin/data/region-map-gd-prd-east-fujian",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.6",
+        "VERSION_CODE": "6778",
+        "VERSION_NAME_FULL": "v0.1.0-p0.6"
+      },
+      "codeHighWater": 6778,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/design/p0-ui-lab",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.1",
+        "VERSION_CODE": "6772"
+      },
+      "codeHighWater": 6769,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/heart-rate-monitoring",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-rc1.1",
+        "VERSION_CODE": "6766"
+      },
+      "codeHighWater": 6769,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-2-gps-ui",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.2",
+        "VERSION_CODE": "6773"
+      },
+      "codeHighWater": 6773,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-5-1-gps-motion-quality",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.5.1",
+        "VERSION_CODE": "6777",
+        "VERSION_NAME_FULL": "v0.1.0-p0.5.1"
+      },
+      "codeHighWater": 6777,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-5-dashboard-settings-history",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.5",
+        "VERSION_CODE": "6776",
+        "VERSION_NAME_FULL": "v0.1.0-p0.5"
+      },
+      "codeHighWater": 6776,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-6-map-real-validation",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.6.1",
+        "VERSION_CODE": "6779",
+        "VERSION_NAME_FULL": "v0.1.0-p0.6.1"
+      },
+      "codeHighWater": 6779,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778,
+        6779
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-6-offline-map",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.6",
+        "VERSION_CODE": "6778",
+        "VERSION_NAME_FULL": "v0.1.0-p0.6"
+      },
+      "codeHighWater": 6778,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-7-to-p1-0-offline-navigation",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.7.0",
+        "VERSION_CODE": "6780",
+        "VERSION_NAME_FULL": "v0.1.0-p0.7.0"
+      },
+      "codeHighWater": 6779,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778,
+        6779
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-7-to-p1-0-offline-navigation-clean",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.6.1",
+        "VERSION_CODE": "6779",
+        "VERSION_NAME_FULL": "v0.1.0-p0.6.1"
+      },
+      "codeHighWater": 6779,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778,
+        6779
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/p0-core-migration",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.1",
+        "VERSION_CODE": "6772"
+      },
+      "codeHighWater": 6769,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/theme-system-p0-3",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.3",
+        "VERSION_CODE": "6774"
+      },
+      "codeHighWater": 6774,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/feature/theme-system-p0-3-ui-refinement",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.4",
+        "VERSION_CODE": "6775"
+      },
+      "codeHighWater": 6775,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/main",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-rc1.1",
+        "VERSION_CODE": "6766"
+      },
+      "codeHighWater": 6769,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769
+      ]
+    },
+    {
+      "ref": "refs/remotes/origin/tools/offline-map-custom-area-build",
+      "properties": {
+        "VERSION_NAME": "v0.1.0-p0.6",
+        "VERSION_CODE": "6778",
+        "VERSION_NAME_FULL": "v0.1.0-p0.6"
+      },
+      "codeHighWater": 6778,
+      "allocatedCodes": [
+        6766,
+        6767,
+        6768,
+        6769,
+        6770,
+        6771,
+        6772,
+        6773,
+        6774,
+        6775,
+        6776,
+        6777,
+        6778
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@
     <string name="p0_ready">就绪</string>
     <string name="p0_running">跑步</string>
     <string name="p0_cycling">骑行</string>
-    <string name="p0_location_needed">GPS 记录需要精确位置权限。</string>
+    <string name="p0_location_needed">位置预览和 GPS 记录需要精确位置权限。</string>
     <string name="p0_location_granted">已获得 GPS 权限</string>
     <string name="p0_enable_location">开启 GPS 权限</string>
     <string name="p0_metrics_empty">时间 00:00\n距离 0 m\n速度 — · 配速 —\nGPS — · 精度 —</string>
