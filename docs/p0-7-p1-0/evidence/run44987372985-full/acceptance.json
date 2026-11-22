@@ -1,0 +1,439 @@
+{
+  "source": "467f2086c0f712e04430382203da2bde0c870acb",
+  "run": "44987372985",
+  "counts": {
+    "android": {
+      "tests": 471,
+      "executed": 470,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "helpers": {
+      "tests": 146,
+      "executed": 146,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "gpsFocused": {
+    "tests": 45,
+    "executed": 45,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "permissions": {
+    "denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 1919,
+      "actualGpsPermission": "denied",
+      "screenshotSha256": "f0c00603fcdb4c6797ac172b269323239a55b15172b16befaca570073c9a72f7"
+    },
+    "granted": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2350,
+      "actualGpsPermission": "granted",
+      "screenshotSha256": "967cae80ff64243aba18158caef1e0a719fccd892304dfded457ad8147587ea5"
+    },
+    "recovery-denied": {
+      "tests": 1,
+      "executed": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "pid": 2461,
+      "actualGpsPermission": "denied",
+      "actualBluetoothPermission": "granted",
+      "savedWorkoutRetained": true,
+      "p0RecoveryRejected": true
+    }
+  },
+  "deliveryChecks": {
+    "p0-durability": {
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "database": "p0-durability.db",
+      "p05MetricProbe": true,
+      "p05BatchProbe": true,
+      "forceStopped": true,
+      "timezone": "Asia/Singapore",
+      "phases": {
+        "write": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 2035,
+          "batchCacheState": "staged"
+        },
+        "read": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 2301,
+          "batchCacheState": "cleaned-retained-completed"
+        }
+      }
+    },
+    "p061-real-durability": {
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "privateMapRetained": true,
+      "sourceCopyDeleted": true,
+      "nativeTilesRenderedAfterRestart": true,
+      "airplaneMode": true,
+      "forceStopped": true,
+      "timezone": "Asia/Singapore",
+      "phases": {
+        "write": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 1953
+        },
+        "read": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 2465
+        }
+      },
+      "screenshotSha256": "e664313fd3505b9400a92950a80bbf7cf77d02cada7e4d13fb42ba628b76bd63"
+    },
+    "p06-map-durability": {
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "privateMapRetained": true,
+      "pendingImportCleaned": true,
+      "nativeTilesRenderedAfterRestart": true,
+      "airplaneMode": true,
+      "forceStopped": true,
+      "timezone": "Asia/Singapore",
+      "phases": {
+        "write": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 1979,
+          "partialCopyState": "staged"
+        },
+        "read": {
+          "tests": 1,
+          "executed": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "pid": 2251,
+          "partialCopyState": "cleaned"
+        }
+      },
+      "screenshotSha256": "7b55a0458a5b7288ee30733a6b716bf532d2044eb67263bec02845ca5d094ace"
+    },
+    "p0-gpx": {
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "files": [
+        {
+          "file": "batch-multiple-Workout-1795324285883.gpx",
+          "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-multiple-Workout-1795324285884.gpx",
+          "sha256": "21bb5f8bd285e14679db3e6bde1276a6cbe7479050a0440c9fa662a625c69d6b",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-multiple-Workout-1795324285885.gpx",
+          "sha256": "250719c6f8184c9eb33ae6b1caaa4a5823dcce912de4cdde790eee78d1286981",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-single-Workout-1795324285883.gpx",
+          "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-zip-Workout-1795324285883.gpx",
+          "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-zip-Workout-1795324285884.gpx",
+          "sha256": "21bb5f8bd285e14679db3e6bde1276a6cbe7479050a0440c9fa662a625c69d6b",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "batch-zip-Workout-1795324285885.gpx",
+          "sha256": "250719c6f8184c9eb33ae6b1caaa4a5823dcce912de4cdde790eee78d1286981",
+          "points": 2,
+          "samples": 3
+        },
+        {
+          "file": "decimal-escaping.gpx",
+          "sha256": "2cee3a7e80f8db9a5b1e8a47385e0364cb68dbd818bf88680151ece3e361699a",
+          "points": 2,
+          "samples": 0
+        },
+        {
+          "file": "event-boundaries.gpx",
+          "sha256": "a058b5769f21baf6b526158518ae780c7f0a98b14dfd19ac2183b103190c4103",
+          "points": 2,
+          "samples": 0
+        },
+        {
+          "file": "gps-gap.gpx",
+          "sha256": "ac8f210bf66e7e854189b122ddb984a4c14abb32a1b0c9e1fb075676e420b0be",
+          "points": 4,
+          "samples": 1
+        },
+        {
+          "file": "gps-only.gpx",
+          "sha256": "66de4e5b76b1ba6bdfc2bcca1facd851d1347e7f6630cae70522637868b1db99",
+          "points": 1,
+          "samples": 0
+        },
+        {
+          "file": "heart-only.gpx",
+          "sha256": "67d320cfc763387ebb91f46725a554e451a45cf4bc281572277cfdad1f25dfe1",
+          "points": 0,
+          "samples": 2
+        },
+        {
+          "file": "legacy.gpx",
+          "sha256": "a100839cee4d827292eefbe44379b7c73f6a0e7ccdfc2ba648bfedf725bcaca9",
+          "points": 1,
+          "samples": 0
+        },
+        {
+          "file": "local-file.gpx",
+          "sha256": "799558f52f06c69641619d98cf4c94acc64056f73b0957f2f683e2bc051dcd07",
+          "points": 1,
+          "samples": 1
+        },
+        {
+          "file": "p051-reconnect-real-chain.gpx",
+          "sha256": "e04031ed3dd3852ce84b5b240ce32b32a86b0d31690915dc74f498e254c04f14",
+          "points": 4,
+          "samples": 1
+        },
+        {
+          "file": "p051-relocation-gap-real-chain.gpx",
+          "sha256": "8dcc4cfd65e399aaaec4e6c887a7d528648916ed95aa5c2cbec06085ed227686",
+          "points": 6,
+          "samples": 0
+        },
+        {
+          "file": "p051-stationary-real-chain.gpx",
+          "sha256": "d8d0475ae9a94ded305fba4a81c56dcba36783c7d298944faf52c0cfaedc4a09",
+          "points": 255,
+          "samples": 255
+        },
+        {
+          "file": "raw-complete.gpx",
+          "sha256": "b087efcf4ff12e63c6cf8d7d7a92a557d14d543de09c007bca4a7b14229e208c",
+          "points": 2,
+          "samples": 4
+        },
+        {
+          "file": "segments.gpx",
+          "sha256": "7e531c038a81a9549e87f1334414fcf90f20cc2863b67522363611bef844b2ca",
+          "points": 6,
+          "samples": 2
+        }
+      ],
+      "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+    },
+    "p0-offline": {
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "debug": {
+        "applicationId": "com.fox.runner.debug",
+        "permissions": [
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "android.permission.ACCESS_NETWORK_STATE",
+          "android.permission.BLUETOOTH",
+          "android.permission.BLUETOOTH_ADMIN",
+          "android.permission.BLUETOOTH_CONNECT",
+          "android.permission.BLUETOOTH_SCAN",
+          "android.permission.FOREGROUND_SERVICE",
+          "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+          "android.permission.FOREGROUND_SERVICE_LOCATION",
+          "android.permission.POST_NOTIFICATIONS",
+          "android.permission.RECEIVE_BOOT_COMPLETED",
+          "android.permission.VIBRATE",
+          "android.permission.WAKE_LOCK",
+          "android.permission.health.WRITE_DISTANCE",
+          "android.permission.health.WRITE_ELEVATION_GAINED",
+          "android.permission.health.WRITE_EXERCISE",
+          "android.permission.health.WRITE_EXERCISE_ROUTE",
+          "android.permission.health.WRITE_SPEED",
+          "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ],
+        "allowBackup": false,
+        "components": {}
+      },
+      "release": {
+        "applicationId": "com.fox.runner",
+        "permissions": [
+          "android.permission.ACCESS_COARSE_LOCATION",
+          "android.permission.ACCESS_FINE_LOCATION",
+          "android.permission.BLUETOOTH",
+          "android.permission.BLUETOOTH_ADMIN",
+          "android.permission.BLUETOOTH_CONNECT",
+          "android.permission.BLUETOOTH_SCAN",
+          "android.permission.FOREGROUND_SERVICE",
+          "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+          "android.permission.FOREGROUND_SERVICE_LOCATION",
+          "android.permission.POST_NOTIFICATIONS",
+          "android.permission.VIBRATE",
+          "android.permission.WAKE_LOCK",
+          "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        ],
+        "allowBackup": false,
+        "components": {
+          "activity": [
+            "de.dennisguse.opentracks.introduction.IntroductionActivity",
+            "de.dennisguse.opentracks.p0.app.P0Activity",
+            "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+            "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+            "de.dennisguse.opentracks.p0.app.P0SettingsActivity",
+            "de.dennisguse.opentracks.p0.map.P06MapActivity"
+          ],
+          "activity-alias": [],
+          "service": [
+            "androidx.appcompat.app.AppLocalesMetadataHolderService",
+            "de.dennisguse.opentracks.services.TrackRecordingService"
+          ],
+          "provider": [
+            "androidx.core.content.FileProvider",
+            "de.dennisguse.opentracks.data.ShareContentProvider"
+          ],
+          "receiver": []
+        }
+      },
+      "offlineMapRuntime": {
+        "passed": true,
+        "engine": "Mapsforge",
+        "version": "0.25.0",
+        "addedRuntimeDependencies": [
+          "org.mapsforge:mapsforge-map-android:0.25.0",
+          "org.mapsforge:mapsforge-themes:0.25.0"
+        ],
+        "mapSourcesAudited": 7,
+        "downloadLayerUsed": false,
+        "networkClientUsed": false
+      }
+    },
+    "native-window-helper": {
+      "effectiveNightQueries": [
+        "Night mode: no",
+        "Night mode: yes"
+      ],
+      "passed": true,
+      "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+      "api": 35,
+      "freshProcesses": 2,
+      "helperSha256": "a41a79b541a0ba9fd2d08c896976d9f8dcb644d7d69b90a72a29009feb29262b",
+      "appInstalled": false,
+      "signingKeyUsed": false
+    },
+    "p04-visual": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 192
+    },
+    "p05-visual": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 48
+    },
+    "p05-metrics": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 8
+    },
+    "p05-settings": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 16
+    },
+    "p05-history": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 32
+    },
+    "p051-gps-ui": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 12
+    },
+    "p06-offline-map": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 16
+    },
+    "p061-real-map": {
+      "passed": true,
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "screenshots": 53
+    }
+  },
+  "nativeScreenshots": 492,
+  "visualReviewComplete": true,
+  "stageAccepted": true,
+  "nativeScreenshotsReviewed": 492,
+  "artifactId": 14741955633,
+  "artifactSha256": "e8619da51c38931bf89acb47499769059c49f2405417d269a6344b281a0d7881",
+  "originalProtectedTestSourcesByteIdentical": true,
+  "p07ReleaseDelivered": false,
+  "nextAction": "Protected fixed-key signing and complete signed native runtime checks; review all 99 signed PNGs before publication. No Stage4.",
+  "debugApk": {
+    "file": "runner-gardenia_v0.1.0-p0.7.0_6780-reproducible-debug.apk",
+    "bytes": 14385360,
+    "sha256": "5fbd998ae497eb7a1854e9cbb44b288f4bde8ecaa33d0be05abc384c28a02896",
+    "applicationId": "com.fox.runner.debug",
+    "versionName": "v0.1.0-p0.7.0",
+    "versionCode": 6780,
+    "formalFixedKeyRelease": false
+  }
+}

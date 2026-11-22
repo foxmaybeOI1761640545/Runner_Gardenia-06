@@ -1,0 +1,3337 @@
+{
+  "passed": true,
+  "plan": {
+    "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+    "stage": 3,
+    "fullRegression": true,
+    "branch": "feature/p0-7-to-p1-0-offline-navigation-clean",
+    "signed": false,
+    "publishing": false,
+    "runId": "44987372985",
+    "versionCode": 6780,
+    "versionName": "v0.1.0-p0.7.0"
+  },
+  "helpers": {
+    "tests": 146,
+    "executed": 146,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "source": "467f2086c0f712e04430382203da2bde0c870acb",
+    "runId": "44987372985"
+  },
+  "jvm": {
+    "tests": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 167,
+    "executed": 167,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "android": {
+    "tests": 471,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "total": 471,
+    "executed": 470,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.EspressoDeleteTrackTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.EspressoEditTrackRecordingTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.EspressoUITest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.ChartValueSeriesTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRateChartHistoryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePathTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.CustomContentProviderUtilsTest",
+        "tests": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.ShareContentProviderTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.TrackSelectionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.UUIDUtilsTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.model.TrackPointTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.ActivityTypeTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.DistanceFormatterTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.SpeedFormatterTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.data.models.StatisticsTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.ExportImportTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P02HomeUiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P051GpsUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0DurabilityTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+        "tests": 13,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0OfflinePolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingDataTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0SensorsTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P061RealMapTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P06GpsOwnershipTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P06MapPersistenceTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P06MapRepositoryTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P06OfflineMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P06RouteReadTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07ForegroundGpsTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07PermissionStateTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.publicapi.DataProviderTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.publicapi.PublicApiTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.GpsStatusTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.PressureSensorUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.UintUtilsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.P07GpsHandoffTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.P07RecoveryPermissionTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.TrackRecordingServiceUITest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest",
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.PreferencesOpenHelperTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.PreferencesUtilsTest",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.share.ShareUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.FileUtilsTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.StringUtilsTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.util.TrackNameUtilsTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "gpsFocused": {
+    "source": "467f2086c0f712e04430382203da2bde0c870acb",
+    "run": "44987372985",
+    "tests": {
+      "tests": 45,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "total": 45,
+      "executed": 45,
+      "missingClasses": [],
+      "missingRequiredTests": [],
+      "suites": [
+        {
+          "name": "de.dennisguse.opentracks.p0.map.P07ForegroundGpsTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.map.P06GpsOwnershipTest",
+          "tests": 5,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+          "tests": 13,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.p0.P0SensorsTest",
+          "tests": 9,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.P07GpsHandoffTest",
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "name": "de.dennisguse.opentracks.services.P07RecoveryPermissionTest",
+          "tests": 1,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ],
+      "failureDetails": [],
+      "passed": true
+    },
+    "fullRegressionRequired": true,
+    "stageAccepted": false
+  },
+  "permissions": {
+    "passed": true,
+    "source": "467f2086c0f712e04430382203da2bde0c870acb",
+    "api": 35,
+    "phases": {
+      "denied": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 1919,
+        "actualGpsPermission": "denied",
+        "screenshotSha256": "f0c00603fcdb4c6797ac172b269323239a55b15172b16befaca570073c9a72f7"
+      },
+      "granted": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2350,
+        "actualGpsPermission": "granted",
+        "screenshotSha256": "967cae80ff64243aba18158caef1e0a719fccd892304dfded457ad8147587ea5"
+      },
+      "recovery-denied": {
+        "tests": 1,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "pid": 2461,
+        "actualGpsPermission": "denied",
+        "actualBluetoothPermission": "granted",
+        "savedWorkoutRetained": true,
+        "p0RecoveryRejected": true
+      }
+    },
+    "visualReviewRequired": true
+  },
+  "delivery": {
+    "passed": true,
+    "source": "467f2086c0f712e04430382203da2bde0c870acb",
+    "checks": {
+      "p0-durability": {
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "database": "p0-durability.db",
+        "p05MetricProbe": true,
+        "p05BatchProbe": true,
+        "forceStopped": true,
+        "timezone": "Asia/Singapore",
+        "phases": {
+          "write": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 2035,
+            "batchCacheState": "staged"
+          },
+          "read": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 2301,
+            "batchCacheState": "cleaned-retained-completed"
+          }
+        }
+      },
+      "p061-real-durability": {
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "privateMapRetained": true,
+        "sourceCopyDeleted": true,
+        "nativeTilesRenderedAfterRestart": true,
+        "airplaneMode": true,
+        "forceStopped": true,
+        "timezone": "Asia/Singapore",
+        "phases": {
+          "write": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 1953
+          },
+          "read": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 2465
+          }
+        },
+        "screenshotSha256": "e664313fd3505b9400a92950a80bbf7cf77d02cada7e4d13fb42ba628b76bd63"
+      },
+      "p06-map-durability": {
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "privateMapRetained": true,
+        "pendingImportCleaned": true,
+        "nativeTilesRenderedAfterRestart": true,
+        "airplaneMode": true,
+        "forceStopped": true,
+        "timezone": "Asia/Singapore",
+        "phases": {
+          "write": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 1979,
+            "partialCopyState": "staged"
+          },
+          "read": {
+            "tests": 1,
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "pid": 2251,
+            "partialCopyState": "cleaned"
+          }
+        },
+        "screenshotSha256": "7b55a0458a5b7288ee30733a6b716bf532d2044eb67263bec02845ca5d094ace"
+      },
+      "p0-gpx": {
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "files": [
+          {
+            "file": "batch-multiple-Workout-1795324285883.gpx",
+            "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-multiple-Workout-1795324285884.gpx",
+            "sha256": "21bb5f8bd285e14679db3e6bde1276a6cbe7479050a0440c9fa662a625c69d6b",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-multiple-Workout-1795324285885.gpx",
+            "sha256": "250719c6f8184c9eb33ae6b1caaa4a5823dcce912de4cdde790eee78d1286981",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-single-Workout-1795324285883.gpx",
+            "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-zip-Workout-1795324285883.gpx",
+            "sha256": "d6f61de43f8fe36cde8e0c649a5c269ebd62f7428ffed6eab10d03af041785a8",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-zip-Workout-1795324285884.gpx",
+            "sha256": "21bb5f8bd285e14679db3e6bde1276a6cbe7479050a0440c9fa662a625c69d6b",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "batch-zip-Workout-1795324285885.gpx",
+            "sha256": "250719c6f8184c9eb33ae6b1caaa4a5823dcce912de4cdde790eee78d1286981",
+            "points": 2,
+            "samples": 3
+          },
+          {
+            "file": "decimal-escaping.gpx",
+            "sha256": "2cee3a7e80f8db9a5b1e8a47385e0364cb68dbd818bf88680151ece3e361699a",
+            "points": 2,
+            "samples": 0
+          },
+          {
+            "file": "event-boundaries.gpx",
+            "sha256": "a058b5769f21baf6b526158518ae780c7f0a98b14dfd19ac2183b103190c4103",
+            "points": 2,
+            "samples": 0
+          },
+          {
+            "file": "gps-gap.gpx",
+            "sha256": "ac8f210bf66e7e854189b122ddb984a4c14abb32a1b0c9e1fb075676e420b0be",
+            "points": 4,
+            "samples": 1
+          },
+          {
+            "file": "gps-only.gpx",
+            "sha256": "66de4e5b76b1ba6bdfc2bcca1facd851d1347e7f6630cae70522637868b1db99",
+            "points": 1,
+            "samples": 0
+          },
+          {
+            "file": "heart-only.gpx",
+            "sha256": "67d320cfc763387ebb91f46725a554e451a45cf4bc281572277cfdad1f25dfe1",
+            "points": 0,
+            "samples": 2
+          },
+          {
+            "file": "legacy.gpx",
+            "sha256": "a100839cee4d827292eefbe44379b7c73f6a0e7ccdfc2ba648bfedf725bcaca9",
+            "points": 1,
+            "samples": 0
+          },
+          {
+            "file": "local-file.gpx",
+            "sha256": "799558f52f06c69641619d98cf4c94acc64056f73b0957f2f683e2bc051dcd07",
+            "points": 1,
+            "samples": 1
+          },
+          {
+            "file": "p051-reconnect-real-chain.gpx",
+            "sha256": "e04031ed3dd3852ce84b5b240ce32b32a86b0d31690915dc74f498e254c04f14",
+            "points": 4,
+            "samples": 1
+          },
+          {
+            "file": "p051-relocation-gap-real-chain.gpx",
+            "sha256": "8dcc4cfd65e399aaaec4e6c887a7d528648916ed95aa5c2cbec06085ed227686",
+            "points": 6,
+            "samples": 0
+          },
+          {
+            "file": "p051-stationary-real-chain.gpx",
+            "sha256": "d8d0475ae9a94ded305fba4a81c56dcba36783c7d298944faf52c0cfaedc4a09",
+            "points": 255,
+            "samples": 255
+          },
+          {
+            "file": "raw-complete.gpx",
+            "sha256": "b087efcf4ff12e63c6cf8d7d7a92a557d14d543de09c007bca4a7b14229e208c",
+            "points": 2,
+            "samples": 4
+          },
+          {
+            "file": "segments.gpx",
+            "sha256": "7e531c038a81a9549e87f1334414fcf90f20cc2863b67522363611bef844b2ca",
+            "points": 6,
+            "samples": 2
+          }
+        ],
+        "schemaSha256": "2e2baac6b81942816e707a26d9d337c47dfc43411b30c2c4854cac238e834969"
+      },
+      "p0-offline": {
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "debug": {
+          "applicationId": "com.fox.runner.debug",
+          "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.ACCESS_NETWORK_STATE",
+            "android.permission.BLUETOOTH",
+            "android.permission.BLUETOOTH_ADMIN",
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.BLUETOOTH_SCAN",
+            "android.permission.FOREGROUND_SERVICE",
+            "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+            "android.permission.FOREGROUND_SERVICE_LOCATION",
+            "android.permission.POST_NOTIFICATIONS",
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            "android.permission.VIBRATE",
+            "android.permission.WAKE_LOCK",
+            "android.permission.health.WRITE_DISTANCE",
+            "android.permission.health.WRITE_ELEVATION_GAINED",
+            "android.permission.health.WRITE_EXERCISE",
+            "android.permission.health.WRITE_EXERCISE_ROUTE",
+            "android.permission.health.WRITE_SPEED",
+            "com.fox.runner.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+          ],
+          "allowBackup": false,
+          "components": {}
+        },
+        "release": {
+          "applicationId": "com.fox.runner",
+          "permissions": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION",
+            "android.permission.BLUETOOTH",
+            "android.permission.BLUETOOTH_ADMIN",
+            "android.permission.BLUETOOTH_CONNECT",
+            "android.permission.BLUETOOTH_SCAN",
+            "android.permission.FOREGROUND_SERVICE",
+            "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+            "android.permission.FOREGROUND_SERVICE_LOCATION",
+            "android.permission.POST_NOTIFICATIONS",
+            "android.permission.VIBRATE",
+            "android.permission.WAKE_LOCK",
+            "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+          ],
+          "allowBackup": false,
+          "components": {
+            "activity": [
+              "de.dennisguse.opentracks.introduction.IntroductionActivity",
+              "de.dennisguse.opentracks.p0.app.P0Activity",
+              "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+              "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+              "de.dennisguse.opentracks.p0.app.P0SettingsActivity",
+              "de.dennisguse.opentracks.p0.map.P06MapActivity"
+            ],
+            "activity-alias": [],
+            "service": [
+              "androidx.appcompat.app.AppLocalesMetadataHolderService",
+              "de.dennisguse.opentracks.services.TrackRecordingService"
+            ],
+            "provider": [
+              "androidx.core.content.FileProvider",
+              "de.dennisguse.opentracks.data.ShareContentProvider"
+            ],
+            "receiver": []
+          }
+        },
+        "offlineMapRuntime": {
+          "passed": true,
+          "engine": "Mapsforge",
+          "version": "0.25.0",
+          "addedRuntimeDependencies": [
+            "org.mapsforge:mapsforge-map-android:0.25.0",
+            "org.mapsforge:mapsforge-themes:0.25.0"
+          ],
+          "mapSourcesAudited": 7,
+          "downloadLayerUsed": false,
+          "networkClientUsed": false
+        }
+      },
+      "native-window-helper": {
+        "effectiveNightQueries": [
+          "Night mode: no",
+          "Night mode: yes"
+        ],
+        "passed": true,
+        "commit": "467f2086c0f712e04430382203da2bde0c870acb",
+        "api": 35,
+        "freshProcesses": 2,
+        "helperSha256": "a41a79b541a0ba9fd2d08c896976d9f8dcb644d7d69b90a72a29009feb29262b",
+        "appInstalled": false,
+        "signingKeyUsed": false
+      },
+      "p04-visual": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 192
+      },
+      "p05-visual": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 48
+      },
+      "p05-metrics": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 8
+      },
+      "p05-settings": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 16
+      },
+      "p05-history": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 32
+      },
+      "p051-gps-ui": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 12
+      },
+      "p06-offline-map": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 16
+      },
+      "p061-real-map": {
+        "passed": true,
+        "source": "467f2086c0f712e04430382203da2bde0c870acb",
+        "screenshots": 53
+      }
+    },
+    "debug": {
+      "applicationId": "com.fox.runner.debug",
+      "versionName": "v0.1.0-p0.7.0",
+      "versionCode": 6780,
+      "variant": "reproducibleDebug",
+      "debuggable": "true",
+      "sha256": "5fbd998ae497eb7a1854e9cbb44b288f4bde8ecaa33d0be05abc384c28a02896"
+    },
+    "screenshots": [
+      {
+        "file": "heart-rate-ui/narrow-dark-distance-chart.png",
+        "sha256": "dff065b9162714ed7d84e244c1b8dbf206c2be3c0cec4a50a2115ea33673cf23"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-history.png",
+        "sha256": "cbb63a14cf3a8112114352bf844c6ef452966fc03dad872ec92566315292e758"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-home.png",
+        "sha256": "7074d6da7a8f285e4f48edc58b1b11648b7f845c741c58eba78106c040c8b665"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-recording-connected.png",
+        "sha256": "9385d1773290dc4c7ec78c8126051ece3ec8367530907b22a49452ff5809f3f4"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-recording-reconnecting.png",
+        "sha256": "9511a932838dbc9a37ae316f071b739e7d47d78c5f3476f4ddd475a12b464124"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-recording-stale.png",
+        "sha256": "fef267c5efc8c0e8c216edbd96b5fae6e035961c4aa7bfa5040a1d60e3a19d16"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-scan-fixture.png",
+        "sha256": "915c5e28e94dd68cb47de79e4bb2f5df718d7a41e160e66a1a23849daf4c8b7f"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-scan.png",
+        "sha256": "a654b44360fc845c99367705c7384e24a8bfd5e037624515457fa50f9812e985"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-settings.png",
+        "sha256": "c7bcf04f970cc4f2df56f3d1fa1d819af025827e9ff2c8ac06eab4baf083d7ff"
+      },
+      {
+        "file": "heart-rate-ui/narrow-dark-time-chart.png",
+        "sha256": "e198d35f35c5d4d51585c34901dbf5aaf99279de11dc0c9bf3b14162647b043c"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-distance-chart.png",
+        "sha256": "cb37a46c5073d1246c36d2bc6f8f17878aabbbdb6775a3f3e668d19e00897ef8"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-history.png",
+        "sha256": "4a92e384a1b8154b0a7a3f211200778a48f360ab19511fe5222c1b4947330d30"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-home.png",
+        "sha256": "a211f364403ca56fe2a696a4fb9f4a03dc0e1b4b5a7992164ef3bf0591192d1b"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-recording-connected.png",
+        "sha256": "2e662a6dad5b3e8f87f1ee799e4c7fd19a70707948ba00dd70cbab9c5c737374"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-recording-reconnecting.png",
+        "sha256": "d620da5ebd840bbe0a11793bfb6fbc5b1a4a2b36378091a8199895de59cb5ce1"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-recording-stale.png",
+        "sha256": "21433d4783b55fdb9211d311ddeb68ab3c31644ed00b2f3d7787be7b2e1291ed"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-scan-fixture.png",
+        "sha256": "14584e02d83638cdd83269b3c6923c7a0f0eac489c6fe9a85935f914eb6c4f37"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-scan.png",
+        "sha256": "c205a23c0d3337f4c974782a8caa0cfd81486c5fb1da9891c06c453a767bc9d7"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-settings.png",
+        "sha256": "3fe92182a400327bf3675553c15be9f2fd9fb99e2b5df27549e5807341efedcb"
+      },
+      {
+        "file": "heart-rate-ui/narrow-light-time-chart.png",
+        "sha256": "c424e5b20bfee45ce916355f19e43de9bd280cc1f44181914c8f2cbacf81e137"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-distance-chart.png",
+        "sha256": "7337e4775dfbd4379cd334e8708f2ee8c6a7c127ab797dd3003eeb4ec2c9bcb4"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-history.png",
+        "sha256": "0e998aa9c98742d6dbe45f2e6ed5724a55240a34a02c99c3cb819f3699f66a5a"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-home.png",
+        "sha256": "bda5c0a4e839f6d8aab14f8b41cf14ccf31bf641e1312a7ed2d8bc1d0ba20ac4"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-recording-connected.png",
+        "sha256": "19e61068cb76c3308bd77ae414117e8b3dd001a19561845952122858f8cbaab6"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-recording-reconnecting.png",
+        "sha256": "d1bcc5317d3537b7278e061f494ee5481075db3336e91106d4e5758777df6f17"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-recording-stale.png",
+        "sha256": "ba830e1bd616695382ead91a2b88a8a6ecd2ccbc0097a6e9b3a288ca3592b48f"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-scan-fixture.png",
+        "sha256": "d6c643bfca4c092f8123aba7a853fabab179123a830073e38618c703ce92b0c2"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-scan.png",
+        "sha256": "8d283048d078c08ab8b7657324c25a994f9e9eb78c3a796ddb486d1d5b93350b"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-settings.png",
+        "sha256": "2bc59fe6e3a133de3a857c794d9f780c902df8b1984d29d8bf8a1cfb477799e8"
+      },
+      {
+        "file": "heart-rate-ui/phone-dark-time-chart.png",
+        "sha256": "1349d8da555a696bd62371d1aecdb8e22b32eb66c46310c831b36c434938c677"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-distance-chart.png",
+        "sha256": "c343316c6e1243cbfa4175a38a42a3d5fb289caca2baca6cfe327ef4303ad98e"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-history.png",
+        "sha256": "f26df8e60963bba2ad37b97026a4d4c80ed450e28639698fe337b93df3b674ea"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-home.png",
+        "sha256": "e1086bc59143403790931d5b50cdc0d300fad9b5fef69ee3c900c9f55f91182f"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-recording-connected.png",
+        "sha256": "2a8d92e46b37887307b64b4e937a9a10ec0f7ee3ad6c064f27aafa03bb67a3db"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-recording-reconnecting.png",
+        "sha256": "6d62a54d5c5d8b78c9eaa965a16ab9f215eee41f09e3edc8a08b549bd2e5ca87"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-recording-stale.png",
+        "sha256": "2af882d6a96c9b1faba7586cda35ee5923ff991176835bbcdb9086e32b6d18ef"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-scan-fixture.png",
+        "sha256": "44560c35ea759f3f9a3d26611f696311faabd1c26ccf2f1046ebbce4657a453e"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-scan.png",
+        "sha256": "bb3e0efa369c118f21cbce0739d13955f24e47962d98878214cea00f4c88b868"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-settings.png",
+        "sha256": "9ee7eea55163c489a727ea2db5102205f5232f74459fe06063eb61ce80d0ec43"
+      },
+      {
+        "file": "heart-rate-ui/phone-light-time-chart.png",
+        "sha256": "b8befb6618f63848145206c6fa35150c29eaa232f040b66e6b4d340f159b6349"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-acquiring.png",
+        "sha256": "2795f61b9932162a700196736e12c3226c3eba9cb201f1d1e8cebd8b2216f4cd"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-gps-lost.png",
+        "sha256": "4e5881b6bdcc69583a431a6418115cc27db7aa9dc090d4843a0ad7133de18edb"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-gps-ready.png",
+        "sha256": "6fab32f72904ad3a862139d60f668f9aef162f132335743cde6717d9d8c41bc7"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-heart-connected.png",
+        "sha256": "d2d53f1be25c3bf2eb4e19383bff42394e7d2f089555723dbf2d0e53758f61dd"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-heart-disconnected.png",
+        "sha256": "b6b980752648f628a3fc9eb042a0ceea6d4eb97fee42b769db6624b3e41fe044"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-idle.png",
+        "sha256": "ca8492330738b48770f5cf2e7de3cd1166380e7685f21d6d1a04bef46d44dbb0"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-paused.png",
+        "sha256": "31efc80b9dd39f7d4d5fb27f4291ae532ae88010e7054bbd1bf71f01e665f8e4"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-recording.png",
+        "sha256": "91bbd5dd9e4ed1a1adfb92bbed31ec44077232c7b0a856db8366c859e3eeb5ea"
+      },
+      {
+        "file": "p0-ui/p02-home-large-dark-resumed.png",
+        "sha256": "bb4af1c03e8419224182c0e936a18ef9ca40ac5d9bff0cc0a7713c09d05456b2"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-acquiring.png",
+        "sha256": "1fa2f77e939b99a190fc51061c4be9208e04f1a12735749a26e2800c34f4caa7"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-gps-lost.png",
+        "sha256": "547700d92e9d611cefe04f64ce6788a337ce21939de4444b22bc01d9b9cec5fb"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-gps-ready.png",
+        "sha256": "c81c2bcfc8b79f8debd131fe0e696e488fa8f7c7eda57e72bccdd609b0443704"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-heart-connected.png",
+        "sha256": "01882c65b2165bb6ff785e0e19f9ab528fcf10e356eb9d346c066b48f1a0cf86"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-heart-disconnected.png",
+        "sha256": "ed22a1506b8f2cc8405262aed5a3fdcad8fb12bc8e4228dbcdf2571a5f827e2e"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-idle.png",
+        "sha256": "4c655d09aadac98edda3689f7d358313f23ff5c2e8b26eef6e775d20197108e1"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-paused.png",
+        "sha256": "ebfcfd4e4a9a4eab06f78b92b8939b9beb6535b9f6b5189974e7b7d3514823ef"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-recording.png",
+        "sha256": "d69384e73228aa846ef11db9cf135e9680cbaa8859164aba47d46b4d129ff015"
+      },
+      {
+        "file": "p0-ui/p02-home-large-light-resumed.png",
+        "sha256": "a541a7428fb4573edc37a78b1660da7453c4848d2a17e661d5047b2af92f2bcc"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-acquiring.png",
+        "sha256": "160bf0ee577697ffa5d1c753bfc0c10e7b1b38cc265310177a0b19f3d8eb1f91"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-gps-lost.png",
+        "sha256": "66335d405b7dd09bb8a1f09e83d764f0b54596a572e9dd1a2ab62bb3199a0618"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-gps-ready.png",
+        "sha256": "3b179fd04e49e0e82054efabbfdad0e956630a4d5bb2503a202dfd73a1a75ce2"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-heart-connected.png",
+        "sha256": "e7bd1bfa69528e335e984511929fbc6d8076f5da8b9385d0deac1b0cfe9b0267"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-heart-disconnected.png",
+        "sha256": "dccfb4ca0a4671376cf069902bd7a05da00aefc2b1c07f2c4cee2b2bb8980a51"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-idle.png",
+        "sha256": "57fdfd9b4082082d5d43ecee6da5014842aea5dbbf46a3cc51829180f3abe06c"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-paused.png",
+        "sha256": "d7a29debc1ed039d85c2f11817eb9458908f65c3f4f8268c521d1f95e88c98d2"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-recording.png",
+        "sha256": "e384081dd9c50418343338d9f48357ab6cce2cba179a745e632eafc2fd88fcdb"
+      },
+      {
+        "file": "p0-ui/p02-home-small-dark-resumed.png",
+        "sha256": "fcd3a6bf25e0c706993bcb8fdd5d0bd505dde717ee86e82231916a88e50a2cef"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-acquiring.png",
+        "sha256": "02390cc78486984fe561a240ca49b8aec424c3ad146b1241bfb76f37af087bd7"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-gps-lost.png",
+        "sha256": "4a6c549ba248f8f4a47428d56546ee24fde5178aa9da8568c2367bf7b98a2ef4"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-gps-ready.png",
+        "sha256": "3cbbe1b71d8836c71c7ea915353331215010a1c348bf699f7ecf79466f85d0f2"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-heart-connected.png",
+        "sha256": "5c2dbe0a81938240c0c2c8f433eb11815a8ee09f06f2aa0d31588c0cdda2ae19"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-heart-disconnected.png",
+        "sha256": "21ab4a2efa6a7ffb91b768f3dac72053419c5d863a1b3a1e2713ed1be889e5bb"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-idle.png",
+        "sha256": "9f6f03b5557fc4ed571f23f656b49342a460739f0592434ac5f420790dcaf078"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-paused.png",
+        "sha256": "0b473a396fee77985dd80fc46782ce90832d8328b2f47d54a98d5cf656e1f1b3"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-recording.png",
+        "sha256": "aa0a7aaccafc207527182515fe1fb134d910055c3ba078d2f7ffbc33dafd30ea"
+      },
+      {
+        "file": "p0-ui/p02-home-small-light-resumed.png",
+        "sha256": "ca21a2f728f8f9ba1a00bda4ba232debe5038dcc373eb40fab93c42ee9144e55"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-connected-no-sample.png",
+        "sha256": "47170b745e79fd325d6e59674a484e1bd8a3661aa66bb76c60af3ba55b403614"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-disconnected.png",
+        "sha256": "31b4b59c204c31c55b0c633c262b6d0d9924e6dc4ba1f8f9ed22f2e4a6f744f9"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-finished.png",
+        "sha256": "c8cf810a7b4d77da5a25358ce9c28400c8790325109d2f8e133775f7cff6170a"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-gps-fixed.png",
+        "sha256": "b200e5bb3ebf386a0b03f713c635d05e36281952961ee7d552ad4182df30c018"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-gps-searching.png",
+        "sha256": "82a5bd71063b97e9c5afaa4873c2887a78ab3d50f2e83772aa375f23d3dca645"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-idle.png",
+        "sha256": "478c87e5cc1a81b103696cd53cfbd956d36b985f008493bd036ffe06c3c97e49"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-paused.png",
+        "sha256": "78672a3a89433d263940e84ee20266981c4e9ecd282043242994f6b441d23551"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-360x800-recording.png",
+        "sha256": "c0a17c0528c65678ba97e1eda501f216eaf8d479aba647bf836118e15c22a5a7"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-connected-no-sample.png",
+        "sha256": "275f102a657ebe59e6ecc04c7f2c6d784accc94d1449ecb9c2d074b81de65d62"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-disconnected.png",
+        "sha256": "894ae0b6749be953ae0cbeca47a23f73d710dbd77b2ff2ce848034fa51abf5d1"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-finished.png",
+        "sha256": "498f9b91bd00c73b09dc1f2e4892d9951c829d10ec9e4cce0d38df84d1f25dea"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-gps-fixed.png",
+        "sha256": "3233d063932b284e99ef64ecad9cf873d649aa4939f509e1e0ff6d77d583a9fa"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-gps-searching.png",
+        "sha256": "53421b183b6de48230c3919635d323764ae1a91605b7734d624355c4f1fc10e0"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-idle.png",
+        "sha256": "891bc11a37a2ce42e1564bb3c56cd0dcabd6345572b05653cb3c6901318a84a4"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-paused.png",
+        "sha256": "7f4e56259a66a76ad292055e70faea8b401ac33266f8727d9a5a0553b9108032"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-390x844-recording.png",
+        "sha256": "e12135459618f6599fac340b9e56ee4aaa0fee2e7a0507ea16c84a8cbfc076a4"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-connected-no-sample.png",
+        "sha256": "8242a27072a1635bcab3500e214ef4594b95f421470a098b57805fb8ae548ed1"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-disconnected.png",
+        "sha256": "4cb8977d7d561b865eba60d22c36b3b1d689ed6f86284238e76c09047f167f9c"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-finished.png",
+        "sha256": "6ccf9589f452df4fc41980ef7e93b73cae00c4d69c4c6c075fbd148b5a988776"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-gps-fixed.png",
+        "sha256": "e6b126f40199dee5c059f8895f9443f407611dbb2ebcc99d3d3d909961f758d6"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-gps-searching.png",
+        "sha256": "5ab9714399434568357755ebdc0131a1cb239f29aecd133e0368fb09ce5da01e"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-idle.png",
+        "sha256": "54dcc0026f858263707349d0c626ebdb0976e65abcb74df4ef2639d8d9111760"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-paused.png",
+        "sha256": "8d2c77ef6a82667a274ad9949635647687e90b7b59a64780a955896da14325cd"
+      },
+      {
+        "file": "p04-visual/p04-explorer-dark-412x915-recording.png",
+        "sha256": "5d475c97d3400b941bf238a313f1858b122ceca462f17723ef583dd350a5b481"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-connected-no-sample.png",
+        "sha256": "46d222cfd495785e58dbc28e0ec6e3db90a1353810048d28d19e6a554dba4052"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-disconnected.png",
+        "sha256": "41978ea6ccf365316395bc920de0e415b1c8cba705993c289f68c49adad3b5e8"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-finished.png",
+        "sha256": "6510433a74d77374ce5c754402d9d62092849b64740e6ee56731b2f28dc8ffdd"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-gps-fixed.png",
+        "sha256": "d69c8d662ab5d63a0e8aa33f61ab05e15951065408ec8e26f11ace442652e5ed"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-gps-searching.png",
+        "sha256": "6856ea6dd987f1709de166397ecc24dbd05b3054bf3a8e019680595c26ede220"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-idle.png",
+        "sha256": "4296de75b757db4c5d564068e9a2e41dd51e011cd325e58ea678003729c3d219"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-paused.png",
+        "sha256": "06de118a5fa72fa1ecf67d72b5589a0e49c9fddfea1de20580f5a95efc300bfb"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-360x800-recording.png",
+        "sha256": "458dc2353d2fa666268173e3867a03e91c5000924e52d0a5a7410294d6bd8877"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-connected-no-sample.png",
+        "sha256": "59ccc9f321fde4752b8e9a7c41a769769eafbc7ca66a6509133b7d7d8aa18720"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-disconnected.png",
+        "sha256": "94519349d12b5e7467308bdfe8942e60dcfbe28c960d099fe62d606409c95baf"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-finished.png",
+        "sha256": "fd6cdd0f98a6bfeca547d916892deaab9481c5ba920f312f1d6af90cf62a0e52"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-gps-fixed.png",
+        "sha256": "658286084ca57c9b888d282bd6f59608710a9f02b2ec15fdb8c7368f92cb39c8"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-gps-searching.png",
+        "sha256": "87aa7369577e05287f454e4a5933e60a716c4bcc5dd2fdca0764a553bb86b71d"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-idle.png",
+        "sha256": "bada59067a206069b72096164c6aa8728ddb9d2db8887b8b24b46e226553caf6"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-paused.png",
+        "sha256": "3d743402ef66fb800a3529d02b431f18583f47f67611ae32a2a95b08662b4e64"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-390x844-recording.png",
+        "sha256": "c89d180305ffeb25c8b01defdcf18c272219fc91c9ea5881e37993aef15d9dc8"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-connected-no-sample.png",
+        "sha256": "ca0cd9043a0c5f09d0df0fe6f54fa1cbe328226472297f526f2aa4ea77137d85"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-disconnected.png",
+        "sha256": "5c5e009cd8e0208732bd96b4aeb8d588c8c46acd33cc2503e18cf2f4fe565c93"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-finished.png",
+        "sha256": "8d55487c7eca29dfacea5f5acc7608888ef14805638415f14aee93ec034a2853"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-gps-fixed.png",
+        "sha256": "d2387300c38f69e6d7cf012fc3253f8d71a1cce5cb6ef7282f631a6d97f0047c"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-gps-searching.png",
+        "sha256": "93dbc113ddc1ea08b3707327f0d94d5b566403eac1472b4d0513223b5057da88"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-idle.png",
+        "sha256": "baaf12d86f42131185aacc1c59bde07297790070e52e654d9993fb64515a5818"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-paused.png",
+        "sha256": "ceb2e06948abc598cd1e220c165b19083b6d4a6cd97a98b0c92d30ffe86c8657"
+      },
+      {
+        "file": "p04-visual/p04-explorer-light-412x915-recording.png",
+        "sha256": "ac01b8e396c8f9c9e639ec44d02c5b6960c3d3eefe1c6aaa6456108b2828d4cd"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-connected-no-sample.png",
+        "sha256": "8979edd0d5ef4a05a6cc3ff86d81b237588985225b033646e4b3b4df5f94127a"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-disconnected.png",
+        "sha256": "d14ac90e8aeb03c23e8e621cafbcf8a9f54d8831d77a5a83de63ef16a791aea2"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-finished.png",
+        "sha256": "364bb9fd5d45ba612db2f061eb6380a2e14b25b17f6b4caae26c45da2b0bc86c"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-gps-fixed.png",
+        "sha256": "46fa0858a2f81481123448e1a74dc17bc09461df46cf7c02c3ae99ef39890709"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-gps-searching.png",
+        "sha256": "886d64ec4e3568d730eb1e030694f35cfac44b5071987c4b380839001dd22295"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-idle.png",
+        "sha256": "164936edfd6d5f4003f8c37cde9d0c5976e06e9e836e436167530962fc408b68"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-paused.png",
+        "sha256": "6f4c63ef27f5770a8b19246210822b3c4828b2afb93d8c56d1efda84e71926a5"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-360x800-recording.png",
+        "sha256": "38289d61f31ef82d292807651de613edbe5e2667b4a75af8ed9b086b29cd671a"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-connected-no-sample.png",
+        "sha256": "444adec7130064e770e343844c980d0d8da8b23b370318d63760685778b03fbe"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-disconnected.png",
+        "sha256": "f2edd685c4f6ed2ac4ca9f28a5467c06c906909496b535e2f3d3f81748d0750f"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-finished.png",
+        "sha256": "ac841d247575892a07c37dfaf415b30480a42b6e5edd513bdbbc15762abb0a9c"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-gps-fixed.png",
+        "sha256": "c7300cd05d15309cfc213e39218d5a41063adc360a5ad279817acca2ad69a5d6"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-gps-searching.png",
+        "sha256": "a6dd7c5613a49ff4999d6d9cdaefae7a55f7850f7f1be8b8b996cf83f3b15310"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-idle.png",
+        "sha256": "adc6166e2dfee99e9dc3eccdb1c788877d56558668345c708dfae3b3defa70cb"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-paused.png",
+        "sha256": "e2289fca36143bda58ec400343dc8432c183e66ff4e875fc72dc5535a973b8fd"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-390x844-recording.png",
+        "sha256": "49dce814e3fc4b49a66d1d343d882f4debad0ef3a141c488088caf5b13be5ce3"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-connected-no-sample.png",
+        "sha256": "b9a986a523e1858324fe13da35fa7c03a62839d2cbaf678006a48f54fcb2faf1"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-disconnected.png",
+        "sha256": "e193c8853076ea7a4f95982d9fa056bd67994aa918f19e6287e3a8db072bc8c8"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-finished.png",
+        "sha256": "c591f2803c20b037362ec91869d20979bf5a26f87fd6056d25cededaed3c5278"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-gps-fixed.png",
+        "sha256": "2a094bf1685ffd927f98c8e8b7a1402d44caeaf489ebb2d5f1af02bd73629741"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-gps-searching.png",
+        "sha256": "a64e563a10c05aee0a1c7a8628b75414bf3c7448ad300a3af57a653c6ac2cff2"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-idle.png",
+        "sha256": "53693d3211b239d7e678b2b1b8a08c746ee2208879fab2b606fe0567b92dd92a"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-paused.png",
+        "sha256": "3f4bd1a1a7ab711de0631d891901f74673dd5bd0d409fb1b7d28e68cca2c13bd"
+      },
+      {
+        "file": "p04-visual/p04-neon-dark-412x915-recording.png",
+        "sha256": "baed656263edece1c3a9f6d5430c9ed408b7d2aa13d7cb9763b43e48423639c6"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-connected-no-sample.png",
+        "sha256": "e70fbe2e0cecc5fc1e5c29936a8cf87c9eddc4f6ddd1b33ae55351e5bcfff42d"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-disconnected.png",
+        "sha256": "f3a66d96b840e4df2509feab1a4ae07cb546085674b04c7811f29a1d3cba1ec0"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-finished.png",
+        "sha256": "28b68e05afef78a7df09be55993ae671340c93b1e74fded1fea46260f580af06"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-gps-fixed.png",
+        "sha256": "2208bc7fdaf66a3c6c49f665f3bbfbfe7f8c8706e22544210fa1a0a8d0824451"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-gps-searching.png",
+        "sha256": "b35b59201e44054bc5c651d122bbfa3e4eaa444d4e1de920f44cd37b727434fc"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-idle.png",
+        "sha256": "58eb006bbcbce54829fbf6cad5de970ac37d99e6c78c65227f963db14e0bd0c9"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-paused.png",
+        "sha256": "3edfd016c3c28c3b3857552333d7da4b324758a1adfd2b8b2399c39912ddb41c"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-360x800-recording.png",
+        "sha256": "957b2d324c375ef821431184dc75f40cff323cf34902a30121ba82f82142efa5"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-connected-no-sample.png",
+        "sha256": "75f633d0ce692f8a2974730b865a11d7a7f2374ad38abe68698e335cd83ab2e5"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-disconnected.png",
+        "sha256": "450c9f590900d725d9c3c8538c3c9647fb29c5a677cc6ef10044c05f81e5c82c"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-finished.png",
+        "sha256": "2c5f6b7fcb1a874c742275d3f6009ce50cc322899d6a81833d4a124306cfa63a"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-gps-fixed.png",
+        "sha256": "2e77df9e96d02217601f8bcb6611f0f7ed6d548753a62666e8313a755fde8c7e"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-gps-searching.png",
+        "sha256": "9c8482c3b9af4f11cb22e0bfda7c24fd45b77e9305dffb0d51052ffa6493e247"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-idle.png",
+        "sha256": "e7f5897af176e384dd4e46806f45928587ef70b14fe08c834799305b0753fc8c"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-paused.png",
+        "sha256": "ef8be580f97b40dd0b782a0d9c79fe56ae3c9d2720a87be452475dad42d989d1"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-390x844-recording.png",
+        "sha256": "f33f4d8d519fe963e1269e4572de99434a7d22b33a01d696c7988b5bca110ac1"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-connected-no-sample.png",
+        "sha256": "fc9cc58eba037f424e7e04862554f346f2808200abe3ecf484336c9f1ffd49d4"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-disconnected.png",
+        "sha256": "b4d98f0d5121d53093fc7be6099a74db4bcb48eace567b2291cb7e77075de65f"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-finished.png",
+        "sha256": "057995f91d4d0e7197c208f3089a8f3ead284709e008500b4bc1e7c98f78e4a8"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-gps-fixed.png",
+        "sha256": "7efb0ca8603c7d014add6680f595eac4ca14d32b352a32cf5ab52222a6b4cd36"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-gps-searching.png",
+        "sha256": "7a4affda10b736acd8bb022098bf14ab2af825c9bec2aef8f583f127391201c8"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-idle.png",
+        "sha256": "818a73e0007caf96e078e7670a0b2c6afc4afe50cf3a7cbf9261c12cc1a7aa2d"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-paused.png",
+        "sha256": "6c2d9d93acf088d577a491d37de163a138a067636aabba17503202935775c76a"
+      },
+      {
+        "file": "p04-visual/p04-neon-light-412x915-recording.png",
+        "sha256": "05f7f2b7ef8b4e61503c0036ccfccf6d0f66db4068f66ccdfef485ed0adbe565"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-connected-no-sample.png",
+        "sha256": "8fbd97e9cffca610dd498f05a8f6bf77969f2fe02f7b00b05a8a9bee495a8bbe"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-disconnected.png",
+        "sha256": "8b4d4b4d819eee96b383814a9a973454a6af078fcecf8b4f9827dc707699ee36"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-finished.png",
+        "sha256": "14bebd86b49d6f1bbd4ed5fe6350426079ec73bcd44e952e745d73d1a646bcc6"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-gps-fixed.png",
+        "sha256": "40259320dd646003c1661cc1a302ead3c76ad513d761156f0e495d5ee7b5ab1c"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-gps-searching.png",
+        "sha256": "ef64511a2d3f98977042b33fda0adea6502887014f83a41101841709da5fe881"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-idle.png",
+        "sha256": "64947d69a9fcb3dc90d35a70c3f0304613e8843c079af20e5ed9a9b3e97b8704"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-paused.png",
+        "sha256": "41cb89839a075f485a1074119b91243307a3d0a540d9e4f064909adf2fa58f3e"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-360x800-recording.png",
+        "sha256": "6fb721f45bb58d8fe2b07085f65e487825ec908068c8c4ad0fbc044eff0bc149"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-connected-no-sample.png",
+        "sha256": "77878ff82d0297e2abd43d71326c5771ee06a225f166e3f9f8d6d97eeef7f8cd"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-disconnected.png",
+        "sha256": "e221a657c4d0e4ff88f9baf10758f630aa9d6eee4d12f1ce37977d476c8d30ad"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-finished.png",
+        "sha256": "066c874cef6dd40795ef195c47bb517e763b5abc74c295f28c85d2727e084528"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-gps-fixed.png",
+        "sha256": "227854cbbf12649c7f6bcd41cfe8f3f6273e96f56622ac9a18627d17d496333e"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-gps-searching.png",
+        "sha256": "f85845ff751efe7a75b12d8a5fcae815ef56d4dc84ff4b9095c18f6e83dab414"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-idle.png",
+        "sha256": "c13f63cdba72e13f299f32838b1ff6c55d089c9b5d914f5de5b2cc0dc886a838"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-paused.png",
+        "sha256": "088edfecc625d190f3332de61f0220cbe8fc5590922cd50c99fc17f66dbacb1d"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-390x844-recording.png",
+        "sha256": "bf312133e9b809806a58e97880ea7efed9714793dab20fdd77b360e537088afb"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-connected-no-sample.png",
+        "sha256": "3229ea7296f0bd01c2c615f21fb1ae35a958f8a17e2b7ff1930c2521479a3ef1"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-disconnected.png",
+        "sha256": "494496e1d5fcdc3bde7875b1c794c8e083103c4c6fde5667de3a3b0f65703df2"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-finished.png",
+        "sha256": "b76f3cb04902c382a0c1cca9a737f35536be0040085aeded795657eedf9aa779"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-gps-fixed.png",
+        "sha256": "b89dc275baafedeadb8ec68ae0bbc25b55996e36c271d466e33b3c78eee23425"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-gps-searching.png",
+        "sha256": "9bf8ea80c40be03aef86e36bd8a074e2575283f010a3d3542f7b68ca48986346"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-idle.png",
+        "sha256": "46611ac2076e354ef977a3c7c5f453b9f7ca1e13a217940c5b0e3c35cd3b65db"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-paused.png",
+        "sha256": "5626ba7e30b7375d0abfa9efa825d91d480db8468ee8f29bffaef5569202b7c6"
+      },
+      {
+        "file": "p04-visual/p04-precision-dark-412x915-recording.png",
+        "sha256": "a027006f62e79b8002e88387c578fb9cdea17aca24dbafc51b49f6fc4cfc9b4d"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-connected-no-sample.png",
+        "sha256": "9c135154bed814954d8b3bd7ee3846aba82e925c9f63446b7b90142595d2b7cb"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-disconnected.png",
+        "sha256": "d913d9005ba254b2f848f9ca45b4aa37d8b0426d57661fc566ae929c60877c4f"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-finished.png",
+        "sha256": "d4a0b46eb5fa6e2e5e8eb684d2b82767c8d31ea7337d4353119904d9902cbecb"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-gps-fixed.png",
+        "sha256": "8ed19ff5b16f3a0d1618e39f1936627a41139a20521e6bd8bbcc02e027f1d9ff"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-gps-searching.png",
+        "sha256": "c011e4a8e21b41dd088d5b0fe1fd5a0ed74234773dea451a105535f19a638f29"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-idle.png",
+        "sha256": "3b2030727c8e12d51bece682c04ee8f4ef4ffaa6875dcde1bd7b94e2ac094405"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-paused.png",
+        "sha256": "e19d01d1d395033c570c85b74bf79c16fd711cba2fd88cd7bb3a05b6e0468fb4"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-360x800-recording.png",
+        "sha256": "e07c8b36e049a35c0b2f421fc37e669b7fe20a80bf62269eefec07becbadd3cb"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-connected-no-sample.png",
+        "sha256": "163fe20297b27140bcec5ee4f0b305844c8a5ef6f99fe1bd1f8cb74f68b846ca"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-disconnected.png",
+        "sha256": "e589174f6963d5e84600c79f1d03161094804e1ed4992045c7697110ecde1e2e"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-finished.png",
+        "sha256": "39b29a34d7723b04e140874171d1d0cfece7339ae12a527f3df5a08dab88d310"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-gps-fixed.png",
+        "sha256": "ddf2e98c5cb17a5ec3fe4dec5d1d607b5156bbc535b3bfcf54ab4eb58907118a"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-gps-searching.png",
+        "sha256": "b2bcbe8606e85fd356b654fe84f91d0bfd1ff8e3c13f9fc9640ccbd0c4cf6f49"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-idle.png",
+        "sha256": "ba0cdb91a5070cf680e6f85f23170669688f3f15ab4106840fbed0fdc358fe34"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-paused.png",
+        "sha256": "2a12d44e94c363213385905eec87a82ed135d94ecdbcc0896f04a80a55d8233b"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-390x844-recording.png",
+        "sha256": "cf9bb79cf95808d3598c8617114e42389f0914ff18007184b4b5ef232c89ca07"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-connected-no-sample.png",
+        "sha256": "cf8e3eae37819e4cc907536164d6af2e0e2682c09cee6be900297af8b0fe187b"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-disconnected.png",
+        "sha256": "79fe0f6558a297a1b2669d580b1786bfa2d70561666486686d27e4854157e042"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-finished.png",
+        "sha256": "da074f3b0652cb7a4a4d5e7f862935b73861a497538a1c96797bf50ba6741f98"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-gps-fixed.png",
+        "sha256": "77c7d78c0cefc7fb5f5e676c05eb0a0c09e104f7498f492d787664c2e3bf284a"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-gps-searching.png",
+        "sha256": "42bff36757e4b388d5140d29f26811c4ab2c394c54d19b2851f9f54caa1bd105"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-idle.png",
+        "sha256": "7ba6124af99a950854368f0aac8325ba2acee93713115e3e97a37e6b28dcaf49"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-paused.png",
+        "sha256": "768375e043c0c77d06a903ce7567b8af6778b572acd99b486f2304a044e9cbdf"
+      },
+      {
+        "file": "p04-visual/p04-precision-light-412x915-recording.png",
+        "sha256": "f7b0c873bbf1765e6e842ff3d34713189670dbf3c39777aa9e71ae8c90fd528b"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-connected-no-sample.png",
+        "sha256": "3418e66f04058f1b11c6225294f686d297a73ede15725b58e05bb34519e25e4d"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-disconnected.png",
+        "sha256": "8d86ba5257e6527ec2cee6dce505af07f64a4f6294963a1ece57b15e2844c1e0"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-finished.png",
+        "sha256": "ca067b1b6faea9acbd03cd00999a2d54231cf33391748b664f156afae635c132"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-gps-fixed.png",
+        "sha256": "72f75dbd340354df22ede1bf5e76051286505801d3f0911dea5a76aa8e1d59c7"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-gps-searching.png",
+        "sha256": "f46c82528446e7a3606e1ce752591c89aa70e948b36bcd5fef60443448ecaa8d"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-idle.png",
+        "sha256": "451401807bb493306fefbee8125923bb571f5ae74ea4c3dd19d768dfb3444c70"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-paused.png",
+        "sha256": "74edb0f4cbec6960b3a4abf75ba951c0d1dec785313b82ee830f1c1217e50474"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-360x800-recording.png",
+        "sha256": "23e1fe9900198439f6ee4055e68d0157edee6bb0525c2137a04ad93b55f579e9"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-connected-no-sample.png",
+        "sha256": "93bab6f48f2621a76af7c5ad58a5203548d68c4f8ffcfb2aff7ec0440498fe1e"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-disconnected.png",
+        "sha256": "4af2ec0972ce71aafd67efe32fbd180c5e25e9780eed40172d7286da2584e07f"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-finished.png",
+        "sha256": "b1df6a7a7fc3479f023b8557883434c0ded4e0c09d3e7e1eed9e7f18e40faba5"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-gps-fixed.png",
+        "sha256": "4cf11a7500def1f035e75a6ad90eaddaebcf9b678740f3b18e9dfbd771b7dcd2"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-gps-searching.png",
+        "sha256": "b0fab88d201b1543379058a303f8b1f736a4a18acbde16800ec0d9eb2df65c2e"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-idle.png",
+        "sha256": "6d9bd1fd207d986c80c74d58035ba84a62f5644c6c8315d40cb090532dd346bb"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-paused.png",
+        "sha256": "d6e4279c68acf9df85c022e49793da343f72646d90a768fd684c31cb80b25aaa"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-390x844-recording.png",
+        "sha256": "f6b9c9f33f5d499fc806bc554e15353fb2c80b63f4633fe759341e5e251fed87"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-connected-no-sample.png",
+        "sha256": "185e211b0d9f3c18c392eee8af70e98236230a9855828af686465868f40c7441"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-disconnected.png",
+        "sha256": "4d763d0ddecb3c6cb2216a1e7dbc7df97263fbc63fb671b16552d55f797fd9a0"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-finished.png",
+        "sha256": "dd9f97f526961417aab8f457736bfe4b830c6cf6af81bd94ff81d6c8b5315a14"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-gps-fixed.png",
+        "sha256": "0ccf44dee5b306e3e1882e4895e5e9568f0f532159d8e69024cbfce1d3bd9ede"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-gps-searching.png",
+        "sha256": "f19dbce63441e097cbfc18587f64d65e3aed32d39bac1c98f8c6cf5ba2a5a2f0"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-idle.png",
+        "sha256": "722613de8c1c05e1d0fadd5a09bc0df89990a9bffab2dd957978f60639a052ef"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-paused.png",
+        "sha256": "e9f6ddaab1b435ad3728b631e3c7ed14ab9afdba08a606089db55934b04a63e2"
+      },
+      {
+        "file": "p04-visual/p04-quiet-dark-412x915-recording.png",
+        "sha256": "9e5881e0ff263f93027577254c33f2f3a4fce9b4fd024624e6adb0620676c731"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-connected-no-sample.png",
+        "sha256": "6614393ad85581d1ed7abab80e95b03b4ccac99e8e16b409974732b592f952ee"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-disconnected.png",
+        "sha256": "8553bb76ec38340302ba23bdced621811cf04662863f60caa3a3be674005d160"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-finished.png",
+        "sha256": "6322e791de4b9c96c8db1ba55387a6c7cc584d2a1eae488822c45a45a1a15ba0"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-gps-fixed.png",
+        "sha256": "4e7691f679a4531aa2c075b5c77cca13c654dbd37fe14b9ae23abc2f0ac734b7"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-gps-searching.png",
+        "sha256": "b6d80d6f895dc3f72b061cf3e91992142b31eb48fc8bf3e0790bda4ac7e9eadb"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-idle.png",
+        "sha256": "73e54aa595795c509441b7d9da7db5dc923c2175636ad2de7469c1c8ca27b462"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-paused.png",
+        "sha256": "7cef7a4eb5aad975adf15c8043d077376bbc3183a714febead0544bb63221ea7"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-360x800-recording.png",
+        "sha256": "a4f67cfe0bbcce2e7b7e4cbd9bb40acfa1d15179056961c16a4aad4690dd10f7"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-connected-no-sample.png",
+        "sha256": "c75c4e1489efc325d8adbb2196544000bd29da60e2a58dcd7f2c778f323171b2"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-disconnected.png",
+        "sha256": "c554e3c981154a954d28dfd6cc143ed85894f703abb70e44e214b675fa176c1a"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-finished.png",
+        "sha256": "3d5af34c0b630fb1adb588ace820be3b719acea9e354932492f58e5f0728241b"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-gps-fixed.png",
+        "sha256": "1f606179aeaf113a3d7313f66e9d77a2543c9544e07233f9e549b073994e2cdd"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-gps-searching.png",
+        "sha256": "829afcb579936b5deec77aa497e715acef08f57f20b980943fdb0ae753f634b4"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-idle.png",
+        "sha256": "39b59a265da460efae1fc767418e9b640a35dc1e5fe018ff22fe7667d9a70988"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-paused.png",
+        "sha256": "67c7361bd36b378505c0e2727aff0ee0635d764c8c9fbee1cc12fd52e13417f5"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-390x844-recording.png",
+        "sha256": "2455dd8d8e38238c3b2c06f14ec2b7645365861a3968d7b726548390c69c3687"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-connected-no-sample.png",
+        "sha256": "cc5e16f7278f7c820ae985b533aad37bf3b01efc4d546ccb697c4525619ed948"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-disconnected.png",
+        "sha256": "37ad48606d55ca6750dd26881eaf898fc99a488e80efcd07943ec89937b88272"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-finished.png",
+        "sha256": "d16bfe8ca18a6a7028b69b1ead314c665303a8826d6c0ec0cece9c73dd83a206"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-gps-fixed.png",
+        "sha256": "dc243b89611467faa099aa7ae2ebff2f15071c5b9bd5e5cc48fc96c8b6261200"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-gps-searching.png",
+        "sha256": "35db56ba59d22a3f88ef3d9eb4a2368fa863a65a7b25048c0414fa30346d1158"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-idle.png",
+        "sha256": "f0e9f94180110f55da89a1a2f3a99458ad24d7c3e6cf02dcdba131f47c30cffe"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-paused.png",
+        "sha256": "9ca503663fbda77405dfac50700affb3c8d8ad2baedbec7674b3a70eec4730e8"
+      },
+      {
+        "file": "p04-visual/p04-quiet-light-412x915-recording.png",
+        "sha256": "434358ef16efa5814c8893e91fd84da1f07c20e5d75a5787f57c60ab2b81e64c"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-dark-delete-native.png",
+        "sha256": "8123551177379a766de7c44edfa3c08e1385ad9b88f8f0f493ab5e1821e4d217"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-dark-list-native.png",
+        "sha256": "17c28ea33a9b4f785b7f43fdb1968f6c08c221d84e1b0862ab3109d6f602b7e5"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-dark-selection-native.png",
+        "sha256": "48e77b140b6289a4c153b2f52ed55f8fe3f7a07bb5aceaa480dd7e8b03ff818a"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-dark-share-native.png",
+        "sha256": "88708db476dfdc610b8d39b4c9562e941441413b5d856bcd46e428ed83bdc856"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-light-delete-native.png",
+        "sha256": "ff812505f9df30b379bf134eaaa5f0a25b6f26ae536be0bb96f8ddbe83db2bdd"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-light-list-native.png",
+        "sha256": "d1682f61643ddbdf4f0e93b9c9ba631548120b59a960e325dc57e2c32693eb99"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-light-selection-native.png",
+        "sha256": "6b94e598236b9bededf63564626db9911fe5bb914ef9da134f5ca0c5a84f1ad2"
+      },
+      {
+        "file": "p05-history/p05-history-explorer-light-share-native.png",
+        "sha256": "06a24b46372bc48329bbb048e5b4d6720584a144c8b79b8acd6bd952514d8434"
+      },
+      {
+        "file": "p05-history/p05-history-neon-dark-delete-native.png",
+        "sha256": "ae707d51c42078a8188ddae1312a79a43ada510d09990376cb849eebfb367401"
+      },
+      {
+        "file": "p05-history/p05-history-neon-dark-list-native.png",
+        "sha256": "a453827294823d6f8f4ce2c68532ddba29df9c38b0f863815de963302473fe5d"
+      },
+      {
+        "file": "p05-history/p05-history-neon-dark-selection-native.png",
+        "sha256": "4476f18bd7564373a7e1bef37c11fc72dedc110a5465bf53af85aa3e5c24098c"
+      },
+      {
+        "file": "p05-history/p05-history-neon-dark-share-native.png",
+        "sha256": "3585f0ac9d225456f1ebb5a203c6fac28c01e7cffc57d23037348679b3de2914"
+      },
+      {
+        "file": "p05-history/p05-history-neon-light-delete-native.png",
+        "sha256": "fb8ed460b66c619d7613aa3c8c6e29ae6ab30b4f0c369231c5292f873f2b7b39"
+      },
+      {
+        "file": "p05-history/p05-history-neon-light-list-native.png",
+        "sha256": "389ba02cbd52cb3ed7c29b1720e7eece0af29702ecee5703a3fc33069cc428e1"
+      },
+      {
+        "file": "p05-history/p05-history-neon-light-selection-native.png",
+        "sha256": "878c835ce35029811ab8d14e8dade47e7cd6b2987334b8cc00d8b227b7ede5a6"
+      },
+      {
+        "file": "p05-history/p05-history-neon-light-share-native.png",
+        "sha256": "9b568c1b92f805c1a2b84b0dc9cb2f64f5bed5cc823837fde35f0aa221c4148d"
+      },
+      {
+        "file": "p05-history/p05-history-precision-dark-delete-native.png",
+        "sha256": "9791c7ca08001314cc3974038d991a83a750a9886b862ea3207475a771a4a7bc"
+      },
+      {
+        "file": "p05-history/p05-history-precision-dark-list-native.png",
+        "sha256": "b28615bf7e6156b3a3d2ba8614c7b1c04b3e1623de1c7147717df8f238faeba9"
+      },
+      {
+        "file": "p05-history/p05-history-precision-dark-selection-native.png",
+        "sha256": "40891320000bf8a448a4ccff4611538926fe86ab562649a56c6b632ec36f62ed"
+      },
+      {
+        "file": "p05-history/p05-history-precision-dark-share-native.png",
+        "sha256": "d646c211204f45f5c25226eea002f2a2971364ba76fbf0f79e04477eadaff419"
+      },
+      {
+        "file": "p05-history/p05-history-precision-light-delete-native.png",
+        "sha256": "3efc74be798933c874fc380d88391c9787aa00ab3da8a04676451d176c67280b"
+      },
+      {
+        "file": "p05-history/p05-history-precision-light-list-native.png",
+        "sha256": "ae431d6999717415c16449b53e2f285dba4fcbd14d6dac91bf9588103910bc08"
+      },
+      {
+        "file": "p05-history/p05-history-precision-light-selection-native.png",
+        "sha256": "a74ffa142fb64303f7aec28c08e103c10749db3e9efaa49e29ae919267222bdc"
+      },
+      {
+        "file": "p05-history/p05-history-precision-light-share-native.png",
+        "sha256": "0652c098d398caa03d347bcba25069a7e9f4c97a793abcd223e130e9da264f59"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-dark-delete-native.png",
+        "sha256": "58520aa7726323884b9971d8a30d147a75f4e76afc25943c9d268d826d6b7b15"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-dark-list-native.png",
+        "sha256": "866c67ceb9fedb0a2e0b2252ab59f7bea999d205ddf2b0584196a925579e5ef4"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-dark-selection-native.png",
+        "sha256": "25a3e8dc8d98737bc3faf9a198d5a582e30afb47bbaac27934d4d5ee41124019"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-dark-share-native.png",
+        "sha256": "a08e50c2410801c2c415446773900574f081d49f5fb559492c377cc0949c05d9"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-light-delete-native.png",
+        "sha256": "5616c1329d22c4097b84a2dada639a9dddd16fda1280d90d59871fd822815222"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-light-list-native.png",
+        "sha256": "79dbd2f98bd1abffb7aaa5edcf7c48d7709e3d1f5ff9cd354d1e069e5f039c0b"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-light-selection-native.png",
+        "sha256": "a2e22a9a725f6222ba2e95dd72aa265a3fc6ed7b34ab56bf0c3bf3929c260d30"
+      },
+      {
+        "file": "p05-history/p05-history-quiet-light-share-native.png",
+        "sha256": "ab5f80ad9f2f5f16b5ae3a0b86acd240c571653cce0442d63af1a9d1f7a528f3"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-explorer-dark-360-font130-synthetic.png",
+        "sha256": "97ff5ea9568c1f66cbf4cc1e4fd8807f969d24bd89159d9416b8ed51627f10a3"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-explorer-light-360-font130-synthetic.png",
+        "sha256": "c5efd3dbd64ba431e1814650fc4aadbd74d6a3cb878fe09e07229849d92305a8"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-neon-dark-360-font130-synthetic.png",
+        "sha256": "f29d4a9ea69b0657bec6c725d78e0fa58cb869fbb66a67fdcda79b83b66efea1"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-neon-light-360-font130-synthetic.png",
+        "sha256": "fbf03d558969b932afb82f051839391acb1bbae231e1c0bb85ae11418183b426"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-precision-dark-360-font130-synthetic.png",
+        "sha256": "67927466458cd488b2466952abe1ab4f7b93acd3f5782bf6b74881b9fc67fcb6"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-precision-light-360-font130-synthetic.png",
+        "sha256": "9812bdcd22c87a274b3f0746a2db21aa3336c983f0ea9bb3d26efb5397078841"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-quiet-dark-360-font130-synthetic.png",
+        "sha256": "419073ff55e823e048c82bb860e5d413b7686bd2db5aa110cb5071080dba3691"
+      },
+      {
+        "file": "p05-metrics/p05-metric-duration-quiet-light-360-font130-synthetic.png",
+        "sha256": "71bf36cd93b5405986df45fea2c1701df21bf096e7a660b2cfb8b3dce999906d"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-explorer-dark-360-font130-native.png",
+        "sha256": "9a33e0c4cfb31a4190c026f635e462b546aa3d12016b58fb40d6137f061d7ff9"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-explorer-light-360-font130-native.png",
+        "sha256": "177ffe18184bfec8b688d94d0b145737f1234b959526731c5b3ad33236183b50"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-neon-dark-360-font130-native.png",
+        "sha256": "72a2eaa27dea65595fa5047b192dcc9db3e4d5cb69f2e26c90c02bd93e4830bf"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-neon-light-360-font130-native.png",
+        "sha256": "efbf242aa8328e319cc941f644bec5b1893400ef3302da8b56b54ef5cd43ac67"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-precision-dark-360-font130-native.png",
+        "sha256": "b699b749de1fb160a190f904f9e62e8b2f31758b5c295da799ba925eaca3d478"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-precision-light-360-font130-native.png",
+        "sha256": "c9e92d04309f0ef0c5444a44214ed5aaec964f3c5f0d46b0193a4f929fd1e5eb"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-quiet-dark-360-font130-native.png",
+        "sha256": "42609154ebe15408dfc343824d1b0519509f5044b2a3203b2b1c412a4e926ba4"
+      },
+      {
+        "file": "p05-settings/p05-settings-hub-quiet-light-360-font130-native.png",
+        "sha256": "69d5ee8bcc495e92cc9f8e61b882f675a81116e2f173bd3684255788459ffd0b"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-explorer-dark-360-font130-native.png",
+        "sha256": "2ca8f59f9e95619e17a950e9eccbd0c0e03f33303bdd086abddb3951acd4ca2d"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-explorer-light-360-font130-native.png",
+        "sha256": "43dc3a90f823131e5d0d371a4879be386737a246217ba484533d29f9190a57b8"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-neon-dark-360-font130-native.png",
+        "sha256": "dd18927e72844bdd35311f236cf66e695686c25b39f204ca838c46133d396c47"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-neon-light-360-font130-native.png",
+        "sha256": "1feea2ed387267b67147bc74b644437cfc0a95ebae2ad1a38ee508182fc838f7"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-precision-dark-360-font130-native.png",
+        "sha256": "278e187a1a59b074137c0628cf70214ce53d8e400e6ce21eda24ff1300d5c7b2"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-precision-light-360-font130-native.png",
+        "sha256": "b3cf31b1bb493eee3a6f08c4aa2d012c008a527e7074b1256f715155e6b9b3e3"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-quiet-dark-360-font130-native.png",
+        "sha256": "507f8ecef68285be8a77de91662aaa93770d1856dfe2548fd86b76f3344f30ea"
+      },
+      {
+        "file": "p05-settings/p05-settings-motion-quiet-light-360-font130-native.png",
+        "sha256": "a703210475156598a646af3f5c69d106bcaf717fc4cf730faf041b686af322de"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-360x800-font-100-idle-synthetic.png",
+        "sha256": "7cdee946fd479b358f656ac5a37a84ef27d025ff7a0a33db24b74c5f16957c6e"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-360x800-font-130-idle-synthetic.png",
+        "sha256": "7b65714481a83151c1938d97f44df28d6549e1faa7ae72349be50e22b13759a7"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-393x873-font-100-idle-synthetic.png",
+        "sha256": "25cb465e723c39b22a567d6bfc7218fdf7eca171bf5c87c8633123f924f6cf5a"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-393x873-font-130-idle-synthetic.png",
+        "sha256": "df68a61df5b207d8c239f6ba6026b18f3ed6e6ccd289d1d95017e9116ee3fb0a"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-412x915-font-100-idle-synthetic.png",
+        "sha256": "c17e8a873813ad6eed099368ce1972d8379cd8dec51f7f9ae38f46d18d776db0"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-dark-412x915-font-130-idle-synthetic.png",
+        "sha256": "4cbee5ed8185b09f51674fdce64cf782aaabbae8071879c6fdf63e733807c019"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-360x800-font-100-idle-synthetic.png",
+        "sha256": "03a1807a0b43da410629326603d2fde6d03a5dee0c886ccf0216830e9cb41567"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-360x800-font-130-idle-synthetic.png",
+        "sha256": "c45f8d2d3f1289bff636a863ff5a463e4a3283b6f7d70b79b8cd8c9f2e185c88"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-393x873-font-100-idle-synthetic.png",
+        "sha256": "02e59885d2e7e18e02ab650fb132a23d9e8cbbd7a5deb79aa007d12b2b0108bb"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-393x873-font-130-idle-synthetic.png",
+        "sha256": "7c57ac9ae49ecf90e9223f06faa1ba16e726742470b2b9fff96a4332f7497884"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-412x915-font-100-idle-synthetic.png",
+        "sha256": "b586c3d88a4f38289a5f44da652bd8712be505878cda78ae2be140052d37eff2"
+      },
+      {
+        "file": "p05-visual/p05-layout-explorer-light-412x915-font-130-idle-synthetic.png",
+        "sha256": "d6aa3bbfcd1fd656b4b6900be6b467d8de112024e6442b910da0d6a3de133920"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-360x800-font-100-idle-synthetic.png",
+        "sha256": "86f85381ab693f86f6b653b89b4da96c05e4f90ac65592956941f41ff0310401"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-360x800-font-130-idle-synthetic.png",
+        "sha256": "419ba1851f38d1594be0354897d76e8ac19439d73f1d7095e51fa2fbb4a7d88d"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-393x873-font-100-idle-synthetic.png",
+        "sha256": "f1d071dbe4bb5f75ff7442cfc5ce7661778e1679a2cfc5e433c988fbb124d8ec"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-393x873-font-130-idle-synthetic.png",
+        "sha256": "2558a3ef387072fdbae5928b1671dfcfc825bca4fb9ed5606f229bf630e75a4e"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-412x915-font-100-idle-synthetic.png",
+        "sha256": "103e2646a815a97096acca265f5b228191cdba44e4d563d984ab3886fbbedc10"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-dark-412x915-font-130-idle-synthetic.png",
+        "sha256": "d3e0d64572369197f5a7e64eb409646a11a296f06f675d0cffeff95ae9863681"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-360x800-font-100-idle-synthetic.png",
+        "sha256": "19404d2f251783247aaf951ca0ee1f02c25ee220394886c148ba61e6ca369450"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-360x800-font-130-idle-synthetic.png",
+        "sha256": "ea65c2cd449a36380a56fecf9cc32858d5fe889b48ccc447e71dc3281dd2b72b"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-393x873-font-100-idle-synthetic.png",
+        "sha256": "6ed0fbec9a645c2ab983c969a159f1a6cd50afd03e4ac589943fbc842c22b35d"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-393x873-font-130-idle-synthetic.png",
+        "sha256": "0f567b0bad406451052cdf7569e317310e24a59029cd1db40680965e46c69da8"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-412x915-font-100-idle-synthetic.png",
+        "sha256": "70fd7cea638779f934ff1ffd835247925843deb8ee875c3652b5e26284b6e93f"
+      },
+      {
+        "file": "p05-visual/p05-layout-neon-light-412x915-font-130-idle-synthetic.png",
+        "sha256": "3490fd8ddd3687c410fe41a90224494a9188f45782f7bd14d92e4d872669c129"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-360x800-font-100-idle-synthetic.png",
+        "sha256": "bb91c77c015967e4345309b957b81684322abfe863e5b36b9c83228477113084"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-360x800-font-130-idle-synthetic.png",
+        "sha256": "1c2a016196ac571fb92d5a2ee5fb97b7102f1498b26fcb907d3008630aaab64c"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-393x873-font-100-idle-synthetic.png",
+        "sha256": "54cc79b15ed9a4cd29a5afcee22c4cbfd5a3202ce5040724b833b84cbc715f66"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-393x873-font-130-idle-synthetic.png",
+        "sha256": "b52ac9aaa8dfac6309ec6b9572eb9d1521bdead61c1b666c7de9164688e3f053"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-412x915-font-100-idle-synthetic.png",
+        "sha256": "34acfc8b65fa04ffae8caf392dfbfb41a81e9265f4265483e2198ec8ad42ac05"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-dark-412x915-font-130-idle-synthetic.png",
+        "sha256": "ba67aa4960f78892e7130f6c8215f6219e2d3e98b5f3714a04929c6b0ae8d524"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-360x800-font-100-idle-synthetic.png",
+        "sha256": "610f9202427325f55d1b7b2ebc17693377e39515251b0b428fcb6e149fcfe6cb"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-360x800-font-130-idle-synthetic.png",
+        "sha256": "ae3b500b74f93d433f780da7e3869ad29b951f6703b0597661ed89e98a1f02e8"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-393x873-font-100-idle-synthetic.png",
+        "sha256": "7cba5155e06f84ae7cf5c13057630fd52cd97b161d84bcc7cc7a0249570a0a9a"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-393x873-font-130-idle-synthetic.png",
+        "sha256": "5a71dfef0efbac7f8f276361447071b4df88011a8088671c72af713e10ad82a8"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-412x915-font-100-idle-synthetic.png",
+        "sha256": "f1d7747befd5ad12603af415b1817d5c6724331ff3d7244139f5dd17387b757c"
+      },
+      {
+        "file": "p05-visual/p05-layout-precision-light-412x915-font-130-idle-synthetic.png",
+        "sha256": "4cf616ae677044ba18523b14979822571ce348be9755b8adf46363225dd8788c"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-360x800-font-100-idle-synthetic.png",
+        "sha256": "a880e50efb83ddc747cfcafa6222e7f90a17bb2977b5096d7abb486a7cb20b72"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-360x800-font-130-idle-synthetic.png",
+        "sha256": "e1ee9e95519e1f077e2564effd39abf3523733e672a82729ef3b00b4af4698fe"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-393x873-font-100-idle-synthetic.png",
+        "sha256": "4de1b8cdc6c1e911d06768912e7e6b345c028612c1df6d91bb2b18457bd08faf"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-393x873-font-130-idle-synthetic.png",
+        "sha256": "ae1409d3ba6c91b05d890dca2ab366a398d6fb4efd8cf3e86eaad055eb2f7d14"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-412x915-font-100-idle-synthetic.png",
+        "sha256": "3892ff7c199654a55547e3e85f90984f4d674183cda25cac250ece4f33ffb02d"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-dark-412x915-font-130-idle-synthetic.png",
+        "sha256": "55ff16067bd9662300eadbcb1cbdc654d82f18ff89bcb62bc3009d3b71df5d30"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-360x800-font-100-idle-synthetic.png",
+        "sha256": "6d089e82d8a64c83e95493fc4daf2be1343cd7707365ca3d3e2695c35685d4b6"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-360x800-font-130-idle-synthetic.png",
+        "sha256": "5e54275263de3439aa24db584c75c0145b0498e5491f118e3d740b716dfe55cb"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-393x873-font-100-idle-synthetic.png",
+        "sha256": "6d66724091c1f5edb6baea901128ac1c69651a69fe7f5f819433eb70f8e8afd2"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-393x873-font-130-idle-synthetic.png",
+        "sha256": "c82f8ea5071eb394cb5612bcfd3d1e90838e68edaf7b48c44d188b7c40a89105"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-412x915-font-100-idle-synthetic.png",
+        "sha256": "1ce6c623af7c32216c4976274a89001e3b85a7c86fa2ecc4e1e45c1e9ff3b1be"
+      },
+      {
+        "file": "p05-visual/p05-layout-quiet-light-412x915-font-130-idle-synthetic.png",
+        "sha256": "a4ec4427df7091405eaa32fbd278c98d2e0bdc4413105a0b55ed2123df18017f"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-slow-moving-pace.png",
+        "sha256": "f0c3047370afb669136c09064c615075f1c2e76e415b50f872c591ab2aeb0e63"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-slow-moving-speed.png",
+        "sha256": "dab186682e7a91c161531e43bbd7f5373f35996d5c6d2d34a1ef7e6a16346504"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-stationary-pace.png",
+        "sha256": "50af8431b5c180725bdbcab7c8b9c4bfc5b4b96f3681714a7ebc24d87006c92b"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-stationary-speed.png",
+        "sha256": "c4b501ac8411253228e40fa83c642cac1366c91486e2f94bb86437f94c5ca4ea"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-stopped-again-pace.png",
+        "sha256": "bd490e8209411ebd0290b8839061381be0cd4b981837313645873dd3bdfcf1ba"
+      },
+      {
+        "file": "p051-gps-ui/p051-IMPERIAL_FEET-stopped-again-speed.png",
+        "sha256": "9be271999112285e576814d9a143c62aeb08b65ba0bb733203ca9e8a9f7ed75b"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-slow-moving-pace.png",
+        "sha256": "199ddb8e5504c903ca9e4865ca6b521eb3b17da33e09586ec9a7996c44822afd"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-slow-moving-speed.png",
+        "sha256": "affd1d3dd6c5acabb8ba25bb2c4790a92a3f21695e8f58ba727bea4345fe2708"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-stationary-pace.png",
+        "sha256": "2248ed4ba2737bd6e2aa439652c6e7638ad3600be1634275fac8e8447debe4e5"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-stationary-speed.png",
+        "sha256": "850fd848dc8be331f4b9b9b9e5eb1b9f90fff35b0cea89a101edd22b6aad0dd3"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-stopped-again-pace.png",
+        "sha256": "9795e87acde39e17bef8786db4fe6b986c964561cfc8449363cd713393a82b16"
+      },
+      {
+        "file": "p051-gps-ui/p051-METRIC-stopped-again-speed.png",
+        "sha256": "50513e3982c62b336965a4c2274f67a87ebb1de94eb61a4a8503bcc405d168b7"
+      },
+      {
+        "file": "p06-map-durability/new-process.png",
+        "sha256": "7b55a0458a5b7288ee30733a6b716bf532d2044eb67263bec02845ca5d094ace"
+      },
+      {
+        "file": "p06-offline-map/p06-current-position.png",
+        "sha256": "9c109cc2712f6783c96ff30717436117b52aacf51b54d5ee91b8d5a2d7021bcd"
+      },
+      {
+        "file": "p06-offline-map/p06-historical-track.png",
+        "sha256": "310c78ad2dc5f8044e894ad2789fcc8483cb93a261cd7a04e2a2f48f03f95de6"
+      },
+      {
+        "file": "p06-offline-map/p06-imported-airplane.png",
+        "sha256": "6f2145abdb0c1fac20873954cf0f9f16313a4b4001ce4a0ce75c04695555ddd0"
+      },
+      {
+        "file": "p06-offline-map/p06-invalid-file-retains-map.png",
+        "sha256": "7403f37c06e4ee78f5f0e0689bccb4fd7cf353ee4e94ed7fabac4e062d99e5e0"
+      },
+      {
+        "file": "p06-offline-map/p06-live-track.png",
+        "sha256": "023db1edc7e5e9cbb22e818ab919bfa6e7ac3bb82dc608fb5a2db49f187cbb02"
+      },
+      {
+        "file": "p06-offline-map/p06-recreated-airplane.png",
+        "sha256": "8c4c70feba915b65645364087e4a0a9811c36fd770690da776daf9dbcf0b57da"
+      },
+      {
+        "file": "p06-offline-map/p06-segmented-track.png",
+        "sha256": "34fbce7d9b31645e320b6071a2c5a5b8a1e26104b08e44d92eecd057b2f562dd"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-EXPLORER-dark.png",
+        "sha256": "e936d97722ee09ee5f41c91622695a762f476ea8b176a2f819e3a82a947ddc0f"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-EXPLORER-light.png",
+        "sha256": "33e11971a5b44f032aa69ecb653ca81facb36896dd0b30c3cdfc205af8560b68"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-NEON-dark.png",
+        "sha256": "828d1f2f9f5f03812a67279cda41dd32fcc6dd0ae56e98bee326d363b6e844fe"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-NEON-light.png",
+        "sha256": "d0ccb3a5fe02ccccff93552c57cce80ff6c7fa236667f6e9d916f53cd92b7202"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-PRECISION-dark.png",
+        "sha256": "6f2145abdb0c1fac20873954cf0f9f16313a4b4001ce4a0ce75c04695555ddd0"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-PRECISION-light.png",
+        "sha256": "886a60ad22f591e2785be8c9649cb0db9e77485ef0629a5bd924a89ed3a885c5"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-QUIET-dark.png",
+        "sha256": "b00d2a9cb8dbfb09b16021c345737d1285532de62b4baab2f7fc3f845e581a2d"
+      },
+      {
+        "file": "p06-offline-map/p06-theme-QUIET-light.png",
+        "sha256": "e32fba0eb1345186fd5834af597b68467f24aceec625e4587d123b1c6d21aeae"
+      },
+      {
+        "file": "p06-offline-map/p06-zoom-pan.png",
+        "sha256": "01cf167a6fe0db14ce4b5c94af55572150d13c4f190181cb39d7d40c1cea2609"
+      },
+      {
+        "file": "p061-real-durability/new-process.png",
+        "sha256": "e664313fd3505b9400a92950a80bbf7cf77d02cada7e4d13fb42ba628b76bd63"
+      },
+      {
+        "file": "p061-real-map/p061-real-Chaozhou-z12.png",
+        "sha256": "2a25abcd7fa459979c0c70c5ada4cea18d8fea28ea609c9a6427ff99e9091ffa"
+      },
+      {
+        "file": "p061-real-map/p061-real-Chaozhou-z16.png",
+        "sha256": "36e7d681c5b6e96f2dbd41d9f9c75a24f5f0a315d532711513e87eb87e729439"
+      },
+      {
+        "file": "p061-real-map/p061-real-Chaozhou-z7.png",
+        "sha256": "f28fdcee6269c5b1598d5e801f01926e0214c46fc6e82df6afe8b32d0eff058a"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongguan-z12.png",
+        "sha256": "13d1cfde5f16fc16713e704b1720c3722933ef3eb00473aa65806990c52da600"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongguan-z16.png",
+        "sha256": "1948ccd99fb1cbf7d5a8e260a7441425a482a8e837424309ad7486464284d6b7"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongguan-z7.png",
+        "sha256": "ec2cf7860c82b60ec0652e3f195336003cf20b0451ae4672bf7e74eb84a2c002"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongshan-z12.png",
+        "sha256": "ada329e355404ad41d3fea92c142d64eab88cfb5b9653cd5e60e7b2aec673a1e"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongshan-z16.png",
+        "sha256": "fe577d11e0aa7c0b6a11b98f580a73fa361f5f6feebaedb89109926139a4bdfe"
+      },
+      {
+        "file": "p061-real-map/p061-real-Dongshan-z7.png",
+        "sha256": "8b3378e91705bb97c1499b4d4c316383f331b16b4f40eb147923bd6954adcc50"
+      },
+      {
+        "file": "p061-real-map/p061-real-Foshan-z12.png",
+        "sha256": "c7ab4b4731f27f901fd8c2c85fca462b3b3b906fc6de36cce80e436eb56b7b1c"
+      },
+      {
+        "file": "p061-real-map/p061-real-Foshan-z16.png",
+        "sha256": "15c38e723037dcb8297733abc0c0621b4238e45afb1cb660d9ba21d2a9c5aa2a"
+      },
+      {
+        "file": "p061-real-map/p061-real-Foshan-z7.png",
+        "sha256": "57a0dcda9c0c3413871da13b7aa97ab3855c75754d9e2b8ebbaae3fcca388f55"
+      },
+      {
+        "file": "p061-real-map/p061-real-Guangzhou-z12.png",
+        "sha256": "139b0bdd4a70c58739bfed3ca8a4db04f8c5c84afe525ba349efedc4b1ab9cee"
+      },
+      {
+        "file": "p061-real-map/p061-real-Guangzhou-z16.png",
+        "sha256": "d2c80b453b2820241cc7e5f97e70a51f804daf0a2b14b1529287031cb51c1344"
+      },
+      {
+        "file": "p061-real-map/p061-real-Guangzhou-z7.png",
+        "sha256": "8c53b5fa61fd8280310bf3c952eddde7200c16b58b3370b21358375643a2a7fe"
+      },
+      {
+        "file": "p061-real-map/p061-real-Huizhou-z12.png",
+        "sha256": "338251222aa16edbe00c2e99f48240f5682bc6fc02924306458e5f8cd9842c93"
+      },
+      {
+        "file": "p061-real-map/p061-real-Huizhou-z16.png",
+        "sha256": "23cce50db573f1a0cb4455bd8492b3599f1aa6a8c4733fb81f30aaeed4a4d1de"
+      },
+      {
+        "file": "p061-real-map/p061-real-Huizhou-z7.png",
+        "sha256": "e383cb42114f4cf3f1b4ec6b02edc5147a8f5e6d830b4732c575c931fb480d46"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jiangmen-z12.png",
+        "sha256": "a4daa9556c98c3d3979b4b1d70831c1052af7aa6f1ca53d32d5093c8e6d3e95e"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jiangmen-z16.png",
+        "sha256": "425116834a638cf2bb9ed652192c66884e84f731d8c70815b564f14e5fa5a937"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jiangmen-z7.png",
+        "sha256": "fe004c268b934b961fd02da4e91af850a015e920c822607331142bc6e59996f3"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jieyang-z12.png",
+        "sha256": "051d584b7e80fbae6696035c18756354c53ae59f81a0a71769d5c2536775f717"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jieyang-z16.png",
+        "sha256": "b7d946930a5673ea263201d20d3a1b053e373fe616edd037c4645172a3ec64aa"
+      },
+      {
+        "file": "p061-real-map/p061-real-Jieyang-z7.png",
+        "sha256": "592f43025612eaacae1f97075fef7d163f45505398ac9247ad7f15768c408bb8"
+      },
+      {
+        "file": "p061-real-map/p061-real-Longhai-z12.png",
+        "sha256": "87c6742e1031a4b2ec300bb214031a40a2b40a7143800757acbf65f4c4039254"
+      },
+      {
+        "file": "p061-real-map/p061-real-Longhai-z16.png",
+        "sha256": "36c8db48ecbdf90e0d06d6debc9b54ad56078e8049769f5b5b4e2f42219fb06b"
+      },
+      {
+        "file": "p061-real-map/p061-real-Longhai-z7.png",
+        "sha256": "c5ae321521b6bb8855b858a3d375f9bd9351e0166d9e5c2b36ae189ef51947e5"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shantou-z12.png",
+        "sha256": "225b180a3a09eebbeb2c4c9d847c58533c7205874dbe28a8edfd4c11f2adef6d"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shantou-z16.png",
+        "sha256": "2125701acb5e211988206b4be1c5eecb940c49498606ae22619ba1b68c04b832"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shantou-z7.png",
+        "sha256": "f0734653d4be6dc83cb4b6b9aaa04fa4c2133fea9d1794156adcfca83a0884cc"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shanwei-z12.png",
+        "sha256": "3a142f40c31d10374149df24ed3f5b58e268b43fb8d1c4581889e19194415fc8"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shanwei-z16.png",
+        "sha256": "6118bf3beee78598f5d345c9d0d258103ca689f6e886a5eeb16ad0c7da8ce241"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shanwei-z7.png",
+        "sha256": "22b5aef7b1b272cc174546655dd0ebd49e1618d2b27fb6d60c55e1e3140580ca"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shenzhen-z12.png",
+        "sha256": "457ee7a93bed4174cd39b978a395523f48f0d302a5fc12171ed9ee35786abc31"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shenzhen-z16.png",
+        "sha256": "2fef8707f0947de579f39efdba1ec4bd1c3fc7d3234b1a427202d072fd991711"
+      },
+      {
+        "file": "p061-real-map/p061-real-Shenzhen-z7.png",
+        "sha256": "629b7bffe03e82954cfd4d2a973ff962513b153942c7c25227fad015bc909d87"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangpu-z12.png",
+        "sha256": "00605d352c4f5bfad5f23b2382db1abc08a896c832ab90bc4b2c844f6e6844fc"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangpu-z16.png",
+        "sha256": "f9163323beb5950fdb436c702c6d8807fc8d1c860ea661d205c4daa12b52aa18"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangpu-z7.png",
+        "sha256": "a20972a7ce6e20eb32fa2f2ebc9a135b2e4e5e75f030093ac29ed687172380fe"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangzhou-z12.png",
+        "sha256": "1542013bf6c48c936acc922ac0b13e22100542a3c2b1b5fa529adb765402e822"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangzhou-z16.png",
+        "sha256": "e518972dd6aaa9c8af2a8e369db12bd8738ab56448cda48023cf5cd477708376"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhangzhou-z7.png",
+        "sha256": "9db5efa1188bb893d1633d59ebfd343419a760ab7f43a2f14f60b4196532c216"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhaoqing-z12.png",
+        "sha256": "fbf7c9576431a66c8ffe106351f8f6f33d6fd798591f4c22b1ea2fbff5d4bea5"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhaoqing-z16.png",
+        "sha256": "318a7604f94bef2ea9815e903fed722d3d558c6cbd5394dc77dcf613d5379945"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhaoqing-z7.png",
+        "sha256": "26608295535bff23b7172ca1ab16bee57c76937c3ac7e14aae143ca54b0f032c"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhongshan-z12.png",
+        "sha256": "02f6fc95dabe4aaf1bed21127f0abc83d0f31b3ce3c0d14783d6151b4b7a5172"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhongshan-z16.png",
+        "sha256": "339da8d7824481081ee8fdd4b494b4e29a9cb1acf886eec9323b80dc36cbf13b"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhongshan-z7.png",
+        "sha256": "c9189f4f97dd334d6c960f5f3897f293f16b17631a850051b9ef9a3031fd0071"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhuhai-z12.png",
+        "sha256": "b776f3e944870be05ba8410099d0da5564913a99198af2c0fbf3d0fba134f8ae"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhuhai-z16.png",
+        "sha256": "0e28cc965e17b46c0aa04dffe612fa9b0e69bb156bea871f00a0fff6d9e758c7"
+      },
+      {
+        "file": "p061-real-map/p061-real-Zhuhai-z7.png",
+        "sha256": "15c57e51ba68909602840db7d786f71dcf61220beec4f228d4ee5e009e672e45"
+      },
+      {
+        "file": "p061-real-map/p061-real-recreated.png",
+        "sha256": "31660221ea9eed08b2d526da7cc7a4d47cb5165d1077637a9638c01fca1742f5"
+      },
+      {
+        "file": "p061-real-map/p061-real-route.png",
+        "sha256": "6f804faec26b742f669f23c8096b52691fa31b1eb113431d22b773f2c999f030"
+      },
+      {
+        "file": "p07-focused/p07-home-inside-bounds-no-features.png",
+        "sha256": "238b1e46ac61136b001204a97a3e8e42f41a36b6b005b052efef4a29a5ef429e"
+      },
+      {
+        "file": "p07-focused/p07-home-no-map.png",
+        "sha256": "41b632a9b93bd6892ffbdd045d8d946d5aba433145efe625210343c1d37c7968"
+      },
+      {
+        "file": "p07-focused/p07-home-outside-map.png",
+        "sha256": "a0b675824caca2bf0614be37a9d3fb8ab271cabf2d5fc54ad0602971ee7abbee"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-dark-360-font1.0.png",
+        "sha256": "82a413884578c6c627349252026fae8c0fcd0e6b6dec23cd7428450ede220bef"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-dark-360-font1.4.png",
+        "sha256": "708c1b33ec1d3362e4dc48980e345603b0b3d3995c59f3030b05b46a0454e87e"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-dark-390-font1.0.png",
+        "sha256": "e020f3b959d8815eeaf84d9742eea90d89f8257f1b07e64e917af7b523f1cf5d"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-dark-390-font1.4.png",
+        "sha256": "0f6319db7f64b988c76170112c38214762fac8356720420cfc9c5f4147679d0e"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-light-360-font1.0.png",
+        "sha256": "9dd35aa75e4e718bf125793a31ed18f55caade7160d3bd064651cc9802fbfbfb"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-light-360-font1.4.png",
+        "sha256": "34b61dbf63313b94424c8b220b58c4068ff2ffa5148d8c9d07bcaeef8110d372"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-light-390-font1.0.png",
+        "sha256": "f6e7c2ddb67119118298da1d0723a8d306318b024810fe2028bc7a507be078fb"
+      },
+      {
+        "file": "p07-focused/p07-home-real-explorer-light-390-font1.4.png",
+        "sha256": "7b5fc9a0aaea83296bd8ab9d7b4363f8aecefeebb6ba5632682b097873d9005a"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-dark-360-font1.0.png",
+        "sha256": "e5f982444bbcb3d11992193e8de35e671ff66ba653d1c0367027603e24fd2c08"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-dark-360-font1.4.png",
+        "sha256": "c1a815a30b0718f7717aaf1fb28c8da6aa446b073d8ea7f28d6007af5e40c7cd"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-dark-390-font1.0.png",
+        "sha256": "79700aedec1a5b1e570d192caab26900797571b65e6530cb3a2e3a886a991345"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-dark-390-font1.4.png",
+        "sha256": "a8970d77d75af3313bef77fc34f5f79b8507e9da882ca5f061f1eb9df3641c93"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-light-360-font1.0.png",
+        "sha256": "d55e33db53376dc9664f927536858098179a4c8730460d51bda03ca84dc6e1f1"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-light-360-font1.4.png",
+        "sha256": "0fb97b50d8af139c4131938127234dcc8f6f7934daf6132d51b0f456665e4ac4"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-light-390-font1.0.png",
+        "sha256": "87940712f73cb92bdfd22e18c8edf4e488f3c2109c41e5a157dcf2ab918fe1b0"
+      },
+      {
+        "file": "p07-focused/p07-home-real-neon-light-390-font1.4.png",
+        "sha256": "1881ebc287d6750210408d170975ed56fb0cead1bbaf53768b8ef919e967bb75"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-dark-360-font1.0.png",
+        "sha256": "ca3036360a26129b4ea926d326adfff61fee9066594ebd44b79152a62cfbf5ba"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-dark-360-font1.4.png",
+        "sha256": "6f9eb15c65e7334c288dd79d96c58c7044e4d3be15c1acf29290f215bb7d7a42"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-dark-390-font1.0.png",
+        "sha256": "7bd599624b1e1cd722ec5a2c0fd0dd36357b9b1f1e7d365c4e6057625d1cb9b1"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-dark-390-font1.4.png",
+        "sha256": "fd079ccebfbc679425193c3299cf940356675ec76ca9548518e8832c16a43438"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-light-360-font1.0.png",
+        "sha256": "21cdff36dcc062d0b0a79fb98206989ddc376f5783f696a13538bd4fe9e74dfb"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-light-360-font1.4.png",
+        "sha256": "a77a357aa94fa80eca879a76baee0e5e3764b65e4d15c7cd777dcc4e039d3dbb"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-light-390-font1.0.png",
+        "sha256": "9818bb4e72b0f6260fc7630fc417b6f245286fe91055e38c847b830257b7a0b9"
+      },
+      {
+        "file": "p07-focused/p07-home-real-precision-light-390-font1.4.png",
+        "sha256": "d1a3a088927f6ca5bf9d6e8f6802c0c3b4e7d2f299b8b46c75c34e136a1b1e21"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-dark-360-font1.0.png",
+        "sha256": "5774405b223216e08d7095e58f90066d09d1eda07b0a97aa7e465f5ade1b6253"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-dark-360-font1.4.png",
+        "sha256": "d9cd2172807cd35b9b273be587048dd0e23e59815ffe2d28a744383a54767139"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-dark-390-font1.0.png",
+        "sha256": "15e247e4af37f2af40a3db292bbf71cd5656008cc993f1d34bb263465fccafc1"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-dark-390-font1.4.png",
+        "sha256": "9d93f8dbeeefa49b30a9f09cd3def5def3440281619a773e172afc9334f34001"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-light-360-font1.0.png",
+        "sha256": "8059e12dff1f9871db64d56f60e8ccf51001db16d0f9a6d463c59dc487745525"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-light-360-font1.4.png",
+        "sha256": "6829e8ccf325d5d93fe45e6e408df0c5815920b7e158ea3f660808c22bf662e1"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-light-390-font1.0.png",
+        "sha256": "7b1b95bad7ca8a9ef3dcd166cf4fcc0bc8a5d9566ae2b62b3422bb8457dfde76"
+      },
+      {
+        "file": "p07-focused/p07-home-real-quiet-light-390-font1.4.png",
+        "sha256": "00e9a3d21c13825f1e078238739b18d0507205561de8816f137627952b489023"
+      },
+      {
+        "file": "p07-permissions/denied.png",
+        "sha256": "f0c00603fcdb4c6797ac172b269323239a55b15172b16befaca570073c9a72f7"
+      },
+      {
+        "file": "p07-permissions/granted.png",
+        "sha256": "967cae80ff64243aba18158caef1e0a719fccd892304dfded457ad8147587ea5"
+      }
+    ],
+    "humanVisualReviewRequired": true
+  }
+}

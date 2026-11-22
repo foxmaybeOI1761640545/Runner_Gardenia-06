@@ -55,3 +55,11 @@ Debug构建、Lint、JVM、API35完整回归均实际成功。19份实际导出�
 没有已知未解决的阶段3 P0/P1代码或自动回归失败。P0.7仍须通过受保护android-release固定密钥签名、实际优化APK覆盖P0.6.1升级/运行与99张签名原生图审查，再创建新不可变Tag和非Latest Pre-release，另一Runner公开下载复验。签名未通过不得发布，发布完成后按用户要求暂停。
 
 Xiaomi CIVI5Pro、Redmi Note12Pro+、Magene H303、真实GNSS/电池/OEM后台策略仍需真实设备验证；模拟器注入位置及模拟HR不替代设备验收。服务生命周期恢复测试与用户显式恢复数据，不声称能绕过强制停止、权限撤销或系统限制。
+
+## 当前源码重新验收：467f208 / Run 44987372985
+
+签名地图验收脚本修正后，重新执行完整Actions，未复用旧源码的测试结论。[Run44987372985](https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/44987372985) SUCCESS，实际源467f2086c0f712e04430382203da2bde0c870acb，生产树保持1b3c03950ef0ba319bb3d79abb02841c35028f0c。Python Tests146/Executed146/Failures0/Errors0/Skipped0；JVM167/167/0/0/0；API35 471/470/0/0/1，唯一Skip仍为历史recording_stopGPS_noop。额外GPS45、首页2、实际权限3个独立进程各1项全部执行成功，不混入完整套件数字。
+
+独立下载Artifact14741955633并重算ZIP SHA-256 e8619da51c38931bf89acb47499769059c49f2405417d269a6344b281a0d7881；重新解析原始JUnit及交付门禁。实际逐张查看本轮492张原生PNG（62张标号审查拼图），无新增阻断视觉问题；合成UI及地图夹具仅作回归，真实地图及首页使用105,834,033-byte地图独立验证。窄屏截图为滚动到地图的状态，顶部控件可滚回；旧多轴图表文字密集的限制仍明确保留。证据、每张截图摘要、原始测试报告见evidence/run44987372985-full。三份受保护GPS/心率测试源码与P0.6.1逐字节一致。
+
+真实地图本轮导入5373ms，采样Java堆峰81,879,776bytes/PSS299,642KiB，堆上限201,326,592bytes；这是模拟器采样，不代表真机电量或硬件性能保证。Debug APK14,385,360bytes，SHA-256 5fbd998ae497eb7a1854e9cbb44b288f4bde8ecaa33d0be05abc384c28a02896，包名com.fox.runner.debug，仅内部回归。当前源码阶段1～3回归验收通过；正式固定签名APK运行与发布仍待独立门禁完成。未启动阶段4。
