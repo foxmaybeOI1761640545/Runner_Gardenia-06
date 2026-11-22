@@ -96,6 +96,19 @@ public class P07GpsHandoffTest {
     }
     private List<TrackPoint> points(Track.Id id){var rows=new ArrayList<TrackPoint>();new WorkoutRepository(context).forEachPoint(id,rows::add);return rows;}
     private void finish(){main(model::finish);await(()->!service.isRecording()&&model.snapshot().getValue().session().phase()==RecordingSession.Phase.FINISHED);preferences();}
+    private Notification notification(String title,String text){
+        Notification[] found={null};
+        // NotificationManagerService publishes asynchronously after the app's Binder call.
+        await(()->{
+            for(var row:context.getSystemService(NotificationManager.class).getActiveNotifications()){
+                var n=row.getNotification();
+                if(row.getId()==TrackRecordingServiceNotificationManager.NOTIFICATION_ID
+                        &&title.equals(n.extras.getString(Notification.EXTRA_TITLE))&&text.equals(n.extras.getString(Notification.EXTRA_TEXT))){found[0]=n;return true;}
+            }
+            return false;
+        });
+        return found[0];
+    }
 
     @Test public void warmPreviewPreparationAndRecordingUseOneHandlerAndNeverWriteGpsPreferences(){
         try(var screen=ActivityScenario.launch(P0Activity.class)){
@@ -130,8 +143,7 @@ public class P07GpsHandoffTest {
             assertSame(handler,gps());assertSame(driver,gps().driver);assertEquals(count,points(id).size());
             assertEquals(1,new WorkoutRepository(context).list().size());assertNull(TrackRecordingService.activeTrackId(context));
             assertEquals(saved.totalDuration(),new WorkoutRepository(context).find(id).track().statistics().totalDuration());
-            var notifications=context.getSystemService(NotificationManager.class).getActiveNotifications();
-            var note=java.util.Arrays.stream(notifications).filter(n->n.getId()==TrackRecordingServiceNotificationManager.NOTIFICATION_ID).findFirst().orElseThrow().getNotification();
+            var note=notification(context.getString(R.string.p0_title),context.getString(R.string.p07_gps_preview_notification));
             assertEquals(context.getString(R.string.p0_title),note.extras.getString(Notification.EXTRA_TITLE));
             assertEquals(context.getString(R.string.p07_gps_preview_notification),note.extras.getString(Notification.EXTRA_TEXT));
             assertTrue((note.flags&Notification.FLAG_ONGOING_EVENT)!=0);
@@ -144,8 +156,7 @@ public class P07GpsHandoffTest {
             for(int i=0;i<3;i++){SystemClock.sleep(550);fix(1.31);}preferences();
             double before=new WorkoutRepository(context).find(id).track().statistics().totalDistance().toM();
             main(model::resume);await(service::isRecording);assertEquals(id,service.getRecordingStatus().trackId());assertSame(driver,gps().driver);
-            var note=java.util.Arrays.stream(context.getSystemService(NotificationManager.class).getActiveNotifications())
-                    .filter(n->n.getId()==TrackRecordingServiceNotificationManager.NOTIFICATION_ID).findFirst().orElseThrow().getNotification();
+            var note=notification(context.getString(R.string.p0_title),context.getString(R.string.p0_recording));
             assertEquals(context.getString(R.string.p0_recording),note.extras.getString(Notification.EXTRA_TEXT));
             long oldLocations=points(id).stream().filter(p->p.position().hasLocation()).count();
             main(()->{var heart=service.getTrackPointCreator().getSensorManager().getHeartRateHandler();

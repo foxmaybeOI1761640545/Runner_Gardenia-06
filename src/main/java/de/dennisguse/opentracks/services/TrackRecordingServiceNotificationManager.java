@@ -40,6 +40,7 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
     private final NotificationManager notificationManager;
 
     private boolean previousLocationWasAccurate = true;
+    private boolean showingRecording;
 
     private UnitSystem unitSystem = null;
 
@@ -72,7 +73,14 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
         return onSensorsStarted(context,true);
     }
 
-    Notification onSensorsStarted(Context context,boolean recording) {
+    Notification onSensorsStarted(Context context,boolean gps) {
+        Notification notification=onSensorsStarted(context,gps,false);
+        updateNotification();
+        return notification;
+    }
+
+    /** Prepare the correct role before Service.startForeground submits its single authoritative packet. */
+    Notification onSensorsStarted(Context context,boolean gps,boolean recording) {
         Intent intent = IntentUtils.newIntent(context, P0Activity.class);
 
         PendingIntent pendingIntent = TaskStackBuilder.create(context)
@@ -80,26 +88,21 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        updateGPSStatus(context.getString(recording?R.string.gps_starting:R.string.p0_hr_preview_notification));
-
         notificationBuilder.setContentIntent(pendingIntent);
-        updateNotification();
+        if (!recording || !showingRecording) {
+            notificationBuilder.setContentTitle(context.getString(R.string.p0_title))
+                    .setContentText(context.getString(recording ? R.string.p0_recording
+                            : gps ? R.string.p07_gps_preview_notification : R.string.p0_hr_preview_notification))
+                    .setSubText(null).setOnlyAlertOnce(true);
+            previousLocationWasAccurate=true;
+        }
+        showingRecording=recording;
 
         return getNotification();
     }
 
     void updateGPSStatus(String content) {
         notificationBuilder.setSubText(content);
-        updateNotification();
-    }
-
-    /** Reuse the quiet existing notification without showing the last workout's totals. */
-    void onIdlePreview(Context context, boolean gps) {
-        notificationBuilder.setContentTitle(context.getString(R.string.p0_title))
-                .setContentText(context.getString(gps ? R.string.p07_gps_preview_notification : R.string.p0_hr_preview_notification))
-                .setSubText(null)
-                .setOnlyAlertOnce(true);
-        previousLocationWasAccurate = true;
         updateNotification();
     }
 
@@ -111,10 +114,7 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
                 .addNextIntent(intent)
                 .getPendingIntent(0, PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT);
 
-        notificationBuilder.setContentIntent(pendingIntent)
-                .setContentTitle(context.getString(R.string.p0_title))
-                .setContentText(context.getString(R.string.p0_recording))
-                .setOnlyAlertOnce(true);
+        notificationBuilder.setContentIntent(pendingIntent);
         updateNotification();
     }
 
@@ -145,6 +145,7 @@ class TrackRecordingServiceNotificationManager implements SharedPreferences.OnSh
     }
 
     void stop() {
+        showingRecording=false;
         notificationManager.cancel(NOTIFICATION_ID);
     }
 

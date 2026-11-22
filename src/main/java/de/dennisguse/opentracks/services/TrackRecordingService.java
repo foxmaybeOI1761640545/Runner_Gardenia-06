@@ -399,8 +399,7 @@ public class TrackRecordingService extends Service implements TrackPointCreator.
             trackPointCreator.start(this, handler);
         }
         // Refresh the foreground capabilities after a newly granted GPS/Bluetooth permission.
-        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this,gpsNeeded), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this,gpsNeeded));
-        if (!isRecording()) notificationManager.onIdlePreview(this, gpsNeeded);
+        ServiceCompat.startForeground(this, TrackRecordingServiceNotificationManager.NOTIFICATION_ID, notificationManager.onSensorsStarted(this,gpsNeeded,isRecording()), de.dennisguse.opentracks.p0.recording.RecordingPermissions.foregroundTypes(this,gpsNeeded));
     }
 
     public synchronized void stopIdleSensors() {

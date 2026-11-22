@@ -1,0 +1,36 @@
+{
+  "source": "289ce602f5a5c3af59155053dc43abd4e2a1ddb3",
+  "run": 44979967128,
+  "artifactId": 14736509442,
+  "artifactSha256": "10edf8a703f7ac194e1bc62705ac4cd9a56e86ea56ad4790389dbe1653a0ca49",
+  "counts": {
+    "helpers": {
+      "tests": 146,
+      "executed": 146,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android": {
+      "tests": 45,
+      "executed": 45,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "fullRegression": "NOT_EXECUTED",
+  "failedMethods": [
+    "P07GpsHandoffTest.finishResetsPreviewAnchorAndNotificationWithoutCreatingOrExtendingAWorkout",
+    "P07GpsHandoffTest.pausedRelocationAndP0ResumeKeepTheSameTrackAndCannotBridgeDistance"
+  ],
+  "cause": "The foreground notification was submitted with previous-role content, then updated separately; actual platform snapshots could observe old workout totals or the idle preview message.",
+  "fix": "Prepare role-appropriate content before the authoritative startForeground packet; retain live workout content on same-role reconciliation; bounded wait for actual NotificationManagerService publication retains exact text assertions."
+}

@@ -31,3 +31,9 @@ P07GpsHandoffTest共6项：真实P0命令与相同Handler/driver、开始时间�
 尚未运行阶段3Android测试、未访问签名密钥、未生成正式APK、未创建Tag/Release。当前只完成静态语法及文件差异检查，不能作为阶段验收。
 
 所有Android构建、测试、签名与发布均由Actions完成；本地不安装SDK。新服务生命周期测试不等于绕过强制停止或系统权限限制；实体GNSS、电池、Xiaomi CIVI5Pro、Redmi Note12Pro+和Magene H303仍需真机验证。
+
+## 第一轮真实失败与修复
+
+源码289ce602f5a5c3af59155053dc43abd4e2a1ddb3 / Run44979967128：Python146/146/0/0/0、JVM167/167/0/0/0，GPS定向45/45/2/0/0；完整API35、地图及额外交付烟测未执行。两项新增通知断言观察到旧角色内容（恢复仍显示预览、结束仍显示旧距离），其余43项通过，原owner/偏好/心率断言无失败。原始XML、gate/helpers和摘要见evidence/run44979967128-failed/。
+
+修复在准备startForeground的单一权威通知包之前设置正确角色内容，同角色正式运动保留已有实时总量，停止后重置角色。通知服务发布本身异步，新增测试有界等待实际NotificationManagerService出现目标文本，原精确文本与常驻断言不变；不新增Ignore、不改原owner/偏好/心率源码。当前仍PENDING，修复源码必须重新执行全部门禁。
