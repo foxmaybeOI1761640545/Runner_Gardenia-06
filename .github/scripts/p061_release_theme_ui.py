@@ -27,7 +27,7 @@ def scrolled_home(tree,page,focus):
         and PACKAGE+':id/p02_home_scroll' in ids
         and PACKAGE+':id/p0_title' not in ids)
 
-def capture(device,dump,screenshot,tap,start,output):
+def capture(device,dump,screenshot,tap,start,output,version=VERSION):
     info=json.loads(Path('dist/build-info.json').read_text());rows=[];schemes=[];batches=[];root='/data/user/0/'+PACKAGE
     pref=root+'/shared_prefs/'+PACKAGE+'_preferences.xml';palettes={x['id']:x for x in json.loads(Path('src/main/assets/gardenia-theme-tokens.json').read_text())['themes']}
     def preferences():return {n.get('name'):n.text if n.tag=='string' else n.get('value') for n in ET.fromstring(device('shell','cat',pref))}
@@ -137,7 +137,7 @@ def capture(device,dump,screenshot,tap,start,output):
                 await_page('appearance');photo(family,mode,'appearance');back('hub');photo(family,mode,'hub')
                 select('Workout and display');await_page('motion');photo(family,mode,'motion');back('hub');select('App information');tree,_=await_page('info')
                 texts={n.get('text') for n in tree.iter('node')}
-                if VERSION not in texts or str(info['versionCode']) not in texts:raise ValueError('Actual formal app info version differs')
+                if version not in texts or str(info['versionCode']) not in texts:raise ValueError('Actual formal app info version differs')
                 expected_label=next(n.text for n in ET.parse('src/main/res/values/p0.xml').getroot() if n.get('name')=='p0_title')
                 if expected_label not in texts:raise ValueError('App information must display the actual Runner Gardenia application label')
                 photo(family,mode,'info');back('hub');back('home');photo(family,mode,'home');tap('p04_route');await_page('offlineMap');time.sleep(1);photo(family,mode,'offlineMap');back('home');tap('p0_devices');await_page('heart');photo(family,mode,'heart');back('home');tap('p0_all_history');await_page('history');photo(family,mode,'history')

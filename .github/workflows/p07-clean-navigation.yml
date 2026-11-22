@@ -2,10 +2,10 @@ name: Clean offline navigation stage gates
 on:
   push:
     branches: [feature/p0-7-to-p1-0-offline-navigation-clean]
-    paths-ignore: ['docs/**', 'AGENTS.md']
+    paths-ignore: ['docs/**', 'AGENTS.md', '.github/p07/visual-approval.json', '.github/p07/publication-approval.json']
   pull_request:
     branches: [feature/p0-6-map-real-validation]
-    paths-ignore: ['docs/**', 'AGENTS.md']
+    paths-ignore: ['docs/**', 'AGENTS.md', '.github/p07/visual-approval.json', '.github/p07/publication-approval.json']
 permissions:
   contents: read
   actions: read
@@ -24,7 +24,7 @@ jobs:
   stage-validation:
     if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.event_name == 'push' && github.ref == 'refs/heads/feature/p0-7-to-p1-0-offline-navigation-clean'
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -33,6 +33,8 @@ jobs:
           persist-credentials: false
       - name: Verify clean ancestry and frozen historical refs
         id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git merge-base --is-ancestor ae68319361c1277e97e4fe9bfc9ae52de88146e5 HEAD
           python3 .github/scripts/p07_stage.py prepare
@@ -66,15 +68,15 @@ jobs:
       - name: Execute original Python helper regressions
         run: python3 .github/scripts/p07_stage.py helpers
       - name: Focused application GPS, untouched ownership/preferences and preparation regressions
-        if: steps.plan.outputs.stage == '2'
+        if: (steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '3')
         run: |
           classes="$(python3 .github/scripts/p07_stage.py gps-classes)"
           timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" "-Pandroid.testInstrumentationRunnerArguments.class=$classes" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
       - name: Require actual nonzero GPS focused results
-        if: steps.plan.outputs.stage == '2'
+        if: (steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '3')
         run: python3 .github/scripts/p07_stage.py gps-focused
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        if: steps.plan.outputs.stage == '2' && success()
+        if: (steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '3') && success()
         with:
           name: Clean-navigation-gps-review-${{ github.run_id }}
           path: build/reports/p07-gps-focused/
@@ -92,10 +94,10 @@ jobs:
           if-no-files-found: error
           retention-days: 90
       - name: Actual denied and granted permissions in independently restarted API35 processes
-        if: steps.plan.outputs.stage == '2'
+        if: (steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '3')
         run: python3 .github/scripts/p07_permission_smoke.py
       - name: Preserve actual permission results and native screenshots before full regression
-        if: steps.plan.outputs.stage == '2' && success()
+        if: (steps.plan.outputs.stage == '2' || steps.plan.outputs.stage == '3') && success()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: Clean-navigation-permissions-${{ github.run_id }}
@@ -105,6 +107,27 @@ jobs:
       - name: Full API35 regression with original GPS ownership assertions
         run: |
           timeout --signal=INT --kill-after=30s 50m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=${{ github.event.pull_request.head.sha || github.sha }}" -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Collect original native and actual map receipts and verify actual GPX 1.1 exports
+        if: steps.plan.outputs.stage == '3'
+        run: |
+          python3 .github/scripts/p07_delivery.py collect
+          python3 .github/scripts/verify_p0_gpx.py
+          python3 .github/scripts/verify_debug_apk.py
+          ./gradlew --no-daemon --no-configuration-cache processReproducibleReleaseManifest
+          python3 .github/scripts/p06_offline.py
+      - name: Actual new-process database, metric, batch and private-map durability in airplane mode
+        if: steps.plan.outputs.stage == '3'
+        env:
+          P05_METRIC_DURABILITY: 'true'
+          P05_BATCH_DURABILITY: 'true'
+        run: |
+          ./gradlew --no-daemon --no-configuration-cache assembleReproducibleDebugAndroidTest -Pp0DurabilityRunner=true
+          python3 .github/scripts/p0_durability.py
+          python3 .github/scripts/p061_map_durability.py
+          python3 .github/scripts/p06_map_durability.py
+      - name: Actual API35 native window helper self-test before signed acceptance
+        if: steps.plan.outputs.stage == '3'
+        run: python3 .github/scripts/check_native_window.py
       - name: Reject missing, empty, failed or new skipped reports
         if: always()
         run: python3 .github/scripts/p07_stage.py gate
@@ -117,6 +140,8 @@ jobs:
             build/test-results/
             build/outputs/androidTest-results/
             build/outputs/**/p0-ui/
+            build/outputs/**/p0-gpx/
+            build/outputs/**/p05-share/
             build/outputs/apk/reproducible/debug/*.apk
             release-plan.json
           if-no-files-found: error

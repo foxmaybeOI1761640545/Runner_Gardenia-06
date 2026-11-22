@@ -43,6 +43,16 @@ def run():
     device('shell','am','force-stop','com.fox.runner.debug')
     if device('shell','pidof','com.fox.runner.debug',check=False):raise ValueError('Target survived force-stop')
    if phases['denied']['pid']==phases['granted']['pid']:raise ValueError('Permission probe did not use new processes')
+   if json.loads(Path('.github/p07/phase.json').read_text())['stage']==3:
+    for permission in ('ACCESS_FINE_LOCATION','ACCESS_COARSE_LOCATION'):device('shell','pm','revoke','com.fox.runner.debug','android.permission.'+permission)
+    device('shell','pm','grant','com.fox.runner.debug','android.permission.BLUETOOTH_CONNECT')
+    raw=device('shell','am','instrument','-w','-r','-e','class','de.dennisguse.opentracks.services.P07RecoveryPermissionTest','-e','expectedRecoveryGpsPermission','denied','-e','timezone','Asia/Singapore','-e','buildCommit',os.environ['GITHUB_SHA'],component,check=False,timeout=120)
+    (out/'recovery-denied.txt').write_text(raw+'\n')
+    if any(s in raw for s in ('FAILURES!!!','INSTRUMENTATION_FAILED','Process crashed')) or re.findall(r'\bOK \((\d+) tests?\)',raw)!=['1'] or not re.search(r'^INSTRUMENTATION_CODE: -1\s*$',raw,re.M):raise ValueError('GPS-denied P0 recovery did not execute successfully')
+    if re.findall(r'^INSTRUMENTATION_STATUS: p07RecoveryActualGpsPermission=(.+)$',raw,re.M)!=['denied']:raise ValueError('Recovery did not use actual GPS denial')
+    pids=re.findall(r'^INSTRUMENTATION_STATUS: p07RecoveryPid=(\d+)\s*$',raw,re.M)
+    if len(pids)!=1 or int(pids[0]) in [p['pid'] for p in phases.values()]:raise ValueError('Recovery permission probe requires another actual process')
+    phases['recovery-denied']={'tests':1,'executed':1,'failures':0,'errors':0,'skipped':0,'pid':int(pids[0]),'actualGpsPermission':'denied','actualBluetoothPermission':'granted','savedWorkoutRetained':True,'p0RecoveryRejected':True}
    proof={'passed':True,'source':os.environ['GITHUB_SHA'],'api':int(device('shell','getprop','ro.build.version.sdk')),'phases':phases,'visualReviewRequired':True}
    if proof['api']!=35:raise ValueError('Wrong actual API')
    (out/'result.json').write_text(json.dumps(proof,indent=2)+'\n')
