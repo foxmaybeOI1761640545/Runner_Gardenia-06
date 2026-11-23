@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" tests="34" skipped="0" failures="0" errors="0" timestamp="2026-11-23T06:05:30.911Z" hostname="ip-10-0-139-88" time="2.793">
+  <properties/>
+  <testcase name="bothCorruptIndexesRebuildStableIdsAndReportLostAlias" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.091"/>
+  <testcase name="corruptRouteCanStillBeDeletedAndRollbackRestoresIdenticalCorruptBytes" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.062"/>
+  <testcase name="repairCannotBlessUnexpectedValidReplacementGeometry" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.029"/>
+  <testcase name="oneRouteRoundTripsWithStableUuidAndMetadata" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.013"/>
+  <testcase name="unknownFutureRouteBlocksRebuildRatherThanDroppingIt" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.01"/>
+  <testcase name="missingUuidNeverDeletesOtherRoutes" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.023"/>
+  <testcase name="killedDeleteRestoresBeforeCommitAndNeverResurrectsAfterCommit" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.272"/>
+  <testcase name="deleteCleansOnlySelectedRouteAndRetainsSiblingStores" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.01"/>
+  <testcase name="invalidBatchEncodingLeavesEveryPreviousRouteIntact" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.008"/>
+  <testcase name="symbolicRouteFileCannotReadOrDeleteOutsideStorage" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.007"/>
+  <testcase name="corruptFileIsVisibleAndCannotReturnFakeGeometry" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.006"/>
+  <testcase name="duplicateSourceIsExplicitAndExtraCopyNeverOverwrites" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.012"/>
+  <testcase name="explicitRepairAdoptsOnlyValidOrphansAndKeepsLocalAliases" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.016"/>
+  <testcase name="newRepositoryInstanceReopensPersistentRoute" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.005"/>
+  <testcase name="invalidOrMalformedAliasCannotChangeOriginalIndex" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.016"/>
+  <testcase name="unpreparedAndRecognizedAtomicTempsAreCleanedWithoutTouchingUnknownFiles" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.01"/>
+  <testcase name="symbolicRootIsRejectedWithoutTouchingTarget" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.0"/>
+  <testcase name="concurrentRepositoryInstancesSerializeWholeTransactions" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.104"/>
+  <testcase name="actualLibraryCapacity1024AcceptsBoundaryAndRejectsNextWithoutDamage" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="1.35"/>
+  <testcase name="cleanupIoAfterAtomicJournalRetirementReportsCommittedRoutesAndRecovers" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.01"/>
+  <testcase name="interruptedOrphanAdoptionNeverDeletesPreexistingOrphan" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.101"/>
+  <testcase name="unknownFutureIndexFailsClosedWithoutReplacingAnything" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.032"/>
+  <testcase name="primaryIndexRecoveryPreservesRenamedAliasAndPersistentNotice" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.027"/>
+  <testcase name="renameChangesOnlyIndexAliasAndSurvivesRestart" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.022"/>
+  <testcase name="killedMultiImportIsAllBeforeOrAllAfterCommitAtEveryCheckpoint" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.355"/>
+  <testcase name="corruptPreparedJournalFailsClosedWithoutIndexRebuild" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.016"/>
+  <testcase name="batchImportRetainsOrderAndSegmentBreaks" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.022"/>
+  <testcase name="normalIoFailureRollsBackBeforeIndexAndReportsCommittedAfterIndex" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.018"/>
+  <testcase name="transactionRecoveryPrecedesRebuildOfBothCorruptIndexes" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.021"/>
+  <testcase name="emptyQueryDoesNotCreateStorageOrData" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.0"/>
+  <testcase name="partialRetiredCleanupNeedsNoJournalAndNeverBlocksCommittedRoutes" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.047"/>
+  <testcase name="missingFileRetainsVisibleMetadataUntilExplicitDelete" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.015"/>
+  <testcase name="killedRenameKeepsOriginalFileAndCorrectAlias" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.055"/>
+  <testcase name="repeatedSelectionIdentityIsRejectedBeforeAnyFormalFile" classname="de.dennisguse.opentracks.p0.routes.RouteRepositoryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

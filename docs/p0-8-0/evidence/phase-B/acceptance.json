@@ -1,0 +1,45 @@
+{
+  "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+  "runId": 45121619436,
+  "artifactId": 14794331155,
+  "artifactSha256": "53504f488b88deb097bc1cdfdb75a95627a086338db1ee6fd6a5e33eea2a1dda",
+  "artifactBytes": 1105303,
+  "tests": {
+    "python": {
+      "tests": 175,
+      "executed": 175,
+      "passed": 175,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 265,
+      "executed": 265,
+      "passed": 265,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "androidFocused": {
+      "tests": 14,
+      "executed": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "nativeTransactions": {
+    "scenarios": 8,
+    "externallyTerminatedProducers": 8,
+    "distinctProcessRecoveryVerifications": 8,
+    "intentionallyInterruptedProducersNotCountedAsPassedJUnit": true
+  },
+  "visualReview": "NOT_APPLICABLE_DATA_ONLY",
+  "phase": "B",
+  "artifactName": "P08-phase-B-45121619436-1",
+  "stageAccepted": true,
+  "rawJUnitVerified": true,
+  "scope": "Independent private route repository/data only; native8+6 and eight actual process deaths. Full legacy API/UI, GPS-following, fixed-signature upgrade and publication remain later phases."
+}
