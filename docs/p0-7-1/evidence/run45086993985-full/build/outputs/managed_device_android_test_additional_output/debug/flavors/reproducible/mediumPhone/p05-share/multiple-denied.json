@@ -1,0 +1,36 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5901,
+  "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+  "mime": "application\/gpx+xml",
+  "flags": 268435456,
+  "clip": [],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460833.gpx",
+      "permission": -1,
+      "read": false,
+      "errorClass": "java.lang.SecurityException"
+    },
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460834.gpx",
+      "permission": -1,
+      "read": false,
+      "errorClass": "java.lang.SecurityException"
+    },
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460835.gpx",
+      "permission": -1,
+      "read": false,
+      "errorClass": "java.lang.SecurityException"
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2237,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": true,
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962"
+}

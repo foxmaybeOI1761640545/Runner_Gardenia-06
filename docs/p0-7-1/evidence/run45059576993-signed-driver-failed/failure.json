@@ -1,0 +1,20 @@
+{
+  "runId": 45059576993,
+  "conclusion": "failure",
+  "source": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "workflowCommit": "9eab00050ac93edb941b22fe4634948a09c4602d",
+  "fixedSignatureAndBuildPassed": true,
+  "runtimeGatePassed": false,
+  "publicationAttempted": false,
+  "p08Started": false,
+  "candidateArtifact": {
+    "id": 14769530279,
+    "sha256": "e1cd094feaf3e97fccad0fa7fe84c9ae8c6aa153ae8781b487e53afa46c38504"
+  },
+  "reportsArtifact": {
+    "id": 14769162284,
+    "sha256": "c1a7cf3ab0f43ca1ef58a1660c336837796caec3eca3925d2fcc92dba45a3f82"
+  },
+  "cause": "adb am start -W timed out after 40s when reordering an already drawn Activity. Log shows real TO_BACK then TO_FRONT and final native focus/screenshot shows P0Activity Recording; failure was shell launch wait, not the actual window predicate. Runtime acceptance stopped and has not been counted as passed.",
+  "resolution": "Nonblocking am start; retain independent actual-background and actual-Home-window bounded assertions, plus subsequent recording checks. No production code changes. Full source-bound gates and signing/runtime will rerun."
+}

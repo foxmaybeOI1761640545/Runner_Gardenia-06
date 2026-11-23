@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Independent downloaded artifact identity, manifest, immutable APK bytes and source-bound runtime receipts; cryptographic Android signature/alignment checks executed on Actions. Human native visual review is separate.",
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "buildRunId": "45092892094",
+  "buildWorkflowCommit": "348b225c68e90f095fc4f9207ba872c9205bed66",
+  "versionName": "v0.1.0-p0.7.1",
+  "versionCode": 6781,
+  "apkSha256": "1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759",
+  "apkBytes": 3238755,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "payloadFiles": 15,
+  "signedRootBackChecks": 34,
+  "upgradeFromVersionCode": 6780,
+  "physicalDevices": "NEEDS_DEVICE_VALIDATION"
+}

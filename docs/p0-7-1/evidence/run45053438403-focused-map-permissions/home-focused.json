@@ -1,0 +1,170 @@
+{
+  "source": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "run": "45053438403",
+  "scope": "P07HomeMapTest only; full regression still required",
+  "tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 2,
+    "executed": 2,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "screenshots": [
+    {
+      "file": "p07-home-inside-bounds-no-features.png",
+      "sha256": "24842a4e847f84e6200fd7339134b662fb9873999886664021e8e92aeb9063b8"
+    },
+    {
+      "file": "p07-home-no-map.png",
+      "sha256": "5215ffa34864bb19a49b144262ec72d14bc3eca021ce65f880cc91108e76092d"
+    },
+    {
+      "file": "p07-home-outside-map.png",
+      "sha256": "bca315beb01a5854e5d587a29e19d29abce77f86b1d535fe27229c4d026f0f32"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.0.png",
+      "sha256": "2644d8ccb984a3298d549fb02d6b1a36a0b6617af4472e805695bbbd6d505d29"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-360-font1.4.png",
+      "sha256": "f8fe4722e9534671546110a447efe190e2d83c71f27e77d12910d6260b5b3b47"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.0.png",
+      "sha256": "a92d8f1161173197b0f374a2fa77a55b5417831c1503503eec80b8f75378558d"
+    },
+    {
+      "file": "p07-home-real-explorer-dark-390-font1.4.png",
+      "sha256": "cc523c12f8e3f9b5f12163814c43efecff0161014a43e03f584e7eab8157d14b"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.0.png",
+      "sha256": "e00e5e3d85c7fbc0ebd4157f00636106f54514b6ffc9ff70fc2acb92b4349ab9"
+    },
+    {
+      "file": "p07-home-real-explorer-light-360-font1.4.png",
+      "sha256": "aaf8aa993a63bc8341eea4e47c659353e437adc82b6bd0ab969d0a97773bc893"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.0.png",
+      "sha256": "117a0c10ecf2547fb6ee4a50b9a7f2842b65179d4ac7309f50d776538357db3f"
+    },
+    {
+      "file": "p07-home-real-explorer-light-390-font1.4.png",
+      "sha256": "348e4e1aaa5400775494c4040ddaa8fd156b374ec27dc00d25b4afd93204d0ef"
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.0.png",
+      "sha256": "d13aece62062647a389e3d53e3535b64044041e7e423ab1430051466c65c55a8"
+    },
+    {
+      "file": "p07-home-real-neon-dark-360-font1.4.png",
+      "sha256": "4a1f94233ba3e7cbf2be7b28c80288643ae46ec5b9bd63d4e4bf81fb0f8fa337"
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.0.png",
+      "sha256": "f191b8033449ed5abc96e89feace28466e65a7547d826e6640245ceb24126e41"
+    },
+    {
+      "file": "p07-home-real-neon-dark-390-font1.4.png",
+      "sha256": "121d13dd4e5975b1d38c50d1c07a21d7b9e6edd0030d03550d021fe07e4d5415"
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.0.png",
+      "sha256": "fee9dee6c1ed197da9e280709c0ca3fb1d295ee54f0289a966de4babeb357f6a"
+    },
+    {
+      "file": "p07-home-real-neon-light-360-font1.4.png",
+      "sha256": "d436219c5c2d30c5e76b3bba9f25b6a1c154d6d310871bc9fb0d45841a296ee7"
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.0.png",
+      "sha256": "1e4026896d78c25911bebff090fea58b0f290b6e3878d0ec22a5abc39ba7b101"
+    },
+    {
+      "file": "p07-home-real-neon-light-390-font1.4.png",
+      "sha256": "e0cded6733ce577d326b0d3787045d7bcd7baa7cf2875adb44fc5ff52aaa1c75"
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.0.png",
+      "sha256": "fa9e8a45100dea3653b58c67145c7a22f69446a29df7f6353da9eb599c1ebca9"
+    },
+    {
+      "file": "p07-home-real-precision-dark-360-font1.4.png",
+      "sha256": "3e83425e66f32543350e0b5848aa554de573d9d46d72414076ae102f53586e06"
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.0.png",
+      "sha256": "04079f893d18fe8d61eb95f43580a29f01ad31c6e6413519c9cdc17c4acd4824"
+    },
+    {
+      "file": "p07-home-real-precision-dark-390-font1.4.png",
+      "sha256": "ff8ce30c67b8683ca34854799e314cfdc54661dff5adbab6f78f9d8ee2d22a3c"
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.0.png",
+      "sha256": "7a3823752d34246cade7dca05cd69b43b5396198f4cfe279250dd33a6676da3f"
+    },
+    {
+      "file": "p07-home-real-precision-light-360-font1.4.png",
+      "sha256": "2d83f8e424d94a18559f37a7669ae833de1d2dc97da0cdeb2c0b30703c1599bb"
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.0.png",
+      "sha256": "a0d02bc37d4931f4e027ea4c84c1bf8beb3097b2b1ea7f2cf99ba744d550a45e"
+    },
+    {
+      "file": "p07-home-real-precision-light-390-font1.4.png",
+      "sha256": "61c9a0eb28b95c03705bccd7661da54502397beb651b1257143abef49766fe52"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.0.png",
+      "sha256": "c10418b7bd1141d9335f2c450045462911b96ed60f176158728c74ea54c3ffda"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-360-font1.4.png",
+      "sha256": "982870e8495e8b3a7e6fc07c0817eb431f4b3c2a03e0079eefb6c38b3229aa7a"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.0.png",
+      "sha256": "492b50584469c855c089fa928a3942b985d4de5b477f283336557f6540fcf4ff"
+    },
+    {
+      "file": "p07-home-real-quiet-dark-390-font1.4.png",
+      "sha256": "83e15862352a3023d017303d98c5d5d18cac72825a71e2a83d69590d0251b4a0"
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.0.png",
+      "sha256": "d1a6a3d6fafd1b686bae069342c9553a096e419e7ce0f14972b2821d24a2f4d1"
+    },
+    {
+      "file": "p07-home-real-quiet-light-360-font1.4.png",
+      "sha256": "fdab8bcf8a6ab0c67c4e211f82c7fbdc3f0c6e159ac2e9467eab40204b7bb391"
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.0.png",
+      "sha256": "9c5b2a8a736e4a0b70cd6934cb13f791b40a28282d2eb736922a742ad58d224c"
+    },
+    {
+      "file": "p07-home-real-quiet-light-390-font1.4.png",
+      "sha256": "52b855542d5b002a685e831dc0cca0bbf14649e0c2c909500967ce621322077b"
+    }
+  ],
+  "visualReviewRequired": true,
+  "stageAccepted": false
+}

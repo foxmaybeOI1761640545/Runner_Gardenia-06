@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "api": 35,
+  "timezone": "Asia\/Singapore",
+  "family": "precision",
+  "appearance": "light",
+  "passed": true,
+  "physicalBleTested": false,
+  "syntheticNotifications": true,
+  "systemSwitchPreservesRecording": true,
+  "systemSwitchPreservesGps": true,
+  "systemSwitchPreservesConnection": true,
+  "viewModelRetained": true,
+  "pausedStatePreserved": true,
+  "waitingCreatesNoWorkout": true,
+  "dialogRestored": true,
+  "familySwitchPreservesRecording": true,
+  "screenshots": [
+    {
+      "file": "p03-precision-light-home.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "home",
+      "sha256": "674371fb16b999ffdf857ae35535ccf11c5408f59c72cc7728902ede6b794852"
+    },
+    {
+      "file": "p03-precision-light-recording.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "recording",
+      "sha256": "d488f56b8d753168d8d93941c1cc00e0cb303ea238cfb4b289948da95bbe47a7"
+    },
+    {
+      "file": "p03-precision-light-heart.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "heart",
+      "sha256": "5c68b752b454927f4453d6d3e03e91060ed01ea32be0571834b1aae0044dd5c0"
+    },
+    {
+      "file": "p03-precision-light-history.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "history",
+      "sha256": "6ee02b2cab2117b6e9f91594c3614fe537d1534eaae5c8e19324d1001f58ce58"
+    },
+    {
+      "file": "p03-precision-light-detail.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "detail",
+      "sha256": "23a7f28315d0c49cd5b1704c98ec546a7184b162b983a4943ba9cc4cb383b097"
+    },
+    {
+      "file": "p03-precision-light-dialog.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "dialog",
+      "sha256": "46fced5a9dc646fd2eb3aa58bf643d507e8e993bfb4b065d9be27ae2cdace521"
+    },
+    {
+      "file": "p03-precision-light-settings.png",
+      "family": "precision",
+      "nightMode": 16,
+      "page": "settings",
+      "sha256": "900551ca1fdb7639246f9abbc5920a643355ca8666b4155978d78f1228fde358"
+    }
+  ]
+}

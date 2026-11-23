@@ -1,0 +1,875 @@
+{
+  "baselineDeliveryHead": "cf679d7d7c5870ace7aec0a68b356fc303997273",
+  "candidateSource": "00e7904962e6847bcda6c0eda74966a873717152",
+  "mainTree": "e3383494efcaeb44b2f09024379cac5e4361eaf5",
+  "productionFilesChanged": [
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/app/P05SettingsSectionFragment.java",
+      "added": 1,
+      "removed": 1,
+      "sha256": "39aa42ae5d73ce4d43fa062254832d464bc00a58ed2edbe0f783033670301945"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/app/P0Activity.java",
+      "added": 1,
+      "removed": 1,
+      "sha256": "50351bf10637254e1adc985764f240131d941b127b1af0149ef26ec23c52b6f1"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/app/P0HistoryActivity.java",
+      "added": 8,
+      "removed": 2,
+      "sha256": "ea2198708e8217f3248b0e59a1c7e965378e979045203aa29bfa74af14678373"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/app/P0Navigation.java",
+      "added": 28,
+      "removed": 1,
+      "sha256": "28a9d481c83dd586f8d28edc3c79dd4a65c6b440cf563f311ae97d7697b0e3f2"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/app/P0SettingsActivity.java",
+      "added": 1,
+      "removed": 1,
+      "sha256": "9f8b55032243e4e2884637ea6c0f885c67b2dcd012750292ea25f399ddc8806e"
+    }
+  ],
+  "protectedOriginalProductionFiles": [
+    {
+      "file": "src/main/AndroidManifest.xml",
+      "sha256": "d42b0803be125624b74a776d102843b7f9faa2479923c859db5879a8c2e72e18"
+    },
+    {
+      "file": "src/main/assets/gardenia-theme-tokens.json",
+      "sha256": "40a0edbdd3929df2c3e4b3481cade16e7fb27d078dd3c75da552e2479bab65c0"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/AndroidSVG-Apache-2.0.txt",
+      "sha256": "460c79bc3adceee4521e107a267d9555368442d97e383d0c780eea6482c57eee"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/AndroidSVG-NOTICE.txt",
+      "sha256": "45804dd98d6a391c3e22e67d61c04d8f40a8a4adcb4024dffa644f36653481b3"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/Mapsforge-0.25.0-README.md",
+      "sha256": "42a52c6f5aeb0cbf5807356c71f1eb070726fc0636de6563d84d3e3a54c3ea10"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/Mapsforge-GPL-3.0.txt",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/Mapsforge-LGPL-3.0.txt",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    {
+      "file": "src/main/assets/p06-licenses/OSM-data-NOTICE.txt",
+      "sha256": "ff781af6ac0a540d0b55a3ed097690760e254717d09e88dd80546a481fd51204"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/AggregatedStatistic.java",
+      "sha256": "c2197848677d57d3926bcc45a932ba652a4f52686610cbea97d98399add6054a"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/ContentProviderUtils.java",
+      "sha256": "811253b869b62b141fc11ee562508a78bb617d99116a2dbb16298f514dd415ff"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/CustomContentProvider.java",
+      "sha256": "217656cb5e0ebad2a36023dd92141bca5d1bcd0133b7562e8c90666633075cc8"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/CustomSQLiteOpenHelper.java",
+      "sha256": "9884ac2f4cd92633976d347d39a4025223f1fdeb2d1bef675b919ad017e74572"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/HeartRateRepository.java",
+      "sha256": "b7d8db07847542ff32bb8aaa2722c2cb56c55ea02e08e44487f7dc156272d957"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/MarkerIterator.java",
+      "sha256": "a1d8c16467a7c632eba8210b3bcd10e20f85f661e9ccfeaacc805a4f46523d0f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/ShareContentProvider.java",
+      "sha256": "f888b8faab5f7b5024e7c4ae91801c3e111f849a6c1f3e7639a8d9a0ced11d5f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/TrackDataHub.java",
+      "sha256": "c87a180f524cadf020a03e43f10f651c6fbc547f9854b293a117a685ec87f8f0"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/TrackListIterator.java",
+      "sha256": "93c1c2ca9732ee786ca38c7e70e2e85678362d5b6017ac8e916177c060398ec9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/TrackPointIterator.java",
+      "sha256": "8d476890e49ab4ac3f4f113fd1e68a23cc4b3ec80e7114998450d7556d6019d9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/TrackSelection.java",
+      "sha256": "09cebed1749f32d7320b5e1e4af47a17c1082b509a8a59ff3701fb1fe4872f35"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/UUIDUtils.java",
+      "sha256": "5a7f4cdcba01b1ad5c0385fb7fe392d99fc28504eb2003d72556d8a2648c64ea"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/ActivityIcon.java",
+      "sha256": "c933c5dcd25100ce7ceeb9a3aa0d85219f12a7eaefec85e1ec2449a8512a9e49"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/ActivityType.java",
+      "sha256": "628f1bb50509c01e5eb3e5b7bab3a76836e00e39c74685ace1f9b117baaed0b3"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Altitude.java",
+      "sha256": "78e13530911f731e93ef50892c02ed6bdc578bcbdbae4ae4c9534078f0b8f3f3"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/AltitudeExtremities.java",
+      "sha256": "e184275620b0102bd4ce42a43acb8bcd9fc8275e259b7cce227362028e61ee95"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/AltitudeGainLoss.java",
+      "sha256": "a2a1cb2634c6f6c202a1459fec474eeb247c9183f30d2701d799e8a7f5cc77f5"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/AtmosphericPressure.java",
+      "sha256": "00ddecf80687fcedb0db9bdb7cd9968678d79ac8a5ea7f56f34f3582b56d3660"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/BatteryLevel.java",
+      "sha256": "d948887f3d1fb4b53adc64b693c0ed0eed2eb45e0aab6789b1e15e2a1a259033"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Cadence.java",
+      "sha256": "936fb514b3e8b485bb060dff1d64d1d253d8c6f6609da2c808ab69b0914ad98b"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Distance.java",
+      "sha256": "135ccf6a1b0a2001874d03504bcc71d030790963622d896748b183ab412a32f0"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/DistanceFormatter.java",
+      "sha256": "7872d5bdfbc286b903b874b36ab87ad79270959c3123d168dc57157ca9f3d390"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/HeartRate.java",
+      "sha256": "84cb7625e5463556781cd85ee06ec68b3b43ffb89cc8d602f7c502c32c01fd9d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/HeartRateSample.java",
+      "sha256": "ada45636eaecac286de083e54cc49ae8d83618293601c5435fc4d030e9337fd3"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/HeartRateZones.java",
+      "sha256": "54bdbcd7515e64312c80fa603726c21c69b9bfffa835d830a685a3dd86afb392"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Marker.java",
+      "sha256": "adb4ae5c38c50d3b8c39215f766aedd3523e2870b511afdc34b07f2b034d636d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/MarkerBuilder.java",
+      "sha256": "48c0981982a457049fe7a19b593663b8951629e97b4b56cdbd51f14407567e0c"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Position.java",
+      "sha256": "b38e0256a526172b4d9f5b7050aafcd0c72cc829bd77b7860a0731100f3d91bf"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Power.java",
+      "sha256": "72b0fcde65174224afff9cd9ae052412a8338a0e2e9aea14e2d1c82419f8a7b9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Speed.java",
+      "sha256": "981ce23e7e0a1e1d678a51b5619c710c6cf0e0755c490b14e4a178002cefb544"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/SpeedFormatter.java",
+      "sha256": "0ebf5721431024fe97f42c15cb9eedf6a133315512a55414fb00692f0bfda192"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Statistics.java",
+      "sha256": "bf53b94f016809b77543f462eff204bc5602f69680e1410773cb88b9d50bdf8d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Temperature.java",
+      "sha256": "9028f03f07b407aa071392db96bab0a7db29c5cd712d7db65b6449124bf29756"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/Track.java",
+      "sha256": "0d8efc04b4e8bb6e68ad415f00865323d0b355f5d2ffb4048b7dd0b30627f766"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/TrackBuilder.java",
+      "sha256": "195bbf4e80d18ba1dd91472072574357b975b7e6fc1e6a28a2a472f70bee1210"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/models/TrackPoint.java",
+      "sha256": "63392b7bcc0546480b0a3a7af254ac2f5dd6a1856073d48bf1a06340512ed7dd"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/statistics/ExtremityMonitor.java",
+      "sha256": "1dca270c8a6699a97041be2358da672c5fa4d1955f1d197b758a6db00fb52e4d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/statistics/SegmentStatisticUpdater.java",
+      "sha256": "8c499143dd22648a89e9690fbdb910fb6526c7bdfcd0432a2c5c4028c0068c8f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/statistics/SensorStatistics.java",
+      "sha256": "321d9b0b3883d4f2b382e5e51873d5f44b982413068868eda432e72addad5532"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/statistics/TrackStatisticsUpdater.java",
+      "sha256": "59f85426ae4d6a098e811de4b5554a612293c8cdd88374fd1e3e03ef14181108"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/tables/HeartRateSamplesColumns.java",
+      "sha256": "9a0cd4d8704214440fb313585fd6cf99a53dfad37ea4768df0033eafcb1bb4c9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/tables/MarkerColumns.java",
+      "sha256": "76bb5f9d197991076adcb4b22c340ca7b2ddce1bf168f93488f3194f4f6caf20"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/tables/TrackPointsColumns.java",
+      "sha256": "cb1b624d75d6f639e1303e508ee44ff18ef9bcc5d5cbedf092e2621f505496de"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/data/tables/TracksColumns.java",
+      "sha256": "109369a1964f6edc5c29391d766748c00000dbb4d0a2f6bdcef352d19d8cfb95"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/ErrorListDialog.java",
+      "sha256": "6885831fc95345a97d852488aec6d5d2bf7b17b138f3b420a6b6e8d42a8cf1e1"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/TrackFileFormat.java",
+      "sha256": "3a21c0e9033457f600c27cceef65db69dc660451b69673bd9bd966a95e3d2339"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/TrackFilenameGenerator.java",
+      "sha256": "f308df04b1026d463f0c01b4745b1a5709adc650bbd17880e52c1b043e1c7004"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/CSVTrackExporter.java",
+      "sha256": "80a160f570a7cf1d30beed1958501a18d7c922230d8793affc8185fd8506edf9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/ExportActivity.java",
+      "sha256": "3a801abf80b07ebd4368527768d159c2469c84819167071516020fcd3b805866"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/ExportTask.java",
+      "sha256": "ca95b54d6957aed46a5670c7a0e4debc94833e7d4872ce70c5a33eabaccb9cc7"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/ExportUtils.java",
+      "sha256": "925ac491998b41bc574df659fe6b26cbfbb582aea02db19c7da80db3053bcc6d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/ExportWorker.java",
+      "sha256": "e416715de4a9fcdf41b8805d2dab518152638bed33236b34af284b911fe0dfda"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/GPXTrackExporter.java",
+      "sha256": "8985d51b7367938e885d4763b7545762e2a09e96c1b19e46675549b7a97c4c29"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/KMLTrackExporter.java",
+      "sha256": "230e4a17d1b1443d71e51aac7ccba5e4b89b0b894b321f491a7f8173e3e59f3e"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/KMZTrackExporter.java",
+      "sha256": "055ba1864e4a3d871819864d24dee38e28436755665752f5893a3b351cf372b7"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/exporter/TrackExporter.java",
+      "sha256": "18bf5cc1a3d2fb6288cdd45ea682a7bb3a66b3072ff871c486f42672e0293134"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/DirectoryChooserActivity.java",
+      "sha256": "2566c7c25ee997e0d92c16893da6021199af899a252fb17e7422d5aabb95af5f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/GPXTrackImporter.java",
+      "sha256": "8d57750b3c8fae9e8a48b10214ea48b345a9f81ae8de1a36659c7bade2925eff"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/ImportActivity.java",
+      "sha256": "a1b4bdfc0d88bb93690017e2bd5ac8d81b8139b499d639387f1a7885e03e6b24"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/ImportAlreadyExistsException.java",
+      "sha256": "0b03563a116ecc17bab95f5910430bed9254669b081647e81f0813928eeb95bb"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/ImportParserException.java",
+      "sha256": "f408192de618c769bbfcf9d439386852256f763c1a3d1556bdfa5d9ed0706f07"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/ImportWorker.java",
+      "sha256": "caa63a2c8c97f5ade2dbb4f1c56f55c17fa42b082b832cdbb2e5726b99730b7c"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/Importer.java",
+      "sha256": "b7946eab3d67364326ffa7574426c6b5e1681a008e72fd1a295614337f9001db"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/KMLTrackImporter.java",
+      "sha256": "3233b9d406c9905e6e22a8737f287e93e20845044e69197100cffe76d55000e0"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/KMZTrackImporter.java",
+      "sha256": "c4402c922e90c6fd043a4dc2065ce17467580e418373627933a674c36411d716"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/ParsingException.java",
+      "sha256": "17583b703c98d799431456ad32307e9f3b5ee8a15d43853ae4b39434abe69ab7"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/TrackImporter.java",
+      "sha256": "78dc5453328a9ec7448ec091335de507cba7730e4a79be721bd1173ad1c30b2f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/file/importer/XMLImporter.java",
+      "sha256": "137342287b6f85914cb91b2a5a81c0914f3f144b47154d17278a1efbdf71f969"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/healthconnect/exporter/HealthConnectUtils.java",
+      "sha256": "73a15afcfd7d5d7554da02bb1b9aca1e53887e144d78e709a8bec4bff8554c79"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/io/healthconnect/exporter/HealthConnectWorker.java",
+      "sha256": "3482815a76eec870aec56b00e61d7aa980532c3543031ccaea18729e6610d999"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/ble/HeartRateCommands.java",
+      "sha256": "6a7774a3649ad9436010703251fac3b29688275fb7d6dbf9a546b8e98d0bc6f8"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/ble/P0HeartRatePreference.java",
+      "sha256": "6a86b0bb8c0fe845516bd44add5bb012f3f37d9a3ed5c08c8fa8284f503b4f93"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/gps/ForegroundGpsController.java",
+      "sha256": "5cc617c0fd2e8b36c1ed1de2a2b06494bba96fafdfead40e796897a9ac9a20df"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/gps/GpsMotionFilter.java",
+      "sha256": "05bbb815d97d7f09275f3ada009912fc9bf5e162494b154a6ed083dbd19ffdc9"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/gps/GpsPreparation.java",
+      "sha256": "e523d105f69fcc60c3eed0bc8ab0c37037022bd5293dc8f19a366383451d6ac4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/gps/GpsReadiness.java",
+      "sha256": "5af6e4ce61b821e0226483c257433c48196fd3954d490294c209f690b94f670a"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/gps/MotionFormat.java",
+      "sha256": "36c969eacdbdeeafb6fa129e463c6fc8ebcd12902c3eef06911f8f6986121947"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/MapDiagnostics.java",
+      "sha256": "4ba1a4158464011eb521bf0a02f03fac690442709f24676db62d17ced17aae41"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/MapRenderBudget.java",
+      "sha256": "87566e239af8c95a81507f25d91e59e23e11b57379071dcf2bb846888f3338b4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/MapRouteSegments.java",
+      "sha256": "e3518349040d3c8366bd6879cc85d9cd0ec0702abccaac7bfe35795c5ef1db7d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/MapViewport.java",
+      "sha256": "0b32127bd5b5902270d16b40964de028eb7ad12276bba9555c89cf7a161ddc85"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/OfflineMapRepository.java",
+      "sha256": "30838a9193b845f4231dbe117f5714f6338d1d8886eefd0795a15e0cb244dc6a"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/OfflineMapView.java",
+      "sha256": "ea413739ff30ffd514b934e757f02efdb86048782c21bb6972d0322a5376d155"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/p0/map/P06MapActivity.java",
+      "sha256": "6de458b5efc2852ee46b1077a0789d4c3c10b21f6e8dff968227658a73278eb3"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/AltitudeChangeHandler.java",
+      "sha256": "47e154c68be5bbddec8f2d23582016356831326c6d81935b9951d3615c9abb29"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/BluetoothUtils.java",
+      "sha256": "8ba387863f84190bac29415b6ae7e0ebed9a27948c87457341cafeaeaadd6ec8"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/CyclingCadenceHandler.java",
+      "sha256": "03eaa6384312f0970f700ed346f4c8481b65b83d2e7dcc5699f6b2b6f69ad2af"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/CyclingDistanceSpeedHandler.java",
+      "sha256": "9925a9d87934b67edac63bfbcef3bfbbd5e17c65545f3c7afcd628e661ae797a"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/CyclingPowerHandler.java",
+      "sha256": "3c01b8d41109260f99038bd25148a163572b6fa04988e30ec3899fcdffcb56a6"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/GpsHandler.java",
+      "sha256": "99de0aeab6ea6be0b0574665390996b59443775a71cda164588a20d189b42639"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/GpsStatusManager.java",
+      "sha256": "1d2d6b8901d2824ce95459415d028e2548c9bd6d0194ce89aa6db136398c5ea4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/GpsStatusValue.java",
+      "sha256": "e867745c1531dfefaa9ef5d0cc8c801a210ae685defb21477fe6bf7559c7ae4e"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/HeartRateHandler.java",
+      "sha256": "1c0f2fd05b159cf46517b09f87641c00416df146d5b1ad6b5ff2d48766910ff8"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/HeartRatePreview.java",
+      "sha256": "3a486c6060fd894060eb6cf1e538fdc1aeabc5c39d4cc100d982ab205fb3ae74"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/HeartRateStatus.java",
+      "sha256": "ee81a9179c215d8ed2933aff9219ca862dfc1d593f6e1b92f5871aaeb58e4816"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/PressureSensorUtils.java",
+      "sha256": "449fbf788cb5e38e878381b829f54f28f35a4524adc9129df49a2cbdc1757030"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/RunningSpeedCadenceDistanceHandler.java",
+      "sha256": "a16d29bded6fca98f7bbbbcaa3088ff890f21d15e1c3ee8f6678e5855fedb9f5"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/SensorHandler.java",
+      "sha256": "e27cfbcf5037c515c2dff97e0f4f17372dfd3c64204ca67ff292616dca355701"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/SensorManager.java",
+      "sha256": "c6878672d209eb0945181eaab7555858af2784467fb75bcaffbcbe9ee8e1165d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/ServiceMeasurementUUID.java",
+      "sha256": "b6a3017b9179e0a06875daf20eb85798487b56c958c1152d6e7afd3322286ae4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/TemperatureHandler.java",
+      "sha256": "3579d140c0fb823450aac0a5ae53065e11d1c962feac1fc6ab4cd048547848e1"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/UintUtils.java",
+      "sha256": "42521e5c8f869c2a7e3a3568ac96607c98b48ab95606605382cbd12f9cae7565"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BarometerBluetooth.java",
+      "sha256": "c062dacfa3e742e53b8e78b7b644ec3d233078148fec53568c987154fe258b39"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BarometerInternal.java",
+      "sha256": "8f478c75a26c4989210becd43629354ffa682c921523b0093e171dfeaf647116"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BleConnectionSession.java",
+      "sha256": "b9bf31b7ac93d3625aaffd6993dfba2c0742584f8864c6be249fdfda537a136f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BleScanSession.java",
+      "sha256": "7366fc3cf9a50541bc4d82a1ceed009f8388be6376cd3f6883a8e01a43039e49"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BluetoothDriver.java",
+      "sha256": "443be157f702ea2bd35dd4e89ec77dd1bfa6060f057118a48074cb6653099b39"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BluetoothPermissionPolicy.java",
+      "sha256": "baa444779d110efbae22c75f27a15e05ae74f6e8fd9a6af937293f3216d3cb0d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/BoschEbikeParser.java",
+      "sha256": "337cb461d30e1b20c3f2934821d72b3638381720d5e476d8a8e0f822b5b960c6"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/CyclingCadenceBluetooth.java",
+      "sha256": "bbe78489c4794b3bcbad0f108bf1a11bd5f039101436be939ad82fb690d915c1"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/CyclingDistanceSpeedBluetooth.java",
+      "sha256": "6f07544eeebc10425dc004ab65062d94fffddce8d5cd64af410602680529e356"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/CyclingPowerBluetooth.java",
+      "sha256": "8e6919723980944065c45d86bddce3e2ed73996e89178573c183ead69c7c3f2b"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/Driver.java",
+      "sha256": "e7dc489894e9f380b83b681b9045930605f4fa070aedd84f55cd08ced4367b9c"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/DriverObserver.java",
+      "sha256": "5df179dab88829fe56bf83f928d9f637f73ba44c4a6242eea880ad555422b3ac"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/GpsInternal.java",
+      "sha256": "35787b9cdf80c643cba5ca62c9c67e0c9d7c205c68cde03f5ab295dc44160e5f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/HeartRateBluetooth.java",
+      "sha256": "16814ed97eb20df5789127871de2a8f8a1cd61bd86f83b1e8815e516598dad9c"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/HeartRateMeasurement.java",
+      "sha256": "56c86774c2b124e0846246f87d8db701fe82ac56ad3e3a95a49c4041e6216109"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/RunningSpeedAndCadenceBluetooth.java",
+      "sha256": "735613234722b393e45acdac4129a693ad7d76fe92a40b8983aa6a9795fb9cdd"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/SensorType.java",
+      "sha256": "4a0e868a188c0949879181541dabc247a1ec4fc191d35a0e6d807547e7e6e56d"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/driver/TemperatureBluetooth.java",
+      "sha256": "120b6566333122dc3ab030b9840cb25840f6c936e0036eede8cacc7c048ce224"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/Aggregator.java",
+      "sha256": "460e89456520924b429da01135fc8bec97db50b7139c72d2c01dd81b568ba820"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorBarometer.java",
+      "sha256": "43ac2ecd3569db93128cb0e78a82a266cc91b9c814ed3d3ad4a97e4e530c9fa6"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorCyclingCadence.java",
+      "sha256": "8d4071b965fb5d158ce27b17fd5c45f704b1ceec60f382ddd32d7cc1371763f2"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorCyclingDistanceSpeed.java",
+      "sha256": "5c2bfaefe0f0eaf044cd1ae242829cc63a3dc17e7cea33a3f4cd286de6e66be4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorCyclingPower.java",
+      "sha256": "8728a93d50dc3ec9345ca29ad5cda22b5f54160410b7a1ab4a7b706c9cf93f23"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorGPS.java",
+      "sha256": "50fcf310b8446614f942ab8e7e244f49e5cffb7946bbc10423b043e53838d4cc"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorHeartRate.java",
+      "sha256": "ba324e3004080c093fdd69966ef7423565d23f10e43f428bd79b832dd7b05ee3"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorRunning.java",
+      "sha256": "5b33823e75be55118c303df4b216ab838482969a94be7b9884e167b2e17202b1"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/AggregatorTemperature.java",
+      "sha256": "2838e8b93e3501a85b97451f21fad97e07c54f2feca453e8fe17f39941a9a149"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/SensorData.java",
+      "sha256": "092f6525e01cdaf55af759fb29b7d9e48c6f3d76cceeae1be7f9f94bbc58cfeb"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/sensors/sensorData/SensorDataSet.java",
+      "sha256": "cbdf667d1c6683742986356dc119e157a5f21367ea9bb36fa8891518372d0dcf"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/MissingPermissionException.java",
+      "sha256": "05c06711b9d4576b0f9d19900b2abfade5e09499c03ecfa719fcd8b08f1c42f5"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/RecordingData.java",
+      "sha256": "ae63c8c37a713134aa9488d193c8f96dbf6c3c0bd4c3dd53d33d6122eba221c7"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/RecordingStatus.java",
+      "sha256": "61e2ad689abef907b577d991c266df7f77ba1850e2241a49b977d51ba87e0ceb"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackDeletionWorker.java",
+      "sha256": "80a7d4e1243f38cf25904a0f2e71f6d25eca7200b1b2b960e2bda6f68a1e1633"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackIdStorage.java",
+      "sha256": "56e101105d44f726df02b404e222287d1d0991575f3feab32bb85165a432e0ba"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackRecordingManager.java",
+      "sha256": "dbf67fadb3e67e28ad7af8b6acee22c1fd057b4784af17a46a3d83047df0a037"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackRecordingService.java",
+      "sha256": "852f62cbf811b77c334aa48c98e2e5aeafbc1d23131d8fe771031a350c914ee5"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackRecordingServiceConnection.java",
+      "sha256": "8e70e6fb07b13fbc84480eac0ea8dfade907c1c4e5c0a7a31e930a9721da911a"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/TrackRecordingServiceNotificationManager.java",
+      "sha256": "f28d69b0ca940df0f952bdf5ed43e223cd1d42107824aefe76234d7136839638"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/announcement/TTSManager.java",
+      "sha256": "40b617dc07287ea8121fffd286614962557d89f11e2e633a85702503a4c14a92"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/announcement/VoiceAnnouncementManager.java",
+      "sha256": "33b5f843e67d76625213e074762ffc063c3dcf80d4cb94ca0a1e09652e07107f"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/announcement/VoiceAnnouncementUtils.java",
+      "sha256": "7df03d80b092d6cd88e70bbc70aa47a3beda3decbb685277869ee6b9e60c126e"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/handlers/AltitudeCorrectionManager.java",
+      "sha256": "1a803dd3ed222ecff81a86e8eb0cf2aa7964a8dc1c9b3654466db2fc81adfad4"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/handlers/MonotonicClock.java",
+      "sha256": "55fc5714713c1039dab078b6643f53b2bce98c4c1286a41743b3b75f03a6fe07"
+    },
+    {
+      "file": "src/main/java/de/dennisguse/opentracks/services/handlers/TrackPointCreator.java",
+      "sha256": "5e1592c38737d77ae50b0833a15509a5b9762c6c32bb1c8f62cc40ba702bca6b"
+    },
+    {
+      "file": "src/main/res/layout/about.xml",
+      "sha256": "9ebc6b4d3fca88c69c1a9f178da70059124b965d0e2c7b6c94bc04215580325c"
+    },
+    {
+      "file": "src/main/res/layout/activity_health_connect_permissions_rationale.xml",
+      "sha256": "1e4cb4164862c13675e9f44f010c27d266ac4dab44439f3bf218b97cfdb8e03d"
+    },
+    {
+      "file": "src/main/res/layout/activity_settings_custom_layout.xml",
+      "sha256": "c8ca21f853df3e3ef61f9ec1c237f742fc5ab08a32f2fd12aa5d7dba8bb50d8a"
+    },
+    {
+      "file": "src/main/res/layout/activity_settings_custom_layout_list.xml",
+      "sha256": "1c9648e757848af089463686c014bbb2b31d6e3601c41c7dbdbe2b753dcfbd29"
+    },
+    {
+      "file": "src/main/res/layout/activity_show_error.xml",
+      "sha256": "f22a9e126dd22314b912c1d7dfede7521234d1b46ab227e17d5bd5c35c5c25cf"
+    },
+    {
+      "file": "src/main/res/layout/aggregated_stats.xml",
+      "sha256": "dfe0c72d870f59b265c2e2e0176b2bbc94a6978fa295066c03b79f374db5cdd2"
+    },
+    {
+      "file": "src/main/res/layout/aggregated_stats_list_item.xml",
+      "sha256": "cc1e4415abb694d7626f0c7819c90f58e42d7586f5208ff89f664977893f9f42"
+    },
+    {
+      "file": "src/main/res/layout/bottomappbar.xml",
+      "sha256": "f01c4e17dc379fb4e2b201f9940585289b26aef7064d19a40db9ec1a5832a708"
+    },
+    {
+      "file": "src/main/res/layout/chart.xml",
+      "sha256": "5b320a313edcfdba18bf9d4604d181127117c2e03aff524f7449e96a0b6b6475"
+    },
+    {
+      "file": "src/main/res/layout/choose_activity_type.xml",
+      "sha256": "64dd3afd524245eb6cee710d24954a9b2e4900165d51830125f6bcaeb4da1a59"
+    },
+    {
+      "file": "src/main/res/layout/custom_layout_item.xml",
+      "sha256": "16685bb82b3d8d6405d812daf25120175060034cb1c04ca7c3ac54c6fe66c46b"
+    },
+    {
+      "file": "src/main/res/layout/custom_stats_item.xml",
+      "sha256": "7f2dc19db7204b42b64e61e9115bcb0f2cce54018a4bc95dbea874aed564aef5"
+    },
+    {
+      "file": "src/main/res/layout/export_activity.xml",
+      "sha256": "fb9e5a47e8faa2dc4e98485b220de3473c8248148efb7dde0518c33a59dda968"
+    },
+    {
+      "file": "src/main/res/layout/fragment_filter_dialog.xml",
+      "sha256": "a372528dfad4afae56bb7e184ccded8d22330dff6bc18d6a6d4430766662c66b"
+    },
+    {
+      "file": "src/main/res/layout/fragment_filter_dialog_item.xml",
+      "sha256": "70f1483b5eabfded08c99ddf2eb41ef8c831f128b8932fa657d3496be3610769"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_home_explorer.xml",
+      "sha256": "9e6e5012aa9ad6fb89becbf07814c6223590dbab0050876104d827aa2f2d5cff"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_home_neon.xml",
+      "sha256": "57e4b9f44b282bd8a7ab7821c37bdcdeebd63d85a5be45384fae567610e7b3a4"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_home_precision.xml",
+      "sha256": "941dce0b37dea0b9cd8373d07e6bae4619b9b2bb922382c956759bc60c8cc2ac"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_home_quiet.xml",
+      "sha256": "e746169f24b77369471dd696b893f89d1e50303642c1a729511b454f4a21dfcf"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_settings.xml",
+      "sha256": "ee47f753b2904023187f4ab8daa314ed980d8113a60e2ddd1174d9ab957301de"
+    },
+    {
+      "file": "src/main/res/layout/gardenia_theme_choice.xml",
+      "sha256": "4c38e9dd0e6a94ef83bab891ce5b9b2654624178d79e88f8a4494eb7a1f5518e"
+    },
+    {
+      "file": "src/main/res/layout/help.xml",
+      "sha256": "2f4094edcb6ce35c17061261871299e1a81ed1bbb8c0d4b909920599dc1dbd86"
+    },
+    {
+      "file": "src/main/res/layout/import_activity.xml",
+      "sha256": "73fd7cde3f80dca05c2c137a9ac88052a0231cca5d9cb1472b9e11d8b1b14be5"
+    },
+    {
+      "file": "src/main/res/layout/interval_list_view.xml",
+      "sha256": "725f74000105ba854dca8784c9c0da5ae9a2f636d1ba3089dea34365d57f4f4f"
+    },
+    {
+      "file": "src/main/res/layout/interval_stats_list_item.xml",
+      "sha256": "dc413618d2c963c9536c04fa77f3ffd152f4f72b1c89e508af3898e1a3a77ac5"
+    },
+    {
+      "file": "src/main/res/layout/introduction.xml",
+      "sha256": "4e19b7698aa4bbe3107db46677fa86487809cd71fa38338f8c373a8b0a95957b"
+    },
+    {
+      "file": "src/main/res/layout/loading_indeterminate.xml",
+      "sha256": "6fd9ca122702ea8f0c167473b3b262a5012808aea66c654a3d3bc3b2ce7e6bb7"
+    },
+    {
+      "file": "src/main/res/layout/marker_detail_activity.xml",
+      "sha256": "407b1f162195c7174ea0b75f5353e0157f3abcde9e82fa4c448b0095638f7b31"
+    },
+    {
+      "file": "src/main/res/layout/marker_detail_fragment.xml",
+      "sha256": "5a0ede19678854a9502165b22339872eff93bb720e6d4efee8571c6907b28a2d"
+    },
+    {
+      "file": "src/main/res/layout/marker_edit.xml",
+      "sha256": "b88691318e62a0f24d1cb1679f4a7ffc6732eed1c7c07a4e28e1ede6da0a6266"
+    },
+    {
+      "file": "src/main/res/layout/marker_list.xml",
+      "sha256": "0a4b5c5f77668b9761156523d925081bd141bae70b07620b20602ac7bf6feab0"
+    },
+    {
+      "file": "src/main/res/layout/marker_list_item.xml",
+      "sha256": "83dab4325243b75e9954dddd59dfa809dc14447e3c682258f659dfa491fa4ca6"
+    },
+    {
+      "file": "src/main/res/layout/osm_dashboard.xml",
+      "sha256": "3b35b8ee2184043098e2ed24fe40811ac8253f01c02a2a6dc961f1ee666312c1"
+    },
+    {
+      "file": "src/main/res/layout/p04_navigation.xml",
+      "sha256": "2095fbf39ea51420b01cacbe0731d89c5e2560f4d5cfd82303ab00108121e8b7"
+    },
+    {
+      "file": "src/main/res/layout/p05_history_row.xml",
+      "sha256": "c52949bf3eb74b9edb8e849b0a5a88134a3d02bcdd93d08422f69d97ba100856"
+    },
+    {
+      "file": "src/main/res/layout/p06_offline_map.xml",
+      "sha256": "a0cf3a8caec24c1778de5d20f019126898db7f63730a1094f93d651da57f1a1b"
+    },
+    {
+      "file": "src/main/res/layout/p0_history.xml",
+      "sha256": "cae4e5e09699d0582feaab21bef6a183314a61d242e2c3670fc42a85faa01526"
+    },
+    {
+      "file": "src/main/res/layout/p0_home.xml",
+      "sha256": "941dce0b37dea0b9cd8373d07e6bae4619b9b2bb922382c956759bc60c8cc2ac"
+    },
+    {
+      "file": "src/main/res/layout/p0_sensors.xml",
+      "sha256": "187509270352814fc54cd49746eac5f3f102b79eded92611925e81b1af01890d"
+    },
+    {
+      "file": "src/main/res/layout/preference_activity_type.xml",
+      "sha256": "ea35d1907a9e8d33e79000137573d286eb74cabc1649951fc960cc847b9ae413"
+    },
+    {
+      "file": "src/main/res/layout/settings.xml",
+      "sha256": "04352575daef0cde21d3ab4b090fe9c9a178864429d6fd71e08ed2c608b20ff7"
+    },
+    {
+      "file": "src/main/res/layout/statistics_recorded.xml",
+      "sha256": "3d51637f222855ab1a66b00bb2e3ecc4fce6610204a4b0d00ecfd5046a75813a"
+    },
+    {
+      "file": "src/main/res/layout/statistics_recording.xml",
+      "sha256": "22eb1ad42683f0c86aa872138614e6c80d20d71dc1005cde32a814be54356ebf"
+    },
+    {
+      "file": "src/main/res/layout/stats_clock_item.xml",
+      "sha256": "f962c2031edb28170bf0c582fd9e3415554c4dd33392f4b334a3ada592735aeb"
+    },
+    {
+      "file": "src/main/res/layout/stats_generic_item.xml",
+      "sha256": "27aeea46eceac34382ee44f9f24734d244e774a312cbce6e6e1c4e44e2088865"
+    },
+    {
+      "file": "src/main/res/layout/stats_sensor_item.xml",
+      "sha256": "403dd1641b95f1dee022b41b2d0b43ebee5a2cc91cb3a6b7e08460342af31d2f"
+    },
+    {
+      "file": "src/main/res/layout/track_edit.xml",
+      "sha256": "6ff809863f61d58103a28405fbe4272f19b875903e2c6a4851b081e94e1fb038"
+    },
+    {
+      "file": "src/main/res/layout/track_list.xml",
+      "sha256": "eb11ee197e3a979c920cd32fae165d010b26f89a4089608646bafdb7a0fc54c6"
+    },
+    {
+      "file": "src/main/res/layout/track_list_item.xml",
+      "sha256": "d5058d3297258ce9a8be01a363af801a3fc767ce892f0d75b91bbebc3cec594b"
+    },
+    {
+      "file": "src/main/res/layout/track_recorded.xml",
+      "sha256": "1d75d44994f97c3dcb957a8c4fb3e89f8a7cab141868c8a9ddf7e8b354ae1c26"
+    },
+    {
+      "file": "src/main/res/layout/track_recording.xml",
+      "sha256": "7a196dcf22d8de38627369c24e2f8e7276c6c0e894146900b28fb6fc46022f62"
+    },
+    {
+      "file": "src/main/res/layout/track_stopped.xml",
+      "sha256": "0e01768914c315d1ba53d3d3abf74be67fe7c41285e67bf831fa417cd636e35e"
+    },
+    {
+      "file": "src/main/res/layout/view_preference_switch.xml",
+      "sha256": "7d9e66c0522710dd08753f4bc50b563f483a8cf3978ac96e52ce49d0629a9274"
+    },
+    {
+      "file": "src/main/res/layout/welcome.xml",
+      "sha256": "9d6f2b45980e9e362bf10e521e96b31c13ac612b59190dc15a2206d4d53f6aca"
+    }
+  ],
+  "originalTestFilesByteIdentical": 158,
+  "newNavigationTests": 18,
+  "schema": 43,
+  "scope": "Read-only Git byte comparison and code review. Runtime/full candidate acceptance remains pending."
+}

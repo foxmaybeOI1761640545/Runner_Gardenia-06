@@ -1,0 +1,24 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5901,
+  "action": "de.dennisguse.opentracks.p0.TEST_WITHOUT_GRANT",
+  "mime": "application\/zip",
+  "flags": 268435456,
+  "clip": [],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-6615d9fc-d27f-47b0-8b66-527e49669959\/RunnerGardenia-Export-20261123-083305-6615d9fc-d27f-47b0-8b66-527e49669959.zip",
+      "permission": -1,
+      "read": false,
+      "errorClass": "java.lang.SecurityException"
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2237,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": true,
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962"
+}

@@ -58,7 +58,7 @@ public class P0Activity extends AbstractActivity {
         });
         binding.p0Finish.setOnClickListener(view->model.finish());
         binding.p0Devices.setEnabled(true);
-        binding.p0Devices.setOnClickListener(view->startActivity(new android.content.Intent(this,P0SensorsActivity.class)));
+        binding.p0Devices.setOnClickListener(view->startActivity(P0Navigation.rootIntent(this,P0SensorsActivity.class)));
 
         P0Navigation.bind(this);
         binding.p04GpsStatus.setOnClickListener(view->startActivity(new android.content.Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)));

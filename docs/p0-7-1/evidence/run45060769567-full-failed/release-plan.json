@@ -1,0 +1,12 @@
+{
+  "commit": "00e7904962e6847bcda6c0eda74966a873717152",
+  "stage": 3,
+  "milestone": "P0.7.1 navigation maintenance",
+  "fullRegression": true,
+  "branch": "fix/p0-7-1-navigation-backstack",
+  "signed": false,
+  "publishing": false,
+  "runId": "45060769567",
+  "versionCode": 6781,
+  "versionName": "v0.1.0-p0.7.1"
+}

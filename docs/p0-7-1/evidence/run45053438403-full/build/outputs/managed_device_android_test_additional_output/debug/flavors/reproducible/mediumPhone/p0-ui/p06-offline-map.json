@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "sourceCommit": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "airplaneMode": true,
+  "safImport": true,
+  "zoomAndPan": true,
+  "currentPositionWithoutWorkout": true,
+  "liveTrack": true,
+  "historicalTrack": true,
+  "segmentBreaks": true,
+  "recreation": true,
+  "invalidFileRetainsMap": true,
+  "screenshots": [
+    {
+      "file": "p06-imported-airplane.png",
+      "sha256": "c9bc1f20a7900fe2e6f5de39f92224e512d633e4eb0d7157a0e93edd9ff70e0e",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-zoom-pan.png",
+      "sha256": "bbd8646288a9d9898b62058c0ff6282716c8e3cb3e41e84aa3303d0ee0d924a8",
+      "native": true,
+      "renderedTiles": 15
+    },
+    {
+      "file": "p06-recreated-airplane.png",
+      "sha256": "24f0982ed08da82fcb143babf17ca630d0c39c9e1c2b4544926d0b993a52aaba",
+      "native": true,
+      "renderedTiles": 9
+    },
+    {
+      "file": "p06-current-position.png",
+      "sha256": "5cbb3b51194691aee607cb7ffe00e1f51d37018b1e9afcf2b5037153b304110a",
+      "native": true,
+      "renderedTiles": 18
+    },
+    {
+      "file": "p06-live-track.png",
+      "sha256": "af4c49cb4fbe9d00ca2530a101585992deb87209d2516087c4ae68c06dd0c74f",
+      "native": true,
+      "renderedTiles": 24
+    },
+    {
+      "file": "p06-segmented-track.png",
+      "sha256": "a18a52805387a043981e3c3698a7eb73fd45ae6d3b046a251d2baeb08a2dbe5d",
+      "native": true,
+      "renderedTiles": 24
+    },
+    {
+      "file": "p06-historical-track.png",
+      "sha256": "d23076832fb0dbf4bb53e116bc59c81dd815740c242512459d2bbf102a97c642",
+      "native": true,
+      "renderedTiles": 12
+    },
+    {
+      "file": "p06-theme-PRECISION-light.png",
+      "sha256": "14763c8bcc2efbf364e6ad49538bda74960ceaba2b30bd1525534b9772015481",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-PRECISION-dark.png",
+      "sha256": "bd8a60e9e6b9b5e6491d3fa10bbd1e491724c9cac02c2d1254a78f20ea0e8894",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-QUIET-light.png",
+      "sha256": "eb2d17baf675d38684140851201896ce1efed5ecaa8c8e2b4a306714faf7c339",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-QUIET-dark.png",
+      "sha256": "31f927d766a39c9e682fa5d72f4506f8fc1688de17dce829164e1c61eb8b19bd",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-EXPLORER-light.png",
+      "sha256": "c653e9189d5ce193370dddd07bbae1532c241883df06bc3751e5caef3ef25d25",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-EXPLORER-dark.png",
+      "sha256": "5ea7b71860f5336b9c3909079b89bb964b541154d95dbd538da5f2c19d46245d",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-NEON-light.png",
+      "sha256": "0c6500e5b6c999f1875fedbb6d9c51d4226827a8d3463471ee42760250083505",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-theme-NEON-dark.png",
+      "sha256": "cb96292be3a325d7e755567ea5f779ec449789de324e7cc2c89085b745bd0472",
+      "native": true,
+      "renderedTiles": 6
+    },
+    {
+      "file": "p06-invalid-file-retains-map.png",
+      "sha256": "22ff23094d9c6ad1b3c09068f27d3f2f1758990c1aa3ecf59628101b91aef32a",
+      "native": true,
+      "renderedTiles": 6
+    }
+  ]
+}

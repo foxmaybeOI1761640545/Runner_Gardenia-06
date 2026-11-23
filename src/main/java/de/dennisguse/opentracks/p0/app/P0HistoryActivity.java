@@ -39,7 +39,7 @@ public class P0HistoryActivity extends AbstractActivity {
                 @NonNull @Override public Intent createIntent(@NonNull Context context,@NonNull String name){return super.createIntent(context,name).addCategory(Intent.CATEGORY_OPENABLE);}
             },this::documentResult);
     public static Intent intent(Context context,long id){return new Intent(context,P0HistoryActivity.class).putExtra(WORKOUT_ID,id);}
-    public static Intent managementIntent(Context context){return new Intent(context,P0HistoryActivity.class).putExtra(MANAGEMENT,true);}
+    public static Intent managementIntent(Context context){return P0Navigation.rootIntent(context,P0HistoryActivity.class).putExtra(MANAGEMENT,true);}
     private static long[] array(java.util.List<Long> ids){return ids.stream().mapToLong(Long::longValue).toArray();}
     private static java.util.List<Long> list(long[] ids){return java.util.Arrays.stream(ids).boxed().toList();}
     private void documentResult(android.net.Uri uri){long[] ids=pendingIds;boolean zip=pendingZip;pendingIds=null;if(uri!=null&&ids!=null)model.exportSnapshot(list(ids),zip,uri);if(model!=null)render(model.state().getValue());}
@@ -80,7 +80,7 @@ public class P0HistoryActivity extends AbstractActivity {
         binding.p0ShareGpx.setOnClickListener(view->model.exportSelected(null));
         binding.p0DeleteWorkout.setOnClickListener(view->{if(model.selectedId()!=null)P05BatchDialog.create(new long[]{model.selectedId()},true).show(getSupportFragmentManager(),"p05-batch-dialog");});
         getOnBackPressedDispatcher().addCallback(this,new OnBackPressedCallback(true) {
-            @Override public void handleOnBackPressed(){if(model.busy()){android.widget.Toast.makeText(P0HistoryActivity.this,R.string.p05_please_wait,android.widget.Toast.LENGTH_SHORT).show();return;}if(model.selection().getValue().active())model.exitSelection();else if(model.selectedId()!=null)model.open(null);else{setEnabled(false);getOnBackPressedDispatcher().onBackPressed();}}
+            @Override public void handleOnBackPressed(){if(model.busy()){android.widget.Toast.makeText(P0HistoryActivity.this,R.string.p05_please_wait,android.widget.Toast.LENGTH_SHORT).show();return;}if(model.selection().getValue().active())model.exitSelection();else if(model.selectedId()!=null)model.open(null);else P0Navigation.leaveRoot(P0HistoryActivity.this);}
         });
         if(saved!=null){pendingIds=saved.getLongArray(PENDING);pendingZip=saved.getBoolean(PENDING_ZIP);long[] restored=saved.getLongArray(CHOSEN);model.restoreSelection(saved.getBoolean(MODE),restored==null?new long[0]:restored);}
         else if(getIntent().getBooleanExtra(MANAGEMENT,false))model.manage();
@@ -101,6 +101,12 @@ public class P0HistoryActivity extends AbstractActivity {
     @Override public boolean onOptionsItemSelected(@NonNull android.view.MenuItem item){
         if(item.getItemId()==R.id.p06_map_container&&model.selectedId()!=null){startActivity(de.dennisguse.opentracks.p0.map.P06MapActivity.intent(this,model.selectedId()));return true;}
         return super.onOptionsItemSelected(item);
+    }
+    @Override protected void onNewIntent(Intent intent){
+        super.onNewIntent(intent);setIntent(intent);
+        // A settings shortcut may reuse the already-open History root. Ordinary
+        // tab reselection keeps its detail/selection, and active batch work wins.
+        if(intent.getBooleanExtra(MANAGEMENT,false)&&!model.busy()){model.open(null);model.manage();}
     }
     @Override protected void onStart(){super.onStart();model.refresh();}
     @Override protected void onSaveInstanceState(@NonNull Bundle out){out.putLong(WORKOUT_ID,model.selectedId()==null?0:model.selectedId());out.putBoolean(MODE,model.selection().getValue().active());out.putLongArray(CHOSEN,array(model.selection().getValue().ids()));out.putLongArray(PENDING,pendingIds);out.putBoolean(PENDING_ZIP,pendingZip);super.onSaveInstanceState(out);}

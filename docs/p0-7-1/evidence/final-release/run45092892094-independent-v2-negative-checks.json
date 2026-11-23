@@ -1,0 +1,15 @@
+{
+  "scope": "Supplemental verifier rejection checks; not application test counts",
+  "cases": [
+    {
+      "case": "signed-digest-tamper",
+      "rejected": true,
+      "lastErrorLine": "cryptography.exceptions.InvalidSignature"
+    },
+    {
+      "case": "apk-content-tamper",
+      "rejected": true,
+      "lastErrorLine": "AssertionError"
+    }
+  ]
+}

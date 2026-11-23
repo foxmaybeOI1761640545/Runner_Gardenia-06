@@ -22,7 +22,7 @@ public class P0SettingsActivity extends AbstractActivity {
         getOnBackPressedDispatcher().addCallback(this,new OnBackPressedCallback(true){
             @Override public void handleOnBackPressed(){
                 if(getSupportFragmentManager().getBackStackEntryCount()>0)getSupportFragmentManager().popBackStackImmediate();
-                else {setEnabled(false);getOnBackPressedDispatcher().onBackPressed();}
+                else P0Navigation.leaveRoot(P0SettingsActivity.this);
             }
         });
     }

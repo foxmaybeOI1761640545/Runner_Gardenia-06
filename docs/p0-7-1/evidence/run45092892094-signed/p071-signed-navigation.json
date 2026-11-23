@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "apkSha256": "1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759",
+  "rootBackChecks": [
+    {
+      "before": "mCurrentFocus=Window{36fa663 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{83f9304 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{fe9c4c u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{83f9304 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{726734d u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{2d525c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{e6347a0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{2d525c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{51f230 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{2d525c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{10d639b u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{2d525c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{e1171ba u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{65617c5 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{83d5e59 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{65617c5 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{a25a736 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{65617c5 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{f6d873 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{65617c5 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{ab3f1a2 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b320213 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{ca19de0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b320213 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{66f579b u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b320213 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{b7f1ce0 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b320213 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{cbf55b3 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{18311c9 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{cfa16a9 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{18311c9 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{8ab1070 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{18311c9 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{d082043 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{18311c9 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{793b27b u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{6252f8 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{2a37f34 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{6252f8 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{3d20df1 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{6252f8 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{bc06188 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{6252f8 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{edeb994 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{4fabb92 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{4602054 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{4fabb92 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{a9a6a83 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{4fabb92 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{849f68 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{4fabb92 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{2399a28 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b0b3621 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{b0a177e u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b0b3621 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{1240935 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b0b3621 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{16238eb u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{b0b3621 u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{3abf43e u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{7a6744c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{613358b u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SensorsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{7a6744c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{1c91f66 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0HistoryActivity}",
+      "afterRootBack": "mCurrentFocus=Window{7a6744c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    },
+    {
+      "before": "mCurrentFocus=Window{b492428 u0 com.fox.runner/de.dennisguse.opentracks.p0.app.P0SettingsActivity}",
+      "afterRootBack": "mCurrentFocus=Window{7a6744c u0 com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher}",
+      "backgrounded": true,
+      "homeExplicitlyReselected": true
+    }
+  ],
+  "physicalDevices": "NEEDS_DEVICE_VALIDATION"
+}

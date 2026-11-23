@@ -1,0 +1,22 @@
+{
+  "androidExecutedLocally": false,
+  "sdkInstalledLocally": false,
+  "python": {
+    "tests": 156,
+    "executed": 156,
+    "passed": 156,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "initialLocalFailure": {
+    "tests": 151,
+    "executed": 151,
+    "failures": 0,
+    "errors": 6,
+    "skipped": 0,
+    "cause": "Existing release_policy did not recognize the new reserved-p071-test classification; after adding it, p07_version must retrieve its own historical row rather than treating later allocations as its row. Original tests/expectations unchanged.",
+    "resolved": true
+  },
+  "diffCheckPassed": true
+}

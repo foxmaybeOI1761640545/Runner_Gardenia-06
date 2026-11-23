@@ -1,0 +1,89 @@
+{
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "runId": 45086993985,
+  "python": {
+    "tests": 160,
+    "executed": 160,
+    "passed": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jvm": {
+    "tests": 167,
+    "executed": 167,
+    "passed": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "android": {
+    "tests": 489,
+    "executed": 488,
+    "passed": 488,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "historicalSkip": [
+    [
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "recording_stopGPS_noop"
+    ]
+  ],
+  "nativeScreenshots": 517,
+  "gpsFocused": {
+    "tests": 47,
+    "executed": 47,
+    "passed": 47,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "navigation": {
+    "tests": 18,
+    "executed": 18,
+    "passed": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": {
+      "T11": "T11_heartDeviceDialogReturnsToHeart",
+      "T06": "T06_rapidSwitchLaunchesOnce",
+      "T04": "T04_fourRootCyclesKeepInstances",
+      "T03": "T03_settingsToHeart",
+      "T02": "T02_historyToSettings",
+      "T13": "T13_activityRecreationRetainsInternalBack",
+      "T05": "T05_reselectionDoesNotLaunch",
+      "T09": "T09_settingsInternalBackSurvivesRootReturn",
+      "T14": "T14_actualRotationRetainsSelectedRoot",
+      "T17": "T17_gpsAndBleInputsPersistWhileSwitching",
+      "T10": "T10_historyDetailThenListThenTaskRoot",
+      "T08": "T08_actualApi35EdgeGestureBackgroundsRoot",
+      "T15": "T15_backgroundAndForegroundKeepDestination",
+      "T12": "T12_bottomSheetDismissedBeforeTaskBack",
+      "T01": "T01_runToHistory",
+      "T07": "T07_systemBackAtEveryRootBackgroundsTask",
+      "T16": "T16_recordingContinuesAcrossTabsAndRootBack",
+      "T18": "T18_eightPalettesKeepNavigationAndBack"
+    }
+  },
+  "deliveryChecks": [
+    "p0-durability",
+    "p061-real-durability",
+    "p06-map-durability",
+    "p0-gpx",
+    "p0-offline",
+    "native-window-helper",
+    "p04-visual",
+    "p05-visual",
+    "p05-metrics",
+    "p05-settings",
+    "p05-history",
+    "p051-gps-ui",
+    "p06-offline-map",
+    "p061-real-map"
+  ],
+  "signedUpgradePublication": "pending",
+  "physicalDevices": "NEEDS_DEVICE_VALIDATION"
+}

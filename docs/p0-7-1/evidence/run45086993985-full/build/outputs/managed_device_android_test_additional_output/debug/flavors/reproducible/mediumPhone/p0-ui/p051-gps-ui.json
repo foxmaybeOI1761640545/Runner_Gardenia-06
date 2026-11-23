@@ -1,0 +1,139 @@
+{
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "api": 35,
+  "screenshots": [
+    {
+      "file": "p051-METRIC-stationary-pace.png",
+      "sha256": "99a6046122794a8d1e6465842c15a7239449460bbf516edf85d04ba67741cb48",
+      "stationary": true,
+      "unit": "METRIC",
+      "mode": "pace",
+      "displayed": "—",
+      "speed": "0.0 km\/h",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-METRIC-stationary-speed.png",
+      "sha256": "795acd0a5cbd1bef0d4249a56c7002d38d99c5f46d5528643447ade7064b9fd3",
+      "stationary": true,
+      "unit": "METRIC",
+      "mode": "speed",
+      "displayed": "0.0 km\/h",
+      "speed": "0.0 km\/h",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-METRIC-slow-moving-pace.png",
+      "sha256": "c1d0b5fb5eec68b261ea5ffaf9941f7e8c7566ccceea45b86269ed8c1e63111a",
+      "stationary": false,
+      "unit": "METRIC",
+      "mode": "pace",
+      "displayed": "33:20 \/km",
+      "speed": "1.8 km\/h",
+      "pace": "33:20 \/km",
+      "native": true
+    },
+    {
+      "file": "p051-METRIC-slow-moving-speed.png",
+      "sha256": "dfe5ce3f250259d796bc0561418188e458d9b343a9878afc57adfec7fc72a936",
+      "stationary": false,
+      "unit": "METRIC",
+      "mode": "speed",
+      "displayed": "1.8 km\/h",
+      "speed": "1.8 km\/h",
+      "pace": "33:20 \/km",
+      "native": true
+    },
+    {
+      "file": "p051-METRIC-stopped-again-pace.png",
+      "sha256": "e4adbd9dee88b098e4b2f3f2db5738edd1d5ee85c184885b29953afa1bdf5a3c",
+      "stationary": true,
+      "unit": "METRIC",
+      "mode": "pace",
+      "displayed": "—",
+      "speed": "0.0 km\/h",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-METRIC-stopped-again-speed.png",
+      "sha256": "419c0d535c5664e572542034a56251d2449e81dc506f3ec3408ef71cbda84c62",
+      "stationary": true,
+      "unit": "METRIC",
+      "mode": "speed",
+      "displayed": "0.0 km\/h",
+      "speed": "0.0 km\/h",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-stationary-pace.png",
+      "sha256": "c3ebe804c870362ffa534fe9a363089951872ff7774e66c12aef39f84d45ca4a",
+      "stationary": true,
+      "unit": "IMPERIAL_FEET",
+      "mode": "pace",
+      "displayed": "—",
+      "speed": "0.0 mph",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-stationary-speed.png",
+      "sha256": "49abefb429f8ad45125fb98779088b180769de319567acf1021a45398edec3c8",
+      "stationary": true,
+      "unit": "IMPERIAL_FEET",
+      "mode": "speed",
+      "displayed": "0.0 mph",
+      "speed": "0.0 mph",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-slow-moving-pace.png",
+      "sha256": "b059f331cac3e129f5961251494f63c3cb9fc90dfdbdc7dd691f8ea7f2b0e9ba",
+      "stationary": false,
+      "unit": "IMPERIAL_FEET",
+      "mode": "pace",
+      "displayed": "53:39 min\/mi",
+      "speed": "1.1 mph",
+      "pace": "53:39 min\/mi",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-slow-moving-speed.png",
+      "sha256": "addc6582c48489eb5327e91089bec841d96f9f5b8004571c1b98ccb14628fcae",
+      "stationary": false,
+      "unit": "IMPERIAL_FEET",
+      "mode": "speed",
+      "displayed": "1.1 mph",
+      "speed": "1.1 mph",
+      "pace": "53:39 min\/mi",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-stopped-again-pace.png",
+      "sha256": "0c032ba9aaa03cc9e16ec1a1f5b506d9608afdadc6384286d1f8eb25ab5bacd0",
+      "stationary": true,
+      "unit": "IMPERIAL_FEET",
+      "mode": "pace",
+      "displayed": "—",
+      "speed": "0.0 mph",
+      "pace": "—",
+      "native": true
+    },
+    {
+      "file": "p051-IMPERIAL_FEET-stopped-again-speed.png",
+      "sha256": "a2669277324806caeccf3ccf8eaae3c3a6a29ec3b929685f13d0a46f50532bf2",
+      "stationary": true,
+      "unit": "IMPERIAL_FEET",
+      "mode": "speed",
+      "displayed": "0.0 mph",
+      "speed": "0.0 mph",
+      "pace": "—",
+      "native": true
+    }
+  ],
+  "passed": true
+}

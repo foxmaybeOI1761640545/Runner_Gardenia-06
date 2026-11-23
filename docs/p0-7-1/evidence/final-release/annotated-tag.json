@@ -1,0 +1,24 @@
+{
+  "node_id": "TA_kwDOVhTta9oAKDhmN2UzNGVmOWMzYzcxNjkxZmNiYjJjMThhMjM2MjlmZGZlZjhhZTU",
+  "sha": "8f7e34ef9c3c71691fcbb2c18a23629fdfef8ae5",
+  "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/git/tags/8f7e34ef9c3c71691fcbb2c18a23629fdfef8ae5",
+  "tagger": {
+    "name": "github-actions[bot]",
+    "email": "41898282+github-actions[bot]@users.noreply.github.com",
+    "date": "2026-11-23T01:50:32Z"
+  },
+  "object": {
+    "sha": "857c744321825a2656d77f45d57c6e43b4334962",
+    "type": "commit",
+    "url": "https://api.github.com/repos/foxmaybeOI1761640545/Runner_Gardenia-06/git/commits/857c744321825a2656d77f45d57c6e43b4334962"
+  },
+  "tag": "test-p0-v0.1.0-p0.7.1",
+  "message": "P0.7.1 navigation backstack maintenance test release; accepted fixed-key APK\nRunner-Gardenia-P071: {\"apkSha256\": \"1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759\", \"certificateSha256\": \"E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22\", \"commit\": \"857c744321825a2656d77f45d57c6e43b4334962\", \"versionCode\": 6781, \"versionName\": \"v0.1.0-p0.7.1\"}",
+  "verification": {
+    "verified": false,
+    "reason": "unsigned",
+    "signature": null,
+    "payload": null,
+    "verified_at": null
+  }
+}

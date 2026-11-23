@@ -1,0 +1,2430 @@
+{
+  "source": "a189bca91b92fd3258d3ace35c3523bf1cba4688",
+  "total": 517,
+  "alreadyReviewedIdenticalBytes": [
+    {
+      "file": "p071-focused/p07-home-inside-bounds-no-features.png",
+      "sha256": "24842a4e847f84e6200fd7339134b662fb9873999886664021e8e92aeb9063b8",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-no-map.png",
+      "sha256": "5215ffa34864bb19a49b144262ec72d14bc3eca021ce65f880cc91108e76092d",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-outside-map.png",
+      "sha256": "bca315beb01a5854e5d587a29e19d29abce77f86b1d535fe27229c4d026f0f32",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-dark-360-font1.0.png",
+      "sha256": "2644d8ccb984a3298d549fb02d6b1a36a0b6617af4472e805695bbbd6d505d29",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-dark-360-font1.4.png",
+      "sha256": "f8fe4722e9534671546110a447efe190e2d83c71f27e77d12910d6260b5b3b47",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-dark-390-font1.0.png",
+      "sha256": "a92d8f1161173197b0f374a2fa77a55b5417831c1503503eec80b8f75378558d",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-dark-390-font1.4.png",
+      "sha256": "cc523c12f8e3f9b5f12163814c43efecff0161014a43e03f584e7eab8157d14b",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-light-360-font1.0.png",
+      "sha256": "e00e5e3d85c7fbc0ebd4157f00636106f54514b6ffc9ff70fc2acb92b4349ab9",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-light-360-font1.4.png",
+      "sha256": "aaf8aa993a63bc8341eea4e47c659353e437adc82b6bd0ab969d0a97773bc893",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-light-390-font1.0.png",
+      "sha256": "117a0c10ecf2547fb6ee4a50b9a7f2842b65179d4ac7309f50d776538357db3f",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-explorer-light-390-font1.4.png",
+      "sha256": "348e4e1aaa5400775494c4040ddaa8fd156b374ec27dc00d25b4afd93204d0ef",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-dark-360-font1.0.png",
+      "sha256": "d13aece62062647a389e3d53e3535b64044041e7e423ab1430051466c65c55a8",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-dark-360-font1.4.png",
+      "sha256": "4a1f94233ba3e7cbf2be7b28c80288643ae46ec5b9bd63d4e4bf81fb0f8fa337",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-dark-390-font1.0.png",
+      "sha256": "f191b8033449ed5abc96e89feace28466e65a7547d826e6640245ceb24126e41",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-dark-390-font1.4.png",
+      "sha256": "121d13dd4e5975b1d38c50d1c07a21d7b9e6edd0030d03550d021fe07e4d5415",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-light-360-font1.0.png",
+      "sha256": "fee9dee6c1ed197da9e280709c0ca3fb1d295ee54f0289a966de4babeb357f6a",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-light-360-font1.4.png",
+      "sha256": "d436219c5c2d30c5e76b3bba9f25b6a1c154d6d310871bc9fb0d45841a296ee7",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-light-390-font1.0.png",
+      "sha256": "1e4026896d78c25911bebff090fea58b0f290b6e3878d0ec22a5abc39ba7b101",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-neon-light-390-font1.4.png",
+      "sha256": "e0cded6733ce577d326b0d3787045d7bcd7baa7cf2875adb44fc5ff52aaa1c75",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-dark-360-font1.0.png",
+      "sha256": "fa9e8a45100dea3653b58c67145c7a22f69446a29df7f6353da9eb599c1ebca9",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-dark-360-font1.4.png",
+      "sha256": "3e83425e66f32543350e0b5848aa554de573d9d46d72414076ae102f53586e06",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-dark-390-font1.0.png",
+      "sha256": "04079f893d18fe8d61eb95f43580a29f01ad31c6e6413519c9cdc17c4acd4824",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-dark-390-font1.4.png",
+      "sha256": "ff8ce30c67b8683ca34854799e314cfdc54661dff5adbab6f78f9d8ee2d22a3c",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-light-360-font1.0.png",
+      "sha256": "7a3823752d34246cade7dca05cd69b43b5396198f4cfe279250dd33a6676da3f",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-light-360-font1.4.png",
+      "sha256": "2d83f8e424d94a18559f37a7669ae833de1d2dc97da0cdeb2c0b30703c1599bb",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-light-390-font1.0.png",
+      "sha256": "a0d02bc37d4931f4e027ea4c84c1bf8beb3097b2b1ea7f2cf99ba744d550a45e",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-precision-light-390-font1.4.png",
+      "sha256": "61c9a0eb28b95c03705bccd7661da54502397beb651b1257143abef49766fe52",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-dark-360-font1.0.png",
+      "sha256": "c10418b7bd1141d9335f2c450045462911b96ed60f176158728c74ea54c3ffda",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-dark-360-font1.4.png",
+      "sha256": "982870e8495e8b3a7e6fc07c0817eb431f4b3c2a03e0079eefb6c38b3229aa7a",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-dark-390-font1.0.png",
+      "sha256": "492b50584469c855c089fa928a3942b985d4de5b477f283336557f6540fcf4ff",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-dark-390-font1.4.png",
+      "sha256": "83e15862352a3023d017303d98c5d5d18cac72825a71e2a83d69590d0251b4a0",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-light-360-font1.0.png",
+      "sha256": "d1a6a3d6fafd1b686bae069342c9553a096e419e7ce0f14972b2821d24a2f4d1",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-light-360-font1.4.png",
+      "sha256": "fdab8bcf8a6ab0c67c4e211f82c7fbdc3f0c6e159ac2e9467eab40204b7bb391",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-light-390-font1.0.png",
+      "sha256": "9c5b2a8a736e4a0b70cd6934cb13f791b40a28282d2eb736922a742ad58d224c",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-focused/p07-home-real-quiet-light-390-font1.4.png",
+      "sha256": "52b855542d5b002a685e831dc0cca0bbf14649e0c2c909500967ce621322077b",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-permissions/denied.png",
+      "sha256": "e9d52402add6a53c8857c9b61668340e310ad7c4bbc4681d03cb03597d1ff749",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    },
+    {
+      "file": "p071-permissions/granted.png",
+      "sha256": "66b73290d16ee1bf359c8a07c002b900807dae23e0843ec401fa0ea189e53900",
+      "reviewed": true,
+      "reviewEvidence": "docs/p0-7-1/evidence/run45053438403-focused-map-permissions/visual-review.json"
+    }
+  ],
+  "sheets": [
+    {
+      "sheet": "sheet-000.jpg",
+      "rows": [
+        {
+          "file": "heart-rate-ui/narrow-dark-distance-chart.png",
+          "sha256": "465bda9378e8136467cbbc845f34c1f3229e5fa6571106b6a9b143bf49e959c0"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-history.png",
+          "sha256": "97750b8f64a1eed986a5dccb3ab9019deaa67cf9b5f3e32061bf36e8426709fa"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-home.png",
+          "sha256": "d2ed898aedff0e9b5bbe086952821f3dd23f12610e6da6462f487064939977a8"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-recording-connected.png",
+          "sha256": "bc2faf18b51ec4ae3f799eb677f4775c5bcf3ce405b813a68654078721614515"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-recording-reconnecting.png",
+          "sha256": "085325653f311e9f942374ce7d083f4b9ca505f0fc0b3d5e342ddc88f0d6d717"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-recording-stale.png",
+          "sha256": "2d38bcfe5deda4b74658c34c2f884238b81700d6be3a8bea13b6f50128d311f4"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-scan-fixture.png",
+          "sha256": "ccc70c5ba03aa17dc9fdf2efc2458f3333e2a7bde91a910d9d4497565d59b044"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-scan.png",
+          "sha256": "6ef493970bff8dd4ea9df6c129975456ce6520eab0a881b37b4c31b5da6dfbf3"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-settings.png",
+          "sha256": "59817ad8ba22a4931d4894684784579119f314e0df414f9fd0cebc6c20624c9d"
+        },
+        {
+          "file": "heart-rate-ui/narrow-dark-time-chart.png",
+          "sha256": "cb8bc2749babd534df04eedb78d37504595d0f9af6c40c912c73f897c53e399a"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-distance-chart.png",
+          "sha256": "211ce002effd4087450491f20842a5468256afcfe57ac924bb443c86d417bd9e"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-history.png",
+          "sha256": "7ffd3a5b21ec871cca94ba1b32a7744635c8f5c45c176652426102a9e7ccd2b1"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Legacy native HR/reconnect/stale/dialog/chart views and actual home GPS states inspected. Dense multi-axis chart is pre-existing; small-window captures intentionally scroll. No new navigation layout regression seen."
+    },
+    {
+      "sheet": "sheet-001.jpg",
+      "rows": [
+        {
+          "file": "heart-rate-ui/narrow-light-home.png",
+          "sha256": "06872694b50c4ef0caa6a4a0add25c68b8615df557e45c8b1a8baf6f6fd3ff3f"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-recording-connected.png",
+          "sha256": "0d6d9f7117a298ededf63abc7679b56b2064283602a3f85be0798f2ff9fe5dfd"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-recording-reconnecting.png",
+          "sha256": "062000ebba76bf8fe752ce278c0427c7d5bf899af0d20e3879fcd5b6176a4b80"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-recording-stale.png",
+          "sha256": "e41d3ad6ea85170865f45745091ccf2e68c401a14a3d8454519ca2c4f24abc1a"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-scan-fixture.png",
+          "sha256": "8946f32dae127b2b1e4e45380067e525e50537f94b1a87a070c7b40c74d3e8eb"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-scan.png",
+          "sha256": "8029361ae2d6b4b7a623b027dda9eadf93d53d8393540bd4b632c684116b1d5e"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-settings.png",
+          "sha256": "99a553e61755109bf3b990718b5fecf3ad9304c7f71c5e0b7e416989be111296"
+        },
+        {
+          "file": "heart-rate-ui/narrow-light-time-chart.png",
+          "sha256": "b7f66cfdcbbd9a69b64a9fddc6212f9ef671b3936e71893968e3074d6aba05ff"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-distance-chart.png",
+          "sha256": "e3a6cc3332aac44d75aa11b5ef3dbd3dd0badde6ac50cca3976bef832d597d4d"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-history.png",
+          "sha256": "fc13481f6281e29e0cec668949a41940c9cf68a5d0499b6df73f7dc110bcc37f"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-home.png",
+          "sha256": "417cb54610b9e5f6df5a0ff035ff3f05ee386d1ad2e7b87f6fce8053a92d3411"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-recording-connected.png",
+          "sha256": "ed143d67e6d1ec6c84bfafa2bda284713d316ca4e652698a2392403c4926accf"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Legacy native HR/reconnect/stale/dialog/chart views and actual home GPS states inspected. Dense multi-axis chart is pre-existing; small-window captures intentionally scroll. No new navigation layout regression seen."
+    },
+    {
+      "sheet": "sheet-002.jpg",
+      "rows": [
+        {
+          "file": "heart-rate-ui/phone-dark-recording-reconnecting.png",
+          "sha256": "8d99cc6f16a738075c35624dc444068df37ee85884d71fa50674cecad1e8f787"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-recording-stale.png",
+          "sha256": "63c472e24cf1b715c749de67824856dc003ecb8e19c3e88000ea959c3688fcef"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-scan-fixture.png",
+          "sha256": "5e74a4c60046527995a6a99f64662a146763fa5100fa948282770a314e16a7f7"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-scan.png",
+          "sha256": "b6e692f5e836233b38a20bb320777958341cb252eae0973a91b042b0b66af788"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-settings.png",
+          "sha256": "d278646456512121950dfec8339300fda763f4076ce29c0cce92d3c3e2f16772"
+        },
+        {
+          "file": "heart-rate-ui/phone-dark-time-chart.png",
+          "sha256": "54409a749e791cd514f2efd50603f05a4ea985b384d561a7b23c9508e96102d7"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-distance-chart.png",
+          "sha256": "ffb723e5a11b86ac1e46590d9c0816b13c0045bf33183476cc0b819bb6913dbc"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-history.png",
+          "sha256": "e5c5d54153798dc8fbd981de1c27c28193f086d6d348fee27c60f8b697801e81"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-home.png",
+          "sha256": "b69955a2873f430d09711b483c15014561f229cdbd92c4f12be9715e575d05dd"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-recording-connected.png",
+          "sha256": "e7bb7a88cb5d1a734be13955a355a7814185da6736d4e4c2234178e25aac8a9e"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-recording-reconnecting.png",
+          "sha256": "49eb6ee800d913fbcf14e148eb3b743b2a4b295ef28734fef5b59a259866e158"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-recording-stale.png",
+          "sha256": "4057978a995ec6e484d2aaaaa4a6b8e90df77c3f9e2f31d81bf0f33c8be60cf2"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Legacy native HR/reconnect/stale/dialog/chart views and actual home GPS states inspected. Dense multi-axis chart is pre-existing; small-window captures intentionally scroll. No new navigation layout regression seen."
+    },
+    {
+      "sheet": "sheet-003.jpg",
+      "rows": [
+        {
+          "file": "heart-rate-ui/phone-light-scan-fixture.png",
+          "sha256": "315d442c98e658516c3de57972e6cdb3dd0281706d49cd86478ffa9c3fceb7ba"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-scan.png",
+          "sha256": "780724e8badcd1cbeaa1e3f7867cbcd69df120b8574fa33ab2e28f109870f8d9"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-settings.png",
+          "sha256": "e4f71cd977b3350f1973a923f51cbfc31d1473649eb6a830001af7b8d5e374be"
+        },
+        {
+          "file": "heart-rate-ui/phone-light-time-chart.png",
+          "sha256": "11a9174ef9be8cbc83b43f0199c537074ff04780a669ae8bc9317cfe2d605f50"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-acquiring.png",
+          "sha256": "d3e53f4847bcde574c1de1e4afbc68c264e17170d7ca1dab8a814875f652d581"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-gps-lost.png",
+          "sha256": "5d81abc98d85e0b6f3b7fde5b510f993fd28ae357b8450e9e4b1c76c055fcaee"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-gps-ready.png",
+          "sha256": "0d68fc869b1d0cc58d564f3992048311bbc1f486340ee5066f67848383584b99"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-heart-connected.png",
+          "sha256": "eea878da9893516ebfd6dde3a428fc76d3a0fc67fd619bbd3223fa9f299115bd"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-heart-disconnected.png",
+          "sha256": "69321beaf8b1fdfa083e8d2088e9d12cd85ed1225930e1c3758812192840e1da"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-idle.png",
+          "sha256": "1c3d5a877cfcc21f0cfd9c800e05723639c811874bc21e8a00dbb909cf09d761"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-paused.png",
+          "sha256": "cb1490c1630d750ff200bbb817fbbf41403daddf8c8341c2aa20b8b5e7852efa"
+        },
+        {
+          "file": "p0-ui/p02-home-large-dark-recording.png",
+          "sha256": "31c50be735c67f2db5785613545a2b2b17f9b433ba2a2582e2b193e1fd999817"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Legacy native HR/reconnect/stale/dialog/chart views and actual home GPS states inspected. Dense multi-axis chart is pre-existing; small-window captures intentionally scroll. No new navigation layout regression seen."
+    },
+    {
+      "sheet": "sheet-004.jpg",
+      "rows": [
+        {
+          "file": "p0-ui/p02-home-large-dark-resumed.png",
+          "sha256": "6a0bf799d8c432fa704dfb44ef15181b1692675a6dc58cff336502024afa12cb"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-acquiring.png",
+          "sha256": "b114464fa1d48b40155e0da5397a3c2908ab177e561d48dd6298178730d6feda"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-gps-lost.png",
+          "sha256": "974498d959bf49ad261199df6db7237d18c392f9bcdc9e906c0a4cac67028dd4"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-gps-ready.png",
+          "sha256": "023563244a517695a66bf21108253876f4f01908f22ce9bd1a9f33c9d7f13c39"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-heart-connected.png",
+          "sha256": "83c527744d1d8a721fa481b8cdce1ff8062b2258ba5a1b7a6251740f6039de4a"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-heart-disconnected.png",
+          "sha256": "b07c270ab4817a0fa74c3a9d3588a3c631eee41d3db616da1708972cfef1096a"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-idle.png",
+          "sha256": "07eaae1a6f599a9a3be76604b66767e3aa8afdd292deaa1e4979fc0e8f4d6827"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-paused.png",
+          "sha256": "574683e41e16c53eeda6a8658c4a53bf2aa5ac2d2041b03160eba8028dfa3026"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-recording.png",
+          "sha256": "350eebce76c878361ce5a5dde2d2ba6d407e7216dfffdc5846edb1e8bca0f603"
+        },
+        {
+          "file": "p0-ui/p02-home-large-light-resumed.png",
+          "sha256": "551d431d9f3a432dd9052ee7c05b1db0bb64da4d14c5bf5a7f0d43b3a145a229"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-acquiring.png",
+          "sha256": "5dc3983c6f94ec14cbabbddf55ade60ce39f8e78abb542aefd84274bde9d9f06"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-gps-lost.png",
+          "sha256": "71e9e2c8af96ad8451f10c383500f1ffc7a678ba4b71e3003279625db4e54461"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Legacy native HR/reconnect/stale/dialog/chart views and actual home GPS states inspected. Dense multi-axis chart is pre-existing; small-window captures intentionally scroll. No new navigation layout regression seen."
+    },
+    {
+      "sheet": "sheet-005.jpg",
+      "rows": [
+        {
+          "file": "p0-ui/p02-home-small-dark-gps-ready.png",
+          "sha256": "23d6412014ebf152588adf3594c42a895c8f533a6795c76636f06e1836cfc97e"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-heart-connected.png",
+          "sha256": "0c921aed8f0f1a2755924364413adc7287065f21515f0d1ed82949f6e2351f2e"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-heart-disconnected.png",
+          "sha256": "0aae93c0bdfb5d7e8b75ffe8baf2c9fcc02ce4b45a7ae54cee1545c6f1637ccd"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-idle.png",
+          "sha256": "523785171401893ec97b93bf3cf83e03b8130491ac5cf6b99da79376d30153ae"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-paused.png",
+          "sha256": "d4b759701fdf24a42be3cd6493a5ca4257cd17b1fa1f1f4aa781fcf9efdc7ec5"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-recording.png",
+          "sha256": "1fa23c6064fa734660b1e9d8936b2f32ac299c4635b2439836061acd753c33a2"
+        },
+        {
+          "file": "p0-ui/p02-home-small-dark-resumed.png",
+          "sha256": "c2fe27a26ad4b2cd3025056b36f3240a36584e3062907912d40c5b45ebc747ff"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-acquiring.png",
+          "sha256": "9b365b6103464734cbbf10c81023490d1fff3566d13430db3425f14976314f42"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-gps-lost.png",
+          "sha256": "ebcf3f9ae074dbfb66db8a3fe79288c557392f1cd90b602ba44a255f2fec31db"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-gps-ready.png",
+          "sha256": "676c0c4c36eb8ad714ae72a486959aac411165f0b141622a53d35ca79867c77a"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-heart-connected.png",
+          "sha256": "13c8f1a2e0ce4ec9b55cb78177bf90fbf224479866a65f110a67689b3a88a0f1"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-heart-disconnected.png",
+          "sha256": "e24cb094b6d7ac337acc850fde11f4804ad851ce08891e91ed494d84ce83cfff"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actual small-window GPS/HR states and Explorer layout fixtures inspected across sizes/modes. Controls and navigation remain visible; explicit UI fixture maps are not real-map evidence."
+    },
+    {
+      "sheet": "sheet-006.jpg",
+      "rows": [
+        {
+          "file": "p0-ui/p02-home-small-light-idle.png",
+          "sha256": "39275a51c94e6ca5a80d1d70a33c262e818a9d47b48ed780e18ba05a7fe8a8c3"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-paused.png",
+          "sha256": "a2e983b1df6f1c4669564c7eaeb4c019dddaa55aece3558a2aa53ef2d2f6e436"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-recording.png",
+          "sha256": "dfa340494ba0625cfd893d2852f2269aa9f287032cee895f853fb61f835d49bc"
+        },
+        {
+          "file": "p0-ui/p02-home-small-light-resumed.png",
+          "sha256": "28c39c1f8bc8e1436b27097dc5bb25513a42aabf50da41e7c4371c470315c361"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-connected-no-sample.png",
+          "sha256": "4c61337dc4a6d24ba90a465788a0390a0914e4ce70dbb56931987f55d7f8ef08"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-disconnected.png",
+          "sha256": "5ede49f8f2b860f6d79b4f45e20a672d1b986acb3b372bfb8e4ed21b8e99ef6d"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-finished.png",
+          "sha256": "862a31a3f8d7b3de05afcf5924e429550e18cc47bb9c44bad356be6e4324dadf"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-gps-fixed.png",
+          "sha256": "08f93c1d7b65974b10558bda66a931acbf0e899f789a3ba57251d5ea376c905f"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-gps-searching.png",
+          "sha256": "87611ec01edf927ad6791b923f16de6a88984aef354ea80ad1ce6215642b7515"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-idle.png",
+          "sha256": "22a36f4681643492f890e4577ce622a7e412e60526d61d412d791e224c572acc"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-paused.png",
+          "sha256": "0ac398696303a38f79fa55725807326652a788ceb893ad2c54093c841a07f877"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-360x800-recording.png",
+          "sha256": "f323d5ab8acab0100c7a62afebd88d0e5e88d1e6c89f0916be2e4b8e36a1e5c7"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actual small-window GPS/HR states and Explorer layout fixtures inspected across sizes/modes. Controls and navigation remain visible; explicit UI fixture maps are not real-map evidence."
+    },
+    {
+      "sheet": "sheet-007.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-connected-no-sample.png",
+          "sha256": "600710efbe2d08f76a8e88285306c373fabd4661d5267083cc1468cd3d983bbf"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-disconnected.png",
+          "sha256": "e71310bd7e2762c627a69d83553f5d3e19e7f2bcdeadb165b36aa2ba617d92b7"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-finished.png",
+          "sha256": "1927f80eb07f86f8121c8d03db4764572b8fb17da6297dedef6d179cc0597d35"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-gps-fixed.png",
+          "sha256": "ef822ac89d36c1e6300f54a496843b1a9bc72e6827f01c960c40ee91688352ca"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-gps-searching.png",
+          "sha256": "d87e3727417ec1b8a054e915c9a6d5121cd31594864f93cf81f6b8cafb5a4b8e"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-idle.png",
+          "sha256": "d7a3dc1ae59ad4e04fa646eb33429fe3c72d1e34ec2492fc2a651c6cea3597d8"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-paused.png",
+          "sha256": "4db9913bd9b530f4b784bf130990ff5935c3d3c39cd3cd43358499022a9f6c26"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-390x844-recording.png",
+          "sha256": "8e8912fb33bf8b79099f7c06da930bd4d9a94cc3ed034e1293fe23287af91685"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-connected-no-sample.png",
+          "sha256": "fc3cb84a6049fd39586b692d8da1c877e3a374b2e6be3c3341773a061ecc9bb2"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-disconnected.png",
+          "sha256": "afa04f6bb68bff063a664f549c81f3c6511b5c8a9b05452fb23ab7fed1a5c572"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-finished.png",
+          "sha256": "9014c2b686da36cc00c713a08bd59da9b3969c528de3c6a8558437e274bc81a9"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-gps-fixed.png",
+          "sha256": "6e0782dca50cf5a0cb0dd6819b24017badf339ddd75d40e697bca59661027a4b"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actual small-window GPS/HR states and Explorer layout fixtures inspected across sizes/modes. Controls and navigation remain visible; explicit UI fixture maps are not real-map evidence."
+    },
+    {
+      "sheet": "sheet-008.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-gps-searching.png",
+          "sha256": "96722bc16929bcd1f75232a76b6276e59a273f9ef678d2247371346a882e2e56"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-idle.png",
+          "sha256": "ff1a2fa7398ed01ba353ac8f7339a80cd0a5c571c24c4800df51806223e5544e"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-paused.png",
+          "sha256": "ff043d435f100a33c8549e12fe7f3fec80dcf5ee71b368469b23a94f8a3844ca"
+        },
+        {
+          "file": "p04-visual/p04-explorer-dark-412x915-recording.png",
+          "sha256": "0685ea5685c7de56f9c42292ceaabb7ba546e67bdf586f2a13821550e3f52dba"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-connected-no-sample.png",
+          "sha256": "37907771a47b9fc1afd370f4d018247f62c2d589e6536e47c330768772406ffe"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-disconnected.png",
+          "sha256": "ebe713d2e211ffae06eccc02f5152ede9676ed31de487ef4c82bbf1fdc3cdb4a"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-finished.png",
+          "sha256": "806acae1b4a58da65d63e7a4c2032a28463f948d90aae83e58f4df734742c7a2"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-gps-fixed.png",
+          "sha256": "08ce8f2ce96a4ca1d128e6326ac005549e3bc84fe8b31785ed5cdc2cc0060d4d"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-gps-searching.png",
+          "sha256": "61dbdc47e7170d5acbd5008a00059771da78135ea9fcccf25b3b4e0fd1792e1c"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-idle.png",
+          "sha256": "82a78fe977b5934ff2d0e0600b208b47233eab3de8702a282db10e2a24228390"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-paused.png",
+          "sha256": "02debe9f4600cee17f6f3540ab225bdb803d2ec29a383b1681756f1e1db1778b"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-360x800-recording.png",
+          "sha256": "511ee4346f7ec1f2352bdcb8763215503fa9c4d957357f2067d3928c1e1eff11"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actual small-window GPS/HR states and Explorer layout fixtures inspected across sizes/modes. Controls and navigation remain visible; explicit UI fixture maps are not real-map evidence."
+    },
+    {
+      "sheet": "sheet-009.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-connected-no-sample.png",
+          "sha256": "f546106f1e2360f647c3aca35e0b2197ec89d4d37660e5ad46dbd21804adfe9f"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-disconnected.png",
+          "sha256": "1d152088422c187723c8a882c6cea5ec6754d04eabf156d31e08c45c6e260733"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-finished.png",
+          "sha256": "59430f66bcb4f954018519bb9ea48dae26fd9e7b200f4f40e05f69c3715e8fe0"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-gps-fixed.png",
+          "sha256": "b23b05041fd0403eaacbe2361c810153a68a047cc4b2d09425ff0bce4322c1c3"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-gps-searching.png",
+          "sha256": "a34311dabbc64743e689329bcb20778d54c6ecfcbffec8a313b41db5656fd4d3"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-idle.png",
+          "sha256": "eaad1da53bdd2f55ff71d0b88895c93781593137e3e75523aa58b739f8916ae4"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-paused.png",
+          "sha256": "96223e1034d0c6a0c3385a8d57ff38ab434d7fb120d7c47d1d319104f95d67d2"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-390x844-recording.png",
+          "sha256": "b47ed61883a1d0967c7a82f3d2ff59dbec142a4f27b566e1795e3772a1a2709a"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-connected-no-sample.png",
+          "sha256": "3ff4cdf4b0f72b39fe518d836165d67cb598a8544e56ccfc8c6e3b74a0f74846"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-disconnected.png",
+          "sha256": "850de2c0f049cd22e7bfc84cf55b49534151f73f1afbf746e9a3a4fe54bb5401"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-finished.png",
+          "sha256": "0251603ba8136f8a96a6e44dfb930c9bf96853509baf9cf1a6d3447218916b0e"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-gps-fixed.png",
+          "sha256": "8e00489b2950f978ce9ee851a0a9fe9add4fd194be35d5b6d7fa1da65576a877"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actual small-window GPS/HR states and Explorer layout fixtures inspected across sizes/modes. Controls and navigation remain visible; explicit UI fixture maps are not real-map evidence."
+    },
+    {
+      "sheet": "sheet-010.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-gps-searching.png",
+          "sha256": "a5d6235ebe297b92a7c849826dca3219c38839fe4d9976101a9f202912289716"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-idle.png",
+          "sha256": "772bcfe8b51c017b434ceb3eb52eb58b2887863ae2974254974cd2b4646f9bcf"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-paused.png",
+          "sha256": "f78262df7667c3d82f97396d8df6eacf2c5ada78b96e4d5ce0891c5455402af9"
+        },
+        {
+          "file": "p04-visual/p04-explorer-light-412x915-recording.png",
+          "sha256": "7f5540df53984b63a358531ec3a76faf22fa4e2cb695012b1f8517bc12679f21"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-connected-no-sample.png",
+          "sha256": "6711392fd967fe96a09af3710e3b692e7e4fe64810dbc802e742463c88c1059a"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-disconnected.png",
+          "sha256": "91d0cbb90fff3f91b12caac790863d7c85e9716d02f4180436f12db3f2860223"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-finished.png",
+          "sha256": "4fca97aab53391e76773b3a7a1dbbfd1b0640397153c26e95f40a93cf655367e"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-gps-fixed.png",
+          "sha256": "f70ee8a4c563fc33556d27316c9c0627f4cc964d8226f46bb8992aab5c167799"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-gps-searching.png",
+          "sha256": "369c765216f0b1519a1b8104744d6a48f035fcf01f22686d701375cf68937f46"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-idle.png",
+          "sha256": "ff6d494019a4e5a5093911dd05377e03e7238a10d3cbdf18ef8ae6cc4d3b5b84"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-paused.png",
+          "sha256": "305db30e7c9237b267c41390e1e11f802472c7ffc14d0ad94b8312fad1d111d1"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-360x800-recording.png",
+          "sha256": "c9af885d59cd41e77b66bb5cd34abd83fe29ce62f7e7c595c817de7c6deb25e0"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Explorer/Neon/Precision synthetic layout states inspected across sizes and both palettes. Distinct hierarchies, controls and selected root preserved; neutral map fixtures remain explicitly separate from real map evidence."
+    },
+    {
+      "sheet": "sheet-011.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-connected-no-sample.png",
+          "sha256": "6e16d721051fe329731e72719927e4896d5cecc664ff1d0d25ec60d0d8740fca"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-disconnected.png",
+          "sha256": "ef4f344f881204727a99ee98aa786f0db8cd6488426920169b341deb08ee0ae7"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-finished.png",
+          "sha256": "bc0ca54b4b479dc0495377dfc6bb09b5b98359256d76aba151b2aa604d176be2"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-gps-fixed.png",
+          "sha256": "fea50633802d2614d2cb32a613130f9b36ae7df6a9a0b7eba23f4b07a4814393"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-gps-searching.png",
+          "sha256": "b212e6522760775ebca1131dd778fb5454643bbdb7c3fb0ba90c9034e470162e"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-idle.png",
+          "sha256": "91b6f8a728bc14d22cf4a7f960ba6414ef443252553de6c907783d57e4bac53d"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-paused.png",
+          "sha256": "7738f1483e25752b98382f41cbef3830e9d6b6d1779c131ef5fa7a5a57110cba"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-390x844-recording.png",
+          "sha256": "d22923aa2238b419346e5263e38879af016b82f2c9a93fd4b28cda1c382c5623"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-connected-no-sample.png",
+          "sha256": "a9a489b7c8c4106d2b02740db41e5ad780ad8f8ac8b955436e75ba12360977dc"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-disconnected.png",
+          "sha256": "83bf267d958c893b0cb738b04457219ef4117cf9630a07a9bdd77b6a50594c02"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-finished.png",
+          "sha256": "aaa9a38a01657338d87476d01771dfe3b914713032c9cbb22829930820b42a33"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-gps-fixed.png",
+          "sha256": "94deb7b0af0ada46d43d2f8b306117072b01d31ed07211a41f6b0155b43374be"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Explorer/Neon/Precision synthetic layout states inspected across sizes and both palettes. Distinct hierarchies, controls and selected root preserved; neutral map fixtures remain explicitly separate from real map evidence."
+    },
+    {
+      "sheet": "sheet-012.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-gps-searching.png",
+          "sha256": "3ede24b1aab0a11f75749f1b1ed47ef9f31adf7fd8a663fa4794a2beca83ca8c"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-idle.png",
+          "sha256": "8e62aab7bc266f8ee73abec58b5c344b25e032223ee410da92c90c32b5b2f9ef"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-paused.png",
+          "sha256": "376b09dab2e2f448ead13b48fba8d75c23506bbde1ed3895e2907a7deb7a0a42"
+        },
+        {
+          "file": "p04-visual/p04-neon-dark-412x915-recording.png",
+          "sha256": "5bf6070a6764aaf6140da0ff676b91888a7c5ed0fbab9f8e745a5587b216b910"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-connected-no-sample.png",
+          "sha256": "96322007e2a9dfb24fbe249440fbb028bc92528e71fb0094e211e6f38277ffa5"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-disconnected.png",
+          "sha256": "4bc47cd86ebc957c2cbb9ee41c0e65376e6fcd1f9aaa12afbbb6a4088a8739a9"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-finished.png",
+          "sha256": "aafa4e1033f815a8ec5f3f769bc040b298e507259db9db732fc8dab709fa6b3c"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-gps-fixed.png",
+          "sha256": "168dc74f7f87a056384ea47bec465d8edb4b879d6993a6b22909c1a6dd721ced"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-gps-searching.png",
+          "sha256": "56089e1d4fe8befcc915b85eae253d24b0f3ff269705a2b44fe80cc13d349da9"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-idle.png",
+          "sha256": "f376ba7581950d4ca5bdc23a39e098129e3a989f3992c7b72727bbc1be90b1fa"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-paused.png",
+          "sha256": "f244d324759c42136584230b808ae993885829da34cc0e09da93a573ff7dee00"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-360x800-recording.png",
+          "sha256": "76513b84e911f255032ab1f60333b1f58e1509796eaa06263504048039a7886c"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Explorer/Neon/Precision synthetic layout states inspected across sizes and both palettes. Distinct hierarchies, controls and selected root preserved; neutral map fixtures remain explicitly separate from real map evidence."
+    },
+    {
+      "sheet": "sheet-013.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-neon-light-390x844-connected-no-sample.png",
+          "sha256": "1329d1427f0c37b26683c8e9c2d587cabaaba861d5fd6a52dad154f29d845ff9"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-disconnected.png",
+          "sha256": "28e3956eed80e042ece274adf3a78d7275413fec82348d30176718bc15d151d1"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-finished.png",
+          "sha256": "7141c44caa6be0d4545cb1104fe4c82fab6c6dde7c60fbcbd2ecf4be5ec88788"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-gps-fixed.png",
+          "sha256": "0fe57d9cdcb0de6d0e3e099dce35dcab80e0c9e9fe8049799890a586635a23cf"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-gps-searching.png",
+          "sha256": "1e85275a495a09cd0ab28ac02b24392577f1d2686fdaebf2afe88d2b1750fc46"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-idle.png",
+          "sha256": "cbe27e7ebd63f1e654f179c9181aa6cd57ded687c4b600574f0ca9d150b17085"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-paused.png",
+          "sha256": "d31c631de13575ebef5b0f9d96936b9049865369952a4c66a9140bad5d149000"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-390x844-recording.png",
+          "sha256": "552d345557f14fab87e9af9ac95eacce46f4b15d3eba53e4c7aee278aedd8939"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-connected-no-sample.png",
+          "sha256": "e199740b035ff297a971da88a1705bcde91b97f748e0755a1a96177cd2de4d86"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-disconnected.png",
+          "sha256": "6646f1da2ab02834070123850e9c9d637091275b502a8e9b795cc711813922cd"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-finished.png",
+          "sha256": "f77d3db0af3406b55576e533176bfb3ad3e5da7fbc86449330750d4d87261a7d"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-gps-fixed.png",
+          "sha256": "636bcaf69a7855306c440a61132f8afdc92d33dcbddcf811e0a954d592c6feaa"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Explorer/Neon/Precision synthetic layout states inspected across sizes and both palettes. Distinct hierarchies, controls and selected root preserved; neutral map fixtures remain explicitly separate from real map evidence."
+    },
+    {
+      "sheet": "sheet-014.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-neon-light-412x915-gps-searching.png",
+          "sha256": "b685555b311edf1c1db44546c129a4581dcb2d59991de086699749a489a41f5e"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-idle.png",
+          "sha256": "3bd93e8c665141ea52f2cd55505e746ff02c558fe6e47e7920c05108b1fd0e78"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-paused.png",
+          "sha256": "9c89e64fb8b33b42cb90eec72ed31280c7c1016a377d5ff22fc58806f8dfb818"
+        },
+        {
+          "file": "p04-visual/p04-neon-light-412x915-recording.png",
+          "sha256": "aaac75d4cab601a7eae0d876e3bcf4b4c0c9bbbcd113623326b364f78574a35a"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-connected-no-sample.png",
+          "sha256": "03cf8dd7d1bdfe55f65d8d65c48c74f500c9bae1d51f63a81480fd9b0ac4af6e"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-disconnected.png",
+          "sha256": "bfb64118425f596f50e79d7d019a7a23252fd2767ffbef9c322f0e4367a1ac16"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-finished.png",
+          "sha256": "07ac1c84257cf0c5d398599b749f2bfacfffaf35f0f63b60d2b0e8faa3d518d4"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-gps-fixed.png",
+          "sha256": "2954895fb7a3bab28341bbd324c21478ef73437fe62d6d682dbe5ee388a1955e"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-gps-searching.png",
+          "sha256": "8283afe91269d32b3300830b4cbaab91ec8672694becc08a9bf11bfb6b09b615"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-idle.png",
+          "sha256": "0b78b2d708e8be94a253e478647f3199331a3dbc5f50c35196f721cf76cd7704"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-paused.png",
+          "sha256": "115145d6ee42f75409502271098361a461a7be1b0e251b797f378c9624b690e6"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-360x800-recording.png",
+          "sha256": "1c44f869afb1dd952ef8c66ef2e84ea3f2a867d78e8d736885b79eb714d6ee61"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Explorer/Neon/Precision synthetic layout states inspected across sizes and both palettes. Distinct hierarchies, controls and selected root preserved; neutral map fixtures remain explicitly separate from real map evidence."
+    },
+    {
+      "sheet": "sheet-015.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-connected-no-sample.png",
+          "sha256": "25b26a31c248b5b9243b67fdb37f602ce14a432ed11c846add6d4431cc505369"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-disconnected.png",
+          "sha256": "65eaa26fda89014012ee1ecc6054574f4f023e1d4e58892062d65729ef57325c"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-finished.png",
+          "sha256": "06d055555cc1cd4f44280d46d18b29fa6ec73156eca51a79a1dc0999088e64f3"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-gps-fixed.png",
+          "sha256": "8fe7ea177652b47c3a54451e2c5fc16c9f1b81a1a02420e670de6a2e311ae407"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-gps-searching.png",
+          "sha256": "941a99ca156e2f98272f99a26b91cdcc2e3a50b71436baee2f331fe82e8de3e1"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-idle.png",
+          "sha256": "06c362203bc09d193b10577cf1b843939149abfddd105c23fc9bf6f5dcbc1612"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-paused.png",
+          "sha256": "c38d3bee2fc402bd53e35c20b9c04c19b3167a251879aaceae58ff2b3e268045"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-390x844-recording.png",
+          "sha256": "99a3fb516a8d78bd09c82b77649ab95344dd156a0a9b559f466a66153640664f"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-connected-no-sample.png",
+          "sha256": "9d5d06b488038da0661dcb0a3fd5959ad0765561db68d8d4e492edad478056ff"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-disconnected.png",
+          "sha256": "f442d9361550c00552f57cbf2c54ea6afb44df881b8393e60bcb55e913009776"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-finished.png",
+          "sha256": "0c2dba11fe43452c877c7fb281f9d9c024ff06158af00004f972208340c913df"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-gps-fixed.png",
+          "sha256": "11dac397eda9c9646c8ccaded89f51b53cd16f219de82834fd25a9b58d47fb00"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-016.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-gps-searching.png",
+          "sha256": "073352b5f3489dc438ad0c8f8904d0467429631378051122171a3ceaee7f4345"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-idle.png",
+          "sha256": "c5d4bb9d89f16dd98aaf72ea3181cdd487ef49b7961cc3c144051dd97b4be8c4"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-paused.png",
+          "sha256": "6952cd5393ab242c69b0d99c2ba93fbf9f52d9ab2622ddc01a5842fbf2c37779"
+        },
+        {
+          "file": "p04-visual/p04-precision-dark-412x915-recording.png",
+          "sha256": "a7b1545c8ad8728b71b246fba5cd2f2a4b2404d5f72c0cf9497bc8cfa88af67b"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-connected-no-sample.png",
+          "sha256": "c14845a64a57b56e268b39c6789d09f645aefc182590aa3c2f3144d3b0f803fc"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-disconnected.png",
+          "sha256": "884bd20d8d8d7a8ab0938c4f9c0cb5438522cef51d7ccdd9f1bb267f5227c56c"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-finished.png",
+          "sha256": "c1cad228d2622d9da477c907dab0e4f4ffaa31055ae2e9f755ae531f80307695"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-gps-fixed.png",
+          "sha256": "2de2680ead2592e627f9c7c1a8832f85274fc4ab13a8c05886006c748b1bdcf1"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-gps-searching.png",
+          "sha256": "03b50cd6b82105436305b7daeb7e5bb4cfbc130ee8a6d0efe794e0eda9b3d6b0"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-idle.png",
+          "sha256": "cdd1351d581030c1dd4b46492482bb8f55478737f4749f0d552e2a2e9ca61ab7"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-paused.png",
+          "sha256": "a3cad0162ab15ba186dae2600c00cb123a5a43b5381a834797603d27a41cc1b9"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-360x800-recording.png",
+          "sha256": "cddfb5e39fa7139e37b66cb93266f06cb3499ecb6ab7f4e49556f06aab537948"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-017.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-precision-light-390x844-connected-no-sample.png",
+          "sha256": "131c19d890eb74df1fdaf8b63e3a85700a23beed5723f752f6b0a9bf3b04c05a"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-disconnected.png",
+          "sha256": "bab1f96c508417f4fc82039e8c96b989fc77b20db86e92498fa13691da86f25d"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-finished.png",
+          "sha256": "5e46d94b0f80c53ce6d0bbf2f2531dae50ba53c91d2dd583ad75b44f87b703a1"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-gps-fixed.png",
+          "sha256": "bfd240a717fc25232a721ab2d4f787764f73480dcd0bd39c49c2b688cb696072"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-gps-searching.png",
+          "sha256": "87c66b1a557cbab93b0ca213e9729faf57176b5e32df5249433670528c3a8715"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-idle.png",
+          "sha256": "ad0e900a40b169812ba1d61ed6523e160c250e7e088bb5a0c28a7c7ceb85f41b"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-paused.png",
+          "sha256": "cedef77737906de1d73016d2406de3950935e6662b3476e67aa6540c22d710a4"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-390x844-recording.png",
+          "sha256": "fa6df08934de162fee6cded1dcabc49ae149216ae2c3e5924856efd87f655b8e"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-connected-no-sample.png",
+          "sha256": "71246d8422b4f7196d3db5f8240e073928d4efd69177caa809a2cc08c61cbd08"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-disconnected.png",
+          "sha256": "61f700d677c6b63cf4ee2d7f9bac4acbeb406b78fe3c9f2cf144b80bc5cef897"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-finished.png",
+          "sha256": "05fc4f02827660cda5b77541d74cad6ee9bf2fda8e68562c98aaf9acb56988f7"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-gps-fixed.png",
+          "sha256": "8e164816e4e73063a133a8d6adbd6751b58ce7e92b3116208ed6758c0ca0573c"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-018.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-precision-light-412x915-gps-searching.png",
+          "sha256": "ca68627835fbe6769e2e9bc621ce2bd2932c5311354657304844ea50378fce30"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-idle.png",
+          "sha256": "1205fe487640487b4f02b223ba827f3fd7de4adfd83c166417e4b1692bfdb61a"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-paused.png",
+          "sha256": "3d553bf57d0b9537df7bb7d42236eca91488dc82f17026da0f982d5b85ac1980"
+        },
+        {
+          "file": "p04-visual/p04-precision-light-412x915-recording.png",
+          "sha256": "b2a8c3b7e25c79885f469a665228cc685e2fb65ef63f3628f47f4f1853392569"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-connected-no-sample.png",
+          "sha256": "81be577fd3df52de2e7e1358d3341df2597e1dd2b1e92c997c4608f1000c787c"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-disconnected.png",
+          "sha256": "60cf812e05c0985b1618268957525cae746cfe1e5555f527c8cd2837fac9505f"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-finished.png",
+          "sha256": "366058c0458f4942ea274d2fa714f630b4f1b8deba47ec37978b774b0da15bc0"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-gps-fixed.png",
+          "sha256": "6146c5e5b97242b9be59dacb8b3184efb78dc7509e052ec61d2bdd50df486271"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-gps-searching.png",
+          "sha256": "7e653cf602865c8fdf16f32a3086ff58075d469841f4f888116764e3adfedef7"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-idle.png",
+          "sha256": "56dda3317a70ff8454a30c5318adb6c686ad8ffdb7884fb3f04a27fccf47fd40"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-paused.png",
+          "sha256": "717370d2998375fa588d16e9de35c43363e21a0e1e1a867ed8d748205d73971f"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-360x800-recording.png",
+          "sha256": "20e3db7eb4905a5d79898d32aa7e104f2315f23a13f71f505618b76fa081d7dd"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-019.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-connected-no-sample.png",
+          "sha256": "34413771fcd81e70404bfc24f6575befebf290f69b956e4d9a2c93ae42079747"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-disconnected.png",
+          "sha256": "0a63bd69cf4fbf38a4a2bc4ebf409944f6cf60d863f4bdfd1e3492ddc17cfea4"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-finished.png",
+          "sha256": "0e3e0f1923305b7c3d3af56148544ef51822792f1dc6a015a2435d016268c705"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-gps-fixed.png",
+          "sha256": "ea77b61339c51bf2440776f2bb26239bf8da60141df9799b41506a7015ed447a"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-gps-searching.png",
+          "sha256": "3324ff68bb2717901062015aad5384f0016499f06bff38bf7c9ef5689969a701"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-idle.png",
+          "sha256": "00b1f04fbcd4f396cd7215c8972c53a41955a6a22a7d0c30487fa1f388bffa93"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-paused.png",
+          "sha256": "c6e8a8cae9f1a8c3b8ba6a8bd00c7a05e0e7a8351cb30857f26ac386c8b3022a"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-390x844-recording.png",
+          "sha256": "bc385f94caff681c497c8663b480e77d6ab0aa808192bd959588b9e9e121e555"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-connected-no-sample.png",
+          "sha256": "88783368988e09f352d619e3681391c720cb7760900a69234f572fa03bf2cd8e"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-disconnected.png",
+          "sha256": "95c368b114b88290a04aad3542ca7485adaedd3d0ed4fbd1bc5ada4047dc89b9"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-finished.png",
+          "sha256": "6b60b137505b943f7728babcd97f4d44dc66b4febddb77da54b3bc04345321fb"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-gps-fixed.png",
+          "sha256": "958d79527c02b84146332e45fd6f5c512a93d7332f2ef283b0be537dfdc86b09"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-020.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-gps-searching.png",
+          "sha256": "0d51c5184784fe1df823c159edb94491681cc72d785800103563e399bfac027b"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-idle.png",
+          "sha256": "fb27ae57b7c72409df4d6b4244a5391e71df3f62f443a20daffdb41a38f2feac"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-paused.png",
+          "sha256": "7f86faf67d6ab833a2c8d41bcbdc9d31dffd6d2cb53a494b65819d749a1b8cc1"
+        },
+        {
+          "file": "p04-visual/p04-quiet-dark-412x915-recording.png",
+          "sha256": "10d00659af5c1673d94cb0906957f1d3f473b9251096288fb9999dee05011817"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-connected-no-sample.png",
+          "sha256": "b0ff120b23725bb26b39b3deb7ab8e88b9a7da2a7c448459959f07465cd60227"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-disconnected.png",
+          "sha256": "58ca60bdc39a0332072d3f34b33fc3f925150c8a318ae0ae52787b9a92558051"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-finished.png",
+          "sha256": "7d20e834fa571b9c5a38518cc39d3c71891292a68480eabb55b49c13dac5a016"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-gps-fixed.png",
+          "sha256": "fd27e2d20c5d19132ba73622e3c3c31a8f0e2cb4de0fe19154b1021b248f838d"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-gps-searching.png",
+          "sha256": "172287f835a5206f814bbd59fd1340a419d348ca08c5d8d769f785592919b6ca"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-idle.png",
+          "sha256": "2f2a1f5529b7cd66a95bc901ff0fbfdf233b1f05512aa42d9e73fdbcf7de192e"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-paused.png",
+          "sha256": "870423ed125876a694e6bba41260e940fd35596677dab2759502d234554dbe85"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-360x800-recording.png",
+          "sha256": "b40d4377304c3e2b901e0ff882fa7fc68cdfd62629ea864358ac3649581385ad"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native contact sheet: Precision and Quiet light/dark state/layout fixtures; controls and selected tab visible, scrolling at narrow heights is intentional; neutral map fixture is not real-map proof."
+    },
+    {
+      "sheet": "sheet-021.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-connected-no-sample.png",
+          "sha256": "85ca6c40f31dcf8946194128d0bc340cc7ff2e5d9df3b98c07726cddf27bf7e6"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-disconnected.png",
+          "sha256": "7d5bd8c64a09c5f636eea8679d7ada5fe0d1b635fd2d2702bdfd1c49f8308faa"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-finished.png",
+          "sha256": "13d73478983093b6c2b3a1817c7fa9a8ac6f80ae7e4f70e4cd9a7e359a1ec400"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-gps-fixed.png",
+          "sha256": "0d061f7396733b9d75ee2fcdc9ff5a8582d3ca7d6cae4315984247b849788291"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-gps-searching.png",
+          "sha256": "d1b6a71cf5c2e936f068f6d7a4fe245ffe2c5e3266801c91cd7fe6ebd013b8e0"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-idle.png",
+          "sha256": "183efe81ec7eb16b4543704f9061f47c758cb9d08405144f8a363dc0192039a9"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-paused.png",
+          "sha256": "8adee201c248ce8f53a77635f287b9a090a7c3dfad6154012166da2633edf251"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-390x844-recording.png",
+          "sha256": "810eed32c702ee77c609f24072ba0b0e2fc5363b772f3ae27b26aaa9c695e688"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-connected-no-sample.png",
+          "sha256": "58e7103f429379aabe5699f4e000f6bdfbd98d16b704af6557b2f9f45ebe118e"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-disconnected.png",
+          "sha256": "ce235579eeeee431bb3ef207920711ba04fe018f825f16638778c95a37cf0f13"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-finished.png",
+          "sha256": "2277c8f357cb811894c5eece729c20563bade0c97e9bc0b2364f3c5c600881a0"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-gps-fixed.png",
+          "sha256": "08beed5b3d93f245eb52503dd58f77127f7cfd46ef545bbcc9e782e673438f2c"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-022.jpg",
+      "rows": [
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-gps-searching.png",
+          "sha256": "04bb07bd9c1d7cf04d7278c9ffdf194c5893f1a991cafd357cd120321d4c8cbb"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-idle.png",
+          "sha256": "9f8c3bc944ef6c1c52266c884b0a08ac2dc35fb2ffc377cec9b851262b0e59b5"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-paused.png",
+          "sha256": "74f91ace0e0016dfde0452040a855385e941b2cf043d1b73cb14f62846996e2b"
+        },
+        {
+          "file": "p04-visual/p04-quiet-light-412x915-recording.png",
+          "sha256": "8e1ea815e76d38d6764c393d6c615fa9a2ae3e81e31ad998e440668c5956f31b"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-dark-delete-native.png",
+          "sha256": "b52d7865edbb7bfd810d9c8ba87caf1828e50ece33c688a607b1731abcd6b17a"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-dark-list-native.png",
+          "sha256": "0a7e38e2e014ef14032685aaef797e207f39da2c9ea02d81776541afefa29c1b"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-dark-selection-native.png",
+          "sha256": "735d3a0ab53f9467caa8c95cfd51592070fd8ea7d5e9cb78aee184d4afebe11b"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-dark-share-native.png",
+          "sha256": "6c11c7e0586da114f787995c842fe9d4c744a06c1a6b16a3c04fa569c3b698b5"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-light-delete-native.png",
+          "sha256": "edfd9e06052a36a43bc78e03a86cdde18d84d6101b2cf401be5e8887100cb805"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-light-list-native.png",
+          "sha256": "796ff8174179a3456a9a689632836389511c8a09f3ab3f1b94bdc4ef5c033981"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-light-selection-native.png",
+          "sha256": "247f2085d767ef4e4739c74578fdded70a85a3267c67f1d6c4cf28e62e42fd36"
+        },
+        {
+          "file": "p05-history/p05-history-explorer-light-share-native.png",
+          "sha256": "ebf9a75a6e46b0c25521b8330bae0f1025981c3b29daf51bc8e71e268774de38"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-023.jpg",
+      "rows": [
+        {
+          "file": "p05-history/p05-history-neon-dark-delete-native.png",
+          "sha256": "45585bf45d359f27fea83ced54914f74ccd0e4ed3c92eef9f59c4054234d3473"
+        },
+        {
+          "file": "p05-history/p05-history-neon-dark-list-native.png",
+          "sha256": "d8ac66efc53583b0864ab358fc1296fa9861e230688f78a5152b9e16e4cb1959"
+        },
+        {
+          "file": "p05-history/p05-history-neon-dark-selection-native.png",
+          "sha256": "3a88993a948fae8f98b0dbcfa376e2d41fcc68586cf8760dcbd386cf9baf1cf4"
+        },
+        {
+          "file": "p05-history/p05-history-neon-dark-share-native.png",
+          "sha256": "7ccb50be2dd070ccb623923de80c2f1e9523f07dac6edaab4b2a84c98d96b0e1"
+        },
+        {
+          "file": "p05-history/p05-history-neon-light-delete-native.png",
+          "sha256": "95a2d1eb9de1470a23e4123be4627c3c69f098a504b2750302c7bbdd90489c5e"
+        },
+        {
+          "file": "p05-history/p05-history-neon-light-list-native.png",
+          "sha256": "98367f1a0f0208f14c002874cdbae517041901cfa57298b0481803a8f6fdf7c2"
+        },
+        {
+          "file": "p05-history/p05-history-neon-light-selection-native.png",
+          "sha256": "6ed994c878a344e110f26c0460fa45c7700ab7db15b5bb8df653cb54ef321b2d"
+        },
+        {
+          "file": "p05-history/p05-history-neon-light-share-native.png",
+          "sha256": "c7fe5b91da3082922a18dd6e93e87f6c536c253b49457492df820dea0ffc4616"
+        },
+        {
+          "file": "p05-history/p05-history-precision-dark-delete-native.png",
+          "sha256": "bce0c0193aca8abfea63366510bd9ad391f0975bbbc115b66e828de1ebe21126"
+        },
+        {
+          "file": "p05-history/p05-history-precision-dark-list-native.png",
+          "sha256": "b677d2eebc15e9440a9f2dae20b8d6d731cdf35e2746a2759899ca3573568be5"
+        },
+        {
+          "file": "p05-history/p05-history-precision-dark-selection-native.png",
+          "sha256": "2b7e60ec6753fb728d17c912e7ec2b17d3996740fd6007de65574a82b22721d7"
+        },
+        {
+          "file": "p05-history/p05-history-precision-dark-share-native.png",
+          "sha256": "686bb2e71bcee93b4282d1e1d6880b79b9a646250009fe0dc6539083750d1400"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-024.jpg",
+      "rows": [
+        {
+          "file": "p05-history/p05-history-precision-light-delete-native.png",
+          "sha256": "3a6abb605479a1dab3a4cb69af3693475c6e05f68dd1a026efff18b9f1898dd1"
+        },
+        {
+          "file": "p05-history/p05-history-precision-light-list-native.png",
+          "sha256": "7b202a2aeb73c2d45f78b82969a63b53b0a50d41f947d007383b93c84dc9d36c"
+        },
+        {
+          "file": "p05-history/p05-history-precision-light-selection-native.png",
+          "sha256": "dedf897773d6b18d6ff3f553ec49cfe9142324fbd31d2982511c82b2120a12a7"
+        },
+        {
+          "file": "p05-history/p05-history-precision-light-share-native.png",
+          "sha256": "3cee617024681db2c9a6d0a8861a794ebdf1756df2f2b9956e1b7e0abf166c92"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-dark-delete-native.png",
+          "sha256": "d7c7016746df0b9226b310a473aa0665653d574f5dceb24f26fcbe7932105acc"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-dark-list-native.png",
+          "sha256": "534ab5f842674971ca3d409c4b16b42dbbea922736f8a533c3f58d359a4d5d5f"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-dark-selection-native.png",
+          "sha256": "adbfa2b190bccb0788e6a8e84f63b2824fd8c82e88d4d8d5867049b077e3c894"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-dark-share-native.png",
+          "sha256": "306222227b1d3fcac07d7231f8bcc43df75f68b254ab533c79ad63eea0424405"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-light-delete-native.png",
+          "sha256": "480dbed9fb57dd36af907e5871c3a73b0b3368287dd627713abecf66cbfc13da"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-light-list-native.png",
+          "sha256": "f5c61b5562080cc6662643700eda9453bfdabdd46f4ed98ad90e729e9f6177cf"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-light-selection-native.png",
+          "sha256": "6759e385b1bf8e372cf7e479dfef7bb3f511e9064b13e13ee6b7809847007924"
+        },
+        {
+          "file": "p05-history/p05-history-quiet-light-share-native.png",
+          "sha256": "ea268e7f0474a00ef2aa0d55f877fd1e086381c3d221eaff9e715f21fb8a14a6"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-025.jpg",
+      "rows": [
+        {
+          "file": "p05-metrics/p05-metric-duration-explorer-dark-360-font130-synthetic.png",
+          "sha256": "006e434e47cc1e9aa3fed861a53e901d1572638843f0d83ed9e223285a5f9782"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-explorer-light-360-font130-synthetic.png",
+          "sha256": "21721b93e635f97b3eba185b2de647acf61bcf030397932efb015d5410eb0907"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-neon-dark-360-font130-synthetic.png",
+          "sha256": "d3dfc80be2c11a0bb1165d8b12168f97c8473cef46eb9aa087badedc29933d17"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-neon-light-360-font130-synthetic.png",
+          "sha256": "e92ab5ef6efd752952656f29665d0b029021a91e84c0dc85e2a39127ec923496"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-precision-dark-360-font130-synthetic.png",
+          "sha256": "366eb3983fca33b0eb0489b1928c22b178a8d7708e9efe04f8671c8c3ee18abd"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-precision-light-360-font130-synthetic.png",
+          "sha256": "62a2f55e255afc87685e448d47d50ac265bb2e77dc3864ac95b335ccbda8ee7f"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-quiet-dark-360-font130-synthetic.png",
+          "sha256": "5d5f97f4c46beb56271e571a0f942faa7b67e2676ae98aaba84d5bd9c3c0fbfa"
+        },
+        {
+          "file": "p05-metrics/p05-metric-duration-quiet-light-360-font130-synthetic.png",
+          "sha256": "a5d717a7f08660d7969d87d546a0e2973677f0ecdb55c503b7a0cb43e8cfd435"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-explorer-dark-360-font130-native.png",
+          "sha256": "289e418ee8783409fa96dd7d29099b72591388c1504da70a99cd50bfab601221"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-explorer-light-360-font130-native.png",
+          "sha256": "3a4b11bd5c69bf6029efab15e6268f026b9b41e25dc2a5f2d57df873fc9038f2"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-neon-dark-360-font130-native.png",
+          "sha256": "e48bb92647f48648472204a31c0d93cefb22bf3c6fd220fe0aef150e47969a46"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-neon-light-360-font130-native.png",
+          "sha256": "1172fb4de7c96a2cf7628f2c5a1a52bdee206ed32dbfffd2e237d2789945b303"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-026.jpg",
+      "rows": [
+        {
+          "file": "p05-settings/p05-settings-hub-precision-dark-360-font130-native.png",
+          "sha256": "185d2281eba50c11a4050bacaa280fe603ccefce8f332970dd676dba32d5c61f"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-precision-light-360-font130-native.png",
+          "sha256": "77d4a87d0836d78829e56c103f4fd2b2e61ade0bfce3190093a02122f8ff09f4"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-quiet-dark-360-font130-native.png",
+          "sha256": "582553be04c509c4a7514cf3d9a005bc2d11d85aa1bfb71954b361f66a50c973"
+        },
+        {
+          "file": "p05-settings/p05-settings-hub-quiet-light-360-font130-native.png",
+          "sha256": "8ef58fcc7ba2ec4ef30adec60380c012af16b9194db20cfdea6f91173a90bc81"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-explorer-dark-360-font130-native.png",
+          "sha256": "7d35bfc4f83919441737c783e3f1f44fef95cac47bf65173ed2c00bcdbee9c22"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-explorer-light-360-font130-native.png",
+          "sha256": "20f4fa51b3bea87ec846627b3e27dc46c204f7eadb2fea6088f612f7c174eda4"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-neon-dark-360-font130-native.png",
+          "sha256": "442d563457d2d9f4ebcb3246d3f5ec328c39bdbae94cf15cca5ae247b332d18c"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-neon-light-360-font130-native.png",
+          "sha256": "4a671111a434ee3684e28a4a82c8997574d81321cf3b4c9d6e859e6178c578b9"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-precision-dark-360-font130-native.png",
+          "sha256": "7de562913078ef7dc921884252f8008cec68c1f102d99221887f01beec525c38"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-precision-light-360-font130-native.png",
+          "sha256": "7d365093d6713203c34b7f3fc60665ba5bce79819f625d6dfb75b4927bbc4f87"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-quiet-dark-360-font130-native.png",
+          "sha256": "d0cf585e3328578a9132eb00ce099afb96919f4687ba3aa0544b712c49eec961"
+        },
+        {
+          "file": "p05-settings/p05-settings-motion-quiet-light-360-font130-native.png",
+          "sha256": "d7a9d47734141165f8fa3433fe7dab0fc67004814acb39657f13dc9fcfec4abe"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed native Quiet fixtures, history selection/share/delete confirmation, long-duration metric and settings hub/category themes. Native controls legible; historical operations and internal parent context visible; no introduced navigation/layout defect."
+    },
+    {
+      "sheet": "sheet-027.jpg",
+      "rows": [
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-360x800-font-100-idle-synthetic.png",
+          "sha256": "59b07eeace41ab8b109d1e752ffed36827816f4dfeff1b9e57eb913ecf59cf02"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-360x800-font-130-idle-synthetic.png",
+          "sha256": "050949071f48a1ae2280e25df8fd2fef9cdc8a4bc9438016d51156e138a34084"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-393x873-font-100-idle-synthetic.png",
+          "sha256": "2c011c065f94b5d9541192e004b41fc9d27f8071d3c445004c4d0bc830f6c2dd"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-393x873-font-130-idle-synthetic.png",
+          "sha256": "41ff1bd9678d7bcd4dfab97a5b1038e10d6922a35daaeee1cb90e262726fcd15"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-412x915-font-100-idle-synthetic.png",
+          "sha256": "f7598ae5c94b18ea13c2feb72e70e8bdb8959cd2bd0d55a90cdc2dbf668363a0"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-dark-412x915-font-130-idle-synthetic.png",
+          "sha256": "0ccfe3c7a7f510d7935133301707bb60c3c6c1fef06e7994fe1380d6124b612a"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-360x800-font-100-idle-synthetic.png",
+          "sha256": "add765330f81d4e952f2d133e68ad56a034ae4bf05397d2f83c95739a11e1a59"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-360x800-font-130-idle-synthetic.png",
+          "sha256": "12da1aed04c162f68ca17e39c3204d63dd35ea73a8537d889f23088bd1ff5546"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-393x873-font-100-idle-synthetic.png",
+          "sha256": "4bcf644e0c335113b9721125f18c4cd40b68a53c62d916084a034fb540f3254b"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-393x873-font-130-idle-synthetic.png",
+          "sha256": "41eba69061b0d72a3dbb954f1bdcb369e6bf55377c74d61bfb2a46fd99d06112"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-412x915-font-100-idle-synthetic.png",
+          "sha256": "8bcbaab019b62aeabd86426745173992412bbdccb7747ad3142f6405510f1aad"
+        },
+        {
+          "file": "p05-visual/p05-layout-explorer-light-412x915-font-130-idle-synthetic.png",
+          "sha256": "7c21aac8ab200ba5492a2a675fcb0bd8a2ecd51e30913fd59af4282e33120032"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed all theme size/font-scale idle native fixtures. Bottom tabs and Start visible; scrolling handles overflow; no new theme change, fixture neutral maps not accepted as actual map coverage."
+    },
+    {
+      "sheet": "sheet-028.jpg",
+      "rows": [
+        {
+          "file": "p05-visual/p05-layout-neon-dark-360x800-font-100-idle-synthetic.png",
+          "sha256": "9b8bc1c9574028aebbba20dc95b9db33b9fe2bad10d94ea7e38feb27fcaba9ad"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-dark-360x800-font-130-idle-synthetic.png",
+          "sha256": "9531c66f504134dbc4042ca7ba92bc7607bd1d106ae7870afb10ec99fe227bde"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-dark-393x873-font-100-idle-synthetic.png",
+          "sha256": "82037e80a9fcaab3cbc552c76ddd956601a490cbbf416509d66166a1fe2587dd"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-dark-393x873-font-130-idle-synthetic.png",
+          "sha256": "28bf602e5ee437a156b70a26c468785b53c5bffda96af02f0f357bb18d6e001d"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-dark-412x915-font-100-idle-synthetic.png",
+          "sha256": "dbf0b2ce6af8748be36d5b102b878de5161122c9fae04abd441b99c6432de2c0"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-dark-412x915-font-130-idle-synthetic.png",
+          "sha256": "3cdffc315b073f254607ec84da3f224c7193181987bf2cab4cebc20f26f6ba88"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-360x800-font-100-idle-synthetic.png",
+          "sha256": "4477d1f9024649893efdbf948194cfcc096a6cacf30f10f7380ac46d3e4e3135"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-360x800-font-130-idle-synthetic.png",
+          "sha256": "a02e5684b9ceb6c913189e891df4ce300246978c7ee88259ad8934c2e04e74b4"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-393x873-font-100-idle-synthetic.png",
+          "sha256": "1d95bfb301f336de67ca692410a35a3829177b7cfe33edfba64321e958840dc9"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-393x873-font-130-idle-synthetic.png",
+          "sha256": "19637a8cd244c03d5ded993cf2d4624037c3dd4f8d44dfef1c577693a3c240b7"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-412x915-font-100-idle-synthetic.png",
+          "sha256": "3ab5beceab4a5947cd888a7fae52b124e9b1beead30692cc64fdd6624022dc4a"
+        },
+        {
+          "file": "p05-visual/p05-layout-neon-light-412x915-font-130-idle-synthetic.png",
+          "sha256": "0957b149b78df46a52183745855407835713429ae5320658119f4a1b1ddceff0"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed all theme size/font-scale idle native fixtures. Bottom tabs and Start visible; scrolling handles overflow; no new theme change, fixture neutral maps not accepted as actual map coverage."
+    },
+    {
+      "sheet": "sheet-029.jpg",
+      "rows": [
+        {
+          "file": "p05-visual/p05-layout-precision-dark-360x800-font-100-idle-synthetic.png",
+          "sha256": "d6ee76bc850f295d61e3d050838b2edfc38399fb2827dcd6d6c544d90e36a55d"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-dark-360x800-font-130-idle-synthetic.png",
+          "sha256": "a2edbfb8732e179599d0525d6e9f188920e1116276ee473c3e8a6acf7481b665"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-dark-393x873-font-100-idle-synthetic.png",
+          "sha256": "20abe21f17e91c8a34389d7cf6fe45e47ea59ea38d5d80294f4e8e9c92f7f1b5"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-dark-393x873-font-130-idle-synthetic.png",
+          "sha256": "ebfc50c0d16ba1ca060e11c631f4f3d926c6becbbedef8668b1703b7ca95a7a0"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-dark-412x915-font-100-idle-synthetic.png",
+          "sha256": "68118aee5182024f529aa22606c4fc03304e5ca9bf471b44e477c3f5d36b9e23"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-dark-412x915-font-130-idle-synthetic.png",
+          "sha256": "9492c74b60b6cf823a012414ec0628b3c688ef1e7d0486740e481614026e70ca"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-360x800-font-100-idle-synthetic.png",
+          "sha256": "19a636a8702c272fd54b01a677bd82fd5fa1137b71e602b14251507d325f4764"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-360x800-font-130-idle-synthetic.png",
+          "sha256": "ffd19f66d7a0cecb3e1d6e73dd9e08ff8e38167ae5a9af8a76bdfebfe6af0df1"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-393x873-font-100-idle-synthetic.png",
+          "sha256": "a0d8260393038e97c9be8a0717b69f7749f5a3fdaa098e5ca272aa1a76ee0b2c"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-393x873-font-130-idle-synthetic.png",
+          "sha256": "989df337548054177d80c40aa20704cc4b68c6ad5da88b58c7e3ee284470cb99"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-412x915-font-100-idle-synthetic.png",
+          "sha256": "be770f3d6a2328f43ae049c1ffad461c0857db2147cdd8b1f85293563eea4e8f"
+        },
+        {
+          "file": "p05-visual/p05-layout-precision-light-412x915-font-130-idle-synthetic.png",
+          "sha256": "fc33edf1f0a49aab76d916784fe46eea44b07c60282a895d5f61fcdbd08e1662"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed all theme size/font-scale idle native fixtures. Bottom tabs and Start visible; scrolling handles overflow; no new theme change, fixture neutral maps not accepted as actual map coverage."
+    },
+    {
+      "sheet": "sheet-030.jpg",
+      "rows": [
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-360x800-font-100-idle-synthetic.png",
+          "sha256": "954f3c222fe68fd3e467d5665f0a3f114765391241e438a6a123ec3ceaa70243"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-360x800-font-130-idle-synthetic.png",
+          "sha256": "47b902c9d25e9213834faa30956759d8fabda5693a715848454ee0452002f47f"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-393x873-font-100-idle-synthetic.png",
+          "sha256": "9481ddc627a7381bbdc122f46f409fd81f07eb6f53e722b7d804858045b50557"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-393x873-font-130-idle-synthetic.png",
+          "sha256": "ef5560fb407ca115bc441bdb79b621fdbcdc7d3982a8bb64b456567c8f3b3a13"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-412x915-font-100-idle-synthetic.png",
+          "sha256": "9575fe177fbf0f9c5e956c9e88fa42631733f70acd150967c8a63cee484b7f3c"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-dark-412x915-font-130-idle-synthetic.png",
+          "sha256": "77fefd36a38889bc1f456f35167b1af4d844cbe55e8c33d57ade0facf17151d3"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-360x800-font-100-idle-synthetic.png",
+          "sha256": "7de0d5950854262d52d3f15b0e096bc30f8f295fa6e5b1efc7fabeed8dbdaded"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-360x800-font-130-idle-synthetic.png",
+          "sha256": "7ef48573961e62aa92aa902e218dc7c4a078630fb24d5534fdc6c27980439a98"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-393x873-font-100-idle-synthetic.png",
+          "sha256": "84eb2339d734e46f19c6e064d363a74e6e15ced149cd76829ea24eb25cea6210"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-393x873-font-130-idle-synthetic.png",
+          "sha256": "ce085ec80a99ef922e8cb2031f2248b8ce52bf1e98289d16d6461bcf61552d39"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-412x915-font-100-idle-synthetic.png",
+          "sha256": "a872f6e011ab9f5d920bd071dbb7162967f368c01ac6048ea814cbf354ff255e"
+        },
+        {
+          "file": "p05-visual/p05-layout-quiet-light-412x915-font-130-idle-synthetic.png",
+          "sha256": "d8138f4fd5173305412f7aa4ae1d10efa00a3cd195948bf6ca8e29646a2d3c7a"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed all theme size/font-scale idle native fixtures. Bottom tabs and Start visible; scrolling handles overflow; no new theme change, fixture neutral maps not accepted as actual map coverage."
+    },
+    {
+      "sheet": "sheet-031.jpg",
+      "rows": [
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-slow-moving-pace.png",
+          "sha256": "9871c35d9147d0ec3587bec3ff2c00873d8a8326689a9d96cf05a933fb2a6057"
+        },
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-slow-moving-speed.png",
+          "sha256": "6aa58082ee34dabaf3be7b0d554d0e39505213a2aa37e53296b67b630e4111f3"
+        },
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-stationary-pace.png",
+          "sha256": "d28f5e2caa7ec0e4388f6efcd2a0902f4562dc56df96f4df0b9e16b6d3445a2a"
+        },
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-stationary-speed.png",
+          "sha256": "a79f563fc2568f25cd7804b9eed093460c0d70deeeff0db02a4aab4599ff6302"
+        },
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-stopped-again-pace.png",
+          "sha256": "3412afaedb4affafacd80378a205dd9716bba03ca347d14939d7201e23e8a68c"
+        },
+        {
+          "file": "p051-gps-ui/p051-IMPERIAL_FEET-stopped-again-speed.png",
+          "sha256": "624b26671fb662d5a9d39c45a9a200aaa5e95f2fa253c2cd50bf8b2d618fe7e3"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-slow-moving-pace.png",
+          "sha256": "5979354d24b599f7c95643de5ead689c5f5c7d47fc6e1643207928c19c64d7be"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-slow-moving-speed.png",
+          "sha256": "a2e515d93f3249371f57f564e533d9d4b9b55af50581305d42110c3cbd75503f"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-stationary-pace.png",
+          "sha256": "885221abd365c435aa1fb94da7cc3be57315c8a7ca1740c3063f962019bcaae3"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-stationary-speed.png",
+          "sha256": "517a237b4a74721118675d1aeea7d4f793aabaeaef2591f21213d8aaee2f2330"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-stopped-again-pace.png",
+          "sha256": "ccd72938e9c4b35e15239ae05af5e01ee5bcc330a2e4a334be50e7111f56e4e4"
+        },
+        {
+          "file": "p051-gps-ui/p051-METRIC-stopped-again-speed.png",
+          "sha256": "53eafb6c704e81db0c4c9a2c2c753c136e875c893cf989ee40bc8ab0e6a1e520"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-032.jpg",
+      "rows": [
+        {
+          "file": "p06-map-durability/new-process.png",
+          "sha256": "5b83eab6b541925505a853951f03884bc4d6ff08c65b29af0dd5cd2a9938c522"
+        },
+        {
+          "file": "p06-offline-map/p06-current-position.png",
+          "sha256": "5cbb3b51194691aee607cb7ffe00e1f51d37018b1e9afcf2b5037153b304110a"
+        },
+        {
+          "file": "p06-offline-map/p06-historical-track.png",
+          "sha256": "d23076832fb0dbf4bb53e116bc59c81dd815740c242512459d2bbf102a97c642"
+        },
+        {
+          "file": "p06-offline-map/p06-imported-airplane.png",
+          "sha256": "c9bc1f20a7900fe2e6f5de39f92224e512d633e4eb0d7157a0e93edd9ff70e0e"
+        },
+        {
+          "file": "p06-offline-map/p06-invalid-file-retains-map.png",
+          "sha256": "22ff23094d9c6ad1b3c09068f27d3f2f1758990c1aa3ecf59628101b91aef32a"
+        },
+        {
+          "file": "p06-offline-map/p06-live-track.png",
+          "sha256": "af4c49cb4fbe9d00ca2530a101585992deb87209d2516087c4ae68c06dd0c74f"
+        },
+        {
+          "file": "p06-offline-map/p06-recreated-airplane.png",
+          "sha256": "24f0982ed08da82fcb143babf17ca630d0c39c9e1c2b4544926d0b993a52aaba"
+        },
+        {
+          "file": "p06-offline-map/p06-segmented-track.png",
+          "sha256": "a18a52805387a043981e3c3698a7eb73fd45ae6d3b046a251d2baeb08a2dbe5d"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-EXPLORER-dark.png",
+          "sha256": "5ea7b71860f5336b9c3909079b89bb964b541154d95dbd538da5f2c19d46245d"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-EXPLORER-light.png",
+          "sha256": "c653e9189d5ce193370dddd07bbae1532c241883df06bc3751e5caef3ef25d25"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-NEON-dark.png",
+          "sha256": "cb96292be3a325d7e755567ea5f779ec449789de324e7cc2c89085b745bd0472"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-NEON-light.png",
+          "sha256": "0c6500e5b6c999f1875fedbb6d9c51d4226827a8d3463471ee42760250083505"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-033.jpg",
+      "rows": [
+        {
+          "file": "p06-offline-map/p06-theme-PRECISION-dark.png",
+          "sha256": "bd8a60e9e6b9b5e6491d3fa10bbd1e491724c9cac02c2d1254a78f20ea0e8894"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-PRECISION-light.png",
+          "sha256": "14763c8bcc2efbf364e6ad49538bda74960ceaba2b30bd1525534b9772015481"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-QUIET-dark.png",
+          "sha256": "31f927d766a39c9e682fa5d72f4506f8fc1688de17dce829164e1c61eb8b19bd"
+        },
+        {
+          "file": "p06-offline-map/p06-theme-QUIET-light.png",
+          "sha256": "eb2d17baf675d38684140851201896ce1efed5ecaa8c8e2b4a306714faf7c339"
+        },
+        {
+          "file": "p06-offline-map/p06-zoom-pan.png",
+          "sha256": "bbd8646288a9d9898b62058c0ff6282716c8e3cb3e41e84aa3303d0ee0d924a8"
+        },
+        {
+          "file": "p061-real-durability/new-process.png",
+          "sha256": "422231d5b8ea875728124037544f2ab1ec4b9f49ab4e51f60eb3201e7951325e"
+        },
+        {
+          "file": "p061-real-map/p061-real-Chaozhou-z12.png",
+          "sha256": "d29f4dc985ed0481d85fb7fa8c3e00933978d3449c37cccc75f6e5014670abf6"
+        },
+        {
+          "file": "p061-real-map/p061-real-Chaozhou-z16.png",
+          "sha256": "5255b07c1c89eff0345a793d10973e5bf0e0c0b6988aaf442e0ba0c44113eb5e"
+        },
+        {
+          "file": "p061-real-map/p061-real-Chaozhou-z7.png",
+          "sha256": "83629800f608c227c7216fc9784b0166c79afa450456a5d071ade956e92f4cda"
+        },
+        {
+          "file": "p061-real-map/p061-real-Dongguan-z12.png",
+          "sha256": "9026ab92efc3c14574874e7d24f8598ac2ac45f0b2a66fa0a74f663713ca09f3"
+        },
+        {
+          "file": "p061-real-map/p061-real-Dongguan-z16.png",
+          "sha256": "c814b0ff2549e74b03f18f056c0cbd9697a07d38797971d60a6e732b09877674"
+        },
+        {
+          "file": "p061-real-map/p061-real-Dongguan-z7.png",
+          "sha256": "0f3443aacbb7708f7c04c142a55cbc2339dd963a8838df876f516d33277e5f41"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-034.jpg",
+      "rows": [
+        {
+          "file": "p061-real-map/p061-real-Dongshan-z12.png",
+          "sha256": "6db7688f605399886bddd47a46e5f669f39e9c48ec671184d768781f89eb837b"
+        },
+        {
+          "file": "p061-real-map/p061-real-Dongshan-z16.png",
+          "sha256": "f87ffb9ae795fcb06f7cc36d659fd0d02177b5520bbd484d229f08274a3b4373"
+        },
+        {
+          "file": "p061-real-map/p061-real-Dongshan-z7.png",
+          "sha256": "75cd119eef40f8c27ac6a9c6c04f9ebef9f697900c3f2ab1ad7cdeb39549fab6"
+        },
+        {
+          "file": "p061-real-map/p061-real-Foshan-z12.png",
+          "sha256": "4ac80a14cec4eb878db75ae7f8e986509116b3bbdafe8a77213457ef2f907742"
+        },
+        {
+          "file": "p061-real-map/p061-real-Foshan-z16.png",
+          "sha256": "00a79a9988125601fdda4ba7ef8e9f7a8c7718372f509a61ca6b4c475d48c21e"
+        },
+        {
+          "file": "p061-real-map/p061-real-Foshan-z7.png",
+          "sha256": "e32981bdbac4edded1700a94635b6bf83c8a149bbcd1f63ee79675b1338a6adc"
+        },
+        {
+          "file": "p061-real-map/p061-real-Guangzhou-z12.png",
+          "sha256": "29bbe883c69fe141e4617db2ef24560476c8e5496b89fd6ee941db7203ba5ff6"
+        },
+        {
+          "file": "p061-real-map/p061-real-Guangzhou-z16.png",
+          "sha256": "43fe640d045c81fabf83e07ddf364d751a66af5d901372eb6ff87bf206a9d19d"
+        },
+        {
+          "file": "p061-real-map/p061-real-Guangzhou-z7.png",
+          "sha256": "2b44b730e61056ce8679b117afc2477e1c9b38dcbaa985638783d0f3c1278643"
+        },
+        {
+          "file": "p061-real-map/p061-real-Huizhou-z12.png",
+          "sha256": "cc0e261ee85f1312dbb2a7a8dc739596d82c71a240122d1b972e2743fa59604b"
+        },
+        {
+          "file": "p061-real-map/p061-real-Huizhou-z16.png",
+          "sha256": "3e498ede0c2b5b438c3abb5723e457b5d408f3541699d987fb313b914c08d044"
+        },
+        {
+          "file": "p061-real-map/p061-real-Huizhou-z7.png",
+          "sha256": "57e452c3fb2fa9bed9f2ac397cba74af5cc2be2d454974e9db8a339c07eef562"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-035.jpg",
+      "rows": [
+        {
+          "file": "p061-real-map/p061-real-Jiangmen-z12.png",
+          "sha256": "5b1e230010552245dcf06fce7370afa90feb753a41f0ea30dfbce267ed169969"
+        },
+        {
+          "file": "p061-real-map/p061-real-Jiangmen-z16.png",
+          "sha256": "9803f6a4a3ee341e790cdb173bfc79b81c81f0de00306741b33a6705888e384a"
+        },
+        {
+          "file": "p061-real-map/p061-real-Jiangmen-z7.png",
+          "sha256": "e87140bc04173c76a6720753dc3791d31c10b90a72f9ca614c51724cd2a0ab61"
+        },
+        {
+          "file": "p061-real-map/p061-real-Jieyang-z12.png",
+          "sha256": "7cca79f8e26d45dd81dbf551c971031935f9f96cb65c2450e068a2e54783759b"
+        },
+        {
+          "file": "p061-real-map/p061-real-Jieyang-z16.png",
+          "sha256": "642a117ce713471fd0ff1a3e370c3c6ee6c73ff77092ac5baadfe46e9bece0ae"
+        },
+        {
+          "file": "p061-real-map/p061-real-Jieyang-z7.png",
+          "sha256": "88c26336e4078667ebfcc7fae2090e84516571073c27be79ff2e258645578bff"
+        },
+        {
+          "file": "p061-real-map/p061-real-Longhai-z12.png",
+          "sha256": "2f93c378d16a1cdde7cc4d842e7c5585d64b23ee900dc56397c22822010cd7c4"
+        },
+        {
+          "file": "p061-real-map/p061-real-Longhai-z16.png",
+          "sha256": "060c687d2b5ce632cbd39cf5b0b1526f1d41f6313dcca1692cb94d565cd411fd"
+        },
+        {
+          "file": "p061-real-map/p061-real-Longhai-z7.png",
+          "sha256": "53a6f3e7003af2639579af03fbd4ef6ffa72178fc4f12fda7a30e85f384f53ce"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shantou-z12.png",
+          "sha256": "6c84ed4e82327fba827f5393cd64c4dff67786c7947a4b1bbad3aeefa0bc85c7"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shantou-z16.png",
+          "sha256": "0776ebd8a26c3649ecfe29d52f5ea7e8a813007215ff23f63bd30e5cb9b1dae7"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shantou-z7.png",
+          "sha256": "81563bf0bb2e47b313401fc4de02c14c31b86319bab156bb2daaa00977a3657a"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-036.jpg",
+      "rows": [
+        {
+          "file": "p061-real-map/p061-real-Shanwei-z12.png",
+          "sha256": "c60b87403f8d77764d2666dd542644a8713458a221bd280f73c80c6188c1d60b"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shanwei-z16.png",
+          "sha256": "3983415ecc56d9f42856eb1d1488e9607dcc18053d35e1994c3fcc0546ca0116"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shanwei-z7.png",
+          "sha256": "1d578061c3b0a0686cbc38e318c88b8e2f2ea83c52fbc00082c21b0becf3738b"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shenzhen-z12.png",
+          "sha256": "ef2c448c6e8f1d3cc640a9dddfd7943d5d34f145022ea3ae81bb51177cf538df"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shenzhen-z16.png",
+          "sha256": "9090048357080df11b819b15d43c9a5f54ded8ecf1061cb484e3a717800d5fa8"
+        },
+        {
+          "file": "p061-real-map/p061-real-Shenzhen-z7.png",
+          "sha256": "e97fb710636e671524ac917912082d5e6a20a812e9b1ab5c954bdeb2817d7f69"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangpu-z12.png",
+          "sha256": "7cbc53deaa58b47541d10ca15a0b7e48ec3f15f34ceba8679bea9dfac3130b56"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangpu-z16.png",
+          "sha256": "3a98d8d50776d362eae7d2a5d4c74347931c3abb00d81b8d0022d41fe8ae2062"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangpu-z7.png",
+          "sha256": "036eb3fdadeda94dfe3d6d26d07314de3d9de244ae8f5aae63490d63255cd8dd"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangzhou-z12.png",
+          "sha256": "f67ceccf6d2fd83f413b14dd38e0d81088cd6f3ce721be8eb9c295fdf3d3fa42"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangzhou-z16.png",
+          "sha256": "3a66fa9c1722208617e6890d0176199e6c90671b7dc3905f4e3c0b3dfa8fbefb"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhangzhou-z7.png",
+          "sha256": "9690ae0cbdf53c540f0fc9f53e55f30753e69710fa53cfcdc556489ed42b460c"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Viewed GPS unit/pace/speed native states, synthetic Mapsforge rendering and real map cities at z7/12/16. No invented-data claim: synthetic maps explicitly named, real map coverage boundaries remain visibly blank at z7. Controls, theme, scale and attribution visible; no new rendering/navigation defect."
+    },
+    {
+      "sheet": "sheet-037.jpg",
+      "rows": [
+        {
+          "file": "p061-real-map/p061-real-Zhaoqing-z12.png",
+          "sha256": "e7c517d44feb7e418acd2b416c7bbc2bccf1981b11534a01e381deb4f646f334"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhaoqing-z16.png",
+          "sha256": "c84882ac6c076726fedc603a8b22e9754c7c70fabffd52bf26af81ab70b0949c"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhaoqing-z7.png",
+          "sha256": "5f6183cb55d9fd892eb0a7cf7d33d97550ca3153ca26affa3c264792b1ab73b4"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhongshan-z12.png",
+          "sha256": "31c57c6cef9548f972be9db90b5c869ea30fa6918c8d04495670ed2a0bd78dd4"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhongshan-z16.png",
+          "sha256": "30aba47cb25acb6f578a775e2d9dbcf04e9bf76157a74c6d6713b9b890a3d6ab"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhongshan-z7.png",
+          "sha256": "05126b2fbc610533147d491844b5bb109dac76c3088f4f7f5aef52619ffd7603"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhuhai-z12.png",
+          "sha256": "7f526e1613e437ba3454180c5dc2113b32a1949814897680e43d2a4b0033c931"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhuhai-z16.png",
+          "sha256": "4950b699220b41d205c2459a8a20b3ac0f9fd341c93b7b06dd45097dffa9d403"
+        },
+        {
+          "file": "p061-real-map/p061-real-Zhuhai-z7.png",
+          "sha256": "c7cc12542298c37ecc8d17155596828ffbd30331dc969f46a891862217960681"
+        },
+        {
+          "file": "p061-real-map/p061-real-recreated.png",
+          "sha256": "1a4a1e6b8a6fe3a3f26363b82f5edb8eaaa08f718218b5e5f0e6bd0e154acbd4"
+        },
+        {
+          "file": "p061-real-map/p061-real-route.png",
+          "sha256": "0d9782d996b06e4b4c9bade966d68ac94242d2ff724c2932e5c2fe923598d92b"
+        },
+        {
+          "file": "p071-navigation/p071-T01-history.png",
+          "sha256": "92b7f3d89dda4309af6622910ec9586a959e08d22a80da858a06d0ce437ce613"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actually viewed real map cities, recreated/route overlays and all full-run T01–T18 native screenshots. Correct selected roots, internal detail/dialog parent, recording/GPS/HR synthetic values and four theme pairs. Rotation shows native scroll viewport; no introduced visual defect. Emulator gesture evidence is not a physical-device claim."
+    },
+    {
+      "sheet": "sheet-038.jpg",
+      "rows": [
+        {
+          "file": "p071-navigation/p071-T02-settings.png",
+          "sha256": "49aa1c25fc6bdf5f116bc1772d02e4e6140aa575a8fc5bec02d952be1ead094b"
+        },
+        {
+          "file": "p071-navigation/p071-T03-heart.png",
+          "sha256": "99d7e01b290f92f226623c3de3099422a43f25336fba00360d66c252408e34ec"
+        },
+        {
+          "file": "p071-navigation/p071-T04-cycles.png",
+          "sha256": "ce33cc7179ca55b2822c559d3534065979c67e7e310324d1033487378387165d"
+        },
+        {
+          "file": "p071-navigation/p071-T05-reselect.png",
+          "sha256": "88b0d19354b1454cbe68179deb2a0e08e29bd923bc4d0423e146cec4d0f07d03"
+        },
+        {
+          "file": "p071-navigation/p071-T06-rapid.png",
+          "sha256": "da3f096507c078a73544b92c03fa1408cd6a2303a38d7c147cd1882adbff5260"
+        },
+        {
+          "file": "p071-navigation/p071-T07-root-restored.png",
+          "sha256": "112a88fd40748bd8e31a660a07bd6382e46d9dd5c3fd8859e917b1dfcea6edaf"
+        },
+        {
+          "file": "p071-navigation/p071-T08-gesture-restored.png",
+          "sha256": "81f249e36d79cc56fcb68631b5c479f696704430e4be0b3d1fbdbce5798bb71c"
+        },
+        {
+          "file": "p071-navigation/p071-T09-settings-root.png",
+          "sha256": "88b0d19354b1454cbe68179deb2a0e08e29bd923bc4d0423e146cec4d0f07d03"
+        },
+        {
+          "file": "p071-navigation/p071-T10-history-detail.png",
+          "sha256": "1957944aa54d01c44da1a52208113197b2aca7f054c29452ecd76c7bdffe5d40"
+        },
+        {
+          "file": "p071-navigation/p071-T11-device-dialog.png",
+          "sha256": "8214605838916a8c8c0a58e1e4fef150e3e663e711e5eff0987136fd7972b289"
+        },
+        {
+          "file": "p071-navigation/p071-T12-delete-sheet.png",
+          "sha256": "04210b2cbff417e7032933108b65981b0e18e7ce35675aebf4ff973f4bb5fc4c"
+        },
+        {
+          "file": "p071-navigation/p071-T13-recreated-settings.png",
+          "sha256": "49aa1c25fc6bdf5f116bc1772d02e4e6140aa575a8fc5bec02d952be1ead094b"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actually viewed real map cities, recreated/route overlays and all full-run T01–T18 native screenshots. Correct selected roots, internal detail/dialog parent, recording/GPS/HR synthetic values and four theme pairs. Rotation shows native scroll viewport; no introduced visual defect. Emulator gesture evidence is not a physical-device claim."
+    },
+    {
+      "sheet": "sheet-039.jpg",
+      "rows": [
+        {
+          "file": "p071-navigation/p071-T14-rotated-heart.png",
+          "sha256": "4099de05b189c4340d8ed62adc39951e182ca10d81754fd8ee601eca715e76a6"
+        },
+        {
+          "file": "p071-navigation/p071-T15-resumed-settings.png",
+          "sha256": "88b0d19354b1454cbe68179deb2a0e08e29bd923bc4d0423e146cec4d0f07d03"
+        },
+        {
+          "file": "p071-navigation/p071-T16-recording-restored.png",
+          "sha256": "6b2e545339d7f215c006e723d5229e8261b8be61fa6e07ff49e2380eca19f10a"
+        },
+        {
+          "file": "p071-navigation/p071-T17-synthetic-gps-ble.png",
+          "sha256": "53837598fa3f2a32171244ca1315460b1b40fab166a94c37f3fe854b11bfb564"
+        },
+        {
+          "file": "p071-navigation/p071-T18-explorer-dark.png",
+          "sha256": "5a2ad709c973d921cff9d26497dca00bebbabeb336df8b69630e4174922fdb27"
+        },
+        {
+          "file": "p071-navigation/p071-T18-explorer-light.png",
+          "sha256": "f623995154a7675b2f3928b15b1a900892101b22a2777ec906cd67428d968c4d"
+        },
+        {
+          "file": "p071-navigation/p071-T18-neon-dark.png",
+          "sha256": "79ec0a7adafdb5699cb558d72e7c8b9d5b8db63ca4d82263ffe8da4dc56e8ea7"
+        },
+        {
+          "file": "p071-navigation/p071-T18-neon-light.png",
+          "sha256": "3e0e7542399873607db7d66c61e76f0a5f70506e5c76245eb6062dbeec83aca6"
+        },
+        {
+          "file": "p071-navigation/p071-T18-precision-dark.png",
+          "sha256": "944757d233bbd1f497ce15520a2925eaf6dd67d7f6787bc2b0e22a2981f2e7d7"
+        },
+        {
+          "file": "p071-navigation/p071-T18-precision-light.png",
+          "sha256": "a8ba068ed3df0f475f55baf3f6aec334a1ebe30715be912f2456f1a451699b49"
+        },
+        {
+          "file": "p071-navigation/p071-T18-quiet-dark.png",
+          "sha256": "866f8e8a85f0e125347bb85602e102c6ada871c85945635d2580891a9103f88b"
+        },
+        {
+          "file": "p071-navigation/p071-T18-quiet-light.png",
+          "sha256": "eaafae300a9e28d2fae9b1bf5f5813a78cf501597583a128ae0444232ca321f7"
+        }
+      ],
+      "reviewed": true,
+      "notes": "Actually viewed real map cities, recreated/route overlays and all full-run T01–T18 native screenshots. Correct selected roots, internal detail/dialog parent, recording/GPS/HR synthetic values and four theme pairs. Rotation shows native scroll viewport; no introduced visual defect. Emulator gesture evidence is not a physical-device claim."
+    }
+  ]
+}

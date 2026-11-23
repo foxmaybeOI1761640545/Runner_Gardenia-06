@@ -1,0 +1,88 @@
+{
+  "applicationId": "com.fox.runner",
+  "versionName": "v0.1.0-p0.7.1",
+  "versionCode": 6781,
+  "commit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "variant": "reproducibleRelease",
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "signatureVerified": true,
+  "alignmentVerified": true,
+  "debuggable": false,
+  "apkSha256": "1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759",
+  "apkBytes": 3238755,
+  "r8MappingSha256": "a47cc05a59c37539b341df3a15e11edbcc834a4f3e237036f8f603af7363d2de",
+  "offline": {
+    "applicationId": "com.fox.runner",
+    "permissions": [
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+      "android.permission.FOREGROUND_SERVICE_LOCATION",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.VIBRATE",
+      "android.permission.WAKE_LOCK",
+      "com.fox.runner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "allowBackup": false,
+    "components": {
+      "activity": [
+        "de.dennisguse.opentracks.introduction.IntroductionActivity",
+        "de.dennisguse.opentracks.p0.app.P0Activity",
+        "de.dennisguse.opentracks.p0.app.P0HistoryActivity",
+        "de.dennisguse.opentracks.p0.app.P0SensorsActivity",
+        "de.dennisguse.opentracks.p0.app.P0SettingsActivity",
+        "de.dennisguse.opentracks.p0.map.P06MapActivity"
+      ],
+      "activity-alias": [],
+      "service": [
+        "androidx.appcompat.app.AppLocalesMetadataHolderService",
+        "de.dennisguse.opentracks.services.TrackRecordingService"
+      ],
+      "provider": [
+        "androidx.core.content.FileProvider",
+        "de.dennisguse.opentracks.data.ShareContentProvider"
+      ],
+      "receiver": []
+    }
+  },
+  "plan": {
+    "commit": "857c744321825a2656d77f45d57c6e43b4334962",
+    "stage": 3,
+    "milestone": "P0.7.1 navigation maintenance",
+    "fullRegression": true,
+    "branch": "fix/p0-7-1-navigation-backstack",
+    "signed": false,
+    "publishing": false,
+    "runId": "45086993985",
+    "versionCode": 6781,
+    "versionName": "v0.1.0-p0.7.1"
+  },
+  "tests": {
+    "android": {
+      "tests": 489,
+      "executed": 488,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "unit": {
+      "tests": 167,
+      "executed": 167,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "run": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/45092892094",
+  "testRunId": 45086993985,
+  "buildRunId": "45092892094",
+  "buildWorkflowCommit": "348b225c68e90f095fc4f9207ba872c9205bed66",
+  "mainTree": "3abf6c6f16e0f7893158d56fb10f128b02460e48",
+  "r8TaskExecuted": true,
+  "resourceOptimizationTaskExecuted": true
+}

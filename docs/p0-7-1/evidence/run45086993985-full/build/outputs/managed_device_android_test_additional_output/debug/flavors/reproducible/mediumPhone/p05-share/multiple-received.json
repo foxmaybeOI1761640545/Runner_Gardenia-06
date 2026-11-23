@@ -1,0 +1,72 @@
+{
+  "package": "com.fox.runner.debug.test",
+  "uid": 10149,
+  "pid": 5901,
+  "action": "android.intent.action.SEND_MULTIPLE",
+  "mime": "application\/gpx+xml",
+  "flags": 268435457,
+  "clip": [
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460833.gpx",
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460834.gpx",
+    "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460835.gpx"
+  ],
+  "files": [
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460833.gpx",
+      "permission": 0,
+      "sha256": "b385d1ac6dcd67cce335ea18c5f623c0516cfa86d4fa4b411de2442417b6592c",
+      "bytes": 2093,
+      "read": true,
+      "gpx": {
+        "workoutId": "1795393460833",
+        "rawSamples": 3,
+        "sha256": "b385d1ac6dcd67cce335ea18c5f623c0516cfa86d4fa4b411de2442417b6592c",
+        "bytes": 2093
+      }
+    },
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460834.gpx",
+      "permission": 0,
+      "sha256": "2399f7b13715af13c6fe939df0be0f0ba64bf1a3bac9124f42e420b630e06512",
+      "bytes": 2093,
+      "read": true,
+      "gpx": {
+        "workoutId": "1795393460834",
+        "rawSamples": 3,
+        "sha256": "2399f7b13715af13c6fe939df0be0f0ba64bf1a3bac9124f42e420b630e06512",
+        "bytes": 2093
+      }
+    },
+    {
+      "uri": "content:\/\/com.fox.runner.debug.fileprovider\/p0_gpx\/batch-c01178b1-6f52-4809-8899-1a41a05a9dc2\/Workout-1795393460835.gpx",
+      "permission": 0,
+      "sha256": "6febe61003bc670ad98b8aee947e18410ab91d0c7e62ca32042a50b57e0967c8",
+      "bytes": 2093,
+      "read": true,
+      "gpx": {
+        "workoutId": "1795393460835",
+        "rawSamples": 3,
+        "sha256": "6febe61003bc670ad98b8aee947e18410ab91d0c7e62ca32042a50b57e0967c8",
+        "bytes": 2093
+      }
+    }
+  ],
+  "permissionContractPassed": true,
+  "targetPid": 2237,
+  "api": 35,
+  "authenticatedBinderUid": 10149,
+  "targetUid": 10148,
+  "negativeControl": false,
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "contentContractPassed": true,
+  "expectedWorkoutIds": [
+    1795393460833,
+    1795393460834,
+    1795393460835
+  ],
+  "expectedGpxSha256": {
+    "1795393460833": "b385d1ac6dcd67cce335ea18c5f623c0516cfa86d4fa4b411de2442417b6592c",
+    "1795393460834": "2399f7b13715af13c6fe939df0be0f0ba64bf1a3bac9124f42e420b630e06512",
+    "1795393460835": "6febe61003bc670ad98b8aee947e18410ab91d0c7e62ca32042a50b57e0967c8"
+  }
+}

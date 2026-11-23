@@ -1,0 +1,27 @@
+{
+  "runId": 45060769567,
+  "source": "00e7904962e6847bcda6c0eda74966a873717152",
+  "artifactId": 14771215715,
+  "artifactSha256": "d51d74a79484ce811b0978bd33fd5b86b0d20890266cb82fd859470aba793387",
+  "conclusion": "failure",
+  "android": {
+    "tests": 489,
+    "executed": 488,
+    "passed": 487,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 1
+  },
+  "failures": [
+    {
+      "class": "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+      "method": "statusNavigationPreservesRecordingConnectionAndPausedJournal",
+      "failure": "java.lang.AssertionError: expected:<1795376541578> but was:<null>\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\n\tat org.junit.Assert.assertEquals(Assert.java:120)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest.statusNavigationPreservesRecordingConnectionAndPausedJournal(P05DashboardStatusNavigationTest.java:240)\n"
+    }
+  ],
+  "productionFinding": "Retained heart-screen P0RecordingViewModel detached while RECORDING; Home pauses and preserves journal. Reattaching stale heart VM observes nonrecording and mistakes stale local RECORDING as FINISHED, removing shared session journal. Actual workout row still exists.",
+  "fixScope": "Reconcile unfinished UI intent from the existing SessionStore on service re-observation, as new ViewModel already does; use current synchronous service status instead of potentially queued stale status. No changes to RecordingSession, SessionStore, TrackRecordingService, GPS/BLE driver or lifecycle, SQLite or data algorithms.",
+  "newCoverage": "Keep original failing P05DashboardStatusNavigationTest byte-identical and add its 2 cases to focused GPS gate (45->47); extend T16 with two pause/all-tabs/resume cycles retaining same track journal/id.",
+  "published": false,
+  "p08Started": false
+}

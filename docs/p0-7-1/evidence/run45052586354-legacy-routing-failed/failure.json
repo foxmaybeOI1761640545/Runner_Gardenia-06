@@ -1,0 +1,8 @@
+{
+  "runId": 45052586354,
+  "source": "0c2f577679a19256e1b6ca78de821ba3154dac0c",
+  "event": "pull_request",
+  "passed": false,
+  "cause": "Legacy main/rc allocator also matched maintenance PR #6 and rejected the p0.7.1 version series. Route this branch exclusively through its complete independent p071 workflow, exactly as the existing p07 clean exclusion. No test is removed, ignored or relaxed; no signing or publication occurred.",
+  "resolvedBy": "Extend android-build prepare routing exclusion for the exact maintenance head only."
+}

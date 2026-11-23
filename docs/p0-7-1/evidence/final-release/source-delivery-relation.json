@@ -1,0 +1,11 @@
+{
+  "productSource": "857c744321825a2656d77f45d57c6e43b4334962",
+  "tagDereferencedCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "tagObject": "8f7e34ef9c3c71691fcbb2c18a23629fdfef8ae5",
+  "signWorkflowCommit": "348b225c68e90f095fc4f9207ba872c9205bed66",
+  "publishWorkflowCommit": "da88660e3f8173ffee58d999d6843aecd3bf5139",
+  "mainTree": "3abf6c6f16e0f7893158d56fb10f128b02460e48",
+  "postProductChanges": "Only documentation and the two P071 approval JSON records",
+  "deliveryHead": "Resolved after final report commit; exact SHA recorded in PR6 and next-stage baseline/overall report, never substituted for APK source",
+  "verified": true
+}

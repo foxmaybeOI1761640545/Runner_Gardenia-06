@@ -1,0 +1,9 @@
+{
+  "candidateSource": "857c744321825a2656d77f45d57c6e43b4334962",
+  "sameProductionTreeAs": "4ff5e66223c31bdc196da2175be16dfaa4b5c235",
+  "mainTree": "3abf6c6f16e0f7893158d56fb10f128b02460e48",
+  "review": "source4ff5e66-isolation-review.json",
+  "difference": "Only newly added P071NavigationTest await helper and docs changed after4ff; actual focused root and all selected-state assertions checked atomically, no original test changes. Full857 run45086993985 is required independently.",
+  "runtimeAcceptance": "Fixed-key signed APK upgrade/publication pending",
+  "sourceAcceptance": "Full run45086993985 independently verified: Python160, JVM167, API35 488executed/passed+1historicalskip, GPS47, nav18, native517actuallyreviewed"
+}

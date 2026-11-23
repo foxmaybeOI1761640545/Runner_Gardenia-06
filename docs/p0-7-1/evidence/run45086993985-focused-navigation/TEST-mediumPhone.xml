@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="18" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T00:14:26" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.p0.P071NavigationTest" tests="18" failures="0" errors="0" skipped="0" time="139.691" timestamp="2026-11-23T00:14:26" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="T11_heartDeviceDialogReturnsToHeart" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="9.409" />
+    <testcase name="T06_rapidSwitchLaunchesOnce" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.246" />
+    <testcase name="T04_fourRootCyclesKeepInstances" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="13.829" />
+    <testcase name="T03_settingsToHeart" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.482" />
+    <testcase name="T02_historyToSettings" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.395" />
+    <testcase name="T13_activityRecreationRetainsInternalBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.258" />
+    <testcase name="T05_reselectionDoesNotLaunch" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="4.231" />
+    <testcase name="T09_settingsInternalBackSurvivesRootReturn" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.755" />
+    <testcase name="T14_actualRotationRetainsSelectedRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="4.251" />
+    <testcase name="T17_gpsAndBleInputsPersistWhileSwitching" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="7.427" />
+    <testcase name="T10_historyDetailThenListThenTaskRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.693" />
+    <testcase name="T08_actualApi35EdgeGestureBackgroundsRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.717" />
+    <testcase name="T15_backgroundAndForegroundKeepDestination" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.378" />
+    <testcase name="T12_bottomSheetDismissedBeforeTaskBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.262" />
+    <testcase name="T01_runToHistory" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="2.634" />
+    <testcase name="T07_systemBackAtEveryRootBackgroundsTask" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="7.115" />
+    <testcase name="T16_recordingContinuesAcrossTabsAndRootBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="14.887" />
+    <testcase name="T18_eightPalettesKeepNavigationAndBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="38.722" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,16 @@
+[
+  {
+    "artifactId": 14784120099,
+    "name": "P071-publication-45096590087",
+    "bytes": 3009,
+    "sha256": "66c3538766f0c9cb73de0fc5ca4981e05042489328728d428aad37e0c6a434fb",
+    "downloadedDigestVerified": true
+  },
+  {
+    "artifactId": 14784055526,
+    "name": "P071-independent-public-verification-45096590087",
+    "bytes": 519,
+    "sha256": "259cb82da4b85a7ea5940f7e0812451f765d08b489814cfac992fb6af6d2da32",
+    "downloadedDigestVerified": true
+  }
+]

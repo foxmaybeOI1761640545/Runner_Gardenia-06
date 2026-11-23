@@ -26,7 +26,7 @@ env:
 
 jobs:
   prepare:
-    if: github.head_ref != 'feature/p0-5-1-gps-motion-quality' && github.head_ref != 'feature/p0-6-offline-map' && github.head_ref != 'feature/p0-7-to-p1-0-offline-navigation-clean'
+    if: github.head_ref != 'feature/p0-5-1-gps-motion-quality' && github.head_ref != 'feature/p0-6-offline-map' && github.head_ref != 'feature/p0-7-to-p1-0-offline-navigation-clean' && github.head_ref != 'fix/p0-7-1-navigation-backstack'
     name: Allocate immutable version plan
     runs-on: ubuntu-24.04
     timeout-minutes: 10

@@ -1,0 +1,449 @@
+{
+  "releases": [
+    {
+      "tag": "test-p0-v0.1.0-p0.7.0",
+      "source": "467f2086c0f712e04430382203da2bde0c870acb",
+      "versionName": "v0.1.0-p0.7.0",
+      "versionCode": 6780,
+      "apkSha256": "3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "4648df1905788cfc9680accff219bb06eca29514603623f6e5b1ba1bb418d6a0"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6.1",
+      "source": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+      "versionName": "v0.1.0-p0.6.1",
+      "versionCode": 6779,
+      "apkSha256": "b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "90c5d2a48d9d11df037abb8cafdba524f5c950f61b9f0b92a15e4e781988e35a"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.6",
+      "source": "af6e90eabee20ada79ba942584ab7eb8c08660e3",
+      "versionName": "v0.1.0-p0.6",
+      "versionCode": 6778,
+      "apkSha256": "6a605a9c4f6a1e5fc73b5be3598225fd3bf88fda7eea15436d9ce133ab7a8c44",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "1279cfab0c6e509c76ac9fd6d432c7adcfb03173c9ce36bedb7cf90f3c5f4ec9"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5.1",
+      "source": "a4b2c7a7521a19a60c1d444449ff82c0560e4d19",
+      "versionName": "v0.1.0-p0.5.1",
+      "versionCode": 6777,
+      "apkSha256": "a99a489ffdc63c746346d9a6521884b4fc21a6698552f10c4963711b2232816d",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "fe0cc56da6c15254b4118f6570c1db87256199a5d2b4db744ab62d2b6653a46c"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.5",
+      "source": "a8891f61122712b81bee357f40d688151a948e57",
+      "versionName": "v0.1.0-p0.5",
+      "versionCode": 6776,
+      "apkSha256": "7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "2a81a5e6d943aa66992b7fe26869ea3bd29bfef80b82690350a9525cb0ce0d15"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.4",
+      "source": "ccc59b546b5087a2038d32087cc675a3096852c3",
+      "versionName": "v0.1.0-p0.4",
+      "versionCode": 6775,
+      "apkSha256": "aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "2db139350aefb03457edbb7ac9068bf9a4f7a2c4e34dfff875643bf0145ae75d"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.3",
+      "source": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+      "versionName": "v0.1.0-p0.3",
+      "versionCode": 6774,
+      "apkSha256": "24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "b44e31a63f84bc5d3ca10edbb4373fe49425103c02be08fe70d19176cef1f38c"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.2",
+      "source": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+      "versionName": "v0.1.0-p0.2",
+      "versionCode": 6773,
+      "apkSha256": "48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7"
+    },
+    {
+      "tag": "test-p0-v0.1.0-p0.1",
+      "source": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+      "versionName": "v0.1.0-p0.1",
+      "versionCode": 6772,
+      "apkSha256": "94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "b0b7082ad2a9ea656c0e40fe2c0d1eee9996a2d666c4058be6f8ee7b89e1f2ee"
+    },
+    {
+      "tag": "v0.1.0-rc1.6",
+      "source": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+      "versionName": "v0.1.0-rc1.6",
+      "versionCode": 6771,
+      "apkSha256": "102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "ca8747a9b0f63e7c23ffde00fce59997f1a149f2843181835bf52e70272e6958"
+    },
+    {
+      "tag": "v0.1.0-rc1.5",
+      "source": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+      "versionName": "v0.1.0-rc1.5",
+      "versionCode": 6770,
+      "apkSha256": "6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "4b657df8a9abfe690cbd73a09b7e4a7a97401c2836fbba924ff62ff54486e279"
+    },
+    {
+      "tag": "v0.1.0-rc1.4",
+      "source": "24aa0d7d36d244852e796cca6307936e34d989ed",
+      "versionName": "v0.1.0-rc1.4",
+      "versionCode": 6769,
+      "apkSha256": "e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0",
+      "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+      "buildInfoSha256": "bd82e2d6fbf1a53b0d40f832779d401a42994eeda19deac84e9f5fbec01acb5b"
+    }
+  ],
+  "remoteVersions": [
+    {
+      "ref": "refs/heads/data/region-map-gd-prd-east-fujian",
+      "type": "version.properties",
+      "maximum": 6778,
+      "versionName": "v0.1.0-p0.6"
+    },
+    {
+      "ref": "refs/heads/data/region-map-gd-prd-east-fujian",
+      "type": "release-ledger.json",
+      "maximum": 6778,
+      "codeHighWater": 6778
+    },
+    {
+      "ref": "refs/heads/design/p0-ui-lab",
+      "type": "version.properties",
+      "maximum": 6772,
+      "versionName": "v0.1.0-p0.1"
+    },
+    {
+      "ref": "refs/heads/design/p0-ui-lab",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/heads/feature/heart-rate-monitoring",
+      "type": "version.properties",
+      "maximum": 6766,
+      "versionName": "v0.1.0-rc1.1"
+    },
+    {
+      "ref": "refs/heads/feature/heart-rate-monitoring",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/heads/feature/p0-2-gps-ui",
+      "type": "version.properties",
+      "maximum": 6773,
+      "versionName": "v0.1.0-p0.2"
+    },
+    {
+      "ref": "refs/heads/feature/p0-2-gps-ui",
+      "type": "release-ledger.json",
+      "maximum": 6773,
+      "codeHighWater": 6773
+    },
+    {
+      "ref": "refs/heads/feature/p0-5-1-gps-motion-quality",
+      "type": "version.properties",
+      "maximum": 6777,
+      "versionName": "v0.1.0-p0.5.1"
+    },
+    {
+      "ref": "refs/heads/feature/p0-5-1-gps-motion-quality",
+      "type": "release-ledger.json",
+      "maximum": 6777,
+      "codeHighWater": 6777
+    },
+    {
+      "ref": "refs/heads/feature/p0-5-dashboard-settings-history",
+      "type": "version.properties",
+      "maximum": 6776,
+      "versionName": "v0.1.0-p0.5"
+    },
+    {
+      "ref": "refs/heads/feature/p0-5-dashboard-settings-history",
+      "type": "release-ledger.json",
+      "maximum": 6776,
+      "codeHighWater": 6776
+    },
+    {
+      "ref": "refs/heads/feature/p0-6-map-real-validation",
+      "type": "version.properties",
+      "maximum": 6779,
+      "versionName": "v0.1.0-p0.6.1"
+    },
+    {
+      "ref": "refs/heads/feature/p0-6-map-real-validation",
+      "type": "release-ledger.json",
+      "maximum": 6779,
+      "codeHighWater": 6779
+    },
+    {
+      "ref": "refs/heads/feature/p0-6-offline-map",
+      "type": "version.properties",
+      "maximum": 6778,
+      "versionName": "v0.1.0-p0.6"
+    },
+    {
+      "ref": "refs/heads/feature/p0-6-offline-map",
+      "type": "release-ledger.json",
+      "maximum": 6778,
+      "codeHighWater": 6778
+    },
+    {
+      "ref": "refs/heads/feature/p0-7-to-p1-0-offline-navigation",
+      "type": "version.properties",
+      "maximum": 6780,
+      "versionName": "v0.1.0-p0.7.0"
+    },
+    {
+      "ref": "refs/heads/feature/p0-7-to-p1-0-offline-navigation",
+      "type": "release-ledger.json",
+      "maximum": 6779,
+      "codeHighWater": 6779
+    },
+    {
+      "ref": "refs/heads/feature/p0-7-to-p1-0-offline-navigation-clean",
+      "type": "version.properties",
+      "maximum": 6780,
+      "versionName": "v0.1.0-p0.7.0"
+    },
+    {
+      "ref": "refs/heads/feature/p0-7-to-p1-0-offline-navigation-clean",
+      "type": "release-ledger.json",
+      "maximum": 6780,
+      "codeHighWater": 6780
+    },
+    {
+      "ref": "refs/heads/feature/p0-core-migration",
+      "type": "version.properties",
+      "maximum": 6772,
+      "versionName": "v0.1.0-p0.1"
+    },
+    {
+      "ref": "refs/heads/feature/p0-core-migration",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3",
+      "type": "version.properties",
+      "maximum": 6774,
+      "versionName": "v0.1.0-p0.3"
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3",
+      "type": "release-ledger.json",
+      "maximum": 6774,
+      "codeHighWater": 6774
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3-ui-refinement",
+      "type": "version.properties",
+      "maximum": 6775,
+      "versionName": "v0.1.0-p0.4"
+    },
+    {
+      "ref": "refs/heads/feature/theme-system-p0-3-ui-refinement",
+      "type": "release-ledger.json",
+      "maximum": 6775,
+      "codeHighWater": 6775
+    },
+    {
+      "ref": "refs/heads/fix/p0-7-1-navigation-backstack",
+      "type": "version.properties",
+      "maximum": 6780,
+      "versionName": "v0.1.0-p0.7.0"
+    },
+    {
+      "ref": "refs/heads/fix/p0-7-1-navigation-backstack",
+      "type": "release-ledger.json",
+      "maximum": 6780,
+      "codeHighWater": 6780
+    },
+    {
+      "ref": "refs/heads/main",
+      "type": "version.properties",
+      "maximum": 6766,
+      "versionName": "v0.1.0-rc1.1"
+    },
+    {
+      "ref": "refs/heads/main",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/heads/tools/offline-map-custom-area-build",
+      "type": "version.properties",
+      "maximum": 6778,
+      "versionName": "v0.1.0-p0.6"
+    },
+    {
+      "ref": "refs/heads/tools/offline-map-custom-area-build",
+      "type": "release-ledger.json",
+      "maximum": 6778,
+      "codeHighWater": 6778
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.1",
+      "type": "version.properties",
+      "maximum": 6772,
+      "versionName": "v0.1.0-p0.1"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.1",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.2",
+      "type": "version.properties",
+      "maximum": 6773,
+      "versionName": "v0.1.0-p0.2"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.2",
+      "type": "release-ledger.json",
+      "maximum": 6773,
+      "codeHighWater": 6773
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.3",
+      "type": "version.properties",
+      "maximum": 6774,
+      "versionName": "v0.1.0-p0.3"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.3",
+      "type": "release-ledger.json",
+      "maximum": 6774,
+      "codeHighWater": 6774
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.4",
+      "type": "version.properties",
+      "maximum": 6775,
+      "versionName": "v0.1.0-p0.4"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.4",
+      "type": "release-ledger.json",
+      "maximum": 6775,
+      "codeHighWater": 6775
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.5",
+      "type": "version.properties",
+      "maximum": 6776,
+      "versionName": "v0.1.0-p0.5"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.5",
+      "type": "release-ledger.json",
+      "maximum": 6776,
+      "codeHighWater": 6776
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.5.1",
+      "type": "version.properties",
+      "maximum": 6777,
+      "versionName": "v0.1.0-p0.5.1"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.5.1",
+      "type": "release-ledger.json",
+      "maximum": 6777,
+      "codeHighWater": 6777
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.6",
+      "type": "version.properties",
+      "maximum": 6778,
+      "versionName": "v0.1.0-p0.6"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.6",
+      "type": "release-ledger.json",
+      "maximum": 6778,
+      "codeHighWater": 6778
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.6.1",
+      "type": "version.properties",
+      "maximum": 6779,
+      "versionName": "v0.1.0-p0.6.1"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.6.1",
+      "type": "release-ledger.json",
+      "maximum": 6779,
+      "codeHighWater": 6779
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.7.0",
+      "type": "version.properties",
+      "maximum": 6780,
+      "versionName": "v0.1.0-p0.7.0"
+    },
+    {
+      "ref": "refs/tags/test-p0-v0.1.0-p0.7.0",
+      "type": "release-ledger.json",
+      "maximum": 6780,
+      "codeHighWater": 6780
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.4",
+      "type": "version.properties",
+      "maximum": 6766,
+      "versionName": "v0.1.0-rc1.1"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.5",
+      "type": "version.properties",
+      "maximum": 6766,
+      "versionName": "v0.1.0-rc1.1"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.5",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.6",
+      "type": "version.properties",
+      "maximum": 6766,
+      "versionName": "v0.1.0-rc1.1"
+    },
+    {
+      "ref": "refs/tags/v0.1.0-rc1.6",
+      "type": "release-ledger.json",
+      "maximum": 6769,
+      "codeHighWater": 6769
+    }
+  ],
+  "highWater": 6780,
+  "nextAvailable": 6781,
+  "baselineProductSource": "467f2086c0f712e04430382203da2bde0c870acb",
+  "baselineDeliveryHead": "cf679d7d7c5870ace7aec0a68b356fc303997273",
+  "mainAndBuildTreeUnchanged": true
+}

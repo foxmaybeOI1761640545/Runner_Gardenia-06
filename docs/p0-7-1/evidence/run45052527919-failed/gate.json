@@ -1,0 +1,310 @@
+{
+  "passed": false,
+  "plan": {
+    "commit": "0c2f577679a19256e1b6ca78de821ba3154dac0c",
+    "stage": 3,
+    "milestone": "P0.7.1 navigation maintenance",
+    "fullRegression": true,
+    "branch": "fix/p0-7-1-navigation-backstack",
+    "signed": false,
+    "publishing": false,
+    "runId": "45052527919",
+    "versionCode": 6781,
+    "versionName": "v0.1.0-p0.7.1"
+  },
+  "helpers": {
+    "tests": 156,
+    "executed": 156,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "source": "0c2f577679a19256e1b6ca78de821ba3154dac0c",
+    "runId": "45052527919"
+  },
+  "jvm": {
+    "tests": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 167,
+    "executed": 167,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "android": {
+    "tests": 18,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "total": 18,
+    "executed": 18,
+    "missingClasses": [
+      "de.dennisguse.opentracks.EspressoDeleteTrackTest",
+      "de.dennisguse.opentracks.EspressoEditTrackRecordingTest",
+      "de.dennisguse.opentracks.EspressoUITest",
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest",
+      "de.dennisguse.opentracks.chart.ChartValueSeriesTest",
+      "de.dennisguse.opentracks.chart.HeartRateChartHistoryTest",
+      "de.dennisguse.opentracks.chart.HeartRatePathTest",
+      "de.dennisguse.opentracks.data.CustomContentProviderUtilsTest",
+      "de.dennisguse.opentracks.data.CustomSQLiteOpenHelperTest",
+      "de.dennisguse.opentracks.data.HeartRateRepositoryTest",
+      "de.dennisguse.opentracks.data.ShareContentProviderTest",
+      "de.dennisguse.opentracks.data.TrackSelectionTest",
+      "de.dennisguse.opentracks.data.UUIDUtilsTest",
+      "de.dennisguse.opentracks.data.model.TrackPointTest",
+      "de.dennisguse.opentracks.data.models.ActivityTypeTest",
+      "de.dennisguse.opentracks.data.models.DistanceFormatterTest",
+      "de.dennisguse.opentracks.data.models.SpeedFormatterTest",
+      "de.dennisguse.opentracks.data.models.StatisticsTest",
+      "de.dennisguse.opentracks.io.file.TrackFilenameGenerator2Test",
+      "de.dennisguse.opentracks.io.file.TrackFilenameGeneratorTest",
+      "de.dennisguse.opentracks.io.file.exporter.KMLTrackExporterTest",
+      "de.dennisguse.opentracks.io.file.importer.ExportImportTest",
+      "de.dennisguse.opentracks.io.file.importer.GPXTrackImporterTest",
+      "de.dennisguse.opentracks.io.file.importer.KMLTrackImporterTest",
+      "de.dennisguse.opentracks.p0.DashboardNavigationTest",
+      "de.dennisguse.opentracks.p0.DashboardVisualMatrixTest",
+      "de.dennisguse.opentracks.p0.GardeniaThemeSystemTest",
+      "de.dennisguse.opentracks.p0.P02HomeUiTest",
+      "de.dennisguse.opentracks.p0.P051GpsUiTest",
+      "de.dennisguse.opentracks.p0.P05BatchFilesTest",
+      "de.dennisguse.opentracks.p0.P05DashboardLayoutTest",
+      "de.dennisguse.opentracks.p0.P05DashboardStatusNavigationTest",
+      "de.dennisguse.opentracks.p0.P05HistoryBatchTest",
+      "de.dennisguse.opentracks.p0.P05MetricSwapTest",
+      "de.dennisguse.opentracks.p0.P05SettingsHubTest",
+      "de.dennisguse.opentracks.p0.P0ActivitySmokeTest",
+      "de.dennisguse.opentracks.p0.P0DurabilityTest",
+      "de.dennisguse.opentracks.p0.P0GpsPreparationTest",
+      "de.dennisguse.opentracks.p0.P0GpsRecordingTest",
+      "de.dennisguse.opentracks.p0.P0GpxExporterTest",
+      "de.dennisguse.opentracks.p0.P0HeartRateUiTest",
+      "de.dennisguse.opentracks.p0.P0HistoryUiTest",
+      "de.dennisguse.opentracks.p0.P0OfflinePolicyTest",
+      "de.dennisguse.opentracks.p0.P0RecordingDataTest",
+      "de.dennisguse.opentracks.p0.P0RecordingUiTest",
+      "de.dennisguse.opentracks.p0.P0ResponsiveUiTest",
+      "de.dennisguse.opentracks.p0.P0SensorsTest",
+      "de.dennisguse.opentracks.p0.P0WorkoutRepositoryTest",
+      "de.dennisguse.opentracks.p0.map.P061GpsPreferencesTest",
+      "de.dennisguse.opentracks.p0.map.P061RealMapTest",
+      "de.dennisguse.opentracks.p0.map.P06GpsOwnershipTest",
+      "de.dennisguse.opentracks.p0.map.P06MapPersistenceTest",
+      "de.dennisguse.opentracks.p0.map.P06MapRepositoryTest",
+      "de.dennisguse.opentracks.p0.map.P06OfflineMapTest",
+      "de.dennisguse.opentracks.p0.map.P06RouteReadTest",
+      "de.dennisguse.opentracks.p0.map.P07ForegroundGpsTest",
+      "de.dennisguse.opentracks.p0.map.P07HomeMapTest",
+      "de.dennisguse.opentracks.p0.map.P07PermissionStateTest",
+      "de.dennisguse.opentracks.publicapi.DataProviderTest",
+      "de.dennisguse.opentracks.publicapi.PublicApiTest",
+      "de.dennisguse.opentracks.sensors.GpsStatusTest",
+      "de.dennisguse.opentracks.sensors.PressureSensorUtilsTest",
+      "de.dennisguse.opentracks.sensors.UintUtilsTest",
+      "de.dennisguse.opentracks.sensors.driver.BluetoothDriverLifecycleTest",
+      "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerBarometricPressureTest",
+      "de.dennisguse.opentracks.sensors.driver.BluetoothHandlerHeartRateTest",
+      "de.dennisguse.opentracks.sensors.driver.BoschEbikeParserTest",
+      "de.dennisguse.opentracks.sensors.driver.CyclingDistanceSpeedBluetoothTest",
+      "de.dennisguse.opentracks.sensors.driver.CyclingPowerBluetoothTest",
+      "de.dennisguse.opentracks.sensors.driver.RunningSpeedAndCadenceBluetoothTest",
+      "de.dennisguse.opentracks.sensors.sensorData.AggregatorBarometerTest",
+      "de.dennisguse.opentracks.sensors.sensorData.AggregatorHeartRateTest",
+      "de.dennisguse.opentracks.sensors.sensorData.SensorDataCyclingTest",
+      "de.dennisguse.opentracks.services.P07GpsHandoffTest",
+      "de.dennisguse.opentracks.services.P07RecoveryPermissionTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServiceNotificationManagerTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServiceRecordingTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest",
+      "de.dennisguse.opentracks.services.TrackRecordingServiceUITest",
+      "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementManagerTest",
+      "de.dennisguse.opentracks.services.announcement.VoiceAnnouncementUtilsTest",
+      "de.dennisguse.opentracks.settings.ImportExportSettingsIntentTest",
+      "de.dennisguse.opentracks.settings.PreferencesOpenHelperTest",
+      "de.dennisguse.opentracks.settings.PreferencesUtilsTest",
+      "de.dennisguse.opentracks.settings.bluetooth.BluetoothLeAdapterTest",
+      "de.dennisguse.opentracks.share.ShareUtilsTest",
+      "de.dennisguse.opentracks.share.TrackShareSummaryGeneratorTest",
+      "de.dennisguse.opentracks.stats.TrackStatisticsUpdaterTest",
+      "de.dennisguse.opentracks.ui.HeartRatePanelTest",
+      "de.dennisguse.opentracks.ui.HeartRateUiScreenshotTest",
+      "de.dennisguse.opentracks.ui.aggregatedStatistics.AggregatedStatisticsTest",
+      "de.dennisguse.opentracks.ui.aggregatedStatistics.EspressoAggregatedFilterTest",
+      "de.dennisguse.opentracks.ui.customRecordingLayout.CsvRecordingLayoutUtilsTest",
+      "de.dennisguse.opentracks.ui.customRecordingLayout.RecordingLayoutTest",
+      "de.dennisguse.opentracks.ui.intervals.IntervalStatisticsUpdaterTest",
+      "de.dennisguse.opentracks.util.FileUtilsTest",
+      "de.dennisguse.opentracks.util.StringUtilsTest",
+      "de.dennisguse.opentracks.util.TrackNameUtilsTest"
+    ],
+    "missingRequiredTests": [
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest.emulatorSystemTimezoneIsSingapore",
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest.instrumentationDefaultIsSingapore",
+      "de.dennisguse.opentracks.TimezoneEnvironmentTest.timezoneRuleRestoresPreviousDefaultOnFailure",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest.callbackAfterDestroyDoesNotAccessReleasedManagers",
+      "de.dennisguse.opentracks.services.TrackRecordingServicePreferenceLifecycleTest.queuedPreferenceSnapshotIsIgnoredAfterListenerUnregister"
+    ],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.P071NavigationTest",
+        "tests": 18,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [
+      "de.dennisguse.opentracks.p0.P071NavigationTest.T08_actualApi35EdgeGestureBackgroundsRoot\n\norg.junit.ComparisonFailure: expected:<[2]> but was:<[0]>\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat de.dennisguse.opentracks.p0.P071NavigationTest.T08_actualApi35EdgeGestureBackgroundsRoot(P071NavigationTest.java:120)\n"
+    ],
+    "passed": false
+  },
+  "historicalSkip": [],
+  "error": "[Errno 2] No such file or directory: 'build/reports/p071-gps-focused/focused.json'"
+}

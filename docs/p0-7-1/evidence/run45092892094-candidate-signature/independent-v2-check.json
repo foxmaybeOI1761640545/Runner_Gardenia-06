@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "apkSha256": "1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759",
+  "apkBytes": 3238755,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "apkV2CryptographicSignatureVerified": true,
+  "apkV2AllContentDigestVerified": true,
+  "signatureAlgorithm": "0x104",
+  "contentChunks": 6,
+  "zipCrcVerified": true,
+  "storedEntries4ByteAligned": 166,
+  "scope": "Independent local cryptography check of APK v2 signed data, full APK chunk digests, original certificate and 4-byte ZIP stored-entry alignment. Android platform apksigner/aapt checks remain separate Actions evidence. No SDK or signing key used."
+}

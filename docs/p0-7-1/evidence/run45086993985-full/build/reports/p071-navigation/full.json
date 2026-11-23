@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "runId": "45086993985",
+  "navigation": {
+    "tests": 18,
+    "executed": 18,
+    "passed": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cases": {
+      "T11": "T11_heartDeviceDialogReturnsToHeart",
+      "T06": "T06_rapidSwitchLaunchesOnce",
+      "T04": "T04_fourRootCyclesKeepInstances",
+      "T03": "T03_settingsToHeart",
+      "T02": "T02_historyToSettings",
+      "T13": "T13_activityRecreationRetainsInternalBack",
+      "T05": "T05_reselectionDoesNotLaunch",
+      "T09": "T09_settingsInternalBackSurvivesRootReturn",
+      "T14": "T14_actualRotationRetainsSelectedRoot",
+      "T17": "T17_gpsAndBleInputsPersistWhileSwitching",
+      "T10": "T10_historyDetailThenListThenTaskRoot",
+      "T08": "T08_actualApi35EdgeGestureBackgroundsRoot",
+      "T15": "T15_backgroundAndForegroundKeepDestination",
+      "T12": "T12_bottomSheetDismissedBeforeTaskBack",
+      "T01": "T01_runToHistory",
+      "T07": "T07_systemBackAtEveryRootBackgroundsTask",
+      "T16": "T16_recordingContinuesAcrossTabsAndRootBack",
+      "T18": "T18_eightPalettesKeepNavigationAndBack"
+    }
+  },
+  "screenshots": [
+    {
+      "file": "p071-T01-history.png",
+      "sha256": "1dcc323b02beeb18983ed7efc9a944189af6505e6556f727c7ae39f0b176739d"
+    },
+    {
+      "file": "p071-T02-settings.png",
+      "sha256": "fb861d6fea7cfe07095e68008f622e813af3651fd0feb18e3b62cdaf6c1d820e"
+    },
+    {
+      "file": "p071-T03-heart.png",
+      "sha256": "b2124784265a242a1303cfbca630f29ded1da1cafee4567d9f23cb637db890a4"
+    },
+    {
+      "file": "p071-T04-cycles.png",
+      "sha256": "806844cbaa6b6deffc5d0becaa5a45ef1ee71cab1290fd34f09945bac52be93a"
+    },
+    {
+      "file": "p071-T05-reselect.png",
+      "sha256": "fb861d6fea7cfe07095e68008f622e813af3651fd0feb18e3b62cdaf6c1d820e"
+    },
+    {
+      "file": "p071-T06-rapid.png",
+      "sha256": "14ba905b3d2209980e3c1e0efd822a6b8390806bd6c841c21aeafcd681378186"
+    },
+    {
+      "file": "p071-T07-root-restored.png",
+      "sha256": "7a24eb0dba2a48f74b98636339757485b4da33fa66031477db7fa60847e13b55"
+    },
+    {
+      "file": "p071-T08-gesture-restored.png",
+      "sha256": "cd8eb62cf663653a844f9c254e02f247ba6d561f670b6991e63bb81561459d01"
+    },
+    {
+      "file": "p071-T09-settings-root.png",
+      "sha256": "fb861d6fea7cfe07095e68008f622e813af3651fd0feb18e3b62cdaf6c1d820e"
+    },
+    {
+      "file": "p071-T10-history-detail.png",
+      "sha256": "3269efe8b3d59d97765c7c8cee65e55ef6009b83e21b86e84548cf68eb39c256"
+    },
+    {
+      "file": "p071-T11-device-dialog.png",
+      "sha256": "b6e249b147f6ee2e7cecddf67aa0f99d79abb62735f884d05600ca43cd401a14"
+    },
+    {
+      "file": "p071-T12-delete-sheet.png",
+      "sha256": "58a1fb397d3039c38c8a0d1b423c1d40900525dce955c06e84b818951fb1c9ea"
+    },
+    {
+      "file": "p071-T13-recreated-settings.png",
+      "sha256": "fb861d6fea7cfe07095e68008f622e813af3651fd0feb18e3b62cdaf6c1d820e"
+    },
+    {
+      "file": "p071-T14-rotated-heart.png",
+      "sha256": "42f600227624d930c13d82e1583a3f978caf686ab20ac5b5892557e692063b14"
+    },
+    {
+      "file": "p071-T15-resumed-settings.png",
+      "sha256": "20473e202c35d2d6caef23a88533cba236adf65face1579efbe19add965aac66"
+    },
+    {
+      "file": "p071-T16-recording-restored.png",
+      "sha256": "2ad0d846a7bee2864195c9c69ac9d3b94f6b68d848df848da10512c5e4d94d13"
+    },
+    {
+      "file": "p071-T17-synthetic-gps-ble.png",
+      "sha256": "9c7004b56b46c225898d82084d7a224b8f8e43b44aa2eba7978a516a480159a7"
+    },
+    {
+      "file": "p071-T18-explorer-dark.png",
+      "sha256": "7d9ebbd7440f1847a9830ecf6f9a77d36f1c1f343ea1c8d8317a708c177fd7fb"
+    },
+    {
+      "file": "p071-T18-explorer-light.png",
+      "sha256": "763cd1f56adeff2f1673f7e2003239d4259000302b7c819fbe9f4ff748bc0888"
+    },
+    {
+      "file": "p071-T18-neon-dark.png",
+      "sha256": "41b685be7f21c7b092f6368a9a254e6bd638f0b1dfaa4424a69a74cc9a4b5a97"
+    },
+    {
+      "file": "p071-T18-neon-light.png",
+      "sha256": "f1f53cc4889e43b46a9548076307fd1250d2fa4f8fc83aba525328ac36e6b260"
+    },
+    {
+      "file": "p071-T18-precision-dark.png",
+      "sha256": "0c81ac9cda0602686595d2075e4d607b875ad95847c03849fdf97d495460c565"
+    },
+    {
+      "file": "p071-T18-precision-light.png",
+      "sha256": "3209620926330fc9d873b545d3789706189c18c7756b6f6b1c5f07f8343c73ed"
+    },
+    {
+      "file": "p071-T18-quiet-dark.png",
+      "sha256": "cf842ee61882ad8839019958e057680a571a2fe4a662fbb1ce99a734f4a6a204"
+    },
+    {
+      "file": "p071-T18-quiet-light.png",
+      "sha256": "82536d638673448b8c98d138704201856291f6e8b5da904a65edb5df47214649"
+    }
+  ],
+  "physicalDevices": "NEEDS_DEVICE_VALIDATION",
+  "visualReviewRequired": true,
+  "scope": "full-regression"
+}

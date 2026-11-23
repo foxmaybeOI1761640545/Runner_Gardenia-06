@@ -1,0 +1,9 @@
+{
+  "stage": 3,
+  "milestone": "P0.7.1 navigation maintenance",
+  "fullRegression": true,
+  "baselineProductSource": "467f2086c0f712e04430382203da2bde0c870acb",
+  "baselineDeliveryHead": "cf679d7d7c5870ace7aec0a68b356fc303997273",
+  "navigationCases": 18,
+  "p08DevelopmentAllowed": false
+}
