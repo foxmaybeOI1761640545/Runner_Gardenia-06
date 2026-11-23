@@ -1,0 +1,19 @@
+{
+  "scope": "Local pure-Java43 test run; actual commit-bound Actions gates still required",
+  "tests": 43,
+  "executed": 43,
+  "passed": 43,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "maxHeapMiB": 128,
+  "files": {
+    "src/main/java/de/dennisguse/opentracks/p0/routes/GpxRouteImporter.java": "cfeeab1aa71ff22d9400a90349cc756f47df931c07b51929078264ae64819faf",
+    "src/main/java/de/dennisguse/opentracks/p0/routes/RoutePoint.java": "62d4239c5b1ba2f46a8ae2dbb0823a4488ed47339ba4cd8c29c1fc2f5bb28129",
+    "src/main/java/de/dennisguse/opentracks/p0/routes/Route.java": "caccfe14be9a725d1b524b479438982c0979bebb49affada77f304d8f178fd0a",
+    "src/main/java/de/dennisguse/opentracks/p0/routes/RouteDistance.java": "ee9452d308c890f8590098f97d7c358bb9491f155fc847ec15dd96d68b26062e",
+    "src/main/java/de/dennisguse/opentracks/p0/routes/RouteSegment.java": "eae81c518b91ac20fbad12b1038cc24811298832a6b69673127eb1b6a91f0f1d",
+    "src/main/java/de/dennisguse/opentracks/p0/routes/RouteLimits.java": "9f9a1ef38932de57832230fe44e4044e58ad9e50794ac35d24a56fe7da2d7a13",
+    "src/test/java/de/dennisguse/opentracks/p0/routes/GpxRouteImporterTest.java": "43f8eeba40032da5e41301621341b85a716b60f56d155a7c9feaac1cabf7bc32"
+  }
+}

@@ -1,0 +1,80 @@
+name: P0.8 independent phase4 data and route gates
+on:
+  push:
+    branches: [feature/p0-8-0-gpx-route-follow]
+    paths-ignore: ['docs/**', 'AGENTS.md', '.github/p08/visual-approval.json', '.github/p08/publication-approval.json']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: p08-stage-${{ github.ref_name }}
+  cancel-in-progress: false
+defaults:
+  run:
+    shell: bash
+env:
+  TZ: Asia/Singapore
+  JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+jobs:
+  stage-validation:
+    if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-8-0-gpx-route-follow'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - id: plan
+        name: Verify accepted P071 ancestry, all protected evidence and unique P08 allocation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/p08_stage.py prepare
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          artifact-ids: '14061852955'
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          run-id: '43470716313'
+          path: work/real-map
+      - run: python3 .github/scripts/p061_real_map.py fixture
+      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+        with:
+          cmdline-tools-version: '16111833'
+          packages: platform-tools
+      - run: |
+          sudo timedatectl set-timezone Asia/Singapore
+          sdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'
+          test -c /dev/kvm
+          sudo chmod a+rw /dev/kvm
+      - uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+        with:
+          cache-read-only: true
+      - name: Compile native Android, Lint, complete original and new JVM regressions
+        run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
+      - name: Execute every original and new Python helper regression
+        run: python3 .github/scripts/p08_stage.py helpers
+      - name: Actual API35 SAX security, namespace, encoding and real limit boundaries
+        run: |
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Reject missing, stale, zero-execution, skipped or failed source-bound evidence
+        if: always()
+        run: python3 .github/scripts/p08_stage.py gate
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: P08-phase-${{ steps.plan.outputs.phase }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            release-plan.json
+            build/reports/
+            build/test-results/
+            build/outputs/androidTest-results/
+            build/outputs/**/p08-parser/
+          if-no-files-found: error
+          retention-days: 90

@@ -1,12 +1,13 @@
 {
   "schema": 1,
-  "codeHighWater": 6781,
+  "codeHighWater": 6782,
   "seriesHighWater": {
     "v0.1.0-rc1.": 6,
     "v0.1.0-p0.": 6,
     "v0.1.0-p0.5.": 1,
     "v0.1.0-p0.6.": 1,
-    "v0.1.0-p0.7.": 1
+    "v0.1.0-p0.7.": 1,
+    "v0.1.0-p0.8.": 0
   },
   "allocations": [
     {
@@ -153,6 +154,15 @@
       "classification": "reserved-p071-test",
       "tag": "test-p0-v0.1.0-p0.7.1",
       "sourceEvidence": "Fresh audit of every remote branch ledger/properties, Tag, and all 12 Release build-info assets: maximum 6780. See docs/p0-7-1/evidence/baseline-version-audit.json. Actual source is bound only by accepted full tests, fixed-key APK and immutable annotated tag."
+    },
+    {
+      "versionName": "v0.1.0-p0.8.0",
+      "versionCode": 6782,
+      "commit": null,
+      "allocationBasisCommit": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+      "classification": "reserved-p08-test",
+      "tag": "test-p0-v0.1.0-p0.8.0",
+      "sourceEvidence": "Re-read all16 remote branch ledgers/properties,13 Tags and13 published build-info assets after P071 complete independent delivery; highest6781. See docs/p0-8-0/evidence/baseline/version-audit.json. Final source/APK only bound after exact-source tests, signed upgrade, native review and immutable publication."
     }
   ]
 }

@@ -1,0 +1,4 @@
+Actual local JUnitCore first run: Tests40, Executed40, Passed39, Failures1, Errors0, Skipped0.
+malformedEncodingAndUnknownDeclarationAreRejected: expected XML but was READ at GpxRouteImporterTest.java:144.
+Cause: SAX parser exposes unsupported encoding as UnsupportedEncodingException, which was incorrectly classified as provider read failure.
+Fix: classify encoding IO subtypes as explicit ENCODING; make new encoding assertion require that specific category. No original test edits or Skip. CI JUnit XML still required independently.
