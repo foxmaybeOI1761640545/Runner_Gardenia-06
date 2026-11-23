@@ -1,0 +1,37 @@
+{
+  "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+  "api": 35,
+  "schema": 43,
+  "before": {
+    "TRACKS": {
+      "rows": 1,
+      "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+    },
+    "TRACKPOINTS": {
+      "rows": 2,
+      "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+    },
+    "HEART_RATE_SAMPLES": {
+      "rows": 3,
+      "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+    }
+  },
+  "after": {
+    "TRACKS": {
+      "rows": 1,
+      "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+    },
+    "TRACKPOINTS": {
+      "rows": 2,
+      "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+    },
+    "HEART_RATE_SAMPLES": {
+      "rows": 3,
+      "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+    }
+  },
+  "preferencesSha256": "fe62f8c7649ec5f3017104a0763638d129bace1c565ec6824d4651d8ccf3a78c",
+  "offlineMapSentinelSha256": "59eaf15d469c7d57e52b01bb372797de460764737af2bfb88101cc13a4199559",
+  "passed": true,
+  "scope": "Actual provider all-row snapshots in TestApplication in-memory SQLite; actual private files\/prefs. Real database upgrade and real map remain phaseF."
+}

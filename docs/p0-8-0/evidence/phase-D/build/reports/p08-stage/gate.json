@@ -1,0 +1,716 @@
+{
+  "passed": true,
+  "plan": {
+    "predecessor": {
+      "phase": "C",
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "runId": 45123727015,
+      "artifactId": 14795525179,
+      "artifactSha256": "f3e0bd3faa5281fe3dc09801813c21347847b9bad3a2f2fbb25dd814d3e0b75f",
+      "historicalRawGateRerun": true
+    },
+    "commit": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "stage": 4,
+    "phase": "D",
+    "milestone": "P0.8.0 independent GPX routes and foreground route following",
+    "baselineProductSource": "857c744321825a2656d77f45d57c6e43b4334962",
+    "baselineDeliveryHead": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+    "fullRegression": false,
+    "signed": false,
+    "publishing": false,
+    "branch": "feature/p0-8-0-gpx-route-follow",
+    "runId": "45127118513",
+    "versionName": "v0.1.0-p0.8.0",
+    "versionCode": 6782
+  },
+  "helpers": {
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "runId": "45127118513",
+    "tests": 181,
+    "executed": 181,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jvm": {
+    "tests": 265,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 265,
+    "executed": 265,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest",
+        "tests": 43,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteCodecTest",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteRepositoryTest",
+        "tests": 34,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidFocused": {
+    "tests": 56,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 56,
+    "executed": 56,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest",
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P071NavigationTest",
+        "tests": 18,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "parserJvmMethods": [
+    "threadCancellationIsRejectedAndClosesOwnedStream",
+    "emptyFileIsRejected",
+    "repeatedNamesAreExplicitAndWarningGrowthIsBounded",
+    "failedOpenIsReadErrorRatherThanEmptyFile",
+    "standardLinksAndLiteralTimezoneFreeTimeAreRetained",
+    "prefixedNamespaceWorks",
+    "utf16EncodingPreservesNamesAndHashesActualBytes",
+    "multipleRoutesStayIndependentInDocumentOrder",
+    "actualDefaultRouteBoundaryCountsInvalidRoutes",
+    "externalInternalAndParameterDtdAreRejected",
+    "emptySegmentsStayExplicit",
+    "malformedAndTrailingXmlNeverReturnEarlierValidRoute",
+    "emptyLinkMetadataConsumesBudgetRatherThanGrowingWithoutBound",
+    "namespaceFreeCompatibilityIsExplicit",
+    "missingOptionalFieldsAndSinglePointHaveNoFabricatedDistance",
+    "xmlDepthBoundaryIsEnforcedEvenInsideIgnoredExtensions",
+    "longDisplayAliasNeverSplitsUnicodeSurrogatePair",
+    "actualDefault20000PointBoundaryIncludesInvalidCandidates",
+    "exactAndOverByteBudgetAreChecked",
+    "coordinateExtremesAndNegativeElevationAreValid",
+    "modelIsImmutableAndRenamePreservesOriginalData",
+    "allInvalidRoutesExposeRejectedPreviewWithReasons",
+    "tracksAndSegmentsAreNeverJoinedForDistance",
+    "geographyUsesReliableGreatCircleAndHandlesDateLine",
+    "onePointInEachSegmentHasUnavailableLength",
+    "malformedEncodingAndUnknownDeclarationAreRejected",
+    "actualDefault16MiBFileBoundaryIsEnforced",
+    "actualDefaultSegmentBoundaryCountsEmptySegments",
+    "schemaLocationIsNeverDownloaded",
+    "sourceHashCoversOriginalBytesAndMissingFilenameStaysUnknown",
+    "standaloneWaypointsAreNotRoutes",
+    "providerReadFailureClosesStreamAndDoesNotExposePartialCandidates",
+    "standardRteKeepsRouteAndPointMetadataSeparate",
+    "partialValidityIsVisibleAfterCompleteRead",
+    "invalidCoordinateInvalidatesWholeCandidateWithoutGapJoining",
+    "invalidOptionalElevationIsMarkedInvalidRatherThanDropped",
+    "duplicateCoordinatesRetainMetadataAndHaveKnownZeroLength",
+    "utf8BomIsAccepted",
+    "extensionSubtreesAndForeignElementsCannotCreateRoutesOrOverwriteNames",
+    "longitudeBoundsAndMissingAttributesAreRejected",
+    "otherVersionAndForeignRootAreRejected",
+    "multipleTracksAndMixedSourcesRemainSeparate",
+    "fieldAndTotalMetadataLimitsHaveExactBoundaries"
+  ],
+  "androidBudgetMeasurements": {
+    "bytes16MiB": {
+      "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+      "api": 35,
+      "case": "bytes16MiB",
+      "elapsedMillis": 2403,
+      "maxJavaHeapBytes": 201326592,
+      "currentJavaHeapUsedBytes": 137245680,
+      "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+    },
+    "points20000": {
+      "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+      "api": 35,
+      "case": "points20000",
+      "elapsedMillis": 499,
+      "maxJavaHeapBytes": 201326592,
+      "currentJavaHeapUsedBytes": 19391472,
+      "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+    }
+  },
+  "actualProcessDeath": {
+    "passed": true,
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "api": 35,
+    "timezone": "Asia/Singapore",
+    "cases": {
+      "addPrepared": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "addPrepared",
+        "checkpoint": "PREPARED",
+        "producerPid": 1942,
+        "recoveryPid": 2323,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addPromoted": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "addPromoted",
+        "checkpoint": "PROMOTED_0",
+        "producerPid": 2370,
+        "recoveryPid": 2442,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addCommitted": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "addCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2495,
+        "recoveryPid": 2545,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002",
+          "00000000-0000-0008-0000-000000000003"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addGarbage": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "addGarbage",
+        "checkpoint": "JOURNAL_RETIRED",
+        "producerPid": 2584,
+        "recoveryPid": 2632,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002",
+          "00000000-0000-0008-0000-000000000003"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "deleteRetired": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "deleteRetired",
+        "checkpoint": "RETIRED_0",
+        "producerPid": 2672,
+        "recoveryPid": 2722,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "deleteCommitted": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "deleteCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2763,
+        "recoveryPid": 2815,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "renamePrepared": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "renamePrepared",
+        "checkpoint": "PREPARED",
+        "producerPid": 2854,
+        "recoveryPid": 2902,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "renameCommitted": {
+        "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+        "case": "renameCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2943,
+        "recoveryPid": 2995,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      }
+    },
+    "scope": "Eight externally force-stopped transactions in real private persistent route files. Separate from JUnit counts; no workout database cross-process claim."
+  },
+  "isolation": {
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "api": 35,
+    "schema": 43,
+    "before": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+      }
+    },
+    "after": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+      }
+    },
+    "preferencesSha256": "fe62f8c7649ec5f3017104a0763638d129bace1c565ec6824d4651d8ccf3a78c",
+    "offlineMapSentinelSha256": "59eaf15d469c7d57e52b01bb372797de460764737af2bfb88101cc13a4199559",
+    "passed": true,
+    "scope": "Actual provider all-row snapshots in TestApplication in-memory SQLite; actual private files/prefs. Real database upgrade and real map remain phaseF."
+  },
+  "nativeImportScreenshots": {
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "api": 35,
+    "captures": [
+      {
+        "file": "p08-import-precision-light.png",
+        "sha256": "644868f91ec7e666c92b3a496f2b38a91ac0c4cf7aae2e655053295115342a12",
+        "theme": "precision",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-import-precision-dark.png",
+        "sha256": "bdc180c2b5d9194636d3d003842d7a3646d7c88aa29a10306eea2376723a9929",
+        "theme": "precision",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-import-quiet-light.png",
+        "sha256": "db1ce0f9dafbd75eac396c8c1c0475276d7b600b2b1b92528fb1cabb7938f003",
+        "theme": "quiet",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-import-quiet-dark.png",
+        "sha256": "caa9e2435a6935af9ffbf276a6f60c53aa845fd1251a19879c197869f323e36c",
+        "theme": "quiet",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-import-explorer-light.png",
+        "sha256": "23460e0b3496ab95fa02eb4a70e00481e90a5f7a4152f0910ed72121017ea202",
+        "theme": "explorer",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-import-explorer-dark.png",
+        "sha256": "4a649b8549f7d68195bce58f929be8f3f4bcecbd3eab43c19463131b5f3d1f15",
+        "theme": "explorer",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-import-neon-light.png",
+        "sha256": "0e1f6a95626fa5b6b10c1d69a53ee6d03b470a1f46a0546a776b308a6bfc5706",
+        "theme": "neon",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-import-neon-dark.png",
+        "sha256": "f72aeb9e02cdf74e5354e01b87cbe150952e4ded481972d4a76e80d678b9cc34",
+        "theme": "neon",
+        "mode": 2,
+        "native": true
+      }
+    ],
+    "visualReview": "PENDING_ACTUAL_REVIEW"
+  },
+  "visualAcceptance": "PENDING_ACTUAL_INDEPENDENT_PIXEL_REVIEW; CI existence/hash alone does not accept visual quality",
+  "nativeLibraryScreenshots": {
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "api": 35,
+    "captures": [
+      {
+        "file": "p08-library-precision-light.png",
+        "sha256": "cdd665d7a3e46d86ece1099109aca1bdb94e82e529aebea90af4036ced38d4d2",
+        "theme": "precision",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-detail-precision-light.png",
+        "sha256": "f774f0f220179641be2248496f4e8bfb69cbdd7e858dc3fe011b7544712e9a91",
+        "theme": "precision",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-library-precision-dark.png",
+        "sha256": "0000c451c335b7bea1733dcf00d83114fc4e72378b80f3494b442fb6f37f947e",
+        "theme": "precision",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-detail-precision-dark.png",
+        "sha256": "120d88e06ecf4176f7cf1797b000985bbddfc12b21a24cff5975af081d1ddc70",
+        "theme": "precision",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-library-quiet-light.png",
+        "sha256": "d75b49782048046d62a962e74d1fb27bd85b8427ad1d7efd1ef909975b8d1465",
+        "theme": "quiet",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-detail-quiet-light.png",
+        "sha256": "3ed95bb72ca18b2c6651dd58dd8bef515365433dbe9f8f7d75cae9cc7943ad0c",
+        "theme": "quiet",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-library-quiet-dark.png",
+        "sha256": "4f70bb64a112e1a08a3a654f2afa4b22a84bfe40ed11e3028322868660eaf377",
+        "theme": "quiet",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-detail-quiet-dark.png",
+        "sha256": "db4ff51b45fdfd83071e54008324e39ba1d55f6870f162d5511248396d6a9d37",
+        "theme": "quiet",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-library-explorer-light.png",
+        "sha256": "1dd468399d28c2ee3f6bb68f83ffafdb2aa65c66ed452c4c9af0e236dde2088d",
+        "theme": "explorer",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-detail-explorer-light.png",
+        "sha256": "837b90c320f72eecac044761ccdd534f2debe737f07e3d66a35f0189c7a50fff",
+        "theme": "explorer",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-library-explorer-dark.png",
+        "sha256": "59d6b344cabf51f49c038f2eec24db9e6db0e0c5c95b11ebb001ee9a87b849b2",
+        "theme": "explorer",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-detail-explorer-dark.png",
+        "sha256": "1e2b4000e5f64cc21471947b162fabbbec9a9466e76a50d70aa94d5747d6dee7",
+        "theme": "explorer",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-library-neon-light.png",
+        "sha256": "7777626e1600bbbbb0f8668ad57b6057b5e66698ee38ca1da0c52f9844546aef",
+        "theme": "neon",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-detail-neon-light.png",
+        "sha256": "e57be2bcc93f649fd3c04125257b0fdb2499e73ca87f0200a190db140c1e1e13",
+        "theme": "neon",
+        "mode": 1,
+        "native": true
+      },
+      {
+        "file": "p08-library-neon-dark.png",
+        "sha256": "90cf93abda15309cd250dd29e9cbc170320ea9ad451015d87777c422ab7a8cc3",
+        "theme": "neon",
+        "mode": 2,
+        "native": true
+      },
+      {
+        "file": "p08-detail-neon-dark.png",
+        "sha256": "9b0bb9f8567e427119e05c10eb8b244d1ee1a915fb9f4f3031b03550d2f77957",
+        "theme": "neon",
+        "mode": 2,
+        "native": true
+      }
+    ],
+    "visualReview": "PENDING_ACTUAL_REVIEW"
+  },
+  "retainedP071NavigationMethods": [
+    "T11_heartDeviceDialogReturnsToHeart",
+    "T06_rapidSwitchLaunchesOnce",
+    "T04_fourRootCyclesKeepInstances",
+    "T03_settingsToHeart",
+    "T02_historyToSettings",
+    "T13_activityRecreationRetainsInternalBack",
+    "T05_reselectionDoesNotLaunch",
+    "T09_settingsInternalBackSurvivesRootReturn",
+    "T14_actualRotationRetainsSelectedRoot",
+    "T17_gpsAndBleInputsPersistWhileSwitching",
+    "T10_historyDetailThenListThenTaskRoot",
+    "T08_actualApi35EdgeGestureBackgroundsRoot",
+    "T15_backgroundAndForegroundKeepDestination",
+    "T12_bottomSheetDismissedBeforeTaskBack",
+    "T01_runToHistory",
+    "T07_systemBackAtEveryRootBackgroundsTask",
+    "T16_recordingContinuesAcrossTabsAndRootBack",
+    "T18_eightPalettesKeepNavigationAndBack"
+  ],
+  "scope": "Independent GPX/private route repository and phase-specific SAF/library/detail UI with P071 navigation18: complete JVM/Python and focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF"
+}

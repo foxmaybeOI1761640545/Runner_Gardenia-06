@@ -1,0 +1,480 @@
+{
+  "phase": "D",
+  "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+  "runId": 45127118513,
+  "artifactId": 14797225165,
+  "artifactName": "P08-phase-D-45127118513-1",
+  "artifactSha256": "7855b3aa921732e71b0c3d3e64e9361cb949c4c8efacaee04ade0db3395200cf",
+  "artifactBytes": 7778139,
+  "stageAccepted": true,
+  "rawJUnitVerified": true,
+  "all265PredecessorJvmIdentitiesUnchanged": true,
+  "all24PredecessorNativeCasesPreserved": true,
+  "all14LibraryAnd18OriginalNavigationMethodIdentitiesChecked": true,
+  "nativeProcessDeathScenarios": 8,
+  "tests": {
+    "python": {
+      "tests": 181,
+      "executed": 181,
+      "passed": 181,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 265,
+      "executed": 265,
+      "passed": 265,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "androidFocused": {
+      "tests": 56,
+      "executed": 56,
+      "passed": 56,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "visualReview": "PASSED_ACTUAL_NATIVE_REVIEW",
+  "nativeImagesReviewed": [
+    {
+      "file": "p08-import-precision-light.png",
+      "sha256": "644868f91ec7e666c92b3a496f2b38a91ac0c4cf7aae2e655053295115342a12",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-precision-dark.png",
+      "sha256": "bdc180c2b5d9194636d3d003842d7a3646d7c88aa29a10306eea2376723a9929",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-quiet-light.png",
+      "sha256": "db1ce0f9dafbd75eac396c8c1c0475276d7b600b2b1b92528fb1cabb7938f003",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-quiet-dark.png",
+      "sha256": "caa9e2435a6935af9ffbf276a6f60c53aa845fd1251a19879c197869f323e36c",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-explorer-light.png",
+      "sha256": "23460e0b3496ab95fa02eb4a70e00481e90a5f7a4152f0910ed72121017ea202",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-explorer-dark.png",
+      "sha256": "4a649b8549f7d68195bce58f929be8f3f4bcecbd3eab43c19463131b5f3d1f15",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-neon-light.png",
+      "sha256": "0e1f6a95626fa5b6b10c1d69a53ee6d03b470a1f46a0546a776b308a6bfc5706",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-neon-dark.png",
+      "sha256": "f72aeb9e02cdf74e5354e01b87cbe150952e4ded481972d4a76e80d678b9cc34",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-precision-light.png",
+      "sha256": "cdd665d7a3e46d86ece1099109aca1bdb94e82e529aebea90af4036ced38d4d2",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-precision-light.png",
+      "sha256": "f774f0f220179641be2248496f4e8bfb69cbdd7e858dc3fe011b7544712e9a91",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-precision-dark.png",
+      "sha256": "0000c451c335b7bea1733dcf00d83114fc4e72378b80f3494b442fb6f37f947e",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-precision-dark.png",
+      "sha256": "120d88e06ecf4176f7cf1797b000985bbddfc12b21a24cff5975af081d1ddc70",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-quiet-light.png",
+      "sha256": "d75b49782048046d62a962e74d1fb27bd85b8427ad1d7efd1ef909975b8d1465",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-quiet-light.png",
+      "sha256": "3ed95bb72ca18b2c6651dd58dd8bef515365433dbe9f8f7d75cae9cc7943ad0c",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-quiet-dark.png",
+      "sha256": "4f70bb64a112e1a08a3a654f2afa4b22a84bfe40ed11e3028322868660eaf377",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-quiet-dark.png",
+      "sha256": "db4ff51b45fdfd83071e54008324e39ba1d55f6870f162d5511248396d6a9d37",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-explorer-light.png",
+      "sha256": "1dd468399d28c2ee3f6bb68f83ffafdb2aa65c66ed452c4c9af0e236dde2088d",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-explorer-light.png",
+      "sha256": "837b90c320f72eecac044761ccdd534f2debe737f07e3d66a35f0189c7a50fff",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-explorer-dark.png",
+      "sha256": "59d6b344cabf51f49c038f2eec24db9e6db0e0c5c95b11ebb001ee9a87b849b2",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-explorer-dark.png",
+      "sha256": "1e2b4000e5f64cc21471947b162fabbbec9a9466e76a50d70aa94d5747d6dee7",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-neon-light.png",
+      "sha256": "7777626e1600bbbbb0f8668ad57b6057b5e66698ee38ca1da0c52f9844546aef",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-neon-light.png",
+      "sha256": "e57be2bcc93f649fd3c04125257b0fdb2499e73ca87f0200a190db140c1e1e13",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-neon-dark.png",
+      "sha256": "90cf93abda15309cd250dd29e9cbc170320ea9ad451015d87777c422ab7a8cc3",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-neon-dark.png",
+      "sha256": "9b0bb9f8567e427119e05c10eb8b244d1ee1a915fb9f4f3031b03550d2f77957",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    }
+  ],
+  "supplementalNavigationImagesReviewed": [
+    {
+      "file": "p071-T01-history.png",
+      "sha256": "c13c90b3afacfce8d5e1b197a89fed77ced17476f1ca78ba02c97a6b37762e7a",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T02-settings.png",
+      "sha256": "17899f0d00c232435d64d86c61f5ee3f68269fb5a42ed82db15e7d83e1cff31e",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T03-heart.png",
+      "sha256": "43b7063edba858674297b58f4d425b98d98c8d784859e6a5b84d7e587f2b9b21",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T04-cycles.png",
+      "sha256": "c83a1f417f8d53d882d9b3a1e1f469dc7bf9873585b33ce2c468b73f78b4f97c",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T05-reselect.png",
+      "sha256": "17899f0d00c232435d64d86c61f5ee3f68269fb5a42ed82db15e7d83e1cff31e",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T06-rapid.png",
+      "sha256": "e1272228cc6c279c15dd17c84474a860729cd38cf24365bcef48ff8f3d33cf7b",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T07-root-restored.png",
+      "sha256": "4dd088972f06aa307b373018d7b047e4672174314d6a2703886880d77ebe2eba",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T08-gesture-restored.png",
+      "sha256": "e6c4a7f2a060223b1eb210e5997b69baa47ec3c6f5dbc70dcc44bb65d48a2368",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T09-settings-root.png",
+      "sha256": "17899f0d00c232435d64d86c61f5ee3f68269fb5a42ed82db15e7d83e1cff31e",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T10-history-detail.png",
+      "sha256": "52139d0a09cdce67c4fb6eedeca153aa8d6d4ad619ac99142dab6d6cad7aaac8",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T11-device-dialog.png",
+      "sha256": "61701de2ab2da01be6f2b21430b7b61d50d191e4281f104b44958344c684606f",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T12-delete-sheet.png",
+      "sha256": "2844ce64d8e71ae18d32850cd913f2607f08f5d2686b362bf8dea8ad499b2bfc",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T13-recreated-settings.png",
+      "sha256": "17899f0d00c232435d64d86c61f5ee3f68269fb5a42ed82db15e7d83e1cff31e",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T14-rotated-heart.png",
+      "sha256": "2cf85ad01f5527d749a4a41efa4074a87ffbf716132b01e1657e7f39d964063c",
+      "native": true,
+      "dimensions": [
+        2400,
+        1080
+      ]
+    },
+    {
+      "file": "p071-T15-resumed-settings.png",
+      "sha256": "8593c6c411eb52a312cd7ad06358b4307d3f2db117a2bc627d883f8b2d41e612",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T16-recording-restored.png",
+      "sha256": "72e8457f39eb74d9e035452c04226d0506bff9a59d754e221e2539fcb2977e73",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T17-synthetic-gps-ble.png",
+      "sha256": "b6a0e46d7f837012e09c8a6b86ecf4940ed34730fcba928ded0d6e15cba5c236",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-explorer-dark.png",
+      "sha256": "01cc4cf563aa9b810482c27f3a1615b5f7dcad595f57134a8fbf381672e6a545",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-explorer-light.png",
+      "sha256": "4be87618817960e9d1026157452668e28d7934278b0e75cf4ecaed41293136fd",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-neon-dark.png",
+      "sha256": "aa7ef4ecf84c03e2f62772ee828524936ac4858747b844a606bd6bf388329014",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-neon-light.png",
+      "sha256": "7ca1bd85665b069e72f293c340ad3af12cec3ca92f864d40357fe8574ed746db",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-precision-dark.png",
+      "sha256": "c682db1ff5f493307a86b9ae27020221c3774250321a8a3798efbbcf6f8cb7f3",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-precision-light.png",
+      "sha256": "b81a79c2e1b8584fc7b5ab03b0d98646f980b426a75768554866b04867f2d948",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-quiet-dark.png",
+      "sha256": "5df63267fb8e9a2afc79b91459578f76c79d2b2ebfb3c7666a8f13b3986030d1",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    },
+    {
+      "file": "p071-T18-quiet-light.png",
+      "sha256": "57224a4cf13397ee53fab6a3968d96b20018f164d734a5e657a4901b8c5dca65",
+      "native": true,
+      "dimensions": [
+        1080,
+        2400
+      ]
+    }
+  ],
+  "nativeImagesReviewedTotal": 49,
+  "reviewMethod": "Viewed all24 route and25 navigation images in seven contact sheets, plus originals Library Precision light, Detail Neon dark, Home Explorer dark and T13 recreated Settings. Checked metadata/controls/theme/insets/caller pages/new home route action vs locate/zoom. No blocking issue.",
+  "visualScope": "One managed viewport (1080x2400, plus original rotation case), not all final requested sizes/locales/states. These p071-prefix PNGs are fresh P08 regression captures, not replaced P071 evidence.",
+  "isolation": {
+    "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+    "api": 35,
+    "schema": 43,
+    "before": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+      }
+    },
+    "after": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "f8caeb67811a2e5d41340e01c2f9cce8583edbd9dba277a89f4bd80368810759"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "93423a872fd0e2229b8f348d97b42bd7b5d2c25b0f31a68135f6f88cfaaa15b2"
+      }
+    },
+    "preferencesSha256": "fe62f8c7649ec5f3017104a0763638d129bace1c565ec6824d4651d8ccf3a78c",
+    "offlineMapSentinelSha256": "59eaf15d469c7d57e52b01bb372797de460764737af2bfb88101cc13a4199559",
+    "passed": true,
+    "scope": "Actual provider all-row snapshots in TestApplication in-memory SQLite; actual private files/prefs. Real database upgrade and real map remain phaseF."
+  },
+  "scope": "PhaseD library/details/CRUD/secondary Back and original navigation18. Maps/static preview/foreground following and complete legacy API35/fixed JKS/P071 real upgrade/immutable release/public verification remain later gates."
+}

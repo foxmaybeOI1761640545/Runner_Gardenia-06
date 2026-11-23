@@ -3,5 +3,9 @@
   "runId": 45126518915,
   "jobId": 137531988990,
   "reason": "New test wildcard static imports made closeSoftKeyboard ambiguous between Espresso(void) and ViewActions(ViewAction). Production app compiled; native tests did not execute.",
-  "fix": "Use explicit static imports. Test review also replaces a focused-Activity wait while its rename dialog owns focus with an explicit dialog-root assertion, and requires a different Activity instance after manual recreation. All functional assertions and 14 new plus18 old navigation cases are retained; production source unchanged."
+  "fix": "Use explicit static imports. Test review also replaces a focused-Activity wait while its rename dialog owns focus with an explicit dialog-root assertion, and requires a different Activity instance after manual recreation. All functional assertions and 14 new plus18 old navigation cases are retained; production source unchanged.",
+  "artifactId": 14795842367,
+  "artifactBytes": 118374,
+  "artifactSha256": "3fdb52dc5d0fc4057cd47dd90d92be600caaeddee6efd54c74171453bf32c1ee",
+  "independentArtifactDownloadVerified": true
 }

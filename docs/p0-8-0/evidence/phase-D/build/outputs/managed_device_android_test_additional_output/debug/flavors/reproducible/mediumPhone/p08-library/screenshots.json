@@ -1,0 +1,119 @@
+{
+  "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+  "api": 35,
+  "captures": [
+    {
+      "file": "p08-library-precision-light.png",
+      "sha256": "cdd665d7a3e46d86ece1099109aca1bdb94e82e529aebea90af4036ced38d4d2",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-precision-light.png",
+      "sha256": "f774f0f220179641be2248496f4e8bfb69cbdd7e858dc3fe011b7544712e9a91",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-precision-dark.png",
+      "sha256": "0000c451c335b7bea1733dcf00d83114fc4e72378b80f3494b442fb6f37f947e",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-precision-dark.png",
+      "sha256": "120d88e06ecf4176f7cf1797b000985bbddfc12b21a24cff5975af081d1ddc70",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-quiet-light.png",
+      "sha256": "d75b49782048046d62a962e74d1fb27bd85b8427ad1d7efd1ef909975b8d1465",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-quiet-light.png",
+      "sha256": "3ed95bb72ca18b2c6651dd58dd8bef515365433dbe9f8f7d75cae9cc7943ad0c",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-quiet-dark.png",
+      "sha256": "4f70bb64a112e1a08a3a654f2afa4b22a84bfe40ed11e3028322868660eaf377",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-quiet-dark.png",
+      "sha256": "db4ff51b45fdfd83071e54008324e39ba1d55f6870f162d5511248396d6a9d37",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-explorer-light.png",
+      "sha256": "1dd468399d28c2ee3f6bb68f83ffafdb2aa65c66ed452c4c9af0e236dde2088d",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-explorer-light.png",
+      "sha256": "837b90c320f72eecac044761ccdd534f2debe737f07e3d66a35f0189c7a50fff",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-explorer-dark.png",
+      "sha256": "59d6b344cabf51f49c038f2eec24db9e6db0e0c5c95b11ebb001ee9a87b849b2",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-explorer-dark.png",
+      "sha256": "1e2b4000e5f64cc21471947b162fabbbec9a9466e76a50d70aa94d5747d6dee7",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-library-neon-light.png",
+      "sha256": "7777626e1600bbbbb0f8668ad57b6057b5e66698ee38ca1da0c52f9844546aef",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-detail-neon-light.png",
+      "sha256": "e57be2bcc93f649fd3c04125257b0fdb2499e73ca87f0200a190db140c1e1e13",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-library-neon-dark.png",
+      "sha256": "90cf93abda15309cd250dd29e9cbc170320ea9ad451015d87777c422ab7a8cc3",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-detail-neon-dark.png",
+      "sha256": "9b0bb9f8567e427119e05c10eb8b244d1ee1a915fb9f4f3031b03550d2f77957",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    }
+  ],
+  "visualReview": "PENDING_ACTUAL_REVIEW"
+}

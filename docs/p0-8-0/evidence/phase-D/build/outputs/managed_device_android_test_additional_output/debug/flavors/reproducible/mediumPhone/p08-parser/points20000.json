@@ -1,0 +1,9 @@
+{
+  "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+  "api": 35,
+  "case": "points20000",
+  "elapsedMillis": 499,
+  "maxJavaHeapBytes": 201326592,
+  "currentJavaHeapUsedBytes": 19391472,
+  "scope": "Actual Android SAX boundary timing\/current heap, not a sampled total-process memory peak"
+}
