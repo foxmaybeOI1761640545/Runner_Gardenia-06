@@ -26,8 +26,12 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import static androidx.test.espresso.Espresso.*;
-import static androidx.test.espresso.action.ViewActions.*;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.onData;
+import static androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.matcher.ViewMatchers.*;
 import static androidx.test.espresso.matcher.RootMatchers.isDialog;
 import static org.hamcrest.Matchers.*;
@@ -115,13 +119,14 @@ public class P08RouteLibraryUiTest {
         try(var home=ActivityScenario.launch(P0Activity.class)){
             for(int i=0;i<4;i++){
                 var root=await(P0Activity.class);main(()->{for(int n=0;n<5;n++)root.findViewById(R.id.p08_home_routes).performClick();});var library=await(RouteLibraryActivity.class);loaded(library);
-                main(()->{int count=0;for(Stage stage:Stage.values())if(stage!=Stage.DESTROYED)for(Activity a:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(stage))if(a instanceof RouteLibraryActivity)count++;assertEquals(1,count);library.recreate();});loaded(await(RouteLibraryActivity.class));back();assertSame(root,await(P0Activity.class));
+                main(()->{int count=0;for(Stage stage:Stage.values())if(stage!=Stage.DESTROYED)for(Activity a:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(stage))if(a instanceof RouteLibraryActivity)count++;assertEquals(1,count);library.recreate();});
+                long end=SystemClock.elapsedRealtime()+15000;RouteLibraryActivity recreated=null;do{var candidate=current(RouteLibraryActivity.class);if(candidate!=null&&candidate!=library){recreated=candidate;break;}SystemClock.sleep(50);}while(SystemClock.elapsedRealtime()<end);assertNotNull("A different Activity instance must complete recreation",recreated);loaded(recreated);back();assertSame(root,await(P0Activity.class));
             }
         }
     }
     @Test public void listOverflowRenameUsesConfirmedNativeLocalAlias()throws Exception{
         seed(1);try(var screen=ActivityScenario.launch(RouteLibraryActivity.class)){
-            loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());await(RouteDetailActivity.class);onView(withId(R.id.p08_rename_input)).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
+            loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());onView(withId(R.id.p08_rename_input)).inRoot(isDialog()).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
         }
     }
     @Test public void detailRecreationRetainsLongDescriptionScrollPosition()throws Exception{
