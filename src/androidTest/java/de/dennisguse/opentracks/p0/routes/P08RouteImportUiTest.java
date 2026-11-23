@@ -43,7 +43,7 @@ public class P08RouteImportUiTest {
     private RouteRepository repo() { return new RouteRepository(new File(context.getFilesDir(), "route-library")); }
     private RouteImportViewModel model(RouteImportActivity a) { return new ViewModelProvider(a).get(RouteImportViewModel.class); }
     @Before public void before() throws Exception {
-        family = PreferencesUtils.getGardeniaTheme(); night = AppCompatDelegate.getDefaultNightMode(); gps = PreferencesUtils.getString(R.string.settings_sensor_gps_key); heart = PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key);
+        family = PreferencesUtils.getGardeniaTheme(); night = AppCompatDelegate.getDefaultNightMode(); gps = PreferencesUtils.getString(R.string.settings_sensor_gps_key, null); heart = PreferencesUtils.getString(R.string.settings_sensor_bluetooth_heart_rate_key, null);
         TestEnvironmentUtils.resetTrackRecordingServiceAndDeleteTracks(); PreferencesUtils.setString(R.string.settings_sensor_gps_key, "NONE"); PreferencesUtils.setString(R.string.settings_sensor_bluetooth_heart_rate_key, ""); clean();
     }
     private void clean() throws Exception {

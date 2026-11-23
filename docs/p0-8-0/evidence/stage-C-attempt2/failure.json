@@ -1,0 +1,8 @@
+{
+  "source": "c3d7e4809e2863d985ba6f41df9a8890669524a6",
+  "runId": 45123156474,
+  "attempt": 2,
+  "jobId": 137521999587,
+  "reason": "After Maven resolved, Android test compilation found two missing default arguments in new test setup PreferencesUtils.getString(int,String). Production app compiled; native tests did not execute.",
+  "fix": "Pass null fallback to faithfully preserve absence of old preferences. Preserve production behavior and all assertions, rerun full exact-source gate. Correct the phase gate scope text to include its SAF UI coverage."
+}

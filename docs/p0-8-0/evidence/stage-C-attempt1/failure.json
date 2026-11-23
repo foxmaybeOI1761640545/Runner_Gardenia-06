@@ -1,0 +1,11 @@
+{
+  "source": "c3d7e4809e2863d985ba6f41df9a8890669524a6",
+  "runId": 45123156474,
+  "attempt": 1,
+  "jobId": 137521354686,
+  "artifactId": 14794591738,
+  "artifactBytes": 41564,
+  "artifactSha256": "70e4fbc5d860b7bf5269bff5ba328863c0934af6585a2ecea0d9189145264854",
+  "reason": "Maven Central HTTP429 Too Many Requests resolving unchanged Mapsforge map-android/themes 0.25.0 during dependency merge. Android compile/tests did not execute.",
+  "resolution": "Retry failed job at the exact same source, toolchain and dependencies; no weakened gates or claimed test passes."
+}

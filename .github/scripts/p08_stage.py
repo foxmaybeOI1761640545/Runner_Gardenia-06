@@ -86,7 +86,7 @@ def gate():
     image=folders[0].parent/'p0-ui'/row['file'];assert image.is_file() and image.read_bytes().startswith(b'\x89PNG\r\n\x1a\n') and hashlib.sha256(image.read_bytes()).hexdigest()==row['sha256']
    result['nativeImportScreenshots']=screenshots
    result['visualAcceptance']='PENDING_ACTUAL_INDEPENDENT_PIXEL_REVIEW; CI existence/hash alone does not accept visual quality'
-  result['scope']='Data/GPX and private route repository only: complete JVM/Python, focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF'
+  result['scope']='Independent GPX/private route repository and phase-specific SAF import UI: complete JVM/Python and focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF'
   result['passed']=True
  except Exception as error:result['error']=repr(error)
  save('gate.json',result);print(json.dumps(result,indent=2))
