@@ -19,6 +19,7 @@ import de.dennisguse.opentracks.p0.map.*;
 public final class RouteMapView extends FrameLayout {
     private final OfflineMapView map;
     private final TextView status;
+    private final Button routes;
     private final Handler main=new Handler(Looper.getMainLooper());
     private final OfflineMapRepository repository;
     private ExecutorService worker;
@@ -45,7 +46,10 @@ public final class RouteMapView extends FrameLayout {
         status=new TextView(context);status.setText(R.string.p06_map_empty);
         status.setTextColor(0xff202020);status.setBackgroundColor(0xeef5f5f5);
         status.setTextSize(11);status.setPadding(8,2,8,2);
-        addView(status,new LayoutParams(-1,-2,Gravity.TOP));
+        var statusLayout=new LayoutParams(-1,-2,Gravity.TOP);statusLayout.setMarginEnd((int)(80*getResources().getDisplayMetrics().density));addView(status,statusLayout);
+        routes=new Button(context);routes.setId(R.id.p08_home_routes);routes.setText(R.string.p08_routes_short);routes.setTextSize(10);routes.setMinHeight(0);routes.setMinimumHeight(0);routes.setPadding(8,0,8,0);
+        var routesLayout=new LayoutParams((int)(80*getResources().getDisplayMetrics().density),(int)(48*getResources().getDisplayMetrics().density),Gravity.TOP|Gravity.END);addView(routes,routesLayout);
+        routes.setOnClickListener(v->{if(!routes.isEnabled())return;routes.setEnabled(false);context.startActivity(de.dennisguse.opentracks.p0.routes.ui.RouteLibraryActivity.intent(context));});
         Button locate=new Button(context);locate.setId(R.id.p07_home_locate);
         locate.setText(R.string.p06_my_position);
         locate.setTextSize(10);locate.setMinHeight(0);locate.setMinimumHeight(0);
@@ -62,7 +66,7 @@ public final class RouteMapView extends FrameLayout {
     public OfflineMapView offlineMap(){return map;}
     public CharSequence mapStatus(){return status.getText();}
     public void start(){
-        if(active)return;active=true;long token=++generation;
+        if(active)return;routes.setEnabled(true);active=true;long token=++generation;
         worker=Executors.newSingleThreadExecutor();
         worker.execute(()->{
             org.mapsforge.map.reader.MapFile file=null;String id=null;boolean failed=false;

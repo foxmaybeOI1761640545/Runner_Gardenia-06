@@ -1,15 +1,24 @@
 """Phase admission requires immutable successful predecessor artifacts, then reruns its historical raw gate."""
-import hashlib,io,json,os,subprocess,tarfile,tempfile,zipfile
+import hashlib,io,json,os,re,subprocess,tarfile,tempfile,zipfile
 from pathlib import Path,PurePosixPath
 from publish_release import GitHub
 from p08_version import BRANCH
 
 def identity(receipt,phase,run,artifact):
  if receipt.get('phase')!=phase or receipt.get('stageAccepted') is not True or receipt.get('rawJUnitVerified') is not True:raise ValueError('Predecessor report not accepted')
+ if phase in 'CDE':
+  if receipt.get('visualReview')!='PASSED_ACTUAL_NATIVE_REVIEW' or not receipt.get('nativeImagesReviewed'):raise ValueError('Actual native pixel review is required before the next UI phase')
+  for row in receipt['nativeImagesReviewed']:
+   if row.get('native') is not True or not re.fullmatch('[0-9a-f]{64}',row.get('sha256','')):raise ValueError('Invalid reviewed native image receipt')
  source=receipt['source']
  if (run.get('id'),run.get('head_sha'),run.get('head_branch'),run.get('event'),run.get('path'),run.get('status'),run.get('conclusion'))!=(receipt['runId'],source,BRANCH,'push','.github/workflows/p08-stage.yml','completed','success'):raise ValueError('Predecessor exact-source workflow did not pass')
  if (artifact.get('id'),artifact.get('name'),artifact.get('size_in_bytes'),artifact.get('digest'),artifact.get('expired'))!=(receipt['artifactId'],receipt['artifactName'],receipt['artifactBytes'],'sha256:'+receipt['artifactSha256'],False):raise ValueError('Predecessor immutable artifact identity mismatch')
  if artifact.get('workflow_run',{}).get('head_sha')!=source or artifact.get('workflow_run',{}).get('id')!=receipt['runId']:raise ValueError('Artifact belongs to another source/run')
+
+def visual_matches(receipt,raw):
+ expected={row['file']:row['sha256'] for key,value in raw.items() if key.startswith('native') and key.endswith('Screenshots') for row in value['captures']}
+ reviewed={row['file']:row['sha256'] for row in receipt['nativeImagesReviewed']}
+ if not expected or expected!=reviewed or len(reviewed)!=len(receipt['nativeImagesReviewed']):raise ValueError('Reviewed native image hashes differ from accepted immutable pixels')
 
 def safe_path(name):
  p=PurePosixPath(name)
@@ -44,4 +53,6 @@ def verify(phase):
   if result.returncode:raise ValueError('Historical predecessor raw evidence gate failed: '+result.stdout[-4000:])
   raw=json.loads((root/'build/reports/p08-stage/gate.json').read_text())
   if not raw['passed'] or raw['plan']['phase']!=prior or raw['plan']['commit']!=receipt['source']:raise ValueError('Historical predecessor gate source/phase differs')
+  if prior in 'CDE':
+   visual_matches(receipt,raw)
  return {'phase':prior,'source':receipt['source'],'runId':receipt['runId'],'artifactId':receipt['artifactId'],'artifactSha256':receipt['artifactSha256'],'historicalRawGateRerun':True}

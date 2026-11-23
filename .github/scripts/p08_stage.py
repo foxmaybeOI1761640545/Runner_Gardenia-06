@@ -53,10 +53,13 @@ def gate():
    subset=Path(temp);shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08GpxParserPlatformTest.java',subset/'P08GpxParserPlatformTest.java')
    if plan['phase']!='A':shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteRepositoryPlatformTest.java',subset/'P08RouteRepositoryPlatformTest.java')
    if plan['phase'] in 'CDEF':shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteImportUiTest.java',subset/'P08RouteImportUiTest.java')
+   if plan['phase'] in 'DEF':
+    shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java',subset/'P08RouteLibraryUiTest.java')
+    shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/P071NavigationTest.java',subset/'P071NavigationTest.java')
    result['androidFocused']=inspect(Path('build/outputs/androidTest-results'),subset,False)
   assert result['helpers']['passed'] and result['helpers']['source']==plan['commit'] and result['helpers']['tests']>=165 and not result['helpers']['skipped']
   assert result['jvm']['passed'] and result['jvm']['tests']>=(210 if plan['phase']=='A' else 265) and not result['jvm']['skipped']
-  assert result['androidFocused']['passed'] and result['androidFocused']['tests']==({'A':8,'B':14}.get(plan['phase'],24)) and not result['androidFocused']['skipped']
+  assert result['androidFocused']['passed'] and result['androidFocused']['tests']==({'A':8,'B':14,'C':24}.get(plan['phase'],56)) and not result['androidFocused']['skipped']
   import xml.etree.ElementTree as ET
   parser=[]
   for file in Path('build/test-results/testReproducibleDebugUnitTest').glob('TEST-*.xml'):
@@ -86,7 +89,19 @@ def gate():
     image=folders[0].parent/'p0-ui'/row['file'];assert image.is_file() and image.read_bytes().startswith(b'\x89PNG\r\n\x1a\n') and hashlib.sha256(image.read_bytes()).hexdigest()==row['sha256']
    result['nativeImportScreenshots']=screenshots
    result['visualAcceptance']='PENDING_ACTUAL_INDEPENDENT_PIXEL_REVIEW; CI existence/hash alone does not accept visual quality'
-  result['scope']='Independent GPX/private route repository and phase-specific SAF import UI: complete JVM/Python and focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF'
+  if plan['phase'] in 'DEF':
+   folders=list(Path('build/outputs').glob('**/p08-library'));assert len(folders)==1
+   shots=json.loads((folders[0]/'screenshots.json').read_text());assert shots['source']==plan['commit'] and shots['api']==35 and shots['visualReview']=='PENDING_ACTUAL_REVIEW'
+   captures=shots['captures'];assert len(captures)==16 and {(row['file'].split('-')[1],row['theme'],row['mode']) for row in captures}=={(k,t,m) for k in ('library','detail') for t in ('precision','quiet','explorer','neon') for m in (1,2)}
+   for row in captures:
+    assert row['native'] and re.fullmatch(r'p08-(library|detail)-(precision|quiet|explorer|neon)-(dark|light)\.png',row['file'])
+    path=folders[0].parent/'p0-ui'/row['file'];assert path.is_file() and path.read_bytes().startswith(b'\x89PNG\r\n\x1a\n') and hashlib.sha256(path.read_bytes()).hexdigest()==row['sha256']
+   result['nativeLibraryScreenshots']=shots
+   cases=[]
+   for file in Path('build/outputs/androidTest-results').rglob('TEST-*.xml'):cases.extend(c.get('name') for c in ET.parse(file).getroot().iter('testcase') if c.get('classname')=='de.dennisguse.opentracks.p0.P071NavigationTest')
+   expected=set(re.findall(r'@Test\s+public void (\w+)\(',Path('src/androidTest/java/de/dennisguse/opentracks/p0/P071NavigationTest.java').read_text()))
+   assert len(cases)==18 and set(cases)==expected;result['retainedP071NavigationMethods']=cases
+  result['scope']='Independent GPX/private route repository and phase-specific SAF/library/detail UI with P071 navigation18: complete JVM/Python and focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF'
   result['passed']=True
  except Exception as error:result['error']=repr(error)
  save('gate.json',result);print(json.dumps(result,indent=2))

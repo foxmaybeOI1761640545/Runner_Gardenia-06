@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/p08_detail_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ProgressBar android:id="@+id/p08_detail_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:id="@+id/p08_detail_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:orientation="vertical">
+            <TextView android:id="@+id/p08_detail_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:accessibilityLiveRegion="polite" android:textSize="14sp" android:paddingBottom="12dp" />
+            <TextView android:id="@+id/p08_detail_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="24sp" android:textIsSelectable="true" android:paddingBottom="16dp" />
+            <TextView android:id="@+id/p08_detail_metadata" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="16sp" android:lineSpacingExtra="6dp" android:textIsSelectable="true" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:id="@+id/p08_detail_rename" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginHorizontal="12dp" android:text="@string/p08_rename_route" />
+    <Button android:id="@+id/p08_detail_delete" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginHorizontal="12dp" android:layout_marginBottom="8dp" android:text="@string/p08_delete_route" />
+</LinearLayout>

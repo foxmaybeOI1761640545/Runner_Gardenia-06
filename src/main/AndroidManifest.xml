@@ -133,6 +133,8 @@ limitations under the License.
 
         <activity android:name=".p0.app.P0Activity" />
         <activity android:name=".p0.routes.ui.RouteImportActivity" android:exported="false" />
+        <activity android:name=".p0.routes.ui.RouteLibraryActivity" android:exported="false" />
+        <activity android:name=".p0.routes.ui.RouteDetailActivity" android:exported="false" />
         <activity android:name=".p0.map.P06MapActivity" android:exported="false" android:parentActivityName=".p0.app.P0Activity" />
         <activity android:name=".p0.app.P0SensorsActivity" android:parentActivityName=".p0.app.P0Activity" />
         <activity android:name=".p0.app.P0SettingsActivity" android:exported="false" android:parentActivityName="de.dennisguse.opentracks.p0.app.P0Activity" />
