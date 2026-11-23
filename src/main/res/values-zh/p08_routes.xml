@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="p08_import_title">导入规划路线</string>
+    <string name="p08_import_intro">选择 GPX 1.1 文件，查看解析结果，再选择要保存到本地路线库的路线。导入路线不会创建运动记录。</string>
+    <string name="p08_choose_gpx">选择 GPX 文件</string>
+    <string name="p08_import_selected">导入所选路线</string>
+    <string name="p08_import_selected_count">导入所选路线（%1$d）</string>
+    <string name="p08_choose_hint">尚未选择文件。支持系统文档来源；文件已在本地可用时可离线读取。</string>
+    <string name="p08_reading">正在读取 GPX… %1$d KiB</string>
+    <string name="p08_preview_counts">发现 %1$d 条路线，其中 %2$d 条有效。请选择一条或多条有效路线。</string>
+    <string name="p08_saving_routes">正在保存并校验所选路线…</string>
+    <string name="p08_import_success">已保存并校验 %1$d 条路线，可从路线库重新打开。</string>
+    <string name="p08_import_cancelled">已取消读取，未导入路线。</string>
+    <string name="p08_import_error">无法完成本次导入：%1$s</string>
+    <string name="p08_cancel_reading">取消读取</string>
+    <string name="p08_done">完成</string>
+    <string name="p08_preview_lost">应用已在导入完成前重启，请重新选择文件并检查路线。已保存的路线仍然保留。</string>
+    <string name="p08_unknown_file">文件名不可用</string>
+    <string name="p08_waypoints_ignored">%1$d 个独立点位不会作为路线导入。</string>
+    <string name="p08_candidate_summary">%1$d 个点 · %2$d 段 · %3$s · %4$s</string>
+    <string name="p08_unavailable">不可用</string>
+    <string name="p08_invalid_route">无效路线：%1$s</string>
+    <string name="p08_already_imported">路线库中已有此路线，再次导入需要确认创建副本。</string>
+    <string name="p08_duplicate_title">是否导入另一份副本？</string>
+    <string name="p08_duplicate_message">所选路线中有已导入的项目。继续导入将创建独立副本，并保留已有路线。</string>
+    <string name="p08_import_extra_copy">导入额外副本</string>
+</resources>

@@ -1,0 +1,514 @@
+test_incomplete_capture_manifest_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_incomplete_capture_manifest_is_a_failure) ... ok
+test_missing_capture_directory_is_a_failure (test_heart_rate_gates.UiEvidenceTests.test_missing_capture_directory_is_a_failure) ... ok
+test_named_files_without_png_pixels_are_rejected (test_heart_rate_gates.UiEvidenceTests.test_named_files_without_png_pixels_are_rejected) ... ok
+test_offset_alias_cannot_replace_the_singapore_timezone_identity (test_heart_rate_gates.UiEvidenceTests.test_offset_alias_cannot_replace_the_singapore_timezone_identity) ... ok
+test_actual_jvm_execution_is_counted_separately (test_heart_rate_gates.UnitEvidenceTests.test_actual_jvm_execution_is_counted_separately) ... ok
+test_all_skipped_or_missing_test_class_blocks_the_gate (test_heart_rate_gates.UnitEvidenceTests.test_all_skipped_or_missing_test_class_blocks_the_gate) ... ok
+test_no_source_or_missing_xml_cannot_be_described_as_executed (test_heart_rate_gates.UnitEvidenceTests.test_no_source_or_missing_xml_cannot_be_described_as_executed) ... ok
+test_unit_errors_failures_and_inconsistent_counts_are_not_hidden (test_heart_rate_gates.UnitEvidenceTests.test_unit_errors_failures_and_inconsistent_counts_are_not_hidden) ... ok
+test_complete_matrix_is_tied_to_this_source_and_original_pixels (test_p02_home_ui.HomeCaptureGateTests.test_complete_matrix_is_tied_to_this_source_and_original_pixels) ... ok
+test_hardware_claim_or_missing_timezone_is_rejected (test_p02_home_ui.HomeCaptureGateTests.test_hardware_claim_or_missing_timezone_is_rejected) ... ok
+test_missing_or_duplicated_state_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_missing_or_duplicated_state_never_passes) ... ok
+test_wrong_theme_window_or_phase_never_passes (test_p02_home_ui.HomeCaptureGateTests.test_wrong_theme_window_or_phase_never_passes) ... ok
+test_changed_original_p0_branch_is_detected_without_resetting_it (test_p02_pipeline.P02IsolationTests.test_changed_original_p0_branch_is_detected_without_resetting_it) ... ok
+test_development_and_ordinary_checks_cannot_request_signing (test_p02_pipeline.P02IsolationTests.test_development_and_ordinary_checks_cannot_request_signing) ... ok
+test_incomplete_and_scoped_regression_never_authorize_phase (test_p02_pipeline.P02IsolationTests.test_incomplete_and_scoped_regression_never_authorize_phase) ... ok
+test_different_commit_tag_is_never_moved (test_p02_publication.PublicationTests.test_different_commit_tag_is_never_moved) ... ok
+test_different_existing_apk_is_never_replaced (test_p02_publication.PublicationTests.test_different_existing_apk_is_never_replaced) ... ok
+test_identical_retry_reuses_tag_and_assets_without_overwrite (test_p02_publication.PublicationTests.test_identical_retry_reuses_tag_and_assets_without_overwrite) ... ok
+test_network_interruption_after_upload_resumes_partial_draft (test_p02_publication.PublicationTests.test_network_interruption_after_upload_resumes_partial_draft) ... {
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}ok
+test_success_verifies_draft_downloads_then_publishes_non_latest (test_p02_publication.PublicationTests.test_success_verifies_draft_downloads_then_publishes_non_latest) ... ok
+test_tag_only_after_bundle_gate_and_no_tag_on_failed_gate (test_p02_publication.PublicationTests.test_tag_only_after_bundle_gate_and_no_tag_on_failed_gate) ... ok
+test_duplicate_or_skipped_next_code_is_rejected (test_p02_version.VersionTests.test_duplicate_or_skipped_next_code_is_rejected) ... ok
+test_empty_own_draft_can_resume_but_unknown_version_cannot (test_p02_version.VersionTests.test_empty_own_draft_can_resume_but_unknown_version_cannot) ... ok
+test_only_explicit_reservation_can_omit_a_future_source (test_p02_version.VersionTests.test_only_explicit_reservation_can_omit_a_future_source) ... ok
+test_published_p0_codes_and_reservation_survive_even_with_no_git_tags (test_p02_version.VersionTests.test_published_p0_codes_and_reservation_survive_even_with_no_git_tags) ... ok
+test_actions_binary_endpoints_keep_github_media_type_and_release_assets_use_octet (test_p03_publication_recovery.GitHubMediaTypeTests.test_actions_binary_endpoints_keep_github_media_type_and_release_assets_use_octet) ... ok
+test_capture_rejects_stale_home_for_other_pages_and_transition_mixed_tree (test_p03_publication_recovery.NativePageEvidenceTests.test_capture_rejects_stale_home_for_other_pages_and_transition_mixed_tree) ... ok
+test_all_eight_assets_roundtrip_before_publication_and_public_apk_recheck (test_p03_publication_recovery.PublicationFlowTests.test_all_eight_assets_roundtrip_before_publication_and_public_apk_recheck) ... ok
+test_marker_cannot_skip_any_product_version_signing_or_original_test_change (test_p03_publication_recovery.RecoveryScopeTests.test_marker_cannot_skip_any_product_version_signing_or_original_test_change) ... ok
+test_normal_product_push_uses_full_build_gates (test_p03_publication_recovery.RecoveryScopeTests.test_normal_product_push_uses_full_build_gates) ... ok
+test_only_publication_repair_and_reports_can_reuse_original_apk (test_p03_publication_recovery.RecoveryScopeTests.test_only_publication_repair_and_reports_can_reuse_original_apk) ... ok
+test_absent_native_screenshots_cannot_pass (test_p03_theme_gate.P03ThemeGateTests.test_absent_native_screenshots_cannot_pass) ... ok
+test_reserved_version_uses_exactly_next_code (test_p03_theme_gate.P03ThemeGateTests.test_reserved_version_uses_exactly_next_code) ... ok
+test_no_actual_visual_approval_means_no_signing (test_p04_refinement_gate.RefinementGateTests.test_no_actual_visual_approval_means_no_signing) ... ok
+test_refinement_code_is_next_without_invalidating_historical_p03 (test_p04_refinement_gate.RefinementGateTests.test_refinement_code_is_next_without_invalidating_historical_p03) ... ok
+test_visual_approval_never_skips_product_test_or_signing_changes (test_p04_refinement_gate.RefinementGateTests.test_visual_approval_never_skips_product_test_or_signing_changes) ... ok
+test_artifact_must_match_exact_workflow_run_digest_and_source (test_p051_final_gate.FinalP05GateTests.test_artifact_must_match_exact_workflow_run_digest_and_source) ... ok
+test_complete_actual_stage5_gate_has_own_identity (test_p051_final_gate.FinalP05GateTests.test_complete_actual_stage5_gate_has_own_identity) ... ok
+test_legacy_ignore_cannot_be_counted_as_passed_or_hidden (test_p051_final_gate.FinalP05GateTests.test_legacy_ignore_cannot_be_counted_as_passed_or_hidden) ... ok
+test_missing_execution_extra_skips_and_foreign_process_proof_fail (test_p051_final_gate.FinalP05GateTests.test_missing_execution_extra_skips_and_foreign_process_proof_fail) ... ok
+test_new_reservation_keeps_older_allocations_valid (test_p051_final_gate.FinalP05GateTests.test_new_reservation_keeps_older_allocations_valid) ... ok
+test_same_settings_activity_and_dialog_require_distinct_native_content (test_p051_final_gate.FinalP05GateTests.test_same_settings_activity_and_dialog_require_distinct_native_content) ... ok
+test_sign_and_publish_activations_cannot_modify_code_or_each_other (test_p051_final_gate.FinalP05GateTests.test_sign_and_publish_activations_cannot_modify_code_or_each_other) ... ok
+test_signed_review_excludes_apk_and_preserves_proof (test_p051_review_transfer.P051ReviewTransportTests.test_signed_review_excludes_apk_and_preserves_proof) ... ok
+test_signing_key_file_aborts_before_any_upload (test_p051_review_transfer.P051ReviewTransportTests.test_signing_key_file_aborts_before_any_upload) ... ok
+test_deletions_and_old_phase_policy_changes_fail_closed (test_p051_scope.P051ScopeTests.test_deletions_and_old_phase_policy_changes_fail_closed) ... ok
+test_entire_regression_and_no_signing_are_required (test_p051_scope.P051ScopeTests.test_entire_regression_and_no_signing_are_required) ... ok
+test_gps_integration_is_allowed_but_unrelated_business_is_frozen (test_p051_scope.P051ScopeTests.test_gps_integration_is_allowed_but_unrelated_business_is_frozen) ... ok
+test_only_expected_branch_push_or_pr_can_validate (test_p051_scope.P051ScopeTests.test_only_expected_branch_push_or_pr_can_validate) ... ok
+test_pr_uses_payload_base_and_checks_source (test_p051_scope.P051ScopeTests.test_pr_uses_payload_base_and_checks_source) ... ok
+test_push_uses_current_remote_base_not_old_p04 (test_p051_scope.P051ScopeTests.test_push_uses_current_remote_base_not_old_p04) ... ok
+test_reserved_version_and_prior_allocations_are_still_readable (test_p051_scope.P051ScopeTests.test_reserved_version_and_prior_allocations_are_still_readable) ... ok
+test_artifact_must_match_exact_workflow_run_digest_and_source (test_p05_final_gate.FinalP05GateTests.test_artifact_must_match_exact_workflow_run_digest_and_source) ... ok
+test_complete_actual_stage5_gate_has_own_identity (test_p05_final_gate.FinalP05GateTests.test_complete_actual_stage5_gate_has_own_identity) ... ok
+test_legacy_ignore_cannot_be_counted_as_passed_or_hidden (test_p05_final_gate.FinalP05GateTests.test_legacy_ignore_cannot_be_counted_as_passed_or_hidden) ... ok
+test_missing_execution_extra_skips_and_foreign_process_proof_fail (test_p05_final_gate.FinalP05GateTests.test_missing_execution_extra_skips_and_foreign_process_proof_fail) ... ok
+test_new_reservation_keeps_older_allocations_valid (test_p05_final_gate.FinalP05GateTests.test_new_reservation_keeps_older_allocations_valid) ... ok
+test_same_settings_activity_and_dialog_require_distinct_native_content (test_p05_final_gate.FinalP05GateTests.test_same_settings_activity_and_dialog_require_distinct_native_content) ... ok
+test_sign_and_publish_activations_cannot_modify_code_or_each_other (test_p05_final_gate.FinalP05GateTests.test_sign_and_publish_activations_cannot_modify_code_or_each_other) ... ok
+test_public_asset_metadata_requires_original_bytes_and_source (test_p05_pipeline.P04PublicBaselineTests.test_public_asset_metadata_requires_original_bytes_and_source) ... ok
+test_future_phases_cannot_run_zero_tests_or_narrow_final_regression (test_p05_pipeline.P05PhaseRoutingTests.test_future_phases_cannot_run_zero_tests_or_narrow_final_regression) ... ok
+test_gradle_clean_cannot_erase_or_substitute_executed_helper_receipt (test_p05_pipeline.P05PhaseRoutingTests.test_gradle_clean_cannot_erase_or_substitute_executed_helper_receipt) ... ok
+test_historical_branch_tag_or_p04_identity_change_is_detected (test_p05_pipeline.P05PhaseRoutingTests.test_historical_branch_tag_or_p04_identity_change_is_detected) ... ok
+test_missing_android_xml_cannot_turn_green_after_compilation (test_p05_pipeline.P05PhaseRoutingTests.test_missing_android_xml_cannot_turn_green_after_compilation) ... ok
+test_no_other_branch_or_event_can_activate_validation (test_p05_pipeline.P05PhaseRoutingTests.test_no_other_branch_or_event_can_activate_validation) ... ok
+test_phase_zero_has_no_android_classes_or_signing_authority (test_p05_pipeline.P05PhaseRoutingTests.test_phase_zero_has_no_android_classes_or_signing_authority) ... ok
+test_phase_zero_rejects_product_changes_without_ignoring_them (test_p05_pipeline.P05PhaseRoutingTests.test_phase_zero_rejects_product_changes_without_ignoring_them) ... ok
+test_immutable_payloads_roundtrip_and_version_evidence_upload_first (test_p05_publication_transport.PublicationFlowTests.test_immutable_payloads_roundtrip_and_version_evidence_upload_first) ... ok
+test_navigation_requires_each_actual_destination_before_the_next_back (test_p05_runtime_recovery.RuntimeRecoveryScopeTest.test_navigation_requires_each_actual_destination_before_the_next_back) ... ok
+test_only_new_runtime_harness_workflow_helpers_and_receipts_can_change (test_p05_runtime_recovery.RuntimeRecoveryScopeTest.test_only_new_runtime_harness_workflow_helpers_and_receipts_can_change) ... ok
+test_all_three_real_intent_contract_shapes_require_positive_and_negative_receipts (test_p05_share_receipts.ShareReceiptContractTests.test_all_three_real_intent_contract_shapes_require_positive_and_negative_receipts) ... ok
+test_missing_read_or_extra_write_persistent_prefix_grants_are_rejected (test_p05_share_receipts.ShareReceiptContractTests.test_missing_read_or_extra_write_persistent_prefix_grants_are_rejected) ... ok
+test_missing_reordered_or_duplicate_uri_is_not_a_complete_share (test_p05_share_receipts.ShareReceiptContractTests.test_missing_reordered_or_duplicate_uri_is_not_a_complete_share) ... ok
+test_negative_control_needs_actual_security_exception_and_no_implicit_grant (test_p05_share_receipts.ShareReceiptContractTests.test_negative_control_needs_actual_security_exception_and_no_implicit_grant) ... ok
+test_sender_uid_or_forged_binder_uid_cannot_prove_cross_app_access (test_p05_share_receipts.ShareReceiptContractTests.test_sender_uid_or_forged_binder_uid_cannot_prove_cross_app_access) ... ok
+test_wrong_source_api_action_or_mime_fails_closed (test_p05_share_receipts.ShareReceiptContractTests.test_wrong_source_api_action_or_mime_fails_closed) ... ok
+test_zip_cannot_omit_duplicate_or_alter_selected_gpx_or_raw_samples (test_p05_share_receipts.ShareReceiptContractTests.test_zip_cannot_omit_duplicate_or_alter_selected_gpx_or_raw_samples) ... ok
+test_complete_exact_source_matrix_and_bytes_required (test_p05_visual_gate.P05VisualGateTest.test_complete_exact_source_matrix_and_bytes_required) ... ok
+test_wrong_viewport_even_with_matching_hash_rejected (test_p05_visual_gate.P05VisualGateTest.test_wrong_viewport_even_with_matching_hash_rejected) ... ok
+test_bad_code_or_series_high_water_is_rejected (test_p061_allocation.P061AllocationTests.test_bad_code_or_series_high_water_is_rejected) ... ok
+test_old_p06_source_conflict_remains_protected (test_p061_allocation.P061AllocationTests.test_old_p06_source_conflict_remains_protected) ... ok
+test_p061_reservation_and_both_high_water_records_agree (test_p061_allocation.P061AllocationTests.test_p061_reservation_and_both_high_water_records_agree) ... ok
+test_home_viewport_restoration_requires_real_home_and_retains_title_assertion (test_p06_release_gate.MapReleaseGateTests.test_home_viewport_restoration_requires_real_home_and_retains_title_assertion) ... ok
+test_native_png_sampler_decodes_all_five_filters_without_redecoding_per_pixel (test_p06_release_gate.MapReleaseGateTests.test_native_png_sampler_decodes_all_five_filters_without_redecoding_per_pixel) ... ok
+test_p06_approval_paths_cannot_change_workflow_or_product (test_p06_release_gate.MapReleaseGateTests.test_p06_approval_paths_cannot_change_workflow_or_product) ... ok
+test_process_probe_requires_one_actual_success_and_pid (test_p06_release_gate.MapReleaseGateTests.test_process_probe_requires_one_actual_success_and_pid) ... ok
+test_signed_history_requires_real_teal_route_not_only_local_basemap (test_p06_release_gate.MapReleaseGateTests.test_signed_history_requires_real_teal_route_not_only_local_basemap) ... ok
+test_signing_requires_exact_map_and_all_legacy_gates (test_p06_release_gate.MapReleaseGateTests.test_signing_requires_exact_map_and_all_legacy_gates) ... ok
+test_stale_or_incomplete_map_images_fail (test_p06_release_gate.MapReleaseGateTests.test_stale_or_incomplete_map_images_fail) ... ok
+test_ble_database_gpx_and_old_phase_workflows_stay_frozen (test_p06_scope.MapScopeTest.test_ble_database_gpx_and_old_phase_workflows_stay_frozen) ... ok
+test_deletion_and_empty_diff_fail_closed (test_p06_scope.MapScopeTest.test_deletion_and_empty_diff_fail_closed) ... ok
+test_exact_p06_pr_route (test_p06_scope.MapScopeTest.test_exact_p06_pr_route) ... ok
+test_final_stage_requires_every_regression (test_p06_scope.MapScopeTest.test_final_stage_requires_every_regression) ... ok
+test_history_assertions_and_test_methods_cannot_be_removed (test_p06_scope.MapScopeTest.test_history_assertions_and_test_methods_cannot_be_removed) ... ok
+test_history_regression_only_allows_exact_dialog_root_patch (test_p06_scope.MapScopeTest.test_history_regression_only_allows_exact_dialog_root_patch) ... ok
+test_map_and_audited_integration_are_allowed (test_p06_scope.MapScopeTest.test_map_and_audited_integration_are_allowed) ... ok
+test_map_runtime_keeps_original_dependencies_and_only_adds_pinned_engine (test_p06_scope.MapScopeTest.test_map_runtime_keeps_original_dependencies_and_only_adds_pinned_engine) ... ok
+test_missing_original_history_selector_cannot_be_accepted (test_p06_scope.MapScopeTest.test_missing_original_history_selector_cannot_be_accepted) ... ok
+test_online_map_layer_or_client_cannot_pass_phase_offline_audit (test_p06_scope.MapScopeTest.test_online_map_layer_or_client_cannot_pass_phase_offline_audit) ... ok
+test_phase_specific_offline_allowlist_keeps_original_private (test_p06_scope.MapScopeTest.test_phase_specific_offline_allowlist_keeps_original_private) ... ok
+test_complete_eighteen_cases (test_p071_navigation_gate.NavigationGateTest.test_complete_eighteen_cases) ... ok
+test_duplicate_case_rejected (test_p071_navigation_gate.NavigationGateTest.test_duplicate_case_rejected) ... ok
+test_failure_error_and_skip_rejected (test_p071_navigation_gate.NavigationGateTest.test_failure_error_and_skip_rejected) ... ok
+test_missing_report_rejected (test_p071_navigation_gate.NavigationGateTest.test_missing_report_rejected) ... ok
+test_partial_cases_rejected (test_p071_navigation_gate.NavigationGateTest.test_partial_cases_rejected) ... ok
+test_approval_commits_cannot_change_product_tests_version_or_workflow (test_p071_release_admission.P071AdmissionTests.test_approval_commits_cannot_change_product_tests_version_or_workflow) ... ok
+test_artifact_identity_rejects_expired_stale_wrong_run_and_wrong_digest (test_p071_release_admission.P071AdmissionTests.test_artifact_identity_rejects_expired_stale_wrong_run_and_wrong_digest) ... ok
+test_full_workflow_must_really_succeed_and_execute_required_job (test_p071_release_admission.P071AdmissionTests.test_full_workflow_must_really_succeed_and_execute_required_job) ... ok
+test_live_reservation_appends_without_rewriting_old_allocations (test_p071_release_admission.P071AdmissionTests.test_live_reservation_appends_without_rewriting_old_allocations) ... ok
+test_only_exact_repository_clean_branch_push_is_eligible (test_p071_release_admission.P071AdmissionTests.test_only_exact_repository_clean_branch_push_is_eligible) ... ok
+test_actual_background_then_existing_home_is_required (test_p071_signed_back.SignedBackProbeTest.test_actual_background_then_existing_home_is_required) ... ok
+test_background_without_actual_home_restore_is_rejected (test_p071_signed_back.SignedBackProbeTest.test_background_without_actual_home_restore_is_rejected) ... ok
+test_returning_to_another_root_never_counts_as_background (test_p071_signed_back.SignedBackProbeTest.test_returning_to_another_root_never_counts_as_background) ... ok
+test_secondary_window_is_not_a_root_probe (test_p071_signed_back.SignedBackProbeTest.test_secondary_window_is_not_a_root_probe) ... ok
+test_approval_commits_cannot_change_product_tests_version_or_workflow (test_p07_release_admission.P07AdmissionTests.test_approval_commits_cannot_change_product_tests_version_or_workflow) ... ok
+test_artifact_identity_rejects_expired_stale_wrong_run_and_wrong_digest (test_p07_release_admission.P07AdmissionTests.test_artifact_identity_rejects_expired_stale_wrong_run_and_wrong_digest) ... ok
+test_full_workflow_must_really_succeed_and_execute_required_job (test_p07_release_admission.P07AdmissionTests.test_full_workflow_must_really_succeed_and_execute_required_job) ... ok
+test_live_reservation_appends_without_rewriting_old_allocations (test_p07_release_admission.P07AdmissionTests.test_live_reservation_appends_without_rewriting_old_allocations) ... ok
+test_only_exact_repository_clean_branch_push_is_eligible (test_p07_release_admission.P07AdmissionTests.test_only_exact_repository_clean_branch_push_is_eligible) ... ok
+test_independent_stage_four_does_not_relabel_p07_or_p071 (test_p08_admission.P08AdmissionTests.test_independent_stage_four_does_not_relabel_p07_or_p071) ... ok
+test_missing_empty_and_failed_raw_junit_are_rejected (test_p08_admission.P08AdmissionTests.test_missing_empty_and_failed_raw_junit_are_rejected) ... ok
+test_only_exact_repo_branch_push_is_allowed (test_p08_admission.P08AdmissionTests.test_only_exact_repo_branch_push_is_allowed) ... ok
+test_own_allocation_is_unique_and_preserves_p071_reader (test_p08_admission.P08AdmissionTests.test_own_allocation_is_unique_and_preserves_p071_reader) ... ok
+test_validation_phase_has_no_signing_or_publication_authority (test_p08_admission.P08AdmissionTests.test_validation_phase_has_no_signing_or_publication_authority) ... ok
+test_all_eight_transaction_outcomes_are_atomic (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_all_eight_transaction_outcomes_are_atomic) ... ok
+test_deleted_route_cannot_resurrect_in_process_receipt (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_deleted_route_cannot_resurrect_in_process_receipt) ... ok
+test_evidence_archive_path_cannot_escape (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_evidence_archive_path_cannot_escape) ... ok
+test_exact_successful_predecessor_identity (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_exact_successful_predecessor_identity) ... ok
+test_partial_import_and_wrong_commit_state_rejected (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_partial_import_and_wrong_commit_state_rejected) ... ok
+test_process_evidence_rejects_stale_or_non_native_proof (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_process_evidence_rejects_stale_or_non_native_proof) ... ok
+test_same_or_missing_process_ids_rejected (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_same_or_missing_process_ids_rejected) ... ok
+test_unaccepted_receipt_rejected (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_unaccepted_receipt_rejected) ... ok
+test_wrong_expired_or_replaced_artifact_rejected (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_wrong_expired_or_replaced_artifact_rejected) ... ok
+test_wrong_source_branch_trigger_workflow_or_conclusion_rejected (test_p08_transactions.P08PredecessorAndProcessEvidenceTests.test_wrong_source_branch_trigger_workflow_or_conclusion_rejected) ... ok
+test_crash_or_failure_is_never_a_successful_adb_exit (test_p0_durability.ProcessEvidenceTests.test_crash_or_failure_is_never_a_successful_adb_exit) ... ok
+test_missing_pid_zero_cases_or_missing_finish_code_fail_closed (test_p0_durability.ProcessEvidenceTests.test_missing_pid_zero_cases_or_missing_finish_code_fail_closed) ... ok
+test_success_requires_executed_case_and_process_identity (test_p0_durability.ProcessEvidenceTests.test_success_requires_executed_case_and_process_identity) ... ok
+test_cloud_backup_or_exported_private_activity_blocks_release (test_p0_offline.OfflineGateTests.test_cloud_backup_or_exported_private_activity_blocks_release) ... ok
+test_extra_permission_or_external_entry_point_blocks_release (test_p0_offline.OfflineGateTests.test_extra_permission_or_external_entry_point_blocks_release) ... ok
+test_internet_is_rejected_in_debug_as_well_as_release (test_p0_offline.OfflineGateTests.test_internet_is_rejected_in_debug_as_well_as_release) ... ok
+test_minimal_release_manifest_is_accepted (test_p0_offline.OfflineGateTests.test_minimal_release_manifest_is_accepted) ... ok
+test_class_arguments_cannot_inject_gradle_options (test_p0_pipeline.P0ConfigurationTests.test_class_arguments_cannot_inject_gradle_options) ... ok
+test_empty_scope_cannot_pass (test_p0_pipeline.P0ConfigurationTests.test_empty_scope_cannot_pass) ... ok
+test_final_regression_cannot_be_narrowed (test_p0_pipeline.P0ConfigurationTests.test_final_regression_cannot_be_narrowed) ... ok
+test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names (test_p0_pipeline.P0ConfigurationTests.test_scoped_source_names_match_real_xml_owners_even_with_equal_simple_names) ... ok
+test_signing_cannot_start_before_final_complete_regression (test_p0_pipeline.P0ConfigurationTests.test_signing_cannot_start_before_final_complete_regression) ... ok
+test_android_or_existing_gate_tests_cannot_be_skipped (test_p0_publication_scope.PublicationScopeTests.test_android_or_existing_gate_tests_cannot_be_skipped) ... ok
+test_empty_scope_does_not_authorize_publication (test_p0_publication_scope.PublicationScopeTests.test_empty_scope_does_not_authorize_publication) ... ok
+test_explicit_publication_and_only_allowed_files (test_p0_publication_scope.PublicationScopeTests.test_explicit_publication_and_only_allowed_files) ... ok
+test_normal_code_push_keeps_complete_ci (test_p0_publication_scope.PublicationScopeTests.test_normal_code_push_keeps_complete_ci) ... ok
+test_product_or_build_or_signing_changes_cannot_use_old_apk (test_p0_publication_scope.PublicationScopeTests.test_product_or_build_or_signing_changes_cannot_use_old_apk) ... ok
+test_actual_gnss_round_trip_uses_numeric_tolerance (test_p0_release.ActualGpsMetricTests.test_actual_gnss_round_trip_uses_numeric_tolerance) ... ok
+test_blank_or_zero_motion_fields_do_not_pass (test_p0_release.ActualGpsMetricTests.test_blank_or_zero_motion_fields_do_not_pass) ... ok
+test_wrong_coordinates_or_accuracy_fail (test_p0_release.ActualGpsMetricTests.test_wrong_coordinates_or_accuracy_fail) ... ok
+test_another_commit_or_publishing_plan_is_rejected (test_p0_release.SigningGateTests.test_another_commit_or_publishing_plan_is_rejected) ... ok
+test_exact_passed_branch_gate_is_accepted (test_p0_release.SigningGateTests.test_exact_passed_branch_gate_is_accepted) ... ok
+test_missing_or_other_commit_storage_evidence_blocks_signing (test_p0_release.SigningGateTests.test_missing_or_other_commit_storage_evidence_blocks_signing) ... ok
+test_no_execution_or_failed_tests_never_authorize_signing (test_p0_release.SigningGateTests.test_no_execution_or_failed_tests_never_authorize_signing) ... ok
+test_optimized_resource_path_and_typed_binding (test_pipeline.ApkResourceTests.test_optimized_resource_path_and_typed_binding) ... ok
+test_draft_resume_published_rerun_and_identity_rejection (test_pipeline.PublicationTests.test_draft_resume_published_rerun_and_identity_rejection) ... ok
+test_no_credentials_on_cross_host_redirect (test_pipeline.PublicationTests.test_no_credentials_on_cross_host_redirect) ... ok
+test_complete_and_separate_errors (test_pipeline.ReportTests.test_complete_and_separate_errors) ... ok
+test_missing_corrupt_and_miscounted_reports (test_pipeline.ReportTests.test_missing_corrupt_and_miscounted_reports) ... ok
+test_allocation_gate_immutable_tag_and_rerun (test_pipeline.VersionTests.test_allocation_gate_immutable_tag_and_rerun) ... From /tmp/tmpqb1wn9u0/remote
+ * branch            main       -> FETCH_HEAD
+To /tmp/tmpqb1wn9u0/remote.git
+ * [new tag]         v0.1.0-rc1.2 -> v0.1.0-rc1.2
+From /tmp/tmpqb1wn9u0/remote
+ * branch            main       -> FETCH_HEAD
+ok
+test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed (test_release_ledger.LedgerTests.test_corrupt_high_water_duplicate_codes_and_conflicting_tags_fail_closed) ... ok
+test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code (test_release_ledger.LedgerTests.test_deleting_highest_or_all_tags_does_not_reuse_allocated_version_or_code) ... ok
+test_historical_name_or_code_cannot_be_tagged_again (test_release_ledger.LedgerTests.test_historical_name_or_code_cannot_be_tagged_again) ... ok
+test_exact_tracked_original_is_accepted (test_report_archive_receipts.ReceiptTests.test_exact_tracked_original_is_accepted) ... ok
+test_incomplete_or_unaccepted_receipt_cannot_claim_pass (test_report_archive_receipts.ReceiptTests.test_incomplete_or_unaccepted_receipt_cannot_claim_pass) ... ok
+test_local_ignored_or_untracked_evidence_never_counts_as_archived (test_report_archive_receipts.ReceiptTests.test_local_ignored_or_untracked_evidence_never_counts_as_archived) ... ok
+test_missing_or_changed_bytes_fail_closed (test_report_archive_receipts.ReceiptTests.test_missing_or_changed_bytes_fail_closed) ... ok
+test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match (test_report_archive_receipts.ReceiptTests.test_path_escape_is_rejected_even_if_its_bytes_and_git_identity_match) ... ok
+test_restore_existing_bytes_and_reverify_independent_certificate (test_signed_bundle.SignedRecoveryTests.test_restore_existing_bytes_and_reverify_independent_certificate) ... ok
+test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk (test_signed_bundle.SignedRecoveryTests.test_restore_missing_expired_or_wrong_run_never_rebuilds_tagged_apk) ... ok
+test_unsigned_or_foreign_plan_rejected (test_signed_bundle.SignedRecoveryTests.test_unsigned_or_foreign_plan_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 175 tests in 0.444s
+
+OK
+
+{
+  "tag": "test-p0-v0.1.0-p0.2",
+  "release": "https://github.com/test/fixture/releases/tag/test-p0-v0.1.0-p0.2",
+  "commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "versionCode": 6773,
+  "apk": "https://github.com/test/RunnerGardenia-P0-Release.apk",
+  "apkSha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+  "apkBytes": 30,
+  "certificateSha256": "E3E7D46BFCB869F5A521A7FBA6FD1BA5790D7DBCAF37F722DDC69D7BB1439A22",
+  "draft": false,
+  "prerelease": true,
+  "latest": false,
+  "assets": {
+    "build-info.json": {
+      "bytes": 457,
+      "sha256": "ae6715ed399aa1c5a6e288d1e9b792e8844f99495172572a81c27d242a49174b",
+      "url": "https://github.com/test/build-info.json"
+    },
+    "RunnerGardenia-P0-Release.apk": {
+      "bytes": 30,
+      "sha256": "81a01e9a13f67bb13ae7cd2c65b03a62deb823b7de22a725cd4f1fbf45718103",
+      "url": "https://github.com/test/RunnerGardenia-P0-Release.apk"
+    },
+    "SHA256SUMS": {
+      "bytes": 96,
+      "sha256": "a2a1f074203f4f917339ad96f881f044593603d9de8f85bdc69283d22b4eac17",
+      "url": "https://github.com/test/SHA256SUMS"
+    },
+    "runtime-smoke.json": {
+      "bytes": 12,
+      "sha256": "010ad87d181db4820d76d7881c32218d06b5b505eecd51d6bd416ed5aea9ee07",
+      "url": "https://github.com/test/runtime-smoke.json"
+    },
+    "test-summary.json": {
+      "bytes": 521,
+      "sha256": "0cc4b4edcdf2c1beb553d5961da571770cc43f601d38023c31f2d62a40ea0ce6",
+      "url": "https://github.com/test/test-summary.json"
+    },
+    "RELEASE_NOTES.md": {
+      "bytes": 1460,
+      "sha256": "105e3ceaacd97b622e62de787b842dd59a4881ffbb194e737c588b69b2a9aa71",
+      "url": "https://github.com/test/RELEASE_NOTES.md"
+    }
+  }
+}
+PASS: 48 source-bound API35 native P0.5 layout screenshots
+{
+  "tag": "v0.1.0-rc1.2",
+  "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "versionCode": 6767,
+  "release": "https://github.com/owner/repo/releases/tag/v0.1.0-rc1.2",
+  "apk": "https://github.com/owner/repo/releases/download/tag/runner-gardenia-v0.1.0-rc1.2-6767.apk",
+  "apkSha256": "a2951ce81292f31a5d34bf97e549798656cf05c857420d47f24ef3b82e611d34",
+  "certificateSha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+}
+{
+  "tag": "v0.1.0-rc1.2",
+  "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "versionCode": 6767,
+  "release": "https://github.com/owner/repo/releases/tag/v0.1.0-rc1.2",
+  "apk": "https://github.com/owner/repo/releases/download/tag/runner-gardenia-v0.1.0-rc1.2-6767.apk",
+  "apkSha256": "a2951ce81292f31a5d34bf97e549798656cf05c857420d47f24ef3b82e611d34",
+  "certificateSha256": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+}
+{
+  "versionName": "v0.1.0-rc1.2",
+  "versionCode": 6767,
+  "commit": "5f0318001ec94c75df99126701cf341bfefb0f7f",
+  "runId": "123",
+  "publishing": true
+}
+{
+  "commit": "5f0318001ec94c75df99126701cf341bfefb0f7f",
+  "publishing": true,
+  "runId": "123",
+  "versionCode": 6767,
+  "versionName": "v0.1.0-rc1.2"
+}
+Applied v0.1.0-rc1.2 / 6767 at 5f0318001ec94c75df99126701cf341bfefb0f7f
+Reusing this run's exact immutable tag and APK digest.
+{
+  "versionName": "v0.1.0-rc1.3",
+  "versionCode": 6768,
+  "commit": "257e6b1d180b66ac16bdb50a71d42c96628e0ada",
+  "runId": "124",
+  "publishing": true
+}
+{
+  "versionName": "v0.1.0-rc1.5",
+  "versionCode": 6770,
+  "commit": "726c7f865e5d9e2061b162688d9bb743b49c1dc5",
+  "runId": "new",
+  "publishing": true
+}
+{
+  "versionName": "v0.1.0-rc1.5",
+  "versionCode": 6770,
+  "commit": "726c7f865e5d9e2061b162688d9bb743b49c1dc5",
+  "runId": "new",
+  "publishing": true
+}
+Original signed APK identity, checksum and independent certificate verified.
+Restored original signed APK.

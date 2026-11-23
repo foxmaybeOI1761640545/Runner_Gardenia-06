@@ -60,9 +60,9 @@ jobs:
         run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
       - name: Execute every original and new Python helper regression
         run: python3 .github/scripts/p08_stage.py helpers
-      - name: Actual API35 parser boundaries, private route files and history isolation
+      - name: Actual API35 GPX, repository, SAF import UI, isolation and native theme screenshots
         run: |
-          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest,de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest,de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest,de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
       - name: Compile dedicated transaction probe runner (test APK only)
         run: ./gradlew --no-daemon --no-configuration-cache -Pp08TransactionRunner=true assembleReproducibleDebugAndroidTest
       - name: Externally kill eight live route transactions and verify recovery in new API35 processes
@@ -81,5 +81,7 @@ jobs:
             build/outputs/androidTest-results/
             build/outputs/**/p08-parser/
             build/outputs/**/p08-repository/
+            build/outputs/**/p08-import/
+            build/outputs/**/p0-ui/p08-*.png
           if-no-files-found: error
           retention-days: 90

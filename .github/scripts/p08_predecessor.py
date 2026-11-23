@@ -21,7 +21,7 @@ def verify(phase):
  prior=chr(ord(phase)-1);path=Path('docs/p0-8-0/evidence/phase-'+prior+'/acceptance.json');receipt=json.loads(path.read_text())
  api=GitHub();run=api.request(api.base+'/actions/runs/'+str(receipt['runId']));artifact=api.request(api.base+'/actions/artifacts/'+str(receipt['artifactId']));identity(receipt,prior,run,artifact)
  subprocess.run(['git','merge-base','--is-ancestor',receipt['source'],'HEAD'],check=True)
- for name in subprocess.check_output(['git','ls-tree','-r','--name-only',receipt['source'],'--','src/test','src/androidTest'],text=True).splitlines():
+ for name in subprocess.check_output(['git','ls-tree','-r','--name-only',receipt['source'],'--','src/test','src/androidTest','src/androidTestReproducible','.github/tests'],text=True).splitlines():
   if Path(name).read_bytes()!=subprocess.check_output(['git','show',receipt['source']+':'+name]):raise ValueError('Accepted predecessor test was changed: '+name)
  data=api.request(api.base+'/actions/artifacts/'+str(receipt['artifactId'])+'/zip',binary=True)
  if len(data)!=receipt['artifactBytes'] or hashlib.sha256(data).hexdigest()!=receipt['artifactSha256']:raise ValueError('Predecessor downloaded bytes differ')
