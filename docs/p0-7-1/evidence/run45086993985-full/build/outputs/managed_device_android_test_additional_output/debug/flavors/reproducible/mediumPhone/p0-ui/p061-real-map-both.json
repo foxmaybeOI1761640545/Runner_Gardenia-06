@@ -1,0 +1,5662 @@
+{
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "phase": "both",
+  "pid": 2237,
+  "mapBytes": 105834033,
+  "mapSha256": "5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e",
+  "importMillis": 5173,
+  "heapBeforeImportBytes": 17684032,
+  "peakSampledJavaHeapBytes": 95145616,
+  "peakSampledPssKb": 314084,
+  "heapLimitBytes": 201326592,
+  "screenshots": [
+    {
+      "file": "p061-real-Guangzhou-z7.png",
+      "diagnostic": {
+        "latitude": 23.1291,
+        "longitude": 113.2644,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 9,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 946
+    },
+    {
+      "file": "p061-real-Guangzhou-z12.png",
+      "diagnostic": {
+        "latitude": 23.1291,
+        "longitude": 113.2644,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 18,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3335,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2187,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6085,
+            "pois": 191,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3343,
+            "pois": 214,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4688,
+            "pois": 37,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 9726,
+            "pois": 1066,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 9027,
+            "pois": 821,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5886,
+            "pois": 158,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3336,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5453,
+            "pois": 92,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6091,
+            "pois": 255,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 2033
+    },
+    {
+      "file": "p061-real-Guangzhou-z16.png",
+      "diagnostic": {
+        "latitude": 23.1291,
+        "longitude": 113.2644,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 24,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53386,
+            "y": 28437,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 263,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28437,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 317,
+            "pois": 18,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53386,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 351,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28438,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 353,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53386,
+            "y": 28439,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 272,
+            "pois": 12,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53387,
+            "y": 28439,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 265,
+            "pois": 23,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1191
+    },
+    {
+      "file": "p061-real-Foshan-z7.png",
+      "diagnostic": {
+        "latitude": 23.0218,
+        "longitude": 113.1219,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 35,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1934
+    },
+    {
+      "file": "p061-real-Foshan-z12.png",
+      "diagnostic": {
+        "latitude": 23.0218,
+        "longitude": 113.1219,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 40,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3334,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3044,
+            "pois": 22,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4688,
+            "pois": 37,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3334,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5891,
+            "pois": 173,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5886,
+            "pois": 158,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3334,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3353,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3471,
+            "pois": 18,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1256
+    },
+    {
+      "file": "p061-real-Foshan-z16.png",
+      "diagnostic": {
+        "latitude": 23.0218,
+        "longitude": 113.1219,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 42,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53360,
+            "y": 28458,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 267,
+            "pois": 21,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53361,
+            "y": 28458,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 73,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53360,
+            "y": 28459,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 113,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53361,
+            "y": 28459,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 92,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53360,
+            "y": 28460,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 141,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53361,
+            "y": 28460,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 69,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 812
+    },
+    {
+      "file": "p061-real-Zhuhai-z7.png",
+      "diagnostic": {
+        "latitude": 22.271,
+        "longitude": 113.5767,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 47,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 962
+    },
+    {
+      "file": "p061-real-Zhuhai-z12.png",
+      "diagnostic": {
+        "latitude": 22.271,
+        "longitude": 113.5767,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 59,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3339,
+            "y": 1786,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2980,
+            "pois": 174,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3340,
+            "y": 1786,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1584,
+            "pois": 43,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1786,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 98,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3339,
+            "y": 1787,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3583,
+            "pois": 66,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3340,
+            "y": 1787,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1995,
+            "pois": 42,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1787,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3339,
+            "y": 1788,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 8746,
+            "pois": 461,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3340,
+            "y": 1788,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3239,
+            "pois": 75,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1788,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 111,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3339,
+            "y": 1789,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4233,
+            "pois": 109,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3340,
+            "y": 1789,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 311,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1789,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 92,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1534
+    },
+    {
+      "file": "p061-real-Zhuhai-z16.png",
+      "diagnostic": {
+        "latitude": 22.271,
+        "longitude": 113.5767,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 65,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53443,
+            "y": 28606,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 406,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53444,
+            "y": 28606,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 70,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53443,
+            "y": 28607,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 322,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53444,
+            "y": 28607,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 28,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53443,
+            "y": 28608,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 150,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53444,
+            "y": 28608,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 77,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 964
+    },
+    {
+      "file": "p061-real-Shenzhen-z7.png",
+      "diagnostic": {
+        "latitude": 22.5431,
+        "longitude": 114.0579,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 74,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1707
+    },
+    {
+      "file": "p061-real-Shenzhen-z12.png",
+      "diagnostic": {
+        "latitude": 22.5431,
+        "longitude": 114.0579,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 83,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3344,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2750,
+            "pois": 195,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3345,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6547,
+            "pois": 570,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3346,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5101,
+            "pois": 266,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3344,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 8017,
+            "pois": 751,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3345,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 7889,
+            "pois": 689,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3346,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6915,
+            "pois": 607,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3344,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2058,
+            "pois": 227,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3345,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 764,
+            "pois": 25,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3346,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1677
+    },
+    {
+      "file": "p061-real-Shenzhen-z16.png",
+      "diagnostic": {
+        "latitude": 22.5431,
+        "longitude": 114.0579,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 95,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53530,
+            "y": 28552,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 175,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53531,
+            "y": 28552,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 116,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53532,
+            "y": 28552,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 205,
+            "pois": 12,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53530,
+            "y": 28553,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 170,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53531,
+            "y": 28553,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 157,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53532,
+            "y": 28553,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 240,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53530,
+            "y": 28554,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 236,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53531,
+            "y": 28554,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 195,
+            "pois": 12,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53532,
+            "y": 28554,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 546,
+            "pois": 15,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53530,
+            "y": 28555,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 228,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53531,
+            "y": 28555,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 221,
+            "pois": 21,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53532,
+            "y": 28555,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 173,
+            "pois": 19,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1123
+    },
+    {
+      "file": "p061-real-Dongguan-z7.png",
+      "diagnostic": {
+        "latitude": 23.0207,
+        "longitude": 113.7518,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 104,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1632
+    },
+    {
+      "file": "p061-real-Dongguan-z12.png",
+      "diagnostic": {
+        "latitude": 23.0207,
+        "longitude": 113.7518,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 113,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3341,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1418,
+            "pois": 22,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3342,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2231,
+            "pois": 31,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3343,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2395,
+            "pois": 32,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2988,
+            "pois": 45,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3342,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4229,
+            "pois": 88,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3343,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1940,
+            "pois": 29,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3341,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3165,
+            "pois": 55,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3342,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2219,
+            "pois": 122,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3343,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2279,
+            "pois": 93,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1600
+    },
+    {
+      "file": "p061-real-Dongguan-z16.png",
+      "diagnostic": {
+        "latitude": 23.0207,
+        "longitude": 113.7518,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 119,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53475,
+            "y": 28458,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 136,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53476,
+            "y": 28458,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 46,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53475,
+            "y": 28459,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 125,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53476,
+            "y": 28459,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 57,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53475,
+            "y": 28460,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 97,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53476,
+            "y": 28460,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 148,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1042
+    },
+    {
+      "file": "p061-real-Zhongshan-z7.png",
+      "diagnostic": {
+        "latitude": 22.5159,
+        "longitude": 113.3926,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 127,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1674
+    },
+    {
+      "file": "p061-real-Zhongshan-z12.png",
+      "diagnostic": {
+        "latitude": 22.5159,
+        "longitude": 113.3926,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 135,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3337,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1290,
+            "pois": 32,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3338,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1063,
+            "pois": 30,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3372,
+            "pois": 82,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3338,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4766,
+            "pois": 98,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2427,
+            "pois": 66,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3338,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4722,
+            "pois": 52,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3337,
+            "y": 1786,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 816,
+            "pois": 15,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3338,
+            "y": 1786,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1220,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1435
+    },
+    {
+      "file": "p061-real-Zhongshan-z16.png",
+      "diagnostic": {
+        "latitude": 22.5159,
+        "longitude": 113.3926,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 144,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53409,
+            "y": 28558,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 153,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53410,
+            "y": 28558,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 156,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53411,
+            "y": 28558,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 358,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53409,
+            "y": 28559,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 210,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53410,
+            "y": 28559,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 178,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53411,
+            "y": 28559,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 196,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53409,
+            "y": 28560,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 145,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53410,
+            "y": 28560,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 189,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53411,
+            "y": 28560,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 80,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 978
+    },
+    {
+      "file": "p061-real-Jiangmen-z7.png",
+      "diagnostic": {
+        "latitude": 22.5787,
+        "longitude": 113.0815,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 158,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1795
+    },
+    {
+      "file": "p061-real-Jiangmen-z12.png",
+      "diagnostic": {
+        "latitude": 22.5787,
+        "longitude": 113.0815,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 167,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3333,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1088,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3334,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3126,
+            "pois": 157,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1783,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2511,
+            "pois": 61,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3333,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 741,
+            "pois": 118,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3334,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3953,
+            "pois": 234,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1784,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1813,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3333,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 944,
+            "pois": 61,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3334,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1604,
+            "pois": 39,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3335,
+            "y": 1785,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 692,
+            "pois": 42,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1336
+    },
+    {
+      "file": "p061-real-Jiangmen-z16.png",
+      "diagnostic": {
+        "latitude": 22.5787,
+        "longitude": 113.0815,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 174,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53353,
+            "y": 28545,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 61,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53354,
+            "y": 28545,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 51,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53353,
+            "y": 28546,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 71,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53354,
+            "y": 28546,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 62,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53353,
+            "y": 28547,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 51,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53354,
+            "y": 28547,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 51,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53353,
+            "y": 28548,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 54,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53354,
+            "y": 28548,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 37,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 827
+    },
+    {
+      "file": "p061-real-Huizhou-z7.png",
+      "diagnostic": {
+        "latitude": 23.1115,
+        "longitude": 114.4152,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 183,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1743
+    },
+    {
+      "file": "p061-real-Huizhou-z12.png",
+      "diagnostic": {
+        "latitude": 23.1115,
+        "longitude": 114.4152,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 189,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3349,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1033,
+            "pois": 12,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3350,
+            "y": 1776,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 429,
+            "pois": 13,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3349,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3146,
+            "pois": 122,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3350,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1674,
+            "pois": 39,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3349,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3198,
+            "pois": 53,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3350,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2520,
+            "pois": 268,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1193
+    },
+    {
+      "file": "p061-real-Huizhou-z16.png",
+      "diagnostic": {
+        "latitude": 23.1115,
+        "longitude": 114.4152,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 198,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53595,
+            "y": 28440,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 62,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53596,
+            "y": 28440,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 72,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53597,
+            "y": 28440,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 63,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53595,
+            "y": 28441,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 69,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53596,
+            "y": 28441,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 152,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53597,
+            "y": 28441,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 42,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53595,
+            "y": 28442,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 87,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53596,
+            "y": 28442,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 81,
+            "pois": 7,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53597,
+            "y": 28442,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 34,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 881
+    },
+    {
+      "file": "p061-real-Zhaoqing-z7.png",
+      "diagnostic": {
+        "latitude": 23.0469,
+        "longitude": 112.4651,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 203,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 103,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 103,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3700,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 103,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 215,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1746
+    },
+    {
+      "file": "p061-real-Zhaoqing-z12.png",
+      "diagnostic": {
+        "latitude": 23.0469,
+        "longitude": 112.4651,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 212,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3326,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 471,
+            "pois": 34,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3327,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1957,
+            "pois": 202,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3328,
+            "y": 1777,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1913,
+            "pois": 108,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3326,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1194,
+            "pois": 24,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3327,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5089,
+            "pois": 802,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3328,
+            "y": 1778,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2255,
+            "pois": 117,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3326,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1201,
+            "pois": 65,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3327,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1078,
+            "pois": 41,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3328,
+            "y": 1779,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 688,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1317
+    },
+    {
+      "file": "p061-real-Zhaoqing-z16.png",
+      "diagnostic": {
+        "latitude": 23.0469,
+        "longitude": 112.4651,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 221,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53240,
+            "y": 28453,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 311,
+            "pois": 37,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53241,
+            "y": 28453,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 271,
+            "pois": 27,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53242,
+            "y": 28453,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 188,
+            "pois": 9,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53240,
+            "y": 28454,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 225,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53241,
+            "y": 28454,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 163,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53242,
+            "y": 28454,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 112,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53240,
+            "y": 28455,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53241,
+            "y": 28455,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53242,
+            "y": 28455,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 863
+    },
+    {
+      "file": "p061-real-Shanwei-z7.png",
+      "diagnostic": {
+        "latitude": 22.7876,
+        "longitude": 115.3753,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 227,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1654
+    },
+    {
+      "file": "p061-real-Shanwei-z12.png",
+      "diagnostic": {
+        "latitude": 22.7876,
+        "longitude": 115.3753,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 236,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3359,
+            "y": 1780,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 486,
+            "pois": 29,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3360,
+            "y": 1780,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 609,
+            "pois": 32,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3361,
+            "y": 1780,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 301,
+            "pois": 19,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3359,
+            "y": 1781,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 399,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3360,
+            "y": 1781,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 799,
+            "pois": 31,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3361,
+            "y": 1781,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 669,
+            "pois": 15,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3359,
+            "y": 1782,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 8,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3360,
+            "y": 1782,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 97,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3361,
+            "y": 1782,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 248,
+            "pois": 23,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 881
+    },
+    {
+      "file": "p061-real-Shanwei-z16.png",
+      "diagnostic": {
+        "latitude": 22.7876,
+        "longitude": 115.3753,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 245,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53770,
+            "y": 28504,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 6,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53771,
+            "y": 28504,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 13,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53772,
+            "y": 28504,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 13,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53770,
+            "y": 28505,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 30,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53771,
+            "y": 28505,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 12,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53772,
+            "y": 28505,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 25,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53770,
+            "y": 28506,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 35,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53771,
+            "y": 28506,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 28,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53772,
+            "y": 28506,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 19,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 827
+    },
+    {
+      "file": "p061-real-Jieyang-z7.png",
+      "diagnostic": {
+        "latitude": 23.5438,
+        "longitude": 116.3557,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 254,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1767
+    },
+    {
+      "file": "p061-real-Jieyang-z12.png",
+      "diagnostic": {
+        "latitude": 23.5438,
+        "longitude": 116.3557,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 260,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3371,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1073,
+            "pois": 39,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3372,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1480,
+            "pois": 46,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3371,
+            "y": 1772,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1327,
+            "pois": 63,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3372,
+            "y": 1772,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1537,
+            "pois": 85,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3371,
+            "y": 1773,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 452,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3372,
+            "y": 1773,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 555,
+            "pois": 44,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1104
+    },
+    {
+      "file": "p061-real-Jieyang-z16.png",
+      "diagnostic": {
+        "latitude": 23.5438,
+        "longitude": 116.3557,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 268,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53949,
+            "y": 28354,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 31,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53950,
+            "y": 28354,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 35,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53949,
+            "y": 28355,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 30,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53950,
+            "y": 28355,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 30,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53949,
+            "y": 28356,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 134,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53950,
+            "y": 28356,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 24,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53949,
+            "y": 28357,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 77,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53950,
+            "y": 28357,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 25,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 855
+    },
+    {
+      "file": "p061-real-Shantou-z7.png",
+      "diagnostic": {
+        "latitude": 23.3535,
+        "longitude": 116.6822,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 275,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1666
+    },
+    {
+      "file": "p061-real-Shantou-z12.png",
+      "diagnostic": {
+        "latitude": 23.3535,
+        "longitude": 116.6822,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 284,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3374,
+            "y": 1773,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 834,
+            "pois": 35,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1773,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2334,
+            "pois": 63,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3376,
+            "y": 1773,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2344,
+            "pois": 35,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3374,
+            "y": 1774,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1123,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1774,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 4045,
+            "pois": 101,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3376,
+            "y": 1774,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3040,
+            "pois": 32,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3374,
+            "y": 1775,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 740,
+            "pois": 17,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1775,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1218,
+            "pois": 11,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3376,
+            "y": 1775,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 871,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1327
+    },
+    {
+      "file": "p061-real-Shantou-z16.png",
+      "diagnostic": {
+        "latitude": 23.3535,
+        "longitude": 116.6822,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 293,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 54008,
+            "y": 28392,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 328,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54009,
+            "y": 28392,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 354,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54010,
+            "y": 28392,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 293,
+            "pois": 9,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54008,
+            "y": 28393,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 210,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54009,
+            "y": 28393,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 175,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54010,
+            "y": 28393,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 188,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54008,
+            "y": 28394,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 5,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54009,
+            "y": 28394,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 3,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54010,
+            "y": 28394,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 843
+    },
+    {
+      "file": "p061-real-Chaozhou-z7.png",
+      "diagnostic": {
+        "latitude": 23.6567,
+        "longitude": 116.6226,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 302,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1711
+    },
+    {
+      "file": "p061-real-Chaozhou-z12.png",
+      "diagnostic": {
+        "latitude": 23.6567,
+        "longitude": 116.6226,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 308,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3374,
+            "y": 1769,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 578,
+            "pois": 25,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1769,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 273,
+            "pois": 21,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3374,
+            "y": 1770,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1945,
+            "pois": 52,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1770,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1378,
+            "pois": 112,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3374,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1728,
+            "pois": 79,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3375,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1389,
+            "pois": 62,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1051
+    },
+    {
+      "file": "p061-real-Chaozhou-z16.png",
+      "diagnostic": {
+        "latitude": 23.6567,
+        "longitude": 116.6226,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 317,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 53997,
+            "y": 28332,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 93,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53998,
+            "y": 28332,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 112,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53999,
+            "y": 28332,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 28,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53997,
+            "y": 28333,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 179,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53998,
+            "y": 28333,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 218,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53999,
+            "y": 28333,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 112,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53997,
+            "y": 28334,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 110,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53998,
+            "y": 28334,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 224,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 53999,
+            "y": 28334,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 99,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 845
+    },
+    {
+      "file": "p061-real-Zhangzhou-z7.png",
+      "diagnostic": {
+        "latitude": 24.513,
+        "longitude": 117.6471,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 325,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 105,
+            "y": 53,
+            "zoom": 7,
+            "readerSupportsTile": false,
+            "mapDataAvailable": false,
+            "ways": -1,
+            "pois": -1,
+            "rendererTileState": "CACHED",
+            "interpretation": "OUTSIDE_FILE_BOUNDS"
+          },
+          {
+            "x": 106,
+            "y": 53,
+            "zoom": 7,
+            "readerSupportsTile": false,
+            "mapDataAvailable": false,
+            "ways": -1,
+            "pois": -1,
+            "rendererTileState": "CACHED",
+            "interpretation": "OUTSIDE_FILE_BOUNDS"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1023
+    },
+    {
+      "file": "p061-real-Zhangzhou-z12.png",
+      "diagnostic": {
+        "latitude": 24.513,
+        "longitude": 117.6471,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 334,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3385,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1157,
+            "pois": 11,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1555,
+            "pois": 13,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1185,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3385,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 930,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2629,
+            "pois": 47,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2163,
+            "pois": 23,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3385,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 495,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 920,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 288,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1138
+    },
+    {
+      "file": "p061-real-Zhangzhou-z16.png",
+      "diagnostic": {
+        "latitude": 24.513,
+        "longitude": 117.6471,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 340,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 54184,
+            "y": 28161,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 30,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54185,
+            "y": 28161,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 56,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54184,
+            "y": 28162,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 89,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54185,
+            "y": 28162,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 71,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54184,
+            "y": 28163,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 33,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54185,
+            "y": 28163,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 71,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 841
+    },
+    {
+      "file": "p061-real-Longhai-z7.png",
+      "diagnostic": {
+        "latitude": 24.446,
+        "longitude": 117.818,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 347,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 105,
+            "y": 53,
+            "zoom": 7,
+            "readerSupportsTile": false,
+            "mapDataAvailable": false,
+            "ways": -1,
+            "pois": -1,
+            "rendererTileState": "CACHED",
+            "interpretation": "OUTSIDE_FILE_BOUNDS"
+          },
+          {
+            "x": 106,
+            "y": 53,
+            "zoom": 7,
+            "readerSupportsTile": false,
+            "mapDataAvailable": false,
+            "ways": -1,
+            "pois": -1,
+            "rendererTileState": "CACHED",
+            "interpretation": "OUTSIDE_FILE_BOUNDS"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1071
+    },
+    {
+      "file": "p061-real-Longhai-z12.png",
+      "diagnostic": {
+        "latitude": 24.446,
+        "longitude": 117.818,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 359,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3387,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1185,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3388,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 443,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3389,
+            "y": 1759,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 861,
+            "pois": 6,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 2163,
+            "pois": 23,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3388,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1874,
+            "pois": 16,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3389,
+            "y": 1760,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1986,
+            "pois": 18,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 288,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3388,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1306,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3389,
+            "y": 1761,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1294,
+            "pois": 13,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3387,
+            "y": 1762,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 388,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3388,
+            "y": 1762,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 438,
+            "pois": 8,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3389,
+            "y": 1762,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 890,
+            "pois": 4,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 1334
+    },
+    {
+      "file": "p061-real-Longhai-z16.png",
+      "diagnostic": {
+        "latitude": 24.446,
+        "longitude": 117.818,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 365,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 54215,
+            "y": 28175,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 32,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54216,
+            "y": 28175,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 24,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54215,
+            "y": 28176,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 28,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54216,
+            "y": 28176,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 41,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54215,
+            "y": 28177,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 44,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54216,
+            "y": 28177,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 37,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 834
+    },
+    {
+      "file": "p061-real-Zhangpu-z7.png",
+      "diagnostic": {
+        "latitude": 24.117,
+        "longitude": 117.613,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 371,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1008
+    },
+    {
+      "file": "p061-real-Zhangpu-z12.png",
+      "diagnostic": {
+        "latitude": 24.117,
+        "longitude": 117.613,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 377,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3385,
+            "y": 1764,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 596,
+            "pois": 24,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1764,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 743,
+            "pois": 27,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3385,
+            "y": 1765,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1069,
+            "pois": 28,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1765,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1283,
+            "pois": 29,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3385,
+            "y": 1766,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 288,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3386,
+            "y": 1766,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 875,
+            "pois": 10,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 949
+    },
+    {
+      "file": "p061-real-Zhangpu-z16.png",
+      "diagnostic": {
+        "latitude": 24.117,
+        "longitude": 117.613,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 385,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 54178,
+            "y": 28240,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 35,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54179,
+            "y": 28240,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 48,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54178,
+            "y": 28241,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 52,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54179,
+            "y": 28241,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 42,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54178,
+            "y": 28242,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 61,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54179,
+            "y": 28242,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 33,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54178,
+            "y": 28243,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 37,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54179,
+            "y": 28243,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 17,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 855
+    },
+    {
+      "file": "p061-real-Dongshan-z7.png",
+      "diagnostic": {
+        "latitude": 23.701,
+        "longitude": 117.429,
+        "zoom": 7,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 392,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 104,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 105,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1466,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 54,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 53879,
+            "pois": 51,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 11808,
+            "pois": 33,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 106,
+            "y": 55,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 26,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 104,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 779,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 105,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          },
+          {
+            "x": 106,
+            "y": 56,
+            "zoom": 7,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 0,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "NO_FEATURES_AT_THIS_ZOOM"
+          }
+        ]
+      },
+      "renderWaitMillis": 1743
+    },
+    {
+      "file": "p061-real-Dongshan-z12.png",
+      "diagnostic": {
+        "latitude": 23.701,
+        "longitude": 117.429,
+        "zoom": 12,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 398,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 3383,
+            "y": 1769,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 747,
+            "pois": 2,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3384,
+            "y": 1769,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 497,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3383,
+            "y": 1770,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 691,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3384,
+            "y": 1770,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 1018,
+            "pois": 5,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3383,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 507,
+            "pois": 14,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 3384,
+            "y": 1771,
+            "zoom": 12,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 60,
+            "pois": 3,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 830
+    },
+    {
+      "file": "p061-real-Dongshan-z16.png",
+      "diagnostic": {
+        "latitude": 23.701,
+        "longitude": 117.429,
+        "zoom": 16,
+        "mapFileBoundingBox": "minLatitude=21.025508, minLongitude=111.349484, maxLatitude=25.222025, maxLongitude=118.488622",
+        "tilePixelSize": 704,
+        "cacheCapacity": 16,
+        "viewWidth": 1080,
+        "viewHeight": 1528,
+        "frameWidth": 1080,
+        "frameHeight": 1528,
+        "overdrawFactor": 1,
+        "completedTilesTotal": 407,
+        "administrativePolygon": "UNKNOWN: bounding box is not the target union",
+        "renderer": "Native Mapsforge 0.25.0; cache absence alone is not a rendering failure",
+        "visibleTiles": [
+          {
+            "x": 54144,
+            "y": 28323,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 30,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54145,
+            "y": 28323,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 49,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54146,
+            "y": 28323,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 10,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54144,
+            "y": 28324,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 23,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54145,
+            "y": 28324,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 28,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54146,
+            "y": 28324,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 15,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54144,
+            "y": 28325,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 27,
+            "pois": 1,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54145,
+            "y": 28325,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 35,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          },
+          {
+            "x": 54146,
+            "y": 28325,
+            "zoom": 16,
+            "readerSupportsTile": true,
+            "mapDataAvailable": true,
+            "ways": 18,
+            "pois": 0,
+            "rendererTileState": "CACHED",
+            "interpretation": "HAS_FEATURES"
+          }
+        ]
+      },
+      "renderWaitMillis": 833
+    }
+  ],
+  "privateFileShaVerified": true,
+  "realMapSwitchAndDeletePassed": true,
+  "realMapNativeZoomAndPan": true,
+  "airplaneMode": true,
+  "passed": true
+}

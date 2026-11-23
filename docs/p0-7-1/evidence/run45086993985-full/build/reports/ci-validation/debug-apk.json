@@ -1,0 +1,8 @@
+{
+  "applicationId": "com.fox.runner.debug",
+  "versionName": "v0.1.0-p0.7.1",
+  "versionCode": 6781,
+  "variant": "reproducibleDebug",
+  "debuggable": "true",
+  "sha256": "000274e690cdddc8455d9cca054b5baabc2184f5e8fbc07696585cae324756cc"
+}

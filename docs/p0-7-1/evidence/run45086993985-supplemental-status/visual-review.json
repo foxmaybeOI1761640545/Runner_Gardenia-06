@@ -1,0 +1,24 @@
+{
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "runId": 45086993985,
+  "reviewed": true,
+  "scope": "Additional originals, outside the exact 517-image approval set",
+  "notes": "Actually viewed original idle/recording/paused native PNGs. Correct Start/Pause/Resume actions, paused status, HR148 recording sample and retained navigation visible. Synthetic GPS/BLE input, not physical hardware. Original P05DashboardStatusNavigationTest assertions passed.",
+  "screenshots": [
+    {
+      "file": "p05-status-navigation-real-idle.png",
+      "sha256": "a99b62b180611629a2100011264d213a6f7cff3505bae677bca946ed10cd3ead",
+      "reviewed": true
+    },
+    {
+      "file": "p05-status-navigation-real-paused-synthetic-input.png",
+      "sha256": "23a49b34d4a3cac20f0de9a620e221e7b93d7746534e68a6c9ea61caf63ea493",
+      "reviewed": true
+    },
+    {
+      "file": "p05-status-navigation-real-recording-synthetic-input.png",
+      "sha256": "48be611db1a59bc5c68f1f6c63d177f014fb770fd12d7305314a3c124afcc809",
+      "reviewed": true
+    }
+  ]
+}

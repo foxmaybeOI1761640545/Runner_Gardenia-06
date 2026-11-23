@@ -1,0 +1,136 @@
+{
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "runId": 45086993985,
+  "artifactId": 14779936812,
+  "artifactSha256": "5cbb466d9de3bfe3ef00a98411be0f5b8bec784b89d667876580c5ef1e4b06c1",
+  "reviewed": true,
+  "method": "All25 native PNGs actually viewed in three contact sheets; T16 original also viewed at full resolution.",
+  "notes": "Correct selected roots, details/dialog return, gesture recovery, rotation viewport, recording and all eight theme palettes. Strengthened T16 pause/journal/resume assertions and all18 raw cases pass; full47/489, signed runtime and final source visual acceptance still pending. Emulator injected GPS/BLE and edge swipe are not physical-device evidence.",
+  "screenshots": [
+    {
+      "file": "p071-T01-history.png",
+      "sha256": "a2d5129c0d6f031814c34f993fd1fdcfc35cbdc63e8d5291c606be03d55c6e7c",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T02-settings.png",
+      "sha256": "9330152149ecb71e3a3d6fc9e1834bf0bd58799bad2434161073f517bf1a35d9",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T03-heart.png",
+      "sha256": "035cdff05622aac12da7289aa885d55dd8bfdf2b9aa8c1aeab85224cefdcd478",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T04-cycles.png",
+      "sha256": "53f630e6a86700fa17d80c2baade24007d02f1ef6f6cc73133715b576523a17c",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T05-reselect.png",
+      "sha256": "9330152149ecb71e3a3d6fc9e1834bf0bd58799bad2434161073f517bf1a35d9",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T06-rapid.png",
+      "sha256": "06fe1b2f5f9f22a288e32926f19cbd4b80416917daac293205fb1dfc3e1b4f81",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T07-root-restored.png",
+      "sha256": "a7f062ad056003d5fc3c986292e7f34dab5eacb4961533e92567663eacead171",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T08-gesture-restored.png",
+      "sha256": "f85b53c648b875c4a35fb488bd32054e9c5df5703835e944668bff70ec23ae94",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T09-settings-root.png",
+      "sha256": "9330152149ecb71e3a3d6fc9e1834bf0bd58799bad2434161073f517bf1a35d9",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T10-history-detail.png",
+      "sha256": "e88490b2e5d95d2b47e2b005ebf5318ca2cc3890dfcc925d271b47be6ea7ac0d",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T11-device-dialog.png",
+      "sha256": "7a0e400f26aa88ef016c995c1dc6b5146eef848ccc686ca77d7490c3849ec47b",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T12-delete-sheet.png",
+      "sha256": "a00f83abc56e45b347fbb3256819ed436d6c0eb2a7aad0966a10515374d3a8bc",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T13-recreated-settings.png",
+      "sha256": "9330152149ecb71e3a3d6fc9e1834bf0bd58799bad2434161073f517bf1a35d9",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T14-rotated-heart.png",
+      "sha256": "55c6036f56331207fe692a919ce252648bb0798d23d22397fdab8ef124f43597",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T15-resumed-settings.png",
+      "sha256": "125121b2cd672605d724ca448026858c5419fee92721becb9170d1a023de2c2f",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T16-recording-restored.png",
+      "sha256": "21a7578ab62ce3aa9eeb1d214c94af2fd82a54869a6bec3918367a679e0c71a3",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T17-synthetic-gps-ble.png",
+      "sha256": "61d7fac7955f9f3a6fe7ea8c6548a2926068c1783d8b8d0e535d9bbcfa62e775",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-explorer-dark.png",
+      "sha256": "78148f40870755ef009b4c44e0b13665fc65e5d59d796eb7dfcca9da8c64511c",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-explorer-light.png",
+      "sha256": "8d3b8fc5da84ebb481315e0e733a91387893ca473ec520f995ae2ce1f9939856",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-neon-dark.png",
+      "sha256": "801ff354ce27fb10f3443e15c24cb07b14316fc544fe80263f0cd27eee367eba",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-neon-light.png",
+      "sha256": "f715d09adc22cd94fe03da3b2b88fbf79d79934c0b360dfe15fa966ac8dbf5f5",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-precision-dark.png",
+      "sha256": "97d4bb7ea436e6debe5b60fbc3a5060e74a77b1e5c2b97188c1ade36224763ff",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-precision-light.png",
+      "sha256": "61588e8414a975f10078c98f5da8ec8ac501ba6164cd98c49d1025c1dcbfc9e9",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-quiet-dark.png",
+      "sha256": "dde47820724dce6233febc189310b60f93715f39037838e30650027256bac88d",
+      "reviewed": true
+    },
+    {
+      "file": "p071-T18-quiet-light.png",
+      "sha256": "fc3948d3a4a8c1c0fd087ee7764dac7c64781a597ba10b7d3576613881c6485f",
+      "reviewed": true
+    }
+  ]
+}

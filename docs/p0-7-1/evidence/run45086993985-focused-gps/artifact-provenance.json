@@ -1,0 +1,15 @@
+{
+  "runId": 45086993985,
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "artifactId": 14780610635,
+  "artifactSha256": "cbddff9195d83f1d455337c528a3ebf2a939a8a4c862de616ded135df9fd9923",
+  "independentRawJUnitVerified": true,
+  "tests": 47,
+  "executed": 47,
+  "passed": 47,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "originalPausedJournalRegression": "Both original P05DashboardStatusNavigationTest methods executed and passed; original file byte-identical to cf baseline.",
+  "fullRegressionRequired": true
+}

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="2" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T00:22:00" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.p0.map.P07HomeMapTest" tests="2" failures="0" errors="0" skipped="0" time="148.613" timestamp="2026-11-23T00:22:00" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="noMapStillShowsPositionWithoutRecordingAndReleasesOnRecreation" classname="de.dennisguse.opentracks.p0.map.P07HomeMapTest" time="6.431" />
+    <testcase name="realMapPositionFollowPanZoomRecreateReplaceDeleteAndBudget" classname="de.dennisguse.opentracks.p0.map.P07HomeMapTest" time="142.182" />
+  </testsuite>
+</testsuites>

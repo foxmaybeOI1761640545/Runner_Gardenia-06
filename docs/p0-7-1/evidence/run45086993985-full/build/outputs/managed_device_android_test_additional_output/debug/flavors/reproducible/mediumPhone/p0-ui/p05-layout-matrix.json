@@ -1,0 +1,2459 @@
+{
+  "passed": true,
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "api": 35,
+  "native": true,
+  "policy": "FOLLOW_SYSTEM",
+  "productionFixtureEntry": false,
+  "physicalBleTested": false,
+  "screenshots": [
+    {
+      "file": "p05-layout-precision-light-360x800-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "e4f97fca1cdaed6d6d1cf7e55fd6dc271c094e4a14a634efb79dceccdd1cafa4",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-360x800-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "177b766e90a1be52bdd15a8aecd61c8d6a99e1651c68475138455731bb1b1b0d",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-360x800-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "88a31015b1ac53784146476d5e18f373c9df59ea099534c77ce51af99b6eca13",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-360x800-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "b7c9ab44398fbe1ee34d40bb8998d6865a6b2f02a50dbdf41aa0478ac8aad579",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-360x800-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "76b87d7321ac11fadc28e5e3159a8133f590b11123687320a49512778bd23dd6",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-360x800-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "1615c5d28f3d1198e5fe0f5c31437961ac095cf0821d4536b589ec9caa5d4e64",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-360x800-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "acb9f77cca9d9ac124148d6f13eb53d390b941b43a7dd6474608c9d84d704627",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-360x800-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "39bcc4dd3bfdaf95ab0dacb39ad146279ddcc90e98485fabb0e1771bd83a9701",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 177,
+            "width": 156,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-light-360x800-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "593b00e26d6d8cc7a81dd2e6f213aa1944e7f931ea7951ebe3d2c986c13e4a31",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-360x800-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "686a44fa72c4232e6daea5387c57d40009f18d0ec5bd7e1a4586af323b270fed",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-360x800-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "bb692a2a9e90e71b81f88d4aaab069745888def2ef306b58628d6a189ee79b2d",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-360x800-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "3ae91d1a7085c2601fbfd3128ab32b26cf7a1c524221c911ff01f6636fcaf1ea",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-360x800-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "a3a0c06fd17731adf47a373c7eb13f29e35b6ba8611cd866d80dcff8ad1c1ed7",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-360x800-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "86e86a54235ca00204b17831adf20c2abf9b17d80f8b7b1b63fec651b603582a",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-360x800-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "b3956a7194d9871f85de654fe2fe59472b5d75cf78b3259eab57c2b6a65048d4",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-360x800-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 360,
+      "heightDp": 800,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "012cd1c56c45abe13b312922eae3d421d9bff05c893e37435431156ce5d4feaa",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 196,
+            "top": 196,
+            "width": 156,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 360,
+            "top": 193,
+            "width": 156,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 524,
+            "top": 191,
+            "width": 156,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-light-393x873-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "d4a2927157a769a3347a9c7c13561d1abb693fbd36af91b9db11f7ee78b75a33",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-393x873-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "d440a22ad7e662afd1b54280f62c174cbd92a60737f144e5131a279595cc7f8f",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-393x873-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "ab44eb09f15c391d9268000b56a2fcaf5af28208a5c6e9717c9511ab5ecfbcfc",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-393x873-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "802d22dd0d5cd3af365037d5374b399bfc25397922ac243d4a1d2016df56de9c",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-393x873-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "547b0f02795cd784594557b29e63dee36191dc40ac1485ae6a1ae46c157804a7",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-393x873-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "8402e61c887e393d94a1d56f77e5dd1c1f24d04f8541edafeae287e9196ba727",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-393x873-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "3ccfc18cee645d55ac5d068f138fa6e686e283b8f967c1b281daf25674f355d5",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-393x873-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "33e89f20a58507f22aae16971637642fd77b9e7a0f01fcc7afb8e7a78a6cce03",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 177,
+            "width": 172,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 177,
+            "width": 173,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-light-393x873-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "ea33b352717151c6011412f2be668d0d750b1cb5f7715cdef6c792f94f21c73b",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-393x873-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "49de8ca3589f691f5c747c52e01011e4f4da67eb6d38bb6ed52184a53368e368",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-393x873-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "e0e82696e7f607afadca8c4d5fd90599b6e44112e1d417dc47abb6d56b38fdfb",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-393x873-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "253a179b492606f4e4451d3f48fd0b5ba2415c380e842d895136d81a126b8cf0",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-393x873-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "36eafa57c2e3e5e5bf218b10e5f2f729e1951fc46d5a360e0a407cfc184fdf75",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-393x873-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "bc0b6df6c9619ca3fd9ea4d6d33f98f1607d27ab6d08fb6841e49a14d5d31598",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-393x873-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "a3fad36357d94310cd72a78b2b99e97f5bbd87323fefca57bada490171edb55e",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-393x873-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 393,
+      "heightDp": 873,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "6b237bf057c6614b5517310b59f493a140d42213f50a921b337634001b2d722c",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 172,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 212,
+            "top": 196,
+            "width": 173,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 393,
+            "top": 193,
+            "width": 172,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 573,
+            "top": 191,
+            "width": 173,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-light-412x915-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "5aeae4b72b118a2ca4572b8e666077e2cede5fea36f7741c4ef7e2c2030a21d5",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-412x915-font-100-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "bb885c5a5ff3c7a5ec692385328632307fa9cfb55c63f5d881e0eafd7533e8db",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-412x915-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "658ff5158c9293dc774b90b9dec87a83c88389d290c038971d82ac198eec6015",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-412x915-font-100-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "ee3b067c226c7274643e88d9a3b95a4cf67914d9e565b79d2890363895311ff8",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-412x915-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "16797e4ac7313d9b7683eb67601380fa07b7bd062f099a669e558754f12d3c2e",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-412x915-font-100-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "9a6898e48f27a46b7a1ad5fb6136eb6a1f1a4f56a5722dea635aac4329239148",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-412x915-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "96dbf70650ed2985800a09086e5b242d7078c0431289ff9916d42d6635906bd2",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-412x915-font-100-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1,
+      "state": "idle",
+      "sha256": "843a3e761ac660a35140c14495b623e9b8755377dc0d464811b37562ccfc31b1",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 165,
+        "rowTop": 177,
+        "rowHeight": 96,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 177,
+            "width": 182,
+            "height": 96,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-light-412x915-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "7a9e1811d266aa7079aaca14a40bf55e06aaa88db383667b2eb279bdcec039f4",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-precision-dark-412x915-font-130-idle-synthetic.png",
+      "family": "precision",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "b52e43f2832eedda37418884013038d7a0a7d9b7b0fdfd3a540a8d2813fc3e29",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-light-412x915-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "c9b06772cdaebfa6b4d235357edb1bcf40c4e02353019a07dfd088576dc21efe",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-quiet-dark-412x915-font-130-idle-synthetic.png",
+      "family": "quiet",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "5cf5bb404713bfb6baa6aacde41c097e1939893e6e56f75a8e3afa744ae95edc",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-light-412x915-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "8311b21ddbca08585e37bf3bda2f6c9824add94b64f1a4c30dbc75d2c3816c70",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-explorer-dark-412x915-font-130-idle-synthetic.png",
+      "family": "explorer",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "d94179704e0ade3a88b9ef60a25e673340d0e638e9102e980f2a500ccbcae888",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-light-412x915-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "light",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "5ad8c76585fcfc49dde14fe847ff5ff8caa6aeddb7638872dc4f3a91f78f80ec",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    },
+    {
+      "file": "p05-layout-neon-dark-412x915-font-130-idle-synthetic.png",
+      "family": "neon",
+      "appearance": "dark",
+      "widthDp": 412,
+      "heightDp": 915,
+      "fontScale": 1.3,
+      "state": "idle",
+      "sha256": "1a654acc34bf263b798180d958bc2b3bfca2ce31b9fd086bab00532f8e12b8c8",
+      "syntheticUiFixture": true,
+      "bounds": {
+        "titleBottom": 179,
+        "rowTop": 191,
+        "rowHeight": 106,
+        "headerChildCount": 2,
+        "controls": [
+          {
+            "id": "p0_running",
+            "left": 40,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "跑步"
+          },
+          {
+            "id": "p0_cycling",
+            "left": 222,
+            "top": 196,
+            "width": 182,
+            "height": 96,
+            "text": "骑行"
+          },
+          {
+            "id": "p04_gps_status",
+            "left": 412,
+            "top": 193,
+            "width": 182,
+            "height": 102,
+            "text": "GPS\n未定位"
+          },
+          {
+            "id": "p0_devices",
+            "left": 602,
+            "top": 191,
+            "width": 182,
+            "height": 106,
+            "text": "心率\n未连接"
+          }
+        ]
+      }
+    }
+  ]
+}

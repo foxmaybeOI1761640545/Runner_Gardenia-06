@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "857c744321825a2656d77f45d57c6e43b4334962",
+  "api": 35,
+  "timezone": "Asia\/Singapore",
+  "family": "neon",
+  "appearance": "dark",
+  "passed": true,
+  "physicalBleTested": false,
+  "syntheticNotifications": true,
+  "systemSwitchPreservesRecording": true,
+  "systemSwitchPreservesGps": true,
+  "systemSwitchPreservesConnection": true,
+  "viewModelRetained": true,
+  "pausedStatePreserved": true,
+  "waitingCreatesNoWorkout": true,
+  "dialogRestored": true,
+  "familySwitchPreservesRecording": true,
+  "screenshots": [
+    {
+      "file": "p03-neon-dark-home.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "home",
+      "sha256": "b51e6019cf313ae6e8d74ff89c20b858a0edbf8c6018b949dad81cc5df0e1f0b"
+    },
+    {
+      "file": "p03-neon-dark-recording.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "recording",
+      "sha256": "5e21329e91bc479d2f768bcd085994fd6624ac147aa705d7b839fe86fc7bc4ae"
+    },
+    {
+      "file": "p03-neon-dark-heart.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "heart",
+      "sha256": "b11d3cd707fbc40ea51df778f5116836618e9703803a1830620afe6068e3f758"
+    },
+    {
+      "file": "p03-neon-dark-history.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "history",
+      "sha256": "7596d97ec23e53958e692e1f7e3f147a37578c6615e3da415d72d072b3f373ed"
+    },
+    {
+      "file": "p03-neon-dark-detail.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "detail",
+      "sha256": "f6868579f71a6482981e832f9eb0db4b5063aeb1d446032db367a9610eb694f6"
+    },
+    {
+      "file": "p03-neon-dark-dialog.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "dialog",
+      "sha256": "e841da4fe54627b6e9240452267b2c837c7d9f0dcdca5e5c4a894f45ecd57a8b"
+    },
+    {
+      "file": "p03-neon-dark-settings.png",
+      "family": "neon",
+      "nightMode": 32,
+      "page": "settings",
+      "sha256": "80d7d0f4f5be0c7401f38118b84d85795fcf7376137644445b216721eaa44b22"
+    }
+  ]
+}
