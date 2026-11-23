@@ -77,7 +77,7 @@ public class P08RouteRepositoryPlatformTest {
                     .put("before", before).put("after", after).put("preferencesSha256", prefs).put("offlineMapSentinelSha256", mapHash).put("passed", true)
                     .put("scope", "Actual provider all-row snapshots in TestApplication in-memory SQLite; actual private files/prefs. Real database upgrade and real map remain phaseF.");
             String output = InstrumentationRegistry.getArguments().getString("additionalTestOutputDir"); File base = output == null ? new File(context.getExternalMediaDirs()[0], "additional_test_output") : new File(output);
-            File folder = new File(base, "p08-repository"); assertTrue(folder.isDirectory() || folder.mkdirs()); Files.writeString(new File(folder, "isolation.json").toPath(), json.toString(2));
+            File folder = new File(base, "p08-repository"); assertTrue(folder.isDirectory() || folder.mkdirs()); Files.write(new File(folder, "isolation.json").toPath(), json.toString(2).getBytes(java.nio.charset.StandardCharsets.UTF_8));
         } finally { new ContentProviderUtils(context).deleteTrack(context, id); Files.deleteIfExists(map.toPath()); }
     }
     private org.json.JSONObject history() throws Exception {

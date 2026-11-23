@@ -1,0 +1,242 @@
+{
+  "passed": false,
+  "plan": {
+    "predecessor": {
+      "phase": "A",
+      "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+      "runId": 45116960695,
+      "artifactId": 14792470939,
+      "artifactSha256": "6d567bf876b297d3f6550ced3a7b8c3a603a547e274c461a392f181b0dbee34e",
+      "historicalRawGateRerun": true
+    },
+    "commit": "f1692af598f15b1612cdf49fd8812ac40e1c904f",
+    "stage": 4,
+    "phase": "B",
+    "milestone": "P0.8.0 independent GPX routes and foreground route following",
+    "baselineProductSource": "857c744321825a2656d77f45d57c6e43b4334962",
+    "baselineDeliveryHead": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+    "fullRegression": false,
+    "signed": false,
+    "publishing": false,
+    "branch": "feature/p0-8-0-gpx-route-follow",
+    "runId": "45121146783",
+    "versionName": "v0.1.0-p0.8.0",
+    "versionCode": 6782
+  },
+  "helpers": {
+    "source": "f1692af598f15b1612cdf49fd8812ac40e1c904f",
+    "runId": "45121146783",
+    "tests": 175,
+    "executed": 175,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jvm": {
+    "tests": 265,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 265,
+    "executed": 265,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest",
+        "tests": 43,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteCodecTest",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteRepositoryTest",
+        "tests": 34,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidFocused": {
+    "tests": 14,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "total": 14,
+    "executed": 14,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest",
+        "tests": 6,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [
+      "de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest.nativeHistoryAllRowsPreferencesAndOfflineMapRemainByteIdentical\n\njava.lang.NoSuchMethodError: No static method writeString(Ljava/nio/file/Path;Ljava/lang/CharSequence;[Ljava/nio/file/OpenOption;)Ljava/nio/file/Path; in class Ljava/nio/file/Files; or its super classes (declaration of 'java.nio.file.Files' appears in /apex/com.android.art/javalib/core-oj.jar)\n\tat de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest.nativeHistoryAllRowsPreferencesAndOfflineMapRemainByteIdentical(P08RouteRepositoryPlatformTest.java:80)\n"
+    ],
+    "passed": false
+  },
+  "error": "AssertionError()"
+}

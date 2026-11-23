@@ -70,7 +70,7 @@ public class P08RouteTransactionRunner extends TestRunner {
         throw new AssertionError("Producer returned instead of being killed externally");
     }
     private void verify(String name, String source) throws Exception {
-        JSONObject ready = new JSONObject(Files.readString(privateFile("ready").toPath()));
+        JSONObject ready = new JSONObject(new String(Files.readAllBytes(privateFile("ready").toPath()), StandardCharsets.UTF_8));
         require(source.equals(ready.getString("source")) && name.equals(ready.getString("case")), "Stale producer proof"); require(ready.getInt("producerPid") != Process.myPid(), "Verifier reused producer process");
         boolean committed = name.endsWith("Committed") || name.equals("addGarbage");
         List<Integer> numbers = name.startsWith("add") && committed ? List.of(1, 2, 3) : name.startsWith("delete") && !committed ? List.of(1, 2) : List.of(1);
