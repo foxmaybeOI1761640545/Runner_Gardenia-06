@@ -1,0 +1,8 @@
+{
+  "scope": "Local pure-Java40 tests only, Java21 compiler module source17/target17 against available Java21 classes; actual Android/API compatibility still requires Actions. No SDK installed.",
+  "exitCode": 0,
+  "elapsedSeconds": 1.348,
+  "maxHeapMiB": 128,
+  "peakProcessRssKiB": 215792,
+  "includesDefault16MiBAnd20000PointBoundaries": true
+}

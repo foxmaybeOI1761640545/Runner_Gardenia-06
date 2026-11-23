@@ -1,0 +1,8 @@
+{
+  "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+  "case": "addGarbage",
+  "checkpoint": "JOURNAL_RETIRED",
+  "producerPid": 2593,
+  "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+  "api": 35
+}

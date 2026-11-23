@@ -1,0 +1,23 @@
+{
+  "predecessor": {
+    "phase": "A",
+    "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+    "runId": 45116960695,
+    "artifactId": 14792470939,
+    "artifactSha256": "6d567bf876b297d3f6550ced3a7b8c3a603a547e274c461a392f181b0dbee34e",
+    "historicalRawGateRerun": true
+  },
+  "commit": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+  "stage": 4,
+  "phase": "B",
+  "milestone": "P0.8.0 independent GPX routes and foreground route following",
+  "baselineProductSource": "857c744321825a2656d77f45d57c6e43b4334962",
+  "baselineDeliveryHead": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+  "fullRegression": false,
+  "signed": false,
+  "publishing": false,
+  "branch": "feature/p0-8-0-gpx-route-follow",
+  "runId": "45121619436",
+  "versionName": "v0.1.0-p0.8.0",
+  "versionCode": 6782
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/p08_import_toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" />
+    <ScrollView android:id="@+id/p08_import_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/p08_import_intro" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/p08_import_intro" android:textSize="16sp" android:paddingBottom="12dp" />
+            <ProgressBar android:id="@+id/p08_import_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" android:visibility="gone" />
+            <TextView android:id="@+id/p08_import_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="8dp" android:textSize="16sp" android:accessibilityLiveRegion="polite" />
+            <TextView android:id="@+id/p08_import_file" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="18sp" android:textIsSelectable="true" android:paddingVertical="8dp" />
+            <TextView android:id="@+id/p08_import_warnings" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:paddingBottom="8dp" />
+            <LinearLayout android:id="@+id/p08_import_candidates" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="12dp" android:paddingBottom="8dp" android:orientation="vertical">
+        <Button android:id="@+id/p08_import_choose" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/p08_choose_gpx" />
+        <Button android:id="@+id/p08_import_commit" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/p08_import_selected" android:enabled="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+# Phase D candidate: native route library and caller-preserving secondary navigation
+
+Predecessor C accepted source **a4c6c1803c25d3c18a9e2158554219d3597bf1a1**, run45123727015, independently checked artifact14795525179, eight actual native images reviewed. Its report/evidence commit **8fd271004bf6a816d3295150d5f43671d83e3da8** was pushed and the remote HEAD verified before D production work. This document describes a candidate, not a passed Android gate or final P08 delivery.
+
+## Implementation
+
+- A compact Routes action is added only to the shared existing home map view, with space reserved beside its status text. Existing four home hierarchies, locate/zoom controls and metric/actions are retained. Rapid taps have an explicit launch guard, reset on the existing map start lifecycle.
+- The existing Settings privacy/offline-map category gains a Route library link. There remain exactly six Settings hub categories and four bottom roots. New ordinary, nonexported Library/Detail Activities use caller Back; P071 P0Navigation is unchanged. Single-top launches and per-screen guards prevent duplicate secondary launches without clearing the parent stack.
+- Library uses lazy native ListView rows, not a view/object for every stored point or all 1024 possible rows. It shows alias, reliable distance or unavailable, points, segments, import date and source filename. Empty/loading/error/recovery states are explicit. Native overflow supports refresh, complete file verification, confirmed index repair, persistent-notice acknowledgement and review of all storage issues. No unavailable file is represented as valid geometry.
+- Detail reads verified route contents on the worker. It shows saved summary/original name/description/type/source. Missing/deleted UUIDs and corrupt files are explicit; invalid geometry cannot enable rename or future map/follow controls. A corrupt indexed route can still be deliberately deleted.
+- Rename validates a bounded nonempty local alias, retains a failed-empty dialog, and leaves original metadata and immutable route file bytes unchanged. Delete is confirmed by route name, affects only the selected independent route, and returns to the list after success. List overflow delegates to the same detail mutation path.
+- A rotation-retained ViewModel executes all repository IO on its serial worker and closes/cancels pending work on final destruction. List position and detail scroll are explicitly restored after asynchronous content. No history/workout/GPS/BLE/service command or new database is introduced. Schema43, old GPX import/export, map repository and recording lifecycle are unchanged.
+
+The source still has no static planned-map or following controls: these are added only when implemented in E. No placeholder starts a workout or asks for location.
+
+## Candidate verification
+
+Local complete Python **181 passed**, including six new admission tests: a future UI phase must have actual native review, and reviewed image hashes must match every required immutable predecessor image. Pending/missing/replaced/duplicated/extra image receipts fail. All accepted prior Java/Python tests and the old test manifest remain unchanged.
+
+The exact-source Actions candidate will run Debug/native compilation, Lint and all JVM/Python tests; **56 focused API35 tests** comprise parser8 + repository6 + import10 + new library14 + original P071 navigation18. Library tests cover empty/child Back, persistent reopen/metadata, alias validation/file identity, delete cancel/confirm/sibling retention, corrupt/missing routes, list/detail scroll recreation, exact Home/Settings caller return, rapid reopen/recreate, list overflow mutation, native verify/repair refusal to bless corruption, and four-theme/both-mode list/detail pixels.
+
+All 18 original P071 cases will be re-executed at this source without changing their assertions, including real system Back/gesture paths, Activity/background restoration and existing GPS/BLE/service continuity with explicitly synthetic inputs. Eight actual external transaction-process kills are also rerun. The focused run generates 8 unchanged import preview PNGs +16 new library/detail PNGs and original navigation screenshots; original image artifacts are required and **actual visual review remains pending** until independently downloaded. CI image/hash presence does not constitute visual approval.
+
+Full legacy API35/business tests, all requested viewport sizes/locales/large fonts, planned Mapsforge/static preview, foreground route matching/progress/deviation, actual signed system-picker/real historical database/map P071 upgrade, original fixed JKS and immutable final P08 Pre-release/public download remain later gates. No P08 Tag/Release/fixed-key APK exists. Physical-device GNSS/BLE/OEM validation remains separate. Phase E must wait for D exact-source acceptance, pixel review, report push and remote verification.

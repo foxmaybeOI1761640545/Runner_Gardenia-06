@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="56" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T07:03:12" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" tests="8" failures="0" errors="0" skipped="0" time="2.932" timestamp="2026-11-23T07:03:12" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="nativeNamespacesAndMultipleSegmentsArePreserved" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.002" />
+    <testcase name="nativeCancelledReaderReturnsNoRoute" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.001" />
+    <testcase name="nativeActual16MiBFileBoundary" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="2.411" />
+    <testcase name="nativeSaxRejectsInternalExternalAndParameterDtd" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.003" />
+    <testcase name="nativeActual20000PointBoundary" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.506" />
+    <testcase name="nativeUtf16AndLiteralMetadataSurvive" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.004" />
+    <testcase name="nativeMalformedDocumentHasNoPartialSuccessButInvalidCandidatesRemainVisible" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.003" />
+    <testcase name="nativeWaypointIsNotRouteAndSinglePointHasNoDistance" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.002" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" tests="6" failures="0" errors="0" skipped="0" time="0.494" timestamp="2026-11-23T07:03:12" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="nativeAtomicBatchRenameDeleteAndReopen" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.113" />
+    <testcase name="nativeDamagedFileIsVisibleAndNeverReturnedAsValidGeometry" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.046" />
+    <testcase name="nativeHistoryAllRowsPreferencesAndOfflineMapRemainByteIdentical" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.146" />
+    <testcase name="nativeDuplicateSourceNeedsExplicitAdditionalCopy" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.066" />
+    <testcase name="nativePrecommitIoRollsBackWholeSelection" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.058" />
+    <testcase name="nativeMirrorRecoveryAndFutureSchemaFailClosed" classname="de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest" time="0.065" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" tests="10" failures="0" errors="0" skipped="0" time="107.430" timestamp="2026-11-23T07:03:12" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="repeatedCommitClicksCannotImportDuplicateOrReopenCompletedSelection" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="5.769" />
+    <testcase name="partialInvalidCandidateIsExplicitDisabledAndNeverImported" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="5.968" />
+    <testcase name="absentDisplayNameAndPickerExceptionAreRecoverable" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="5.040" />
+    <testcase name="nativeImportScreensAllFourThemesBothModes" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="39.416" />
+    <testcase name="rotationRetainsPreviewSelectionAndOriginalProviderNeedNotBeReopened" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="6.522" />
+    <testcase name="duplicateNeedsExplicitCopyConfirmationAndNeverOverwrites" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="13.442" />
+    <testcase name="pickerCancelLeavesNoDataAndNoError" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="2.958" />
+    <testcase name="safPipeUnknownMimeMultipleRoutesSelectionPersistsOnlyChosenRoutes" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="6.143" />
+    <testcase name="cancelledStreamingReadNeverCreatesFormalRoutesAndAllowsAnotherFile" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="4.782" />
+    <testcase name="malformedEmptyInterruptedMissingAndWaypointOnlyFilesCannotCommit" classname="de.dennisguse.opentracks.p0.routes.P08RouteImportUiTest" time="17.390" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" tests="14" failures="0" errors="0" skipped="0" time="140.878" timestamp="2026-11-23T07:03:12" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="emptyLibraryShowsNativeImportEntryAndNormalChildBack" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="5.410" />
+    <testcase name="rapidLibraryOpenCloseAndRecreateNeverDuplicatesSecondaryInstance" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="12.486" />
+    <testcase name="renameValidatesEmptyNameAndOnlyChangesLocalAlias" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="7.633" />
+    <testcase name="homeLibraryDetailAndInternalBackReturnToExactCaller" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="11.092" />
+    <testcase name="listRecreationRetainsScrolledPosition" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="5.697" />
+    <testcase name="settingsLibraryBackRetainsPrivacyCategoryAndFourRoots" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="4.770" />
+    <testcase name="persistedRowsDetailsMetadataAndReopenRemainIndependent" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="10.722" />
+    <testcase name="listOverflowRenameUsesConfirmedNativeLocalAlias" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="7.308" />
+    <testcase name="nativeVerifyAndRepairShowCorruptionWithoutBlessingChangedBytes" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="7.837" />
+    <testcase name="deleteConfirmationRetainsOnCancelAndDeletesOnlySelectedRoute" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="8.536" />
+    <testcase name="corruptRouteShowsErrorAndCanBeExplicitlyDeleted" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="4.657" />
+    <testcase name="nativeLibraryAndDetailScreensAllFourThemesBothModes" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="47.690" />
+    <testcase name="detailRecreationRetainsLongDescriptionScrollPosition" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="4.195" />
+    <testcase name="unknownOrDeletedUuidIsExplicitAndCannotMutateOtherRoutes" classname="de.dennisguse.opentracks.p0.routes.P08RouteLibraryUiTest" time="2.845" />
+  </testsuite>
+  <testsuite name="de.dennisguse.opentracks.p0.P071NavigationTest" tests="18" failures="0" errors="0" skipped="0" time="144.769" timestamp="2026-11-23T07:03:12" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="T11_heartDeviceDialogReturnsToHeart" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="8.930" />
+    <testcase name="T06_rapidSwitchLaunchesOnce" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.494" />
+    <testcase name="T04_fourRootCyclesKeepInstances" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="14.804" />
+    <testcase name="T03_settingsToHeart" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.712" />
+    <testcase name="T02_historyToSettings" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.603" />
+    <testcase name="T13_activityRecreationRetainsInternalBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.450" />
+    <testcase name="T05_reselectionDoesNotLaunch" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="4.568" />
+    <testcase name="T09_settingsInternalBackSurvivesRootReturn" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.584" />
+    <testcase name="T14_actualRotationRetainsSelectedRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="4.244" />
+    <testcase name="T17_gpsAndBleInputsPersistWhileSwitching" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="7.919" />
+    <testcase name="T10_historyDetailThenListThenTaskRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.397" />
+    <testcase name="T08_actualApi35EdgeGestureBackgroundsRoot" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="5.931" />
+    <testcase name="T15_backgroundAndForegroundKeepDestination" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.412" />
+    <testcase name="T12_bottomSheetDismissedBeforeTaskBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="3.470" />
+    <testcase name="T01_runToHistory" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="2.878" />
+    <testcase name="T07_systemBackAtEveryRootBackgroundsTask" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="7.251" />
+    <testcase name="T16_recordingContinuesAcrossTabsAndRootBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="15.490" />
+    <testcase name="T18_eightPalettesKeepNavigationAndBack" classname="de.dennisguse.opentracks.p0.P071NavigationTest" time="40.632" />
+  </testsuite>
+</testsuites>

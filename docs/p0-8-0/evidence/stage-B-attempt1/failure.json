@@ -1,0 +1,10 @@
+{
+  "source": "f1692af598f15b1612cdf49fd8812ac40e1c904f",
+  "runId": 45121146783,
+  "artifactId": 14793489034,
+  "artifactSha256": "d946a1f15c97ad7054bff8ac9eb8bc508dfc850f96507145e6dd8b7084062885",
+  "artifactBytes": 527561,
+  "android": {"tests": 14, "executed": 14, "passed": 13, "failures": 1, "errors": 0, "skipped": 0},
+  "reason": "Native isolation test used unsupported Files.writeString while writing evidence after its database/preferences/map equality assertions. Native API35 has no such method. Producer/verification runner also needed compatible Files.readAllBytes rather than readString.",
+  "fix": "Use standard UTF8 byte write/read for evidence, preserve all assertions and production repository. Rerun complete exact-source phase gate; process-kill steps were not executed in attempt1."
+}

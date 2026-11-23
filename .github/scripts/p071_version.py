@@ -15,8 +15,8 @@ BASELINE='cf679d7d7c5870ace7aec0a68b356fc303997273'
 def git(*args):return subprocess.check_output(['git',*args],text=True).strip()
 def allocation():
     rows=ledger_history();old=json.loads(git('show',BASELINE+':release-ledger.json'))['allocations']
-    if rows[:len(old)]!=old or len(rows)!=len(old)+1:raise ValueError('Historical allocations changed')
-    row=rows[-1]
+    if rows[:len(old)]!=old or len(rows)<len(old)+1:raise ValueError('Historical allocations changed')
+    row=rows[len(old)]
     if row['versionName']!=VERSION or row['classification']!='reserved-p071-test' or row['versionCode']!=max(r['versionCode'] for r in old)+1:raise ValueError('Invalid unique P0.7 reservation')
     return row
 

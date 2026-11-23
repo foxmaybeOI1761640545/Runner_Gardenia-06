@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.MapRenderBudgetTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-23T06:54:34.244Z" hostname="ip-10-0-131-81" time="0.018">
+  <properties/>
+  <testcase name="configuredPhoneViewportsFitBudgetAcrossTargetCitiesAndZooms" classname="de.dennisguse.opentracks.p0.MapRenderBudgetTest" time="0.012"/>
+  <testcase name="cacheRetainsItsExplicitByteAndEntryBounds" classname="de.dennisguse.opentracks.p0.MapRenderBudgetTest" time="0.0"/>
+  <testcase name="legacyRotationSquareCanExceedTheBoundedTileCache" classname="de.dennisguse.opentracks.p0.MapRenderBudgetTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

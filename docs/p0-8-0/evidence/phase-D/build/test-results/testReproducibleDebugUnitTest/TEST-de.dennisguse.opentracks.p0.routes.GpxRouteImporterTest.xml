@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" tests="43" skipped="0" failures="0" errors="0" timestamp="2026-11-23T06:54:34.675Z" hostname="ip-10-0-131-81" time="0.942">
+  <properties/>
+  <testcase name="threadCancellationIsRejectedAndClosesOwnedStream" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.025"/>
+  <testcase name="emptyFileIsRejected" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.023"/>
+  <testcase name="repeatedNamesAreExplicitAndWarningGrowthIsBounded" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.041"/>
+  <testcase name="failedOpenIsReadErrorRatherThanEmptyFile" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="standardLinksAndLiteralTimezoneFreeTimeAreRetained" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="prefixedNamespaceWorks" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="utf16EncodingPreservesNamesAndHashesActualBytes" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="multipleRoutesStayIndependentInDocumentOrder" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="actualDefaultRouteBoundaryCountsInvalidRoutes" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.022"/>
+  <testcase name="externalInternalAndParameterDtdAreRejected" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.017"/>
+  <testcase name="emptySegmentsStayExplicit" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.004"/>
+  <testcase name="malformedAndTrailingXmlNeverReturnEarlierValidRoute" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="emptyLinkMetadataConsumesBudgetRatherThanGrowingWithoutBound" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="namespaceFreeCompatibilityIsExplicit" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.003"/>
+  <testcase name="missingOptionalFieldsAndSinglePointHaveNoFabricatedDistance" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.003"/>
+  <testcase name="xmlDepthBoundaryIsEnforcedEvenInsideIgnoredExtensions" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="longDisplayAliasNeverSplitsUnicodeSurrogatePair" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.009"/>
+  <testcase name="actualDefault20000PointBoundaryIncludesInvalidCandidates" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.325"/>
+  <testcase name="exactAndOverByteBudgetAreChecked" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.013"/>
+  <testcase name="coordinateExtremesAndNegativeElevationAreValid" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.011"/>
+  <testcase name="modelIsImmutableAndRenamePreservesOriginalData" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="allInvalidRoutesExposeRejectedPreviewWithReasons" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.006"/>
+  <testcase name="tracksAndSegmentsAreNeverJoinedForDistance" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.006"/>
+  <testcase name="geographyUsesReliableGreatCircleAndHandlesDateLine" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="onePointInEachSegmentHasUnavailableLength" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.004"/>
+  <testcase name="malformedEncodingAndUnknownDeclarationAreRejected" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.023"/>
+  <testcase name="actualDefault16MiBFileBoundaryIsEnforced" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.322"/>
+  <testcase name="actualDefaultSegmentBoundaryCountsEmptySegments" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="schemaLocationIsNeverDownloaded" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="sourceHashCoversOriginalBytesAndMissingFilenameStaysUnknown" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="standaloneWaypointsAreNotRoutes" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="providerReadFailureClosesStreamAndDoesNotExposePartialCandidates" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="standardRteKeepsRouteAndPointMetadataSeparate" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="partialValidityIsVisibleAfterCompleteRead" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="invalidCoordinateInvalidatesWholeCandidateWithoutGapJoining" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.005"/>
+  <testcase name="invalidOptionalElevationIsMarkedInvalidRatherThanDropped" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.0"/>
+  <testcase name="duplicateCoordinatesRetainMetadataAndHaveKnownZeroLength" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="utf8BomIsAccepted" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.0"/>
+  <testcase name="extensionSubtreesAndForeignElementsCannotCreateRoutesOrOverwriteNames" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.0"/>
+  <testcase name="longitudeBoundsAndMissingAttributesAreRejected" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="otherVersionAndForeignRootAreRejected" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <testcase name="multipleTracksAndMixedSourcesRemainSeparate" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.001"/>
+  <testcase name="fieldAndTotalMetadataLimitsHaveExactBoundaries" classname="de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

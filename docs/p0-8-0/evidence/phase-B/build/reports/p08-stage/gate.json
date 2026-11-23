@@ -1,0 +1,492 @@
+{
+  "passed": true,
+  "plan": {
+    "predecessor": {
+      "phase": "A",
+      "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+      "runId": 45116960695,
+      "artifactId": 14792470939,
+      "artifactSha256": "6d567bf876b297d3f6550ced3a7b8c3a603a547e274c461a392f181b0dbee34e",
+      "historicalRawGateRerun": true
+    },
+    "commit": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+    "stage": 4,
+    "phase": "B",
+    "milestone": "P0.8.0 independent GPX routes and foreground route following",
+    "baselineProductSource": "857c744321825a2656d77f45d57c6e43b4334962",
+    "baselineDeliveryHead": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+    "fullRegression": false,
+    "signed": false,
+    "publishing": false,
+    "branch": "feature/p0-8-0-gpx-route-follow",
+    "runId": "45121619436",
+    "versionName": "v0.1.0-p0.8.0",
+    "versionCode": 6782
+  },
+  "helpers": {
+    "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+    "runId": "45121619436",
+    "tests": 175,
+    "executed": 175,
+    "passed": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "jvm": {
+    "tests": 265,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 265,
+    "executed": 265,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.TimezoneEnvironmentUnitTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.chart.HeartRatePlotTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.ForegroundModeTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsMotionFilterTest",
+        "tests": 25,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.GpsReadinessTest",
+        "tests": 20,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.HeartRateSummaryTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapRenderBudgetTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MapViewportTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.MotionFormatTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.OfflineMapFixtureTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.P0PermissionPolicyTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RealMapFileTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.RecordingSessionTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.DashboardMetricLayoutTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.app.RouteGeometryTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.export.HeartRateTimeMatcherTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.GpxRouteImporterTest",
+        "tests": 43,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteCodecTest",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.RouteRepositoryTest",
+        "tests": 34,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleConnectionSessionTest",
+        "tests": 23,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.BleScanSessionTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.sensors.driver.HeartRateMeasurementTest",
+        "tests": 17,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.ui.GardeniaThemeFamilyTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "androidFocused": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "total": 14,
+    "executed": 14,
+    "missingClasses": [],
+    "missingRequiredTests": [],
+    "suites": [
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "failureDetails": [],
+    "passed": true
+  },
+  "parserJvmMethods": [
+    "threadCancellationIsRejectedAndClosesOwnedStream",
+    "emptyFileIsRejected",
+    "repeatedNamesAreExplicitAndWarningGrowthIsBounded",
+    "failedOpenIsReadErrorRatherThanEmptyFile",
+    "standardLinksAndLiteralTimezoneFreeTimeAreRetained",
+    "prefixedNamespaceWorks",
+    "utf16EncodingPreservesNamesAndHashesActualBytes",
+    "multipleRoutesStayIndependentInDocumentOrder",
+    "actualDefaultRouteBoundaryCountsInvalidRoutes",
+    "externalInternalAndParameterDtdAreRejected",
+    "emptySegmentsStayExplicit",
+    "malformedAndTrailingXmlNeverReturnEarlierValidRoute",
+    "emptyLinkMetadataConsumesBudgetRatherThanGrowingWithoutBound",
+    "namespaceFreeCompatibilityIsExplicit",
+    "missingOptionalFieldsAndSinglePointHaveNoFabricatedDistance",
+    "xmlDepthBoundaryIsEnforcedEvenInsideIgnoredExtensions",
+    "longDisplayAliasNeverSplitsUnicodeSurrogatePair",
+    "actualDefault20000PointBoundaryIncludesInvalidCandidates",
+    "exactAndOverByteBudgetAreChecked",
+    "coordinateExtremesAndNegativeElevationAreValid",
+    "modelIsImmutableAndRenamePreservesOriginalData",
+    "allInvalidRoutesExposeRejectedPreviewWithReasons",
+    "tracksAndSegmentsAreNeverJoinedForDistance",
+    "geographyUsesReliableGreatCircleAndHandlesDateLine",
+    "onePointInEachSegmentHasUnavailableLength",
+    "malformedEncodingAndUnknownDeclarationAreRejected",
+    "actualDefault16MiBFileBoundaryIsEnforced",
+    "actualDefaultSegmentBoundaryCountsEmptySegments",
+    "schemaLocationIsNeverDownloaded",
+    "sourceHashCoversOriginalBytesAndMissingFilenameStaysUnknown",
+    "standaloneWaypointsAreNotRoutes",
+    "providerReadFailureClosesStreamAndDoesNotExposePartialCandidates",
+    "standardRteKeepsRouteAndPointMetadataSeparate",
+    "partialValidityIsVisibleAfterCompleteRead",
+    "invalidCoordinateInvalidatesWholeCandidateWithoutGapJoining",
+    "invalidOptionalElevationIsMarkedInvalidRatherThanDropped",
+    "duplicateCoordinatesRetainMetadataAndHaveKnownZeroLength",
+    "utf8BomIsAccepted",
+    "extensionSubtreesAndForeignElementsCannotCreateRoutesOrOverwriteNames",
+    "longitudeBoundsAndMissingAttributesAreRejected",
+    "otherVersionAndForeignRootAreRejected",
+    "multipleTracksAndMixedSourcesRemainSeparate",
+    "fieldAndTotalMetadataLimitsHaveExactBoundaries"
+  ],
+  "androidBudgetMeasurements": {
+    "bytes16MiB": {
+      "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+      "api": 35,
+      "case": "bytes16MiB",
+      "elapsedMillis": 2475,
+      "maxJavaHeapBytes": 201326592,
+      "currentJavaHeapUsedBytes": 137180160,
+      "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+    },
+    "points20000": {
+      "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+      "api": 35,
+      "case": "points20000",
+      "elapsedMillis": 534,
+      "maxJavaHeapBytes": 201326592,
+      "currentJavaHeapUsedBytes": 19383296,
+      "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+    }
+  },
+  "actualProcessDeath": {
+    "passed": true,
+    "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+    "api": 35,
+    "timezone": "Asia/Singapore",
+    "cases": {
+      "addPrepared": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "addPrepared",
+        "checkpoint": "PREPARED",
+        "producerPid": 1863,
+        "recoveryPid": 2299,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addPromoted": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "addPromoted",
+        "checkpoint": "PROMOTED_0",
+        "producerPid": 2372,
+        "recoveryPid": 2430,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addCommitted": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "addCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2494,
+        "recoveryPid": 2541,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002",
+          "00000000-0000-0008-0000-000000000003"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "addGarbage": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "addGarbage",
+        "checkpoint": "JOURNAL_RETIRED",
+        "producerPid": 2590,
+        "recoveryPid": 2645,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002",
+          "00000000-0000-0008-0000-000000000003"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "deleteRetired": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "deleteRetired",
+        "checkpoint": "RETIRED_0",
+        "producerPid": 2684,
+        "recoveryPid": 2734,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001",
+          "00000000-0000-0008-0000-000000000002"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "deleteCommitted": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "deleteCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2773,
+        "recoveryPid": 2823,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "renamePrepared": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "renamePrepared",
+        "checkpoint": "PREPARED",
+        "producerPid": 2862,
+        "recoveryPid": 2909,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": false,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      },
+      "renameCommitted": {
+        "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+        "case": "renameCommitted",
+        "checkpoint": "INDEX_COMMITTED",
+        "producerPid": 2949,
+        "recoveryPid": 2997,
+        "ids": [
+          "00000000-0000-0008-0000-000000000001"
+        ],
+        "committed": true,
+        "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+        "api": 35,
+        "passed": true,
+        "persistentDirectory": "files/route-library",
+        "forceStopped": true,
+        "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+      }
+    },
+    "scope": "Eight externally force-stopped transactions in real private persistent route files. Separate from JUnit counts; no workout database cross-process claim."
+  },
+  "isolation": {
+    "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+    "api": 35,
+    "schema": 43,
+    "before": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "7bbc1c4f4958c7f8da09e76387d0aa2914f941f5639a09b08a2f732a56f248d7"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "6fae728ab71d692cbf7dea8bdb96e35c8867833d5639c1101c665bc4fc0bfdb4"
+      }
+    },
+    "after": {
+      "TRACKS": {
+        "rows": 1,
+        "sha256": "7bbc1c4f4958c7f8da09e76387d0aa2914f941f5639a09b08a2f732a56f248d7"
+      },
+      "TRACKPOINTS": {
+        "rows": 2,
+        "sha256": "8fa3170066c5771c8ae6fadc72bce63aec92d94cb38cc785ee083876b5d3d149"
+      },
+      "HEART_RATE_SAMPLES": {
+        "rows": 3,
+        "sha256": "6fae728ab71d692cbf7dea8bdb96e35c8867833d5639c1101c665bc4fc0bfdb4"
+      }
+    },
+    "preferencesSha256": "fe62f8c7649ec5f3017104a0763638d129bace1c565ec6824d4651d8ccf3a78c",
+    "offlineMapSentinelSha256": "59eaf15d469c7d57e52b01bb372797de460764737af2bfb88101cc13a4199559",
+    "passed": true,
+    "scope": "Actual provider all-row snapshots in TestApplication in-memory SQLite; actual private files/prefs. Real database upgrade and real map remain phaseF."
+  },
+  "scope": "Data/GPX and private route repository only: complete JVM/Python, focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF"
+}

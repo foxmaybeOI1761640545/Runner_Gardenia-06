@@ -1,0 +1,771 @@
+﻿2026-11-23T06:47:40.3633119Z Current runner version: '2.338.2'
+2026-11-23T06:47:40.3649952Z ##[group]Runner Image Provisioner
+2026-11-23T06:47:40.3650761Z Hosted Compute Agent
+2026-11-23T06:47:40.3651204Z Version: 20261111.635
+2026-11-23T06:47:40.3651761Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-23T06:47:40.3652505Z Build Date: 2026-11-11T01:49:01Z
+2026-11-23T06:47:40.3653046Z Worker ID: {f1fe21fc-7b22-4db9-b50c-f6580850e8b8}
+2026-11-23T06:47:40.3653679Z Region: us-west-2
+2026-11-23T06:47:40.3654083Z Cloud: AWS
+2026-11-23T06:47:40.3654462Z ##[endgroup]
+2026-11-23T06:47:40.3655516Z ##[group]Operating System
+2026-11-23T06:47:40.3655971Z Ubuntu
+2026-11-23T06:47:40.3656403Z 24.04.5
+2026-11-23T06:47:40.3656766Z LTS
+2026-11-23T06:47:40.3657131Z ##[endgroup]
+2026-11-23T06:47:40.3657529Z ##[group]Runner Image
+2026-11-23T06:47:40.3657961Z Image: ubuntu-24.04
+2026-11-23T06:47:40.3658394Z Version: 20261116.133.1
+2026-11-23T06:47:40.3659372Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.133/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-23T06:47:40.3660654Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.133
+2026-11-23T06:47:40.3661403Z ##[endgroup]
+2026-11-23T06:47:40.3662517Z ##[group]GITHUB_TOKEN Permissions
+2026-11-23T06:47:40.3664214Z Actions: read
+2026-11-23T06:47:40.3664645Z Contents: read
+2026-11-23T06:47:40.3665047Z Metadata: read
+2026-11-23T06:47:40.3665428Z ##[endgroup]
+2026-11-23T06:47:40.3666923Z Secret source: Actions
+2026-11-23T06:47:40.3667578Z Cache mode: write
+2026-11-23T06:47:40.3668216Z Prepare workflow directory
+2026-11-23T06:47:40.3944001Z Prepare all required actions
+2026-11-23T06:47:40.3979844Z Getting action download info
+2026-11-23T06:47:40.8269548Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-23T06:47:42.2663959Z Download action repository 'actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+2026-11-23T06:47:42.6531517Z Download action repository 'actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-11-23T06:47:43.0781046Z Download action repository 'android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407' (SHA:9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407)
+2026-11-23T06:47:43.3421729Z Download action repository 'gradle/actions@ed408507eac070d1f99cc633dbcf757c94c7933a' (SHA:ed408507eac070d1f99cc633dbcf757c94c7933a)
+2026-11-23T06:47:44.1578007Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-23T06:47:44.3586198Z Complete job name: stage-validation
+2026-11-23T06:47:44.4208808Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-23T06:47:44.4209342Z with:
+2026-11-23T06:47:44.4209588Z   fetch-depth: 0
+2026-11-23T06:47:44.4209859Z   persist-credentials: false
+2026-11-23T06:47:44.4210156Z   repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:47:44.4212079Z   token: ***
+2026-11-23T06:47:44.4212588Z   ssh-strict: true
+2026-11-23T06:47:44.4212823Z   ssh-user: git
+2026-11-23T06:47:44.4213098Z   clean: true
+2026-11-23T06:47:44.4213353Z   sparse-checkout-cone-mode: true
+2026-11-23T06:47:44.4213604Z   fetch-tags: false
+2026-11-23T06:47:44.4213841Z   show-progress: true
+2026-11-23T06:47:44.4214063Z   lfs: false
+2026-11-23T06:47:44.4214280Z   submodules: false
+2026-11-23T06:47:44.4214523Z   set-safe-directory: true
+2026-11-23T06:47:44.4214776Z   allow-unsafe-pr-checkout: false
+2026-11-23T06:47:44.4215186Z env:
+2026-11-23T06:47:44.4215406Z   TZ: Asia/Singapore
+2026-11-23T06:47:44.4215782Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:47:44.4216129Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:47:44.4216401Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:47:44.4216690Z ##[endgroup]
+2026-11-23T06:47:48.1158146Z Syncing repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:47:48.1159581Z ##[group]Getting Git version info
+2026-11-23T06:47:48.1159981Z Working directory is '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-23T06:47:48.1160448Z [command]/usr/bin/git version
+2026-11-23T06:47:48.2699667Z git version 2.56.1
+2026-11-23T06:47:48.2711817Z ##[endgroup]
+2026-11-23T06:47:48.2720377Z Temporarily overriding HOME='/home/runner/work/_temp/73279700-d28e-4011-836a-b7ecf83af53b' before making global git config changes
+2026-11-23T06:47:48.2721201Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-23T06:47:48.2725254Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-23T06:47:48.3049003Z Deleting the contents of '/home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06'
+2026-11-23T06:47:48.3051919Z ##[group]Initializing the repository
+2026-11-23T06:47:48.3055514Z [command]/usr/bin/git init /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-23T06:47:48.3810815Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-23T06:47:48.3811266Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-23T06:47:48.3811779Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-23T06:47:48.3812133Z hint: call:
+2026-11-23T06:47:48.3812476Z hint:
+2026-11-23T06:47:48.3812779Z hint: 	git config --global init.defaultBranch <name>
+2026-11-23T06:47:48.3813012Z hint:
+2026-11-23T06:47:48.3813246Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-23T06:47:48.3813664Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-23T06:47:48.3814011Z hint:
+2026-11-23T06:47:48.3814192Z hint: 	git branch -m <name>
+2026-11-23T06:47:48.3814399Z hint:
+2026-11-23T06:47:48.3814664Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-23T06:47:48.3826263Z Initialized empty Git repository in /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/.git/
+2026-11-23T06:47:48.3833277Z [command]/usr/bin/git remote add origin https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:47:48.3881019Z ##[endgroup]
+2026-11-23T06:47:48.3881523Z ##[group]Disabling automatic garbage collection
+2026-11-23T06:47:48.3884329Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-23T06:47:48.3905042Z ##[endgroup]
+2026-11-23T06:47:48.3905525Z ##[group]Setting up auth
+2026-11-23T06:47:48.3910128Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-23T06:47:48.3941136Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-23T06:47:48.5962908Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-23T06:47:48.5985131Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-23T06:47:48.6134017Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-23T06:47:48.6157121Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-23T06:47:48.6302787Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-23T06:47:48.6327804Z ##[endgroup]
+2026-11-23T06:47:48.6328319Z ##[group]Fetching the repository
+2026-11-23T06:47:48.6339914Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-11-23T06:47:54.0131596Z From https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:47:54.0132183Z  * [new branch]      data/region-map-gd-prd-east-fujian -> origin/data/region-map-gd-prd-east-fujian
+2026-11-23T06:47:54.0133120Z  * [new branch]      design/p0-ui-lab      -> origin/design/p0-ui-lab
+2026-11-23T06:47:54.0133559Z  * [new branch]      feature/heart-rate-monitoring -> origin/feature/heart-rate-monitoring
+2026-11-23T06:47:54.0133927Z  * [new branch]      feature/p0-2-gps-ui   -> origin/feature/p0-2-gps-ui
+2026-11-23T06:47:54.0134378Z  * [new branch]      feature/p0-5-1-gps-motion-quality -> origin/feature/p0-5-1-gps-motion-quality
+2026-11-23T06:47:54.0135059Z  * [new branch]      feature/p0-5-dashboard-settings-history -> origin/feature/p0-5-dashboard-settings-history
+2026-11-23T06:47:54.0135663Z  * [new branch]      feature/p0-6-map-real-validation -> origin/feature/p0-6-map-real-validation
+2026-11-23T06:47:54.0136131Z  * [new branch]      feature/p0-6-offline-map -> origin/feature/p0-6-offline-map
+2026-11-23T06:47:54.0136709Z  * [new branch]      feature/p0-7-to-p1-0-offline-navigation -> origin/feature/p0-7-to-p1-0-offline-navigation
+2026-11-23T06:47:54.0137359Z  * [new branch]      feature/p0-7-to-p1-0-offline-navigation-clean -> origin/feature/p0-7-to-p1-0-offline-navigation-clean
+2026-11-23T06:47:54.0137937Z  * [new branch]      feature/p0-8-0-gpx-route-follow -> origin/feature/p0-8-0-gpx-route-follow
+2026-11-23T06:47:54.0138409Z  * [new branch]      feature/p0-core-migration -> origin/feature/p0-core-migration
+2026-11-23T06:47:54.0138851Z  * [new branch]      feature/theme-system-p0-3 -> origin/feature/theme-system-p0-3
+2026-11-23T06:47:54.0139325Z  * [new branch]      feature/theme-system-p0-3-ui-refinement -> origin/feature/theme-system-p0-3-ui-refinement
+2026-11-23T06:47:54.0139850Z  * [new branch]      fix/p0-7-1-navigation-backstack -> origin/fix/p0-7-1-navigation-backstack
+2026-11-23T06:47:54.0140251Z  * [new branch]      main                  -> origin/main
+2026-11-23T06:47:54.0140632Z  * [new branch]      tools/offline-map-custom-area-build -> origin/tools/offline-map-custom-area-build
+2026-11-23T06:47:54.0141077Z  * [new tag]         test-p0-v0.1.0-p0.1   -> test-p0-v0.1.0-p0.1
+2026-11-23T06:47:54.0141382Z  * [new tag]         test-p0-v0.1.0-p0.2   -> test-p0-v0.1.0-p0.2
+2026-11-23T06:47:54.0141710Z  * [new tag]         test-p0-v0.1.0-p0.3   -> test-p0-v0.1.0-p0.3
+2026-11-23T06:47:54.0142045Z  * [new tag]         test-p0-v0.1.0-p0.4   -> test-p0-v0.1.0-p0.4
+2026-11-23T06:47:54.0142597Z  * [new tag]         test-p0-v0.1.0-p0.5   -> test-p0-v0.1.0-p0.5
+2026-11-23T06:47:54.0143000Z  * [new tag]         test-p0-v0.1.0-p0.5.1 -> test-p0-v0.1.0-p0.5.1
+2026-11-23T06:47:54.0143321Z  * [new tag]         test-p0-v0.1.0-p0.6   -> test-p0-v0.1.0-p0.6
+2026-11-23T06:47:54.0143634Z  * [new tag]         test-p0-v0.1.0-p0.6.1 -> test-p0-v0.1.0-p0.6.1
+2026-11-23T06:47:54.0144098Z  * [new tag]         test-p0-v0.1.0-p0.7.0 -> test-p0-v0.1.0-p0.7.0
+2026-11-23T06:47:54.0144463Z  * [new tag]         test-p0-v0.1.0-p0.7.1 -> test-p0-v0.1.0-p0.7.1
+2026-11-23T06:47:54.0144783Z  * [new tag]         v0.1.0-rc1.4          -> v0.1.0-rc1.4
+2026-11-23T06:47:54.0145075Z  * [new tag]         v0.1.0-rc1.5          -> v0.1.0-rc1.5
+2026-11-23T06:47:54.0145315Z  * [new tag]         v0.1.0-rc1.6          -> v0.1.0-rc1.6
+2026-11-23T06:47:54.0146125Z [command]/usr/bin/git branch --list --remote origin/feature/p0-8-0-gpx-route-follow
+2026-11-23T06:47:54.0183907Z   origin/feature/p0-8-0-gpx-route-follow
+2026-11-23T06:47:54.0190999Z [command]/usr/bin/git rev-parse refs/remotes/origin/feature/p0-8-0-gpx-route-follow
+2026-11-23T06:47:54.0213827Z 3447319aea50f330dd507fab13c84f40eaf4fbf7
+2026-11-23T06:47:54.0215406Z ##[endgroup]
+2026-11-23T06:47:54.0215732Z ##[group]Determining the checkout info
+2026-11-23T06:47:54.0216763Z ##[endgroup]
+2026-11-23T06:47:54.0220809Z [command]/usr/bin/git sparse-checkout disable
+2026-11-23T06:47:54.0273719Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-23T06:47:54.0294162Z ##[group]Checking out the ref
+2026-11-23T06:47:54.0297371Z [command]/usr/bin/git checkout --progress --force -B feature/p0-8-0-gpx-route-follow refs/remotes/origin/feature/p0-8-0-gpx-route-follow
+2026-11-23T06:47:55.0590306Z Updating files:  54% (3820/7052)
+2026-11-23T06:47:55.0792129Z Updating files:  55% (3879/7052)
+2026-11-23T06:47:55.0979235Z Updating files:  56% (3950/7052)
+2026-11-23T06:47:55.1144883Z Updating files:  57% (4020/7052)
+2026-11-23T06:47:55.1286123Z Updating files:  58% (4091/7052)
+2026-11-23T06:47:55.1371059Z Updating files:  59% (4161/7052)
+2026-11-23T06:47:55.1698553Z Updating files:  60% (4232/7052)
+2026-11-23T06:47:55.1910577Z Updating files:  61% (4302/7052)
+2026-11-23T06:47:55.2186065Z Updating files:  62% (4373/7052)
+2026-11-23T06:47:55.2328653Z Updating files:  63% (4443/7052)
+2026-11-23T06:47:55.2730275Z Updating files:  64% (4514/7052)
+2026-11-23T06:47:55.3106831Z Updating files:  65% (4584/7052)
+2026-11-23T06:47:55.3420786Z Updating files:  66% (4655/7052)
+2026-11-23T06:47:55.3577175Z Updating files:  67% (4725/7052)
+2026-11-23T06:47:55.3587411Z Updating files:  68% (4796/7052)
+2026-11-23T06:47:55.3597420Z Updating files:  69% (4866/7052)
+2026-11-23T06:47:55.3607947Z Updating files:  70% (4937/7052)
+2026-11-23T06:47:55.3617050Z Updating files:  71% (5007/7052)
+2026-11-23T06:47:55.3627195Z Updating files:  72% (5078/7052)
+2026-11-23T06:47:55.3854161Z Updating files:  73% (5148/7052)
+2026-11-23T06:47:55.3863837Z Updating files:  74% (5219/7052)
+2026-11-23T06:47:55.3873124Z Updating files:  75% (5289/7052)
+2026-11-23T06:47:55.3884115Z Updating files:  76% (5360/7052)
+2026-11-23T06:47:55.3894609Z Updating files:  77% (5431/7052)
+2026-11-23T06:47:55.3904366Z Updating files:  78% (5501/7052)
+2026-11-23T06:47:55.3913799Z Updating files:  79% (5572/7052)
+2026-11-23T06:47:55.3923755Z Updating files:  80% (5642/7052)
+2026-11-23T06:47:55.3934197Z Updating files:  81% (5713/7052)
+2026-11-23T06:47:55.3945907Z Updating files:  82% (5783/7052)
+2026-11-23T06:47:55.3956260Z Updating files:  83% (5854/7052)
+2026-11-23T06:47:55.3968371Z Updating files:  84% (5924/7052)
+2026-11-23T06:47:55.3980083Z Updating files:  85% (5995/7052)
+2026-11-23T06:47:55.3989235Z Updating files:  86% (6065/7052)
+2026-11-23T06:47:55.3999552Z Updating files:  87% (6136/7052)
+2026-11-23T06:47:55.4275261Z Updating files:  88% (6206/7052)
+2026-11-23T06:47:55.4305620Z Updating files:  89% (6277/7052)
+2026-11-23T06:47:55.4329098Z Updating files:  90% (6347/7052)
+2026-11-23T06:47:55.4354707Z Updating files:  91% (6418/7052)
+2026-11-23T06:47:55.4379511Z Updating files:  92% (6488/7052)
+2026-11-23T06:47:55.4399350Z Updating files:  93% (6559/7052)
+2026-11-23T06:47:55.4420436Z Updating files:  94% (6629/7052)
+2026-11-23T06:47:55.4439576Z Updating files:  95% (6700/7052)
+2026-11-23T06:47:55.4450542Z Updating files:  96% (6770/7052)
+2026-11-23T06:47:55.4489365Z Updating files:  97% (6841/7052)
+2026-11-23T06:47:55.4544359Z Updating files:  98% (6911/7052)
+2026-11-23T06:47:55.4562208Z Updating files:  99% (6982/7052)
+2026-11-23T06:47:55.4562724Z Updating files: 100% (7052/7052)
+2026-11-23T06:47:55.4563057Z Updating files: 100% (7052/7052), done.
+2026-11-23T06:47:55.4663688Z Switched to a new branch 'feature/p0-8-0-gpx-route-follow'
+2026-11-23T06:47:55.4673822Z branch 'feature/p0-8-0-gpx-route-follow' set up to track 'origin/feature/p0-8-0-gpx-route-follow'.
+2026-11-23T06:47:55.4711249Z ##[endgroup]
+2026-11-23T06:47:55.4761186Z [command]/usr/bin/git log -1 --format=%H
+2026-11-23T06:47:55.4781903Z 3447319aea50f330dd507fab13c84f40eaf4fbf7
+2026-11-23T06:47:55.4791211Z ##[group]Removing auth
+2026-11-23T06:47:55.4791873Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-23T06:47:55.4815538Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-23T06:47:55.4975532Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-23T06:47:55.4996287Z http.https://github.com/.extraheader
+2026-11-23T06:47:55.5001975Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-23T06:47:55.5026159Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-23T06:47:55.5179118Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-23T06:47:55.5199785Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-23T06:47:55.5349912Z ##[endgroup]
+2026-11-23T06:47:55.5500835Z ##[group]Run python3 .github/scripts/p08_stage.py prepare
+2026-11-23T06:47:55.5501180Z [36;1mpython3 .github/scripts/p08_stage.py prepare[0m
+2026-11-23T06:47:55.6944191Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-23T06:47:55.6944455Z env:
+2026-11-23T06:47:55.6944632Z   TZ: Asia/Singapore
+2026-11-23T06:47:55.6944873Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:47:55.6945162Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:47:55.6945437Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:47:55.6947352Z   GH_TOKEN: ***
+2026-11-23T06:47:55.6947542Z ##[endgroup]
+2026-11-23T06:48:07.6606781Z ##[group]Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+2026-11-23T06:48:07.6607126Z with:
+2026-11-23T06:48:07.6607286Z   artifact-ids: 14061852955
+2026-11-23T06:48:07.6607472Z   merge-multiple: true
+2026-11-23T06:48:07.6609330Z   github-token: ***
+2026-11-23T06:48:07.6609496Z   run-id: 43470716313
+2026-11-23T06:48:07.6609664Z   path: work/real-map
+2026-11-23T06:48:07.6609872Z   repository: foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:48:07.6610107Z env:
+2026-11-23T06:48:07.6610259Z   TZ: Asia/Singapore
+2026-11-23T06:48:07.6610461Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:07.6610719Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:07.6610953Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:07.6611179Z ##[endgroup]
+2026-11-23T06:48:07.7723396Z Downloading artifacts by ID
+2026-11-23T06:48:07.7726415Z Fetching artifact list for workflow run 43470716313 in repository foxmaybeOI1761640545/Runner_Gardenia-06
+2026-11-23T06:48:07.7793719Z (node:2727) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T06:48:07.7794244Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T06:48:07.8378225Z (node:2727) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-23T06:48:08.1316186Z Found 1 artifact(s)
+2026-11-23T06:48:08.1316766Z Preparing to download the following artifacts:
+2026-11-23T06:48:08.1317374Z - RunnerGardenia-GD-PRD-Zhangzhou-Dongshan (ID: 14061852955, Size: 105859466, Expected Digest: sha256:a00ee8a2f30667b27a33a97a25aea81a22e19cd2d031765c16c54956666209f7)
+2026-11-23T06:48:08.1339988Z Downloading artifact '14061852955' from 'foxmaybeOI1761640545/Runner_Gardenia-06'
+2026-11-23T06:48:08.4712971Z Redirecting to blob download url: https://productionresultssa30.blob.core.windows.net/actions-results/52fafd4a-ec8c-82bd-8712-fd9861a22a2e/workflow-job-run-06ec3a4c-65e1-597b-9371-75217a35cae8/artifacts/79433aa8a5074267690a6554ef0401ab66e13edcc924abbf158a62c7e3f496c8.zip
+2026-11-23T06:48:08.4714048Z Starting download of artifact to: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map
+2026-11-23T06:48:08.8431546Z (node:2727) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-11-23T06:48:16.1285918Z SHA256 digest of downloaded artifact is a00ee8a2f30667b27a33a97a25aea81a22e19cd2d031765c16c54956666209f7
+2026-11-23T06:48:16.1286362Z Artifact download completed successfully.
+2026-11-23T06:48:16.1286813Z Total of 1 artifact(s) downloaded
+2026-11-23T06:48:16.1290461Z Download artifact has finished successfully
+2026-11-23T06:48:16.1394997Z ##[group]Run python3 .github/scripts/p061_real_map.py fixture
+2026-11-23T06:48:16.1395450Z [36;1mpython3 .github/scripts/p061_real_map.py fixture[0m
+2026-11-23T06:48:16.1421790Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-23T06:48:16.1422056Z env:
+2026-11-23T06:48:16.1422231Z   TZ: Asia/Singapore
+2026-11-23T06:48:16.1422764Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:16.1423066Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.1423299Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.1423512Z ##[endgroup]
+2026-11-23T06:48:16.2663591Z {"mapBytes": 105834033, "mapSha256": "5412067262dace98d9f95b02621446516e7d98e1debbb6a314d575cae022ee1e", "testApkOnly": true, "productionApkContainsMap": false}
+2026-11-23T06:48:16.2792801Z ##[group]Run actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+2026-11-23T06:48:16.2793103Z with:
+2026-11-23T06:48:16.2793255Z   distribution: temurin
+2026-11-23T06:48:16.2793422Z   java-version: 21
+2026-11-23T06:48:16.2793587Z   java-package: jdk
+2026-11-23T06:48:16.2793747Z   check-latest: false
+2026-11-23T06:48:16.2793908Z   server-id: github
+2026-11-23T06:48:16.2794089Z   server-username: GITHUB_ACTOR
+2026-11-23T06:48:16.2794279Z   server-password: GITHUB_TOKEN
+2026-11-23T06:48:16.2794473Z   overwrite-settings: true
+2026-11-23T06:48:16.2794681Z   job-status: success
+2026-11-23T06:48:16.2796624Z   token: ***
+2026-11-23T06:48:16.2796792Z env:
+2026-11-23T06:48:16.2796950Z   TZ: Asia/Singapore
+2026-11-23T06:48:16.2797158Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:16.2797416Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.2797643Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.2798135Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:48:16.2798545Z ##[endgroup]
+2026-11-23T06:48:16.4074224Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-23T06:48:16.4082201Z ##[group]Installed distributions
+2026-11-23T06:48:16.4453563Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-23T06:48:16.4453917Z Setting Java 21.0.13+9 as the default
+2026-11-23T06:48:16.4459930Z (node:2743) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T06:48:16.4460647Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T06:48:16.4462267Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-23T06:48:16.4511407Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-23T06:48:16.4511681Z 
+2026-11-23T06:48:16.4511785Z Java configuration:
+2026-11-23T06:48:16.4512042Z   Distribution: temurin
+2026-11-23T06:48:16.4512278Z   Version: 21.0.13+9
+2026-11-23T06:48:16.4512916Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:16.4513222Z 
+2026-11-23T06:48:16.4513582Z ##[endgroup]
+2026-11-23T06:48:16.4528724Z Creating settings.xml with server-id: github
+2026-11-23T06:48:16.4548892Z Writing to /home/runner/.m2/settings.xml
+2026-11-23T06:48:16.4650578Z ##[group]Run android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407
+2026-11-23T06:48:16.4650905Z with:
+2026-11-23T06:48:16.4651073Z   cmdline-tools-version: 16111833
+2026-11-23T06:48:16.4651278Z   packages: platform-tools
+2026-11-23T06:48:16.4651476Z   accept-android-sdk-licenses: true
+2026-11-23T06:48:16.4651697Z   log-accepted-android-sdk-licenses: true
+2026-11-23T06:48:16.4651901Z env:
+2026-11-23T06:48:16.4652047Z   TZ: Asia/Singapore
+2026-11-23T06:48:16.4652245Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:16.4652976Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.4653255Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:16.4653810Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:48:16.4654298Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:16.4654697Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:16.4654983Z ##[endgroup]
+2026-11-23T06:48:16.5913738Z Found preinstalled sdkmanager in /usr/local/lib/android/sdk/cmdline-tools/latest with following source.properties:
+2026-11-23T06:48:16.5914328Z Pkg.Revision=12.0
+2026-11-23T06:48:16.5914580Z Pkg.Path=cmdline-tools;12.0
+2026-11-23T06:48:16.5914873Z Pkg.Desc=Android SDK Command-line Tools
+2026-11-23T06:48:16.5915158Z 
+2026-11-23T06:48:16.5915305Z Wrong version in preinstalled sdkmanager
+2026-11-23T06:48:16.5915918Z Downloading commandline tools from https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip
+2026-11-23T06:48:17.1812133Z [command]/usr/bin/unzip -o -q /home/runner/work/_temp/715583fa-91b6-4cab-82b1-5b6dc852692c
+2026-11-23T06:48:17.9821841Z Accepting Android SDK licenses
+2026-11-23T06:48:17.9826094Z [command]/usr/local/lib/android/sdk/cmdline-tools/16111833/bin/sdkmanager --licenses
+2026-11-23T06:48:17.9873653Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-23T06:48:17.9874396Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-23T06:48:17.9875066Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-23T06:48:17.9875544Z 
+2026-11-23T06:48:17.9875666Z Warning: The --licenses option is no longer needed.
+2026-11-23T06:48:17.9878702Z [command]/usr/local/lib/android/sdk/cmdline-tools/16111833/bin/sdkmanager platform-tools
+2026-11-23T06:48:17.9918171Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-23T06:48:17.9918923Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-23T06:48:17.9919724Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-23T06:48:17.9920285Z 
+2026-11-23T06:48:17.9946294Z Downloading Android CLI...
+2026-11-23T06:48:18.3529258Z Unpacking embedded installation...
+2026-11-23T06:48:19.0304273Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:19.2489528Z 
+2026-11-23T06:48:19.2490552Z Terms of Service and License Agreement for the Android Software Development Kit
+2026-11-23T06:48:19.2490937Z 
+2026-11-23T06:48:19.2491143Z https://developer.android.com/studio/terms
+2026-11-23T06:48:19.2491348Z 
+2026-11-23T06:48:19.2491984Z Google collects usage data for the Android CLI, such as commands, sub-commands, and flags used. This data does not include custom parameters or identifiable information. This information helps improve the tool and is collected in accordance with Google's Privacy Policy.
+2026-11-23T06:48:19.2492940Z 
+2026-11-23T06:48:19.2493089Z https://policies.google.com/privacy
+2026-11-23T06:48:19.2493286Z 
+2026-11-23T06:48:19.2493719Z Disable Android CLI metrics collection by using the --no-metrics flag.
+2026-11-23T06:48:19.2493941Z 
+2026-11-23T06:48:19.2494381Z Tip: For the best experience using Android CLI with agents, we strongly recommend running android init to install the necessary skills and resources.
+2026-11-23T06:48:21.4013020Z 
+2026-11-23T06:48:21.5414022Z https://dl.google.com/android/repository/platform-tools_r37.0.3-linux.zip...
+2026-11-23T06:48:21.5841741Z 
+2026-11-23T06:48:21.7228219Z Unzipping platform-tools......
+2026-11-23T06:48:21.9113967Z Nov 23, 2026 2:48:21 PM java.util.prefs.FileSystemPreferences setupUserRoot
+2026-11-23T06:48:21.9114517Z INFO: Created user preferences directory.
+2026-11-23T06:48:22.3253076Z ##[group]Run sudo timedatectl set-timezone Asia/Singapore
+2026-11-23T06:48:22.3253925Z [36;1msudo timedatectl set-timezone Asia/Singapore[0m
+2026-11-23T06:48:22.3254598Z [36;1msdkmanager 'platform-tools' 'platforms;android-37.0' 'build-tools;36.0.0' 'emulator' 'system-images;android-35;default;x86_64'[0m
+2026-11-23T06:48:22.3255089Z [36;1mtest -c /dev/kvm[0m
+2026-11-23T06:48:22.3255354Z [36;1msudo chmod a+rw /dev/kvm[0m
+2026-11-23T06:48:22.3292030Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-23T06:48:22.3292677Z env:
+2026-11-23T06:48:22.3293064Z   TZ: Asia/Singapore
+2026-11-23T06:48:22.3293430Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:22.3293846Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:22.3294317Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:22.3295097Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:48:22.3296046Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:22.3296717Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:22.3297201Z ##[endgroup]
+2026-11-23T06:48:22.3786833Z WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+2026-11-23T06:48:22.3787803Z The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+2026-11-23T06:48:22.3788569Z To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+2026-11-23T06:48:22.3924632Z 
+2026-11-23T06:48:22.3925090Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:23.4485318Z 
+2026-11-23T06:48:24.9156464Z https://dl.google.com/android/repository/emulator-linux_x64-16970787.zip...
+2026-11-23T06:48:25.1665024Z 
+2026-11-23T06:48:26.6824702Z https://dl.google.com/android/repository/sys-img/android/x86_64-35_r02.zip...
+2026-11-23T06:48:27.2017887Z 
+2026-11-23T06:48:31.1468240Z Unzipping emulator......
+2026-11-23T06:48:31.1648520Z 
+2026-11-23T06:48:38.4748796Z Unzipping system-images/android-35/default/x86_64......
+2026-11-23T06:48:38.7387035Z ##[group]Run gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
+2026-11-23T06:48:38.7387404Z with:
+2026-11-23T06:48:38.7387605Z   cache-read-only: true
+2026-11-23T06:48:38.7387877Z   cache-disabled: false
+2026-11-23T06:48:38.7388114Z   cache-write-only: false
+2026-11-23T06:48:38.7388397Z   cache-overwrite-existing: false
+2026-11-23T06:48:38.7388650Z   cache-cleanup: on-success
+2026-11-23T06:48:38.7388908Z   gradle-home-cache-includes: caches
+notifications
+
+2026-11-23T06:48:38.7389269Z   add-job-summary: always
+2026-11-23T06:48:38.7389523Z   add-job-summary-as-pr-comment: never
+2026-11-23T06:48:38.7389796Z   dependency-graph: disabled
+2026-11-23T06:48:38.7390094Z   dependency-graph-report-dir: dependency-graph-reports
+2026-11-23T06:48:38.7390421Z   dependency-graph-continue-on-failure: true
+2026-11-23T06:48:38.7390778Z   build-scan-publish: false
+2026-11-23T06:48:38.7391022Z   validate-wrappers: true
+2026-11-23T06:48:38.7391268Z   allow-snapshot-wrappers: false
+2026-11-23T06:48:38.7391783Z   gradle-home-cache-strict-match: false
+2026-11-23T06:48:38.7392052Z   workflow-job-context: null
+2026-11-23T06:48:38.7394057Z   github-token: ***
+2026-11-23T06:48:38.7394279Z env:
+2026-11-23T06:48:38.7394501Z   TZ: Asia/Singapore
+2026-11-23T06:48:38.7394785Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:38.7395222Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:38.7395541Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:38.7396088Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:48:38.7396654Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:38.7397079Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:38.7397571Z ##[endgroup]
+2026-11-23T06:48:40.5641008Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-11-23T06:48:40.5642722Z ##[group]Restore Gradle state from cache
+2026-11-23T06:48:40.8352082Z Cache hit for restore-key: gradle-home-v1|Linux-X64|checks[b62b1fa94337b6a044a4008ed33997cd]-9b5d7b06afc1eb8e3315ba73874ac088fa4d5169
+2026-11-23T06:48:42.1681550Z Received 0 of 2771329 (0.0%), 0.0 MBs/sec
+2026-11-23T06:48:42.4666911Z Received 2771329 of 2771329 (100.0%), 2.0 MBs/sec
+2026-11-23T06:48:42.4667891Z Cache Size: ~3 MB (2771329 B)
+2026-11-23T06:48:42.4691424Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c77e2a8f-deb0-49b0-96cd-6e1700afb186/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:42.5047821Z Cache restored successfully
+2026-11-23T06:48:42.5051280Z Restored cache entry with key gradle-home-v1|Linux-X64|stage-validation[b44ad5e8a02bedfc00244278bc8a5f43]-3447319aea50f330dd507fab13c84f40eaf4fbf7 to /home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle in 1940ms
+2026-11-23T06:48:42.7550535Z Cache hit for: gradle-transforms-v1-dd254fbddf537533bc075bf987098a2b
+2026-11-23T06:48:42.7780792Z Cache hit for: gradle-instrumented-jars-v1-2acd68183c6b1a1ea11d9fe9bc40a223
+2026-11-23T06:48:42.7810428Z Cache hit for: gradle-groovy-dsl-v1-231b11dd6349bde3953d023b942b6e56
+2026-11-23T06:48:42.7854104Z Cache hit for: gradle-dependencies-v1-910895821ab2069246b4ddf4fc18ffa4
+2026-11-23T06:48:42.8016595Z Cache hit for: gradle-wrapper-zips-v1-0745be66ec2c2a083a82d587fa4f7d57
+2026-11-23T06:48:43.6007681Z Received 82706 of 82706 (100.0%), 0.2 MBs/sec
+2026-11-23T06:48:43.6008284Z Cache Size: ~0 MB (82706 B)
+2026-11-23T06:48:43.6021351Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5b867f72-36f2-4802-9bbf-99d71ffe8588/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:43.6092816Z Cache restored successfully
+2026-11-23T06:48:43.6095240Z Restored cache entry with key gradle-instrumented-jars-v1-2acd68183c6b1a1ea11d9fe9bc40a223 to /home/runner/.gradle/caches/jars-*/*/ in 1104ms
+2026-11-23T06:48:43.6558034Z Received 125969 of 125969 (100.0%), 0.2 MBs/sec
+2026-11-23T06:48:43.6558620Z Cache Size: ~0 MB (125969 B)
+2026-11-23T06:48:43.6568676Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6404f578-2f2d-4ba1-bd34-6490de81550c/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:43.6649392Z Cache restored successfully
+2026-11-23T06:48:43.6650923Z Restored cache entry with key gradle-groovy-dsl-v1-231b11dd6349bde3953d023b942b6e56 to /home/runner/.gradle/caches/*/groovy-dsl/*/ in 1159ms
+2026-11-23T06:48:44.0825919Z Received 0 of 112909138 (0.0%), 0.0 MBs/sec
+2026-11-23T06:48:44.1238623Z Received 0 of 240685149 (0.0%), 0.0 MBs/sec
+2026-11-23T06:48:44.2091232Z Received 0 of 150819961 (0.0%), 0.0 MBs/sec
+2026-11-23T06:48:45.0837078Z Received 75497472 of 112909138 (66.9%), 36.0 MBs/sec
+2026-11-23T06:48:45.1238698Z Received 75497472 of 240685149 (31.4%), 36.0 MBs/sec
+2026-11-23T06:48:45.2086035Z Received 79691776 of 150819961 (52.8%), 38.0 MBs/sec
+2026-11-23T06:48:46.0845269Z Received 108714834 of 112909138 (96.3%), 34.5 MBs/sec
+2026-11-23T06:48:46.1244110Z Received 180355072 of 240685149 (74.9%), 57.3 MBs/sec
+2026-11-23T06:48:46.1472662Z Received 150819961 of 150819961 (100.0%), 49.0 MBs/sec
+2026-11-23T06:48:46.1474687Z Cache Size: ~144 MB (150819961 B)
+2026-11-23T06:48:46.1619966Z [command]/usr/bin/tar -xf /home/runner/work/_temp/890e3d8e-495e-4d9c-b883-b8a6aac079d5/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:46.3204276Z Cache restored successfully
+2026-11-23T06:48:46.3321421Z Restored cache entry with key gradle-wrapper-zips-v1-0745be66ec2c2a083a82d587fa4f7d57 to /home/runner/.gradle/wrapper/dists/gradle-9.8.2-bin/8wepis63pzuhrlfaiy04bagwu in 3826ms
+2026-11-23T06:48:46.6903087Z Received 240685149 of 240685149 (100.0%), 64.3 MBs/sec
+2026-11-23T06:48:46.6904223Z Cache Size: ~230 MB (240685149 B)
+2026-11-23T06:48:46.7030079Z [command]/usr/bin/tar -xf /home/runner/work/_temp/688d93fa-e265-4405-bf4b-e9bac12db23b/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:46.8728573Z Cache restored successfully
+2026-11-23T06:48:46.8800284Z Restored cache entry with key gradle-dependencies-v1-910895821ab2069246b4ddf4fc18ffa4 to /home/runner/.gradle/caches/modules-*/files-*/*/*/*/* in 4374ms
+2026-11-23T06:48:47.0846615Z Received 108714834 of 112909138 (96.3%), 25.9 MBs/sec
+2026-11-23T06:48:48.0850435Z Received 108714834 of 112909138 (96.3%), 20.7 MBs/sec
+2026-11-23T06:48:48.6325281Z Received 112909138 of 112909138 (100.0%), 19.4 MBs/sec
+2026-11-23T06:48:48.6325853Z Cache Size: ~108 MB (112909138 B)
+2026-11-23T06:48:48.6336669Z [command]/usr/bin/tar -xf /home/runner/work/_temp/58893358-a8f6-438f-b23d-16de8ba90749/cache.tzst -P -C /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06 --use-compress-program unzstd
+2026-11-23T06:48:49.1848872Z Cache restored successfully
+2026-11-23T06:48:49.1889941Z Restored cache entry with key gradle-transforms-v1-dd254fbddf537533bc075bf987098a2b to /home/runner/.gradle/caches/transforms-4/*/,/home/runner/.gradle/caches/*/transforms/*/ in 6682ms
+2026-11-23T06:48:49.1978955Z ##[endgroup]
+2026-11-23T06:48:49.2587107Z ##[group]All Gradle Wrapper jars are valid
+2026-11-23T06:48:49.2588374Z ✓ Found known Gradle Wrapper JAR files:
+2026-11-23T06:48:49.2589200Z   b3a875ddc1f044746e1b1a55f645584505f4a10438c1afea9f15e92a7c42ec13 gradle/wrapper/gradle-wrapper.jar
+2026-11-23T06:48:49.2590189Z ##[endgroup]
+2026-11-23T06:48:49.2749822Z ##[group]Run ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
+2026-11-23T06:48:49.2751019Z [36;1m./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac[0m
+2026-11-23T06:48:49.2778028Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-23T06:48:49.2778401Z env:
+2026-11-23T06:48:49.2778680Z   TZ: Asia/Singapore
+2026-11-23T06:48:49.2778999Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:49.2779439Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:48:49.2779784Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:48:49.2780345Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:48:49.2781043Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:49.2781545Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:48:49.2781976Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-11-23T06:48:49.2782499Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-11-23T06:48:49.2782857Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-11-23T06:48:49.2783239Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-11-23T06:48:49.2783669Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-11-23T06:48:49.2784139Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-11-23T06:48:49.2784503Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-11-23T06:48:49.2784860Z ##[endgroup]
+2026-11-23T06:48:49.2902699Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:48:50.5648328Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-11-23T06:48:51.5641420Z Daemon will be stopped at the end of the build 
+2026-11-23T06:49:00.3641208Z > Task :clean UP-TO-DATE
+2026-11-23T06:49:00.3641701Z > Task :preBuild UP-TO-DATE
+2026-11-23T06:49:00.3644833Z > Task :preReproducibleDebugBuild UP-TO-DATE
+2026-11-23T06:49:00.3645314Z > Task :mergeReproducibleDebugNativeDebugMetadata NO-SOURCE
+2026-11-23T06:49:01.9664490Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebug
+2026-11-23T06:49:01.9679231Z > Task :generateReproducibleDebugResValues
+2026-11-23T06:49:02.0632008Z > Task :extractReproducibleDebugSupportedLocales
+2026-11-23T06:49:02.0638111Z > Task :mapReproducibleDebugSourceSetPaths
+2026-11-23T06:49:03.6635924Z > Task :generateReproducibleDebugResources
+2026-11-23T06:49:03.6660170Z > Task :generateReproducibleDebugLocaleConfig
+2026-11-23T06:49:03.6683937Z > Task :processReproducibleDebugNavigationResources
+2026-11-23T06:49:06.6674423Z > Task :packageReproducibleDebugResources
+2026-11-23T06:49:07.2674411Z > Task :generateReproducibleDebugBuildConfig
+2026-11-23T06:49:07.2694718Z > Task :generateReproducibleDebugAssets UP-TO-DATE
+2026-11-23T06:49:07.2713760Z > Task :javaPreCompileReproducibleDebug
+2026-11-23T06:49:07.2774356Z > Task :mergeReproducibleDebugResources
+2026-11-23T06:49:07.3640848Z > Task :mergeReproducibleDebugAssets
+2026-11-23T06:49:07.3693612Z > Task :compressReproducibleDebugAssets
+2026-11-23T06:49:07.4636104Z > Task :parseReproducibleDebugLocalResources
+2026-11-23T06:49:09.2633210Z > Task :generateReproducibleDebugGlobalSynthetics
+2026-11-23T06:49:09.6634037Z > Task :dataBindingGenBaseClassesReproducibleDebug
+2026-11-23T06:49:09.6634556Z > Task :generateReproducibleDebugRFile
+2026-11-23T06:49:10.1635929Z > Task :compileReproducibleDebugKotlin NO-SOURCE
+2026-11-23T06:49:11.2631771Z > Task :l8DexDesugarLibReproducibleDebug
+2026-11-23T06:49:14.9664473Z Note: Some input files use or override a deprecated API.
+2026-11-23T06:49:14.9665358Z 
+2026-11-23T06:49:14.9666151Z > Task :compileReproducibleDebugJavaWithJavac
+2026-11-23T06:49:14.9685823Z Note: Recompile with -Xlint:deprecation for details.
+2026-11-23T06:49:14.9693875Z Note: Some input files use unchecked or unsafe operations.
+2026-11-23T06:49:14.9723438Z Note: Recompile with -Xlint:unchecked for details.
+2026-11-23T06:49:15.6643123Z 
+2026-11-23T06:49:15.6658789Z > Task :desugarReproducibleDebugFileDependencies
+2026-11-23T06:49:15.6687784Z > Task :checkReproducibleDebugDuplicateClasses
+2026-11-23T06:49:15.7648084Z > Task :checkReproducibleDebugAarMetadata
+2026-11-23T06:49:18.6651607Z > Task :mergeLibDexReproducibleDebug
+2026-11-23T06:49:18.6684355Z > Task :compileReproducibleDebugNavigationResources
+2026-11-23T06:49:18.6686205Z > Task :createReproducibleDebugCompatibleScreenManifests
+2026-11-23T06:49:18.6686916Z > Task :extractDeepLinksReproducibleDebug
+2026-11-23T06:49:19.1653110Z 
+2026-11-23T06:49:19.1683810Z > Task :processReproducibleDebugMainManifest
+2026-11-23T06:49:19.1743822Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/debug/AndroidManifest.xml Warning:
+2026-11-23T06:49:19.1745510Z 	uses-permission#android.permission.INTERNET was tagged at AndroidManifest.xml:0 to remove other declarations but no other declaration present
+2026-11-23T06:49:19.3635583Z 
+2026-11-23T06:49:19.3649627Z > Task :processReproducibleDebugManifest
+2026-11-23T06:49:19.4636738Z > Task :compressReproducibleDebugJavaRes NO-SOURCE
+2026-11-23T06:49:19.7681981Z > Task :processReproducibleDebugManifestForPackage
+2026-11-23T06:49:19.8644474Z > Task :mergeReproducibleDebugJavaResource
+2026-11-23T06:49:19.8703954Z > Task :mergeReproducibleDebugJniLibFolders
+2026-11-23T06:49:19.9664367Z > Task :mergeReproducibleDebugNativeLibs NO-SOURCE
+2026-11-23T06:49:19.9673779Z > Task :stripReproducibleDebugDebugSymbols NO-SOURCE
+2026-11-23T06:49:21.5648358Z > Task :processReproducibleDebugResources
+2026-11-23T06:49:21.7673697Z > Task :validateSigningReproducibleDebug
+2026-11-23T06:49:24.5674265Z > Task :mergeExtDexReproducibleDebug
+2026-11-23T06:49:26.5664079Z > Task :dexBuilderReproducibleDebug
+2026-11-23T06:49:26.5673917Z > Task :writeReproducibleDebugAppMetadata
+2026-11-23T06:49:26.5723275Z > Task :writeReproducibleDebugSigningConfigVersions
+2026-11-23T06:49:26.5753400Z > Task :preReproducibleDebugAndroidTestBuild SKIPPED
+2026-11-23T06:49:26.5783337Z > Task :generateReproducibleDebugAndroidTestResValues
+2026-11-23T06:49:26.5813226Z > Task :extractProguardFiles
+2026-11-23T06:49:26.8644283Z > Task :bundleReproducibleDebugClassesToCompileJar
+2026-11-23T06:49:26.8663889Z > Task :mergeProjectDexReproducibleDebug
+2026-11-23T06:49:26.9634187Z > Task :generateReproducibleDebugLintReportModel
+2026-11-23T06:49:27.5655818Z > Task :generateReproducibleDebugAndroidTestLintModel
+2026-11-23T06:49:27.5683924Z > Task :preReproducibleDebugUnitTestBuild UP-TO-DATE
+2026-11-23T06:49:27.6640854Z > Task :generateReproducibleDebugUnitTestLintModel
+2026-11-23T06:49:27.7654007Z > Task :packageReproducibleDebug
+2026-11-23T06:49:27.7658417Z > Task :createReproducibleDebugApkListingFileRedirect
+2026-11-23T06:49:27.7659393Z > Task :assembleReproducibleDebug
+2026-11-23T06:49:27.7660112Z > Task :compileReproducibleDebugUnitTestKotlin NO-SOURCE
+2026-11-23T06:49:27.7660939Z > Task :javaPreCompileReproducibleDebugUnitTest
+2026-11-23T06:49:27.7661683Z > Task :compressReproducibleDebugUnitTestJavaRes NO-SOURCE
+2026-11-23T06:49:27.7662756Z > Task :bundleReproducibleDebugClassesToRuntimeJar
+2026-11-23T06:49:28.3664543Z > Task :compileReproducibleDebugUnitTestJavaWithJavac
+2026-11-23T06:49:28.3687441Z > Task :extractReproducibleDebugUnitTestJavaRes
+2026-11-23T06:49:30.3664996Z Picked up JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:49:30.3665530Z 
+2026-11-23T06:49:30.3673695Z > Task :testReproducibleDebugUnitTest
+2026-11-23T06:49:35.7653167Z 
+2026-11-23T06:49:35.7694338Z > Task :dataBindingMergeDependencyArtifactsReproducibleDebugAndroidTest
+2026-11-23T06:49:35.7696105Z > Task :generateReproducibleDebugAndroidTestResources
+2026-11-23T06:49:35.8642777Z > Task :mergeReproducibleDebugAndroidTestResources
+2026-11-23T06:49:35.9641489Z > Task :mergeReproducibleDebugAndroidTestManifest
+2026-11-23T06:49:35.9673731Z > Task :dataBindingGenBaseClassesReproducibleDebugAndroidTest
+2026-11-23T06:49:35.9690086Z > Task :processReproducibleDebugAndroidTestManifest
+2026-11-23T06:49:35.9691149Z > Task :generateReproducibleDebugAndroidTestBuildConfig
+2026-11-23T06:49:35.9692095Z > Task :packageReproducibleDebugAndroidTestResources
+2026-11-23T06:49:35.9693179Z > Task :processReproducibleDebugAndroidTestNavigationResources
+2026-11-23T06:49:35.9700909Z > Task :javaPreCompileReproducibleDebugAndroidTest
+2026-11-23T06:49:35.9753232Z > Task :parseReproducibleDebugAndroidTestLocalResources
+2026-11-23T06:49:35.9754061Z > Task :generateReproducibleDebugAndroidTestRFile
+2026-11-23T06:49:35.9783467Z > Task :compileReproducibleDebugAndroidTestKotlin NO-SOURCE
+2026-11-23T06:49:37.9631758Z 
+2026-11-23T06:49:37.9633512Z > Task :compileReproducibleDebugAndroidTestJavaWithJavac
+2026-11-23T06:49:37.9635378Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:73: error: 'void' type not allowed here
+2026-11-23T06:49:37.9637734Z             loaded(await(RouteDetailActivity.class));onView(withId(R.id.p08_detail_rename)).perform(click());onView(withId(R.id.p08_rename_input)).perform(replaceText(""),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:37.9639551Z                                                                                                                                                                                             ^
+2026-11-23T06:49:37.9641567Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:73: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:37.9643731Z             loaded(await(RouteDetailActivity.class));onView(withId(R.id.p08_detail_rename)).perform(click());onView(withId(R.id.p08_rename_input)).perform(replaceText(""),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:37.9645266Z                                                                                                                                                                            ^
+2026-11-23T06:49:37.9674386Z   both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:37.9704574Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:74: error: 'void' type not allowed here
+2026-11-23T06:49:37.9765445Z             onView(withId(R.id.p08_rename_input)).check((view,error)->{assertNull(error);assertNotNull(((EditText)view).getError());});onView(withId(R.id.p08_rename_input)).perform(replaceText("海边计划 — local"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:37.9833757Z                                                                                                                                                                                                                                   ^
+2026-11-23T06:49:37.9863842Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:74: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:37.9924601Z             onView(withId(R.id.p08_rename_input)).check((view,error)->{assertNull(error);assertNotNull(((EditText)view).getError());});onView(withId(R.id.p08_rename_input)).perform(replaceText("海边计划 — local"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:37.9947681Z                                                                                                                                                                                                                  ^
+2026-11-23T06:49:37.9983384Z   both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:38.0014100Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:124: error: 'void' type not allowed here
+2026-11-23T06:49:38.0045230Z             loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());await(RouteDetailActivity.class);onView(withId(R.id.p08_rename_input)).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
+2026-11-23T06:49:38.0403764Z                                                                                                                                                                                                                                                                                                  ^
+2026-11-23T06:49:38.0433922Z /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:124: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:38.0453141Z             loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());await(RouteDetailActivity.class);onView(withId(R.id.p08_rename_input)).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
+2026-11-23T06:49:38.0493654Z                                                                                                                                                                                                                                                                                 ^
+2026-11-23T06:49:38.0523322Z   both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:38.0647081Z Note: Some input files use or override a deprecated API.
+2026-11-23T06:49:38.0648843Z Note: Recompile with -Xlint:deprecation for details.
+2026-11-23T06:49:38.0649357Z 6 errors
+2026-11-23T06:49:38.1653065Z 
+2026-11-23T06:49:38.1653880Z > Task :compileReproducibleDebugAndroidTestJavaWithJavac FAILED
+2026-11-23T06:49:54.9635652Z > Task :lintAnalyzeReproducibleDebug
+2026-11-23T06:49:55.0640215Z 
+2026-11-23T06:49:55.0641221Z gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1795416533042.json
+2026-11-23T06:49:55.0642910Z 
+2026-11-23T06:49:55.0644041Z [Incubating] Problems report is available at: file:///home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/build/reports/problems/problems-report.html
+2026-11-23T06:49:55.0649209Z 
+2026-11-23T06:49:55.0649965Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+2026-11-23T06:49:55.0655098Z FAILURE: Build failed with an exception.
+2026-11-23T06:49:55.0655405Z 
+2026-11-23T06:49:55.0656279Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-11-23T06:49:55.0657257Z 
+2026-11-23T06:49:55.0658224Z For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-11-23T06:49:55.0659292Z 66 actionable tasks: 65 executed, 1 up-to-date
+2026-11-23T06:49:55.0661252Z 
+2026-11-23T06:49:55.0661467Z * What went wrong:
+2026-11-23T06:49:55.0662880Z Execution failed for task ':compileReproducibleDebugAndroidTestJavaWithJavac' (registered by plugin 'com.android.internal.application').
+2026-11-23T06:49:55.0663859Z > Compilation failed; see the compiler output below.
+2026-11-23T06:49:55.0665040Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:73: error: 'void' type not allowed here
+2026-11-23T06:49:55.0667187Z               loaded(await(RouteDetailActivity.class));onView(withId(R.id.p08_detail_rename)).perform(click());onView(withId(R.id.p08_rename_input)).perform(replaceText(""),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:55.0668888Z                                                                                                                                                                                               ^
+2026-11-23T06:49:55.0670267Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:74: error: 'void' type not allowed here
+2026-11-23T06:49:55.0673498Z               onView(withId(R.id.p08_rename_input)).check((view,error)->{assertNull(error);assertNotNull(((EditText)view).getError());});onView(withId(R.id.p08_rename_input)).perform(replaceText("海边计划 — local"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:55.0675462Z                                                                                                                                                                                                                                     ^
+2026-11-23T06:49:55.0676884Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:124: error: 'void' type not allowed here
+2026-11-23T06:49:55.0680258Z               loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());await(RouteDetailActivity.class);onView(withId(R.id.p08_rename_input)).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
+2026-11-23T06:49:55.0683591Z                                                                                                                                                                                                                                                                                                    ^
+2026-11-23T06:49:55.0685185Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:73: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:55.0687338Z               loaded(await(RouteDetailActivity.class));onView(withId(R.id.p08_detail_rename)).perform(click());onView(withId(R.id.p08_rename_input)).perform(replaceText(""),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:55.0688931Z                                                                                                                                                                              ^
+2026-11-23T06:49:55.0689809Z     both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:55.0691269Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:74: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:55.0694449Z               onView(withId(R.id.p08_rename_input)).check((view,error)->{assertNull(error);assertNotNull(((EditText)view).getError());});onView(withId(R.id.p08_rename_input)).perform(replaceText("海边计划 — local"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());
+2026-11-23T06:49:55.0696248Z                                                                                                                                                                                                                    ^
+2026-11-23T06:49:55.0697193Z     both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:55.0698880Z   /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteLibraryUiTest.java:124: error: reference to closeSoftKeyboard is ambiguous
+2026-11-23T06:49:55.0702125Z               loaded(await(RouteLibraryActivity.class));onView(withId(R.id.p08_route_more)).perform(click());onView(withText(R.string.p08_rename_route)).perform(click());await(RouteDetailActivity.class);onView(withId(R.id.p08_rename_input)).perform(replaceText("From list"),closeSoftKeyboard());onView(withId(android.R.id.button1)).inRoot(isDialog()).perform(click());loaded(await(RouteDetailActivity.class));assertEquals("From list",repo().get(P08RouteRepositoryPlatformTest.fixture(1).id()).displayName());
+2026-11-23T06:49:55.0705041Z                                                                                                                                                                                                                                                                                   ^
+2026-11-23T06:49:55.0706272Z     both method closeSoftKeyboard() in Espresso and method closeSoftKeyboard() in ViewActions match
+2026-11-23T06:49:55.0707005Z   Note: Some input files use or override a deprecated API.
+2026-11-23T06:49:55.0707548Z   Note: Recompile with -Xlint:deprecation for details.
+2026-11-23T06:49:55.0707940Z   6 errors
+2026-11-23T06:49:55.0708088Z 
+2026-11-23T06:49:55.0708194Z * Try:
+2026-11-23T06:49:55.0708631Z > Check your code and dependencies to fix the compilation error(s)
+2026-11-23T06:49:55.0709338Z > Run with --scan to get full insights from a Build Scan (powered by Develocity).
+2026-11-23T06:49:55.0709724Z 
+2026-11-23T06:49:55.0709874Z BUILD FAILED in 1m 5s
+2026-11-23T06:49:55.4829121Z ##[error]Process completed with exit code 1.
+2026-11-23T06:49:55.4867415Z ##[group]Run python3 .github/scripts/p08_stage.py gate
+2026-11-23T06:49:55.4867847Z [36;1mpython3 .github/scripts/p08_stage.py gate[0m
+2026-11-23T06:49:55.4895073Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-23T06:49:55.4895362Z env:
+2026-11-23T06:49:55.4895550Z   TZ: Asia/Singapore
+2026-11-23T06:49:55.4895775Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:49:55.4896049Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:49:55.4896305Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:49:55.4896785Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:49:55.4897332Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:49:55.4897737Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:49:55.4898089Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-11-23T06:49:55.4898388Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-11-23T06:49:55.4898643Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-11-23T06:49:55.4898897Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-11-23T06:49:55.4899256Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-11-23T06:49:55.4899644Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-11-23T06:49:55.4899908Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-11-23T06:49:55.4900138Z ##[endgroup]
+2026-11-23T06:49:55.5471258Z P08 phase acceptance blocked
+2026-11-23T06:49:55.5471637Z {
+2026-11-23T06:49:55.5471923Z   "passed": false,
+2026-11-23T06:49:55.5472153Z   "plan": {
+2026-11-23T06:49:55.5472620Z     "predecessor": {
+2026-11-23T06:49:55.5472915Z       "phase": "C",
+2026-11-23T06:49:55.5473261Z       "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+2026-11-23T06:49:55.5473642Z       "runId": 45123727015,
+2026-11-23T06:49:55.5473942Z       "artifactId": 14795525179,
+2026-11-23T06:49:55.5474479Z       "artifactSha256": "f3e0bd3faa5281fe3dc09801813c21347847b9bad3a2f2fbb25dd814d3e0b75f",
+2026-11-23T06:49:55.5474992Z       "historicalRawGateRerun": true
+2026-11-23T06:49:55.5475369Z     },
+2026-11-23T06:49:55.5475639Z     "commit": "3447319aea50f330dd507fab13c84f40eaf4fbf7",
+2026-11-23T06:49:55.5475913Z     "stage": 4,
+2026-11-23T06:49:55.5476114Z     "phase": "D",
+2026-11-23T06:49:55.5476454Z     "milestone": "P0.8.0 independent GPX routes and foreground route following",
+2026-11-23T06:49:55.5476898Z     "baselineProductSource": "857c744321825a2656d77f45d57c6e43b4334962",
+2026-11-23T06:49:55.5477327Z     "baselineDeliveryHead": "f2d57b7440dca0350813313ad9e7ef4a12e55fa6",
+2026-11-23T06:49:55.5477652Z     "fullRegression": false,
+2026-11-23T06:49:55.5477882Z     "signed": false,
+2026-11-23T06:49:55.5478098Z     "publishing": false,
+2026-11-23T06:49:55.5478368Z     "branch": "feature/p0-8-0-gpx-route-follow",
+2026-11-23T06:49:55.5478645Z     "runId": "45126518915",
+2026-11-23T06:49:55.5478894Z     "versionName": "v0.1.0-p0.8.0",
+2026-11-23T06:49:55.5479151Z     "versionCode": 6782
+2026-11-23T06:49:55.5479344Z   },
+2026-11-23T06:49:55.5479622Z   "error": "FileNotFoundError(2, 'No such file or directory')"
+2026-11-23T06:49:55.5479898Z }
+2026-11-23T06:49:55.5564243Z ##[error]Process completed with exit code 1.
+2026-11-23T06:49:55.5611229Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-11-23T06:49:55.5611554Z with:
+2026-11-23T06:49:55.5611745Z   name: P08-phase-D-45126518915-1
+2026-11-23T06:49:55.5612731Z   path: release-plan.json
+build/reports/
+build/test-results/
+build/outputs/androidTest-results/
+build/outputs/**/p08-parser/
+build/outputs/**/p08-repository/
+build/outputs/**/p08-import/
+build/outputs/**/p08-library/
+build/outputs/**/p0-ui/
+
+2026-11-23T06:49:55.5613458Z   if-no-files-found: error
+2026-11-23T06:49:55.5613673Z   retention-days: 90
+2026-11-23T06:49:55.5613873Z   compression-level: 6
+2026-11-23T06:49:55.5614061Z   overwrite: false
+2026-11-23T06:49:55.5614251Z   include-hidden-files: false
+2026-11-23T06:49:55.5614604Z env:
+2026-11-23T06:49:55.5614778Z   TZ: Asia/Singapore
+2026-11-23T06:49:55.5615007Z   JAVA_TOOL_OPTIONS: -Duser.timezone=Asia/Singapore
+2026-11-23T06:49:55.5615278Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-11-23T06:49:55.5615564Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-11-23T06:49:55.5616021Z   RG_REAL_MAP: /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06/work/real-map/RunnerGardenia_GD_PRD_Zhangzhou_Dongshan.map
+2026-11-23T06:49:55.5616534Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:49:55.5616947Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-23T06:49:55.5617289Z   GRADLE_ACTION_ID: gradle/actions/setup-gradle
+2026-11-23T06:49:55.5617537Z   GRADLE_USER_HOME: /home/runner/.gradle
+2026-11-23T06:49:55.5617772Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-11-23T06:49:55.5618017Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-11-23T06:49:55.5618360Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-11-23T06:49:55.5618745Z   DEVELOCITY_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-11-23T06:49:55.5619001Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-11-23T06:49:55.5619226Z ##[endgroup]
+2026-11-23T06:49:55.6877407Z (node:3217) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T06:49:55.6878187Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T06:49:55.7051203Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-23T06:49:55.7053491Z The least common ancestor is /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06. This will be the root directory of the artifact
+2026-11-23T06:49:55.7054375Z With the provided path, there will be 55 files uploaded
+2026-11-23T06:49:55.7058008Z Artifact name is valid!
+2026-11-23T06:49:55.7058435Z Root directory input is valid!
+2026-11-23T06:49:56.2695834Z Beginning upload of artifact content to blob storage
+2026-11-23T06:49:56.3233890Z (node:3217) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-23T06:49:56.9021847Z Uploaded bytes 118374
+2026-11-23T06:49:56.9916011Z Finished uploading artifact content to blob storage!
+2026-11-23T06:49:56.9916852Z SHA256 digest of uploaded artifact zip is 3fdb52dc5d0fc4057cd47dd90d92be600caaeddee6efd54c74171453bf32c1ee
+2026-11-23T06:49:56.9920556Z Finalizing artifact upload
+2026-11-23T06:49:57.3960523Z Artifact P08-phase-D-45126518915-1.zip successfully finalized. Artifact ID 14795842367
+2026-11-23T06:49:57.3961499Z Artifact P08-phase-D-45126518915-1 has been successfully uploaded! Final size is 118374 bytes. Artifact ID is 14795842367
+2026-11-23T06:49:57.3965861Z Artifact download URL: https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/actions/runs/45126518915/artifacts/14795842367
+2026-11-23T06:49:57.4146750Z Post job cleanup.
+2026-11-23T06:49:57.5888046Z In post-action step
+2026-11-23T06:49:57.5894017Z Cache is read-only: will not save state for use in subsequent builds.
+2026-11-23T06:49:57.5898071Z Generating Job Summary
+2026-11-23T06:49:57.5910821Z Completed post-action step
+2026-11-23T06:49:57.6018741Z Post job cleanup.
+2026-11-23T06:49:57.7055081Z (node:3241) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-23T06:49:57.7055691Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-23T06:49:57.7261805Z Post job cleanup.
+2026-11-23T06:49:57.7922807Z [command]/usr/bin/git version
+2026-11-23T06:49:57.7950506Z git version 2.56.1
+2026-11-23T06:49:57.7976637Z Temporarily overriding HOME='/home/runner/work/_temp/3ac7f50b-1c95-44fe-9fa6-bd4f4d805adb' before making global git config changes
+2026-11-23T06:49:57.7977690Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-23T06:49:57.7980659Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Runner_Gardenia-06/Runner_Gardenia-06
+2026-11-23T06:49:57.8008765Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-23T06:49:57.8032673Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-23T06:49:57.8208041Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-23T06:49:57.8231819Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-23T06:49:57.8408539Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-23T06:49:57.8433695Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-23T06:49:57.8687349Z Cleaning up orphan processes
+2026-11-23T06:49:57.8925112Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093, actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02, android-actions/setup-android@9fc6c4e9069bf8d3d10b2204b1fb8f6ef7065407, gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

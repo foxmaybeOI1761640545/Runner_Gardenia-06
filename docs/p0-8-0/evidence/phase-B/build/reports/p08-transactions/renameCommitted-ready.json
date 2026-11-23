@@ -1,0 +1,8 @@
+{
+  "source": "52aab2418579bd645a0aa2ac86d5cc5e4b3f3839",
+  "case": "renameCommitted",
+  "checkpoint": "INDEX_COMMITTED",
+  "producerPid": 2949,
+  "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+  "api": 35
+}

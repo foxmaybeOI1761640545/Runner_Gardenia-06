@@ -1,0 +1,63 @@
+{
+  "source": "dae9de23dfbeaf4e324c4222b70182668830eb2c",
+  "api": 35,
+  "captures": [
+    {
+      "file": "p08-import-precision-light.png",
+      "sha256": "644868f91ec7e666c92b3a496f2b38a91ac0c4cf7aae2e655053295115342a12",
+      "theme": "precision",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-precision-dark.png",
+      "sha256": "bdc180c2b5d9194636d3d003842d7a3646d7c88aa29a10306eea2376723a9929",
+      "theme": "precision",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-quiet-light.png",
+      "sha256": "db1ce0f9dafbd75eac396c8c1c0475276d7b600b2b1b92528fb1cabb7938f003",
+      "theme": "quiet",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-quiet-dark.png",
+      "sha256": "caa9e2435a6935af9ffbf276a6f60c53aa845fd1251a19879c197869f323e36c",
+      "theme": "quiet",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-explorer-light.png",
+      "sha256": "23460e0b3496ab95fa02eb4a70e00481e90a5f7a4152f0910ed72121017ea202",
+      "theme": "explorer",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-explorer-dark.png",
+      "sha256": "4a649b8549f7d68195bce58f929be8f3f4bcecbd3eab43c19463131b5f3d1f15",
+      "theme": "explorer",
+      "mode": 2,
+      "native": true
+    },
+    {
+      "file": "p08-import-neon-light.png",
+      "sha256": "0e1f6a95626fa5b6b10c1d69a53ee6d03b470a1f46a0546a776b308a6bfc5706",
+      "theme": "neon",
+      "mode": 1,
+      "native": true
+    },
+    {
+      "file": "p08-import-neon-dark.png",
+      "sha256": "f72aeb9e02cdf74e5354e01b87cbe150952e4ded481972d4a76e80d678b9cc34",
+      "theme": "neon",
+      "mode": 2,
+      "native": true
+    }
+  ],
+  "visualReview": "PENDING_ACTUAL_REVIEW"
+}
