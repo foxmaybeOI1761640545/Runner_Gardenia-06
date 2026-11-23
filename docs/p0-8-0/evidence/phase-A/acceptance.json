@@ -1,0 +1,67 @@
+{
+  "phase": "A",
+  "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+  "runId": 45116960695,
+  "artifactId": 14792470939,
+  "artifactName": "P08-phase-A-45116960695-1",
+  "artifactSha256": "6d567bf876b297d3f6550ced3a7b8c3a603a547e274c461a392f181b0dbee34e",
+  "artifactBytes": 510053,
+  "stageAccepted": true,
+  "rawJUnitVerified": true,
+  "visualReview": "NOT_APPLICABLE_DATA_ONLY",
+  "scope": "PhaseA parser/models only, complete Python/JVM plus API35 focused8; full legacyAPI/UI/signed upgrade/publication remain phaseF",
+  "tests": {
+    "python": {
+      "tests": 165,
+      "executed": 165,
+      "passed": 165,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "jvm": {
+      "tests": 210,
+      "executed": 210,
+      "passed": 210,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "androidFocused": {
+      "tests": 8,
+      "executed": 8,
+      "passed": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+    "runId": 45116960695,
+    "artifactId": 14792470939,
+    "artifactSha256": "6d567bf876b297d3f6550ced3a7b8c3a603a547e274c461a392f181b0dbee34e",
+    "phase": "A",
+    "fullLegacyApi35": "Not executed in phaseA; required in phaseF",
+    "screenshots": "Not applicable: data-only phase, no UI production changes",
+    "measurements": {
+      "points20000": {
+        "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+        "api": 35,
+        "case": "points20000",
+        "elapsedMillis": 354,
+        "maxJavaHeapBytes": 201326592,
+        "currentJavaHeapUsedBytes": 18842624,
+        "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+      },
+      "bytes16MiB": {
+        "source": "b00bd2538a710368b93daaf2f9f96f99fc0b36a7",
+        "api": 35,
+        "case": "bytes16MiB",
+        "elapsedMillis": 1833,
+        "maxJavaHeapBytes": 201326592,
+        "currentJavaHeapUsedBytes": 137176064,
+        "scope": "Actual Android SAX boundary timing/current heap, not a sampled total-process memory peak"
+      }
+    },
+    "passed": true
+  }
+}

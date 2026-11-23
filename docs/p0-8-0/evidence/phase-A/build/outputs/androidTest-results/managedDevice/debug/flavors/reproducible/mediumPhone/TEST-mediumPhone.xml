@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="8" failures="0" errors="0" skipped="0" time="0.000" timestamp="2026-11-23T05:22:30" hostname="localhost">
+  <testsuite name="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" tests="8" failures="0" errors="0" skipped="0" time="2.215" timestamp="2026-11-23T05:22:30" hostname="localhost">
+    <properties>
+      <property name="device" value="_mediumPhoneReproducibleDebugAndroidTest" />
+    </properties>
+    <testcase name="nativeNamespacesAndMultipleSegmentsArePreserved" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.002" />
+    <testcase name="nativeCancelledReaderReturnsNoRoute" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.006" />
+    <testcase name="nativeActual16MiBFileBoundary" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="1.839" />
+    <testcase name="nativeSaxRejectsInternalExternalAndParameterDtd" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.003" />
+    <testcase name="nativeActual20000PointBoundary" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.359" />
+    <testcase name="nativeUtf16AndLiteralMetadataSurvive" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.003" />
+    <testcase name="nativeMalformedDocumentHasNoPartialSuccessButInvalidCandidatesRemainVisible" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.002" />
+    <testcase name="nativeWaypointIsNotRouteAndSinglePointHasNoDistance" classname="de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest" time="0.001" />
+  </testsuite>
+</testsuites>
