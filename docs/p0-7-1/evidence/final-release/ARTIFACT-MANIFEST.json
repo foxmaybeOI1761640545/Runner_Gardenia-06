@@ -1,0 +1,17 @@
+{
+  "DEVELOPMENT_COMMITS.txt": "a69be3ca151afc501b2f22492958d9d25fb4ee66fd9dfa7d8118b8199c0045b0",
+  "RELEASE_NOTES.md": "0a2a821b40e1c058d31944ea1354623ce26adab0e0cebb415f40ec8d1a3c49ea",
+  "RunnerGardenia-P0-Release.apk": "1c68922da5052c8b9dc224194e719116ccfafd616905f00d6909b837ebd82759",
+  "SHA256SUMS": "2b497506a1114c27c2ae50e86b10530d8a768aeddc90afe27de2521b48c69116",
+  "build-info.json": "4c8c5603c2e0d1363d81fca82dcf9e4fc124dd0c1aa31b67db3603996a87da94",
+  "key-test-receipts.zip": "eae281fb170cdd45ec17925ec9bc1c6a9ef358a667598a17e208e86712d9e38d",
+  "native-theme-smoke.json": "b5a91bc4030ecfb1af0266619098e6fa6cc3068bde34408646e4b3bd7f46935e",
+  "offline-map-screenshots.zip": "33597650cb752ccfb0d6eac6891b997642c187bfdac9901760a31f76f6ff0217",
+  "offline-map-smoke.json": "d471486c47f4beeaafce808417ce6db1f195affa42afade813fd44afed7856f3",
+  "p071-signed-navigation.json": "f92831f5f1123d5fcdf575e6f4eb66e8afb02704611e17ff492cf641fd180de8",
+  "real-map-screenshots.zip": "f0583c51930ba924c50efcef52adbfabfc2649da0824178176e2af1dd12109d7",
+  "real-map-smoke.json": "9e498c4de4465717be5b22dbcb2d3d74c66450c793a0de802c0d1d51d0d83389",
+  "runtime-smoke.json": "6820206aaaf764a8e125b5cd73906d7897eec5cd3d2f52d35921747940e45b7e",
+  "test-summary.json": "11db82c480537a52b647854118982de4cd8f1debf7483cb8988f304230110aa6",
+  "theme-screenshots.zip": "10dc19fbd1b452462479c023f5f66249ab8ee3ddfbfb52664a41f61f04fe9368"
+}

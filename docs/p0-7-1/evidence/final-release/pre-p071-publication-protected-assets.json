@@ -1,0 +1,857 @@
+[
+  {
+    "id": 454357775,
+    "tag": "test-p0-v0.1.0-p0.7.0",
+    "draft": false,
+    "prerelease": true,
+    "target": "467f2086c0f712e04430382203da2bde0c870acb",
+    "published_at": "2026-11-22T10:13:40Z",
+    "assets": [
+      {
+        "id": 778644923,
+        "name": "ARTIFACT-MANIFEST.json",
+        "size": 1324,
+        "digest": "sha256:ce1e3a66ce00176a6d68c484e9b5714935a5c5ec0bdab9f940fe35fa2a4d0fc6",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/ARTIFACT-MANIFEST.json"
+      },
+      {
+        "id": 778644604,
+        "name": "build-info.json",
+        "size": 3059,
+        "digest": "sha256:4648df1905788cfc9680accff219bb06eca29514603623f6e5b1ba1bb418d6a0",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/build-info.json"
+      },
+      {
+        "id": 778644621,
+        "name": "DEVELOPMENT_COMMITS.txt",
+        "size": 4915,
+        "digest": "sha256:5e39f63abfc98fba818c1ba3105938978b4b4763e1e2a98e88019ccd45a7618d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/DEVELOPMENT_COMMITS.txt"
+      },
+      {
+        "id": 778644700,
+        "name": "key-test-receipts.zip",
+        "size": 477229,
+        "digest": "sha256:c66398e87959a8e464bb7e36739a6e8a2914543cf4278c91e67e2b5f43bf1895",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/key-test-receipts.zip"
+      },
+      {
+        "id": 778644724,
+        "name": "native-theme-smoke.json",
+        "size": 65308,
+        "digest": "sha256:caca98093163f53b2a85041404f762811e12ffc302d65e45e8f116b520b1db7a",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/native-theme-smoke.json"
+      },
+      {
+        "id": 778644738,
+        "name": "offline-map-screenshots.zip",
+        "size": 623621,
+        "digest": "sha256:475604fb12a5047e1f77ef879dab2e90a31a7eb395cb4ca404756a2961387be4",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/offline-map-screenshots.zip"
+      },
+      {
+        "id": 778644759,
+        "name": "offline-map-smoke.json",
+        "size": 2810,
+        "digest": "sha256:d0ffe9c6785f30a894005aa7587ec768b46362e82f8bbcf9acf03b0711390fcd",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/offline-map-smoke.json"
+      },
+      {
+        "id": 778644775,
+        "name": "real-map-screenshots.zip",
+        "size": 2946085,
+        "digest": "sha256:41aede2856c372531b6a90834316f80fbe21da2f4e82b233cdb79187070b9abb",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/real-map-screenshots.zip"
+      },
+      {
+        "id": 778644815,
+        "name": "real-map-smoke.json",
+        "size": 24426,
+        "digest": "sha256:bdb948f58c10b253924f548b08d0e6ff4cade307ec86b404bbd84e7dc95aee8d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/real-map-smoke.json"
+      },
+      {
+        "id": 778644641,
+        "name": "RELEASE_NOTES.md",
+        "size": 834,
+        "digest": "sha256:6e31e51c9f2c69c2825822eff15cf219ae1cc8951313e74bc0072b76bda0ed53",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/RELEASE_NOTES.md"
+      },
+      {
+        "id": 778644660,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 3236595,
+        "digest": "sha256:3c6ad819e740f82b24063d3be6da9e259f69b959bb9a54c1145b6974b085beb7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 778644833,
+        "name": "runtime-smoke.json",
+        "size": 984,
+        "digest": "sha256:0b23bef9b881dd667e309169cd7192cd4f6984e4edb5b8c3615b0f75e171a7c3",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/runtime-smoke.json"
+      },
+      {
+        "id": 778644685,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:ee6548feb5e9aaea6c6ff0de01c9833af4cfa0e0bb3deff97061cd815db5318a",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/SHA256SUMS"
+      },
+      {
+        "id": 778644860,
+        "name": "test-summary.json",
+        "size": 22003,
+        "digest": "sha256:56eb4d251491226f9d105a4c03c3ae0c7590d9efeb2e406aaa19bf3d8b881948",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/test-summary.json"
+      },
+      {
+        "id": 778644885,
+        "name": "theme-screenshots.zip",
+        "size": 8842011,
+        "digest": "sha256:91925e2db623c3776429ce62a1a5b801ee5f97ea107f695559fa62b346bccb42",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.7.0/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 445443618,
+    "tag": "test-p0-v0.1.0-p0.6.1",
+    "draft": false,
+    "prerelease": true,
+    "target": "6cee1958a23bfd1a1fe3b6a9b547717c528cbc75",
+    "published_at": "2026-11-14T16:50:38Z",
+    "assets": [
+      {
+        "id": 748130698,
+        "name": "ARTIFACT-MANIFEST.json",
+        "size": 1420,
+        "digest": "sha256:95c48a49dc54b3156570c3ffc9c6aa4532ba97c41d61e39dd86dc72d7c3946a7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/ARTIFACT-MANIFEST.json"
+      },
+      {
+        "id": 748130105,
+        "name": "build-info.json",
+        "size": 4708,
+        "digest": "sha256:90c5d2a48d9d11df037abb8cafdba524f5c950f61b9f0b92a15e4e781988e35a",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/build-info.json"
+      },
+      {
+        "id": 748130131,
+        "name": "DEVELOPMENT_COMMITS.txt",
+        "size": 1517,
+        "digest": "sha256:941d5839343e36b2dbd8ac6717afebe97d2b9dea4a7e26430720133399746cea",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/DEVELOPMENT_COMMITS.txt"
+      },
+      {
+        "id": 748130339,
+        "name": "key-test-receipts.zip",
+        "size": 2078659,
+        "digest": "sha256:22e4ffe252734042716863d56efad4c9bf29bb3f23ed90dfa87bff4e525d5f57",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/key-test-receipts.zip"
+      },
+      {
+        "id": 748130396,
+        "name": "native-theme-smoke.json",
+        "size": 65313,
+        "digest": "sha256:6f115f965b07fad9f67907804fac99832fcc196ce19cbc8169f6038a194602ae",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/native-theme-smoke.json"
+      },
+      {
+        "id": 748130424,
+        "name": "offline-map-screenshots.zip",
+        "size": 623864,
+        "digest": "sha256:d31724997671d6b337132351576aea26aba5bf3b871a2e78a9207c7bbf4a3b36",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/offline-map-screenshots.zip"
+      },
+      {
+        "id": 748130459,
+        "name": "offline-map-smoke.json",
+        "size": 2809,
+        "digest": "sha256:8a58e5139aeabcad8c136212a97a084d3f75d010c67d3f84065fc9eaf0f42d52",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/offline-map-smoke.json"
+      },
+      {
+        "id": 748130484,
+        "name": "p04-upgrade-smoke.json",
+        "size": 939,
+        "digest": "sha256:a26416b535331c1c2dde655e006deccbbfbbc40f73719a19bfd3e248a8a051d7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/p04-upgrade-smoke.json"
+      },
+      {
+        "id": 748130509,
+        "name": "real-map-screenshots.zip",
+        "size": 2939823,
+        "digest": "sha256:352a412f46c9db3b176dfa314becfac2e3ae7c8478e84546e9dd34b5bcf40450",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/real-map-screenshots.zip"
+      },
+      {
+        "id": 748130555,
+        "name": "real-map-smoke.json",
+        "size": 24428,
+        "digest": "sha256:833794b2e23023c34344358d6e223043d7c2264c295bdc03c4634b6896b376ab",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/real-map-smoke.json"
+      },
+      {
+        "id": 748130169,
+        "name": "RELEASE_NOTES.md",
+        "size": 1107,
+        "digest": "sha256:21164abb5b6bcb50b172f526ea2627c2dfdf49fd9b469a17c562faaca12d0dcf",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RELEASE_NOTES.md"
+      },
+      {
+        "id": 748130211,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 3234719,
+        "digest": "sha256:b6df2f1ad0431c5a8ccd805209d7452171eb5fdbd611bc2b8f3f4d9bcf4d8e11",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 748130584,
+        "name": "runtime-smoke.json",
+        "size": 940,
+        "digest": "sha256:0972e4799d79e1dc1848fbdbd5bbbaaa53399a91162e2cefd430dc28cb82839c",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/runtime-smoke.json"
+      },
+      {
+        "id": 748130263,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:1ae109bc9ac605822bba8f56d11dad1e357f1a68867cc2dbf62ebe5ff3c6e5b8",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/SHA256SUMS"
+      },
+      {
+        "id": 748130611,
+        "name": "test-summary.json",
+        "size": 1071,
+        "digest": "sha256:8c3f46242e559f6017b7cffbb0a3dedb1bb4827328e2d1d7f859577ac4fb6679",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/test-summary.json"
+      },
+      {
+        "id": 748130651,
+        "name": "theme-screenshots.zip",
+        "size": 8705439,
+        "digest": "sha256:f7a3d150aeba97983b8a0628ebbcb623007073beae2daf1cfc0fe3f116752965",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6.1/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 443298861,
+    "tag": "test-p0-v0.1.0-p0.6",
+    "draft": false,
+    "prerelease": true,
+    "target": "af6e90eabee20ada79ba942584ab7eb8c08660e3",
+    "published_at": "2026-11-12T17:37:38Z",
+    "assets": [
+      {
+        "id": 740431834,
+        "name": "ARTIFACT-MANIFEST.json",
+        "size": 1229,
+        "digest": "sha256:726f713ff3d6f11fc7154320bddb6c9e297d1760b5fb80b05e9597c0b369624d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/ARTIFACT-MANIFEST.json"
+      },
+      {
+        "id": 740430942,
+        "name": "build-info.json",
+        "size": 5356,
+        "digest": "sha256:1279cfab0c6e509c76ac9fd6d432c7adcfb03173c9ce36bedb7cf90f3c5f4ec9",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/build-info.json"
+      },
+      {
+        "id": 740430983,
+        "name": "DEVELOPMENT_COMMITS.txt",
+        "size": 2568,
+        "digest": "sha256:8f287d21a138ea0ce0ff60a470d5058e101075ad3132b482e93d24ba806d27fa",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/DEVELOPMENT_COMMITS.txt"
+      },
+      {
+        "id": 740431226,
+        "name": "key-test-receipts.zip",
+        "size": 1874724,
+        "digest": "sha256:16da013b88e4784967d6815fddf2be454dc4c92d06005922d36d267478f5b97c",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/key-test-receipts.zip"
+      },
+      {
+        "id": 740431317,
+        "name": "native-theme-smoke.json",
+        "size": 65311,
+        "digest": "sha256:7ebaae6aa4f25b020f52b59d3172e90878d69efe16e7ef708a97afca9e3f62d7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/native-theme-smoke.json"
+      },
+      {
+        "id": 740431387,
+        "name": "offline-map-screenshots.zip",
+        "size": 762531,
+        "digest": "sha256:d8886242eefc5314506366599f293382cb49b5f9bd6ba4c88a01c5e7c8c2727f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/offline-map-screenshots.zip"
+      },
+      {
+        "id": 740431487,
+        "name": "offline-map-smoke.json",
+        "size": 2809,
+        "digest": "sha256:f8b5e0428aea488b42e0d32edc092f2da61ca2ec5b8220c795ade5cb7c30921e",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/offline-map-smoke.json"
+      },
+      {
+        "id": 740431555,
+        "name": "p04-upgrade-smoke.json",
+        "size": 869,
+        "digest": "sha256:9881397e4b25f1225e92781088098f91e2c0d4b2326b688e2f3975f66e51c92a",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/p04-upgrade-smoke.json"
+      },
+      {
+        "id": 740431048,
+        "name": "RELEASE_NOTES.md",
+        "size": 1103,
+        "digest": "sha256:b6a0343479e3d27ce74068adbd3759bac379db37e74097dceff28432390b23da",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/RELEASE_NOTES.md"
+      },
+      {
+        "id": 740431109,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 3231211,
+        "digest": "sha256:6a605a9c4f6a1e5fc73b5be3598225fd3bf88fda7eea15436d9ce133ab7a8c44",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 740431617,
+        "name": "runtime-smoke.json",
+        "size": 871,
+        "digest": "sha256:8084d3a65e17c1da62746e7c0c9088fd942810d1225368f8e2419e160c136d3f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/runtime-smoke.json"
+      },
+      {
+        "id": 740431174,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:9cdf5d43eae880a31929f721b12ae18acb13204082a19225cb8a57b6d07d6a85",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/SHA256SUMS"
+      },
+      {
+        "id": 740431678,
+        "name": "test-summary.json",
+        "size": 1071,
+        "digest": "sha256:83e602beaedfd95126d3c0b7a1036f6b6399bc74e4e10c676b609fa5e877b08e",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/test-summary.json"
+      },
+      {
+        "id": 740431726,
+        "name": "theme-screenshots.zip",
+        "size": 8817274,
+        "digest": "sha256:874f014bdc65efbae94d52fac482b0f9230e4bc2e66e77705b0362a6c3d489bd",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.6/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 442439079,
+    "tag": "test-p0-v0.1.0-p0.5.1",
+    "draft": false,
+    "prerelease": true,
+    "target": "a4b2c7a7521a19a60c1d444449ff82c0560e4d19",
+    "published_at": "2026-11-12T02:52:41Z",
+    "assets": [
+      {
+        "id": 737809533,
+        "name": "ARTIFACT-MANIFEST.json",
+        "size": 1032,
+        "digest": "sha256:d21283da721cc7313d930b6e8bdc29cdc07fa0dc81226f385eccf22ffb5f7edc",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/ARTIFACT-MANIFEST.json"
+      },
+      {
+        "id": 737809187,
+        "name": "build-info.json",
+        "size": 4783,
+        "digest": "sha256:fe0cc56da6c15254b4118f6570c1db87256199a5d2b4db744ab62d2b6653a46c",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/build-info.json"
+      },
+      {
+        "id": 737809206,
+        "name": "DEVELOPMENT_COMMITS.txt",
+        "size": 2111,
+        "digest": "sha256:deb839a5b3da5f5b1b73e7f69d778a2dc09b6ffcd08788cd4d9cd8f8109eafe1",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/DEVELOPMENT_COMMITS.txt"
+      },
+      {
+        "id": 737809347,
+        "name": "key-test-receipts.zip",
+        "size": 1647222,
+        "digest": "sha256:0bebdeeb9c38981a3f290e6bfa47990904d37bd6e0945a3fe3a1add78d36adf6",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/key-test-receipts.zip"
+      },
+      {
+        "id": 737809382,
+        "name": "native-theme-smoke.json",
+        "size": 58759,
+        "digest": "sha256:a5bbe23825105727bb20f44af6f6482532c3d6d9f2386340eb3db87e9d5117e7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/native-theme-smoke.json"
+      },
+      {
+        "id": 737809403,
+        "name": "p04-upgrade-smoke.json",
+        "size": 869,
+        "digest": "sha256:58602a5a3726d8998d391db360e5fa3045c0e9aa186842ff84ef3f53253be308",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/p04-upgrade-smoke.json"
+      },
+      {
+        "id": 737809237,
+        "name": "RELEASE_NOTES.md",
+        "size": 1074,
+        "digest": "sha256:12e11319122d0c8b2923327f25c913810729c5f1b4cee93ad0724cd62b3ed6f2",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/RELEASE_NOTES.md"
+      },
+      {
+        "id": 737809271,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2856108,
+        "digest": "sha256:a99a489ffdc63c746346d9a6521884b4fc21a6698552f10c4963711b2232816d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 737809433,
+        "name": "runtime-smoke.json",
+        "size": 869,
+        "digest": "sha256:f61dd3de555ca0115a2c85ad11537d6e792427e422ec18e00567961968115879",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/runtime-smoke.json"
+      },
+      {
+        "id": 737809326,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:6fdf38e8e22bdb607bbb25b8daac76c134c95eb1614a6949ec28036ac1b8db26",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/SHA256SUMS"
+      },
+      {
+        "id": 737809461,
+        "name": "test-summary.json",
+        "size": 1071,
+        "digest": "sha256:38011bd8c7c29a05866d9b758833db4f4e81f6229473fa110199eb5c0b65b752",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/test-summary.json"
+      },
+      {
+        "id": 737809481,
+        "name": "theme-screenshots.zip",
+        "size": 7545616,
+        "digest": "sha256:f20d0526350acffcda28d29f8e478b90d73525d38ea10b032f354d2ad92e4d98",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5.1/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 439993653,
+    "tag": "test-p0-v0.1.0-p0.5",
+    "draft": false,
+    "prerelease": true,
+    "target": "a8891f61122712b81bee357f40d688151a948e57",
+    "published_at": "2026-11-10T05:50:46Z",
+    "assets": [
+      {
+        "id": 730286843,
+        "name": "ARTIFACT-MANIFEST.json",
+        "size": 936,
+        "digest": "sha256:57f9d57c287d2a1f07abb7efdeb0db07133f478a00a612e12acea0c4d400ca60",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/ARTIFACT-MANIFEST.json"
+      },
+      {
+        "id": 730286545,
+        "name": "build-info.json",
+        "size": 4335,
+        "digest": "sha256:2a81a5e6d943aa66992b7fe26869ea3bd29bfef80b82690350a9525cb0ce0d15",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/build-info.json"
+      },
+      {
+        "id": 730286577,
+        "name": "DEVELOPMENT_COMMITS.txt",
+        "size": 3609,
+        "digest": "sha256:e5e169e005846b8bf3ffb08ba45f3ec2963feaca944004446c985b2ea8f94b34",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/DEVELOPMENT_COMMITS.txt"
+      },
+      {
+        "id": 730286675,
+        "name": "key-test-receipts.zip",
+        "size": 1567592,
+        "digest": "sha256:8613357d362a2c99e2b121baf0050dcaf893e21f007623396776f122b14816cd",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/key-test-receipts.zip"
+      },
+      {
+        "id": 730286705,
+        "name": "native-theme-smoke.json",
+        "size": 58769,
+        "digest": "sha256:35263f8f0229be4c7911973010fce8bbf09e54a317e0b06e6bd2ae4284b384e0",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/native-theme-smoke.json"
+      },
+      {
+        "id": 730286606,
+        "name": "RELEASE_NOTES.md",
+        "size": 1085,
+        "digest": "sha256:eeb675215d60675f8e570bc88407eb2e0ca0721edfb238d760b2d08731b5d06b",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/RELEASE_NOTES.md"
+      },
+      {
+        "id": 730286622,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2853444,
+        "digest": "sha256:7b0d0f48e2de5088f73ecd9272747beea4d79281d9dd8bb630cad821b1767598",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 730286727,
+        "name": "runtime-smoke.json",
+        "size": 869,
+        "digest": "sha256:f8c2b2d5da1b5c52562965d824377453c90193a0bd1d0edbaca3c030d09b7da6",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/runtime-smoke.json"
+      },
+      {
+        "id": 730286657,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:5d2dfe58c5fcc247095d43eb169b5591f621d35a967f5217cc8803a083f01d27",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/SHA256SUMS"
+      },
+      {
+        "id": 730286756,
+        "name": "test-summary.json",
+        "size": 1071,
+        "digest": "sha256:3f01342c3477fde6c951320f3c9a242cf656774281fdfd0a501c467c9c110223",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/test-summary.json"
+      },
+      {
+        "id": 730286783,
+        "name": "theme-screenshots.zip",
+        "size": 7530502,
+        "digest": "sha256:9e9e6bffd9855d36066a893aca921d43297abcaff4344e2f9eec7181ec0b6852",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.5/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 438419806,
+    "tag": "test-p0-v0.1.0-p0.4",
+    "draft": false,
+    "prerelease": true,
+    "target": "ccc59b546b5087a2038d32087cc675a3096852c3",
+    "published_at": "2026-11-08T17:59:33Z",
+    "assets": [
+      {
+        "id": 724746686,
+        "name": "build-info.json",
+        "size": 4146,
+        "digest": "sha256:2db139350aefb03457edbb7ac9068bf9a4f7a2c4e34dfff875643bf0145ae75d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/build-info.json"
+      },
+      {
+        "id": 724746782,
+        "name": "native-theme-smoke.json",
+        "size": 23674,
+        "digest": "sha256:2843cf736b5cb9e1268e2b49472d987befe9795b62fe5677cc46d2abdda7fa3e",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/native-theme-smoke.json"
+      },
+      {
+        "id": 724746867,
+        "name": "RELEASE_NOTES.md",
+        "size": 1466,
+        "digest": "sha256:36da9acb2431f1968c4c6c7db5c0a81b53d1d6285be6b5ef20dd3a531f832613",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/RELEASE_NOTES.md"
+      },
+      {
+        "id": 724746708,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2803864,
+        "digest": "sha256:aa5ebc21c76cbca492edc66453b91d7fdecaf82bd5a69fcab208c740b4224ebc",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 724746757,
+        "name": "runtime-smoke.json",
+        "size": 757,
+        "digest": "sha256:080a49b77a19838c65427b4a4b024610c129bdca1f5f2f929d23388d4d08e9c6",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/runtime-smoke.json"
+      },
+      {
+        "id": 724746738,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:b11f5aff8c9ff12989a253165a85442cd90579f78f402b18f722256b7cce3c69",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/SHA256SUMS"
+      },
+      {
+        "id": 724746835,
+        "name": "test-summary.json",
+        "size": 702,
+        "digest": "sha256:99c13e421bd62d274c9c5c0d901314a11ab7a68a1671f8088b253046bb41c31c",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/test-summary.json"
+      },
+      {
+        "id": 724746802,
+        "name": "theme-screenshots.zip",
+        "size": 4592498,
+        "digest": "sha256:4b5ff16a1c27aa712be44da24df57ec82a548f0c66d14abea8e0ba4fd3f15dfe",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.4/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 438149787,
+    "tag": "test-p0-v0.1.0-p0.3",
+    "draft": false,
+    "prerelease": true,
+    "target": "77ef053b76fd5e7c6c0c9ce1023e365fa3d7c471",
+    "published_at": "2026-11-08T09:37:13Z",
+    "assets": [
+      {
+        "id": 723506616,
+        "name": "build-info.json",
+        "size": 3023,
+        "digest": "sha256:b44e31a63f84bc5d3ca10edbb4373fe49425103c02be08fe70d19176cef1f38c",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/build-info.json"
+      },
+      {
+        "id": 723506685,
+        "name": "native-theme-smoke.json",
+        "size": 23611,
+        "digest": "sha256:9a2f67e7c4db0eac1436265024ad71aa6ed9f4479f3abca07ec15071ce56c9b1",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/native-theme-smoke.json"
+      },
+      {
+        "id": 723506744,
+        "name": "RELEASE_NOTES.md",
+        "size": 1342,
+        "digest": "sha256:2a1845b34973416a048fea92ecb20394fb63f48557031a570bfac0d7056a1c7d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RELEASE_NOTES.md"
+      },
+      {
+        "id": 723506637,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2799792,
+        "digest": "sha256:24225e5a28827eda1fa5799e80230d03464416a3aaa72c0cf34ccb4be090a3ff",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 723506670,
+        "name": "runtime-smoke.json",
+        "size": 759,
+        "digest": "sha256:e8a863e30d731dad341fe925dba10f52ed4c5edd7a8d6ffe65657de70348b429",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/runtime-smoke.json"
+      },
+      {
+        "id": 723506658,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:d256499763274468f9cf0b275c84651a63529569a35571565d295ea04a230e7f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/SHA256SUMS"
+      },
+      {
+        "id": 723506726,
+        "name": "test-summary.json",
+        "size": 702,
+        "digest": "sha256:898a45468b7a8986e3994bd7bd57be06552eda2742555642b9ecd132204656c9",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/test-summary.json"
+      },
+      {
+        "id": 723506705,
+        "name": "theme-screenshots.zip",
+        "size": 3402808,
+        "digest": "sha256:e4ac17c55a7999ce0c3e94e8dff7e8b74ea7bbc9a9bd1a786932041645392299",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.3/theme-screenshots.zip"
+      }
+    ]
+  },
+  {
+    "id": 436759328,
+    "tag": "test-p0-v0.1.0-p0.2",
+    "draft": false,
+    "prerelease": true,
+    "target": "4454d716a5ae010b92d3eefa1ac1c0ebedde0063",
+    "published_at": "2026-11-06T16:55:06Z",
+    "assets": [
+      {
+        "id": 717852424,
+        "name": "build-info.json",
+        "size": 2817,
+        "digest": "sha256:c5c4cf1ed9e6d772ae7ae85a41de780724156a8e233e40c82a9b3a80faf438c7",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/build-info.json"
+      },
+      {
+        "id": 717852629,
+        "name": "RELEASE_NOTES.md",
+        "size": 1597,
+        "digest": "sha256:6430ac5451715730b270712e043a73b32e156c630be0ce0938b270ceef60304f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/RELEASE_NOTES.md"
+      },
+      {
+        "id": 717852464,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2753061,
+        "digest": "sha256:48c4a855402b7bec0b310794a228f15323ef8f09b2eb81d4f6913ab56ac6d046",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 717852558,
+        "name": "runtime-smoke.json",
+        "size": 757,
+        "digest": "sha256:664c53004e272535e8a64f2bfccf3b2d02c0692ab8044328fe2320418538929d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/runtime-smoke.json"
+      },
+      {
+        "id": 717852512,
+        "name": "SHA256SUMS",
+        "size": 96,
+        "digest": "sha256:fbb348dd055a64d936b7fac1ea221832c525519a38d2926b5b3039a03d80f34d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/SHA256SUMS"
+      },
+      {
+        "id": 717852593,
+        "name": "test-summary.json",
+        "size": 702,
+        "digest": "sha256:d7768a5f6ad8942498faebcf4330a7d92e6e44f7904811e7b8ba4c1edc8ceb1f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.2/test-summary.json"
+      }
+    ]
+  },
+  {
+    "id": 434907895,
+    "tag": "test-p0-v0.1.0-p0.1",
+    "draft": false,
+    "prerelease": true,
+    "target": "3116e5fa7a56ce6f299ea45d5a45745f1aed4466",
+    "published_at": "2026-11-05T08:01:50Z",
+    "assets": [
+      {
+        "id": 712576218,
+        "name": "build-info.json",
+        "size": 2607,
+        "digest": "sha256:b0b7082ad2a9ea656c0e40fe2c0d1eee9996a2d666c4058be6f8ee7b89e1f2ee",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/build-info.json"
+      },
+      {
+        "id": 712576370,
+        "name": "P0_DELIVERY_REPORT.md",
+        "size": 7797,
+        "digest": "sha256:21fa47fb8cd7aa81dbb40f42a99f3dfaa0870db6d26b52c53e84d2f7aee936bf",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/P0_DELIVERY_REPORT.md"
+      },
+      {
+        "id": 712576406,
+        "name": "P0_DEVICE_CHECKLIST.md",
+        "size": 6203,
+        "digest": "sha256:7cc3239bdf6601d5875089ea9e1e9962564a4ffbd26ecf2a01c86315b3e1e064",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/P0_DEVICE_CHECKLIST.md"
+      },
+      {
+        "id": 712576255,
+        "name": "RunnerGardenia-P0-Release.apk",
+        "size": 2715993,
+        "digest": "sha256:94d3322310e8b6050504eb4c8d8c72fa09f0190f8add35ae0100b9bc93cc6ab0",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/RunnerGardenia-P0-Release.apk"
+      },
+      {
+        "id": 712576307,
+        "name": "runtime-smoke.json",
+        "size": 680,
+        "digest": "sha256:109bf34b7ff2c45598d796646848bda6c48b73567709092a3c283bc92f375fc0",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/runtime-smoke.json"
+      },
+      {
+        "id": 712576355,
+        "name": "SHA256SUMS.txt",
+        "size": 96,
+        "digest": "sha256:48ddcb76da5da22dc91b439700c2a01bc837ce81e5398a6b6536b2eb14421da8",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/test-p0-v0.1.0-p0.1/SHA256SUMS.txt"
+      }
+    ]
+  },
+  {
+    "id": 434053067,
+    "tag": "v0.1.0-rc1.6",
+    "draft": false,
+    "prerelease": true,
+    "target": "9b5d7b06afc1eb8e3315ba73874ac088fa4d5169",
+    "published_at": "2026-11-04T14:44:33Z",
+    "assets": [
+      {
+        "id": 709849073,
+        "name": "build-info.json",
+        "size": 820,
+        "digest": "sha256:ca8747a9b0f63e7c23ffde00fce59997f1a149f2843181835bf52e70272e6958",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.6/build-info.json"
+      },
+      {
+        "id": 709849116,
+        "name": "runner-gardenia-v0.1.0-rc1.6-6771.apk",
+        "size": 11007368,
+        "digest": "sha256:102ca20e0663e385bc4a76a146d187c26bbcfc674e7bd2cb8b1734a7dd01cb2f",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.6/runner-gardenia-v0.1.0-rc1.6-6771.apk"
+      },
+      {
+        "id": 709849147,
+        "name": "SHA256SUMS",
+        "size": 104,
+        "digest": "sha256:8c75331935004be3d842c56f8961d8f4ef3c141f49dfb99b07be7f03c6327e3d",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.6/SHA256SUMS"
+      }
+    ]
+  },
+  {
+    "id": 433333387,
+    "tag": "v0.1.0-rc1.5",
+    "draft": false,
+    "prerelease": true,
+    "target": "270cfa49a1c94d658d16dfc1e84563765aee832f",
+    "published_at": "2026-11-03T23:32:53Z",
+    "assets": [
+      {
+        "id": 707490316,
+        "name": "build-info.json",
+        "size": 820,
+        "digest": "sha256:4b657df8a9abfe690cbd73a09b7e4a7a97401c2836fbba924ff62ff54486e279",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.5/build-info.json"
+      },
+      {
+        "id": 707490369,
+        "name": "runner-gardenia-v0.1.0-rc1.5-6770.apk",
+        "size": 11007220,
+        "digest": "sha256:6453f09ce8f538a42abe7a7eb4be52117877bede88f5215c81776157a54f236e",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.5/runner-gardenia-v0.1.0-rc1.5-6770.apk"
+      },
+      {
+        "id": 707490440,
+        "name": "SHA256SUMS",
+        "size": 104,
+        "digest": "sha256:829b7e27c3561dc599bb6fd5144f477284673c10325d9dd747939ad2f6cd2ba8",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.5/SHA256SUMS"
+      }
+    ]
+  },
+  {
+    "id": 433029650,
+    "tag": "v0.1.0-rc1.4",
+    "draft": false,
+    "prerelease": true,
+    "target": "24aa0d7d36d244852e796cca6307936e34d989ed",
+    "published_at": "2026-11-03T17:45:50Z",
+    "assets": [
+      {
+        "id": 706522328,
+        "name": "build-info.json",
+        "size": 768,
+        "digest": "sha256:bd82e2d6fbf1a53b0d40f832779d401a42994eeda19deac84e9f5fbec01acb5b",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.4/build-info.json"
+      },
+      {
+        "id": 706522369,
+        "name": "runner-gardenia-v0.1.0-rc1.4-6769.apk",
+        "size": 10967652,
+        "digest": "sha256:e9988650cf0e847b7666eebbb81a07a7cfe5d98dc60f77232e2893213eadf7e0",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.4/runner-gardenia-v0.1.0-rc1.4-6769.apk"
+      },
+      {
+        "id": 706522455,
+        "name": "SHA256SUMS",
+        "size": 104,
+        "digest": "sha256:3a6db39cdcf4e4556d8ec89eaf212752ee59235b08958ec00cfcbf54fec46f9b",
+        "url": "https://github.com/foxmaybeOI1761640545/Runner_Gardenia-06/releases/download/v0.1.0-rc1.4/SHA256SUMS"
+      }
+    ]
+  }
+]

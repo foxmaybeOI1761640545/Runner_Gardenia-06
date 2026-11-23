@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "historicalReleases": 12,
+  "historicalAssets": 105,
+  "method": "Compared release identity/type/target/published_at and every asset id/name/size/digest/url before and after P071 publication."
+}
