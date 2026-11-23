@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+  "api": 35,
+  "timezone": "Asia/Singapore",
+  "cases": {
+    "addPrepared": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "addPrepared",
+      "checkpoint": "PREPARED",
+      "producerPid": 1895,
+      "recoveryPid": 2297,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001"
+      ],
+      "committed": false,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "addPromoted": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "addPromoted",
+      "checkpoint": "PROMOTED_0",
+      "producerPid": 2357,
+      "recoveryPid": 2430,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001"
+      ],
+      "committed": false,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "addCommitted": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "addCommitted",
+      "checkpoint": "INDEX_COMMITTED",
+      "producerPid": 2485,
+      "recoveryPid": 2546,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001",
+        "00000000-0000-0008-0000-000000000002",
+        "00000000-0000-0008-0000-000000000003"
+      ],
+      "committed": true,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "addGarbage": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "addGarbage",
+      "checkpoint": "JOURNAL_RETIRED",
+      "producerPid": 2593,
+      "recoveryPid": 2646,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001",
+        "00000000-0000-0008-0000-000000000002",
+        "00000000-0000-0008-0000-000000000003"
+      ],
+      "committed": true,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "deleteRetired": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "deleteRetired",
+      "checkpoint": "RETIRED_0",
+      "producerPid": 2685,
+      "recoveryPid": 2735,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001",
+        "00000000-0000-0008-0000-000000000002"
+      ],
+      "committed": false,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "deleteCommitted": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "deleteCommitted",
+      "checkpoint": "INDEX_COMMITTED",
+      "producerPid": 2774,
+      "recoveryPid": 2823,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001"
+      ],
+      "committed": true,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "renamePrepared": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "renamePrepared",
+      "checkpoint": "PREPARED",
+      "producerPid": 2862,
+      "recoveryPid": 2914,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001"
+      ],
+      "committed": false,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    },
+    "renameCommitted": {
+      "source": "a4c6c1803c25d3c18a9e2158554219d3597bf1a1",
+      "case": "renameCommitted",
+      "checkpoint": "INDEX_COMMITTED",
+      "producerPid": 2954,
+      "recoveryPid": 3004,
+      "ids": [
+        "00000000-0000-0008-0000-000000000001"
+      ],
+      "committed": true,
+      "oldRouteSha256": "c1d0f848dda3c78e99dc9a041782296a47d7fa8dc2daa2e5de05df723815acf0",
+      "api": 35,
+      "passed": true,
+      "persistentDirectory": "files/route-library",
+      "forceStopped": true,
+      "producerOutcome": "INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST"
+    }
+  },
+  "scope": "Eight externally force-stopped transactions in real private persistent route files. Separate from JUnit counts; no workout database cross-process claim."
+}
