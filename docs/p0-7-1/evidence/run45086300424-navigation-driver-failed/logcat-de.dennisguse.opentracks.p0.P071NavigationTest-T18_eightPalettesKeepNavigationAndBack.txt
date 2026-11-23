@@ -1,0 +1,792 @@
+11-23 08:06:02.940  2280  2305 I TestRunner: started: T18_eightPalettesKeepNavigationAndBack(de.dennisguse.opentracks.p0.P071NavigationTest)
+11-23 08:06:02.942  2280  2305 I UiAutomationPermGranter: Permission: android.permission.BLUETOOTH_SCAN is already granted!
+11-23 08:06:02.942  2280  2305 I UiAutomationPermGranter: Permission: android.permission.BLUETOOTH_CONNECT is already granted!
+11-23 08:06:02.943  2280  2305 I UiAutomationPermGranter: Permission: android.permission.ACCESS_FINE_LOCATION is already granted!
+11-23 08:06:02.943  2280  2305 I UiAutomationPermGranter: Permission: android.permission.POST_NOTIFICATIONS is already granted!
+11-23 08:06:03.035   538   561 W IPCThreadState: Sending oneway calls to frozen process.
+11-23 08:06:03.036   538   561 W IPCThreadState: Sending oneway calls to frozen process.
+11-23 08:06:03.037  2280  2305 W CustomContentProvider: Deleting from table tracks
+11-23 08:06:03.037  2280  2305 I CustomContentProvider: Deleted 0 rows of table tracks
+11-23 08:06:03.038  2280  2305 I CustomContentProvider: Deleted 0 total rows from database
+11-23 08:06:03.040  2280  2280 D TrackRecordingService: Create
+11-23 08:06:03.040  2280  2280 I TrackRecordingService: new status null -> RecordingStatus[trackId=null]
+11-23 08:06:03.042  2280  2305 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-23 08:06:03.044   538  2413 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:03.061   856   950 D SplashScreenView: Build android.window.SplashScreenView{9a95904 V.E...... ......ID 0,0-0,0}
+11-23 08:06:03.061   856   950 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-23 08:06:03.061   856   950 D SplashScreenView: Branding: view: android.view.View{3524eed G.ED..... ......I. 0,0-0,0 #1020503 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-23 08:06:03.072  1238  1238 W SplitSelectStateCtor: Missing session instanceIds
+11-23 08:06:03.072  1238  1238 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-23 08:06:03.081   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:03.085  1238  1238 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=27, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }
+11-23 08:06:03.089  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: PRE_ON_CREATE
+11-23 08:06:03.089  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-23 08:06:03.113  2280  2280 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-23 08:06:03.200  1238  1238 D VRI[QuickstepLauncher]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:03.212  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: CREATED
+11-23 08:06:03.213  2280  2280 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:03.214  2280  2280 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-23 08:06:03.219  2280  2280 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-23 08:06:03.220  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: STARTED
+11-23 08:06:03.220  2280  2280 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:03.223  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: RESUMED
+11-23 08:06:03.226  2280  2280 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:03.262  2280  2280 D StrictMode: StrictMode policy violation; ~duration=87 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ContextImpl.getFilesDir(ContextImpl.java:853)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.map.OfflineMapRepository.<init>(OfflineMapRepository.java:24)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.RouteMapView.<init>(RouteMapView.java:43)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createView(LayoutInflater.java:742)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:894)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:849)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1011)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:570)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:462)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.createRootView(P0Activity.java:95)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.AbstractActivity.onCreate(AbstractActivity.java:51)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:38)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:03.262  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:03.274  2280  2280 D StrictMode: StrictMode policy violation; ~duration=87 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.getFilesDir(ContextImpl.java:855)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getFilesDir(ContextWrapper.java:288)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.map.OfflineMapRepository.<init>(OfflineMapRepository.java:24)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.RouteMapView.<init>(RouteMapView.java:43)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createView(LayoutInflater.java:742)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:894)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.createViewFromTag(LayoutInflater.java:849)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1011)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflate(LayoutInflater.java:1014)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.rInflateChildren(LayoutInflater.java:972)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:570)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.view.LayoutInflater.inflate(LayoutInflater.java:462)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.createRootView(P0Activity.java:95)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.AbstractActivity.onCreate(AbstractActivity.java:51)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.onCreate(P0Activity.java:38)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:03.274  2280  2280 D StrictMode: StrictMode policy violation; ~duration=40 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:03.274  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:03.275  2280  2280 D StrictMode: StrictMode policy violation; ~duration=40 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getDefaultSharedPreferences(PreferenceManager.java:119)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.ble.HeartRateCommands.connectionEnabled(HeartRateCommands.java:32)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.DashboardState.from(DashboardState.java:46)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.render(P0Activity.java:90)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity.$r8$lambda$6WNQE31MgXRBmIFsSn4Jk5KbbEU(Unknown Source:0)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0Activity$$ExternalSyntheticLambda5.onChanged(D8$$SyntheticClass:0)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData.considerNotify(LiveData.java:134)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData.dispatchingValue(LiveData.java:147)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData$ObserverWrapper.activeStateChanged(LiveData.java:482)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LiveData$LifecycleBoundObserver.onStateChanged(LiveData.java:439)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry$ObserverWithState.dispatchEvent(LifecycleRegistry.jvm.kt:316)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.forwardPass(LifecycleRegistry.jvm.kt:253)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.sync(LifecycleRegistry.jvm.kt:291)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.moveToState(LifecycleRegistry.jvm.kt:136)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.LifecycleRegistry.handleLifecycleEvent(LifecycleRegistry.jvm.kt:119)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.ReportFragment$Companion.dispatch$lifecycle_runtime(ReportFragment.android.kt:181)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at androidx.lifecycle.ReportFragment$LifecycleCallbacks.onActivityPostStarted(ReportFragment.android.kt:113)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.Activity.dispatchActivityPostStarted(Activity.java:1585)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9084)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:03.275  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed App frame:UNKNOWN: 74, 41184, 70531944, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed SF frame:UNKNOWN: 74, 41184, 70531944, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed App frame:UNKNOWN: 10, 41316, 117533354, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed SF frame:UNKNOWN: 10, 41316, 117533354, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed App frame:UNKNOWN: 10, 41430, 40676517, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed SF frame:UNKNOWN: 10, 41430, 40676517, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed App frame:UNKNOWN: 10, 41454, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.306  1238  1238 W FrameTracker: Missed SF frame:UNKNOWN: 10, 41454, 0, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.307  1238  1238 W FrameTracker: Missing HWUI jank callback for vsyncId: 41454, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+11-23 08:06:03.307  1238  1254 V PerfettoTrigger: Not triggering com.android.telemetry.interaction-jank-monitor-78 - not enough time since last trigger
+11-23 08:06:03.334   538  2761 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-23 08:06:03.442  2280  2280 D AutofillManager: notifyViewReadyInner:1073741825
+11-23 08:06:03.456  2280  2280 D AutofillManager: notifyViewReadyInner:1073741826
+11-23 08:06:03.456  2280  2280 D AutofillManager: notifyViewReadyInner:1073741824
+11-23 08:06:03.514  2280  2280 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@f320a60
+11-23 08:06:03.517   538   558 W ziparchive: Unable to open '/data/app/~~vNGjfhx2rVGHXgYDPVi0FQ==/com.fox.runner.debug-1m1az-GeJEBre4QAHqi7JQ==/base.dm': No such file or directory
+11-23 08:06:03.518   538   558 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity for user 0: +473ms
+11-23 08:06:03.534  2280  2280 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@f320a60
+11-23 08:06:03.534  2280  2280 I TrackRecordingService: startSensors
+11-23 08:06:03.534  2280  2280 I SystemUtils: Acquiring wake lock.
+11-23 08:06:03.536  2280  2280 I GpsInternal: Register for location updates
+11-23 08:06:03.536  2280  2280 I TrackRecordingService: newGpsStatus: 2131820803
+11-23 08:06:03.537  2280  2280 I TrackRecordingService: newGpsStatus: 2131820803
+11-23 08:06:03.539   538  1908 W InputManager-JNI: Input channel object '4693544 Splash Screen com.fox.runner.debug (client)' was disposed without first being removed with the input manager!
+11-23 08:06:03.541  1238  1238 D BaseDepthController: setSurface:
+11-23 08:06:03.541  1238  1238 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-23 08:06:03.541  1238  1238 D BaseDepthController: 	mSurface: null
+11-23 08:06:03.543  1238  1238 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-23 08:06:03.544  1238  1238 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-23 08:06:03.544  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:453)
+11-23 08:06:03.544  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:444)
+11-23 08:06:03.544  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(StatefulActivity.java:119)
+11-23 08:06:03.544  1238  1238 D StatsLog: LAUNCHER_ONSTOP
+11-23 08:06:03.552   343   367 I netd    : tetherGetStats() -> {[]} <0.32ms>
+11-23 08:06:03.554   896  4720 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:70
+11-23 08:06:03.590   856  1058 D EGL_emulation: app_time_stats: avg=223.76ms min=29.07ms max=564.59ms count=5
+11-23 08:06:03.680   538   649 I ImeTracker: com.fox.runner.debug:ea672b5a: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:03.683   538   649 I ImeTracker: com.fox.runner.debug:ea672b5a: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:03.858   856  1262 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-23 08:06:03.862   856  1262 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-23 08:06:04.041   538  1908 W AlarmManager: Unrecognized alarm listener com.android.server.UiModeManagerService$$ExternalSyntheticLambda2@4a2b622
+11-23 08:06:04.047   538  1908 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=60
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=2
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-23 08:06:04.048   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-23 08:06:04.053  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: PAUSED
+11-23 08:06:04.053  2280  2280 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:04.060  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: RESUMED
+11-23 08:06:04.060  2280  2280 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:04.072  2280  2280 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296919/com.fox.runner.debug:id/p0_all_history>
+11-23 08:06:04.125   408   408 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-23 08:06:04.126   538  2413 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-23 08:06:04.129   538  1908 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:04.156  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: PAUSED
+11-23 08:06:04.157  2280  2280 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:04.158   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:04.183  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: PRE_ON_CREATE
+11-23 08:06:04.183  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:04.227  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: CREATED
+11-23 08:06:04.228  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:04.229  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: STARTED
+11-23 08:06:04.229  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:04.230  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: RESUMED
+11-23 08:06:04.230  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:04.291   538   558 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity for user 0: +161ms
+11-23 08:06:04.450   408   522 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-23 08:06:04.554   538   649 I ImeTracker: com.fox.runner.debug:a0d028be: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:04.554   538   649 I ImeTracker: com.fox.runner.debug:a0d028be: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:04.593  2280  2280 D VRI[P0Activity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:04.593  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@7a35870
+11-23 08:06:04.624  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: STOPPED
+11-23 08:06:04.624  2280  2280 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:04.739  2280  2280 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296884/com.fox.runner.debug:id/p04_nav_heart>
+11-23 08:06:04.741  2280  2280 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-23 08:06:04.786   408   408 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-23 08:06:04.786   538  1908 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-23 08:06:04.787   538  2413 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:04.793  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: PAUSED
+11-23 08:06:04.793  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:04.796   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:04.812  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: PRE_ON_CREATE
+11-23 08:06:04.812  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:04.855  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: CREATED
+11-23 08:06:04.855  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:04.859  2280  2280 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-23 08:06:04.860  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: STARTED
+11-23 08:06:04.860  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:04.861  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: RESUMED
+11-23 08:06:04.861  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:04.865  2280  2280 D StrictMode: StrictMode policy violation; ~duration=8 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getSharedPreferences(PreferenceManager.java:409)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.Preference.getSharedPreferences(Preference.java:1250)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.Preference.dispatchSetInitialValue(Preference.java:1602)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1330)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1345)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addPreference(PreferenceGroup.java:253)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addItemFromInflater(PreferenceGroup.java:173)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.rInflate(PreferenceInflater.java:350)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.inflate(PreferenceInflater.java:161)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.inflate(PreferenceInflater.java:112)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.inflateFromResource(PreferenceManager.java:217)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.setPreferencesFromResource(PreferenceFragmentCompat.java:380)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsFragment.onCreatePreferences(P0SensorsFragment.java:31)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.onCreate(PreferenceFragmentCompat.java:161)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsFragment.onCreate(P0SensorsFragment.java:24)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.Fragment.performCreate(Fragment.java:3090)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.create(FragmentStateManager.java:475)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:257)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1899)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1817)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.execPendingActions(FragmentManager.java:1760)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2985)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.dispatchActivityCreated(FragmentManager.java:2895)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentController.dispatchActivityCreated(FragmentController.java:263)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentActivity.onStart(FragmentActivity.java:351)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.appcompat.app.AppCompatActivity.onStart(AppCompatActivity.java:235)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsActivity.onStart(P0SensorsActivity.java:27)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1701)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnStart(MonitoringInstrumentation.java:778)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9045)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.base.TestLooperManagerCompat.execute(TestLooperManagerCompat.java:121)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:128)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:513)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:469)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:235)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:175)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:138)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:46)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:134)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:429)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:297)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:193)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:182)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:04.865  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:04.866  2280  2280 D StrictMode: StrictMode policy violation; ~duration=8 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getSharedPreferences(PreferenceManager.java:409)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.Preference.getSharedPreferences(Preference.java:1250)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.Preference.dispatchSetInitialValue(Preference.java:1602)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1330)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1345)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addPreference(PreferenceGroup.java:253)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addItemFromInflater(PreferenceGroup.java:173)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.rInflate(PreferenceInflater.java:350)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.inflate(PreferenceInflater.java:161)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceInflater.inflate(PreferenceInflater.java:112)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.inflateFromResource(PreferenceManager.java:217)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.setPreferencesFromResource(PreferenceFragmentCompat.java:380)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsFragment.onCreatePreferences(P0SensorsFragment.java:31)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.onCreate(PreferenceFragmentCompat.java:161)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsFragment.onCreate(P0SensorsFragment.java:24)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.Fragment.performCreate(Fragment.java:3090)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.create(FragmentStateManager.java:475)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:257)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1899)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1817)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.execPendingActions(FragmentManager.java:1760)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2985)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.dispatchActivityCreated(FragmentManager.java:2895)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentController.dispatchActivityCreated(FragmentController.java:263)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentActivity.onStart(FragmentActivity.java:351)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.appcompat.app.AppCompatActivity.onStart(AppCompatActivity.java:235)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SensorsActivity.onStart(P0SensorsActivity.java:27)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1701)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnStart(MonitoringInstrumentation.java:778)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.Activity.performStart(Activity.java:9045)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleStartActivity(ActivityThread.java:4073)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.performLifecycleSequence(TransactionExecutor.java:270)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.cycleToPath(TransactionExecutor.java:250)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeLifecycleItem(TransactionExecutor.java:222)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:107)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.base.TestLooperManagerCompat.execute(TestLooperManagerCompat.java:121)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:128)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:513)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:469)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:235)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:175)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:138)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:46)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:134)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:429)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:297)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:193)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:182)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:04.866  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:04.909  2280  2280 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-23 08:06:04.918  2280  2280 D AutofillManager: notifyViewReadyInner:1073741824
+11-23 08:06:04.941  2280  2280 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@f320a60
+11-23 08:06:04.958   538   558 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity for user 0: +160ms
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=60
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=2
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-23 08:06:05.063   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-23 08:06:05.074   408   522 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-23 08:06:05.137  2280  2280 D VRI[P0HistoryActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:05.156  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@3dd8032
+11-23 08:06:05.156  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: STOPPED
+11-23 08:06:05.156  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:05.201   538   649 I ImeTracker: com.fox.runner.debug:aa13f6c4: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:05.201   538   649 I ImeTracker: com.fox.runner.debug:aa13f6c4: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:05.325   538   550 I system_server: NativeAlloc concurrent mark compact GC freed 4242KB AllocSpace bytes, 33(660KB) LOS objects, 50% free, 18MB/37MB, paused 504us,1.223ms total 159.102ms
+11-23 08:06:05.334  2280  2280 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296880/com.fox.runner.debug:id/p03_settings>
+11-23 08:06:05.402   408   408 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-23 08:06:05.402   538  1022 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-23 08:06:05.405   538  2074 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:05.418  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: PAUSED
+11-23 08:06:05.418  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:05.431   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:05.435  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: PRE_ON_CREATE
+11-23 08:06:05.436  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:05.470  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: CREATED
+11-23 08:06:05.470  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:05.473  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: STARTED
+11-23 08:06:05.474  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:05.474  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: RESUMED
+11-23 08:06:05.475  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:05.478  2280  2280 D StrictMode: StrictMode policy violation; ~duration=12 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ContextImpl.getDataDir(ContextImpl.java:3271)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:764)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getSharedPreferences(PreferenceManager.java:409)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.Preference.getSharedPreferences(Preference.java:1250)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.Preference.dispatchSetInitialValue(Preference.java:1602)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1330)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1345)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addPreference(PreferenceGroup.java:253)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P05SettingsHubFragment.onCreatePreferences(P05SettingsHubFragment.java:29)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.onCreate(PreferenceFragmentCompat.java:161)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.Fragment.performCreate(Fragment.java:3090)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.create(FragmentStateManager.java:475)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:257)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1899)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1817)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.execSingleAction(FragmentManager.java:1729)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.fragment.app.BackStackRecord.commitNow(BackStackRecord.java:317)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SettingsActivity.onCreate(P0SettingsActivity.java:19)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.base.TestLooperManagerCompat.execute(TestLooperManagerCompat.java:121)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:128)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:513)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:469)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:235)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:175)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:138)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:46)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:134)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:429)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:297)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:193)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:182)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:05.478  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:05.480  2280  2280 D StrictMode: StrictMode policy violation; ~duration=12 ms: android.os.strictmode.DiskReadViolation
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1683)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at libcore.io.BlockGuardOs.access(BlockGuardOs.java:74)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at libcore.io.ForwardingOs.access(ForwardingOs.java:128)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ActivityThread$AndroidOs.access(ActivityThread.java:8582)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at java.io.UnixFileSystem.checkAccess(UnixFileSystem.java:332)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at java.io.File.exists(File.java:829)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:819)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ContextImpl.ensurePrivateDirExists(ContextImpl.java:810)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ContextImpl.getPreferencesDir(ContextImpl.java:766)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferencesPath(ContextImpl.java:991)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ContextImpl.getSharedPreferences(ContextImpl.java:606)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.content.ContextWrapper.getSharedPreferences(ContextWrapper.java:223)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.PreferenceManager.getSharedPreferences(PreferenceManager.java:409)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.Preference.getSharedPreferences(Preference.java:1250)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.Preference.dispatchSetInitialValue(Preference.java:1602)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1330)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.Preference.onAttachedToHierarchy(Preference.java:1345)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.PreferenceGroup.addPreference(PreferenceGroup.java:253)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P05SettingsHubFragment.onCreatePreferences(P05SettingsHubFragment.java:29)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.preference.PreferenceFragmentCompat.onCreate(PreferenceFragmentCompat.java:161)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.Fragment.performCreate(Fragment.java:3090)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.create(FragmentStateManager.java:475)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:257)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1899)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1817)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.FragmentManager.execSingleAction(FragmentManager.java:1729)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.fragment.app.BackStackRecord.commitNow(BackStackRecord.java:317)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at de.dennisguse.opentracks.p0.app.P0SettingsActivity.onCreate(P0SettingsActivity.java:19)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:9002)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.Activity.performCreate(Activity.java:8980)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.runner.MonitoringInstrumentation.callActivityOnCreate(MonitoringInstrumentation.java:766)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4030)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4235)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2636)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.base.TestLooperManagerCompat.execute(TestLooperManagerCompat.java:121)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.base.Interrogator.loopAndInterrogate(Interrogator.java:128)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:513)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.loopUntil(UiControllerImpl.java:469)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.base.UiControllerImpl.injectMotionEvent(UiControllerImpl.java:235)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:175)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.MotionEvents.sendUp(MotionEvents.java:138)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.sendSingleTap(Tap.java:168)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap.-$$Nest$smsendSingleTap(Unknown Source:0)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.Tap$1.sendTap(Tap.java:46)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.action.GeneralClickAction.perform(GeneralClickAction.java:134)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$SingleExecutionViewAction.perform(ViewInteraction.java:429)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:297)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction.-$$Nest$mdoPerform(Unknown Source:0)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:193)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at androidx.test.espresso.ViewInteraction$1.call(ViewInteraction.java:182)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:05.480  2280  2280 D StrictMode: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:05.574   538   558 I ActivityTaskManager: Displayed com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity for user 0: +167ms
+11-23 08:06:05.648   408   522 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-23 08:06:05.786  2280  2280 D VRI[P0SensorsActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:05.787  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@a15d762
+11-23 08:06:05.799  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: STOPPED
+11-23 08:06:05.800  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:05.823   538   649 I ImeTracker: com.fox.runner.debug:c9b8c90f: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:05.823   538   649 I ImeTracker: com.fox.runner.debug:c9b8c90f: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:05.948  2280  2280 I ViewInteraction: Performing 'single click' action on view view.getId() is <2131296886/com.fox.runner.debug:id/p04_nav_run>
+11-23 08:06:05.950  2280  2280 D AutofillManager: Fill dialog is enabled:false, hints=[]
+11-23 08:06:05.996   408   408 D audioserver: logFgsApiBegin: FGS Logger Transaction failed, -129
+11-23 08:06:05.996   538  2413 W AS.PlaybackActivityMon: No piid assigned for invalid/internal port id 15
+11-23 08:06:05.999   538  1022 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:06.015   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:06.029  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: PAUSED
+11-23 08:06:06.029  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=60
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=2
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-23 08:06:06.050   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-23 08:06:06.078  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: RESTARTED
+11-23 08:06:06.078  2280  2280 V ActivityScenario: Update currentActivityStage to RESTARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:06.079  2280  2280 I TrackRecordingServiceConnection: Binding and starting the service (not in foreground).
+11-23 08:06:06.079  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: STARTED
+11-23 08:06:06.080  2280  2280 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:06.087  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: RESUMED
+11-23 08:06:06.088  2280  2280 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:06.173  2280  2280 I TrackRecordingServiceConnection: Connected to the service: de.dennisguse.opentracks.services.TrackRecordingService$Binder@f320a60
+11-23 08:06:06.222   408   522 D audioserver: logFgsApiEnd: FGS Logger Transaction failed, -129
+11-23 08:06:06.386  2280  2280 D VRI[P0SettingsActivity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:06.386  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@1d69ed6
+11-23 08:06:06.456  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: STOPPED
+11-23 08:06:06.457  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:06.464   538   649 I ImeTracker: com.fox.runner.debug:d1e14415: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:06.464   538   649 I ImeTracker: com.fox.runner.debug:d1e14415: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=60
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=2
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=1
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-23 08:06:07.050   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:321
+11-23 08:06:07.348  1356  2263 W MediaProvider: isAppCloneUserPair for user 0: false
+11-23 08:06:07.436  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: PAUSED
+11-23 08:06:07.436  2280  2280 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:07.440   343   367 I netd    : tetherGetStats() -> {[]} <0.81ms>
+11-23 08:06:07.440   538  2413 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10148, packageName = null, attributionTag = null, token = android.os.Binder@3b14665, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+11-23 08:06:07.442  1238  1238 D StatsLog: LAUNCHER_ONRESUME
+11-23 08:06:07.446   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:07.451  1238  1238 D BaseDepthController: setSurface:
+11-23 08:06:07.451  1238  1238 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-23 08:06:07.451  1238  1238 D BaseDepthController: 	mSurface: Surface(name=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher)/@0x1b84fd5
+11-23 08:06:07.479  1238  1238 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=7, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.uioverrides.QuickstepLauncher }
+11-23 08:06:07.480  1238  1238 W SplitSelectStateCtor: Missing session instanceIds
+11-23 08:06:07.480  1238  1238 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+11-23 08:06:07.484  1238  1238 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=27, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }
+11-23 08:06:07.496  1238  1238 D BaseDepthController: setSurface:
+11-23 08:06:07.496  1238  1238 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-23 08:06:07.496  1238  1238 D BaseDepthController: 	mSurface: null
+11-23 08:06:07.496  1238  1238 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+11-23 08:06:07.497  1238  1238 D StateManager: goToState - fromState: Normal, toState: Normal, partial trace:
+11-23 08:06:07.497  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:453)
+11-23 08:06:07.497  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(StateManager.java:444)
+11-23 08:06:07.497  1238  1238 D StateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(StatefulActivity.java:119)
+11-23 08:06:07.497  1238  1238 D StatsLog: LAUNCHER_ONSTOP
+11-23 08:06:07.502  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: RESUMED
+11-23 08:06:07.502  2280  2280 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:07.550  2280  2372 D EGL_emulation: app_time_stats: avg=76.23ms min=17.14ms max=387.60ms count=18
+11-23 08:06:07.614   538   649 I ImeTracker: com.fox.runner.debug:de23cd92: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false
+11-23 08:06:07.616   538   649 I ImeTracker: com.fox.runner.debug:de23cd92: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:07.676  2280  2280 W TrackRecordingService: Ignore endCurrentTrack. Not recording.
+11-23 08:06:07.681   417   417 I BpBinder: onLastStrongRef automatically unlinking death recipients: 
+11-23 08:06:07.692  1238  1238 I TopTaskTracker: onTaskMovedToFront: (moved taskInfo to front) taskId=7, baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.uioverrides.QuickstepLauncher }
+11-23 08:06:07.692  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: PAUSED
+11-23 08:06:07.693  2280  2280 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:07.706  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@7ab203d
+11-23 08:06:07.708  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b in: DESTROYED
+11-23 08:06:07.709  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity }, activity=de.dennisguse.opentracks.p0.app.P0HistoryActivity@41a369b
+11-23 08:06:07.710  1238  1238 D StatsLog: LAUNCHER_ONRESUME
+11-23 08:06:07.721  1238  1238 D BaseDepthController: setSurface:
+11-23 08:06:07.721  1238  1238 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+11-23 08:06:07.721  1238  1238 D BaseDepthController: 	mSurface: Surface(name=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher)/@0x1b84fd5
+11-23 08:06:07.725   538  2413 W InputManager-JNI: Input channel object 'f7deb2b com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0HistoryActivity (client)' was disposed without first being removed with the input manager!
+11-23 08:06:07.727  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@59e962d
+11-23 08:06:07.730  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d in: DESTROYED
+11-23 08:06:07.730  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SensorsActivity@e8346d
+11-23 08:06:07.732   538  2074 W InputManager-JNI: Input channel object 'caf2083 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SensorsActivity (client)' was disposed without first being removed with the input manager!
+11-23 08:06:07.734  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@698c2f1
+11-23 08:06:07.735  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784 in: DESTROYED
+11-23 08:06:07.735  2280  2280 V ActivityScenario: Activity lifecycle changed event received but ignored because the intent does not match. startActivityIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10008000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity }, activity.getIntent()=Intent { flg=0x20020000 cmp=com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity }, activity=de.dennisguse.opentracks.p0.app.P0SettingsActivity@5712784
+11-23 08:06:07.738   538  1022 W InputManager-JNI: Input channel object '83a481d com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0SettingsActivity (client)' was disposed without first being removed with the input manager!
+11-23 08:06:07.867  1238  1238 D StateManager: createAtomicAnimation - fromState: Background, toState: Normal, partial trace:
+11-23 08:06:07.867  1238  1238 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(WorkspaceRevealAnim.java:130)
+11-23 08:06:07.867  1238  1238 D StateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(WorkspaceRevealAnim.java:66)
+11-23 08:06:07.867  1238  1238 D StateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(QuickstepTransitionManager.java:1716)
+11-23 08:06:07.940   538  1022 W system_server: Long monitor contention with owner android.anim (562) at void com.android.server.wm.WindowSurfacePlacer$Traverser.run()(WindowSurfacePlacer.java:58) waiters=1 in void com.android.server.wm.WindowManagerService.reportSystemGestureExclusionChanged(com.android.server.wm.Session, android.view.IWindow, java.util.List) for 113ms
+11-23 08:06:07.942   538  2413 W system_server: Long monitor contention with owner android.anim (562) at void com.android.server.wm.WindowSurfacePlacer$Traverser.run()(WindowSurfacePlacer.java:58) waiters=0 in void com.android.server.wm.ActivityClientController.activityIdle(android.os.IBinder, android.content.res.Configuration, boolean) for 115ms
+11-23 08:06:08.013  1238  1448 D EGL_emulation: app_time_stats: avg=1920.88ms min=212.63ms max=4815.55ms count=3
+11-23 08:06:08.035   856  1262 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-23 08:06:08.066   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:08.066   896  4720 D android.hardware.gnss-service.ranchu: GnssHwListener:consume:87 sz=64
+11-23 08:06:08.066   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:311
+11-23 08:06:08.066   896  4720 D android.hardware.gnss-service.ranchu: Gnss:onGnssLocationCb:327
+11-23 08:06:08.078   538   649 I ImeTracker: com.android.launcher3:ec8d722: onRequestHide at ORIGIN_SERVER reason HIDE_UNSPECIFIED_WINDOW fromUser false
+11-23 08:06:08.078   538   649 I ImeTracker: com.android.launcher3:ec8d722: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-23 08:06:08.080  2280  2280 D VRI[P0Activity]: visibilityChanged oldVisibility=true newVisibility=false
+11-23 08:06:08.080  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@7a35870
+11-23 08:06:08.210   856  1262 D LocalImageResolver: Couldn't use ImageDecoder for drawable, falling back to non-resized load.
+11-23 08:06:08.256  2280  2280 I TrackRecordingService: newGpsStatus: 2131820797
+11-23 08:06:08.262   856  1058 D EGL_emulation: app_time_stats: avg=1161.41ms min=23.44ms max=4274.60ms count=4
+11-23 08:06:08.277  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: STOPPED
+11-23 08:06:08.278  2280  2280 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=de.dennisguse.opentracks.p0.app.P0Activity@c174b3d
+11-23 08:06:08.311   896  4720 D android.hardware.gnss-service.ranchu: GnssHwConn:workerThread:119
+11-23 08:06:08.316   538   558 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda14@632e9b5
+11-23 08:06:08.316   538   558 W AlarmManager: Unrecognized alarm listener com.android.server.location.gnss.GnssLocationProvider$$ExternalSyntheticLambda13@de0d84a
+11-23 08:06:08.335  2280  2280 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.app.Activity$$ExternalSyntheticLambda0@b085ab3
+11-23 08:06:08.338  2280  2280 D LifecycleMonitor: Lifecycle status change: de.dennisguse.opentracks.p0.app.P0Activity@c174b3d in: DESTROYED
+11-23 08:06:08.338  2280  2280 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-23 08:06:08.383   538  1909 W InputManager-JNI: Input channel object '5e1ad99 com.fox.runner.debug/de.dennisguse.opentracks.p0.app.P0Activity (client)' was disposed without first being removed with the input manager!
+11-23 08:06:08.391  2280  2305 W CustomContentProvider: Deleting from table tracks
+11-23 08:06:08.391  2280  2305 I CustomContentProvider: Deleted 0 rows of table tracks
+11-23 08:06:08.392  2280  2305 I CustomContentProvider: Deleted 0 total rows from database
+11-23 08:06:08.394  2280  2280 D TrackRecordingService: Destroying
+11-23 08:06:08.394  2280  2280 D TrackRecordingService: Destroyed
+11-23 08:06:08.426  1238  1238 I TopTaskTracker: onTaskRemoved: taskId=27
+11-23 08:06:08.426  1238  1238 I TopTaskTracker: onTaskRemoved: taskId=27
+11-23 08:06:08.614   538   561 W IPCThreadState: Sending oneway calls to frozen process.
+11-23 08:06:08.614   538   561 W IPCThreadState: Sending oneway calls to frozen process.
+11-23 08:06:08.658  2280  2305 E TestRunner: failed: T18_eightPalettesKeepNavigationAndBack(de.dennisguse.opentracks.p0.P071NavigationTest)
+11-23 08:06:08.659  2280  2305 E TestRunner: ----- begin exception -----
+11-23 08:06:08.659  2280  2305 E TestRunner: java.lang.NullPointerException: Attempt to invoke virtual method 'android.view.View android.app.Activity.findViewById(int)' on a null object reference
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at de.dennisguse.opentracks.p0.P071NavigationTest.lambda$await$2(P071NavigationTest.java:65)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at de.dennisguse.opentracks.p0.P071NavigationTest.$r8$lambda$XtuXiqQ8KwLTANvTynWRi4iD14M(Unknown Source:0)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at de.dennisguse.opentracks.p0.P071NavigationTest$$ExternalSyntheticLambda43.run(D8$$SyntheticClass:0)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.os.Handler.handleCallback(Handler.java:959)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.os.Handler.dispatchMessage(Handler.java:100)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.os.Looper.loopOnce(Looper.java:232)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.os.Looper.loop(Looper.java:317)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+11-23 08:06:08.659  2280  2305 E TestRunner: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+11-23 08:06:08.661  2280  2305 E TestRunner: ----- end exception -----
+11-23 08:06:08.663  2280  2305 I TestRunner: finished: T18_eightPalettesKeepNavigationAndBack(de.dennisguse.opentracks.p0.P071NavigationTest)

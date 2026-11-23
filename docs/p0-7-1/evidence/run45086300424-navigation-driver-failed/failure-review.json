@@ -1,0 +1,22 @@
+{
+  "runId": 45086300424,
+  "source": "4ff5e66223c31bdc196da2175be16dfaa4b5c235",
+  "conclusion": "failure",
+  "navigation": {
+    "tests": 18,
+    "executed": 18,
+    "passed": 17,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "focusedArtifactId": 14779945387,
+  "focusedArtifactSha256": "1bed15d13536a688510b0334a49c71d238b8ec9ea8abdb870f793d9f3d0f8951",
+  "stageArtifactId": 14779880696,
+  "stageArtifactSha256": "a59922f672534d19b15331ed07d7d0bc22d3bef60691f9515150636c00fd5aa6",
+  "cause": "T18 await checked current Activity and then separately read it again during theme-triggered recreation. Second read was null; original null-dereference retained.",
+  "fix": "One main-thread transaction captures actual focused root and checks all four selected-state assertions; no new sleep, skip, retry of failed test or weaker assertion. No production changes.",
+  "T16PausedTabResumeCycles": "PASSED, including two new journal-preserving cycles; whole navigation suite still failed and full47/489 not run.",
+  "published": false,
+  "p08Started": false
+}

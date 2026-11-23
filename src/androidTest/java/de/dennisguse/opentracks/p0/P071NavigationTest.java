@@ -62,7 +62,16 @@ public class P071NavigationTest {
         main(()->{for(Activity a:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(Stage.RESUMED))if(root(a)&&a.hasWindowFocus())value.set(a);});
         return value.get();
     }
-    private Activity await(int tab){waitUntil("Expected root "+roots[tab],()->{Activity a=current();return a!=null&&a.getClass()==roots[tab];});Activity a=current();main(()->{for(int i=0;i<tabs.length;i++)assertEquals(i==tab,a.findViewById(tabs[i]).isSelected());});return a;}
+    private Activity await(int tab){
+        AtomicReference<Activity> found=new AtomicReference<>();
+        waitUntil("Expected root "+roots[tab],()->{
+            // A theme recreation can happen between two separate current()
+            // reads. Check the actual focused root and all selected tabs in
+            // one main-thread transaction, retaining every assertion.
+            main(()->{Activity a=current();if(a==null||a.getClass()!=roots[tab])return;for(int i=0;i<tabs.length;i++)assertEquals(i==tab,a.findViewById(tabs[i]).isSelected());found.set(a);});
+            return found.get()!=null;
+        });return found.get();
+    }
     private void select(int tab){onView(withId(tabs[tab])).perform(click());await(tab);}
     private void uniqueRoots(){main(()->{Map<Class<?>,Integer> counts=new HashMap<>();for(Stage s:Stage.values())if(s!=Stage.DESTROYED)for(Activity a:ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(s))if(root(a))counts.merge(a.getClass(),1,Integer::sum);for(int n:counts.values())assertEquals(1,n);});}
     private void osBack()throws Exception{SystemThemeTestUtils.shell("input keyevent 4");InstrumentationRegistry.getInstrumentation().waitForIdleSync();}
