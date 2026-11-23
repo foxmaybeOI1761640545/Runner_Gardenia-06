@@ -1,0 +1,11 @@
+{
+  "source": "857c744321825a2656d77f45d57c6e43b4334962",
+  "buildWorkflowCommit": "348b225c68e90f095fc4f9207ba872c9205bed66",
+  "runId": 45092892094,
+  "artifactId": 14782052548,
+  "artifactName": "RunnerGardenia-P071-Candidate-45092892094",
+  "artifactBytes": 1830762,
+  "artifactSha256": "815fd83f6119461176a7262e58ff4dc58c15445f907fef17f2e42db9ff6ac851",
+  "downloadedDigestVerified": true,
+  "runtimeAcceptance": "PENDING; candidate artifact alone is not accepted runtime or publication proof"
+}
