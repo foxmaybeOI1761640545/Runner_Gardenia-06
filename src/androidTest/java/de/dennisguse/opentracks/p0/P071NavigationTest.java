@@ -171,6 +171,12 @@ public class P071NavigationTest {
     @Test public void T16_recordingContinuesAcrossTabsAndRootBack()throws Exception{
         long id=recording();Object creator=core.getTrackPointCreator();for(int tab:new int[]{1,3,2,0}){select(tab);assertTrue(core.isRecording());assertEquals(id,core.getRecordingStatus().trackId().id());assertSame(creator,core.getTrackPointCreator());}
         osBack();background();assertTrue(core.isRecording());assertSame(creator,core.getTrackPointCreator());reopen(0);capture("T16-recording-restored");
+        for(int round=0;round<2;round++){
+            onView(withId(R.id.p0_pause)).perform(click());waitUntil("Workout did not pause",()->!core.isRecording());
+            for(int tab:new int[]{1,3,2,0}){select(tab);assertFalse(core.isRecording());assertEquals(Long.valueOf(id),new SessionStore(context).recover().trackId());}
+            main(()->assertEquals(RecordingSession.Phase.PAUSED,new ViewModelProvider((P0Activity)current()).get(P0RecordingViewModel.class).snapshot().getValue().session().phase()));
+            onView(withId(R.id.p0_resume)).perform(click());waitUntil("Original paused workout did not resume",core::isRecording);assertEquals(id,core.getRecordingStatus().trackId().id());
+        }
     }
     @Test public void T17_gpsAndBleInputsPersistWhileSwitching()throws Exception{
         long id=recording();Object creator=core.getTrackPointCreator();Object handler=core.getTrackPointCreator().getSensorManager().getGpsHandler();

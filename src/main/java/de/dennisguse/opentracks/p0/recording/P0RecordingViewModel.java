@@ -44,7 +44,10 @@ public class P0RecordingViewModel extends AndroidViewModel {
     private final TrackRecordingServiceConnection connection=new TrackRecordingServiceConnection((service,self)->observe(service));
     private final Observer<RecordingData> dataObserver=value->{if(value!=null){data=value;emit();}};
     private final Observer<GpsStatusValue> gpsObserver=value->{gps=value;emit();};
-    private final Observer<RecordingStatus> statusObserver=this::onStatus;
+    private final Observer<RecordingStatus> statusObserver=value->{
+        // LiveData may deliver an older queued status during a rapid reattach.
+        if(observed!=null)onStatus(observed.getRecordingStatus());
+    };
     private final Observer<GpsPreparation> preparationObserver=this::onPreparation;
     private void onPreparation(GpsPreparation value) {
         if (value != null && value.active()) {
@@ -87,7 +90,12 @@ public class P0RecordingViewModel extends AndroidViewModel {
     }
     private void observe(TrackRecordingService service) {
         if(!attached||closed){connection.unbind(getApplication());return;}
-        unobserve();observed=service;
+        unobserve();
+        // Another retained screen may have paused/finished while this one was
+        // detached. Reconcile unfinished UI intent just as a new ViewModel does,
+        // before a non-recording service status can finish its stale session.
+        if(session.phase()==RecordingSession.Phase.RECORDING||session.phase()==RecordingSession.Phase.PAUSED)session=store.recover();
+        observed=service;
         service.getRecordingStatusObservable().observeForever(statusObserver);
         service.getRecordingDataObservable().observeForever(dataObserver);
         service.getGpsStatusObservable().observeForever(gpsObserver);

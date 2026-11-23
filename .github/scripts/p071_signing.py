@@ -41,13 +41,13 @@ def gate():
     historical=[(t.get('classname'),t.get('name')) for p in Path('gate/build/outputs/androidTest-results').rglob('TEST-*.xml') for t in ET.parse(p).getroot().iter('testcase') if t.find('skipped') is not None]
     if historical!=[('de.dennisguse.opentracks.services.TrackRecordingServiceStateMachineTest','recording_stopGPS_noop')]:raise ValueError('Additional/changed Skip')
     h=g['helpers']
-    if not h['passed'] or h['tests']<156 or h['tests']!=h['executed'] or h['source']!=a['source'] or any(h[k] for k in ('failures','errors','skipped')):raise ValueError('Helper execution missing')
+    if not h['passed'] or h['tests']<160 or h['tests']!=h['executed'] or h['source']!=a['source'] or any(h[k] for k in ('failures','errors','skipped')):raise ValueError('Helper execution missing')
     if plan.get('versionName')!=VERSION or plan.get('versionCode')!=check(a['source']):raise ValueError('Wrong reservation')
     from p071_delivery import gate as delivery
     d=delivery(a['source'],Path('gate'))
     reviewed=a['reviewedScreenshots']
     if len(reviewed)!=len(d['screenshots']) or any(r.get('reviewed') is not True for r in reviewed) or {(r['file'],r['sha256']) for r in reviewed}!={(r['file'],r['sha256']) for r in d['screenshots']}:raise ValueError('Actual native review differs from complete tested screenshots')
-    if g['gpsFocused']['source']!=a['source'] or g['gpsFocused']['tests']['executed']!=45 or not g['gpsFocused']['tests']['passed']:raise ValueError('Handoff/original GPS regression missing')
+    if g['gpsFocused']['source']!=a['source'] or g['gpsFocused']['tests']['executed']!=47 or not g['gpsFocused']['tests']['passed']:raise ValueError('Handoff/original GPS/paused-journal regression missing')
     permission=g['permissions'];recovery=permission['phases']['recovery-denied']
     if not permission['passed'] or permission['source']!=a['source'] or not recovery['p0RecoveryRejected'] or recovery['actualGpsPermission']!='denied':raise ValueError('Actual denied recovery missing')
     return plan,{**g,'unit':g['jvm']}

@@ -16,7 +16,7 @@
 
 保留现有四个 Activity 及其 ViewModel、Fragment 和界面状态。一级根节点通过 AndroidX Back dispatcher 将整项任务置于后台，符合 Android launcher 根页面的返回行为；不 finish、不停止服务。设置分类、历史详情/选择/忙碌保护和弹窗继续先处理内部返回。回调不再永久禁用。顶层切换加 SINGLE_TOP，并在切换启动到下次 onResume 之间拒绝重复请求。页面数量保持最多每类一个，返回不会遍历访问过的顶层页面。
 
-生产修改涉及 P0Navigation、P0SettingsActivity、P0HistoryActivity，以及首页和设置分类中通往已有一级页面的快捷入口（P0Activity、P05SettingsSectionFragment）。快捷入口也使用相同的 REORDER_TO_FRONT/SINGLE_TOP，避免从首页或设置重复创建心率/历史根；历史管理请求通过 onNewIntent 进入原管理模式，正在执行的批量工作仍受保护。GPS/BLE/TrackRecordingService、数据库 schema 43、地图及主题业务代码保持原样。没有重写导航架构。
+生产修改涉及 P0RecordingViewModel（仅重新观察服务时同步未完成会话，原因见04暂停日志回归报告）、P0Navigation、P0SettingsActivity、P0HistoryActivity，以及首页和设置分类中通往已有一级页面的快捷入口（P0Activity、P05SettingsSectionFragment）。快捷入口也使用相同的 REORDER_TO_FRONT/SINGLE_TOP，避免从首页或设置重复创建心率/历史根；历史管理请求通过 onNewIntent 进入原管理模式，正在执行的批量工作仍受保护。GPS/BLE/TrackRecordingService、数据库 schema 43、地图及主题业务代码保持原样。没有重写导航架构。
 
 ## 独立门禁
 

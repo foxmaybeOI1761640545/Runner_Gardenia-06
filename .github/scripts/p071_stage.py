@@ -54,7 +54,7 @@ def focused():
   shutil.copy2(picture,target/picture.name);rows.append({'file':picture.name,'sha256':hashlib.sha256(data).hexdigest()})
  shutil.copytree('build/outputs/androidTest-results',target/'raw-android',dirs_exist_ok=True)
  (target/'focused.json').write_text(json.dumps({'source':plan['commit'],'run':plan['runId'],'scope':'P07HomeMapTest only; full regression still required','tests':report,'screenshots':rows,'visualReviewRequired':True,'stageAccepted':False},indent=2)+'\n')
-GPS_FILES=['p0/map/P07ForegroundGpsTest.java','p0/map/P061GpsPreferencesTest.java','p0/map/P06GpsOwnershipTest.java','p0/P0GpsPreparationTest.java','p0/P0RecordingUiTest.java','p0/P0SensorsTest.java']
+GPS_FILES=['p0/map/P07ForegroundGpsTest.java','p0/map/P061GpsPreferencesTest.java','p0/map/P06GpsOwnershipTest.java','p0/P0GpsPreparationTest.java','p0/P0RecordingUiTest.java','p0/P0SensorsTest.java','p0/P05DashboardStatusNavigationTest.java']
 def gps_files():
  return GPS_FILES+(['services/P07GpsHandoffTest.java','services/P07RecoveryPermissionTest.java'] if json.loads(Path('.github/p071/phase.json').read_text())['stage']==3 else [])
 def gps_classes():
@@ -66,7 +66,7 @@ def gps_focused():
   source=Path(directory)
   for path in gps_files():shutil.copy2(Path('src/androidTest/java/de/dennisguse/opentracks')/path,source/Path(path).name)
   report=inspect(Path('build/outputs/androidTest-results'),source,False)
- if not report['passed'] or report['tests']!=(38 if plan['stage']==2 else 45) or report['skipped']:raise ValueError('GPS/heart/owner/preferences regression failed or incomplete')
+ if not report['passed'] or report['tests']!=(40 if plan['stage']==2 else 47) or report['skipped']:raise ValueError('GPS/heart/owner/preferences/paused-journal regression failed or incomplete')
  target=Path('build/reports/p071-gps-focused');target.mkdir(parents=True,exist_ok=True)
  for path in Path('build/outputs/androidTest-results').rglob('TEST-*.xml'):shutil.copy2(path,target/path.name)
  (target/'focused.json').write_text(json.dumps({'source':plan['commit'],'run':plan['runId'],'tests':report,'fullRegressionRequired':True,'stageAccepted':False},indent=2)+'\n')
