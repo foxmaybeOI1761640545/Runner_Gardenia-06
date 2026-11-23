@@ -3,6 +3,8 @@ import hashlib,json,os,re,shutil,subprocess,sys,tempfile,unittest
 from pathlib import Path
 from check_test_results import inspect
 from p08_version import BASELINE,BRANCH,VERSION,allocation,check
+from p08_predecessor import verify as verify_predecessor
+from p08_transactions import CASES,validate_case
 OUT=Path('build/reports/p08-stage')
 PARSER='de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest'
 CORE='src/main/java/de/dennisguse/opentracks/p0/routes/'
@@ -33,7 +35,8 @@ def prepare():
  subprocess.run(['git','merge-base','--is-ancestor',BASELINE,'HEAD'],check=True);preserve()
  phase=json.loads(Path('.github/p08/phase.json').read_text())
  if phase['stage']!=4 or phase['phase'] not in 'ABCDEF' or len(phase['phase'])!=1 or phase['baselineDeliveryHead']!=BASELINE:raise ValueError('Wrong independent phase4 configuration')
- plan={'commit':source,**phase,'branch':BRANCH,'runId':os.environ['GITHUB_RUN_ID'],'versionName':VERSION,'versionCode':check(source)}
+ predecessor=verify_predecessor(phase['phase'])
+ plan={'predecessor':predecessor,'commit':source,**phase,'branch':BRANCH,'runId':os.environ['GITHUB_RUN_ID'],'versionName':VERSION,'versionCode':check(source)}
  Path('release-plan.json').write_text(json.dumps(plan,indent=2)+'\n')
  with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('phase='+phase['phase']+'\n')
 def helpers():
@@ -48,10 +51,11 @@ def gate():
   result['helpers']=json.loads((OUT/'helpers.json').read_text());result['jvm']=inspect(Path('build/test-results/testReproducibleDebugUnitTest'),Path('src/test/java'),False)
   with tempfile.TemporaryDirectory() as temp:
    subset=Path(temp);shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08GpxParserPlatformTest.java',subset/'P08GpxParserPlatformTest.java')
+   if plan['phase']!='A':shutil.copy2('src/androidTest/java/de/dennisguse/opentracks/p0/routes/P08RouteRepositoryPlatformTest.java',subset/'P08RouteRepositoryPlatformTest.java')
    result['androidFocused']=inspect(Path('build/outputs/androidTest-results'),subset,False)
   assert result['helpers']['passed'] and result['helpers']['source']==plan['commit'] and result['helpers']['tests']>=165 and not result['helpers']['skipped']
-  assert result['jvm']['passed'] and result['jvm']['tests']>=210 and not result['jvm']['skipped']
-  assert result['androidFocused']['passed'] and result['androidFocused']['tests']==8 and not result['androidFocused']['skipped']
+  assert result['jvm']['passed'] and result['jvm']['tests']>=(210 if plan['phase']=='A' else 265) and not result['jvm']['skipped']
+  assert result['androidFocused']['passed'] and result['androidFocused']['tests']==(8 if plan['phase']=='A' else 14) and not result['androidFocused']['skipped']
   import xml.etree.ElementTree as ET
   parser=[]
   for file in Path('build/test-results/testReproducibleDebugUnitTest').glob('TEST-*.xml'):
@@ -61,7 +65,18 @@ def gate():
   roots=list(Path('build/outputs').glob('**/p08-parser'));assert len(roots)==1
   profiles={p.stem:json.loads(p.read_text()) for p in roots[0].glob('*.json')};assert set(profiles)=={'points20000','bytes16MiB'}
   assert all(p['source']==plan['commit'] and p['api']==35 and p['elapsedMillis']>0 for p in profiles.values());result['androidBudgetMeasurements']=profiles
-  result['scope']='PhaseA data/GPX only: complete JVM/Python, focused actual API35 parser8; complete legacy API/UI/signed upgrade/publication still required in phaseF'
+  if plan['phase']!='A':
+   proof=json.loads(Path('build/reports/p08-transactions/result.json').read_text())
+   assert proof['passed'] and proof['source']==plan['commit'] and proof['api']==35 and proof['timezone']=='Asia/Singapore' and set(proof['cases'])==set(CASES)
+   for name,checkpoint in CASES.items():
+    validate_case(proof['cases'][name],name,checkpoint,plan['commit']);assert proof['cases'][name]['forceStopped'] and proof['cases'][name]['producerOutcome']=='INTENTIONALLY_INTERRUPTED_NOT_A_PASSED_JUNIT_TEST'
+   result['actualProcessDeath']=proof
+   folders=list(Path('build/outputs').glob('**/p08-repository'));assert len(folders)==1
+   isolation=json.loads((folders[0]/'isolation.json').read_text());assert isolation['passed'] and isolation['source']==plan['commit'] and isolation['api']==35 and isolation['schema']==43 and isolation['before']==isolation['after']
+   for table,minimum in [('TRACKS',1),('TRACKPOINTS',2),('HEART_RATE_SAMPLES',3)]:assert isolation['before'][table]['rows']>=minimum and re.fullmatch('[0-9a-f]{64}',isolation['before'][table]['sha256'])
+   assert all(re.fullmatch('[0-9a-f]{64}',isolation[k]) for k in ('preferencesSha256','offlineMapSentinelSha256'));result['isolation']=isolation
+   assert plan['predecessor']['phase']=='A' and plan['predecessor']['historicalRawGateRerun']
+  result['scope']='Data/GPX and private route repository only: complete JVM/Python, focused actual API35; complete legacy API/UI/signed upgrade/publication still required in phaseF'
   result['passed']=True
  except Exception as error:result['error']=repr(error)
  save('gate.json',result);print(json.dumps(result,indent=2))

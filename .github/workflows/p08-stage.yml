@@ -21,7 +21,7 @@ jobs:
   stage-validation:
     if: github.repository == 'foxmaybeOI1761640545/Runner_Gardenia-06' && github.ref == 'refs/heads/feature/p0-8-0-gpx-route-follow'
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -60,9 +60,13 @@ jobs:
         run: ./gradlew --no-daemon --no-configuration-cache clean assembleReproducibleDebug lintReproducibleDebug testReproducibleDebugUnitTest compileReproducibleDebugAndroidTestJavaWithJavac
       - name: Execute every original and new Python helper regression
         run: python3 .github/scripts/p08_stage.py helpers
-      - name: Actual API35 SAX security, namespace, encoding and real limit boundaries
+      - name: Actual API35 parser boundaries, private route files and history isolation
         run: |
-          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+          timeout --signal=INT --kill-after=30s 20m ./gradlew --no-daemon --no-configuration-cache --info --stacktrace mediumPhoneReproducibleDebugAndroidTest -Pandroid.testoptions.manageddevices.emulator.gpu=swiftshader_indirect -Pandroid.testInstrumentationRunnerArguments.timezone=Asia/Singapore "-Pandroid.testInstrumentationRunnerArguments.buildCommit=$GITHUB_SHA" -Pandroid.testInstrumentationRunnerArguments.class=de.dennisguse.opentracks.p0.routes.P08GpxParserPlatformTest,de.dennisguse.opentracks.p0.routes.P08RouteRepositoryPlatformTest -Pandroid.testInstrumentationRunnerArguments.timeout_msec=1200000
+      - name: Compile dedicated transaction probe runner (test APK only)
+        run: ./gradlew --no-daemon --no-configuration-cache -Pp08TransactionRunner=true assembleReproducibleDebugAndroidTest
+      - name: Externally kill eight live route transactions and verify recovery in new API35 processes
+        run: python3 .github/scripts/p08_transactions.py
       - name: Reject missing, stale, zero-execution, skipped or failed source-bound evidence
         if: always()
         run: python3 .github/scripts/p08_stage.py gate
@@ -76,5 +80,6 @@ jobs:
             build/test-results/
             build/outputs/androidTest-results/
             build/outputs/**/p08-parser/
+            build/outputs/**/p08-repository/
           if-no-files-found: error
           retention-days: 90
